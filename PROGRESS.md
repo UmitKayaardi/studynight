@@ -23,7 +23,7 @@ from the first unchecked step. Commit after every step.
 - [x] 2.2 Extractors: TXT/MD/paste, DOCX, PPTX, PDF (worker), photos (resize → API)
 - [x] 2.3 Cleaning (headers/footers, hyphenation), language detection
 - [x] 2.4 Chunker (+ property tests)
-- [ ] 2.5 BM25
+- [x] 2.5 BM25
 - [ ] 2.6 Embeddings worker + vector store + hybrid RRF
 
 ## Phase 3 — API functions
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 2.5 BM25.
+Next: 2.6 embeddings worker, vector store, hybrid.
 
 Known issues: none yet.
