@@ -10,8 +10,8 @@ from the first unchecked step. Commit after every step.
 - [x] 0.4 Private GitHub repo created and pushed
 
 ## Phase 1 — Learning engine (`src/lib/learning/`)
-- [ ] 1.1 Secure randomness + shuffle
-- [ ] 1.2 FSRS wrapper + rating mapping
+- [x] 1.1 Secure randomness + shuffle
+- [x] 1.2 FSRS wrapper + rating mapping
 - [ ] 1.3 Mastery + adaptive difficulty
 - [ ] 1.4 XP, levels, daily goal / active time
 - [ ] 1.5 Streaks + freezes (time zones, DST)

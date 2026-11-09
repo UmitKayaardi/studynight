@@ -15,7 +15,7 @@ describe('randomInt', () => {
   it('rejects values in the biased tail', () => {
     // A source that first returns a value in the rejected tail for n = 3, then 7.
     const values = [2 ** 32 - 1, 7];
-    const source = (buf: Uint32Array) => {
+    const source = (buf: Uint32Array<ArrayBuffer>) => {
       buf[0] = values.shift()!;
       return buf;
     };

@@ -3,7 +3,7 @@
  * Used for question order and option shuffling (never Math.random).
  */
 
-type RandomSource = (buf: Uint32Array) => Uint32Array;
+type RandomSource = (buf: Uint32Array<ArrayBuffer>) => Uint32Array<ArrayBuffer>;
 
 const defaultSource: RandomSource = (buf) => crypto.getRandomValues(buf);
 
