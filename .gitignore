@@ -26,3 +26,6 @@ benchmarks/results/raw/
 Thumbs.db
 public/ort/
 store/.feature.html
+
+.vercel
+.env*
