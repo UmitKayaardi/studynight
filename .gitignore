@@ -29,3 +29,4 @@ store/.feature.html
 
 .vercel
 .env*
+smoke-results/
