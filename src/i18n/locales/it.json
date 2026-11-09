@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "I tuoi appunti, trasformati in un gioco."
+    "tagline": "Le tue note, trasformate in un gioco."
+  },
+  "common": {
+    "back": "Indietro",
+    "cancel": "Annulla",
+    "close": "Chiudi",
+    "confirm": "Conferma",
+    "continue": "Continua",
+    "delete": "Elimina",
+    "done": "Fatto",
+    "goHome": "Torna a casa",
+    "loading": "Caricamento…",
+    "next": "Avanti",
+    "retry": "Riprova",
+    "save": "Salva",
+    "skip": "Salta",
+    "undo": "Ripristina"
+  },
+  "errors": {
+    "boundary": {
+      "body": "I tuoi mazzi e i progressi sono salvati in sicurezza su questo dispositivo. Torniamo a casa.",
+      "title": "Ops, qualcosa è andata storta"
+    }
+  },
+  "language": {
+    "choose": "Scegli la tua lingua",
+    "menuLabel": "Lingua: {{language}}. Cambia lingua"
+  },
+  "nav": {
+    "decks": "Mazzi",
+    "home": "Home",
+    "label": "Principale",
+    "profile": "Profilo",
+    "review": "Ripassa"
   }
 }

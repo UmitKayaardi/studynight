@@ -40,10 +40,10 @@ from the first unchecked step. Commit after every step.
 - [x] 4.3 Backup export/import, delete-all, storage persistence/quota
 
 ## Phase 5 — Design system & shell
-- [ ] 5.1 Primitives (buttons, cards, sheets, toasts, rings), icons
-- [ ] 5.2 Mascot (6 expressions), logo, avatars, badge art
-- [ ] 5.3 i18n runtime, fonts per script, RTL, theme, router, bottom tabs, error boundary
-- [ ] 5.4 Sounds, haptics, reduced motion
+- [x] 5.1 Primitives (buttons, cards, sheets, toasts, rings), icons
+- [x] 5.2 Mascot (6 expressions), logo, avatars, badge art
+- [x] 5.3 i18n runtime, fonts per script, RTL, theme, router, bottom tabs, error boundary
+- [x] 5.4 Sounds, haptics, reduced motion
 
 ## Phase 6 — Core flow
 - [ ] 6.1 Onboarding
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 5 step 5.1 (UI primitives, icons).
+Next: Phase 6 step 6.1 (onboarding) — first build the game services (deck pipeline, generation queue, answer recording) used by the screens.
 
 Known issues: none yet.

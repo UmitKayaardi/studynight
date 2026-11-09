@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "내 노트가 게임이 된다."
+    "tagline": "노트를 게임으로 바꿔요."
+  },
+  "common": {
+    "back": "뒤로",
+    "cancel": "취소",
+    "close": "닫기",
+    "confirm": "확인",
+    "continue": "계속",
+    "delete": "삭제",
+    "done": "완료",
+    "goHome": "홈으로",
+    "loading": "로드 중…",
+    "next": "다음",
+    "retry": "다시 시도",
+    "save": "저장",
+    "skip": "건너뛰기",
+    "undo": "되돌리기"
+  },
+  "errors": {
+    "boundary": {
+      "body": "덱과 진행 상황은 기기에 안전하게 저장돼 있어요. 홈으로 돌아갈게요.",
+      "title": "앗, 뭔가 잘못됐어요"
+    }
+  },
+  "language": {
+    "choose": "언어를 선택하세요",
+    "menuLabel": "언어: {{language}}. 언어 변경"
+  },
+  "nav": {
+    "decks": "덱",
+    "home": "홈",
+    "label": "메인",
+    "profile": "프로필",
+    "review": "복습"
   }
 }

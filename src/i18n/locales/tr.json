@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "Notların, bir oyuna dönüştü."
+    "tagline": "Notlarınız, bir oyuna dönüştürüldü."
+  },
+  "common": {
+    "back": "Geri",
+    "cancel": "İptal",
+    "close": "Kapat",
+    "confirm": "Onayla",
+    "continue": "Devam et",
+    "delete": "Sil",
+    "done": "Tamam",
+    "goHome": "Ana sayfaya dön",
+    "loading": "Yükleniyor…",
+    "next": "İleri",
+    "retry": "Tekrar dene",
+    "save": "Kaydet",
+    "skip": "Atla",
+    "undo": "Geri al"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Desteleriniz ve ilerlemeniz bu cihazda güvenli bir şekilde kaydedildi. Hadi ana sayfaya dönelim.",
+      "title": "Oops, bir şeyler ters gitti"
+    }
+  },
+  "language": {
+    "choose": "Dilini seç",
+    "menuLabel": "Dil: {{language}}. Dili değiştir"
+  },
+  "nav": {
+    "decks": "Kâğıtlar",
+    "home": "Ana Sayfa",
+    "label": "Ana",
+    "profile": "Profil",
+    "review": "Gözden Geçir"
   }
 }

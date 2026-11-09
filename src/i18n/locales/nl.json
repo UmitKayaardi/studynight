@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "Jouw aantekeningen, omgetoverd tot een spel."
+    "tagline": "Jouw notities, omgezet in een spel."
+  },
+  "common": {
+    "back": "Terug",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "confirm": "Bevestigen",
+    "continue": "Doorgaan",
+    "delete": "Verwijderen",
+    "done": "Klaar",
+    "goHome": "Naar huis",
+    "loading": "Laden…",
+    "next": "Volgende",
+    "retry": "Opnieuw proberen",
+    "save": "Opslaan",
+    "skip": "Overslaan",
+    "undo": "Ongedaan maken"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Je decks en voortgang zijn veilig opgeslagen op dit apparaat. Laten we terug naar huis gaan.",
+      "title": "Oeps, er is iets misgegaan"
+    }
+  },
+  "language": {
+    "choose": "Kies je taal",
+    "menuLabel": "Taal: {{language}}. Taal wijzigen"
+  },
+  "nav": {
+    "decks": "Decks",
+    "home": "Home",
+    "label": "Hoofd",
+    "profile": "Profiel",
+    "review": "Review"
   }
 }

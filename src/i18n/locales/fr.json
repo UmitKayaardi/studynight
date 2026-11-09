@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Tes notes, transformées en jeu."
+  },
+  "common": {
+    "back": "Retour",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "confirm": "Confirmer",
+    "continue": "Continuer",
+    "delete": "Supprimer",
+    "done": "Terminé",
+    "goHome": "Retour à l'accueil",
+    "loading": "Chargement…",
+    "next": "Suivant",
+    "retry": "Réessayer",
+    "save": "Enregistrer",
+    "skip": "Passer",
+    "undo": "Défaire"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Tes decks et ta progression sont sauvegardés en toute sécurité sur cet appareil. Retour à l'accueil.",
+      "title": "Oups, un problème est survenu"
+    }
+  },
+  "language": {
+    "choose": "Choisis ta langue",
+    "menuLabel": "Langue : {{language}}. Modifier la langue"
+  },
+  "nav": {
+    "decks": "Decks",
+    "home": "Accueil",
+    "label": "Principal",
+    "profile": "Profil",
+    "review": "Réviser"
   }
 }

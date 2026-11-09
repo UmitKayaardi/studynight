@@ -28,8 +28,11 @@
   --sn-bad-soft: #fde2e5;
   --sn-focus: #0a7466;
   --sn-shadow: 0 1px 2px rgb(22 26 51 / 0.06), 0 8px 24px rgb(22 26 51 / 0.08);
-  --sn-font-display: 'Nunito Variable', 'Nunito', var(--sn-font-script, ui-rounded), system-ui, sans-serif;
-  --sn-font-body: 'Inter Variable', 'Inter', var(--sn-font-script, system-ui), system-ui, sans-serif;
+  --sn-font-scripts:
+    var(--sn-font-script, 'Noto Sans'), 'Noto Sans Arabic', 'Noto Sans Devanagari', 'Noto Sans Bengali',
+    'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC';
+  --sn-font-display: 'Nunito Variable', 'Nunito', var(--sn-font-scripts), ui-rounded, system-ui, sans-serif;
+  --sn-font-body: 'Inter Variable', 'Inter', var(--sn-font-scripts), system-ui, sans-serif;
   color-scheme: light;
 }
 
@@ -130,4 +133,66 @@ code,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Mascot idle animation (disabled with reduced motion by the rules above). */
+@keyframes sn-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes sn-twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+}
+.sn-float {
+  animation: sn-float 3.2s ease-in-out infinite;
+}
+.sn-twinkle {
+  animation: sn-twinkle 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes sn-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(4px);
+  }
+}
+.sn-shake {
+  animation: sn-shake 0.4s ease-in-out;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

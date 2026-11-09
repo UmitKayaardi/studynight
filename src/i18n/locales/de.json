@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "Deine Notizen als Spiel."
+    "tagline": "Deine Notizen, zum Spiel gemacht."
+  },
+  "common": {
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "continue": "Fortsetzen",
+    "delete": "Löschen",
+    "done": "Fertig",
+    "goHome": "Zurück nach Hause",
+    "loading": "Lädt…",
+    "next": "Weiter",
+    "retry": "Nochmal versuchen",
+    "save": "Speichern",
+    "skip": "Überspringen",
+    "undo": "Rückgängig"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Deine Karten und Fortschritte sind sicher auf diesem Gerät gespeichert. Lass uns zurück zur Startseite gehen.",
+      "title": "Hoppla, etwas ist schiefgelaufen"
+    }
+  },
+  "language": {
+    "choose": "Sprache auswählen",
+    "menuLabel": "Sprache: {{language}}. Sprache ändern"
+  },
+  "nav": {
+    "decks": "Karten",
+    "home": "Start",
+    "label": "Hauptmenü",
+    "profile": "Profil",
+    "review": "Wiederholen"
   }
 }

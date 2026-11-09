@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Your notes, turned into a game."
+  },
+  "common": {
+    "back": "Back",
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "undo": "Undo",
+    "next": "Next",
+    "retry": "Try again",
+    "goHome": "Go home",
+    "loading": "Loading…",
+    "done": "Done",
+    "continue": "Continue",
+    "skip": "Skip"
+  },
+  "nav": {
+    "label": "Main",
+    "home": "Home",
+    "decks": "Decks",
+    "review": "Review",
+    "profile": "Profile"
+  },
+  "language": {
+    "menuLabel": "Language: {{language}}. Change language",
+    "choose": "Choose your language"
+  },
+  "errors": {
+    "boundary": {
+      "title": "Oops, something went wrong",
+      "body": "Your decks and progress are safely saved on this device. Let's head back home."
+    }
   }
 }

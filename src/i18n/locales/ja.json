@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "あなたのノートが、ゲームになる。"
+    "tagline": "ノートをゲームに変える"
+  },
+  "common": {
+    "back": "戻る",
+    "cancel": "キャンセル",
+    "close": "閉じる",
+    "confirm": "確認",
+    "continue": "続ける",
+    "delete": "削除",
+    "done": "完了",
+    "goHome": "ホームへ",
+    "loading": "読み込み中…",
+    "next": "次へ",
+    "retry": "もう一度",
+    "save": "保存",
+    "skip": "スキップ",
+    "undo": "やり直し"
+  },
+  "errors": {
+    "boundary": {
+      "body": "デッキと進捗は安全にデバイスに保存されています。ホームへ戻りましょう",
+      "title": "おっと、何か問題が起きました"
+    }
+  },
+  "language": {
+    "choose": "言語を選択",
+    "menuLabel": "言語: {{language}}。言語を変更"
+  },
+  "nav": {
+    "decks": "デッキ",
+    "home": "ホーム",
+    "label": "メイン",
+    "profile": "プロフィール",
+    "review": "復習"
   }
 }

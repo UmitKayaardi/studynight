@@ -1,6 +1,39 @@
 {
   "app": {
     "name": "StudyNight",
-    "tagline": "Tus apuntes, convertidos en un juego."
+    "tagline": "Tus notas, convertidas en juego."
+  },
+  "common": {
+    "back": "Atrás",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "delete": "Eliminar",
+    "done": "Listo",
+    "goHome": "Ir a inicio",
+    "loading": "Cargando…",
+    "next": "Siguiente",
+    "retry": "Intentar de nuevo",
+    "save": "Guardar",
+    "skip": "Saltar",
+    "undo": "Deshacer"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Tus mazos y progreso están guardados de forma segura en este dispositivo. Vamos a volver al inicio.",
+      "title": "Vaya, algo salió mal"
+    }
+  },
+  "language": {
+    "choose": "Elige tu idioma",
+    "menuLabel": "Idioma: {{language}}. Cambiar idioma"
+  },
+  "nav": {
+    "decks": "Mazos",
+    "home": "Inicio",
+    "label": "Principal",
+    "profile": "Perfil",
+    "review": "Repasar"
   }
 }

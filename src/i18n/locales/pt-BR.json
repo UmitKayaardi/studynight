@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Suas anotações, transformadas em jogo."
+  },
+  "common": {
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "delete": "Excluir",
+    "done": "Feito",
+    "goHome": "Ir para casa",
+    "loading": "Carregando…",
+    "next": "Próximo",
+    "retry": "Tentar novamente",
+    "save": "Salvar",
+    "skip": "Pular",
+    "undo": "Desfazer"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Seus baralhos e progresso estão salvos com segurança neste dispositivo. Vamos voltar para casa.",
+      "title": "Ops, algo deu errado"
+    }
+  },
+  "language": {
+    "choose": "Escolha seu idioma",
+    "menuLabel": "Idioma: {{language}}. Mudar idioma"
+  },
+  "nav": {
+    "decks": "Baralhos",
+    "home": "Início",
+    "label": "Principal",
+    "profile": "Perfil",
+    "review": "Revisão"
   }
 }

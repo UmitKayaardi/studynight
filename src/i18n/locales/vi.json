@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Ghi chú của bạn, biến thành trò chơi."
+  },
+  "common": {
+    "back": "Quay lại",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "confirm": "Xác nhận",
+    "continue": "Tiếp tục",
+    "delete": "Xóa",
+    "done": "Xong",
+    "goHome": "Về trang chủ",
+    "loading": "Đang tải…",
+    "next": "Tiếp",
+    "retry": "Thử lại",
+    "save": "Lưu",
+    "skip": "Bỏ qua",
+    "undo": "Hoàn tác"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Bộ thẻ và tiến trình của bạn đã được lưu an toàn trên thiết bị này. Hãy quay lại trang chủ.",
+      "title": "Ối, có gì đó sai"
+    }
+  },
+  "language": {
+    "choose": "Chọn ngôn ngữ của bạn",
+    "menuLabel": "Ngôn ngữ: {{language}}. Thay đổi ngôn ngữ"
+  },
+  "nav": {
+    "decks": "Bộ thẻ",
+    "home": "Trang chủ",
+    "label": "Chính",
+    "profile": "Hồ sơ",
+    "review": "Ôn tập"
   }
 }

@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Catatanmu, jadi permainan."
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "close": "Close",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "delete": "Delete",
+    "done": "Done",
+    "goHome": "Go home",
+    "loading": "Loading…",
+    "next": "Next",
+    "retry": "Coba lagi",
+    "save": "Save",
+    "skip": "Skip",
+    "undo": "Undo"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Kartu dan kemajuan Anda aman tersimpan di perangkat ini. Mari kembali ke beranda.",
+      "title": "Ups, terjadi kesalahan"
+    }
+  },
+  "language": {
+    "choose": "Pilih bahasa Anda",
+    "menuLabel": "Bahasa: {{language}}. Ubah bahasa"
+  },
+  "nav": {
+    "decks": "Decks",
+    "home": "Home",
+    "label": "Main",
+    "profile": "Profile",
+    "review": "Review"
   }
 }

@@ -2,5 +2,38 @@
   "app": {
     "name": "StudyNight",
     "tagline": "Twoje notatki zamienione w grę."
+  },
+  "common": {
+    "back": "Wstecz",
+    "cancel": "Anuluj",
+    "close": "Zamknij",
+    "confirm": "Potwierdź",
+    "continue": "Kontynuuj",
+    "delete": "Usuń",
+    "done": "Gotowe",
+    "goHome": "Idź do domu",
+    "loading": "Ładowanie…",
+    "next": "Dalej",
+    "retry": "Spróbuj ponownie",
+    "save": "Zapisz",
+    "skip": "Pomiń",
+    "undo": "Cofnij"
+  },
+  "errors": {
+    "boundary": {
+      "body": "Twoje talie i postępy są bezpiecznie zapisane na tym urządzeniu. Wróćmy do domu.",
+      "title": "Ups, coś poszło nie tak"
+    }
+  },
+  "language": {
+    "choose": "Wybierz język",
+    "menuLabel": "Język: {{language}}. Zmień język"
+  },
+  "nav": {
+    "decks": "Talie",
+    "home": "Strona główna",
+    "label": "Główne",
+    "profile": "Profil",
+    "review": "Powtórka"
   }
 }
