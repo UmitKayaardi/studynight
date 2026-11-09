@@ -16,6 +16,15 @@ const Deck = lazy(() => import('./screens/Deck'));
 const Play = lazy(() => import('./screens/Play'));
 const Results = lazy(() => import('./screens/Results'));
 const Challenge = lazy(() => import('./screens/Challenge'));
+const Ask = lazy(() => import('./screens/Ask'));
+const Review = lazy(() => import('./screens/Review'));
+const Profile = lazy(() => import('./screens/Profile'));
+const Planner = lazy(() => import('./screens/Planner'));
+const SettingsScreen = lazy(() => import('./screens/SettingsScreen'));
+const Privacy = lazy(() => import('./screens/Legal').then((m) => ({ default: m.Privacy })));
+const Terms = lazy(() => import('./screens/Legal').then((m) => ({ default: m.Terms })));
+const About = lazy(() => import('./screens/Legal').then((m) => ({ default: m.About })));
+const Licences = lazy(() => import('./screens/Legal').then((m) => ({ default: m.Licences })));
 const Gallery = import.meta.env.DEV ? lazy(() => import('./screens/dev/Gallery')) : null;
 
 function Loading() {
@@ -45,7 +54,16 @@ export function App() {
             <Route path="/decks" component={Decks} />
             <Route path="/samples" component={Samples} />
             <Route path="/new" component={NewDeck} />
+            <Route path="/deck/:id/ask" component={Ask} />
             <Route path="/deck/:id" component={Deck} />
+            <Route path="/review" component={Review} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/profile/planner" component={Planner} />
+            <Route path="/profile/settings" component={SettingsScreen} />
+            <Route path="/privacy" component={Privacy} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/about" component={About} />
+            <Route path="/licences" component={Licences} />
             <Route path="/play" component={Play} />
             <Route path="/results" component={Results} />
             <Route path="/challenge" component={Challenge} />

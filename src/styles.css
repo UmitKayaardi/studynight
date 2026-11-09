@@ -33,6 +33,13 @@
     'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC';
   --sn-font-display: 'Nunito Variable', 'Nunito', var(--sn-font-scripts), ui-rounded, system-ui, sans-serif;
   --sn-font-body: 'Inter Variable', 'Inter', var(--sn-font-scripts), system-ui, sans-serif;
+  /* Chart tokens (validated: lightness band, chroma floor, contrast vs surface). */
+  --sn-chart: #0f9a87;
+  --sn-heat-0: #f2eee3;
+  --sn-heat-1: #c4e9df;
+  --sn-heat-2: #7fcbb9;
+  --sn-heat-3: #0f9a87;
+  --sn-heat-4: #0a6658;
   color-scheme: light;
 }
 
@@ -57,6 +64,12 @@
   --sn-bad-soft: #43182a;
   --sn-focus: #2ee6c5;
   --sn-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.35);
+  --sn-chart: #1aa88f;
+  --sn-heat-0: #1d2552;
+  --sn-heat-1: #18465a;
+  --sn-heat-2: #167467;
+  --sn-heat-3: #1aa88f;
+  --sn-heat-4: #6fe0c8;
   color-scheme: dark;
 }
 
