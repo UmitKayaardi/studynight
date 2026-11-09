@@ -3,6 +3,116 @@
     "name": "StudyNight",
     "tagline": "Ghi chú của bạn, biến thành trò chơi."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Gửi thử thách cho bạn bè.",
+      "name": "Thách Đấu"
+    },
+    "combo10": {
+      "desc": "Đúng liên tiếp 10 câu.",
+      "name": "Đang Cháy"
+    },
+    "comeback": {
+      "desc": "Quay lại sau một tuần vắng mặt.",
+      "name": "Chào Mừng Trở Lại"
+    },
+    "curious": {
+      "desc": "Đặt 10 câu hỏi cho ghi chú của bạn.",
+      "name": "Tò Mò"
+    },
+    "earlyStart": {
+      "desc": "Hoàn thành một vòng sớm sáng.",
+      "name": "Bình Minh"
+    },
+    "earned": "Huy hiệu mới: {{name}}",
+    "explainer": {
+      "desc": "Đưa ra 10 lời giải tuyệt vời.",
+      "name": "Giải Thích"
+    },
+    "firstBoss": {
+      "desc": "Đánh bại trận boss đầu tiên.",
+      "name": "Kẻ phá bão"
+    },
+    "firstDeck": {
+      "desc": "Đã tạo bộ bài đầu tiên.",
+      "name": "Bộ bài đầu tiên"
+    },
+    "firstQuiz": {
+      "desc": "Đã trả lời câu hỏi đầu tiên.",
+      "name": "Bước đầu"
+    },
+    "flashcards100": {
+      "desc": "Ôn 100 thẻ học.",
+      "name": "Bậc Thầy Thẻ"
+    },
+    "level10": {
+      "desc": "Đạt cấp 10.",
+      "name": "Ngôi Sao Mới"
+    },
+    "marathon": {
+      "desc": "Học một giờ trong một ngày.",
+      "name": "Marathon"
+    },
+    "nightSession": {
+      "desc": "Hoàn thành một vòng muộn khuya.",
+      "name": "Đêm Khuya"
+    },
+    "perfectExam": {
+      "desc": "Đạt 100% trong chế độ thi.",
+      "name": "Bài Thi Hoàn Hảo"
+    },
+    "planner": {
+      "desc": "Thêm một bài thi vào lịch của bạn.",
+      "name": "Lập Kế Hoạch"
+    },
+    "polyglot": {
+      "desc": "Đã làm quiz bằng hai ngôn ngữ trở lên.",
+      "name": "Polyglot"
+    },
+    "questions100": {
+      "desc": "Đã trả lời 100 câu hỏi.",
+      "name": "Thế Kỷ"
+    },
+    "questions1000": {
+      "desc": "Đã trả lời 1.000 câu hỏi.",
+      "name": "Nhà Leo Núi"
+    },
+    "streak100": {
+      "desc": "Học liên tục 100 ngày.",
+      "name": "Trăm đêm"
+    },
+    "streak30": {
+      "desc": "Học 30 ngày liên tiếp.",
+      "name": "Một tháng"
+    },
+    "streak7": {
+      "desc": "Học 7 ngày liên tiếp.",
+      "name": "Một tuần"
+    },
+    "suddenDeath20": {
+      "desc": "Đạt 20 câu trong chế độ chết chóc.",
+      "name": "Thép Đá"
+    }
+  },
+  "challenge": {
+    "accept": "Chấp nhận thử thách",
+    "copied": "Liên kết đã được sao chép!",
+    "copy": "Sao chép liên kết",
+    "draw": "Hoà!",
+    "forFun": "Điểm trong liên kết thử thách chỉ là để vui.",
+    "friend": "Bạn bè",
+    "from": "{{name}} thách bạn!",
+    "intro_other": "Liên kết của bạn bao gồm {{count}} câu hỏi từ vòng này, kèm điểm số. Ghi chú và nguồn của bạn sẽ không bao giờ được đưa vào.",
+    "makeOwn": "Tạo câu hỏi từ ghi chú của mình",
+    "none": "Chơi một vòng với câu hỏi trắc nghiệm, đúng/sai, điền vào, ghép nối hoặc sắp xếp trước.",
+    "privacy": "Các câu hỏi được nhúng trong liên kết — không bao giờ gửi tới máy chủ của chúng tôi.",
+    "share": "Chia sẻ liên kết",
+    "shareText": "{{name}} thách bạn trên StudyNight! Bạn có thể đánh bại điểm của tôi không?",
+    "theirScore": "Điểm của họ: {{correct}}/{{total}}. Bạn có thể đánh bại không?",
+    "theyWin": "Gần như thắng!",
+    "you": "Bạn",
+    "youWin": "Bạn thắng!"
+  },
   "common": {
     "back": "Quay lại",
     "cancel": "Hủy",
@@ -13,21 +123,227 @@
     "done": "Xong",
     "goHome": "Về trang chủ",
     "loading": "Đang tải…",
+    "minutes_other": "{{count}} phút",
     "next": "Tiếp",
     "retry": "Thử lại",
     "save": "Lưu",
+    "saved": "Đã lưu",
     "skip": "Bỏ qua",
+    "skipToContent": "Bỏ qua nội dung",
     "undo": "Hoàn tác"
   },
+  "deck": {
+    "aiDisclaimer": "AI có thể sai lầm — hãy kiểm tra với ghi chú của bạn. Nhấn nguồn trên bất kỳ câu hỏi nào để xem nguồn gốc.",
+    "busy": "Đang chờ dịch vụ AI…",
+    "delete": "Xóa bộ bài",
+    "deleteBody": "“{{title}}”, câu hỏi và lịch sử của nó sẽ bị xóa khỏi thiết bị.",
+    "deleted": "“{{title}}” đã xóa",
+    "deleteTitle": "Xóa bộ bài này?",
+    "generating": "Đang tạo thêm câu hỏi…",
+    "masteryLabel": "Sự thành thạo {{percent}}%",
+    "missing": "Không tìm thấy bộ bài",
+    "missingBody": "Bộ bài này không còn trên thiết bị.",
+    "modes": "Cách chơi",
+    "pages_other": "{{count}} trang",
+    "pastedText": "Văn bản đã dán",
+    "percent": "{{value}}%",
+    "quizIn": "Bài kiểm tra trong {{language}}",
+    "regenerate": "Tạo lại câu hỏi cho chủ đề",
+    "regenerateButton": "Tạo lại",
+    "regenerated": "Câu hỏi mới đã sẵn sàng.",
+    "regenerateHint": "Thay thế câu hỏi của chủ đề đó bằng câu mới. Lịch sử trả lời vẫn được giữ lại.",
+    "settings": "Cài đặt bộ bài",
+    "slides_other": "{{count}} slide",
+    "sources": "Nguồn",
+    "topicMap": "Bản đồ chủ đề",
+    "topicQuestions_other": "{{count}} câu hỏi",
+    "topicStatus_other": "Sự thành thạo {{percent}}% · {{count}} câu hỏi",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Cần cải thiện"
+  },
+  "decks": {
+    "due_other": "{{count}} đến hạn",
+    "emptyBody": "Tải lên ghi chú của bạn hoặc thử bộ mẫu để bắt đầu chơi.",
+    "emptyTitle": "Chưa có bộ nào",
+    "failed": "Có lỗi xảy ra",
+    "processing": "Đang chuẩn bị…",
+    "questionCount_other": "{{count}} câu hỏi",
+    "topicCount_other": "{{count}} chủ đề"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Hãy thử lại.",
+      "title": "Có gì đó sai"
+    },
+    "badChallenge": {
+      "body": "Có thể đã bị cắt khi sao chép. Yêu cầu bạn bè gửi lại.",
+      "title": "Liên kết thử thách này không hoạt động"
+    },
     "boundary": {
       "body": "Bộ thẻ và tiến trình của bạn đã được lưu an toàn trên thiết bị này. Hãy quay lại trang chủ.",
       "title": "Ối, có gì đó sai"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” có vẻ bị hỏng. Hãy lưu hoặc xuất lại.",
+      "title": "Không thể mở tệp này"
+    },
+    "EMPTY": {
+      "body": "Thêm tệp, ảnh hoặc văn bản trước.",
+      "title": "Không có gì để đọc"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” lớn hơn 25 MB. Hãy chia nhỏ hoặc xuất PDF nhỏ hơn.",
+      "title": "Tệp quá lớn"
+    },
+    "INTERRUPTED": {
+      "body": "Ứng dụng đã đóng trong khi bộ bài của bạn đang được xây dựng. Xóa bộ bài này và thêm file của bạn lại.",
+      "title": "Tải lên bị gián đoạn"
+    },
+    "NO_TEXT": {
+      "body": "Có vẻ như là tài liệu quét. Hãy chụp ảnh các trang thay vào đó, StudyNight sẽ đọc chúng.",
+      "title": "Không tìm thấy văn bản"
+    },
+    "OFFLINE": {
+      "body": "Cần kết nối internet. Mọi thứ bạn đã tạo vẫn hoạt động ngoại tuyến.",
+      "title": "Bạn đang ngoại tuyến"
+    },
+    "PASSWORD": {
+      "body": "Xóa mật khẩu (hoặc in ra PDF mới) và tải lên lại.",
+      "title": "PDF này được bảo vệ bằng mật khẩu"
+    },
+    "RATE_LIMITED": {
+      "body": "Nhiều người đang học ngay bây giờ — câu hỏi tiếp theo của bạn sẽ sẵn sàng trong giây lát. Trong lúc chờ, hãy xem lại những gì bạn đã có.",
+      "title": "Nhiều người đang học ngay bây giờ"
+    },
+    "storage": "Không thể lưu trên thiết bị này. Hãy giải phóng dung lượng và thử lại.",
+    "STORAGE_FULL": {
+      "body": "Xóa một bộ bài hoặc xuất bản bản sao lưu trong Hồ sơ để tạo không gian, rồi thử lại.",
+      "title": "Thiết bị của bạn đầy"
+    },
+    "TIMEOUT": {
+      "body": "Dịch vụ AI chưa trả lời kịp thời. Hãy thử lại.",
+      "title": "Quá lâu rồi"
+    },
+    "TOO_LARGE": {
+      "body": "Hãy thử gửi file nhỏ hơn hoặc ít trang hơn cùng một lúc.",
+      "title": "Quá lớn để gửi"
+    },
+    "TOO_LONG": {
+      "body": "Một bộ có thể chứa tối đa 200.000 ký tự. Chia thành vài bộ.",
+      "title": "Tài liệu quá dài"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Một bộ có thể chứa tối đa {{limit}} trang hoặc slide. Chia tài liệu thành vài bộ.",
+      "title": "Quá nhiều trang"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Một bộ có thể chứa tối đa 30 ảnh. Tạo bộ thứ hai cho phần còn lại.",
+      "title": "Quá nhiều ảnh"
+    },
+    "UNKNOWN": {
+      "body": "Hãy thử lại.",
+      "title": "Có lỗi xảy ra"
+    },
+    "UNREADABLE": {
+      "body": "Hãy thử ảnh rõ hơn hoặc file khác.",
+      "title": "Không đọc được"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” không thể đọc được. Sử dụng PDF, PowerPoint (.pptx), Word (.docx), văn bản, Markdown hoặc ảnh.",
+      "title": "Không hỗ trợ loại tệp"
+    },
+    "UPSTREAM": {
+      "body": "Hãy thử lại trong giây lát.",
+      "title": "Dịch vụ AI gặp sự cố"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Theo chủ đề",
+    "duration": "Thời gian",
+    "estimate": "Đây là ước tính dựa trên câu trả lời và khả năng ghi nhớ bộ bài của bạn. Không phải cam kết.",
+    "extended": "Thời gian mở rộng: bạn có thêm 50% thời gian.",
+    "intro": "Bài thi mô phỏng có thời gian, không gợi ý và không phản hồi cho tới cuối. Sau đó bạn nhận báo cáo điểm ước tính.",
+    "mistakes": "Xem lại lỗi",
+    "questions": "Câu hỏi",
+    "reportTitle": "Điểm dự đoán",
+    "start": "Bắt đầu thi"
+  },
+  "explain": {
+    "check": "Kiểm tra câu trả lời",
+    "checking": "Đang kiểm tra…",
+    "covered": "Đã bao quát",
+    "great": "Câu trả lời tuyệt!",
+    "label": "Câu trả lời của bạn",
+    "missed": "Thiếu",
+    "modelAnswer": "Đáp án mẫu",
+    "notYet": "Chưa đúng",
+    "partly": "Một phần đúng",
+    "placeholder": "Giải thích bằng lời của bạn…",
+    "points": "Bạn đã bao quát {{hit}} trong tổng số {{total}} điểm chính."
+  },
+  "home": {
+    "continue": "Tiếp tục",
+    "examIn_other": "{{title}} kỳ thi trong {{count}} ngày",
+    "examToday": "{{title}}: kỳ thi hôm nay. Chúc may mắn!",
+    "freezes_other": "{{count}} lần đóng băng chuỗi",
+    "go": "Chơi",
+    "goalOf_other": "của {{count}} phút",
+    "goalRing": "Mục tiêu hàng ngày {{percent}}% đã hoàn thành",
+    "greetingAfternoon": "Chào buổi chiều!",
+    "greetingAfternoonName": "Chào buổi chiều, {{name}}!",
+    "greetingEvening": "Chào buổi tối!",
+    "greetingEveningName": "Chào buổi tối, {{name}}!",
+    "greetingMorning": "Chào buổi sáng!",
+    "greetingMorningName": "Chào buổi sáng, {{name}}!",
+    "level": "Cấp độ {{level}}",
+    "levelProgress": "Tiến độ tới cấp độ tiếp theo, tổng cộng {{xp}} XP",
+    "mood": {
+      "celebrating": "Mục tiêu hàng ngày đã hoàn thành. Công việc tuyệt vời!",
+      "encouraging": "Thêm ghi chú đầu tiên và chúng ta cùng chơi.",
+      "happy": "Sẵn sàng một vòng nhanh?",
+      "sleepy": "Chuỗi ngày của bạn đang chờ—một vài câu hỏi giữ nó hoạt động."
+    },
+    "newDeck": "Bộ bài mới",
+    "openDeck": "Mở {{title}}",
+    "resume": "Bạn đang có một vòng đang tiến hành.",
+    "review": "Xem lại",
+    "reviewDue_other": "{{count}} câu hỏi cần xem lại",
+    "reviewDueHint": "Xem lại ngay giúp nó gắn kết.",
+    "statsLabel": "Hôm nay",
+    "streakDays_other": "ngày liên tiếp",
+    "trySample": "Thử bộ mẫu",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Chọn ngôn ngữ của bạn",
     "menuLabel": "Ngôn ngữ: {{language}}. Thay đổi ngôn ngữ"
+  },
+  "legal": {
+    "privacyLink": "Quyền riêng tư"
+  },
+  "modes": {
+    "ask": "Hỏi ghi chú của bạn",
+    "askHint": "Chỉ trả lời từ ghi chú của bạn",
+    "boss": "Trận chiến Boss",
+    "bossHint_other": "{{count}} chủ đề sẵn sàng",
+    "bossIntro": "Đánh bại đám mây bão: câu hỏi khó hơn, {{seconds}} giây mỗi câu và ba trái tim. Không có gợi ý!",
+    "bossLocked": "Mở khóa khi đạt {{percent}}% thành thạo",
+    "bossReady": "Trận chiến Boss đã mở khóa",
+    "challenge": "Thách đấu bạn bè",
+    "challengeHint": "Gửi câu hỏi của bạn",
+    "exam": "Chế độ thi",
+    "examHint": "Thi thử có thời gian",
+    "flashcards": "Thẻ flash",
+    "flashcardsHint": "Vuốt để ôn tập",
+    "practiseTopic": "Luyện tập chủ đề này",
+    "quick": "Chơi nhanh",
+    "quickHint": "10 câu hỏi trộn lẫn",
+    "review": "Ôn tập cần làm",
+    "sudden": "Đột ngột tử vong",
+    "suddenBest_other": "Tốt nhất: {{count}} liên tiếp",
+    "topic": "Luyện tập một chủ đề",
+    "topicHint": "Tập trung vào một chủ đề"
   },
   "nav": {
     "decks": "Bộ thẻ",
@@ -35,5 +351,203 @@
     "label": "Chính",
     "profile": "Hồ sơ",
     "review": "Ôn tập"
+  },
+  "newDeck": {
+    "chooseFiles": "Chọn tệp",
+    "create": "Tạo câu hỏi của tôi",
+    "deckTitle": "Tiêu đề bộ",
+    "dropTitle": "Thêm tài liệu học của bạn",
+    "examDate": "Ngày thi (không bắt buộc)",
+    "examDateHint": "Chúng tôi sẽ lên kế hoạch ôn tập quanh ngày này.",
+    "formats": "PDF, PowerPoint, Word, văn bản hoặc ảnh. Nhiều tệp có thể vào một bộ.",
+    "lowerQuality": "chất lượng có thể thấp hơn",
+    "notice": "Chỉ tải lên tài liệu bạn có quyền sử dụng. Không tải lên tài liệu chứa thông tin cá nhân hoặc nhạy cảm về bạn hoặc người khác.",
+    "pasteLabel": "Văn bản của bạn",
+    "pastePlaceholder": "Dán ghi chú của bạn ở đây…",
+    "pasteText": "Dán văn bản thay thế",
+    "quizLanguage": "Ngôn ngữ câu hỏi",
+    "ready": "Câu hỏi của bạn đã sẵn sàng. Thêm câu hỏi sẽ sớm xuất hiện!",
+    "remove": "Xóa {{name}}",
+    "sameAsNotes": "Giống như ghi chú của tôi",
+    "selected": "Tệp đã chọn",
+    "takePhoto": "Chụp ảnh",
+    "title": "Bộ bài mới",
+    "titlePlaceholder": "Ví dụ: Sinh học tuần 3",
+    "untitled": "Ghi chú của tôi"
+  },
+  "onboarding": {
+    "later": "Chỉ xem qua",
+    "one": {
+      "body": "Thêm slide, ghi chú hoặc ảnh cuốn sổ của bạn. Một bài kiểm tra dựa trên tài liệu của bạn sẵn sàng trong khoảng nửa phút.",
+      "title": "Ghi chú của bạn, biến thành trò chơi"
+    },
+    "setup": {
+      "avatar": "Chọn avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Mục tiêu hàng ngày",
+      "nickname": "Tên lạ (tùy chọn)",
+      "nicknameHint": "Chỉ lưu trên thiết bị này.",
+      "title": "Tùy chỉnh cho riêng mình"
+    },
+    "three": {
+      "body": "StudyNight ghi nhớ những điều bạn thấy khó và đưa chúng trở lại vào thời điểm thích hợp, ngay trước kỳ thi.",
+      "title": "Học vững chắc"
+    },
+    "trySample": "Thử bộ mẫu",
+    "two": {
+      "body": "Nhấn vào nguồn để xem đoạn chính xác từ ghi chú của bạn. Câu hỏi được kiểm tra với ghi chú trước khi bạn thấy chúng.",
+      "title": "Mỗi câu hỏi đều hiển thị nguồn gốc"
+    },
+    "uploadNotes": "Tải lên ghi chú của tôi"
+  },
+  "play": {
+    "answerWas": "Đáp án:",
+    "bossHit": "Đúng trúng!",
+    "check": "Kiểm tra",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Đúng!",
+    "correctAnswer": "Đáp án đúng",
+    "correctOrder": "Thứ tự đúng",
+    "correctPairs": "Cặp đúng",
+    "definitions": "Nghĩa",
+    "expected": "Đáp án:",
+    "false": "Sai",
+    "figureAlt": "Hình ảnh từ ghi chú của bạn liên quan đến câu hỏi này",
+    "fromNotes": "Từ ghi chú của bạn",
+    "fromPage": "Từ ghi chú của bạn · Trang {{n}}",
+    "fromSlide": "Từ ghi chú của bạn · Slide {{n}}",
+    "grade": {
+      "again": "Lại",
+      "easy": "Dễ",
+      "good": "Tốt",
+      "hard": "Khó"
+    },
+    "hearts_other": "{{count}} tim còn lại",
+    "hint": "Gợi ý (một nửa XP)",
+    "howWell": "Bạn nhớ như thế nào?",
+    "incorrect": "Sai rồi",
+    "incorrectAnnounce": "Sai rồi. Đáp án là {{answer}}",
+    "matchHelp": "Chạm vào một thuật ngữ, rồi chọn nghĩa tương ứng.",
+    "moveDown": "Di chuyển bước {{n}} xuống",
+    "moveUp": "Di chuyển bước {{n}} lên",
+    "noQuestions": "Chưa có câu hỏi",
+    "noQuestionsBody": "Câu hỏi mới đang được tạo. Thử lại sau hoặc kiểm tra kết nối.",
+    "nothingDue": "Không có gì để ôn",
+    "nothingDueBody": "Bạn đã bắt kịp. Quay lại sau hoặc chơi nhanh một vòng.",
+    "orderHelp": "Kéo các bước, hoặc dùng mũi tên, để sắp xếp đúng thứ tự.",
+    "pageN": "Trang {{n}}",
+    "pairedWith": "Đã kết nối với thuật ngữ {{n}}: {{text}}",
+    "preparing": "Đang chuẩn bị câu hỏi…",
+    "progress": "Câu {{n}} trên {{total}}",
+    "quit": "Tạm dừng hoặc thoát",
+    "quitBody": "Các câu trả lời của bạn đã được lưu.",
+    "quitConfirm": "Rời",
+    "quitTitle": "Rời vòng này?",
+    "reset": "Đặt lại",
+    "secondsLeft_other": "{{count}} giây còn lại",
+    "showAnswer": "Hiện đáp án",
+    "slideN": "Slide {{n}}",
+    "sourceTitle": "Từ ghi chú của bạn",
+    "swipeHelp": "Vuốt sang phải nếu đã biết, sang trái để xem lại, lên nếu dễ",
+    "terms": "Thuật ngữ",
+    "timeLeft": "Thời gian còn lại: {{time}}",
+    "true": "Đúng",
+    "typeAnswer": "Nhập câu trả lời",
+    "typoAccepted": "Đã chấp nhận — chú ý chính tả: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP vòng này",
+    "yourAnswer": "Câu trả lời của bạn"
+  },
+  "processing": {
+    "background": "Bạn có thể bắt đầu chơi ngay khi câu hỏi đầu tiên sẵn sàng. Các câu hỏi còn lại sẽ được tải nền.",
+    "chooseBody_other": "{{count}} trang cần đọc ảnh, nhưng tối đa {{max}} trang có thể đọc mỗi bộ. Chọn nơi bắt đầu.",
+    "choosePages": "Đọc trang {{from}}–{{to}}",
+    "chooseTitle": "Chọn trang để đọc",
+    "handwriting": "Chữ viết tay được đọc theo khả năng tối đa.",
+    "questions": "Viết câu hỏi đầu tiên về “{{topic}}”…",
+    "readingFile": "Đọc {{name}}…",
+    "readingPage": "Đọc trang {{page}} trên {{total}}…",
+    "startPage": "Bắt đầu từ trang",
+    "title": "Đang tạo câu hỏi",
+    "topics": "Tìm chủ đề chính…",
+    "vision": "Đọc ảnh của bạn ({{done}} trên {{total}})…"
+  },
+  "report": {
+    "body": "Câu hỏi sẽ được gỡ bỏ ngay lập tức và không hiển thị nữa.",
+    "done": "Đã xóa câu hỏi",
+    "duplicate": "Trùng lặp",
+    "notInNotes": "Không có trong ghi chú của tôi",
+    "open": "Báo cáo câu hỏi này",
+    "title": "Báo cáo câu hỏi này",
+    "unclear": "Không rõ ràng",
+    "wrong": "Đáp án sai"
+  },
+  "results": {
+    "accuracy": "Độ chính xác",
+    "bestCombo": "Combo tốt nhất",
+    "bossLost": "Bão vẫn kéo dài — thử lại!",
+    "bossWon": "Bão đã qua!",
+    "done": "Xong",
+    "goalMet": "Đạt mục tiêu ngày! +20 XP thưởng.",
+    "levelUp": "Cấp độ lên! Bạn đã đạt cấp {{level}}.",
+    "newBadges": "Huy hiệu mới",
+    "newBest": "Kỷ lục cá nhân mới!",
+    "practiseThese": "Luyện tập những cái này",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Tóm tắt vòng",
+    "suddenScore_other": "{{count}} liên tiếp!",
+    "time": "Thời gian",
+    "weakest": "Chủ đề khó nhất của bạn",
+    "xp": "XP đã nhận",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Được viết cho StudyNight, sẵn sàng chơi ngay — không cần tải lên. Cũng hoạt động offline.",
+    "play_other": "Chơi ({{count}} câu hỏi)",
+    "title": "Bộ mẫu"
+  },
+  "share": {
+    "button": "Chia sẻ kết quả",
+    "copied": "Đã sao chép!",
+    "copyText": "Sao chép văn bản",
+    "download": "Tải hình ảnh",
+    "includeDeck": "Hiển thị tiêu đề bộ đề",
+    "shareImage": "Chia sẻ hình ảnh",
+    "text": "Tôi đạt {{correct}}/{{total}} trên StudyNight — {{title}}! 🌙",
+    "textDeck": "Tôi đạt {{correct}}/{{total}} trên “{{deck}}” trong StudyNight — {{title}}! 🌙",
+    "title": "Chia sẻ kết quả của bạn"
+  },
+  "smart": {
+    "body": "Tìm đoạn đúng ngay cả khi dùng từ khác hoặc ngôn ngữ khác. Tải về khoảng {{size}} MB một lần, sau đó làm việc ngoại tuyến.",
+    "download": "Tải về ({{size}} MB)",
+    "downloading": "Tìm kiếm thông minh: đang tải {{percent}}…",
+    "failed": "Không thể thiết lập tìm kiếm thông minh. Tìm kiếm từ khóa vẫn hoạt động; bạn có thể thử lại trong Cài đặt.",
+    "mobileData": "Bạn dường như đang dùng dữ liệu di động. Bạn có thể chờ Wi‑Fi hơn không?",
+    "notNow": "Không bây giờ",
+    "title": "Tìm kiếm thông minh"
+  },
+  "titles": {
+    "bossSlayer": "Thợ săn bão",
+    "braveExplorer": "Nhà thám hiểm dũng cảm",
+    "comboMaster": "Bậc thầy combo",
+    "comebackKid": "Người quay trở lại",
+    "deepThinker": "Tư duy sâu",
+    "earlyRiser": "Người dậy sớm",
+    "freshStart": "Khởi đầu mới",
+    "hintFreeHero": "Anh hùng không gợi ý",
+    "marathoner": "Chạy marathon",
+    "neverGiveUp": "Không bao giờ bỏ cuộc",
+    "nightOwlMode": "Chế độ cú đêm",
+    "perfectionist": "Người hoàn hảo",
+    "speedReader": "Đọc nhanh",
+    "steadyClimber": "Người leo dốc ổn định",
+    "topicTamer": "Bậc thầy chủ đề"
+  },
+  "voice": {
+    "denied": "Quyền truy cập mic đã bị chặn. Cho phép trong cài đặt trình duyệt, hoặc gõ câu trả lời thay thế.",
+    "record": "Trả lời bằng giọng nói",
+    "recording": "Đang ghi âm…",
+    "stop": "Dừng ghi âm (còn {{seconds}} s)",
+    "transcribing": "Chuyển lời nói thành văn bản…"
   }
 }

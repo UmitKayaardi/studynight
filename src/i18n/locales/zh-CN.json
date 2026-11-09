@@ -3,6 +3,116 @@
     "name": "StudyNight",
     "tagline": "把笔记变成游戏"
   },
+  "badges": {
+    "challenger": {
+      "desc": "向朋友发起了挑战。",
+      "name": "挑战者"
+    },
+    "combo10": {
+      "desc": "连续答对10题。",
+      "name": "势如破竹"
+    },
+    "comeback": {
+      "desc": "离开一周后回来了。",
+      "name": "王者归来"
+    },
+    "curious": {
+      "desc": "向你的笔记提问10次。",
+      "name": "好奇宝宝"
+    },
+    "earlyStart": {
+      "desc": "在清晨完成了一轮学习。",
+      "name": "旭日东升"
+    },
+    "earned": "新徽章：{{name}}",
+    "explainer": {
+      "desc": "提供了10个精彩解析。",
+      "name": "讲解达人"
+    },
+    "firstBoss": {
+      "desc": "赢得了你的第一场 Boss 战。",
+      "name": "破风者"
+    },
+    "firstDeck": {
+      "desc": "创建了你的第一副牌。",
+      "name": "第一副牌"
+    },
+    "firstQuiz": {
+      "desc": "回答了你的第一道题。",
+      "name": "迈出第一步"
+    },
+    "flashcards100": {
+      "desc": "复习了100张闪卡。",
+      "name": "闪卡高手"
+    },
+    "level10": {
+      "desc": "达到10级。",
+      "name": "新星崛起"
+    },
+    "marathon": {
+      "desc": "一天内学习了1小时。",
+      "name": "马拉松"
+    },
+    "nightSession": {
+      "desc": "在深夜完成了一轮学习。",
+      "name": "深夜苦读"
+    },
+    "perfectExam": {
+      "desc": "在考试模式中拿到100%。",
+      "name": "满分考试"
+    },
+    "planner": {
+      "desc": "在计划表中添加了考试。",
+      "name": "规划大师"
+    },
+    "polyglot": {
+      "desc": "用两种或更多语言完成测验。",
+      "name": "多语能手"
+    },
+    "questions100": {
+      "desc": "答对100道题。",
+      "name": "百题达人"
+    },
+    "questions1000": {
+      "desc": "答对1,000道题。",
+      "name": "千题攀登者"
+    },
+    "streak100": {
+      "desc": "连续学习100天。",
+      "name": "百夜不辍"
+    },
+    "streak30": {
+      "desc": "连续学习 30 天。",
+      "name": "一月坚持"
+    },
+    "streak7": {
+      "desc": "连续学习 7 天。",
+      "name": "一周坚持"
+    },
+    "suddenDeath20": {
+      "desc": "在突然死亡模式中达到20分。",
+      "name": "钢铁意志"
+    }
+  },
+  "challenge": {
+    "accept": "接受挑战",
+    "copied": "链接已复制！",
+    "copy": "复制链接",
+    "draw": "平局！",
+    "forFun": "挑战链接中的分数仅供娱乐。",
+    "friend": "好友",
+    "from": "{{name}} 向你发起挑战！",
+    "intro_other": "你的链接包含本轮的 {{count}} 道题及你的分数。你的笔记及其来源绝不会包含在内。",
+    "makeOwn": "用我的笔记创建测验",
+    "none": "先玩一轮包含选择、判断、填空、配对或排序题的挑战吧。",
+    "privacy": "题目直接包含在链接中——它们绝不会发送到我们的服务器。",
+    "share": "分享链接",
+    "shareText": "{{name}} 在 StudyNight 向你发起挑战！你能超过我的分数吗？",
+    "theirScore": "TA 的分数：{{correct}}/{{total}}。你能超过吗？",
+    "theyWin": "好险！",
+    "you": "你",
+    "youWin": "你赢了！"
+  },
   "common": {
     "back": "返回",
     "cancel": "取消",
@@ -13,21 +123,227 @@
     "done": "完成",
     "goHome": "回到首页",
     "loading": "加载中…",
+    "minutes_other": "{{count}} 分钟",
     "next": "下一步",
     "retry": "再试一次",
     "save": "保存",
+    "saved": "已保存",
     "skip": "跳过",
+    "skipToContent": "跳到内容",
     "undo": "撤销"
   },
+  "deck": {
+    "aiDisclaimer": "AI 可能会出错，请务必对照笔记核实。点击题目中的来源可查看出处。",
+    "busy": "正在等待 AI 服务…",
+    "delete": "删除卡组",
+    "deleteBody": "“{{title}}”、其题目及历史记录将从该设备移除。",
+    "deleted": "已删除“{{title}}”",
+    "deleteTitle": "删除此卡组？",
+    "generating": "正在生成更多题目…",
+    "masteryLabel": "掌握度 {{percent}}%",
+    "missing": "未找到卡组",
+    "missingBody": "此卡组已不存在于该设备。",
+    "modes": "玩法",
+    "pages_other": "{{count}} 页",
+    "pastedText": "粘贴的文本",
+    "percent": "{{value}}%",
+    "quizIn": "使用{{language}}测试",
+    "regenerate": "重新生成主题题目",
+    "regenerateButton": "重新生成",
+    "regenerated": "新题目已就绪。",
+    "regenerateHint": "将用新题目替换该主题的题目。你的答题记录会保留。",
+    "settings": "卡组设置",
+    "slides_other": "{{count}} 张幻灯片",
+    "sources": "来源",
+    "topicMap": "主题地图",
+    "topicQuestions_other": "{{count}} 道题",
+    "topicStatus_other": "掌握度 {{percent}}% · {{count}} 道题",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "需加强"
+  },
+  "decks": {
+    "due_other": "{{count}} 张待复习",
+    "emptyBody": "上传你的笔记，或试试示例卡组开始学习。",
+    "emptyTitle": "还没有卡组",
+    "failed": "出错了",
+    "processing": "准备中…",
+    "questionCount_other": "{{count}} 道题",
+    "topicCount_other": "{{count}} 个主题"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "请重试。",
+      "title": "内容有误"
+    },
+    "badChallenge": {
+      "body": "复制时可能被截断。请让好友重新发送。",
+      "title": "此挑战链接无效"
+    },
     "boundary": {
       "body": "你的卡组和进度已安全保存在本设备。我们回到首页吧。",
       "title": "哎呀，出了点问题"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}”似乎已损坏。请尝试重新保存或导出。",
+      "title": "无法打开此文件"
+    },
+    "EMPTY": {
+      "body": "请先添加文件、照片或一些文本。",
+      "title": "没有内容可读"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}”超过 25 MB。请尝试拆分文件或导出较小的 PDF。",
+      "title": "文件过大"
+    },
+    "INTERRUPTED": {
+      "body": "应用关闭导致卡组构建中断，请删除该卡组并重新添加文件。",
+      "title": "上传中断"
+    },
+    "NO_TEXT": {
+      "body": "这看起来像扫描文档。请拍摄页面照片，StudyNight 会读取它们。",
+      "title": "未找到文本"
+    },
+    "OFFLINE": {
+      "body": "此功能需要互联网连接。您已创建的内容仍可离线使用。",
+      "title": "您已离线"
+    },
+    "PASSWORD": {
+      "body": "请移除密码（或将其打印为新的 PDF）后重新上传。",
+      "title": "此 PDF 受密码保护"
+    },
+    "RATE_LIMITED": {
+      "body": "现在有很多人在学习——你的下一题很快就会准备好。期间可以复习已有内容。",
+      "title": "现在有很多人在学习"
+    },
+    "storage": "无法在此设备上保存。请释放一些空间后重试。",
+    "STORAGE_FULL": {
+      "body": "请在个人资料中删除卡组或导出备份以释放空间，然后重试。",
+      "title": "设备存储已满"
+    },
+    "TIMEOUT": {
+      "body": "AI 服务响应超时，请重试。",
+      "title": "耗时过长"
+    },
+    "TOO_LARGE": {
+      "body": "请使用更小的文件或一次上传更少的页数。",
+      "title": "文件太大"
+    },
+    "TOO_LONG": {
+      "body": "一个卡组最多容纳 200,000 个字符。请将其拆分为几个卡组。",
+      "title": "文档过长"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "一个卡组最多包含 {{limit}} 页或幻灯片。请将材料拆分为几个卡组。",
+      "title": "页数过多"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "一个卡组最多包含 30 张照片。请为其余部分创建第二个卡组。",
+      "title": "照片过多"
+    },
+    "UNKNOWN": {
+      "body": "请重试。",
+      "title": "出现错误"
+    },
+    "UNREADABLE": {
+      "body": "请换一张更清晰的照片或其他文件。",
+      "title": "无法识别"
+    },
+    "UNSUPPORTED": {
+      "body": "无法读取“{{file}}”。请使用 PDF、PowerPoint (.pptx)、Word (.docx)、文本、Markdown 或照片。",
+      "title": "不支持的文件类型"
+    },
+    "UPSTREAM": {
+      "body": "请稍后重试。",
+      "title": "AI 服务出现问题"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "按主题",
+    "duration": "时长",
+    "estimate": "这是基于你的回答和记忆熟练度得出的估算值，并非最终成绩。",
+    "extended": "已开启延时：时间增加 50%。",
+    "intro": "限时模拟考，无提示，结束后才显示反馈。你将获得一份包含预估分数的报告。",
+    "mistakes": "回顾错题",
+    "questions": "题目",
+    "reportTitle": "预估分数",
+    "start": "开始考试"
+  },
+  "explain": {
+    "check": "检查我的答案",
+    "checking": "正在检查你的答案……",
+    "covered": "已覆盖",
+    "great": "回答很棒！",
+    "label": "你的答案",
+    "missed": "未覆盖",
+    "modelAnswer": "参考答案",
+    "notYet": "还不对",
+    "partly": "部分正确",
+    "placeholder": "用自己的话解释一下……",
+    "points": "你覆盖了 {{hit}} 个关键点（共 {{total}} 个）。"
+  },
+  "home": {
+    "continue": "继续",
+    "examIn_other": "{{title}} 考试还有 {{count}} 天",
+    "examToday": "{{title}}：今天考试，祝好运！",
+    "freezes_other": "{{count}} 次连胜冻结",
+    "go": "开始",
+    "goalOf_other": "共 {{count}} 分钟",
+    "goalRing": "每日目标已完成 {{percent}}%",
+    "greetingAfternoon": "下午好！",
+    "greetingAfternoonName": "下午好，{{name}}！",
+    "greetingEvening": "晚上好！",
+    "greetingEveningName": "晚上好，{{name}}！",
+    "greetingMorning": "早上好！",
+    "greetingMorningName": "早上好，{{name}}！",
+    "level": "等级 {{level}}",
+    "levelProgress": "距离下一级还有 {{xp}} XP",
+    "mood": {
+      "celebrating": "已完成每日目标，太棒了！",
+      "encouraging": "添加第一条笔记，开始玩吧。",
+      "happy": "来一局快速挑战？",
+      "sleepy": "你的连胜在等着——答几题就能保持。"
+    },
+    "newDeck": "新建卡组",
+    "openDeck": "打开 {{title}}",
+    "resume": "你有一局正在进行。",
+    "review": "复习",
+    "reviewDue_other": "还有 {{count}} 题待复习",
+    "reviewDueHint": "现在复习有助于记忆。",
+    "statsLabel": "今日",
+    "streakDays_other": "天连胜",
+    "trySample": "试试示例卡组",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "选择语言",
     "menuLabel": "语言：{{language}}。切换语言"
+  },
+  "legal": {
+    "privacyLink": "隐私"
+  },
+  "modes": {
+    "ask": "询问你的笔记",
+    "askHint": "仅从笔记中作答",
+    "boss": "Boss 战",
+    "bossHint_other": "{{count}} 个主题已就绪",
+    "bossIntro": "击败风暴云：题目更难，每题 {{seconds}} 秒，三条命。无提示！",
+    "bossLocked": "掌握度达 {{percent}}% 时解锁",
+    "bossReady": "Boss 战已解锁",
+    "challenge": "挑战好友",
+    "challengeHint": "发送你的问题",
+    "exam": "考试模式",
+    "examHint": "限时模拟考",
+    "flashcards": "闪卡",
+    "flashcardsHint": "滑动复习",
+    "practiseTopic": "练习此主题",
+    "quick": "快速练习",
+    "quickHint": "10 道混合题",
+    "review": "复习到期项",
+    "sudden": "突然死亡",
+    "suddenBest_other": "最佳：连对 {{count}} 题",
+    "topic": "练习主题",
+    "topicHint": "专注一个主题"
   },
   "nav": {
     "decks": "卡组",
@@ -35,5 +351,203 @@
     "label": "主菜单",
     "profile": "个人资料",
     "review": "复习"
+  },
+  "newDeck": {
+    "chooseFiles": "选择文件",
+    "create": "创建测验",
+    "deckTitle": "卡组标题",
+    "dropTitle": "添加学习资料",
+    "examDate": "考试日期（可选）",
+    "examDateHint": "我们将据此规划复习进度。",
+    "formats": "支持 PDF、PowerPoint、Word、文本或照片。多个文件可合并为一个卡组。",
+    "lowerQuality": "质量可能较低",
+    "notice": "请仅上传你有权使用的资料。请勿上传包含你或他人个人/敏感信息的文档。",
+    "pasteLabel": "你的文本",
+    "pastePlaceholder": "在此粘贴笔记…",
+    "pasteText": "粘贴文本",
+    "quizLanguage": "测验语言",
+    "ready": "测验已就绪。更多题目正在生成中！",
+    "remove": "移除 {{name}}",
+    "sameAsNotes": "与笔记相同",
+    "selected": "已选文件",
+    "takePhoto": "拍照",
+    "title": "新建卡组",
+    "titlePlaceholder": "例如：生物第3周",
+    "untitled": "我的笔记"
+  },
+  "onboarding": {
+    "later": "随便看看",
+    "one": {
+      "body": "添加幻灯片、笔记或笔记本照片。半分钟左右即可生成基于你材料的测验。",
+      "title": "把笔记变成游戏"
+    },
+    "setup": {
+      "avatar": "选择头像",
+      "avatarN": "头像 {{n}}",
+      "goal": "每日目标",
+      "nickname": "昵称（可选）",
+      "nicknameHint": "仅保存在此设备。",
+      "title": "个性化设置"
+    },
+    "three": {
+      "body": "StudyNight 会记住你觉得难的内容，并在合适的时机再次出现，直至考试。",
+      "title": "彻底掌握"
+    },
+    "trySample": "试用示例卡组",
+    "two": {
+      "body": "点击来源即可查看笔记中的对应段落。题目在展示前会先对照你的笔记。",
+      "title": "每道题都有来源"
+    },
+    "uploadNotes": "上传我的笔记"
+  },
+  "play": {
+    "answerWas": "答案：",
+    "bossHit": "正中靶心！",
+    "check": "检查",
+    "combo_other": "连击 × {{count}}！",
+    "correct": "答对了！",
+    "correctAnswer": "正确答案",
+    "correctOrder": "正确顺序",
+    "correctPairs": "正确配对",
+    "definitions": "含义",
+    "expected": "正确答案：",
+    "false": "错误",
+    "figureAlt": "这道题涉及的笔记插图",
+    "fromNotes": "来自你的笔记",
+    "fromPage": "来自你的笔记 · 第 {{n}} 页",
+    "fromSlide": "来自你的笔记 · 第 {{n}} 页",
+    "grade": {
+      "again": "再学一次",
+      "easy": "简单",
+      "good": "良好",
+      "hard": "困难"
+    },
+    "hearts_other": "剩余 {{count}} 颗心",
+    "hint": "提示（XP 减半）",
+    "howWell": "你记得有多牢？",
+    "incorrect": "不太对",
+    "incorrectAnnounce": "不太对。答案是 {{answer}}",
+    "matchHelp": "点击术语，再点击对应的含义。",
+    "moveDown": "将步骤 {{n}} 下移",
+    "moveUp": "将步骤 {{n}} 上移",
+    "noQuestions": "暂无题目",
+    "noQuestionsBody": "新题目正在生成中。请稍后再试，或检查网络连接。",
+    "nothingDue": "暂无待复习内容",
+    "nothingDueBody": "你已复习完毕。稍后再来，或玩一局快速练习。",
+    "orderHelp": "拖动步骤或使用箭头调整顺序。",
+    "pageN": "第 {{n}} 页",
+    "pairedWith": "与术语 {{n}} 配对：{{text}}",
+    "preparing": "正在准备题目…",
+    "progress": "第 {{n}} 题，共 {{total}} 题",
+    "quit": "暂停或退出",
+    "quitBody": "你目前的答题进度已保存。",
+    "quitConfirm": "退出",
+    "quitTitle": "退出本轮？",
+    "reset": "重置",
+    "secondsLeft_other": "剩余 {{count}} 秒",
+    "showAnswer": "显示答案",
+    "slideN": "第 {{n}} 页",
+    "sourceTitle": "来自你的笔记",
+    "swipeHelp": "向右滑表示记住了，向左滑再看一次，向上滑表示很简单。",
+    "terms": "术语",
+    "timeLeft": "剩余时间：{{time}}",
+    "true": "正确",
+    "typeAnswer": "输入答案",
+    "typoAccepted": "已接受——注意拼写：“{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "本轮获得 {{xp}} XP",
+    "yourAnswer": "你的答案"
+  },
+  "processing": {
+    "background": "首题就绪后即可开始。其余题目将在后台继续生成。",
+    "chooseBody_other": "有 {{count}} 页需要图片识别，但每个卡组最多支持 {{max}} 页。请选择起始位置。",
+    "choosePages": "读取第 {{from}}–{{to}} 页",
+    "chooseTitle": "选择要读取的页面",
+    "handwriting": "手写内容将尽力识别。",
+    "questions": "正在生成关于“{{topic}}”的初始题目…",
+    "readingFile": "正在读取 {{name}}…",
+    "readingPage": "正在读取第 {{page}} 页，共 {{total}} 页…",
+    "startPage": "从第几页开始",
+    "title": "正在构建测验",
+    "topics": "正在查找主要主题…",
+    "vision": "正在识别图片 ({{done}}/{{total}})…"
+  },
+  "report": {
+    "body": "该题将立即从你的卡组中移除，且不再显示。",
+    "done": "题目已移除",
+    "duplicate": "重复题目",
+    "notInNotes": "不在我的笔记中",
+    "open": "举报此题",
+    "title": "举报此题",
+    "unclear": "表述不清",
+    "wrong": "答案错误"
+  },
+  "results": {
+    "accuracy": "正确率",
+    "bestCombo": "最高连击",
+    "bossLost": "风暴还在——再试一次！",
+    "bossWon": "风暴已清除！",
+    "done": "完成",
+    "goalMet": "达成今日目标！+20 XP 奖励。",
+    "levelUp": "升级啦！你已达到 {{level}} 级。",
+    "newBadges": "新徽章",
+    "newBest": "刷新个人纪录！",
+    "practiseThese": "练习这些",
+    "score": "{{correct}}/{{total}}",
+    "stats": "本轮总结",
+    "suddenScore_other": "连对 {{count}} 题！",
+    "time": "用时",
+    "weakest": "你的薄弱知识点",
+    "xp": "获得 XP",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "专为 StudyNight 编写，即开即玩，无需上传。支持离线使用。",
+    "play_other": "开始 ({{count}} 题)",
+    "title": "示例卡组"
+  },
+  "share": {
+    "button": "分享成绩",
+    "copied": "已复制！",
+    "copyText": "复制文本",
+    "download": "下载图片",
+    "includeDeck": "显示卡组标题",
+    "shareImage": "分享图片",
+    "text": "我在 StudyNight 上得了 {{correct}}/{{total}} 分——{{title}}！🌙",
+    "textDeck": "我在 StudyNight 的“{{deck}}”中得了 {{correct}}/{{total}} 分——{{title}}！🌙",
+    "title": "分享你的成绩"
+  },
+  "smart": {
+    "body": "即使使用不同的词汇或语言，也能找到正确的段落。首次下载约 {{size}} MB，之后可离线使用。",
+    "download": "下载 ({{size}} MB)",
+    "downloading": "智能搜索：正在下载 {{percent}}…",
+    "failed": "智能搜索设置失败。关键词搜索仍可用；您可以在设置中重试。",
+    "mobileData": "检测到您正在使用移动数据。建议等待 Wi-Fi 连接。",
+    "notNow": "暂不",
+    "title": "智能搜索"
+  },
+  "titles": {
+    "bossSlayer": "风暴追逐者",
+    "braveExplorer": "勇敢探索者",
+    "comboMaster": "连击大师",
+    "comebackKid": "逆袭选手",
+    "deepThinker": "深度思考者",
+    "earlyRiser": "早起鸟儿",
+    "freshStart": "全新开始",
+    "hintFreeHero": "无提示英雄",
+    "marathoner": "马拉松选手",
+    "neverGiveUp": "永不放弃",
+    "nightOwlMode": "夜猫子模式",
+    "perfectionist": "完美主义者",
+    "speedReader": "速读达人",
+    "steadyClimber": "稳步攀登者",
+    "topicTamer": "知识点驯服者"
+  },
+  "voice": {
+    "denied": "麦克风访问被阻止。请在浏览器设置中允许，或输入文字作答。",
+    "record": "语音作答",
+    "recording": "录音中……",
+    "stop": "停止录音（剩余 {{seconds}} 秒）",
+    "transcribing": "正在将语音转为文字……"
   }
 }

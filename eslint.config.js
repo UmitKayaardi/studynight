@@ -44,7 +44,7 @@ export default tseslint.config(
     rules: { 'no-restricted-syntax': 'off' },
   },
   {
-    files: ['scripts/**', 'benchmarks/**'],
+    files: ['scripts/**', 'benchmarks/**', 'tests/**'],
     rules: { 'no-console': 'off' },
   },
   {

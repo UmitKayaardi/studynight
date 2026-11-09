@@ -1,7 +1,28 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi. Todos los derechos reservados.",
+    "credits": "Creado con software de código abierto. IA por Groq; la búsqueda inteligente opcional se ejecuta en tu dispositivo.",
+    "mascot": "Conoce a Lumi, el creciente del cielo nocturno que te acompaña mientras estudias.",
+    "principle": "La IA solo organiza tus notas en temas, redacta preguntas a partir de tus propios fragmentos, las verifica con tus notas y marca qué puntos clave cubre una explicación. Puntuaciones, XP, rachas, programación de repaso, dificultad y planes de examen los calcula código probado en tu dispositivo. Ninguna pregunta llega a ti sin pasar la verificación con tus notas.",
+    "principleTitle": "La IA escribe las preguntas. El código decide todo lo demás.",
+    "version": "Versión {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "Tus notas, convertidas en juego."
+  },
+  "ask": {
+    "disclaimer": "Las respuestas provienen solo de tus notas. Tus preguntas no se guardan.",
+    "intro": "Pregunta lo que sea sobre esta baraja. Las respuestas vienen solo de tus notas, con fuentes numeradas que puedes abrir.",
+    "label": "Tu pregunta",
+    "notCovered": "Parece que tus notas no cubren esto.",
+    "notCoveredHint": "StudyNight solo responde con tus propias notas, no adivina.",
+    "offline": "Preguntar a tus notas necesita conexión a internet. Todo lo demás en esta baraja funciona sin conexión.",
+    "openSource": "Código abierto {{n}}",
+    "placeholder": "Pregunta sobre tus notas…",
+    "send": "Enviar",
+    "thinking": "Revisando tus notas…",
+    "title": "Pregunta a tus notas"
   },
   "badges": {
     "challenger": {
@@ -348,7 +369,18 @@
     "menuLabel": "Idioma: {{language}}. Cambiar idioma"
   },
   "legal": {
-    "privacyLink": "Privacidad"
+    "about": "Acerca de StudyNight",
+    "licences": "Licencias",
+    "privacy": "Privacidad",
+    "privacyLink": "Privacidad",
+    "terms": "Términos de uso",
+    "updated": "Última actualización {{date}}"
+  },
+  "licences": {
+    "fonts": "Fuentes: familias Inter, Nunito y Noto Sans (SIL Open Font License 1.1). Iconos: Lucide (ISC).",
+    "intro": "StudyNight se construye con software de código abierto. Cada componente abajo se usa bajo la licencia indicada.",
+    "model": "Modelo de búsqueda inteligente",
+    "original": "La mascota, el logo, avatares, insignias y sonidos fueron creados para StudyNight."
   },
   "modes": {
     "ask": "Pregunta a tus notas",
@@ -432,6 +464,39 @@
     },
     "uploadNotes": "Subir mis notas"
   },
+  "planner": {
+    "add": "Añadir un examen",
+    "addToCalendar": "Añadir al calendario",
+    "date": "Fecha del examen",
+    "dayPlan_many": "{{practice}} práctica + {{count}} repasos",
+    "dayPlan_one": "{{practice}} práctica + {{count}} repaso",
+    "dayPlan_other": "{{practice}} práctica + {{count}} repasos",
+    "daysLeft_many": "Faltan {{count}} días",
+    "daysLeft_one": "Falta {{count}} día",
+    "daysLeft_other": "Faltan {{count}} días",
+    "deck": "Mazo",
+    "empty": "Aún no hay exámenes. Añade uno para obtener un plan diario.",
+    "examName": "Nombre del examen",
+    "icsMock": "Simulacro: {{title}}",
+    "icsOpen": "Abre StudyNight para comenzar.",
+    "icsSummary_many": "Estudio: {{title}} ({{count}} preguntas)",
+    "icsSummary_one": "Estudio: {{title}} ({{count}} pregunta)",
+    "icsSummary_other": "Estudio: {{title}} ({{count}} preguntas)",
+    "intro": "Añade tus exámenes y StudyNight planificará cada día para ti: temas débiles primero, repartos espaciados y un simulacro el último día.",
+    "mockDay_many": "Simulacro + {{count}} repasos",
+    "mockDay_one": "Simulacro + {{count}} repaso",
+    "mockDay_other": "Simulacro + {{count}} repasos",
+    "more_many": "…y {{count}} días más",
+    "more_one": "…y {{count}} día más",
+    "more_other": "…y {{count}} días más",
+    "needDeck": "Crea primero un mazo y luego planifica un examen para él.",
+    "past": "Este examen ya pasó. ¡Bien hecho por superarlo!",
+    "remove": "Eliminar {{title}}",
+    "startToday": "Comenzar la sesión de hoy",
+    "time": "Tiempo de estudio",
+    "title": "Planificador de exámenes",
+    "today": "Examen hoy: repaso rápido de tus temas más débiles y luego descansa. ¡Suerte!"
+  },
   "play": {
     "answerWas": "Respuesta:",
     "bossHit": "¡Golpe directo!",
@@ -496,6 +561,48 @@
     "xpTotal": "{{xp}} XP en esta ronda",
     "yourAnswer": "Tu respuesta"
   },
+  "privacy": {
+    "s1": {
+      "h": "La versión corta",
+      "p": "Sin cuentas, sin anuncios, sin rastreo, sin analítica y sin cookies. Tus mazos, preguntas, progreso y perfil se guardan solo en este dispositivo."
+    },
+    "s10": {
+      "h": "Cambios y contacto",
+      "p": "Si esta política cambia, actualizaremos esta página y la fecha anterior. Preguntas son bienvenidas a través de los datos de contacto en la página de la tienda de la app o en la página del proyecto."
+    },
+    "s2": {
+      "h": "Lo que permanece en tu dispositivo",
+      "p": "Los archivos que añades se leen dentro de tu navegador; los archivos nunca se suben. Tus mazos, preguntas, respuestas, rachas, apodo y avatar se guardan en el almacenamiento del navegador de este dispositivo. Las respuestas escritas no se guardan después de que termine la ronda."
+    },
+    "s3": {
+      "h": "Lo que se envía al usar funciones de IA",
+      "p": "Para crear preguntas, comprobar explicaciones, responder preguntas sobre tus notas, leer fotos y convertir voz a texto, StudyNight envía fragmentos de texto cortos de tus notas (nunca archivos completos), fotos o imágenes de páginas redimensionadas y grabaciones de voz cortas a través de nuestro servidor a Groq, el proveedor de IA. Nuestro servidor las maneja solo en memoria y no almacena ni registra su contenido; sus registros contienen solo códigos de error y tiempos."
+    },
+    "s4": {
+      "h": "Groq, nuestro proveedor de IA",
+      "p": "Revisamos la documentación de datos y el Acuerdo de Servicios de Groq el 9 de noviembre de 2026. Dicen que Groq no conserva las solicitudes de inferencia por defecto, pero puede registrar entradas y salidas temporalmente, hasta 30 días, para corregir errores o investigar abusos sospechosos, a menos que se active la Retención Cero de Datos para la cuenta. Groq no puede usar entradas o salidas para entrenar modelos. Groq almacena datos en Estados Unidos. Ver console.groq.com/docs/your-data."
+    },
+    "s5": {
+      "h": "Búsqueda inteligente",
+      "p": "Si activas la búsqueda inteligente, se descarga un modelo de lenguaje una vez desde Hugging Face (huggingface.co), que ve tu dirección IP como cualquier sitio web que visites. Después se ejecuta completamente en tu dispositivo; buscar en tus notas nunca las envía a ningún lado."
+    },
+    "s6": {
+      "h": "Alojamiento",
+      "p": "La app está alojada por Vercel, que procesa datos técnicos como tu dirección IP para entregar el sitio y protegerlo de abusos."
+    },
+    "s7": {
+      "h": "Por favor, no subas información personal",
+      "p": "No subas documentos que contengan información personal o sensible sobre ti u otros. La IA se instruye a no repetir datos personales encontrados en documentos, pero la mejor protección es no subirlos."
+    },
+    "s8": {
+      "h": "Tus opciones",
+      "p": "Puedes exportar todos tus datos (Perfil → Ajustes → Exportar copia de seguridad), eliminar un mazo junto con todo lo creado a partir de él, o eliminar todos tus datos de una vez. Como nada sobre ti se almacena en nuestros servidores, no hay nada más que enviemos o eliminemos."
+    },
+    "s9": {
+      "h": "Niños",
+      "p": "StudyNight no recopila nada sobre quién eres. Está pensado para mayores de 13 años."
+    }
+  },
   "processing": {
     "background": "Puedes empezar a jugar tan pronto como las primeras preguntas estén listas. El resto seguirá llegando en segundo plano.",
     "chooseBody_many": "{{count}} páginas necesitan lectura de imagen, pero se pueden leer hasta {{max}} páginas por mazo. Elige dónde empezar.",
@@ -511,6 +618,45 @@
     "title": "Construyendo tu cuestionario",
     "topics": "Buscando los temas principales…",
     "vision": "Leyendo tus imágenes ({{done}} de {{total}})…"
+  },
+  "profile": {
+    "accuracy": "Precisión",
+    "accuracyOverTime": "Precisión por semana",
+    "activity": "Actividad",
+    "answered": "Respondidas",
+    "avatar": "Tu avatar",
+    "badgeEarned": "{{name}}, obtenida",
+    "badgeLocked": "{{name}}, aún no obtenida",
+    "badges": "Insignias ({{count}}/{{total}})",
+    "best": "Mejor racha",
+    "calendar": "Últimas 12 semanas",
+    "current": "Racha actual",
+    "dayDetail_many": "{{date}}: {{count}} preguntas, {{time}}",
+    "dayDetail_one": "{{date}}: {{count}} pregunta, {{time}}",
+    "dayDetail_other": "{{date}}: {{count}} preguntas, {{time}}",
+    "earnedOn": "Obtenida el {{date}}",
+    "freezeHint": "Ganas una congelación de racha cada 7 días consecutivos (hasta 2). Si fallas un día, se usa una automáticamente.",
+    "freezes": "Congelaciones de racha",
+    "frozenDay": "{{date}}: congelación de racha usada",
+    "less": "Menos",
+    "memberSince": "Aprendiendo desde {{date}}",
+    "more": "Más",
+    "nextLevel": "{{xp}} XP para el siguiente nivel",
+    "noName": "Aprendiz nocturno",
+    "notYet": "Aún no obtenida — ¡sigue así!",
+    "stats": "Tus estadísticas",
+    "streaks": "Rachas",
+    "strongest": "Temas más fuertes",
+    "studyTime": "Tiempo de estudio",
+    "weakest": "Temas a mejorar",
+    "weekDetail_many": "Semana del {{week}}: {{percent}} de {{count}} respuestas",
+    "weekDetail_one": "Semana del {{week}}: {{percent}} de {{count}} respuesta",
+    "weekDetail_other": "Semana del {{week}}: {{percent}} de {{count}} respuestas"
+  },
+  "pwa": {
+    "offline": "Estás sin conexión. Todo lo que has creado sigue funcionando.",
+    "refresh": "Actualizar",
+    "update": "Una nueva versión de StudyNight está lista."
   },
   "report": {
     "body": "Se eliminará de tu mazo inmediatamente y nunca se mostrará de nuevo.",
@@ -543,12 +689,72 @@
     "xp": "XP obtenida",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "Por baraja",
+    "caughtUp": "Todo al día. ¡Genial!",
+    "due_many": "{{count}} preguntas pendientes",
+    "due_one": "{{count}} pregunta pendiente",
+    "due_other": "{{count}} preguntas pendientes",
+    "dueHint": "Una revisión corta ahora la hace durar más.",
+    "forecast": "Próximas esta semana",
+    "forecastDetail_many": "{{day}}: {{count}} revisiones",
+    "forecastDetail_one": "{{day}}: {{count}} revisión",
+    "forecastDetail_other": "{{day}}: {{count}} revisiones",
+    "how": "Las revisiones se programan con un algoritmo de repetición espaciada (FSRS) para que cada pregunta vuelva justo antes de que la olvides. Apunta a un {{n}}% de recuerdo.",
+    "questions": "Preguntas",
+    "start": "Comenzar revisión",
+    "today": "Hoy"
+  },
   "samples": {
     "intro": "Diseñado para StudyNight, listo para jugar de inmediato — sin necesidad de subir. También funciona sin conexión.",
     "play_many": "Jugar ({{count}} preguntas)",
     "play_one": "Jugar ({{count}} pregunta)",
     "play_other": "Jugar ({{count}} preguntas)",
     "title": "Mazos de muestra"
+  },
+  "settings": {
+    "app": "App",
+    "backupHint": "Todo se guarda solo en este dispositivo. Para mover a otro teléfono, exporta una copia aquí e impórtala en el nuevo.",
+    "badBackup": "Ese archivo no es una copia válida de StudyNight.",
+    "data": "Tus datos",
+    "deleteAll": "Eliminar todos mis datos",
+    "deleteBody": "Todos los mazos, preguntas, progreso, insignias y ajustes se eliminarán permanentemente de este dispositivo. No se puede deshacer. Exporta una copia primero si quieres conservarlos.",
+    "deleteConfirm": "Eliminar todo",
+    "deleteTitle": "¿Eliminar todo?",
+    "export": "Exportar copia de seguridad",
+    "exported": "Copia guardada.",
+    "extendedTime": "Tiempo extendido",
+    "extendedTimeHint": "50 % más de tiempo en modos cronometrados.",
+    "figures": "Preguntas de figuras",
+    "figuresHint": "Preguntas sobre diagramas y gráficos en tus fotos y páginas escaneadas.",
+    "haptics": "Vibración",
+    "hapticsHint": "En teléfonos que lo admitan.",
+    "import": "Importar copia de seguridad",
+    "importConfirm": "Reemplazar e importar",
+    "importPreview_many": "Copia de {{date}} con {{decks}} mazos y {{count}} preguntas.",
+    "importPreview_one": "Copia de {{date}} con {{decks}} mazos y {{count}} pregunta.",
+    "importPreview_other": "Copia de {{date}} con {{decks}} mazos y {{count}} preguntas.",
+    "importTitle": "¿Importar esta copia?",
+    "importWarning": "Todo lo que haya en este dispositivo será reemplazado.",
+    "language": "Idioma",
+    "mascotColour": "Color del mascota",
+    "mascotN": "Color {{n}}",
+    "motion": "Movimiento",
+    "motionFull": "Completo",
+    "motionReduce": "Reducido",
+    "quizLanguage": "Idioma de cuestionario por defecto",
+    "quizzes": "Cuestionarios",
+    "smartOn": "Descargado y listo en este dispositivo.",
+    "smartRemove": "Eliminar búsqueda inteligente",
+    "smartRemoved": "Búsqueda inteligente eliminada de este dispositivo.",
+    "sound": "Efectos de sonido",
+    "storage": "Usando {{used}} en este dispositivo.",
+    "theme": "Tema",
+    "themeDark": "Oscuro",
+    "themeLight": "Claro",
+    "themeSystem": "Sistema",
+    "title": "Ajustes",
+    "you": "Tú"
   },
   "share": {
     "button": "Compartir resultado",
@@ -569,6 +775,44 @@
     "mobileData": "Parece que usas datos móviles. Quizá prefieras esperar al Wi‑Fi.",
     "notNow": "Ahora no",
     "title": "Búsqueda inteligente"
+  },
+  "terms": {
+    "s1": {
+      "h": "Para tu propio estudio",
+      "p": "StudyNight te ayuda a estudiar tu propio material. Úsalo para aprendizaje personal."
+    },
+    "s2": {
+      "h": "Tus subidas",
+      "p": "Solo sube material que tengas derecho a usar. Eres responsable de lo que subas. No subas documentos con información personal o sensible tuya o de otros."
+    },
+    "s3": {
+      "h": "La IA puede equivocarse",
+      "p": "Preguntas, respuestas, explicaciones y notas son generadas por IA y revisadas automáticamente, pero pueden estar equivocadas. Compruébalas con tus apuntes y confía en tus profesores y materiales oficiales para lo que cuenta."
+    },
+    "s4": {
+      "h": "Sin consejo profesional",
+      "p": "StudyNight no da consejos médicos, legales o financieros. “Pregunta a tus notas” solo repite lo que está en tu propio material."
+    },
+    "s5": {
+      "h": "Uso justo",
+      "p": "El servicio de IA es gratuito y compartido por todos los usuarios de StudyNight, por lo que tiene límites. No automatices peticiones ni intentes eludir esos límites. Podemos ralentizar o bloquear peticiones que parezcan abusivas."
+    },
+    "s6": {
+      "h": "Compartir",
+      "p": "Los enlaces de desafío y tarjetas compartidas nunca contienen tus notas, solo preguntas, respuestas, breves explicaciones y puntuaciones. Tú decides con quién los compartes."
+    },
+    "s7": {
+      "h": "Sin garantías",
+      "p": "StudyNight se ofrece gratis y “tal cual”. Puede cambiar o dejar de funcionar, y en la medida que la ley lo permita no somos responsables de pérdidas por su uso. Exporta una copia de seguridad de lo que quieras conservar."
+    },
+    "s8": {
+      "h": "Propiedad",
+      "p": "StudyNight es © 2026 Umit Kayaardi, todos los derechos reservados. Los componentes de código abierto se usan bajo sus propias licencias (ver Licencias). Tus notas siguen siendo tuyas."
+    },
+    "s9": {
+      "h": "Cambios",
+      "p": "Podemos actualizar estos términos; la fecha arriba muestra la última versión. Seguir usando StudyNight implica aceptar los términos actualizados."
+    }
   },
   "titles": {
     "bossSlayer": "Cazador de Tormentas",

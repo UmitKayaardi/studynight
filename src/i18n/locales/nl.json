@@ -1,7 +1,27 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi. Alle rechten voorbehouden.",
+    "credits": "Gebouwd met open-source software. AI door Groq; optionele Slimme zoekfunctie draait op je apparaat.",
+    "mascot": "Maak kennis met Lumi, de maanhemelk die je gezelschap houdt tijdens het studeren.",
+    "principle": "De AI organiseert je notities alleen in onderwerpen, schetst vragen uit je eigen passages, controleert ze dubbel tegen je notities en markeert welke kernpunten een uitleg dekt. Scores, XP, reeksen, herhalingsschema's, moeilijkheidsgraden en examenplannen worden berekend door geteste code op je apparaat. Geen enkele vraag komt bij je tenzij hij de controle tegen je notities doorstaat.",
+    "principleTitle": "AI schrijft de vragen. Code beslist over de rest.",
+    "version": "Versie {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "Jouw notities, omgezet in een spel."
+  },
+  "ask": {
+    "disclaimer": "Antwoorden komen alleen uit je notities. Je vragen worden niet opgeslagen.",
+    "intro": "Stel alles over deze stapel. Antwoorden komen alleen uit je notities, met genummerde bronnen die je kunt openen.",
+    "label": "Je vraag",
+    "notCovered": "Je notities lijken dit niet te behandelen.",
+    "notCoveredHint": "StudyNight beantwoordt alleen op basis van je eigen notities, dus er wordt niet geraden.",
+    "offline": "Stel je vragen aan je notities heeft een internetverbinding nodig. Alles andere in deze stapel werkt offline.",
+    "placeholder": "Stel een vraag over je notities…",
+    "send": "Verzenden",
+    "thinking": "Je notities doorzoeken…",
+    "title": "Stel je vragen aan je notities"
   },
   "badges": {
     "challenger": {
@@ -334,7 +354,18 @@
     "menuLabel": "Taal: {{language}}. Taal wijzigen"
   },
   "legal": {
-    "privacyLink": "Privacy"
+    "about": "Over StudyNight",
+    "licences": "Licenties",
+    "privacy": "Privacy",
+    "privacyLink": "Privacy",
+    "terms": "Gebruiksvoorwaarden",
+    "updated": "Laatst bijgewerkt {{date}}"
+  },
+  "licences": {
+    "fonts": "Lettertypen: Inter, Nunito en Noto Sans families (SIL Open Font License 1.1). Iconen: Lucide (ISC).",
+    "intro": "StudyNight is gebouwd met open-source software. Elk component hieronder wordt gebruikt onder de getoonde licentie.",
+    "model": "Slimme zoekfunctie-model",
+    "original": "De mascotte, logo, avatars, badges en geluiden zijn gemaakt voor StudyNight."
   },
   "modes": {
     "ask": "Vraag je aantekeningen",
@@ -416,6 +447,34 @@
     },
     "uploadNotes": "Mijn notities uploaden"
   },
+  "planner": {
+    "add": "Examen toevoegen",
+    "addToCalendar": "Toevoegen aan agenda",
+    "date": "Examendatum",
+    "dayPlan_one": "{{practice}} oefening + {{count}} herhaling",
+    "dayPlan_other": "{{practice}} oefeningen + {{count}} herhalingen",
+    "daysLeft_one": "{{count}} dag te gaan",
+    "daysLeft_other": "{{count}} dagen te gaan",
+    "deck": "Deck",
+    "empty": "Nog geen examens. Voeg er een toe voor een dagelijks plan.",
+    "examName": "Examen naam",
+    "icsMock": "Proefexamen: {{title}}",
+    "icsOpen": "Open StudyNight om te starten.",
+    "icsSummary_one": "Studeren: {{title}} ({{count}} vraag)",
+    "icsSummary_other": "Studeren: {{title}} ({{count}} vragen)",
+    "intro": "Voeg je examens toe en StudyNight maakt een dagelijks plan voor je: eerst zwakke onderwerpen, verspreide herhalingen en een proefexamen op de laatste dag.",
+    "mockDay_one": "Proefexamen + {{count}} herhaling",
+    "mockDay_other": "Proefexamen + {{count}} herhalingen",
+    "more_one": "…en {{count}} dag meer",
+    "more_other": "…en {{count}} dagen meer",
+    "needDeck": "Maak eerst een deck, plan daarna een examen.",
+    "past": "Dit examen is voorbij. Goed gedaan!",
+    "remove": "{{title}} verwijderen",
+    "startToday": "Start vandaag's sessie",
+    "time": "Studietijd",
+    "title": "Examenplanner",
+    "today": "Examen vandaag: korte herhaling van je zwakste onderwerpen, daarna rust. Succes!"
+  },
   "play": {
     "answerWas": "Antwoord:",
     "bossHit": "Direct raak!",
@@ -477,6 +536,48 @@
     "xpTotal": "{{xp}} XP deze ronde",
     "yourAnswer": "Jouw antwoord"
   },
+  "privacy": {
+    "s1": {
+      "h": "De korte versie",
+      "p": "Geen accounts, geen advertenties, geen tracking, geen analytics en geen cookies. Jouw decks, vragen, voortgang en profiel zijn alleen op dit apparaat opgeslagen."
+    },
+    "s10": {
+      "h": "Wijzigingen en contact",
+      "p": "Als dit beleid verandert, werken we deze pagina en de datum hierboven bij. Stel gerust vragen via de contactgegevens op de store- of projectpagina van de app."
+    },
+    "s2": {
+      "h": "Wat blijft op je apparaat",
+      "p": "Bestanden die je toevoegt worden in je browser gelezen; de bestanden zelf worden nooit geüpload. Jouw decks, vragen, antwoorden, streaks, bijnaam en avatar blijven in de opslag van je browser op dit apparaat. Getypte antwoorden worden niet bewaard na het einde van de ronde."
+    },
+    "s3": {
+      "h": "Wat wordt verzonden bij AI‑functies",
+      "p": "Om vragen te maken, uitleg te controleren, vragen over je aantekeningen te beantwoorden, foto's te lezen en spraak om te zetten in tekst, stuurt StudyNight korte tekstfragmenten van je aantekeningen (nooit hele bestanden), verkleinde foto's of paginabeelden, en korte spraakopnames via onze server naar Groq, de AI‑provider. Onze server verwerkt ze alleen in het geheugen en slaat of logt de inhoud niet op; de logs bevatten alleen foutcodes en tijdsmetingen."
+    },
+    "s4": {
+      "h": "Groq, onze AI‑provider",
+      "p": "We hebben de gegevensdocumentatie en het Service Agreement van Groq op 9 november 2026 gecontroleerd. Ze zeggen dat Groq standaard geen inferentie‑verzoeken bewaart, maar tijdelijk invoer en uitvoer kan loggen, tot 30 dagen, om fouten op te lossen of vermoedelijk misbruik te onderzoeken, tenzij Zero Data Retention is ingeschakeld voor het account. Groq mag invoer of uitvoer niet gebruiken om modellen te trainen. Groq slaat gegevens op in de Verenigde Staten. Zie console.groq.com/docs/your-data."
+    },
+    "s5": {
+      "h": "Smart zoeken",
+      "p": "Als je Smart zoeken inschakelt, wordt een taalmodel één keer gedownload van Hugging Face (huggingface.co), die je IP‑adres ziet zoals elke website die je bezoekt. Daarna draait het volledig op je apparaat; zoeken in je aantekeningen stuurt ze nooit ergens naartoe."
+    },
+    "s6": {
+      "h": "Hosting",
+      "p": "De app wordt gehost door Vercel, die technische gegevens zoals je IP‑adres verwerkt om de website te leveren en te beschermen tegen misbruik."
+    },
+    "s7": {
+      "h": "Upload geen persoonlijke informatie",
+      "p": "Upload geen documenten die persoonlijke of gevoelige informatie over jezelf of anderen bevatten. De AI wordt geïnstrueerd nooit persoonlijke gegevens die in documenten worden gevonden te herhalen, maar de beste bescherming is om het niet te uploaden."
+    },
+    "s8": {
+      "h": "Jouw keuzes",
+      "p": "Je kunt al je gegevens exporteren (Profiel → Instellingen → Backup exporteren), een deck samen met alles wat ervan is gemaakt verwijderen, of al je gegevens in één keer verwijderen. Omdat er niets over jou op onze servers staat, is er niets anders voor ons om te verzenden of te verwijderen."
+    },
+    "s9": {
+      "h": "Kinderen",
+      "p": "StudyNight verzamelt niets over wie je bent. Het is bedoeld voor 13 jaar en ouder."
+    }
+  },
   "processing": {
     "background": "Je kunt meteen beginnen met spelen zodra de eerste vragen klaar zijn. De rest komt in de achtergrond.",
     "chooseBody_one": "{{count}} pagina vereist beeldherkenning, maar maximaal {{max}} pagina's kunnen per deck worden gelezen. Kies waar te beginnen.",
@@ -491,6 +592,43 @@
     "title": "Je quiz wordt opgebouwd",
     "topics": "Zoekt de hoofdonderwerpen…",
     "vision": "Leest je afbeeldingen ({{done}} van {{total}})…"
+  },
+  "profile": {
+    "accuracy": "Nauwkeurigheid",
+    "accuracyOverTime": "Nauwkeurigheid per week",
+    "activity": "Activiteit",
+    "answered": "Beantwoord",
+    "avatar": "Je avatar",
+    "badgeEarned": "{{name}}, verdiend",
+    "badgeLocked": "{{name}}, nog niet verdiend",
+    "badges": "Badges ({{count}}/{{total}})",
+    "best": "Beste streak",
+    "calendar": "Laatste 12 weken",
+    "current": "Huidige streak",
+    "dayDetail_one": "{{date}}: {{count}} vraag, {{time}}",
+    "dayDetail_other": "{{date}}: {{count}} vragen, {{time}}",
+    "earnedOn": "Verdiend op {{date}}",
+    "freezeHint": "Je krijgt elke 7 opeenvolgende dagen een streak‑bevriezing (max 2). Als je een dag mist, wordt er automatisch één gebruikt.",
+    "freezes": "Streak‑bevriezingen",
+    "frozenDay": "{{date}}: streak‑bevriezing gebruikt",
+    "less": "Minder",
+    "memberSince": "Leren sinds {{date}}",
+    "more": "Meer",
+    "nextLevel": "{{xp}} XP naar het volgende level",
+    "noName": "Nachtleerling",
+    "notYet": "Nog niet verdiend — houd vol!",
+    "stats": "Jouw statistieken",
+    "streaks": "Streaks",
+    "strongest": "Sterkste onderwerpen",
+    "studyTime": "Studietijd",
+    "weakest": "Onderwerpen om te oefenen",
+    "weekDetail_one": "Week van {{week}}: {{percent}} van {{count}} antwoord",
+    "weekDetail_other": "Week van {{week}}: {{percent}} van {{count}} antwoorden"
+  },
+  "pwa": {
+    "offline": "Je bent offline. Alles wat je hebt gemaakt werkt nog steeds.",
+    "refresh": "Vernieuwen",
+    "update": "Een nieuwe versie van StudyNight is klaar."
   },
   "report": {
     "body": "Het wordt meteen uit je set verwijderd en nooit meer getoond.",
@@ -522,11 +660,68 @@
     "xp": "XP verdiend",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "Per stapel",
+    "caughtUp": "Alles ingehaald. Top!",
+    "due_one": "{{count}} vraag gepland",
+    "due_other": "{{count}} vragen gepland",
+    "dueHint": "Een korte herhaling nu zorgt dat het langer blijft hangen.",
+    "forecast": "Komt deze week",
+    "forecastDetail_one": "{{day}}: {{count}} herhaling",
+    "forecastDetail_other": "{{day}}: {{count}} herhalingen",
+    "how": "Herhalingen worden gepland met een spaced‑repetition‑algoritme (FSRS) zodat elke vraag terugkomt net voordat je het zou vergeten. Streef naar {{n}}% herinnering.",
+    "questions": "Vragen",
+    "start": "Start herhaling",
+    "today": "Vandaag"
+  },
   "samples": {
     "intro": "Geschreven voor StudyNight, klaar om meteen te spelen — geen upload nodig. Ze werken ook offline.",
     "play_one": "Spelen ({{count}} vraag)",
     "play_other": "Spelen ({{count}} vragen)",
     "title": "Voorbeelddecks"
+  },
+  "settings": {
+    "app": "App",
+    "backupHint": "Alles is alleen op dit apparaat opgeslagen. Om over te zetten naar een nieuw telefoon, exporteer hier een backup en importeer op het nieuwe apparaat.",
+    "badBackup": "Dit bestand is geen geldige StudyNight-backup.",
+    "data": "Jouw gegevens",
+    "deleteAll": "Alle mijn gegevens verwijderen",
+    "deleteBody": "Alle decks, vragen, voortgang, badges en instellingen worden permanent verwijderd van dit apparaat. Dit kan niet ongedaan worden gemaakt. Exporteer eerst een backup als je ze wilt bewaren.",
+    "deleteConfirm": "Alles verwijderen",
+    "deleteTitle": "Alles verwijderen?",
+    "export": "Backup exporteren",
+    "exported": "Backup opgeslagen.",
+    "extendedTime": "Uitgebreide tijd",
+    "extendedTimeHint": "50% meer tijd in tijdgebonden modi.",
+    "figures": "Afbeeldingsvragen",
+    "figuresHint": "Vragen over diagrammen en grafieken in je foto's en gescande pagina's.",
+    "haptics": "Trilling",
+    "hapticsHint": "Op telefoons die dit ondersteunen.",
+    "import": "Backup importeren",
+    "importConfirm": "Vervangen en importeren",
+    "importPreview_one": "Backup van {{date}} met {{decks}} decks en {{count}} vraag.",
+    "importPreview_other": "Backup van {{date}} met {{decks}} decks en {{count}} vragen.",
+    "importTitle": "Deze backup importeren?",
+    "importWarning": "Alles op dit apparaat wordt vervangen.",
+    "language": "Taal",
+    "mascotColour": "Mascotkleur",
+    "mascotN": "Kleur {{n}}",
+    "motion": "Beweging",
+    "motionFull": "Volledig",
+    "motionReduce": "Verminderd",
+    "quizLanguage": "Standaard quiztaal",
+    "quizzes": "Quizzen",
+    "smartOn": "Gedownload en klaar op dit apparaat.",
+    "smartRemove": "Smart zoeken verwijderen",
+    "smartRemoved": "Smart zoeken verwijderd van dit apparaat.",
+    "sound": "Geluidseffecten",
+    "storage": "Gebruikt {{used}} op dit apparaat.",
+    "theme": "Thema",
+    "themeDark": "Donker",
+    "themeLight": "Licht",
+    "themeSystem": "Systeem",
+    "title": "Instellingen",
+    "you": "Jij"
   },
   "share": {
     "button": "Resultaat delen",
@@ -547,6 +742,44 @@
     "mobileData": "Het lijkt erop dat je mobiel data gebruikt. Je kunt beter wachten op Wi‑Fi.",
     "notNow": "Niet nu",
     "title": "Slim zoeken"
+  },
+  "terms": {
+    "s1": {
+      "h": "Voor je eigen studie",
+      "p": "StudyNight helpt je met je eigen studie. Gebruik het voor persoonlijk leren."
+    },
+    "s2": {
+      "h": "Je uploads",
+      "p": "Upload alleen materiaal waar je recht op hebt. Je bent verantwoordelijk voor wat je uploadt. Upload geen documenten met persoonlijke of gevoelige informatie over jezelf of anderen."
+    },
+    "s3": {
+      "h": "AI kan fouten maken",
+      "p": "Vragen, antwoorden, uitleg en cijfers worden gegenereerd door AI en automatisch gecontroleerd, maar kunnen toch fout zijn. Controleer altijd tegen je notities en vertrouw op je docenten en officiële materialen voor wat telt."
+    },
+    "s4": {
+      "h": "Geen professioneel advies",
+      "p": "StudyNight geeft geen medisch, juridisch of financieel advies. 'Vraag je notities' herhaalt alleen wat in je eigen materiaal staat."
+    },
+    "s5": {
+      "h": "Redelijk gebruik",
+      "p": "De AI-service is gratis en wordt gedeeld door iedereen die StudyNight gebruikt, dus er zijn limieten. Automatiseer geen verzoeken en probeer de limieten niet te omzeilen. We kunnen verzoeken vertragen of blokkeren die misbruik lijken te zijn."
+    },
+    "s6": {
+      "h": "Delen",
+      "p": "Uitdaginglinks en deelkaarten bevatten nooit je notities, alleen vragen, antwoorden, korte uitleg en scores. Jij beslist met wie je ze deelt."
+    },
+    "s7": {
+      "h": "Geen garanties",
+      "p": "StudyNight wordt gratis en 'zoals het is' aangeboden. Het kan veranderen of stoppen met werken, en voor zover de wet toestaat zijn we niet verantwoordelijk voor verliezen door gebruik. Maak een back-up van alles wat je wilt bewaren."
+    },
+    "s8": {
+      "h": "Eigendom",
+      "p": "StudyNight is © 2026 Umit Kayaardi, alle rechten voorbehouden. Open-source componenten worden gebruikt onder hun eigen licenties (zie Licenties). Je notities blijven van jou."
+    },
+    "s9": {
+      "h": "Wijzigingen",
+      "p": "We kunnen deze voorwaarden bijwerken; de datum hierboven toont de nieuwste versie. Door verder gebruik te maken van StudyNight aanvaard je de bijgewerkte voorwaarden."
+    }
   },
   "titles": {
     "bossSlayer": "Stormjager",

@@ -3,6 +3,116 @@
     "name": "StudyNight",
     "tagline": "노트를 게임으로 바꿔요."
   },
+  "badges": {
+    "challenger": {
+      "desc": "친구에게 도전을 보냈어요.",
+      "name": "도전자"
+    },
+    "combo10": {
+      "desc": "10문제를 연속으로 맞혔어요.",
+      "name": "불타오르는 중"
+    },
+    "comeback": {
+      "desc": "일주일 만에 돌아왔어요.",
+      "name": "환영합니다"
+    },
+    "curious": {
+      "desc": "노트에 10가지 질문을 했어요.",
+      "name": "호기심 많은 머리"
+    },
+    "earlyStart": {
+      "desc": "아침 일찍 라운드를 완료했어요.",
+      "name": "새벽"
+    },
+    "earned": "새 배지: {{name}}",
+    "explainer": {
+      "desc": "훌륭한 설명을 10번 했어요.",
+      "name": "설명가"
+    },
+    "firstBoss": {
+      "desc": "첫 번째 보스전에서 승리했어요.",
+      "name": "폭풍 파괴자"
+    },
+    "firstDeck": {
+      "desc": "첫 번째 덱을 만들었어요.",
+      "name": "첫 번째 덱"
+    },
+    "firstQuiz": {
+      "desc": "첫 번째 문제를 풀었어요.",
+      "name": "첫걸음"
+    },
+    "flashcards100": {
+      "desc": "100장의 플래시카드를 복습했어요.",
+      "name": "카드 마스터"
+    },
+    "level10": {
+      "desc": "10레벨에 도달했어요.",
+      "name": "떠오르는 별"
+    },
+    "marathon": {
+      "desc": "하루 동안 1시간 동안 공부했어요.",
+      "name": "마라톤"
+    },
+    "nightSession": {
+      "desc": "늦은 밤에 라운드를 완료했어요.",
+      "name": "자정까지"
+    },
+    "perfectExam": {
+      "desc": "시험 모드에서 100%를 맞혔어요.",
+      "name": "완벽한 시험"
+    },
+    "planner": {
+      "desc": "플래너에 시험을 추가했어요.",
+      "name": "계획가"
+    },
+    "polyglot": {
+      "desc": "두 가지 이상의 언어로 퀴즈를 봤어요.",
+      "name": "다국어 달인"
+    },
+    "questions100": {
+      "desc": "100문제를 풀었어요.",
+      "name": "센추리"
+    },
+    "questions1000": {
+      "desc": "1,000문제를 풀었어요.",
+      "name": "산악인"
+    },
+    "streak100": {
+      "desc": "100일 연속 공부했어요.",
+      "name": "100일 연속"
+    },
+    "streak30": {
+      "desc": "30일 연속 공부했어요.",
+      "name": "1개월 연속"
+    },
+    "streak7": {
+      "desc": "7일 연속 공부했어요.",
+      "name": "1주 연속"
+    },
+    "suddenDeath20": {
+      "desc": "서든 데스 20단계까지 도달했어요.",
+      "name": "강철 멘탈"
+    }
+  },
+  "challenge": {
+    "accept": "도전장 수락",
+    "copied": "링크가 복사되었어요!",
+    "copy": "링크 복사",
+    "draw": "무승부!",
+    "forFun": "챌린지 링크의 점수는 재미로만 봐주세요.",
+    "friend": "친구",
+    "from": "{{name}}님의 도전!",
+    "intro_other": "링크에 이번 라운드의 {{count}}개 문제와 점수가 포함됩니다. 노트와 출처는 절대 포함되지 않아요.",
+    "makeOwn": "내 노트로 퀴즈 만들기",
+    "none": "먼저 객관식, 참/거짓, 빈칸, 짝짓기, 순서 맞추기 문제를 포함한 라운드를 플레이해 보세요.",
+    "privacy": "문제는 링크 안에만 전송되며, 서버로 전송되지 않아요.",
+    "share": "링크 공유",
+    "shareText": "{{name}}님이 StudyNight에서 도전장을 보냈어요! 제 점수를 이길 수 있을까요?",
+    "theirScore": "상대 점수: {{correct}}/{{total}}. 이길 수 있을까요?",
+    "theyWin": "아깝네요!",
+    "you": "나",
+    "youWin": "당신이 이겼어요!"
+  },
   "common": {
     "back": "뒤로",
     "cancel": "취소",
@@ -13,21 +123,227 @@
     "done": "완료",
     "goHome": "홈으로",
     "loading": "로드 중…",
+    "minutes_other": "{{count}}분",
     "next": "다음",
     "retry": "다시 시도",
     "save": "저장",
+    "saved": "저장됨",
     "skip": "건너뛰기",
+    "skipToContent": "본문으로 건너뛰기",
     "undo": "되돌리기"
   },
+  "deck": {
+    "aiDisclaimer": "AI는 실수를 할 수 있어요 — 노트와 꼭 비교해 보세요. 질문 옆의 출처를 눌러 확인할 수 있어요.",
+    "busy": "AI 서비스를 기다리는 중…",
+    "delete": "덱 삭제",
+    "deleteBody": "“{{title}}”, 질문 및 기록이 이 기기에서 삭제됩니다.",
+    "deleted": "“{{title}}” 삭제됨",
+    "deleteTitle": "이 덱을 삭제할까요?",
+    "generating": "문제 더 만들고 있어요…",
+    "masteryLabel": "숙련도 {{percent}}%",
+    "missing": "덱을 찾을 수 없습니다",
+    "missingBody": "이 덱은 더 이상 이 기기에 존재하지 않아요.",
+    "modes": "플레이 방법",
+    "pages_other": "{{count}}페이지",
+    "pastedText": "붙여넣은 텍스트",
+    "percent": "{{value}}%",
+    "quizIn": "{{language}} 퀴즈",
+    "regenerate": "주제 질문 다시 만들기",
+    "regenerateButton": "다시 만들기",
+    "regenerated": "새 질문이 준비됐어요.",
+    "regenerateHint": "해당 주제의 질문을 새로 고쳐요. 답변 기록은 유지됩니다.",
+    "settings": "덱 설정",
+    "slides_other": "{{count}}슬라이드",
+    "sources": "출처",
+    "topicMap": "주제 지도",
+    "topicQuestions_other": "{{count}}문제",
+    "topicStatus_other": "숙련도 {{percent}}% · {{count}}문제",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "보강 필요"
+  },
+  "decks": {
+    "due_other": "{{count}}개 학습 예정",
+    "emptyBody": "노트를 업로드하거나 샘플 덱으로 바로 시작해 보세요.",
+    "emptyTitle": "아직 덱이 없어요",
+    "failed": "문제가 발생했어요",
+    "processing": "준비 중…",
+    "questionCount_other": "{{count}}개 문제",
+    "topicCount_other": "{{count}}개 주제"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "다시 시도해봐.",
+      "title": "뭔가 이상해"
+    },
+    "badChallenge": {
+      "body": "복사할 때 잘린 것 같아요. 친구에게 다시 보내달라고 해보세요.",
+      "title": "이 챌린지 링크가 작동하지 않아요"
+    },
     "boundary": {
       "body": "덱과 진행 상황은 기기에 안전하게 저장돼 있어요. 홈으로 돌아갈게요.",
       "title": "앗, 뭔가 잘못됐어요"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” 파일이 손상된 것 같아요. 다시 저장하거나 내보내 보세요.",
+      "title": "이 파일을 열 수 없어요"
+    },
+    "EMPTY": {
+      "body": "먼저 파일, 사진 또는 텍스트를 추가해 주세요.",
+      "title": "읽을 내용이 없어요"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” 파일이 25 MB를 초과해요. 파일을 나누거나 더 작은 PDF로 내보내 보세요.",
+      "title": "파일이 너무 커요"
+    },
+    "INTERRUPTED": {
+      "body": "덱을 만들던 중 앱이 닫혔어. 이 덱을 삭제하고 파일을 다시 추가해봐.",
+      "title": "업로드가 중단됐어"
+    },
+    "NO_TEXT": {
+      "body": "스캔된 문서로 보여요. 대신 페이지 사진을 찍으면 StudyNight가 읽어줄 거예요.",
+      "title": "텍스트를 찾을 수 없어요"
+    },
+    "OFFLINE": {
+      "body": "이 기능에는 인터넷 연결이 필요해요. 이미 만든 모든 콘텐츠는 오프라인에서도 작동해요.",
+      "title": "오프라인 상태예요"
+    },
+    "PASSWORD": {
+      "body": "비밀번호를 해제하거나(또는 새 PDF로 인쇄한 후) 다시 업로드해 주세요.",
+      "title": "이 PDF는 비밀번호가 설정되어 있어요"
+    },
+    "RATE_LIMITED": {
+      "body": "지금 많은 사람들이 공부 중이야 — 다음 질문은 잠시 후 준비돼. 그동안 지금까지 공부한 내용 복습해봐.",
+      "title": "지금 많은 사람들이 공부 중이야"
+    },
+    "storage": "이 기기에 저장할 수 없어요. 공간을 확보한 후 다시 시도해 주세요.",
+    "STORAGE_FULL": {
+      "body": "덱을 삭제하거나 프로필에서 백업을 내보내서 공간을 만들고 다시 시도해봐.",
+      "title": "기기가 가득 찼어"
+    },
+    "TIMEOUT": {
+      "body": "AI 서비스가 답변을 못했어. 다시 시도해봐.",
+      "title": "시간이 너무 오래 걸렸어"
+    },
+    "TOO_LARGE": {
+      "body": "작은 파일이나 한 번에 적은 페이지를 시도해봐.",
+      "title": "파일이 너무 커서 보낼 수 없어요"
+    },
+    "TOO_LONG": {
+      "body": "덱은 최대 200,000자까지 텍스트를 담을 수 있어요. 여러 덱으로 나눠보세요.",
+      "title": "문서가 너무 길어요"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "덱은 최대 {{limit}}페이지 또는 슬라이드까지 만들 수 있어요. 자료를 여러 덱으로 나눠보세요.",
+      "title": "페이지가 너무 많아요"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "덱은 최대 30장까지 사진을 담을 수 있어요. 나머지는 두 번째 덱으로 만들어 보세요.",
+      "title": "사진이 너무 많아요"
+    },
+    "UNKNOWN": {
+      "body": "다시 시도해봐.",
+      "title": "문제가 발생했어"
+    },
+    "UNREADABLE": {
+      "body": "더 선명한 사진이나 다른 파일을 시도해봐.",
+      "title": "읽을 수 없었어"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” 파일을 읽을 수 없어요. PDF, PowerPoint(.pptx), Word(.docx), 텍스트, 마크다운 또는 사진을 사용하세요.",
+      "title": "지원하지 않는 파일 형식"
+    },
+    "UPSTREAM": {
+      "body": "잠시 후 다시 시도해봐.",
+      "title": "AI 서비스에 문제가 생겼어"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "주제별",
+    "duration": "시간",
+    "estimate": "답변과 카드 기억 정도를 바탕으로 한 추정치입니다. 확정 점수가 아닙니다.",
+    "extended": "연장 시간 활성화: 50% 더 많은 시간 사용 가능",
+    "intro": "힌트 없이 시간 제한으로 진행하는 모의고사입니다. 종료 후 예상 점수 리포트를 확인하세요.",
+    "mistakes": "오답 복습",
+    "questions": "문제 수",
+    "reportTitle": "예상 점수",
+    "start": "시험 시작"
+  },
+  "explain": {
+    "check": "답 확인",
+    "checking": "답 확인 중…",
+    "covered": "포함",
+    "great": "훌륭한 답!",
+    "label": "내 답",
+    "missed": "누락",
+    "modelAnswer": "모범 답안",
+    "notYet": "아직 아니야",
+    "partly": "거의 맞았어",
+    "placeholder": "내 말로 설명해봐…",
+    "points": "핵심 포인트 {{total}}개 중 {{hit}}개를 짚었어."
+  },
+  "home": {
+    "continue": "계속하기",
+    "examIn_other": "{{title}} 시험까지 {{count}}일",
+    "examToday": "{{title}}: 오늘 시험. 화이팅!",
+    "freezes_other": "연속 기록 동결 {{count}}개",
+    "go": "플레이",
+    "goalOf_other": "{{count}} 분 중",
+    "goalRing": "일일 목표 {{percent}}% 달성",
+    "greetingAfternoon": "좋은 오후예요!",
+    "greetingAfternoonName": "좋은 오퉐예요, {{name}}!",
+    "greetingEvening": "좋은 저녁이에요!",
+    "greetingEveningName": "좋은 저녁이에요, {{name}}!",
+    "greetingMorning": "좋은 아침이에요!",
+    "greetingMorningName": "{{name}}님, 좋은 아침이에요!",
+    "level": "{{level}} 레벨",
+    "levelProgress": "다음 레벨까지, 총 {{xp}} XP",
+    "mood": {
+      "celebrating": "일일 목표 달성! 훌륭해요!",
+      "encouraging": "첫 노트를 올려서 함께 놀아봐요.",
+      "happy": "짧은 라운드 한 판 어때요?",
+      "sleepy": "연속 기록이 기다려요. 몇 문제 풀면 유지할 수 있어요."
+    },
+    "newDeck": "새 덱 만들기",
+    "openDeck": "{{title}} 열기",
+    "resume": "진행 중인 라운드가 있어요.",
+    "review": "복습",
+    "reviewDue_other": "복습할 문제 {{count}}개",
+    "reviewDueHint": "지금 복습하면 오래 기억에 남아요.",
+    "statsLabel": "오늘",
+    "streakDays_other": "{{count}}일 연속",
+    "trySample": "샘플 덱 체험",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "언어를 선택하세요",
     "menuLabel": "언어: {{language}}. 언어 변경"
+  },
+  "legal": {
+    "privacyLink": "개인정보"
+  },
+  "modes": {
+    "ask": "노트에 물어보기",
+    "askHint": "노트 기반 답변",
+    "boss": "보스 배틀",
+    "bossHint_other": "{{count}}주제 준비 완료",
+    "bossIntro": "폭풍 구름을 물리쳐요: 더 어려운 질문, {{seconds}}초 제한, 하트 3개. 힌트 없음!",
+    "bossLocked": "숙련도 {{percent}}% 달성 시 해제",
+    "bossReady": "보스 배틀 해제됨",
+    "challenge": "친구와 도전",
+    "challengeHint": "질문 보내기",
+    "exam": "시험 모드",
+    "examHint": "시간 제한 모의 시험",
+    "flashcards": "플래시카드",
+    "flashcardsHint": "스와이프해서 복습",
+    "practiseTopic": "이 주제 연습",
+    "quick": "빠른 플레이",
+    "quickHint": "섞인 10문제",
+    "review": "복습 예정",
+    "sudden": "서든 데스",
+    "suddenBest_other": "최고 연속: {{count}}",
+    "topic": "주제 연습",
+    "topicHint": "한 주제에 집중"
   },
   "nav": {
     "decks": "덱",
@@ -35,5 +351,203 @@
     "label": "메인",
     "profile": "프로필",
     "review": "복습"
+  },
+  "newDeck": {
+    "chooseFiles": "파일 선택",
+    "create": "퀴즈 만들기",
+    "deckTitle": "덱 제목",
+    "dropTitle": "학습 자료 추가",
+    "examDate": "시험 날짜 (선택)",
+    "examDateHint": "시험 날짜를 기준으로 복습을 계획해 드릴게요.",
+    "formats": "PDF, PowerPoint, Word, 텍스트 또는 사진. 여러 파일을 하나의 덱에 넣을 수 있어요.",
+    "lowerQuality": "품질이 낮을 수 있어요",
+    "notice": "사용 권한이 있는 자료만 업로드하세요. 본인이나 타인의 개인정보나 민감한 정보가 포함된 문서는 업로드하지 마세요.",
+    "pasteLabel": "내 텍스트",
+    "pastePlaceholder": "여기에 노트를 붙여넣으세요…",
+    "pasteText": "텍스트 붙여넣기",
+    "quizLanguage": "퀴즈 언어",
+    "ready": "퀴즈가 준비되었어요. 더 많은 문제가 곧 도착할 거예요!",
+    "remove": "{{name}} 삭제",
+    "sameAsNotes": "노트와 동일",
+    "selected": "선택된 파일",
+    "takePhoto": "사진 찍기",
+    "title": "새 덱 만들기",
+    "titlePlaceholder": "예: 생물 3주차",
+    "untitled": "내 노트"
+  },
+  "onboarding": {
+    "later": "둘어보기",
+    "one": {
+      "body": "슬라이드, 노트, 수첩 사진을 올려보세요. 내 자료로 만든 퀴즈가 30초 만에 준비됩니다.",
+      "title": "내 노트를 게임으로"
+    },
+    "setup": {
+      "avatar": "아바타 선택",
+      "avatarN": "아바타 {{n}}",
+      "goal": "일일 목표",
+      "nickname": "닉네임 (선택)",
+      "nicknameHint": "이 기기에만 저장됩니다.",
+      "title": "마음대로 꾸며보세요"
+    },
+    "three": {
+      "body": "StudyNight가 헷갈리는 부분을 기억해 시험 직전까지 적시에 다시 보여줍니다.",
+      "title": "완벽하게 기억하세요"
+    },
+    "trySample": "샘플 덱 체험",
+    "two": {
+      "body": "출처를 누르면 노트의 해당 부분을 바로 볼 수 있어요. 문제는 노트 기준으로 확인된 후 보여집니다.",
+      "title": "모든 문제의 출처 확인"
+    },
+    "uploadNotes": "노트 업로드"
+  },
+  "play": {
+    "answerWas": "정답:",
+    "bossHit": "직격탄!",
+    "check": "확인",
+    "combo_other": "콤보 × {{count}}!",
+    "correct": "정답!",
+    "correctAnswer": "정답",
+    "correctOrder": "정답 순서",
+    "correctPairs": "맞은 짝",
+    "definitions": "의미",
+    "expected": "정답:",
+    "false": "거짓",
+    "figureAlt": "이 문제와 관련된 내 노트의 그림",
+    "fromNotes": "내 노트",
+    "fromPage": "내 노트 · {{n}}쪽",
+    "fromSlide": "내 노트 · {{n}}슬라이드",
+    "grade": {
+      "again": "다시",
+      "easy": "쉬움",
+      "good": "좋음",
+      "hard": "어려움"
+    },
+    "hearts_other": "하트 {{count}} 남음",
+    "hint": "힌트 (XP 절반)",
+    "howWell": "얼마만큼 잘 알고 있었나요?",
+    "incorrect": "아쉬워",
+    "incorrectAnnounce": "아쉬워. 정답은 {{answer}}야",
+    "matchHelp": "용어를 누르고, 그에 맞는 의미를 선택하세요.",
+    "moveDown": "{{n}}번 단계 아래로",
+    "moveUp": "{{n}}번 단계 위로",
+    "noQuestions": "아직 문제가 없습니다",
+    "noQuestionsBody": "새로운 문제를 작성 중입니다. 잠시 후 다시 시도하거나 연결 상태를 확인하세요.",
+    "nothingDue": "지금 복습할 것이 없습니다",
+    "nothingDueBody": "모두 완료했어요. 나중에 다시 오거나 빠른 라운드를 즐겨보세요.",
+    "orderHelp": "단계들을 드래그하거나 화살표를 눌러 순서를 정해봐.",
+    "pageN": "{{n}}쪽",
+    "pairedWith": "{{n}}번 단어와 짝: {{text}}",
+    "preparing": "문제 준비 중…",
+    "progress": "{{total}}문제중 {{n}}번째",
+    "quit": "일시정지 또는 종료",
+    "quitBody": "지금까지의 답변은 저장됩니다.",
+    "quitConfirm": "종결",
+    "quitTitle": "이 라운드를 종료할까요?",
+    "reset": "다시 시작",
+    "secondsLeft_other": "{{count}}초 남음",
+    "showAnswer": "답변 보기",
+    "slideN": "{{n}}슬라이드",
+    "sourceTitle": "내 노트",
+    "swipeHelp": "알면 오른쪽, 다시 보고 싶으면 왼쪽, 쉬우면 위로 스와이프해.",
+    "terms": "용어",
+    "timeLeft": "남은 시간: {{time}}",
+    "true": "참",
+    "typeAnswer": "답변 입력",
+    "typoAccepted": "수락 — 철자 확인: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "이번 라운드 {{xp}} XP",
+    "yourAnswer": "내 답"
+  },
+  "processing": {
+    "background": "첫 문제가 준비되면 바로 플레이할 수 있어요. 나머지는 백그라운드에서 계속 준비됩니다.",
+    "chooseBody_other": "이미지 인식이 필요한 페이지가 {{count}}개인데, 덱당 최대 {{max}}개까지 읽을 수 있어요. 시작할 위치를 선택해 주세요.",
+    "choosePages": "{{from}}–{{to}}페이지 읽기",
+    "chooseTitle": "읽을 페이지 선택",
+    "handwriting": "손글씨는 최대한 정확하게 인식하려고 노력하지만 완벽하지 않을 수 있어요.",
+    "questions": "“{{topic}}”에 대한 첫 번째 문제를 작성하는 중…",
+    "readingFile": "{{name}} 읽는 중…",
+    "readingPage": "{{total}}페이지 중 {{page}}페이지 읽는 중…",
+    "startPage": "시작 페이지",
+    "title": "퀴즈 생성 중",
+    "topics": "주요 주제 찾는 중…",
+    "vision": "이미지 인식 중 ({{total}}개 중 {{done}}개)…"
+  },
+  "report": {
+    "body": "즉시 내 덱에서 삭제되고 다시 표시되지 않아.",
+    "done": "문제가 삭제되었어요",
+    "duplicate": "중복",
+    "notInNotes": "내 노트에 없음",
+    "open": "이 문제 신고하기",
+    "title": "이 문제 신고하기",
+    "unclear": "불분명",
+    "wrong": "정답 오류"
+  },
+  "results": {
+    "accuracy": "정답률",
+    "bestCombo": "최고 콤보",
+    "bossLost": "폭풍이 버텨냈어요. 다시 도전해봐요!",
+    "bossWon": "폭풍을 물리쳤어요!",
+    "done": "완료",
+    "goalMet": "오늘의 목표 달성! +20 XP 보상.",
+    "levelUp": "레벨 업! {{level}}레벨에 도달했어요.",
+    "newBadges": "새로운 배지",
+    "newBest": "신기록 달성!",
+    "practiseThese": "이것들을 연습해봐요",
+    "score": "{{correct}}/{{total}}",
+    "stats": "라운드 요약",
+    "suddenScore_other": "{{count}}연속 정답!",
+    "time": "소요 시간",
+    "weakest": "가장 헷갈리는 주제",
+    "xp": "획득한 XP",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "StudyNight에서 준비한 샘플 덱이에요. 업로드 없이 바로 플레이할 수 있고 오프라인에서도 작동해요.",
+    "play_other": "플레이 ({{count}}개 문제)",
+    "title": "샘플 덱"
+  },
+  "share": {
+    "button": "결과 공유",
+    "copied": "복사됨!",
+    "copyText": "텍스트 복사",
+    "download": "이미지 다운로드",
+    "includeDeck": "덱 제목 표시",
+    "shareImage": "이미지 공유",
+    "text": "StudyNight에서 {{correct}}/{{total}}점을 맞혔어요 — {{title}}! 🌙",
+    "textDeck": "StudyNight의 “{{deck}}”에서 {{correct}}/{{total}}점을 맞혔어요 — {{title}}! 🌙",
+    "title": "결과 공유하기"
+  },
+  "smart": {
+    "body": "다른 단어나 언어를 사용해도 올바른 단락을 찾아줘요. 약 {{size}} MB를 한 번 다운로드한 후 오프라인에서도 작동해요.",
+    "download": "다운로드 ({{size}} MB)",
+    "downloading": "스마트 검색: {{percent}}% 다운로드 중…",
+    "failed": "스마트 검색을 설정하지 못했어요. 키워드 검색은 계속 사용 가능하며 설정에서 다시 시도할 수 있어요.",
+    "mobileData": "모바일 데이터로 접속 중인 것 같아요. Wi-Fi를 기다리는 것을 추천해요.",
+    "notNow": "나중에 할게요",
+    "title": "스마트 검색"
+  },
+  "titles": {
+    "bossSlayer": "폭풍 사냥꾼",
+    "braveExplorer": "용감한 탐험가",
+    "comboMaster": "콤보 마스터",
+    "comebackKid": "컴백 키드",
+    "deepThinker": "깊이 생각하는 사람",
+    "earlyRiser": "조조 기상",
+    "freshStart": "새로운 시작",
+    "hintFreeHero": "힌트 없이 정복한 영웅",
+    "marathoner": "마라토너",
+    "neverGiveUp": "포기하지 않는 사람",
+    "nightOwlMode": "올빼 미 모드",
+    "perfectionist": "완벽주의자",
+    "speedReader": "속독 고수",
+    "steadyClimber": "꾸준한 성장",
+    "topicTamer": "주제 정복자"
+  },
+  "voice": {
+    "denied": "마이크 접근이 차단되었어. 브라우저 설정에서 허용하거나, 직접 입력해봐.",
+    "record": "음성으로 답하기",
+    "recording": "녹음 중…",
+    "stop": "녹음 중지 ({{seconds}}초 남음)",
+    "transcribing": "음성을 텍스트로 변환 중…"
   }
 }

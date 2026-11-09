@@ -4,7 +4,31 @@
     "tagline": "Catatanmu, jadi permainan."
   },
   "badges": {
+    "challenger": {
+      "desc": "Mengirim tantangan ke teman.",
+      "name": "Challenger"
+    },
+    "combo10": {
+      "desc": "10 jawaban benar berturut-turut.",
+      "name": "On Fire"
+    },
+    "comeback": {
+      "desc": "Kembali setelah satu minggu tidak aktif.",
+      "name": "Selamat Datang Kembali"
+    },
+    "curious": {
+      "desc": "Menanyakan 10 pertanyaan pada catatanmu.",
+      "name": "Pikiran Penasaran"
+    },
+    "earlyStart": {
+      "desc": "Selesai satu putaran pagi hari.",
+      "name": "Sunrise"
+    },
     "earned": "Lencana baru: {{name}}",
+    "explainer": {
+      "desc": "Memberikan 10 penjelasan hebat.",
+      "name": "Explainer"
+    },
     "firstBoss": {
       "desc": "Menang pertempuran bos pertama.",
       "name": "Pemecah Badai"
@@ -17,7 +41,44 @@
       "desc": "Menjawab pertanyaan pertama.",
       "name": "Langkah Pertama"
     },
+    "flashcards100": {
+      "desc": "Mereview 100 flashcard.",
+      "name": "Jago Kartu"
+    },
+    "level10": {
+      "desc": "Mencapai level 10.",
+      "name": "Bintang Baru"
+    },
+    "marathon": {
+      "desc": "Belajar satu jam dalam satu hari.",
+      "name": "Marathon"
+    },
+    "nightSession": {
+      "desc": "Selesai satu putaran larut malam.",
+      "name": "Kerja Malam"
+    },
+    "perfectExam": {
+      "desc": "Skor 100% di mode ujian.",
+      "name": "Ujian Sempurna"
+    },
+    "planner": {
+      "desc": "Menambahkan ujian ke perencana.",
+      "name": "Planner"
+    },
+    "polyglot": {
+      "desc": "Mengambil kuis dalam dua bahasa atau lebih.",
+      "name": "Poliglot"
+    },
+    "questions100": {
+      "desc": "Menjawab 100 soal.",
+      "name": "Seratus"
+    },
+    "questions1000": {
+      "desc": "Menjawab 1.000 soal.",
+      "name": "Pendaki Gunung"
+    },
     "streak100": {
+      "desc": "Belajar 100 hari berturut-turut.",
       "name": "Seratus Malam"
     },
     "streak30": {
@@ -27,7 +88,30 @@
     "streak7": {
       "desc": "Belajar 7 hari berturut-turut.",
       "name": "Satu Minggu"
+    },
+    "suddenDeath20": {
+      "desc": "Mencapai 20 di sudden death.",
+      "name": "Saraf Baja"
     }
+  },
+  "challenge": {
+    "accept": "Terima tantangan",
+    "copied": "Tautan disalin!",
+    "copy": "Salin tautan",
+    "draw": "Seri!",
+    "forFun": "Skor di tautan tantangan hanya untuk bersenang-senang.",
+    "friend": "Teman",
+    "from": "{{name}} menantangmu!",
+    "intro_other": "Tautanmu mencakup {{count}} soal dari putaran ini, dengan skor kamu. Catatan dan sumbernya tidak pernah disertakan.",
+    "makeOwn": "Buat kuis dari catatan saya sendiri",
+    "none": "Mainkan satu putaran dengan pilihan ganda, benar/salah, isian, padanan atau urutan pertanyaan terlebih dahulu.",
+    "privacy": "Soal tetap berada di dalam tautan itu sendiri — tidak pernah dikirim ke server kami.",
+    "share": "Bagikan tautan",
+    "shareText": "{{name}} menantangmu di StudyNight! Bisakah kamu mengalahkan skor saya?",
+    "theirScore": "Skor mereka: {{correct}}/{{total}}. Bisakah kamu mengalahkannya?",
+    "theyWin": "Sangat dekat!",
+    "you": "Kamu",
+    "youWin": "Kamu menang!"
   },
   "common": {
     "back": "Back",
@@ -87,9 +171,90 @@
     "topicCount_other": "{{count}} topik"
   },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Silakan coba lagi.",
+      "title": "Ada yang tidak beres"
+    },
+    "badChallenge": {
+      "body": "Mungkin terpotong saat disalin. Minta temannya mengirim ulang.",
+      "title": "Tautan tantangan ini tidak berfungsi"
+    },
     "boundary": {
       "body": "Kartu dan kemajuan Anda aman tersimpan di perangkat ini. Mari kembali ke beranda.",
       "title": "Ups, terjadi kesalahan"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” tampak rusak. Coba simpan atau ekspor lagi.",
+      "title": "Tidak dapat membuka file ini"
+    },
+    "EMPTY": {
+      "body": "Tambahkan file, foto atau teks terlebih dahulu.",
+      "title": "Tidak ada yang dibaca"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” lebih dari 25 MB. Coba bagi atau ekspor PDF lebih kecil.",
+      "title": "File terlalu besar"
+    },
+    "INTERRUPTED": {
+      "body": "Aplikasi ditutup saat dek sedang dibuat. Hapus dek ini dan tambahkan file lagi.",
+      "title": "Unggahan terputus"
+    },
+    "NO_TEXT": {
+      "body": "Ini tampak seperti dokumen terscan. Ambil foto halaman, StudyNight akan membacanya.",
+      "title": "Tidak ada teks ditemukan"
+    },
+    "OFFLINE": {
+      "body": "Ini memerlukan koneksi internet. Semua yang sudah kamu buat tetap berfungsi offline.",
+      "title": "Kamu offline"
+    },
+    "PASSWORD": {
+      "body": "Hapus kata sandi (atau cetak ke PDF baru) dan unggah lagi.",
+      "title": "PDF ini dilindungi kata sandi"
+    },
+    "RATE_LIMITED": {
+      "body": "Banyak orang sedang belajar sekarang — pertanyaan berikutnya akan siap sebentar lagi. Sementara itu, tinjau apa yang sudah kamu miliki.",
+      "title": "Banyak orang sedang belajar sekarang"
+    },
+    "storage": "Tidak dapat menyimpan di perangkat ini. Bebaskan ruang dan coba lagi.",
+    "STORAGE_FULL": {
+      "body": "Hapus satu dek atau ekspor cadangan di Profil untuk memberi ruang, lalu coba lagi.",
+      "title": "Penyimpanan perangkat penuh"
+    },
+    "TIMEOUT": {
+      "body": "Layanan AI tidak merespon tepat waktu. Silakan coba lagi.",
+      "title": "Terlalu lama"
+    },
+    "TOO_LARGE": {
+      "body": "Coba file yang lebih kecil atau kirim lebih sedikit halaman sekaligus.",
+      "title": "Terlalu besar untuk dikirim"
+    },
+    "TOO_LONG": {
+      "body": "Satu dek dapat menampung hingga 200.000 karakter teks. Bagi menjadi beberapa dek.",
+      "title": "Dokumen terlalu panjang"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Satu dek dapat memiliki hingga {{limit}} halaman atau slide. Bagi materi menjadi beberapa dek.",
+      "title": "Terlalu banyak halaman"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Satu dek dapat memiliki hingga 30 foto. Buat dek kedua untuk sisanya.",
+      "title": "Terlalu banyak foto"
+    },
+    "UNKNOWN": {
+      "body": "Silakan coba lagi.",
+      "title": "Ada yang salah"
+    },
+    "UNREADABLE": {
+      "body": "Coba foto yang lebih jelas atau file lain.",
+      "title": "Tidak dapat membaca itu"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” tidak dapat dibaca. Gunakan PDF, PowerPoint (.pptx), Word (.docx), teks, Markdown atau foto.",
+      "title": "Jenis file tidak didukung"
+    },
+    "UPSTREAM": {
+      "body": "Silakan coba lagi sebentar lagi.",
+      "title": "Layanan AI mengalami masalah"
     }
   },
   "exam": {
@@ -153,6 +318,9 @@
   "language": {
     "choose": "Pilih bahasa Anda",
     "menuLabel": "Bahasa: {{language}}. Ubah bahasa"
+  },
+  "legal": {
+    "privacyLink": "Privasi"
   },
   "modes": {
     "ask": "Tanya catatanmu",
@@ -337,6 +505,26 @@
     "intro": "Ditulis untuk StudyNight, siap dimainkan langsung — tidak perlu upload. Juga dapat offline.",
     "play_other": "Main ({{count}} pertanyaan)",
     "title": "Deck contoh"
+  },
+  "share": {
+    "button": "Bagikan hasil",
+    "copied": "Disalin!",
+    "copyText": "Salin teks",
+    "download": "Unduh gambar",
+    "includeDeck": "Tampilkan judul dek",
+    "shareImage": "Bagikan gambar",
+    "text": "Saya mendapatkan {{correct}}/{{total}} di StudyNight — {{title}}! 🌙",
+    "textDeck": "Saya mendapatkan {{correct}}/{{total}} di “{{deck}}” di StudyNight — {{title}}! 🌙",
+    "title": "Bagikan hasilmu"
+  },
+  "smart": {
+    "body": "Mencari bagian yang tepat meski kamu pakai kata berbeda atau bahasa lain. Unduh {{size}} MB sekali, lalu bisa offline.",
+    "download": "Unduh ({{size}} MB)",
+    "downloading": "Pencarian cerdas: mengunduh {{percent}}…",
+    "failed": "Pencarian cerdas tidak dapat disiapkan. Pencarian kata kunci masih berfungsi; coba lagi di Pengaturan.",
+    "mobileData": "Kamu tampaknya menggunakan data seluler. Mungkin lebih baik menunggu Wi‑Fi.",
+    "notNow": "Tidak sekarang",
+    "title": "Pencarian cerdas"
   },
   "titles": {
     "bossSlayer": "Pengejar Badai",

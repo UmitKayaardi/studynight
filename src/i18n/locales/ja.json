@@ -3,6 +3,116 @@
     "name": "StudyNight",
     "tagline": "ノートをゲームに変える"
   },
+  "badges": {
+    "challenger": {
+      "desc": "友達にチャレンジを送信しました。",
+      "name": "挑戦者"
+    },
+    "combo10": {
+      "desc": "10問連続で正解しました。",
+      "name": "燃えてる"
+    },
+    "comeback": {
+      "desc": "1週間離れた後に戻ってきました。",
+      "name": "お帰りなさい"
+    },
+    "curious": {
+      "desc": "ノートに10問質問しました。",
+      "name": "好奇心旺盛"
+    },
+    "earlyStart": {
+      "desc": "朝早くにラウンドを終了しました。",
+      "name": "日の出"
+    },
+    "earned": "新しいバッジ：{{name}}",
+    "explainer": {
+      "desc": "10回の素晴らしい解説を行いました。",
+      "name": "解説者"
+    },
+    "firstBoss": {
+      "desc": "最初のボス戦に勝利しました。",
+      "name": "嵐の突破者"
+    },
+    "firstDeck": {
+      "desc": "最初のデッキを作成しました。",
+      "name": "最初のデッキ"
+    },
+    "firstQuiz": {
+      "desc": "最初の質問に答えました。",
+      "name": "第一歩"
+    },
+    "flashcards100": {
+      "desc": "100枚のフラッシュカードを復習しました。",
+      "name": "カードの達人"
+    },
+    "level10": {
+      "desc": "レベル10に到達しました。",
+      "name": "昇進星"
+    },
+    "marathon": {
+      "desc": "1日で1時間勉強しました。",
+      "name": "マラソン"
+    },
+    "nightSession": {
+      "desc": "夜遅くにラウンドを終了しました。",
+      "name": "深夜油"
+    },
+    "perfectExam": {
+      "desc": "試験モードで100％を取得しました。",
+      "name": "完璧な試験"
+    },
+    "planner": {
+      "desc": "試験をプランナーに追加しました。",
+      "name": "プランナー"
+    },
+    "polyglot": {
+      "desc": "2つ以上の言語でクイズに挑戦しました。",
+      "name": "多言語話者"
+    },
+    "questions100": {
+      "desc": "100問に回答しました。",
+      "name": "百問"
+    },
+    "questions1000": {
+      "desc": "1,000問に回答しました。",
+      "name": "山登り"
+    },
+    "streak100": {
+      "desc": "100日連続で勉強しました。",
+      "name": "100夜"
+    },
+    "streak30": {
+      "desc": "30日間連続で勉強しました。",
+      "name": "1ヶ月"
+    },
+    "streak7": {
+      "desc": "7日間連続で勉強しました。",
+      "name": "1週間"
+    },
+    "suddenDeath20": {
+      "desc": "サドンデスで20に到達しました。",
+      "name": "鋼の神経"
+    }
+  },
+  "challenge": {
+    "accept": "挑戦を受ける",
+    "copied": "コピーしました！",
+    "copy": "リンクをコピー",
+    "draw": "引き分け！",
+    "forFun": "チャレンジリンクのスコアはあくまで遊びです。",
+    "friend": "友達",
+    "from": "{{name}}が挑戦状を送ってきたよ！",
+    "intro_other": "リンクにはこのラウンドの{{count}}問とスコアが含まれます。ノートとその出典は含まれません。",
+    "makeOwn": "自分のノートからクイズを作る",
+    "none": "まずは選択式、真偽問題、穴埋め、マッチング、並び替えなどの問題で1ラウンド遊んでください。",
+    "privacy": "質問はリンク自体に含まれ、サーバーに送信されません。",
+    "share": "リンクを共有",
+    "shareText": "{{name}}がStudyNightで挑戦状を送ってきたよ！スコアを超えられるかな？",
+    "theirScore": "相手のスコア：{{correct}}/{{total}}。超えられるかな？",
+    "theyWin": "惜しい！",
+    "you": "あなた",
+    "youWin": "勝ち！"
+  },
   "common": {
     "back": "戻る",
     "cancel": "キャンセル",
@@ -13,21 +123,227 @@
     "done": "完了",
     "goHome": "ホームへ",
     "loading": "読み込み中…",
+    "minutes_other": "{{count}}分",
     "next": "次へ",
     "retry": "もう一度",
     "save": "保存",
+    "saved": "保存しました",
     "skip": "スキップ",
+    "skipToContent": "コンテンツへスキップ",
     "undo": "やり直し"
   },
+  "deck": {
+    "aiDisclaimer": "AIはミスすることがあります。ノートと照らし合わせて確認してください。質問のソースをタップすると出典が表示されます。",
+    "busy": "AIサービスを待機中…",
+    "delete": "デッキを削除",
+    "deleteBody": "“{{title}}”、質問と履歴がデバイスから削除されます。",
+    "deleted": "“{{title}}”を削除しました",
+    "deleteTitle": "このデッキを削除しますか？",
+    "generating": "質問を作成中…",
+    "masteryLabel": "習熟度 {{percent}}%",
+    "missing": "デッキが見つかりません",
+    "missingBody": "このデッキはデバイスに存在しません",
+    "modes": "プレイ方法",
+    "pages_other": "{{count}}ページ",
+    "pastedText": "貼り付けたテキスト",
+    "percent": "{{value}}%",
+    "quizIn": "{{language}}でクイズ",
+    "regenerate": "トピックの質問を再生成",
+    "regenerateButton": "再生成",
+    "regenerated": "新しい質問が用意できました",
+    "regenerateHint": "そのトピックの質問を新しいものに置き換えます。回答履歴は保持されます。",
+    "settings": "デッキ設定",
+    "slides_other": "{{count}}スライド",
+    "sources": "出典",
+    "topicMap": "トピックマップ",
+    "topicQuestions_other": "{{count}}問",
+    "topicStatus_other": "習熟度 {{percent}}% · {{count}}問",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "改善が必要"
+  },
+  "decks": {
+    "due_other": "{{count}}問 出題待ち",
+    "emptyBody": "ノートをアップロードするか、サンプルデッキで遊びましょう。",
+    "emptyTitle": "まだデッキがありません",
+    "failed": "エラーが発生しました",
+    "processing": "準備中…",
+    "questionCount_other": "{{count}}問",
+    "topicCount_other": "{{count}}トピック"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "もう一度お試しください。",
+      "title": "入力が不正です"
+    },
+    "badChallenge": {
+      "body": "コピー時に切り取られた可能性があります。友達に再送してもらうようにしてください。",
+      "title": "このチャレンジリンクは機能しません"
+    },
     "boundary": {
       "body": "デッキと進捗は安全にデバイスに保存されています。ホームへ戻りましょう",
       "title": "おっと、何か問題が起きました"
+    },
+    "CORRUPT": {
+      "body": "「{{file}}」は破損しているようです。保存またはエクスポートを再試行してください。",
+      "title": "このファイルを開けませんでした"
+    },
+    "EMPTY": {
+      "body": "まずファイル、写真、またはテキストを追加してください。",
+      "title": "読み込むものはありません"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "「{{file}}」は25 MBを超えています。分割するか、より小さいPDFとしてエクスポートしてください。",
+      "title": "ファイルが大きすぎます"
+    },
+    "INTERRUPTED": {
+      "body": "デッキ作成中にアプリが閉じられました。このデッキを削除し、ファイルを再度追加してください。",
+      "title": "アップロードが中断されました"
+    },
+    "NO_TEXT": {
+      "body": "スキャンされた文書のようです。代わりにページの写真撮影をしてください。StudyNightが読み取ります。",
+      "title": "テキストが見つかりません"
+    },
+    "OFFLINE": {
+      "body": "これにはインターネット接続が必要です。すでに作成したものはオフラインでも引き続き使えます。",
+      "title": "オフラインです"
+    },
+    "PASSWORD": {
+      "body": "パスワードを解除するか（または新しいPDFとして印刷して）、再度アップロードしてください。",
+      "title": "このPDFはパスワード保護されています"
+    },
+    "RATE_LIMITED": {
+      "body": "今、たくさんの人が勉強中です — 次の質問はすぐに準備できます。しばらくの間、今までの内容を復習しましょう。",
+      "title": "今、たくさんの人が勉強中です"
+    },
+    "storage": "このデバイスに保存できませんでした。空き容量を確保して再試行してください。",
+    "STORAGE_FULL": {
+      "body": "デッキを削除するか、プロフィールでバックアップをエクスポートして空き容量を作り、もう一度お試しください。",
+      "title": "デバイスの容量がいっぱいです"
+    },
+    "TIMEOUT": {
+      "body": "AIサービスが時間内に回答しませんでした。もう一度お試しください。",
+      "title": "時間切れです"
+    },
+    "TOO_LARGE": {
+      "body": "小さいファイルか、1回に少ないページ数で試してください。",
+      "title": "送信できるサイズを超えています"
+    },
+    "TOO_LONG": {
+      "body": "デッキは最大200,000文字のテキストまでです。いくつかのデッキに分割してください。",
+      "title": "文書が長すぎます"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "デッキは最大{{limit}}ページまたはスライドまでです。教材をいくつかのデッキに分割してください。",
+      "title": "ページ数が多すぎます"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "デッキは最大30枚の写真までです。残りは別のデッキにしてください。",
+      "title": "写真が多すぎます"
+    },
+    "UNKNOWN": {
+      "body": "もう一度お試しください。",
+      "title": "何か問題が発生しました"
+    },
+    "UNREADABLE": {
+      "body": "もっと鮮明な写真か別のファイルを試してください。",
+      "title": "読み取れませんでした"
+    },
+    "UNSUPPORTED": {
+      "body": "「{{file}}」は読み込めません。PDF、PowerPoint (.pptx)、Word (.docx)、テキスト、Markdown、または写真を使用してください。",
+      "title": "サポートされていないファイル形式です"
+    },
+    "UPSTREAM": {
+      "body": "しばらくしてからもう一度お試しください。",
+      "title": "AIサービスに問題が発生しました"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "トピック別",
+    "duration": "時間",
+    "estimate": "回答と記憶度からの推定です。保証ではありません。",
+    "extended": "延長時間オン：時間が50％増えるよ",
+    "intro": "ヒントなし・フィードバックなしのタイムド模擬試験。終了後にスコア予測レポートが届くよ。",
+    "mistakes": "間違いを復習",
+    "questions": "問題数",
+    "reportTitle": "予測スコア",
+    "start": "試験開始"
+  },
+  "explain": {
+    "check": "答えを確認",
+    "checking": "確認中…",
+    "covered": "カバー済み",
+    "great": "素晴らしい答え！",
+    "label": "あなたの答え",
+    "missed": "見逃し",
+    "modelAnswer": "モデル回答",
+    "notYet": "まだ",
+    "partly": "部分的に正解",
+    "placeholder": "自分の言葉で説明して…",
+    "points": "{{hit}}/{{total}}の重要ポイントをカバー"
+  },
+  "home": {
+    "continue": "続ける",
+    "examIn_other": "{{title}} の試験は {{count}} 日後です",
+    "examToday": "{{title}}：本日試験です。頑張って！",
+    "freezes_other": "{{count}}回ストリークフリーズ",
+    "go": "プレイ",
+    "goalOf_other": "{{count}}分",
+    "goalRing": "デイリー目標 {{percent}}% 完了",
+    "greetingAfternoon": "こんにちは！",
+    "greetingAfternoonName": "こんにちは、{{name}}！",
+    "greetingEvening": "こんばんは！",
+    "greetingEveningName": "こんばんは、{{name}}！",
+    "greetingMorning": "おはよう！",
+    "greetingMorningName": "おはよう、{{name}}！",
+    "level": "レベル {{level}}",
+    "levelProgress": "次のレベルまでの進捗、合計 {{xp}} XP",
+    "mood": {
+      "celebrating": "デイリー目標達成！すごい！",
+      "encouraging": "最初のノートを追加して、プレイ開始しよう。",
+      "happy": "さっそく一問どう？",
+      "sleepy": "ストリークが止まっています。数問解いて続けましょう。"
+    },
+    "newDeck": "新しいデッキ",
+    "openDeck": "{{title}} を開く",
+    "resume": "進行中のラウンドがあります。",
+    "review": "復習",
+    "reviewDue_other": "復習すべき質問が {{count}} 件",
+    "reviewDueHint": "今復習すると定着しやすいです。",
+    "statsLabel": "今日",
+    "streakDays_other": "日続き",
+    "trySample": "サンプルを試す",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "言語を選択",
     "menuLabel": "言語: {{language}}。言語を変更"
+  },
+  "legal": {
+    "privacyLink": "プライバシー"
+  },
+  "modes": {
+    "ask": "ノートに質問",
+    "askHint": "ノートの答えだけ",
+    "boss": "ボスバトル",
+    "bossHint_other": "{{count}}トピック準備完了",
+    "bossIntro": "嵐雲を倒せ：難しい質問、各{{seconds}}秒、3ハート。ヒントなし！",
+    "bossLocked": "{{percent}}%習熟度で解除",
+    "bossReady": "ボスバトル解放",
+    "challenge": "友だちにチャレンジ",
+    "challengeHint": "質問を送る",
+    "exam": "試験モード",
+    "examHint": "時間制限付き模擬試験",
+    "flashcards": "フラッシュカード",
+    "flashcardsHint": "スワイプで復習",
+    "practiseTopic": "このトピックを練習",
+    "quick": "クイックプレイ",
+    "quickHint": "10問混合",
+    "review": "復習予定",
+    "sudden": "サンダンデス",
+    "suddenBest_other": "ベスト：連続{{count}}",
+    "topic": "トピック練習",
+    "topicHint": "1つのトピックに集中"
   },
   "nav": {
     "decks": "デッキ",
@@ -35,5 +351,203 @@
     "label": "メイン",
     "profile": "プロフィール",
     "review": "復習"
+  },
+  "newDeck": {
+    "chooseFiles": "ファイルを選択",
+    "create": "クイズを作成",
+    "deckTitle": "デッキ名",
+    "dropTitle": "学習資料を追加",
+    "examDate": "試験日 (任意)",
+    "examDateHint": "試験日に合わせて復習を計画します。",
+    "formats": "PDF、PowerPoint、Word、テキスト、写真。複数のファイルを1つのデッキにまとめられます。",
+    "lowerQuality": "品質が低下する可能性があります",
+    "notice": "使用権限のある資料のみアップロードしてください。自分や他者の個人情報・機密情報を含む文書はアップロードしないでください。",
+    "pasteLabel": "テキスト",
+    "pastePlaceholder": "ここにノートを貼り付けて…",
+    "pasteText": "テキストを貼り付け",
+    "quizLanguage": "クイズ言語",
+    "ready": "クイズの準備ができました。追加の問題も作成中です！",
+    "remove": "{{name}} を削除",
+    "sameAsNotes": "ノートと同じ",
+    "selected": "選択したファイル",
+    "takePhoto": "写真を撮る",
+    "title": "新しいデッキ",
+    "titlePlaceholder": "例: 生物 3週目",
+    "untitled": "マイノート"
+  },
+  "onboarding": {
+    "later": "ちょっと見て回る",
+    "one": {
+      "body": "スライドやノート、ノートの写真を追加すると、約30秒で自分だけのクイズが作られます。",
+      "title": "ノートがゲームに変身"
+    },
+    "setup": {
+      "avatar": "アバターを選択",
+      "avatarN": "アバター {{n}}",
+      "goal": "デイリー目標",
+      "nickname": "ニックネーム（任意）",
+      "nicknameHint": "この端末にだけ保存されます。",
+      "title": "自分好みに設定"
+    },
+    "three": {
+      "body": "StudyNightは苦手な箇所を覚えて、試験前まで適切なタイミングで出題します。",
+      "title": "しっかり定着させよう"
+    },
+    "trySample": "サンプルデッキを試す",
+    "two": {
+      "body": "出典をタップすると、ノートの該当箇所が見れます。問題はノートと照らし合わせてチェックされます。",
+      "title": "すべての問題に出典が表示"
+    },
+    "uploadNotes": "ノートをアップロード"
+  },
+  "play": {
+    "answerWas": "答え：",
+    "bossHit": "ダイレクトヒット！",
+    "check": "チェック",
+    "combo_other": "コンボ × {{count}}！",
+    "correct": "正解！",
+    "correctAnswer": "正解",
+    "correctOrder": "正しい順序",
+    "correctPairs": "正解ペア",
+    "definitions": "意味",
+    "expected": "答え：",
+    "false": "間違い",
+    "figureAlt": "この質問に関するノートの図",
+    "fromNotes": "ノートから",
+    "fromPage": "ノートから · ページ{{n}}",
+    "fromSlide": "ノートから · スライド{{n}}",
+    "grade": {
+      "again": "もう一度",
+      "easy": "簡単",
+      "good": "良い",
+      "hard": "難しい"
+    },
+    "hearts_other": "残り{{count}}ハート",
+    "hint": "ヒント（XP半分）",
+    "howWell": "どれくらい知ってた？",
+    "incorrect": "ちょっと違う",
+    "incorrectAnnounce": "ちょっと違う。答えは{{answer}}",
+    "matchHelp": "用語をタップし、対応する意味を選んでね。",
+    "moveDown": "ステップ{{n}}を下へ移動",
+    "moveUp": "ステップ{{n}}を上へ移動",
+    "noQuestions": "まだ問題がありません",
+    "noQuestionsBody": "新しい問題を作成中です。少し待つか接続を確認してください。",
+    "nothingDue": "今は復習するものがありません",
+    "nothingDueBody": "全部終わっています。また後で来るか、すぐにラウンドをプレイしてください。",
+    "orderHelp": "ステップをドラッグするか矢印で順序を入れ替えてください。",
+    "pageN": "ページ{{n}}",
+    "pairedWith": "ターム{{n}}とペア：{{text}}",
+    "preparing": "問題を準備中…",
+    "progress": "{{n}} / {{total}} 問目",
+    "quit": "一時停止・終了",
+    "quitBody": "これまでの回答は保存されています。",
+    "quitConfirm": "やめる",
+    "quitTitle": "このラウンドをやめますか？",
+    "reset": "リセット",
+    "secondsLeft_other": "残り{{count}}秒",
+    "showAnswer": "答えを見る",
+    "slideN": "スライド{{n}}",
+    "sourceTitle": "ノートから",
+    "swipeHelp": "知っていたら右へ、もう一度見たいなら左へ、簡単だったら上へスワイプ",
+    "terms": "用語",
+    "timeLeft": "残り時間：{{time}}",
+    "true": "正しい",
+    "typeAnswer": "答えを入力",
+    "typoAccepted": "受理済み — スペルに注意：“{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "このラウンドで{{xp}} XP",
+    "yourAnswer": "あなたの答え"
+  },
+  "processing": {
+    "background": "最初の質問が完成すればすぐにプレイできます。残りはバックグラウンドで続行されます。",
+    "chooseBody_other": "{{count}}ページが画像読み込みが必要です。ただし、デッキあたり最大{{max}}ページまでです。開始場所を選択してください。",
+    "choosePages": "{{from}}〜{{to}}ページを読み込む",
+    "chooseTitle": "読み込むページを選択",
+    "handwriting": "手書き文字はベストエフォートで読み取ります。",
+    "questions": "「{{topic}}」に関する最初の質問を作成中…",
+    "readingFile": "{{name}} を読み込み中…",
+    "readingPage": "{{total}}ページ中 {{page}}ページ目を読み込み中…",
+    "startPage": "開始ページ",
+    "title": "クイズを作成中",
+    "topics": "主要トピックを特定中…",
+    "vision": "画像を読み込み中 ({{total}}枚中 {{done}}枚)…"
+  },
+  "report": {
+    "body": "すぐにデッキから削除され、二度と表示されません。",
+    "done": "問題を削除しました",
+    "duplicate": "重複",
+    "notInNotes": "ノートにない",
+    "open": "この質問を報告",
+    "title": "この質問を報告",
+    "unclear": "不明瞭",
+    "wrong": "誤答"
+  },
+  "results": {
+    "accuracy": "正答率",
+    "bestCombo": "最高コンボ",
+    "bossLost": "嵐はまだ続いています。もう一度挑戦！",
+    "bossWon": "嵐を制しました！",
+    "done": "完了",
+    "goalMet": "目標達成！+20 XPボーナス",
+    "levelUp": "レベルアップ！レベル{{level}}に到達",
+    "newBadges": "新しいバッジ",
+    "newBest": "新記録！",
+    "practiseThese": "これらを練習",
+    "score": "{{correct}}/{{total}}",
+    "stats": "ラウンド結果",
+    "suddenScore_other": "{{count}}問連続正解！",
+    "time": "時間",
+    "weakest": "苦手なトピック",
+    "xp": "獲得XP",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "StudyNight用に作成済み。アップロード不要で、すぐに遊べます。オフラインでも使えます。",
+    "play_other": "プレイ ({{count}}問)",
+    "title": "サンプルデッキ"
+  },
+  "share": {
+    "button": "結果を共有",
+    "copied": "コピーしました！",
+    "copyText": "テキストをコピー",
+    "download": "画像をダウンロード",
+    "includeDeck": "デッキタイトルを表示",
+    "shareImage": "画像を共有",
+    "text": "StudyNightで{{correct}}/{{total}}のスコアを取得しました — {{title}}! 🌙",
+    "textDeck": "StudyNightで「{{deck}}」で{{correct}}/{{total}}のスコアを取得しました — {{title}}! 🌙",
+    "title": "結果を共有"
+  },
+  "smart": {
+    "body": "別の言葉や言語を使っても、適切な箇所を見つけます。約{{size}} MBを一度ダウンロードすると、オフラインでも使えます。",
+    "download": "ダウンロード ({{size}} MB)",
+    "downloading": "スマート検索：{{percent}}% ダウンロード中…",
+    "failed": "スマート検索を設定できませんでした。キーワード検索は引き続き使えます。設定から再試行できます。",
+    "mobileData": "モバイルデータ通信のようです。Wi-Fiを待った方がよいかもしれません。",
+    "notNow": "今はいい",
+    "title": "スマート検索"
+  },
+  "titles": {
+    "bossSlayer": "嵐の追跡者",
+    "braveExplorer": "勇敢な探検家",
+    "comboMaster": "コンボマスター",
+    "comebackKid": "カムバックキッド",
+    "deepThinker": "ディープシンカー",
+    "earlyRiser": "早起きさん",
+    "freshStart": "フレッシュスタート",
+    "hintFreeHero": "ヒントなしヒーロー",
+    "marathoner": "マラソナー",
+    "neverGiveUp": "諦めない人",
+    "nightOwlMode": "夜型モード",
+    "perfectionist": "パーフェクショニスト",
+    "speedReader": "スピードリーダー",
+    "steadyClimber": "安定したクライマー",
+    "topicTamer": "トピックテイマー"
+  },
+  "voice": {
+    "denied": "マイクアクセスがブロックされました。ブラウザ設定で許可するか、代わりに入力してください。",
+    "record": "音声で回答",
+    "recording": "録音中…",
+    "stop": "録音停止（残り{{seconds}}秒）",
+    "transcribing": "音声をテキストに変換中…"
   }
 }

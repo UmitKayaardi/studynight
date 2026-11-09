@@ -295,7 +295,8 @@
     "points": "You covered {{hit}} of {{total}} key points.",
     "covered": "Covered",
     "missed": "Missed",
-    "modelAnswer": "Model answer"
+    "modelAnswer": "Model answer",
+    "skip": "Skip for now"
   },
   "voice": {
     "record": "Answer by voice",
