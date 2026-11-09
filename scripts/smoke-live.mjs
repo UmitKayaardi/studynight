@@ -1,4 +1,4 @@
-/* global document, window, navigator, MediaRecorder */
+/* global document, window, MediaRecorder */
 // Smoke test of a deployed StudyNight with the real AI service. Usage: BASE=https://… node scripts/smoke-live.mjs
 // Uses only original text written for this test. Prints a short PASS/FAIL report and saves screenshots to
 // smoke-results/ (git-ignored).
