@@ -61,11 +61,12 @@ export function topK(m: VectorMatrix, query: Float32Array, k = 10): Hit[] {
  * Reciprocal Rank Fusion: score(d) = Σ 1 / (c + rank_i(d)) over the ranked lists that contain d.
  * Robust to the different score scales of BM25 and cosine similarity.
  */
-export function rrf(lists: Hit[][], k = 10, c = 60): Hit[] {
+export function rrf(lists: Hit[][], k = 10, c = 60, weights: number[] = []): Hit[] {
   const scores = new Map<string, number>();
-  for (const list of lists) {
-    list.forEach((h, rank) => scores.set(h.id, (scores.get(h.id) ?? 0) + 1 / (c + rank + 1)));
-  }
+  lists.forEach((list, li) => {
+    const w = weights[li] ?? 1;
+    list.forEach((h, rank) => scores.set(h.id, (scores.get(h.id) ?? 0) + w / (c + rank + 1)));
+  });
   return [...scores]
     .map(([id, score]) => ({ id, score }))
     .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))

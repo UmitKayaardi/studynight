@@ -43,3 +43,8 @@ One line per decision: what was decided, and why.
 - Importing a backup replaces all local data (after a preview and confirmation) rather than merging — merging decks, FSRS states and streaks from two devices has no single correct answer, and "move to a new phone" is the stated purpose.
 - Deleting a deck keeps an in-memory snapshot for the undo toast; once the toast closes, the data is gone.
 - UI translations are machine-assisted with the project's own Groq generator model via `scripts/translate.mjs` (keeps all 21 locales complete at every checkpoint so CI stays green); the script validates variables and plural categories, rejects strings returned untranslated, and re-translates any string whose English source changes. Translations are reviewed in Phase 10.
+
+## Benchmark-driven
+
+- Hybrid retrieval uses weighted Reciprocal Rank Fusion with BM25 weight 0.5 and vector weight 1 (`HYBRID_BM25_WEIGHT`): on the benchmark corpus it raises hybrid MRR from 0.78 to 0.80 at equal recall; keyword search stays in the mix because it works before (or without) the Smart search download and for exact terms. Vector-only scored one query higher on recall@5 on this small corpus — reported in docs/BENCHMARK.md rather than hidden.
+- Groq's free plan also caps tokens per day per model; build-time jobs (translations, sample decks, benchmark) therefore wait out long `retry-after` periods and are run in stages.

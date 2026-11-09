@@ -21,10 +21,17 @@ export function forgetDeckIndex(deckId: string): void {
   void embedClient.dropIndex(deckId).catch(() => undefined);
 }
 
+/**
+ * Weight of the keyword list in Reciprocal Rank Fusion (the vector list has weight 1). Chosen with the
+ * retrieval benchmark (docs/BENCHMARK.md): weak keyword hits on cross-language queries otherwise push good
+ * semantic matches down.
+ */
+export const HYBRID_BM25_WEIGHT = 0.5;
+
 /** Fuses keyword and vector hits; with no vector hits this is BM25 order. */
 export function fuse(keyword: Hit[], vector: Hit[] | null, k: number): Hit[] {
   if (!vector || vector.length === 0) return keyword.slice(0, k);
-  return rrf([keyword, vector], k);
+  return rrf([keyword, vector], k, 60, [HYBRID_BM25_WEIGHT, 1]);
 }
 
 export async function retrieve(

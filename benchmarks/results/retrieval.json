@@ -1,0 +1,85 @@
+{
+ "corpus": {
+  "documents": 14,
+  "chunks": 50,
+  "queries": 60,
+  "crossLanguageQueries": 17
+ },
+ "all": {
+  "bm25": {
+   "recallAt5": 78.3,
+   "mrr": 0.714
+  },
+  "vector": {
+   "recallAt5": 86.7,
+   "mrr": 0.809
+  },
+  "hybrid": {
+   "recallAt5": 85,
+   "mrr": 0.799
+  }
+ },
+ "sameLanguage": {
+  "bm25": {
+   "recallAt5": 95.3,
+   "mrr": 0.868
+  },
+  "hybrid": {
+   "recallAt5": 97.7,
+   "mrr": 0.957
+  }
+ },
+ "crossLanguage": {
+  "bm25": {
+   "recallAt5": 35.3,
+   "mrr": 0.324
+  },
+  "vector": {
+   "recallAt5": 52.9,
+   "mrr": 0.439
+  },
+  "hybrid": {
+   "recallAt5": 52.9,
+   "mrr": 0.4
+  }
+ },
+ "hybridWeight": 0.5,
+ "weightSweep": {
+  "w1": {
+   "all": {
+    "recallAt5": 85,
+    "mrr": 0.78
+   },
+   "cross": {
+    "recallAt5": 52.9,
+    "mrr": 0.392
+   }
+  },
+  "w0.5": {
+   "all": {
+    "recallAt5": 85,
+    "mrr": 0.799
+   },
+   "cross": {
+    "recallAt5": 52.9,
+    "mrr": 0.4
+   }
+  },
+  "w0.25": {
+   "all": {
+    "recallAt5": 85,
+    "mrr": 0.799
+   },
+   "cross": {
+    "recallAt5": 52.9,
+    "mrr": 0.4
+   }
+  }
+ },
+ "embedding": {
+  "chunks": 50,
+  "ms": 6990,
+  "msPer100Chunks": 13980,
+  "device": "desktop CPU, Node.js, single thread (onnxruntime-node)"
+ }
+}
