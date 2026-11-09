@@ -87,7 +87,7 @@ export default function Play() {
   if (!s.config) return null;
   if (s.phase === 'loading') {
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+      <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
         <Mascot mood="thinking" size={130} />
         <p className="text-lg" aria-live="polite">
           {t('play.preparing')}
@@ -97,7 +97,7 @@ export default function Play() {
   }
   if (s.phase === 'empty') {
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+      <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
         <Mascot mood="sleepy" size={130} />
         <h1 className="font-display text-2xl font-extrabold">{mode === 'review' ? t('play.nothingDue') : t('play.noQuestions')}</h1>
         <p className="text-muted">{mode === 'review' ? t('play.nothingDueBody') : t('play.noQuestionsBody')}</p>
@@ -172,7 +172,7 @@ export default function Play() {
         )}
       </AnimatePresence>
 
-      <main className="flex flex-1 flex-col gap-4 py-2">
+      <main id="main" tabIndex={-1} className="flex flex-1 flex-col gap-4 py-2">
         {mode === 'flashcards' ? (
           <SwipeCard key={item.id} item={item} onGrade={(g) => void submit({ type: 'flashcard', grade: g })} />
         ) : (

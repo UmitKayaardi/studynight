@@ -94,7 +94,7 @@ export default function Results() {
   const back = deckId ? `/deck/${deckId}` : '/';
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10">
+    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10">
       <section className="flex flex-col items-center gap-2 text-center" aria-live="polite">
         <Mascot mood={mood} theme={profile?.mascotTheme ?? 0} size={120} />
         {config.mode === 'boss' && <h1 className="font-display text-3xl font-extrabold">{bossWon ? t('results.bossWon') : t('results.bossLost')}</h1>}
@@ -259,7 +259,7 @@ function ChallengeResult() {
     }
   }, [mine, theirs]);
   return (
-    <main className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10 text-center">
+    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10 text-center">
       <h1 className="font-display text-3xl font-extrabold">{mine > theirs ? t('challenge.youWin') : mine === theirs ? t('challenge.draw') : t('challenge.theyWin')}</h1>
       <div className="grid grid-cols-2 gap-3">
         <Card className="flex flex-col items-center gap-2">

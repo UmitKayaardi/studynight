@@ -1,0 +1,20 @@
+{
+ "url": "https://studynight-sable.vercel.app/welcome",
+ "fetchTime": "2026-11-09T21:07:13.382Z",
+ "lighthouse": "12.8.2",
+ "formFactor": "mobile (simulated slow 4G, mid-tier CPU)",
+ "scores": {
+  "performance": 92,
+  "accessibility": 98,
+  "best-practices": 96,
+  "seo": 100
+ },
+ "metrics": {
+  "first-contentful-paint": "2.6 s",
+  "largest-contentful-paint": "2.9 s",
+  "total-blocking-time": "0 ms",
+  "cumulative-layout-shift": "0",
+  "speed-index": "2.6 s"
+ },
+ "note": "Run before the skip-link fix (accessibility 98: skip link target missing on the onboarding screen; fixed afterwards)."
+}

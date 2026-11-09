@@ -119,7 +119,7 @@ export function TabScreen({
         {actions}
         <LanguageMenu compact={!!title} />
       </header>
-      <main id="main" className="mx-auto max-w-lg px-4">
+      <main id="main" tabIndex={-1} className="mx-auto max-w-lg px-4">
         {children}
       </main>
       <BottomTabs />
@@ -154,7 +154,7 @@ export function SubScreen({
           {actions}
         </div>
       </header>
-      <main id="main" className="mx-auto max-w-lg px-4">
+      <main id="main" tabIndex={-1} className="mx-auto max-w-lg px-4">
         {children}
       </main>
     </div>
@@ -215,7 +215,7 @@ export function Toasts() {
 function ErrorFallback({ onReset }: { onReset: () => void }) {
   const { t } = useTranslation();
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
       <Mascot mood="surprised" size={140} />
       <h1 className="font-display text-2xl font-extrabold">{t('errors.boundary.title')}</h1>
       <p className="text-muted">{t('errors.boundary.body')}</p>

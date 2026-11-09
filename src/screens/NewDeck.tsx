@@ -135,7 +135,7 @@ export default function NewDeck() {
             ? 0.55
             : 0.8;
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-5 p-6 text-center">
+      <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-5 p-6 text-center">
         <Mascot mood="thinking" size={150} />
         <h1 className="font-display text-2xl font-extrabold">{t('processing.title')}</h1>
         <p className="min-h-12 text-lg" aria-live="polite">

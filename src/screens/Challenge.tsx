@@ -17,7 +17,7 @@ export default function Challenge() {
   const data = useMemo(() => parseChallenge(location.hash), []);
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-8">
+    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-8">
       <header className="flex items-center gap-2">
         <Logo size={32} />
         {/* i18n-ignore: brand name */}

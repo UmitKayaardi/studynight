@@ -33,7 +33,7 @@ export default function Onboarding() {
   };
 
   return (
-    <div className="mx-auto flex min-h-dvh max-w-md flex-col px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]">
       <header className="flex items-center gap-2">
         <Logo size={32} />
         {/* i18n-ignore: brand name */}
@@ -128,6 +128,6 @@ export default function Onboarding() {
           </>
         )}
       </footer>
-    </div>
+    </main>
   );
 }
