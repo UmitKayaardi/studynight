@@ -24,7 +24,7 @@ from the first unchecked step. Commit after every step.
 - [x] 2.3 Cleaning (headers/footers, hyphenation), language detection
 - [x] 2.4 Chunker (+ property tests)
 - [x] 2.5 BM25
-- [ ] 2.6 Embeddings worker + vector store + hybrid RRF
+- [x] 2.6 Embeddings worker + vector store + hybrid RRF
 
 ## Phase 3 — API functions
 - [ ] 3.1 Shared API schemas, error shape, Groq client (timeouts, back-off, fallback), abuse guard
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 2.6 embeddings worker, vector store, hybrid.
+Next: Phase 3 step 3.1 (API schemas, error shape, Groq client, abuse guard).
 
 Known issues: none yet.

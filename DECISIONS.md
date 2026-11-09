@@ -28,3 +28,11 @@ One line per decision: what was decided, and why.
 - `wouter` for routing (tiny, Unlicense) — keeps the initial bundle small.
 - `/api` handlers use Web-standard `Request`/`Response`; a small Vite plugin serves them during `npm run dev`, so one command runs the whole app locally on Windows.
 - Shared server/client code lives in `shared/` and uses `.js` import suffixes so the functions run as native ES modules on Vercel.
+- ONNX Runtime WebAssembly files are self-hosted under `/ort/` (copied from `node_modules` by `scripts/copy-ort.mjs` before dev/build) instead of transformers.js's default jsDelivr CDN — keeps the CSP strict and lets the files be cached for offline use. Single-threaded WASM (no cross-origin isolation needed).
+- Verified in Chromium (2026-11-09): model load incl. download ~34 s on a fast connection; English↔Spanish paraphrase cosine 0.90 vs unrelated 0.80 (e5 similarities are compressed into a high range, so absolute thresholds must be calibrated — see BENCHMARK.md); ~20 s per 100 long chunks single-threaded on a desktop CPU, so embedding runs in the background after the first questions are playable.
+
+## Ingestion
+
+- Sentence segmentation uses `Intl.Segmenter` (Unicode rules); line breaks inside a block are boundaries too, and over-long sentences are split by words (or by characters for unspaced scripts) so no chunk exceeds 400 words.
+- A day counts towards the streak once at least one question is answered that day (simple and friendly; the daily goal ring is separate).
+- `ts-fsrs` v6's legacy `fsrs()` scheduler API is used through one wrapper module (`src/lib/learning/fsrs.ts`); the newer scheduler API is not yet documented well enough to depend on.

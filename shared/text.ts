@@ -7,7 +7,7 @@
 export function cleanText(s: string): string {
   return s
     .normalize('NFC')
-    .replace(/[  -​  　]/g, ' ')
+    .replace(/[\u00a0\u2000-\u200b\u202f\u205f\u3000]/g, ' ')
     .replace(/[ \t]+/g, ' ')
     .replace(/ *\n */g, '\n')
     .replace(/\n{3,}/g, '\n\n')
@@ -80,7 +80,7 @@ export function quoteMatch(haystack: string, needle: string): number {
 
 /** Parses a number written with either decimal separator ("3.5", "3,5", "1 000", "1,000.5", "-2e3"). */
 export function parseNumber(s: string): number | null {
-  let t = s.trim().replace(/[\s  ']/g, '');
+  let t = s.trim().replace(/[\s\u00a0\u202f']/g, '');
   if (!/^[-+−]?[\d.,]+(e[-+]?\d+)?%?$/i.test(t)) return null;
   t = t.replace('−', '-').replace(/%$/, '');
   const lastComma = t.lastIndexOf(',');

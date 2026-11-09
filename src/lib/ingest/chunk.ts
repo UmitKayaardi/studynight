@@ -43,8 +43,9 @@ function sentences(text: string): string[] {
   // Line breaks inside a block (bullets, slide lines) are boundaries too.
   for (const line of text.split('\n')) {
     if (!line.trim()) continue;
-    if (segmenter) for (const s of segmenter.segment(line)) s.segment.trim() && out.push(s.segment.trim());
-    else out.push(...line.split(/(?<=[.!?。！？؟।])\s+/).filter((s) => s.trim()));
+    if (segmenter) {
+      for (const s of segmenter.segment(line)) if (s.segment.trim()) out.push(s.segment.trim());
+    } else out.push(...line.split(/(?<=[.!?。！？؟।])\s+/).filter((s) => s.trim()));
   }
   return out;
 }
