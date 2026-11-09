@@ -21,7 +21,7 @@ from the first unchecked step. Commit after every step.
 ## Phase 2 — Ingestion & retrieval
 - [x] 2.1 Shared text utils: normalisation, fuzzy match, answer checking
 - [x] 2.2 Extractors: TXT/MD/paste, DOCX, PPTX, PDF (worker), photos (resize → API)
-- [ ] 2.3 Cleaning (headers/footers, hyphenation), language detection
+- [x] 2.3 Cleaning (headers/footers, hyphenation), language detection
 - [ ] 2.4 Chunker (+ property tests)
 - [ ] 2.5 BM25
 - [ ] 2.6 Embeddings worker + vector store + hybrid RRF
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 2.3 cleaning + language detection.
+Next: 2.4 chunker.
 
 Known issues: none yet.
