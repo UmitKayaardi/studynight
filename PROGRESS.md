@@ -36,7 +36,7 @@ from the first unchecked step. Commit after every step.
 
 ## Phase 4 — Data layer
 - [x] 4.1 Dexie schema + migrations + tests
-- [ ] 4.2 Repositories (decks, questions, reviews, sessions, profile, settings)
+- [x] 4.2 Repositories (decks, questions, reviews, sessions, profile, settings)
 - [ ] 4.3 Backup export/import, delete-all, storage persistence/quota
 
 ## Phase 5 — Design system & shell
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 4.2 repositories.
+Next: 4.3 backup, delete-all, storage.
 
 Known issues: none yet.
