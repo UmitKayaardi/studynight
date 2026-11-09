@@ -12,11 +12,11 @@ from the first unchecked step. Commit after every step.
 ## Phase 1 — Learning engine (`src/lib/learning/`)
 - [x] 1.1 Secure randomness + shuffle
 - [x] 1.2 FSRS wrapper + rating mapping
-- [ ] 1.3 Mastery + adaptive difficulty
-- [ ] 1.4 XP, levels, daily goal / active time
-- [ ] 1.5 Streaks + freezes (time zones, DST)
-- [ ] 1.6 Exam planner
-- [ ] 1.7 Badges + session titles + predicted score band
+- [x] 1.3 Mastery + adaptive difficulty
+- [x] 1.4 XP, levels, daily goal / active time
+- [x] 1.5 Streaks + freezes (time zones, DST)
+- [x] 1.6 Exam planner
+- [x] 1.7 Badges + session titles + predicted score band
 
 ## Phase 2 — Ingestion & retrieval
 - [ ] 2.1 Shared text utils: normalisation, fuzzy match, answer checking
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 1.3 mastery + adaptive difficulty.
+Next: Phase 2 step 2.1 (shared text utils: normalisation, fuzzy match, answer checking).
 
 Known issues: none yet.
