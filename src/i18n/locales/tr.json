@@ -1,7 +1,28 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi. Tüm hakları saklıdır.",
+    "credits": "Açık kaynaklı yazılımlarla geliştirildi. Yapay zeka Groq tarafından sağlanıyor; isteğe bağlı Akıllı arama cihazında çalışır.",
+    "mascot": "Ders çalışırken sana eşlik eden gece göğü hilali Lumi ile tanış.",
+    "principle": "Yapay zeka yalnızca notlarını konulara ayırır, kendi pasajlarından soru taslakları oluşturur, onları notlarına göre kontrol eder ve açıklamaların hangi ana noktaları kapsadığını işaretler. Puanlar, XP, seri, tekrar zamanlaması, zorluk ve sınav planları cihazındaki test edilmiş kodla hesaplanır. Notlarına göre kontrolü geçmeyen hiçbir soru sana ulaşmaz.",
+    "principleTitle": "Yapay zeka soruları yazar. Kod her şeyi belirler.",
+    "version": "Sürüm {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "Notlarınız, bir oyuna dönüştürüldü."
+  },
+  "ask": {
+    "disclaimer": "Cevaplar yalnızca notlarından gelir. Soruların kaydedilmez.",
+    "intro": "Bu destenin hakkında her şeyi sor. Cevaplar yalnızca notlarından gelir, açabileceğin numaralı kaynaklarla birlikte.",
+    "label": "Sorun",
+    "notCovered": "Notların bu konuyu kapsamıyor gibi.",
+    "notCoveredHint": "StudyNight yalnızca kendi notlarından cevap verir, tahmin etmez.",
+    "offline": "Notlarına sormak için internet bağlantısı gerekir. Bu destedeki diğer her şey çevrimdışı çalışır.",
+    "openSource": "{{n}} numaralı kaynağı aç",
+    "placeholder": "Notların hakkında sor…",
+    "send": "Gönder",
+    "thinking": "Notlarına bakıyorum…",
+    "title": "Notlarına sor"
   },
   "badges": {
     "challenger": {
@@ -289,7 +310,8 @@
     "notYet": "Henüz değil",
     "partly": "Yarısı doğru",
     "placeholder": "Kendi cümlelerinle açıkla…",
-    "points": "{{total}} ana noktadan {{hit}} tanesini kapsadın."
+    "points": "{{total}} ana noktadan {{hit}} tanesini kapsadın.",
+    "skip": "Şimdilik atla"
   },
   "home": {
     "continue": "Devam et",
@@ -334,7 +356,18 @@
     "menuLabel": "Dil: {{language}}. Dili değiştir"
   },
   "legal": {
-    "privacyLink": "Gizlilik"
+    "about": "StudyNight Hakkında",
+    "licences": "Lisanslar",
+    "privacy": "Gizlilik",
+    "privacyLink": "Gizlilik",
+    "terms": "Kullanım koşulları",
+    "updated": "Son güncelleme: {{date}}"
+  },
+  "licences": {
+    "fonts": "Yazı tipleri: Inter, Nunito ve Noto Sans aileleri (SIL Açık Yazı Tipi Lisansı 1.1). Simgeler: Lucide (ISC).",
+    "intro": "StudyNight açık kaynaklı yazılımlarla geliştirilmiştir. Aşağıdaki her bileşen gösterilen lisans altında kullanılır.",
+    "model": "Akıllı arama modeli",
+    "original": "Maskot, logo, avatarlar, rozetler ve sesler StudyNight için yapıldı."
   },
   "modes": {
     "ask": "Notlarını sor",
@@ -416,6 +449,34 @@
     },
     "uploadNotes": "Notlarımı yükle"
   },
+  "planner": {
+    "add": "Sınav ekle",
+    "addToCalendar": "Takvime ekle",
+    "date": "Sınav tarihi",
+    "dayPlan_one": "{{practice}} pratik + {{count}} tekrar",
+    "dayPlan_other": "{{practice}} pratik + {{count}} tekrar",
+    "daysLeft_one": "{{count}} gün kaldı",
+    "daysLeft_other": "{{count}} gün kaldı",
+    "deck": "Desteler",
+    "empty": "Henüz sınav yok. Günlük plan için ekle.",
+    "examName": "Sınav adı",
+    "icsMock": "Deneme sınavı: {{title}}",
+    "icsOpen": "Başlamak için StudyNight'ı aç.",
+    "icsSummary_one": "Çalışma: {{title}} ({{count}} soru)",
+    "icsSummary_other": "Çalışma: {{title}} ({{count}} soru)",
+    "intro": "Sınavlarını ekle, StudyNight her gün için planını hazırlasın: önce zayıf konular, sonra dağıtılmış tekrarlar ve son gün deneme sınavı.",
+    "mockDay_one": "Deneme sınavı + {{count}} tekrar",
+    "mockDay_other": "Deneme sınavı + {{count}} tekrar",
+    "more_one": "…ve {{count}} gün daha",
+    "more_other": "…ve {{count}} gün daha",
+    "needDeck": "Önce bir desteler oluştur, sonra sınav planla.",
+    "past": "Bu sınav geçti. Başarıyla tamamladığın için tebrikler!",
+    "remove": "{{title}} kaldır",
+    "startToday": "Bugünkü oturumu başlat",
+    "time": "Çalışma süresi",
+    "title": "Sınav planlayıcı",
+    "today": "Bugün sınav: zayıf konularını hızlıca tekrar et, sonra dinlen. Bol şans!"
+  },
   "play": {
     "answerWas": "Cevap:",
     "bossHit": "Doğrudan isabet!",
@@ -477,6 +538,48 @@
     "xpTotal": "Bu turda {{xp}} XP",
     "yourAnswer": "Cevabın"
   },
+  "privacy": {
+    "s1": {
+      "h": "Kısa versiyon",
+      "p": "Hesap yok, reklam yok, takip yok, analiz yok ve çerez yok. Destelerin, soruların, ilerlemen ve profilin yalnızca bu cihazda saklanır."
+    },
+    "s10": {
+      "h": "Değişiklikler ve iletişim",
+      "p": "Bu politika değişirse, bu sayfayı ve yukarıdaki tarihi güncelleriz. Sorularınız için uygulama mağazası veya proje sayfasındaki iletişim bilgilerini kullanabilirsiniz."
+    },
+    "s2": {
+      "h": "Cihazında kalanlar",
+      "p": "Eklemediğin dosyalar tarayıcın içinde okunur; dosyaların asla yüklenmez. Destelerin, soruların, cevapların, seri kayıtların, takma adın ve avatarın bu cihazdaki tarayıcı depolamanda tutulur. Yazılan cevaplar tur bittikten sonra saklanmaz."
+    },
+    "s3": {
+      "h": "Yapay zeka özelliklerini kullanırken gönderilenler",
+      "p": "Sorular oluşturmak, açıklamaları kontrol etmek, notlarınla ilgili soruları yanıtlamak, fotoğrafları okumak ve konuşmayı metne dönüştürmek için StudyNight, notlarından kısa metin alıntılarını (asla tüm dosyaları değil), yeniden boyutlandırılmış fotoğrafları veya sayfa görüntülerini ve kısa ses kayıtlarını yapay zeka sağlayıcımız Groq'a sunucumuz üzerinden gönderir. Sunucumuz bunları yalnızca bellekte işler ve içeriğini saklamaz veya günlüğe kaydetmez; günlükleri yalnızca hata kodları ve zamanlamaları içerir."
+    },
+    "s4": {
+      "h": "Groq, yapay zeka sağlayıcımız",
+      "p": "Groq'un veri belgelerini ve Hizmet Sözleşmesini 9 Kasım 2026'da inceledik. Groq'un varsayılan olarak çıkarım isteklerini tutmadığını, ancak hata gidermek veya şüpheli kötüye kullanımı araştırmak için girdileri ve çıktıları geçici olarak, en fazla 30 gün boyunca günlüğe kaydedebileceğini belirtiyorlar; hesap için Sıfır Veri Saklama açıksa bu geçerli değil. Groq'un girdileri veya çıktıları modelleri eğitmek için kullanmasına izin verilmez. Groq verileri Amerika Birleşik Devletleri'nde saklar. console.groq.com/docs/your-data adresine bakın."
+    },
+    "s5": {
+      "h": "Akıllı arama",
+      "p": "Akıllı aramayı açarsan, bir dil modeli Hugging Face'ten (huggingface.co) bir kez indirilir; bu site, ziyaret ettiğin herhangi bir web sitesi gibi IP adresini görür. Bundan sonra tamamen cihazında çalışır; notlarını aramak onları hiçbir yere göndermez."
+    },
+    "s6": {
+      "h": "Barındırma",
+      "p": "Uygulama Vercel tarafından barındırılır; Vercel, web sitesini sunmak ve kötüye kullanımdan korumak için IP adresin gibi teknik verileri işler."
+    },
+    "s7": {
+      "h": "Lütfen kişisel bilgi yükleme",
+      "p": "Kendin veya başkaları hakkında kişisel veya hassas bilgiler içeren belgeleri yükleme. Yapay zeka, belgelerde bulunan kişisel verileri asla tekrarlamaması için talimatlandırılmıştır, ancak en iyi koruma bunları yüklememektir."
+    },
+    "s8": {
+      "h": "Seçimlerin",
+      "p": "Tüm verilerini dışa aktarabilir (Profil → Ayarlar → Yedekleme dışa aktar), bir desteyi ondan yapılan her şeyle birlikte silebilir veya tüm verilerini bir seferde silebilirsin. Sunucularımızda seninle ilgili hiçbir şey saklanmadığı için, göndermemiz veya silmemiz gereken başka bir şey yok."
+    },
+    "s9": {
+      "h": "Çocuklar",
+      "p": "StudyNight, kim olduğunla ilgili hiçbir şey toplamaz. 13 yaş ve üzeri için tasarlanmıştır."
+    }
+  },
   "processing": {
     "background": "İlk sorular hazır olduğunda oynamaya başlayabilirsin. Geri kalanlar arka planda eklenmeye devam edecek.",
     "chooseBody_one": "{{count}} sayfa görsel okuma gerektiriyor, ancak destede en fazla {{max}} sayfa okunabilir. Nereden başlayacağını seç.",
@@ -491,6 +594,43 @@
     "title": "Soru setin hazırlanıyor",
     "topics": "Ana konular bulunuyor…",
     "vision": "Görsellerin okunması ({{done}} / {{total}})…"
+  },
+  "profile": {
+    "accuracy": "Doğruluk",
+    "accuracyOverTime": "Haftalık doğruluk",
+    "activity": "Aktivite",
+    "answered": "Cevaplanan",
+    "avatar": "Avatarın",
+    "badgeEarned": "{{name}}, kazanıldı",
+    "badgeLocked": "{{name}}, henüz kazanılmadı",
+    "badges": "Rozetler ({{count}}/{{total}})",
+    "best": "En iyi seri",
+    "calendar": "Son 12 hafta",
+    "current": "Mevcut seri",
+    "dayDetail_one": "{{date}}: {{count}} soru, {{time}}",
+    "dayDetail_other": "{{date}}: {{count}} soru, {{time}}",
+    "earnedOn": "{{date}} tarihinde kazanıldı",
+    "freezeHint": "Her 7 günlük seri için bir dondurma kazanırsın (en fazla 2). Bir gün kaçırırsan, biri otomatik kullanılır.",
+    "freezes": "Seri dondurma",
+    "frozenDay": "{{date}}: Seri dondurma kullanıldı",
+    "less": "Az",
+    "memberSince": "{{date}}'den beri öğreniyor",
+    "more": "Çok",
+    "nextLevel": "Sonraki seviyeye {{xp}} XP kaldı",
+    "noName": "Gece öğrencisi",
+    "notYet": "Henüz kazanılmadı — devam et!",
+    "stats": "İstatistiklerin",
+    "streaks": "Seri",
+    "strongest": "En güçlü konular",
+    "studyTime": "Çalışma süresi",
+    "weakest": "Geliştirilecek konular",
+    "weekDetail_one": "{{week}} haftası: {{count}} sorunun {{percent}}'i",
+    "weekDetail_other": "{{week}} haftası: {{count}} sorunun {{percent}}'i"
+  },
+  "pwa": {
+    "offline": "Çevrimdışısın. Yaptığın her şey hâlâ çalışıyor.",
+    "refresh": "Yenile",
+    "update": "StudyNight'in yeni bir sürümü hazır."
   },
   "report": {
     "body": "Hemen destenden kaldırılır ve bir daha gösterilmez.",
@@ -522,11 +662,68 @@
     "xp": "Kazandığın XP",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "Deste göre",
+    "caughtUp": "Her şey tamam. Harika!",
+    "due_one": "{{count}} soru bekliyor",
+    "due_other": "{{count}} soru bekliyor",
+    "dueHint": "Şimdi kısa bir tekrar, kalıcılığı artırır.",
+    "forecast": "Bu hafta gelecek",
+    "forecastDetail_one": "{{day}}: {{count}} tekrar",
+    "forecastDetail_other": "{{day}}: {{count}} tekrar",
+    "how": "Tekrarlar, her soruyu unutmadan hemen önce hatırlatmak için aralıklı tekrar algoritması (FSRS) ile planlanır. Hedef: %{{n}} hatırlama.",
+    "questions": "Sorular",
+    "start": "Tekrara başla",
+    "today": "Bugün"
+  },
   "samples": {
     "intro": "StudyNight için hazırlandı, hemen oynayabilirsin — yükleme gerekmez. Çevrim dışı da çalışır.",
     "play_one": "Oyna ({{count}} soru)",
     "play_other": "Oyna ({{count}} soru)",
     "title": "Örnek desteler"
+  },
+  "settings": {
+    "app": "Uygulama",
+    "backupHint": "Her şey yalnızca bu cihazda saklanır. Yeni telefona geçmek için burada bir yedekleme dışa aktar ve yeni telefona içe aktar.",
+    "badBackup": "Bu dosya geçerli bir StudyNight yedeği değil.",
+    "data": "Verilerin",
+    "deleteAll": "Tüm verilerimi sil",
+    "deleteBody": "Tüm desteler, sorular, ilerleme, rozetler ve ayarlar bu cihazdan kalıcı olarak silinecek. Bu işlem geri alınamaz. Bunları saklamak istiyorsan önce bir yedekleme dışa aktar.",
+    "deleteConfirm": "Her şeyi sil",
+    "deleteTitle": "Her şeyi sil?",
+    "export": "Yedekleme dışa aktar",
+    "exported": "Yedekleme kaydedildi.",
+    "extendedTime": "Uzatılmış süre",
+    "extendedTimeHint": "Süreli modlarda %50 daha fazla süre.",
+    "figures": "Şekil soruları",
+    "figuresHint": "Fotoğraflarındaki ve taradığın sayfalardaki diyagramlar ve grafikler hakkında sorular.",
+    "haptics": "Titreşim",
+    "hapticsHint": "Destekleyen telefonlarda.",
+    "import": "Yedekleme içe aktar",
+    "importConfirm": "Değiştir ve içe aktar",
+    "importPreview_one": "{{date}} tarihli, {{decks}} desteden ve {{count}} sorudan oluşan yedekleme.",
+    "importPreview_other": "{{date}} tarihli, {{decks}} desteden ve {{count}} sorudan oluşan yedekleme.",
+    "importTitle": "Bu yedeği içe aktar?",
+    "importWarning": "Bu cihazdaki her şeyin yerine geçecek.",
+    "language": "Dil",
+    "mascotColour": "Maskot rengi",
+    "mascotN": "Renk {{n}}",
+    "motion": "Hareket",
+    "motionFull": "Tam",
+    "motionReduce": "Azaltılmış",
+    "quizLanguage": "Varsayılan test dili",
+    "quizzes": "Testler",
+    "smartOn": "Bu cihaza indirildi ve hazır.",
+    "smartRemove": "Akıllı aramayı kaldır",
+    "smartRemoved": "Akıllı arama bu cihazdan kaldırıldı.",
+    "sound": "Ses efektleri",
+    "storage": "Bu cihazda {{used}} kullanılıyor.",
+    "theme": "Tema",
+    "themeDark": "Koyu",
+    "themeLight": "Açık",
+    "themeSystem": "Sistem",
+    "title": "Ayarlar",
+    "you": "Sen"
   },
   "share": {
     "button": "Sonucu paylaş",
@@ -547,6 +744,44 @@
     "mobileData": "Görünüşe göre mobil veri kullanıyorsun. Wi‑Fi beklemek isteyebilirsin.",
     "notNow": "Şimdi değil",
     "title": "Akıllı arama"
+  },
+  "terms": {
+    "s1": {
+      "h": "Kendi derslerin için",
+      "p": "StudyNight, kendi ders materyallerini çalışmana yardımcı olur. Kişisel öğrenme için kullan."
+    },
+    "s2": {
+      "h": "Yüklemelerin",
+      "p": "Yalnızca kullanım hakkına sahip olduğun materyalleri yükle. Yüklediklerinden sen sorumlusun. Kendine veya başkalarına ait kişisel veya hassas bilgiler içeren belgeleri yükleme."
+    },
+    "s3": {
+      "h": "Yapay zeka hata yapabilir",
+      "p": "Sorular, cevaplar, açıklamalar ve puanlar yapay zeka tarafından üretilir ve otomatik olarak kontrol edilir, ancak yine de yanlış olabilirler. Her zaman notlarını kontrol et ve geçerli olan için öğretmenlerine ve resmi materyallere güven."
+    },
+    "s4": {
+      "h": "Profesyonel tavsiye yok",
+      "p": "StudyNight tıbbi, hukuki veya finansal tavsiye vermez. “Notlarına sor” özelliği yalnızca kendi materyallerindeki bilgileri yeniden ifade eder."
+    },
+    "s5": {
+      "h": "Adil kullanım",
+      "p": "Yapay zeka hizmeti ücretsizdir ve StudyNight'i kullanan herkes tarafından paylaşılır, bu yüzden sınırları vardır. Lütfen istekleri otomatikleştirmeyin veya bu sınırları aşmaya çalışmayın. Kötüye kullanıma benzer istekleri yavaşlatabilir veya engelleyebiliriz."
+    },
+    "s6": {
+      "h": "Paylaşım",
+      "p": "Zorluk bağlantıları ve paylaşım kartları asla notlarını içermez; yalnızca soruları, cevapları, kısa açıklamaları ve puanları içerir. Kiminle paylaşacağına sen karar verirsin."
+    },
+    "s7": {
+      "h": "Garanti yok",
+      "p": "StudyNight ücretsiz ve “olduğu gibi” sunulur. Değişebilir veya çalışmayı durdurabilir ve yasanın izin verdiği ölçüde, kullanımdan kaynaklanan kayıplardan sorumlu değiliz. Saklamak istediğin her şeyin yedeğini dışa aktar."
+    },
+    "s8": {
+      "h": "Mülkiyet",
+      "p": "StudyNight © 2026 Umit Kayaardi, tüm hakları saklıdır. Açık kaynaklı bileşenler kendi lisansları altında kullanılır (Lisanslar'a bak). Notların senindir."
+    },
+    "s9": {
+      "h": "Değişiklikler",
+      "p": "Bu koşulları güncelleyebiliriz; yukarıdaki tarih en son sürümü gösterir. StudyNight'i kullanmaya devam etmek, güncellenmiş koşulları kabul ettiğin anlamına gelir."
+    }
   },
   "titles": {
     "bossSlayer": "Fırtına Avcısı",

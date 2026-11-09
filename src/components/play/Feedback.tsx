@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { BookOpen, Check, Flag, X } from 'lucide-react';
+import { BookOpen, Check, CircleDot, Flag, X } from 'lucide-react';
 import { db } from '../../db/schema';
 import type { ReportReason } from '../../db/types';
 import type { QuestionContent } from '../../../shared/question';
@@ -158,7 +158,7 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
     return (
       <div className="flex flex-col gap-3">
         <Card className={level === 'great' ? 'border-good' : level === 'partly' ? 'border-star' : 'border-bad'}>
-          <p className="font-display text-lg font-extrabold">{t(`explain.${level}`)}</p>
+          <p className="sr-only">{t(`explain.${level}`)}</p>
           <p className="text-sm text-muted">{t('explain.points', { hit: answer.input.covered.filter(Boolean).length, total: q.keyPoints.length })}</p>
         </Card>
         <ul className="flex flex-col gap-2">
@@ -217,10 +217,15 @@ export function FeedbackPanel({ item, answer, children, onNext, onSource }: { it
   const q = item.content;
   const correct = answer.correct;
   const showAnswer = !correct && q.type !== 'match' && q.type !== 'order' && q.type !== 'explain' && q.type !== 'flashcard';
+  // Explanations have three levels; everything else is right or wrong. Icon + text, never colour alone.
+  const tone = q.type === 'explain' ? { great: 'good', partly: 'star', notYet: 'bad' }[explainLevel(answer.score)] : correct ? 'good' : 'bad';
+  const panel = tone === 'good' ? 'border-good bg-good-soft' : tone === 'star' ? 'border-star bg-star-soft' : 'border-bad bg-bad-soft';
+  const heading = tone === 'good' ? 'text-good' : tone === 'star' ? 'text-star-text' : 'text-bad';
+  const Icon = tone === 'good' ? Check : tone === 'star' ? CircleDot : X;
   return (
-    <section className={`mt-4 flex flex-col gap-3 rounded-[var(--radius-card)] border-2 p-4 ${correct ? 'border-good bg-good-soft' : 'border-bad bg-bad-soft'}`} aria-labelledby="feedback-title">
-      <h2 id="feedback-title" className={`flex items-center gap-2 font-display text-xl font-extrabold ${correct ? 'text-good' : 'text-bad'}`}>
-        {correct ? <Check className="size-6" aria-hidden /> : <X className="size-6" aria-hidden />}
+    <section className={`mt-4 flex flex-col gap-3 rounded-[var(--radius-card)] border-2 p-4 ${panel}`} aria-labelledby="feedback-title">
+      <h2 id="feedback-title" className={`flex items-center gap-2 font-display text-xl font-extrabold ${heading}`}>
+        <Icon className="size-6" aria-hidden />
         {q.type === 'explain' ? t(`explain.${explainLevel(answer.score)}`) : correct ? t('play.correct') : t('play.incorrect')}
       </h2>
       {showAnswer && (

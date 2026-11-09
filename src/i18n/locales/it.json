@@ -319,7 +319,8 @@
     "notYet": "Non ancora",
     "partly": "Parzialmente corretto",
     "placeholder": "Spiegala con parole tue…",
-    "points": "Hai coperto {{hit}} su {{total}} punti chiave."
+    "points": "Hai coperto {{hit}} su {{total}} punti chiave.",
+    "skip": "Salta per ora"
   },
   "home": {
     "continue": "Continua",

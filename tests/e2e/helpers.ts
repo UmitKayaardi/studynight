@@ -55,7 +55,7 @@ interface Q {
 }
 
 /** Looks up the current question in IndexedDB by its prompt text. */
-async function currentQuestion(page: Page): Promise<Q | null> {
+export async function currentQuestion(page: Page): Promise<Q | null> {
   const prompt = (await page.getByTestId('prompt').innerText()).trim();
   return page.evaluate(async (text) => {
     const open = indexedDB.open('studynight');

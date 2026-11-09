@@ -32,6 +32,7 @@ const TEXT_PAIRS: Array<[string, string]> = [
   ['bad', 'bad-soft'],
   ['text', 'accent-soft'],
   ['text', 'star-soft'],
+  ['star-text', 'star-soft'],
 ];
 
 describe('design tokens meet WCAG AA', () => {

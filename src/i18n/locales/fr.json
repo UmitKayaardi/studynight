@@ -18,6 +18,7 @@
     "notCovered": "Tes notes ne semblent pas couvrir cela.",
     "notCoveredHint": "StudyNight ne répond qu'avec tes propres notes, il ne devine pas.",
     "offline": "Interroger tes notes nécessite une connexion internet. Tout le reste du paquet fonctionne hors ligne.",
+    "openSource": "Source ouverte {{n}}",
     "placeholder": "Pose une question sur tes notes…",
     "send": "Envoyer",
     "thinking": "Je parcoure tes notes…",
@@ -318,7 +319,8 @@
     "notYet": "Pas encore",
     "partly": "Partiellement correct",
     "placeholder": "Expliquez avec vos propres mots…",
-    "points": "Vous avez couvert {{hit}} sur {{total}} points clés."
+    "points": "Vous avez couvert {{hit}} sur {{total}} points clés.",
+    "skip": "Ignorer pour l'instant"
   },
   "home": {
     "continue": "Continuer",

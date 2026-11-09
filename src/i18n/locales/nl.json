@@ -18,6 +18,7 @@
     "notCovered": "Je notities lijken dit niet te behandelen.",
     "notCoveredHint": "StudyNight beantwoordt alleen op basis van je eigen notities, dus er wordt niet geraden.",
     "offline": "Stel je vragen aan je notities heeft een internetverbinding nodig. Alles andere in deze stapel werkt offline.",
+    "openSource": "Broncode openen {{n}}",
     "placeholder": "Stel een vraag over je notities…",
     "send": "Verzenden",
     "thinking": "Je notities doorzoeken…",
@@ -309,7 +310,8 @@
     "notYet": "Nog niet",
     "partly": "Gedeeltelijk correct",
     "placeholder": "Leg het in je eigen woorden…",
-    "points": "Je hebt {{hit}} van {{total}} kernpunten behandeld."
+    "points": "Je hebt {{hit}} van {{total}} kernpunten behandeld.",
+    "skip": "Overslaan"
   },
   "home": {
     "continue": "Doorgaan",

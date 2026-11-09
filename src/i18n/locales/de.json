@@ -310,7 +310,8 @@
     "notYet": "Noch nicht",
     "partly": "Teilweise richtig",
     "placeholder": "Erkläre es in deinen eigenen Worten…",
-    "points": "Du hast {{hit}} von {{total}} Schlüsselthemen abgedeckt."
+    "points": "Du hast {{hit}} von {{total}} Schlüsselthemen abgedeckt.",
+    "skip": "Jetzt überspringen"
   },
   "home": {
     "continue": "Weiter",

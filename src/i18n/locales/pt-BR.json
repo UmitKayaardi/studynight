@@ -319,7 +319,8 @@
     "notYet": "Ainda não",
     "partly": "Parcialmente certo",
     "placeholder": "Explique com suas próprias palavras…",
-    "points": "Você cobriu {{hit}} de {{total}} pontos-chave."
+    "points": "Você cobriu {{hit}} de {{total}} pontos-chave.",
+    "skip": "Pular por enquanto"
   },
   "home": {
     "continue": "Continuar",
