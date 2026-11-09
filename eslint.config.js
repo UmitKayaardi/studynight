@@ -31,10 +31,17 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
       '@typescript-eslint/consistent-type-imports': 'error',
       'no-console': ['error', { allow: ['warn', 'error'] }],
-      // Model output is always rendered as text. The only allowed exception is sanitised KaTeX/highlighter HTML
-      // inside src/components/RichText.tsx, which disables this rule locally with a justification.
-      'react/no-danger': 'off',
+      // Model output is always rendered as text: dangerouslySetInnerHTML is banned everywhere except RichText.tsx,
+      // which only injects KaTeX output (trust disabled) and highlight.js output (escaped code).
+      'no-restricted-syntax': [
+        'error',
+        { selector: "JSXAttribute[name.name='dangerouslySetInnerHTML']", message: 'Render model output as text. Only RichText.tsx may inject sanitised HTML.' },
+      ],
     },
+  },
+  {
+    files: ['src/components/RichText.tsx'],
+    rules: { 'no-restricted-syntax': 'off' },
   },
   {
     files: ['scripts/**', 'benchmarks/**'],

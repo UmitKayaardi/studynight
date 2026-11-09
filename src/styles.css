@@ -196,3 +196,14 @@ code,
   white-space: nowrap;
   border: 0;
 }
+
+/* Code highlighting colours (original theme using the design tokens). */
+.sn-code .hljs-keyword,
+.sn-code .hljs-built_in,
+.sn-code .hljs-literal { color: var(--sn-accent); font-weight: 600; }
+.sn-code .hljs-string,
+.sn-code .hljs-regexp { color: var(--sn-star-text); }
+.sn-code .hljs-number { color: var(--sn-good); }
+.sn-code .hljs-comment { color: var(--sn-text-muted); font-style: italic; }
+.sn-code .hljs-title,
+.sn-code .hljs-function { color: var(--sn-bad); }
