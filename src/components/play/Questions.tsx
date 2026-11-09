@@ -256,7 +256,7 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
                   type="button"
                   disabled={!!answer}
                   aria-pressed={activeTerm === i}
-                  onClick={() => setActiveTerm(activeTerm === i ? null : i)}
+                  onClick={() => setActiveTerm(i)}
                   className={`flex min-h-14 w-full items-center gap-2 rounded-2xl border-2 p-2 text-start text-sm ${activeTerm === i ? 'border-accent bg-accent-soft' : 'border-border bg-surface'}`}
                 >
                   {colour && (

@@ -66,10 +66,17 @@ for (const [k, v] of Object.entries(en)) {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let modelTurn = 0;
+/** When each model may be used again (free-tier limits are per model, including daily token caps). */
+const readyAt = new Map(MODELS.map((m) => [m, 0]));
 
 async function callModel(system, user) {
-  for (let attempt = 0; attempt < 12; attempt++) {
-    const model = MODELS[modelTurn++ % MODELS.length];
+  for (let attempt = 0; attempt < 60; attempt++) {
+    // Round-robin among models that are available now; otherwise wait for the first one to free up.
+    const now = Date.now();
+    const free = MODELS.filter((m) => readyAt.get(m) <= now);
+    const model = free.length ? free[modelTurn++ % free.length] : [...readyAt].sort((a, b) => a[1] - b[1])[0][0];
+    const waitMs = readyAt.get(model) - now;
+    if (waitMs > 0) await sleep(Math.min(900_000, waitMs));
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: { Authorization: `Bearer ${KEY}`, 'Content-Type': 'application/json' },
@@ -86,8 +93,9 @@ async function callModel(system, user) {
       }),
     });
     if (res.status === 429) {
+      // Daily token caps answer with long waits: mark this model busy and carry on with the others.
       const wait = Number(res.headers.get('retry-after')) || 8;
-      await sleep(Math.min(30, wait) * 1000 + Math.random() * 1500);
+      readyAt.set(model, Date.now() + Math.min(900, wait) * 1000 + Math.random() * 1500);
       continue;
     }
     if (!res.ok) {
