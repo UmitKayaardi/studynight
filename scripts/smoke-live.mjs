@@ -1,3 +1,4 @@
+/* global document, window, navigator, MediaRecorder */
 // Smoke test of a deployed StudyNight with the real AI service. Usage: BASE=https://… node scripts/smoke-live.mjs
 // Uses only original text written for this test. Prints a short PASS/FAIL report and saves screenshots to
 // smoke-results/ (git-ignored).
@@ -24,12 +25,6 @@ const context = await browser.newContext({ viewport: { width: 390, height: 844 }
 const page = await context.newPage();
 const consoleErrors = [];
 page.on('console', (m) => m.type() === 'error' && consoleErrors.push(m.text()));
-
-async function skipOnboarding(p) {
-  await p.goto(`${BASE}/welcome`);
-  await p.getByRole('button', { name: 'Skip' }).click();
-  await p.getByRole('button', { name: 'Just look around' }).click();
-}
 
 await check('health endpoint', async () => {
   const r = await page.request.get(`${BASE}/api/health`);
