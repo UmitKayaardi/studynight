@@ -105,8 +105,9 @@ export default function Home() {
               <p className="text-xs font-bold uppercase tracking-wide text-muted">{t('home.continue')}</p>
               <p className="truncate font-display text-lg font-extrabold">{continueDeck.deck.title}</p>
             </div>
-            <Button size="sm" onClick={() => navigate(`/deck/${continueDeck.deck.id}`)} aria-label={t('home.openDeck', { title: continueDeck.deck.title })}>
+            <Button size="sm" onClick={() => navigate(`/deck/${continueDeck.deck.id}`)}>
               {t('home.go')}
+              <span className="sr-only"> {continueDeck.deck.title}</span>
             </Button>
           </Card>
         )}

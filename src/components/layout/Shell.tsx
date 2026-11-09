@@ -107,7 +107,7 @@ export function TabScreen({
   return (
     <div className="min-h-dvh pb-24">
       <header className="mx-auto flex max-w-lg items-center gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2">
-        <Link href="/" className="flex min-h-11 items-center gap-2" aria-label={t('nav.home')}>
+        <Link href="/" className="flex min-h-11 items-center gap-2" aria-label={`StudyNight – ${t('nav.home')}`}>
           <Logo size={34} />
           {!title && (
             // i18n-ignore: brand name

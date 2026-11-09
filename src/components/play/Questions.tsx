@@ -281,7 +281,6 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
                   type="button"
                   disabled={!!answer || activeTerm === null}
                   onClick={() => chooseDef(d)}
-                  aria-label={owner >= 0 ? t('play.pairedWith', { n: owner + 1, text: q.pairs[d]!.definition }) : undefined}
                   className="flex min-h-14 w-full items-center gap-2 rounded-2xl border-2 border-border bg-surface p-2 text-start text-sm disabled:opacity-100"
                   style={colour ? { borderColor: colour } : undefined}
                 >
@@ -291,6 +290,7 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
                     </span>
                   )}
                   <RichText as="span" text={q.pairs[d]!.definition} className="min-w-0 flex-1" />
+                  {owner >= 0 && <span className="sr-only">{t('play.pairedWith', { n: owner + 1 })}</span>}
                 </button>
               </li>
             );
