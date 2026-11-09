@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 1 step 1.1 (secure randomness).
+Next: 1.3 mastery + adaptive difficulty.
 
 Known issues: none yet.
