@@ -25,3 +25,4 @@ benchmarks/results/raw/
 .DS_Store
 Thumbs.db
 public/ort/
+store/.feature.html
