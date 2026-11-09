@@ -79,16 +79,16 @@ from the first unchecked step. Commit after every step.
 
 ## Phase 11 — Legal, PWA, a11y, security, errors, samples
 - [x] 11.1 Privacy, Terms, Licences, About pages + docs/LEGAL.md + THIRD_PARTY_NOTICES.md
-- [ ] 11.2 PWA (manifest, icons, offline, update toast), security headers (vercel.json)
+- [x] 11.2 PWA (manifest, icons, offline, update toast), security headers (vercel.json)
 - [ ] 11.3 Error states audit + accessibility audit
 - [ ] 11.4 Sample decks written, generated, reviewed, shipped
 
 ## Phase 12 — Benchmark
-- [ ] 12.1 Dataset (notes + qa.json)
+- [x] 12.1 Dataset (notes + qa.json)
 - [ ] 12.2 Runner + runs + docs/BENCHMARK.md
 
 ## Phase 13 — E2E, performance, docs, deploy
-- [ ] 13.1 Playwright E2E suite
+- [x] 13.1 Playwright E2E suite
 - [ ] 13.2 Performance budget
 - [ ] 13.3 Screenshots
 - [ ] 13.4 Docs (README, ARCHITECTURE, PLAY_STORE, CHANGELOG …)
@@ -98,7 +98,7 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: RESUME HERE: (1) re-run 'node scripts/translate.mjs' until 'npm run check:i18n' passes (new keys: ask/review/profile/planner/settings/legal/privacy/terms/about/licences/pwa were added after the last translation run); (2) finish sample decks: if src/samples/ lacks solar-system, vaccines, machine-learning, personal-finance or ciclo-del-agua JSON, run 'node scripts/run-ts.mjs scripts/build-samples.ts <ids>', then review every question by hand, record edits in samples/review.json and run 'node scripts/apply-sample-review.mjs' (fotosentez already reviewed); (3) Phase 11.2: write vercel.json (CSP incl. huggingface.co + cdn-lfs/xet hosts for the model, SPA rewrite, security headers, functions maxDuration 60), verify PWA build; (4) browser-test boss/exam/sudden/flashcards/ask/planner/settings screens; (5) then Phases 10, 11.3, 12, 13, 14.
+Next: When Groq quota allows: (1) finish translations (scripts/translate.mjs, then check:i18n + full i18n sweep), (2) sample decks vaccines/machine-learning/personal-finance/ciclo-del-agua → review in samples/review.json → apply-sample-review, (3) benchmark stages generate, figure, judge, ask, explain, latency, then manual review + summary + docs/BENCHMARK.md, (4) store description translations + store screenshots, (5) README, (6) redeploy + smoke-live, (7) Phase 13.6 full re-run, (8) FINAL_REPORT.md. Live: https://studynight-sable.vercel.app
 
 Known issues:
 - Locale files are mid-translation (CI i18n check fails until step (1) above is done). Do not push before it passes.
