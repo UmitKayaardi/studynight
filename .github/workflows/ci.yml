@@ -39,6 +39,8 @@ jobs:
         run: npm run check:secrets
       - name: Build
         run: npm run build
+      - name: Bundle budget
+        run: npm run check:bundle
       - name: Install Playwright browser
         run: npx playwright install --with-deps chromium
       - name: E2E (mocked API)

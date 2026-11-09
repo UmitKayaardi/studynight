@@ -1,23 +1,26 @@
 {
-  "fotosentez": [
-    { "prompt": "Hangi pigment kırmızı ve mavi ışığı en çok soğurur?", "set": { "options": ["klorofil", "karotenoid", "antosiyanin", "ksantofil"] } },
+  "solar-system": [
     {
-      "prompt": "Fotosentezin genel denklemi aşağıdakilerden hangisidir?",
+      "prompt": "Describe how the solar wind leads to auroras on Earth.",
       "set": {
-        "options": [
-          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$",
-          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6CO_2$",
-          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6H_2O$",
-          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6N_2$"
+        "keyPoints": [
+          "The solar wind is a stream of charged particles from the Sun.",
+          "Earth's magnetic field deflects most of the particles.",
+          "Some particles are channelled towards the poles.",
+          "There they make the air glow, creating the aurora."
         ]
       }
     },
-    { "prompt": "Işık bağımlı (light-dependent) reaksiyonlar kloroplastın hangi bölgesinde gerçekleşir?", "set": { "prompt": "Işığa bağımlı tepkimeler kloroplastın hangi bölgesinde gerçekleşir?" } },
-    { "prompt": "Aşağıdakilerden hangisi sıcaklık çok yükseldiğinde fotosentez hızının düşmesine neden olur?", "remove": true },
-    { "prompt": "Kalvin döngüsü hangi yapıda gerçekleşir?", "set": { "prompt": "Calvin döngüsü kloroplastın hangi bölümünde gerçekleşir?" } },
-    { "prompt": "Işık bağımlı reaksiyonlarda hangi enerji taşıyıcıları üretilir?", "set": { "prompt": "Işığa bağımlı tepkimelerde hangi enerji taşıyıcı moleküller üretilir?" } },
-    { "prompt": "Kalvin döngüsü doğrudan ışık enerjisi gerektirir.", "remove": true },
-    { "prompt": "Stoma", "remove": true },
-    { "prompt": "Su, ışık bağımlı reaksiyonlarda parçalanarak oksijen açığa çıkar.", "set": { "prompt": "Su, ışığa bağımlı tepkimelerde parçalanır ve oksijen açığa çıkar." } }
+    {
+      "prompt": "Explain how Jupiter's strong gravity influenced the formation of the asteroid belt.",
+      "set": {
+        "keyPoints": [
+          "Jupiter has very strong gravity.",
+          "Its gravity affected the material between Mars and Jupiter.",
+          "This is thought to have prevented that material from forming a planet.",
+          "The region remains a belt of many separate asteroids."
+        ]
+      }
+    }
   ]
 }
