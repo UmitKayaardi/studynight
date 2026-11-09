@@ -27,11 +27,11 @@ from the first unchecked step. Commit after every step.
 - [x] 2.6 Embeddings worker + vector store + hybrid RRF
 
 ## Phase 3 — API functions
-- [ ] 3.1 Shared API schemas, error shape, Groq client (timeouts, back-off, fallback), abuse guard
-- [ ] 3.2 /api/health, /api/topics
-- [ ] 3.3 /api/questions (generation + deterministic checks + verifier)
-- [ ] 3.4 /api/grade, /api/ask
-- [ ] 3.5 /api/read-image, /api/transcribe
+- [x] 3.1 Shared API schemas, error shape, Groq client (timeouts, back-off, fallback), abuse guard
+- [x] 3.2 /api/health, /api/topics
+- [x] 3.3 /api/questions (generation + deterministic checks + verifier)
+- [x] 3.4 /api/grade, /api/ask
+- [x] 3.5 /api/read-image, /api/transcribe
 - [ ] 3.6 One live call per endpoint locally
 
 ## Phase 4 — Data layer
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 3 step 3.1 (API schemas, error shape, Groq client, abuse guard).
+Next: 3.6 one live call per endpoint locally.
 
 Known issues: none yet.
