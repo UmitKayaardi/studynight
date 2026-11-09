@@ -1,20 +1,21 @@
+# Patterns are anchored to the project root (an unanchored "store" would also exclude src/store).
 # Never upload owner-only or private files
-.env
-.env.*
-test-notes
-STUDYNIGHT_PLAN.md
-FINAL_REPORT.md
+/.env
+/.env.*
+/test-notes
+/STUDYNIGHT_PLAN.md
+/FINAL_REPORT.md
 *.keystore
 *.jks
-android
+/android
 # Not needed for the build
-node_modules
-dist
-dev-dist
-coverage
-playwright-report
-test-results
-benchmarks/results/raw
-samples/generated
-docs/screenshots
-store
+/node_modules
+/dist
+/dev-dist
+/coverage
+/playwright-report
+/test-results
+/benchmarks/results/raw
+/samples/generated
+/docs/screenshots
+/store
