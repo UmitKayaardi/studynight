@@ -13,6 +13,7 @@ import { setLanguage } from '../i18n';
 import { applyTheme, setHapticsEnabled, setReducedMotionOverride } from '../lib/platform';
 import { setSoundEnabled } from '../lib/sound';
 import { newId } from '../lib/learning/random';
+import { db } from '../db/schema';
 
 export interface Toast {
   id: string;
@@ -50,6 +51,8 @@ export const useApp = create<AppState>((set, get) => ({
 
   async boot() {
     const [settings, profile] = await Promise.all([getSettings(), getProfile()]);
+    // Deck creation cannot resume after the app was closed (the files are not kept): show it as interrupted.
+    await db.decks.where('updatedAt').above(0).filter((d) => d.status === 'processing').modify({ status: 'error', errorCode: 'INTERRUPTED' });
     applySideEffects(settings);
     await setLanguage(settings.language);
     set({ settings, profile, ready: true });

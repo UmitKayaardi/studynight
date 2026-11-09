@@ -132,13 +132,17 @@ async function loadItems(config: Exclude<SessionConfig, { mode: 'challenge' }>):
   const want = config.mode === 'exam' ? config.count : config.mode === 'boss' ? BOSS_QUESTIONS : config.mode === 'sudden' ? 30 : config.mode === 'flashcards' ? 20 : 10;
 
   let pool = await activeQuestions(deckId, topicId);
-  if (pool.length < want) {
-    // Top up the smallest topic(s) once; play with what exists if generation is not possible right now.
+  if (pool.length < Math.min(want, 4)) {
+    // Almost nothing to play yet: one quick top-up (capped at 20 s); otherwise play now and let the
+    // background generator keep filling the deck.
     const topics = topicId ? [topicId] : (await db.topics.where('deckId').equals(deckId).toArray()).sort((a, b) => a.order - b.order).map((t) => t.id);
-    try {
-      for (const t of topics.slice(0, 2)) await ensureTopicQuestions(t, Math.ceil(want / Math.min(2, topics.length)) + 2, { retries: 1 });
-    } catch {
-      /* offline or busy: continue with the existing pool */
+    const smallest = topics[0];
+    if (smallest) {
+      try {
+        await Promise.race([ensureTopicQuestions(smallest, 4, { retries: 1 }), new Promise((r) => setTimeout(r, 20_000))]);
+      } catch {
+        /* offline or busy: continue with the existing pool */
+      }
     }
     pool = await activeQuestions(deckId, topicId);
   }

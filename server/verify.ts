@@ -56,6 +56,10 @@ export function normaliseDraft(raw: unknown, topicId: string): unknown {
   if (d.type === 'fill' && typeof d.prompt === 'string')
     d.prompt = d.prompt.replace(/_{3,}|\[blank\]|\{blank\}/gi, '____');
   if (d.type === 'mcq' && typeof d.answerIndex === 'string') d.answerIndex = Number(d.answerIndex);
+  if (d.type === 'flashcard') {
+    if (typeof d.prompt === 'string') d.prompt = d.prompt.replace(/^\s*(front|question)\s*:\s*/i, '');
+    if (typeof d.back === 'string') d.back = d.back.replace(/^\s*(back|answer)\s*:\s*/i, '');
+  }
   delete d.figureId; // set by the server only
   return d;
 }

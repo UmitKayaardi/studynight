@@ -11,7 +11,8 @@ if (!KEY) {
   console.error('translate: GROQ_API_KEY missing');
   process.exit(1);
 }
-const MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b'];
+// Free-tier limits are per model, so requests rotate across three models for throughput.
+const MODELS = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b', 'openai/gpt-oss-20b'];
 const languages = JSON.parse(readFileSync('src/i18n/languages.json', 'utf8'));
 const targets = process.argv.slice(2).length
   ? process.argv.slice(2)
@@ -80,7 +81,7 @@ async function callModel(system, user) {
         ],
         temperature: 0.2,
         max_completion_tokens: 8000,
-        reasoning_effort: 'low',
+        ...(model.startsWith('qwen/') ? { reasoning_format: 'hidden' } : { reasoning_effort: 'low' }),
         response_format: { type: 'json_object' },
       }),
     });

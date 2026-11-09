@@ -464,3 +464,12 @@ describe('normaliseLanguage', () => {
     expect(normaliseLanguage('klingon')).toBe('und');
   });
 });
+
+describe('normaliseDraft', () => {
+  it('strips "front:"/"back:" labels from flashcards', async () => {
+    const { normaliseDraft } = await import('./verify');
+    const d = normaliseDraft({ type: 'flashcard', prompt: 'Front: What is X?', back: 'Back: Y' }, 't') as { prompt: string; back: string };
+    expect(d.prompt).toBe('What is X?');
+    expect(d.back).toBe('Y');
+  });
+});

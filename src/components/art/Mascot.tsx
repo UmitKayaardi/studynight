@@ -93,7 +93,7 @@ function Mouth({ mood }: { mood: MascotMood }) {
     case 'sleepy':
       return <ellipse cx="37" cy="73" rx="2.6" ry="2" fill={INK} />;
     case 'thinking':
-      return <path d="M32 74 q6 -2 10 1" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" />;
+      return <path d="M31 73 q6 4 11 -1" fill="none" stroke={INK} strokeWidth="3" strokeLinecap="round" />;
     default:
       return <path d="M29 70 q8 9 16 2" fill="none" stroke={INK} strokeWidth="3.2" strokeLinecap="round" />;
   }
