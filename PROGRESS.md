@@ -19,7 +19,7 @@ from the first unchecked step. Commit after every step.
 - [x] 1.7 Badges + session titles + predicted score band
 
 ## Phase 2 — Ingestion & retrieval
-- [ ] 2.1 Shared text utils: normalisation, fuzzy match, answer checking
+- [x] 2.1 Shared text utils: normalisation, fuzzy match, answer checking
 - [ ] 2.2 Extractors: TXT/MD/paste, DOCX, PPTX, PDF (worker), photos (resize → API)
 - [ ] 2.3 Cleaning (headers/footers, hyphenation), language detection
 - [ ] 2.4 Chunker (+ property tests)
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 2 step 2.1 (shared text utils: normalisation, fuzzy match, answer checking).
+Next: 2.2 extractors.
 
 Known issues: none yet.
