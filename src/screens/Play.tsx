@@ -40,6 +40,8 @@ export default function Play() {
   const [sheet, setSheet] = useState<'source' | 'report' | 'quit' | null>(null);
   const [announce, setAnnounce] = useState('');
   const [questionDeadline, setQuestionDeadline] = useState<number | null>(null);
+  const dir = useDocumentDir();
+  const swipeStart = useRef<{ x: number; y: number } | null>(null);
   const item = s.items[s.index];
   const answer = item ? s.answers.find((a) => a.itemId === item.id && !a.reported) : undefined;
   const mode = s.config?.mode;
@@ -117,7 +119,22 @@ export default function Play() {
   };
 
   return (
-    <div className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]" onPointerDown={s.touch} onKeyDown={s.touch}>
+    <div
+      className="mx-auto flex min-h-dvh max-w-lg flex-col px-4 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]"
+      onPointerDown={(e) => {
+        s.touch();
+        swipeStart.current = e.pointerType === 'touch' ? { x: e.clientX, y: e.clientY } : null;
+      }}
+      onPointerUp={(e) => {
+        // On the feedback screen, a swipe towards the reading direction's start moves on (mirrored in RTL).
+        const start = swipeStart.current;
+        swipeStart.current = null;
+        if (!start || s.phase !== 'feedback' || mode === 'flashcards') return;
+        const dx = (e.clientX - start.x) * (dir === 'rtl' ? -1 : 1);
+        if (dx < -80 && Math.abs(e.clientY - start.y) < 60) void s.next();
+      }}
+      onKeyDown={s.touch}
+    >
       <p className="sr-only" aria-live="assertive">
         {announce}
       </p>

@@ -166,7 +166,20 @@ export default function Results() {
       )}
 
       <div className="flex flex-col gap-2">
-        <Button size="lg" block onClick={() => navigate(back)}>
+        {config.mode === 'topic' && (
+          <Button
+            size="lg"
+            block
+            variant="star"
+            onClick={() => {
+              void s.start({ ...config });
+              navigate('/play');
+            }}
+          >
+            {t('results.keepPractising')}
+          </Button>
+        )}
+        <Button size="lg" block variant={config.mode === 'topic' ? 'secondary' : 'primary'} onClick={() => navigate(back)}>
           {t('results.done')}
         </Button>
         <div className="grid grid-cols-2 gap-2">
