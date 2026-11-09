@@ -36,3 +36,9 @@ One line per decision: what was decided, and why.
 - Sentence segmentation uses `Intl.Segmenter` (Unicode rules); line breaks inside a block are boundaries too, and over-long sentences are split by words (or by characters for unspaced scripts) so no chunk exceeds 400 words.
 - A day counts towards the streak once at least one question is answered that day (simple and friendly; the daily goal ring is separate).
 - `ts-fsrs` v6's legacy `fsrs()` scheduler API is used through one wrapper module (`src/lib/learning/fsrs.ts`); the newer scheduler API is not yet documented well enough to depend on.
+
+## Data
+
+- Two tables beyond the plan's list: `images` (page renders/photos for figure questions and the source sheet) and `days` (daily activity rollups for the streak calendar, daily goal and stats). `days` arrives in schema v2 with a real upgrade that backfills it from the review log, which also exercises the migration path in tests.
+- Importing a backup replaces all local data (after a preview and confirmation) rather than merging — merging decks, FSRS states and streaks from two devices has no single correct answer, and "move to a new phone" is the stated purpose.
+- Deleting a deck keeps an in-memory snapshot for the undo toast; once the toast closes, the data is gone.
