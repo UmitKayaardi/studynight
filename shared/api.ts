@@ -171,6 +171,8 @@ export const AUDIO_MIME = [
   'audio/m4a',
   'audio/x-m4a',
   'audio/mpeg',
+  'audio/wav',
+  'audio/x-wav',
 ] as const;
 export const TranscribeRequestSchema = z.object({
   /** Base64 audio, at most ~90 seconds. */

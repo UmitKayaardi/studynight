@@ -453,3 +453,14 @@ describe('HTTP handlers', () => {
     expect(JSON.stringify(body)).not.toContain('test-key');
   });
 });
+
+describe('normaliseLanguage', () => {
+  it('maps Whisper language names to codes', async () => {
+    const { normaliseLanguage } = await import('./answers');
+    expect(normaliseLanguage('English')).toBe('en');
+    expect(normaliseLanguage('turkish')).toBe('tr');
+    expect(normaliseLanguage('ja')).toBe('ja');
+    expect(normaliseLanguage('')).toBe('und');
+    expect(normaliseLanguage('klingon')).toBe('und');
+  });
+});

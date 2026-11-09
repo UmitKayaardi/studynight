@@ -32,7 +32,7 @@ from the first unchecked step. Commit after every step.
 - [x] 3.3 /api/questions (generation + deterministic checks + verifier)
 - [x] 3.4 /api/grade, /api/ask
 - [x] 3.5 /api/read-image, /api/transcribe
-- [ ] 3.6 One live call per endpoint locally
+- [x] 3.6 One live call per endpoint locally
 
 ## Phase 4 — Data layer
 - [ ] 4.1 Dexie schema + migrations + tests
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 3.6 one live call per endpoint locally.
+Next: Phase 4 step 4.1 (Dexie schema + migrations).
 
 Known issues: none yet.

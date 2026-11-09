@@ -98,6 +98,8 @@ const EXT: Record<string, string> = {
   'audio/m4a': 'm4a',
   'audio/x-m4a': 'm4a',
   'audio/mpeg': 'mp3',
+  'audio/wav': 'wav',
+  'audio/x-wav': 'wav',
 };
 
 export async function transcribeAudio(req: TranscribeRequest): Promise<TranscribeResponse> {
@@ -109,5 +111,17 @@ export async function transcribeAudio(req: TranscribeRequest): Promise<Transcrib
     { audio, fileName: `answer.${EXT[req.mime] ?? 'webm'}`, prompt: req.prompt, language },
     [cfg.stt, ...(cfg.sttFallback ? [cfg.sttFallback] : [])],
   );
-  return { text: res.text.trim().slice(0, 5000), language: res.language || 'und' };
+  return { text: res.text.trim().slice(0, 5000), language: normaliseLanguage(res.language) };
+}
+
+const LANGUAGE_CODES =
+  'en es pt fr de it nl pl tr ru uk ar fa ur hi bn id vi ja ko zh sv da no fi cs el he th ro hu'.split(' ');
+
+/** Whisper reports languages by English name ("english"); convert to a BCP-47 code. */
+export function normaliseLanguage(value: string | undefined): string {
+  const v = (value ?? '').trim().toLowerCase();
+  if (!v) return 'und';
+  if (/^[a-z]{2,3}(-[a-z0-9]{2,8})?$/.test(v) && v.length <= 3) return v;
+  const names = new Intl.DisplayNames(['en'], { type: 'language' });
+  return LANGUAGE_CODES.find((c) => names.of(c)?.toLowerCase() === v) ?? 'und';
 }
