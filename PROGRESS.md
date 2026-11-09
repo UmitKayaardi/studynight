@@ -35,7 +35,7 @@ from the first unchecked step. Commit after every step.
 - [x] 3.6 One live call per endpoint locally
 
 ## Phase 4 — Data layer
-- [ ] 4.1 Dexie schema + migrations + tests
+- [x] 4.1 Dexie schema + migrations + tests
 - [ ] 4.2 Repositories (decks, questions, reviews, sessions, profile, settings)
 - [ ] 4.3 Backup export/import, delete-all, storage persistence/quota
 
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 4 step 4.1 (Dexie schema + migrations).
+Next: 4.2 repositories.
 
 Known issues: none yet.
