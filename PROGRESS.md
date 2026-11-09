@@ -7,7 +7,7 @@ from the first unchecked step. Commit after every step.
 - [x] 0.1 Node/npm, gh, vercel, GROQ_API_KEY presence verified
 - [x] 0.2 Groq models chosen, Groq data terms read, embedding model chosen (see DECISIONS.md)
 - [x] 0.3 Scaffold: .gitignore, tooling, strict TS, Tailwind tokens, ESLint/Prettier, Vitest, Playwright, CI, checks
-- [ ] 0.4 Private GitHub repo created and pushed
+- [x] 0.4 Private GitHub repo created and pushed
 
 ## Phase 1 — Learning engine (`src/lib/learning/`)
 - [ ] 1.1 Secure randomness + shuffle
@@ -98,6 +98,6 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: 0.4 create the private GitHub repo and push.
+Next: Phase 1 step 1.1 (secure randomness).
 
 Known issues: none yet.
