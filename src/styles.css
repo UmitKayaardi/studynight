@@ -1,0 +1,133 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/*
+ * Design tokens. Colours are CSS variables so light/dark switch without re-rendering.
+ * Palette: deep ink navy + electric teal + warm star-yellow (distinct from SplitNight's magenta/orange).
+ * All text/background pairs below meet WCAG AA (checked in src/lib/contrast.test.ts).
+ */
+:root {
+  --sn-bg: #fbf8f1;
+  --sn-bg-elevated: #ffffff;
+  --sn-surface: #ffffff;
+  --sn-surface-2: #f2eee3;
+  --sn-border: #e3ddcc;
+  --sn-text: #161a33;
+  --sn-text-muted: #4d5478;
+  --sn-accent: #0a7466;
+  --sn-accent-strong: #075c51;
+  --sn-accent-soft: #d5f3ed;
+  --sn-on-accent: #ffffff;
+  --sn-star: #ffc94d;
+  --sn-star-text: #8a5a00;
+  --sn-star-soft: #fff1cc;
+  --sn-good: #157a3c;
+  --sn-good-soft: #dcf5e4;
+  --sn-bad: #b42335;
+  --sn-bad-soft: #fde2e5;
+  --sn-focus: #0a7466;
+  --sn-shadow: 0 1px 2px rgb(22 26 51 / 0.06), 0 8px 24px rgb(22 26 51 / 0.08);
+  --sn-font-display: 'Nunito Variable', 'Nunito', var(--sn-font-script, ui-rounded), system-ui, sans-serif;
+  --sn-font-body: 'Inter Variable', 'Inter', var(--sn-font-script, system-ui), system-ui, sans-serif;
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --sn-bg: #0b1026;
+  --sn-bg-elevated: #121836;
+  --sn-surface: #151c3f;
+  --sn-surface-2: #1d2552;
+  --sn-border: #2a336a;
+  --sn-text: #eef1ff;
+  --sn-text-muted: #aab2dc;
+  --sn-accent: #2ee6c5;
+  --sn-accent-strong: #66f0d6;
+  --sn-accent-soft: #123f45;
+  --sn-on-accent: #04201b;
+  --sn-star: #ffc94d;
+  --sn-star-text: #ffd36e;
+  --sn-star-soft: #3b3220;
+  --sn-good: #5ee69a;
+  --sn-good-soft: #123a2b;
+  --sn-bad: #ff8592;
+  --sn-bad-soft: #43182a;
+  --sn-focus: #2ee6c5;
+  --sn-shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 30px rgb(0 0 0 / 0.35);
+  color-scheme: dark;
+}
+
+@theme {
+  --color-bg: var(--sn-bg);
+  --color-bg-elevated: var(--sn-bg-elevated);
+  --color-surface: var(--sn-surface);
+  --color-surface-2: var(--sn-surface-2);
+  --color-border: var(--sn-border);
+  --color-text: var(--sn-text);
+  --color-muted: var(--sn-text-muted);
+  --color-accent: var(--sn-accent);
+  --color-accent-strong: var(--sn-accent-strong);
+  --color-accent-soft: var(--sn-accent-soft);
+  --color-on-accent: var(--sn-on-accent);
+  --color-star: var(--sn-star);
+  --color-star-text: var(--sn-star-text);
+  --color-star-soft: var(--sn-star-soft);
+  --color-good: var(--sn-good);
+  --color-good-soft: var(--sn-good-soft);
+  --color-bad: var(--sn-bad);
+  --color-bad-soft: var(--sn-bad-soft);
+  --font-display: var(--sn-font-display);
+  --font-body: var(--sn-font-body);
+  --radius-card: 1.25rem;
+  --shadow-card: var(--sn-shadow);
+}
+
+html {
+  background: var(--sn-bg);
+  color: var(--sn-text);
+  font-family: var(--sn-font-body);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--sn-bg);
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sn-focus);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* Code and maths always stay left-to-right, even in RTL languages. */
+pre,
+code,
+.katex,
+.katex-display,
+.sn-ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+[data-reduced-motion='true'] *,
+[data-reduced-motion='true'] *::before,
+[data-reduced-motion='true'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

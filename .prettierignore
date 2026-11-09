@@ -1,0 +1,10 @@
+dist
+dev-dist
+coverage
+playwright-report
+test-results
+node_modules
+src/i18n/locales
+public
+benchmarks/results
+*.md

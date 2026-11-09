@@ -1,0 +1,30 @@
+# Decisions
+
+One line per decision: what was decided, and why.
+
+## Models (checked 2026-11-09 via `GET /openai/v1/models`)
+
+- Generator: `openai/gpt-oss-120b` — strongest production text model in the catalogue, JSON mode, good multilingual output.
+- Generator fallback: `openai/gpt-oss-20b` — Groq free limits are per model (8,000 tokens/min each), so falling back to a second model on HTTP 429 roughly doubles throughput.
+- Verifier / grader: `qwen/qwen3.8-27b` — different model family (Alibaba) from the generator, so verification is independent; no Llama 70B-class model is listed any more.
+- Verifier fallback: `openai/gpt-oss-20b` with the same strict prompt at temperature 0, used only when the verifier is rate-limited.
+- Vision: `qwen/qwen3.8-27b` — the only listed model that accepts image input (verified with a test image; images must be ≥ 32 px per side).
+- Speech-to-text: `whisper-large-v3`, fallback `whisper-large-v3-turbo`.
+- All models are configurable by environment variable (`GROQ_*_MODEL`); see `.env.example`.
+
+## Embeddings
+
+- `Xenova/multilingual-e5-small` (base `intfloat/multilingual-e5-small`, MIT), int8 ONNX, 118 MB — no permissively licensed multilingual sentence-embedding model exists near the preferred ~60 MB, because the 250k-token multilingual vocabulary alone is ~96M parameters; e5-small is the smallest good multilingual retrieval model and is trained for query/passage retrieval. The UI states the real size before download.
+
+## Groq data terms (checked 2026-11-09)
+
+- Source: console.groq.com/docs/your-data and the Services Agreement (last modified 22 June 2026). Groq does not retain inference data by default, but may log inputs/outputs for up to 30 days for reliability and abuse investigation unless Zero Data Retention is enabled in the organisation's Data Controls; Groq may not use inputs/outputs to train models (Services Agreement §4.2); data is stored in the United States. The Privacy page states this and recommends the operator enable ZDR (owner action in FINAL_REPORT).
+
+## Tooling
+
+- TypeScript 6.0.3 rather than 7.x — typescript-eslint supports TypeScript < 6.1.
+- Vite 8 + `@tailwindcss/vite` + Vitest 5 (latest stable, compatible peers).
+- Licence allow-list adds `Zlib` (permissive, used by `pako` alongside MIT); `duck` is recorded as BSD-2-Clause after reading its LICENSE; native Node-only binaries of `sharp`/`onnxruntime-node` (transitive deps of transformers.js, never bundled into the browser app or the functions) are excluded from the check.
+- `wouter` for routing (tiny, Unlicense) — keeps the initial bundle small.
+- `/api` handlers use Web-standard `Request`/`Response`; a small Vite plugin serves them during `npm run dev`, so one command runs the whole app locally on Windows.
+- Shared server/client code lives in `shared/` and uses `.js` import suffixes so the functions run as native ES modules on Vercel.

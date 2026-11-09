@@ -1,0 +1,26 @@
+# Owner-only files — never commit
+STUDYNIGHT_PLAN.md
+FINAL_REPORT.md
+test-notes/
+.env
+.env.*
+!.env.example
+
+# Signing keys
+*.keystore
+*.jks
+android/
+
+# Build and tooling output
+node_modules/
+dist/
+dev-dist/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+blob-report/
+benchmarks/results/raw/
+*.log
+.DS_Store
+Thumbs.db
