@@ -61,7 +61,7 @@ export default async function main(args: string[]) {
     for (const topic of topics) {
       const topicChunks = topic.chunkIds.map((id) => ({ id, text: chunks[Number(id.slice(1))]!.text }));
       const mine: QuestionContent[] = [];
-      for (let round = 0; round < 4 && mine.length < PER_TOPIC; round++) {
+      for (let round = 0; round < 2 && mine.length < PER_TOPIC; round++) {
         const res = await withRetry(() =>
           generateQuestions({
             language: s.language,
