@@ -15,7 +15,7 @@ import { Card } from '../ui/Controls';
 import { Sheet } from '../ui/Sheet';
 import { FigureImage, useSourceLabel } from './Questions';
 import { VoiceInput } from './Voice';
-import type { AnswerLog, PlayItem } from '../../store/play';
+import { usePlay, type AnswerLog, type PlayItem } from '../../store/play';
 
 /** Splits a passage so that the evidence quote (or the most similar sentence) can be highlighted. */
 export function highlightEvidence(text: string, quote: string): Array<{ text: string; mark: boolean }> {
@@ -198,9 +198,12 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
       />
       <VoiceInput deckId={item.deckId} language={item.quizLanguage} onText={(spoken) => setText((prev) => (prev ? `${prev} ${spoken}` : spoken))} />
       {error && (
-        <p className="rounded-2xl bg-bad-soft p-3 text-sm" role="alert">
-          {t(`errors.${error}.body`)}
-        </p>
+        <div className="flex flex-col gap-2 rounded-2xl bg-bad-soft p-3 text-sm" role="alert">
+          <p>{t(`errors.${error}.body`)}</p>
+          <Button size="sm" variant="secondary" onClick={() => void usePlay.getState().skip()}>
+            {t('explain.skip')}
+          </Button>
+        </div>
       )}
       <Button size="lg" block busy={busy} disabled={!text.trim()} onClick={() => void grade()}>
         {busy ? t('explain.checking') : t('explain.check')}

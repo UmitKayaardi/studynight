@@ -54,7 +54,10 @@ export default function Ask() {
   useEffect(() => {
     void ensureIndex(id);
   }, [id]);
-  useEffect(() => endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' }), [messages.length]);
+  useEffect(() => {
+    // Braces matter: scrollIntoView returns a Promise in current browsers, which React must not receive.
+    void endRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }, [messages.length]);
 
   const ask = async () => {
     const question = input.trim();

@@ -89,6 +89,8 @@ interface PlayState {
   report: (reason: ReportReason) => Promise<{ undo: () => Promise<void> } | null>;
   finish: () => Promise<void>;
   reset: () => void;
+  /** Moves past the current question without recording an answer (e.g. an explanation that can't be graded offline). */
+  skip: () => Promise<void>;
 }
 
 const isMultiStep = (q: QuestionContent) => q.type === 'match' || q.type === 'order';
@@ -147,6 +149,8 @@ async function loadItems(config: Exclude<SessionConfig, { mode: 'challenge' }>):
     pool = await activeQuestions(deckId, topicId);
   }
   if (config.mode === 'flashcards') pool = pool.filter((q) => !isMultiStep(q.content));
+  // Explanations need the AI to grade them: leave them out of sessions started offline.
+  if (typeof navigator !== 'undefined' && navigator.onLine === false) pool = pool.filter((q) => q.content.type !== 'explain');
   const cards = new Map((await db.cardStates.where('deckId').equals(deckId).toArray()).map((c) => [c.questionId, c]));
   const topics = new Map((await db.topics.where('deckId').equals(deckId).toArray()).map((t) => [t.id, t]));
   const candidates = pool.map((q) => ({ ...q, type: q.content.type, difficulty: q.content.difficulty, card: cards.get(q.id) }));
@@ -359,6 +363,19 @@ export const usePlay = create<PlayState>((set, get) => ({
       isFirstSession: s.isFirstSession,
     });
     set({ phase: 'done', result });
+  },
+
+  async skip() {
+    const s = get();
+    const item = s.items[s.index];
+    if (!item || s.phase !== 'question') return;
+    const items = s.items.filter((x) => x.id !== item.id);
+    if (!items.length || s.index >= items.length) {
+      set({ items });
+      await get().finish();
+      return;
+    }
+    set({ items, hintUsed: false, questionStartedAt: Date.now() });
   },
 
   reset() {

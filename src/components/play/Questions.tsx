@@ -53,7 +53,11 @@ export function FigureImage({ figureId }: { figureId?: string }) {
 
 export function Prompt({ q }: { q: QuestionContent }) {
   const text = q.type === 'fill' ? q.prompt.replace('____', '＿＿＿＿') : q.prompt;
-  return <RichText text={text} className="font-display text-xl leading-snug font-bold sm:text-2xl" />;
+  return (
+    <h2 data-testid="prompt" className="font-display text-xl leading-snug font-bold sm:text-2xl">
+      <RichText as="span" text={text} />
+    </h2>
+  );
 }
 
 export function McqView({ item, answer, onSubmit, hideResult }: QuestionProps) {
@@ -190,7 +194,9 @@ export function FlashcardView({ item, answer, onSubmit }: QuestionProps) {
   const { t } = useTranslation();
   const [flipped, setFlipped] = useState(false);
   const q = item.content as Extract<QuestionContent, { type: 'flashcard' }>;
-  useEffect(() => setFlipped(false), [item.id]);
+  useEffect(() => {
+    setFlipped(false);
+  }, [item.id]);
   return (
     <div className="flex flex-col gap-3">
       <button
@@ -321,7 +327,9 @@ export function OrderView({ item, answer, onSubmit, hideResult }: QuestionProps)
   const { t } = useTranslation();
   const q = item.content as Extract<QuestionContent, { type: 'order' }>;
   const [order, setOrder] = useState<number[]>(item.order);
-  useEffect(() => setOrder(item.order), [item.id, item.order]);
+  useEffect(() => {
+    setOrder(item.order);
+  }, [item.id, item.order]);
   const done = answer?.input.type === 'order' ? answer.input.order : null;
   const shown = done ?? order;
   const move = (pos: number, delta: number) => {

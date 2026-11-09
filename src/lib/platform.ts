@@ -80,7 +80,8 @@ export function formatDate(
   d: Date | number | string,
   opts: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'short' },
 ): string {
-  const date = typeof d === 'string' ? new Date(`${d}T12:00:00`) : new Date(d);
+  // Day keys ("2026-05-04") are read as local noon; full timestamps are parsed as they are.
+  const date = typeof d === "string" && d.length === 10 ? new Date(`${d}T12:00:00`) : new Date(d);
   return new Intl.DateTimeFormat(i18n.language || 'en', opts).format(date);
 }
 
