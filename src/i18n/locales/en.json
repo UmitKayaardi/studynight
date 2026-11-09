@@ -9,6 +9,7 @@
     "cancel": "Cancel",
     "confirm": "Confirm",
     "save": "Save",
+    "saved": "Saved",
     "delete": "Delete",
     "undo": "Undo",
     "next": "Next",
@@ -17,7 +18,10 @@
     "loading": "Loading…",
     "done": "Done",
     "continue": "Continue",
-    "skip": "Skip"
+    "skip": "Skip",
+    "skipToContent": "Skip to content",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min"
   },
   "nav": {
     "label": "Main",
@@ -30,10 +34,776 @@
     "menuLabel": "Language: {{language}}. Change language",
     "choose": "Choose your language"
   },
+  "onboarding": {
+    "one": {
+      "title": "Your notes, turned into a game",
+      "body": "Add your slides, notes or a photo of your notebook. A quiz built from your own material is ready in about half a minute."
+    },
+    "two": {
+      "title": "Every question shows its source",
+      "body": "Tap the source to see the exact passage from your notes. Questions are checked against your notes before you see them."
+    },
+    "three": {
+      "title": "Learn it for good",
+      "body": "StudyNight remembers what you find tricky and brings it back at the right time, right up to your exam."
+    },
+    "setup": {
+      "title": "Make it yours",
+      "nickname": "Nickname (optional)",
+      "nicknameHint": "Only stored on this device.",
+      "avatar": "Pick an avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Daily goal"
+    },
+    "uploadNotes": "Upload my notes",
+    "trySample": "Try a sample deck",
+    "later": "Just look around"
+  },
+  "home": {
+    "greetingMorning": "Good morning!",
+    "greetingAfternoon": "Good afternoon!",
+    "greetingEvening": "Good evening!",
+    "greetingMorningName": "Good morning, {{name}}!",
+    "greetingAfternoonName": "Good afternoon, {{name}}!",
+    "greetingEveningName": "Good evening, {{name}}!",
+    "mood": {
+      "happy": "Ready for a quick round?",
+      "sleepy": "Your streak is waiting — a few questions keep it alive.",
+      "celebrating": "Daily goal done. Brilliant work!",
+      "encouraging": "Add your first notes and let's play."
+    },
+    "statsLabel": "Today",
+    "streakDays_one": "day streak",
+    "streakDays_other": "day streak",
+    "freezes_one": "{{count}} streak freeze",
+    "freezes_other": "{{count}} streak freezes",
+    "goalRing": "Daily goal {{percent}}% done",
+    "goalOf_one": "of {{count}} min",
+    "goalOf_other": "of {{count}} min",
+    "level": "Level {{level}}",
+    "levelProgress": "Progress to the next level, {{xp}} XP in total",
+    "xp": "{{xp}} XP",
+    "resume": "You have a round in progress.",
+    "continue": "Continue",
+    "go": "Play",
+    "openDeck": "Open {{title}}",
+    "reviewDue_one": "{{count}} question to review",
+    "reviewDue_other": "{{count}} questions to review",
+    "reviewDueHint": "Reviewing now helps it stick.",
+    "review": "Review",
+    "examToday": "{{title}}: exam today. Good luck!",
+    "examIn_one": "{{title}} exam in {{count}} day",
+    "examIn_other": "{{title}} exam in {{count}} days",
+    "newDeck": "New deck",
+    "trySample": "Try a sample deck"
+  },
+  "decks": {
+    "emptyTitle": "No decks yet",
+    "emptyBody": "Upload your notes or try a sample deck to start playing.",
+    "processing": "Preparing…",
+    "failed": "Something went wrong",
+    "due_one": "{{count}} due",
+    "due_other": "{{count}} due",
+    "topicCount_one": "{{count}} topic",
+    "topicCount_other": "{{count}} topics",
+    "questionCount_one": "{{count}} question",
+    "questionCount_other": "{{count}} questions"
+  },
+  "samples": {
+    "title": "Sample decks",
+    "intro": "Written for StudyNight, ready to play straight away — no upload needed. They work offline too.",
+    "play_one": "Play ({{count}} question)",
+    "play_other": "Play ({{count}} questions)"
+  },
+  "newDeck": {
+    "title": "New deck",
+    "dropTitle": "Add your study material",
+    "formats": "PDF, PowerPoint, Word, text or photos. Several files can go into one deck.",
+    "chooseFiles": "Choose files",
+    "takePhoto": "Take a photo",
+    "pasteText": "Paste text instead",
+    "pasteLabel": "Your text",
+    "pastePlaceholder": "Paste your notes here…",
+    "selected": "Selected files",
+    "remove": "Remove {{name}}",
+    "deckTitle": "Deck title",
+    "titlePlaceholder": "For example, Biology week 3",
+    "untitled": "My notes",
+    "quizLanguage": "Quiz language",
+    "sameAsNotes": "Same as my notes",
+    "lowerQuality": "quality may be lower",
+    "examDate": "Exam date (optional)",
+    "examDateHint": "We will plan your revision around it.",
+    "notice": "Only upload material you have the right to use. Don't upload documents containing personal or sensitive information about yourself or others.",
+    "create": "Create my quiz",
+    "ready": "Your quiz is ready. More questions are on the way!"
+  },
+  "processing": {
+    "title": "Building your quiz",
+    "readingFile": "Reading {{name}}…",
+    "readingPage": "Reading page {{page}} of {{total}}…",
+    "vision": "Reading your images ({{done}} of {{total}})…",
+    "handwriting": "Handwriting is read on a best-effort basis.",
+    "topics": "Finding the main topics…",
+    "questions": "Writing your first questions about “{{topic}}”…",
+    "background": "You can start playing as soon as the first questions are ready. The rest keeps coming in the background.",
+    "chooseTitle": "Choose pages to read",
+    "chooseBody_one": "{{count}} page needs image reading, but up to {{max}} pages can be read per deck. Choose where to start.",
+    "chooseBody_other": "{{count}} pages need image reading, but up to {{max}} pages can be read per deck. Choose where to start.",
+    "startPage": "Start at page",
+    "choosePages": "Read pages {{from}}–{{to}}"
+  },
+  "deck": {
+    "missing": "Deck not found",
+    "missingBody": "This deck no longer exists on this device.",
+    "settings": "Deck settings",
+    "masteryLabel": "Mastery {{percent}}%",
+    "percent": "{{value}}%",
+    "quizIn": "Quiz in {{language}}",
+    "generating": "Writing more questions…",
+    "busy": "Waiting for the AI service…",
+    "modes": "Ways to play",
+    "aiDisclaimer": "AI can make mistakes — always check against your notes. Tap the source on any question to see where it came from.",
+    "topicMap": "Topic map",
+    "topicQuestions_one": "{{count}} question",
+    "topicQuestions_other": "{{count}} questions",
+    "weak": "Needs work",
+    "topicStatus_one": "Mastery {{percent}}% · {{count}} question",
+    "topicStatus_other": "Mastery {{percent}}% · {{count}} questions",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "sources": "Sources",
+    "pastedText": "Pasted text",
+    "pages_one": "{{count}} page",
+    "pages_other": "{{count}} pages",
+    "slides_one": "{{count}} slide",
+    "slides_other": "{{count}} slides",
+    "regenerate": "Regenerate questions for a topic",
+    "regenerateHint": "Replaces that topic's questions with fresh ones. Your answer history is kept.",
+    "regenerateButton": "Regenerate",
+    "regenerated": "Fresh questions are ready.",
+    "delete": "Delete deck",
+    "deleteTitle": "Delete this deck?",
+    "deleteBody": "“{{title}}”, its questions and its history will be removed from this device.",
+    "deleted": "“{{title}}” deleted"
+  },
+  "modes": {
+    "quick": "Quick play",
+    "quickHint": "10 mixed questions",
+    "review": "Review due",
+    "topic": "Practise a topic",
+    "topicHint": "Focus on one topic",
+    "practiseTopic": "Practise this topic",
+    "boss": "Boss battle",
+    "bossHint_one": "{{count}} topic ready",
+    "bossHint_other": "{{count}} topics ready",
+    "bossLocked": "Unlocks at {{percent}}% mastery",
+    "bossReady": "Boss battle unlocked",
+    "bossIntro": "Beat the storm cloud: harder questions, {{seconds}} seconds each and three hearts. No hints!",
+    "exam": "Exam mode",
+    "examHint": "Timed mock exam",
+    "sudden": "Sudden death",
+    "suddenBest_one": "Best: {{count}} in a row",
+    "suddenBest_other": "Best: {{count}} in a row",
+    "flashcards": "Flashcards",
+    "flashcardsHint": "Swipe to revise",
+    "ask": "Ask your notes",
+    "askHint": "Answers from your notes only",
+    "challenge": "Challenge a friend",
+    "challengeHint": "Send your questions"
+  },
+  "exam": {
+    "intro": "A timed mock exam with no hints and no feedback until the end. Then you get a report with an estimated score.",
+    "questions": "Questions",
+    "duration": "Time",
+    "extended": "Extended time is on: you get 50% more time.",
+    "start": "Start exam",
+    "reportTitle": "Predicted score",
+    "band": "{{low}}–{{high}}%",
+    "estimate": "This is an estimate based on your answers and how well you are likely to remember your deck. It is not a guarantee.",
+    "byTopic": "By topic",
+    "mistakes": "Review your mistakes"
+  },
+  "play": {
+    "preparing": "Getting your questions ready…",
+    "noQuestions": "No questions yet",
+    "noQuestionsBody": "New questions are still being written. Try again in a moment, or check your connection.",
+    "nothingDue": "Nothing to review right now",
+    "nothingDueBody": "You're all caught up. Come back later or play a quick round.",
+    "quit": "Pause or quit",
+    "quitTitle": "Leave this round?",
+    "quitBody": "Your answers so far are saved.",
+    "quitConfirm": "Leave",
+    "progress": "Question {{n}} of {{total}}",
+    "hearts_one": "{{count}} heart left",
+    "hearts_other": "{{count}} hearts left",
+    "timeLeft": "Time left: {{time}}",
+    "secondsLeft_one": "{{count}} second left",
+    "secondsLeft_other": "{{count}} seconds left",
+    "xpTotal": "{{xp}} XP this round",
+    "xpGain": "+{{xp}} XP",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "hint": "Hint (half XP)",
+    "check": "Check",
+    "true": "True",
+    "false": "False",
+    "typeAnswer": "Type your answer",
+    "expected": "The answer:",
+    "typoAccepted": "Accepted — watch the spelling: “{{answer}}”",
+    "showAnswer": "Show answer",
+    "howWell": "How well did you know it?",
+    "grade": {
+      "again": "Again",
+      "hard": "Hard",
+      "good": "Good",
+      "easy": "Easy"
+    },
+    "matchHelp": "Tap a term, then the meaning that goes with it.",
+    "terms": "Terms",
+    "definitions": "Meanings",
+    "pairedWith": "Paired with term {{n}}: {{text}}",
+    "reset": "Reset",
+    "correctPairs": "Correct pairs",
+    "orderHelp": "Drag the steps, or use the arrows, to put them in order.",
+    "moveUp": "Move step {{n}} up",
+    "moveDown": "Move step {{n}} down",
+    "correctOrder": "Correct order",
+    "correct": "Correct!",
+    "incorrect": "Not quite",
+    "incorrectAnnounce": "Not quite. The answer is {{answer}}",
+    "answerWas": "Answer:",
+    "correctAnswer": "Correct answer",
+    "yourAnswer": "Your answer",
+    "bossHit": "Direct hit!",
+    "fromNotes": "From your notes",
+    "fromPage": "From your notes · Page {{n}}",
+    "fromSlide": "From your notes · Slide {{n}}",
+    "pageN": "Page {{n}}",
+    "slideN": "Slide {{n}}",
+    "sourceTitle": "From your notes",
+    "figureAlt": "The figure from your notes that this question is about",
+    "swipeHelp": "Swipe right if you knew it, left to see it again, up if it was easy."
+  },
+  "explain": {
+    "label": "Your answer",
+    "placeholder": "Explain it in your own words…",
+    "check": "Check my answer",
+    "checking": "Checking your answer…",
+    "great": "Great answer!",
+    "partly": "Partly there",
+    "notYet": "Not yet",
+    "points": "You covered {{hit}} of {{total}} key points.",
+    "covered": "Covered",
+    "missed": "Missed",
+    "modelAnswer": "Model answer"
+  },
+  "voice": {
+    "record": "Answer by voice",
+    "stop": "Stop recording ({{seconds}} s left)",
+    "recording": "Recording…",
+    "transcribing": "Turning speech into text…",
+    "denied": "Microphone access was blocked. Allow it in your browser settings, or type your answer instead."
+  },
+  "report": {
+    "open": "Report this question",
+    "title": "Report this question",
+    "body": "It will be removed from your deck straight away and never shown again.",
+    "wrong": "Wrong answer",
+    "notInNotes": "Not in my notes",
+    "unclear": "Unclear",
+    "duplicate": "Duplicate",
+    "done": "Question removed"
+  },
+  "results": {
+    "score": "{{correct}}/{{total}}",
+    "suddenScore_one": "{{count}} in a row!",
+    "suddenScore_other": "{{count}} in a row!",
+    "newBest": "New personal best!",
+    "bossWon": "Storm cleared!",
+    "bossLost": "The storm held on — try again!",
+    "stats": "Round summary",
+    "accuracy": "Accuracy",
+    "xp": "XP earned",
+    "xpValue": "{{xp}} XP",
+    "bestCombo": "Best combo",
+    "time": "Time",
+    "goalMet": "Daily goal reached! +20 XP bonus.",
+    "levelUp": "Level up! You reached level {{level}}.",
+    "newBadges": "New badges",
+    "weakest": "Your trickiest topics",
+    "practiseThese": "Practise these",
+    "done": "Done"
+  },
+  "titles": {
+    "bossSlayer": "Storm Chaser",
+    "perfectionist": "Perfectionist",
+    "freshStart": "Fresh Start",
+    "speedReader": "Speed Reader",
+    "comebackKid": "Comeback Kid",
+    "comboMaster": "Combo Master",
+    "marathoner": "Marathoner",
+    "nightOwlMode": "Night Owl Mode",
+    "earlyRiser": "Early Riser",
+    "topicTamer": "Topic Tamer",
+    "deepThinker": "Deep Thinker",
+    "hintFreeHero": "Hint-Free Hero",
+    "braveExplorer": "Brave Explorer",
+    "steadyClimber": "Steady Climber",
+    "neverGiveUp": "Never Give Up"
+  },
+  "badges": {
+    "earned": "New badge: {{name}}",
+    "firstDeck": {
+      "name": "First Deck",
+      "desc": "Created your first deck."
+    },
+    "firstQuiz": {
+      "name": "First Steps",
+      "desc": "Answered your first question."
+    },
+    "firstBoss": {
+      "name": "Storm Breaker",
+      "desc": "Won your first boss battle."
+    },
+    "streak7": {
+      "name": "One Week",
+      "desc": "Studied 7 days in a row."
+    },
+    "streak30": {
+      "name": "One Month",
+      "desc": "Studied 30 days in a row."
+    },
+    "streak100": {
+      "name": "Hundred Nights",
+      "desc": "Studied 100 days in a row."
+    },
+    "questions100": {
+      "name": "Century",
+      "desc": "Answered 100 questions."
+    },
+    "questions1000": {
+      "name": "Mountain Climber",
+      "desc": "Answered 1,000 questions."
+    },
+    "perfectExam": {
+      "name": "Flawless Exam",
+      "desc": "Scored 100% in exam mode."
+    },
+    "polyglot": {
+      "name": "Polyglot",
+      "desc": "Took quizzes in two or more languages."
+    },
+    "combo10": {
+      "name": "On Fire",
+      "desc": "Got 10 right in a row."
+    },
+    "suddenDeath20": {
+      "name": "Nerves of Steel",
+      "desc": "Reached 20 in sudden death."
+    },
+    "flashcards100": {
+      "name": "Card Shark",
+      "desc": "Reviewed 100 flashcards."
+    },
+    "explainer": {
+      "name": "Explainer",
+      "desc": "Gave 10 great explanations."
+    },
+    "curious": {
+      "name": "Curious Mind",
+      "desc": "Asked your notes 10 questions."
+    },
+    "challenger": {
+      "name": "Challenger",
+      "desc": "Sent a challenge to a friend."
+    },
+    "planner": {
+      "name": "Planner",
+      "desc": "Added an exam to your planner."
+    },
+    "level10": {
+      "name": "Rising Star",
+      "desc": "Reached level 10."
+    },
+    "marathon": {
+      "name": "Marathon",
+      "desc": "Studied for an hour in one day."
+    },
+    "nightSession": {
+      "name": "Midnight Oil",
+      "desc": "Finished a round late at night."
+    },
+    "earlyStart": {
+      "name": "Sunrise",
+      "desc": "Finished a round early in the morning."
+    },
+    "comeback": {
+      "name": "Welcome Back",
+      "desc": "Came back after a week away."
+    }
+  },
+  "share": {
+    "button": "Share result",
+    "title": "Share your result",
+    "includeDeck": "Show the deck title",
+    "shareImage": "Share image",
+    "download": "Download image",
+    "copyText": "Copy text",
+    "copied": "Copied!",
+    "text": "I scored {{correct}}/{{total}} on StudyNight — {{title}}! 🌙",
+    "textDeck": "I scored {{correct}}/{{total}} on “{{deck}}” in StudyNight — {{title}}! 🌙"
+  },
+  "challenge": {
+    "intro_one": "Your link includes {{count}} question from this round, with your score. Your notes and their sources are never included.",
+    "intro_other": "Your link includes {{count}} questions from this round, with your score. Your notes and their sources are never included.",
+    "privacy": "The questions travel inside the link itself — they never go to our server.",
+    "share": "Share link",
+    "copy": "Copy link",
+    "copied": "Link copied!",
+    "none": "Play a round with multiple choice, true/false, fill-in, matching or ordering questions first.",
+    "forFun": "Scores in challenge links are just for fun.",
+    "shareText": "{{name}} challenges you on StudyNight! Can you beat my score?",
+    "from": "{{name}} challenges you!",
+    "theirScore": "Their score: {{correct}}/{{total}}. Can you beat it?",
+    "accept": "Accept the challenge",
+    "you": "You",
+    "friend": "A friend",
+    "youWin": "You win!",
+    "theyWin": "So close!",
+    "draw": "It's a draw!",
+    "makeOwn": "Make a quiz from my own notes"
+  },
+  "smart": {
+    "title": "Smart search",
+    "body": "Finds the right passages even when you use different words or another language. Downloads about {{size}} MB once, then works offline.",
+    "mobileData": "You seem to be on mobile data. You may prefer to wait for Wi-Fi.",
+    "download": "Download ({{size}} MB)",
+    "notNow": "Not now",
+    "downloading": "Smart search: downloading {{percent}}…",
+    "failed": "Smart search couldn't be set up. Keyword search still works; you can try again in Settings."
+  },
+  "legal": {
+    "privacyLink": "Privacy",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "licences": "Licences",
+    "about": "About StudyNight",
+    "updated": "Last updated {{date}}"
+  },
   "errors": {
     "boundary": {
       "title": "Oops, something went wrong",
       "body": "Your decks and progress are safely saved on this device. Let's head back home."
+    },
+    "storage": "Couldn't save on this device. Free up some space and try again.",
+    "badChallenge": {
+      "title": "This challenge link doesn't work",
+      "body": "It may have been cut off when it was copied. Ask your friend to send it again."
+    },
+    "UNSUPPORTED": {
+      "title": "File type not supported",
+      "body": "“{{file}}” can't be read. Use PDF, PowerPoint (.pptx), Word (.docx), text, Markdown or a photo."
+    },
+    "FILE_TOO_LARGE": {
+      "title": "File too large",
+      "body": "“{{file}}” is over 25 MB. Try splitting it or exporting a smaller PDF."
+    },
+    "TOO_MANY_PAGES": {
+      "title": "Too many pages",
+      "body": "A deck can have up to {{limit}} pages or slides. Split your material into a few decks."
+    },
+    "TOO_MANY_PHOTOS": {
+      "title": "Too many photos",
+      "body": "A deck can have up to 30 photos. Make a second deck for the rest."
+    },
+    "TOO_LONG": {
+      "title": "Document too long",
+      "body": "A deck can hold up to 200,000 characters of text. Split it into a few decks."
+    },
+    "PASSWORD": {
+      "title": "This PDF is password-protected",
+      "body": "Remove the password (or print it to a new PDF) and upload it again."
+    },
+    "NO_TEXT": {
+      "title": "No text found",
+      "body": "This looks like a scanned document. Take photos of the pages instead, and StudyNight will read them."
+    },
+    "EMPTY": {
+      "title": "Nothing to read",
+      "body": "Add a file, a photo or some text first."
+    },
+    "CORRUPT": {
+      "title": "Couldn't open this file",
+      "body": "“{{file}}” seems to be damaged. Try saving or exporting it again."
+    },
+    "OFFLINE": {
+      "title": "You're offline",
+      "body": "This needs an internet connection. Everything you've already made still works offline."
+    },
+    "RATE_LIMITED": {
+      "title": "Lots of people are studying right now",
+      "body": "Lots of people are studying right now — your next questions will be ready in a moment. Meanwhile, review what you've got."
+    },
+    "TIMEOUT": {
+      "title": "That took too long",
+      "body": "The AI service didn't answer in time. Please try again."
+    },
+    "UPSTREAM": {
+      "title": "The AI service had a problem",
+      "body": "Please try again in a moment."
+    },
+    "UNREADABLE": {
+      "title": "Couldn't read that",
+      "body": "Try a clearer photo or a different file."
+    },
+    "TOO_LARGE": {
+      "title": "Too large to send",
+      "body": "Try a smaller file or fewer pages at once."
+    },
+    "BAD_INPUT": {
+      "title": "Something didn't look right",
+      "body": "Please try again."
+    },
+    "STORAGE_FULL": {
+      "title": "Your device is full",
+      "body": "Delete a deck or export a backup in Profile to make space, then try again."
+    },
+    "INTERRUPTED": {
+      "title": "Upload was interrupted",
+      "body": "The app was closed while your deck was being built. Delete this deck and add your files again."
+    },
+    "UNKNOWN": {
+      "title": "Something went wrong",
+      "body": "Please try again."
     }
+  },
+  "ask": {
+    "title": "Ask your notes",
+    "intro": "Ask anything about this deck. Answers come only from your notes, with numbered sources you can open.",
+    "label": "Your question",
+    "placeholder": "Ask about your notes…",
+    "send": "Send",
+    "thinking": "Looking through your notes…",
+    "notCovered": "Your notes don't seem to cover this.",
+    "notCoveredHint": "StudyNight only answers from your own notes, so it won't guess.",
+    "offline": "Ask your notes needs an internet connection. Everything else in this deck works offline.",
+    "openSource": "Open source {{n}}",
+    "disclaimer": "Answers come from your notes only. Your questions are not saved."
+  },
+  "review": {
+    "due_one": "{{count}} question due",
+    "due_other": "{{count}} questions due",
+    "dueHint": "A short review now makes it stick for longer.",
+    "caughtUp": "All caught up. Nice!",
+    "start": "Start review",
+    "forecast": "Coming up this week",
+    "questions": "Questions",
+    "today": "Today",
+    "forecastDetail_one": "{{day}}: {{count}} review",
+    "forecastDetail_other": "{{day}}: {{count}} reviews",
+    "byDeck": "By deck",
+    "how": "Reviews are scheduled with a spaced-repetition algorithm (FSRS) so each question comes back just before you would forget it. Aim for {{n}}% recall."
+  },
+  "profile": {
+    "avatar": "Your avatar",
+    "noName": "Night learner",
+    "memberSince": "Learning since {{date}}",
+    "nextLevel": "{{xp}} XP to the next level",
+    "streaks": "Streaks",
+    "current": "Current streak",
+    "best": "Best streak",
+    "freezes": "Streak freezes",
+    "freezeHint": "You earn a streak freeze every 7 days in a row (up to 2). If you miss a day, one is used automatically.",
+    "calendar": "Last 12 weeks",
+    "activity": "Activity",
+    "less": "Less",
+    "more": "More",
+    "dayDetail_one": "{{date}}: {{count}} question, {{time}}",
+    "dayDetail_other": "{{date}}: {{count}} questions, {{time}}",
+    "frozenDay": "{{date}}: streak freeze used",
+    "stats": "Your stats",
+    "answered": "Answered",
+    "accuracy": "Accuracy",
+    "studyTime": "Study time",
+    "accuracyOverTime": "Accuracy by week",
+    "weekDetail_one": "Week of {{week}}: {{percent}} of {{count}} answer",
+    "weekDetail_other": "Week of {{week}}: {{percent}} of {{count}} answers",
+    "strongest": "Strongest topics",
+    "weakest": "Topics to work on",
+    "badges": "Badges ({{count}}/{{total}})",
+    "badgeEarned": "{{name}}, earned",
+    "badgeLocked": "{{name}}, not earned yet",
+    "earnedOn": "Earned on {{date}}",
+    "notYet": "Not earned yet — keep going!"
+  },
+  "planner": {
+    "title": "Exam planner",
+    "intro": "Add your exams and StudyNight plans each day for you: weak topics first, reviews spread out, and a mock exam on the last day.",
+    "empty": "No exams yet. Add one to get a daily plan.",
+    "add": "Add an exam",
+    "needDeck": "Create a deck first, then plan an exam for it.",
+    "deck": "Deck",
+    "examName": "Exam name",
+    "date": "Exam date",
+    "remove": "Remove {{title}}",
+    "past": "This exam has passed. Well done for getting through it!",
+    "today": "Exam today: a quick review of your weakest topics, then rest. Good luck!",
+    "daysLeft_one": "{{count}} day to go",
+    "daysLeft_other": "{{count}} days to go",
+    "dayPlan_one": "{{practice}} practice + {{count}} review",
+    "dayPlan_other": "{{practice}} practice + {{count}} reviews",
+    "mockDay_one": "Mock exam + {{count}} review",
+    "mockDay_other": "Mock exam + {{count}} reviews",
+    "more_one": "…and {{count}} more day",
+    "more_other": "…and {{count}} more days",
+    "startToday": "Start today's session",
+    "time": "Study time",
+    "addToCalendar": "Add to calendar",
+    "icsSummary_one": "Study: {{title}} ({{count}} question)",
+    "icsSummary_other": "Study: {{title}} ({{count}} questions)",
+    "icsMock": "Mock exam: {{title}}",
+    "icsOpen": "Open StudyNight to start."
+  },
+  "settings": {
+    "title": "Settings",
+    "you": "You",
+    "mascotColour": "Mascot colour",
+    "mascotN": "Colour {{n}}",
+    "app": "App",
+    "language": "Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "sound": "Sound effects",
+    "haptics": "Vibration",
+    "hapticsHint": "On phones that support it.",
+    "motion": "Motion",
+    "motionReduce": "Reduced",
+    "motionFull": "Full",
+    "extendedTime": "Extended time",
+    "extendedTimeHint": "50% more time in timed modes.",
+    "quizzes": "Quizzes",
+    "quizLanguage": "Default quiz language",
+    "figures": "Figure questions",
+    "figuresHint": "Questions about diagrams and charts in your photos and scanned pages.",
+    "smartOn": "Downloaded and ready on this device.",
+    "smartRemove": "Remove Smart search",
+    "smartRemoved": "Smart search removed from this device.",
+    "data": "Your data",
+    "backupHint": "Everything is stored only on this device. To move to a new phone, export a backup here and import it on the new phone.",
+    "storage": "Using {{used}} on this device.",
+    "export": "Export a backup",
+    "exported": "Backup saved.",
+    "import": "Import a backup",
+    "badBackup": "That file isn't a valid StudyNight backup.",
+    "importTitle": "Import this backup?",
+    "importPreview_one": "Backup from {{date}} with {{decks}} decks and {{count}} question.",
+    "importPreview_other": "Backup from {{date}} with {{decks}} decks and {{count}} questions.",
+    "importWarning": "Everything currently on this device will be replaced.",
+    "importConfirm": "Replace and import",
+    "deleteAll": "Delete all my data",
+    "deleteTitle": "Delete everything?",
+    "deleteBody": "All decks, questions, progress, badges and settings will be permanently removed from this device. This cannot be undone. Export a backup first if you want to keep them.",
+    "deleteConfirm": "Delete everything"
+  },
+  "privacy": {
+    "s1": {
+      "h": "The short version",
+      "p": "No accounts, no ads, no tracking, no analytics and no cookies. Your decks, questions, progress and profile are stored only on this device."
+    },
+    "s2": {
+      "h": "What stays on your device",
+      "p": "Files you add are read inside your browser; the files themselves are never uploaded. Your decks, questions, answers, streaks, nickname and avatar are kept in your browser's storage on this device. Typed answers are not kept after the round ends."
+    },
+    "s3": {
+      "h": "What is sent when you use AI features",
+      "p": "To build questions, check explanations, answer questions about your notes, read photos and turn speech into text, StudyNight sends short text excerpts from your notes (never whole files), resized photos or page images, and short voice recordings through our server to Groq, the AI provider. Our server handles them in memory only and does not store or log their content; its logs contain only error codes and timings."
+    },
+    "s4": {
+      "h": "Groq, our AI provider",
+      "p": "We checked Groq's data documentation and Services Agreement on 9 November 2026. They say Groq does not keep inference requests by default, but may log inputs and outputs temporarily, for up to 30 days, to fix errors or investigate suspected abuse, unless Zero Data Retention is switched on for the account. Groq is not allowed to use inputs or outputs to train models. Groq stores data in the United States. See console.groq.com/docs/your-data."
+    },
+    "s5": {
+      "h": "Smart search",
+      "p": "If you switch on Smart search, a language model is downloaded once from Hugging Face (huggingface.co), which sees your IP address like any website you visit. After that it runs entirely on your device; searching your notes never sends them anywhere."
+    },
+    "s6": {
+      "h": "Hosting",
+      "p": "The app is hosted by Vercel, which processes technical data such as your IP address in order to deliver the website and protect it from abuse."
+    },
+    "s7": {
+      "h": "Please don't upload personal information",
+      "p": "Don't upload documents that contain personal or sensitive information about yourself or others. The AI is instructed never to repeat personal data found in documents, but the best protection is not to upload it."
+    },
+    "s8": {
+      "h": "Your choices",
+      "p": "You can export all your data (Profile → Settings → Export a backup), delete a deck together with everything made from it, or delete all your data at once. Because nothing about you is stored on our servers, there is nothing else for us to send or delete."
+    },
+    "s9": {
+      "h": "Children",
+      "p": "StudyNight collects nothing about who you are. It is intended for ages 13 and over."
+    },
+    "s10": {
+      "h": "Changes and contact",
+      "p": "If this policy changes, we will update this page and the date above. Questions are welcome via the contact details on the app's store page or project page."
+    }
+  },
+  "terms": {
+    "s1": {
+      "h": "For your own study",
+      "p": "StudyNight helps you study your own material. Use it for personal learning."
+    },
+    "s2": {
+      "h": "Your uploads",
+      "p": "Only upload material you have the right to use. You are responsible for what you upload. Don't upload documents containing personal or sensitive information about yourself or others."
+    },
+    "s3": {
+      "h": "AI can make mistakes",
+      "p": "Questions, answers, explanations and grades are generated by AI and checked automatically, but they can still be wrong. Always check against your notes, and rely on your teachers and official materials for what counts."
+    },
+    "s4": {
+      "h": "No professional advice",
+      "p": "StudyNight does not give medical, legal or financial advice. “Ask your notes” only restates what is in your own material."
+    },
+    "s5": {
+      "h": "Fair use",
+      "p": "The AI service is free and shared by everyone using StudyNight, so it has limits. Please don't automate requests or try to get around those limits. We may slow down or block requests that look abusive."
+    },
+    "s6": {
+      "h": "Sharing",
+      "p": "Challenge links and share cards never contain your notes, only questions, answers, short explanations and scores. You decide who you share them with."
+    },
+    "s7": {
+      "h": "No guarantees",
+      "p": "StudyNight is provided free of charge and “as is”. It may change or stop working, and to the extent the law allows we are not responsible for losses from using it. Export a backup of anything you want to keep."
+    },
+    "s8": {
+      "h": "Ownership",
+      "p": "StudyNight is © 2026 Umit Kayaardi, all rights reserved. Open-source components are used under their own licences (see Licences). Your notes remain yours."
+    },
+    "s9": {
+      "h": "Changes",
+      "p": "We may update these terms; the date above shows the latest version. Continuing to use StudyNight means you accept the updated terms."
+    }
+  },
+  "about": {
+    "version": "Version {{version}}",
+    "principleTitle": "AI writes the questions. Code decides everything else.",
+    "principle": "The AI only organises your notes into topics, drafts questions from your own passages, double-checks them against your notes and marks which key points an explanation covers. Scores, XP, streaks, review scheduling, difficulty and exam plans are worked out by tested code on your device. No question reaches you unless it passes the check against your notes.",
+    "mascot": "Meet Lumi, the night-sky crescent who keeps you company while you study.",
+    "credits": "Built with open-source software. AI by Groq; optional Smart search runs on your device.",
+    "copyright": "© 2026 Umit Kayaardi. All rights reserved."
+  },
+  "licences": {
+    "intro": "StudyNight is built with open-source software. Each component below is used under the licence shown.",
+    "model": "Smart search model",
+    "fonts": "Fonts: Inter, Nunito and Noto Sans families (SIL Open Font License 1.1). Icons: Lucide (ISC).",
+    "original": "The mascot, logo, avatars, badges and sounds were made for StudyNight."
+  },
+  "pwa": {
+    "update": "A new version of StudyNight is ready.",
+    "refresh": "Refresh",
+    "offline": "You’re offline. Everything you’ve made still works."
   }
 }

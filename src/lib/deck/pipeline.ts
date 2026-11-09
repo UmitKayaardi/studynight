@@ -21,8 +21,9 @@ import { newId } from '../learning/random';
 import { SKILL_START } from '../learning/mastery';
 import { startBackgroundGeneration, ensureTopicQuestions } from './generate';
 import { chunkKey, shortId } from './ids';
+import { chunkSummary } from './summary';
 
-export { chunkKey, shortId };
+export { chunkKey, shortId, chunkSummary };
 
 export interface NewDeckInput {
   title: string;
@@ -58,19 +59,6 @@ export function validateInput(files: File[], pasted: string): void {
   }
   if (photos > INGEST_LIMITS.photos) throw new IngestError('TOO_MANY_PHOTOS');
   if (pasted.length > INGEST_LIMITS.chars) throw new IngestError('TOO_LONG');
-}
-
-/** A compact summary of a chunk for the topic map: heading path + first sentences. Never the full text. */
-export function chunkSummary(c: Pick<Chunk, 'headingPath' | 'text'>): string {
-  const head = c.headingPath.length ? `${c.headingPath.join(' › ')}: ` : '';
-  const body = c.text.replace(/\s+/g, ' ');
-  const sentences = body.match(/[^.!?。！？]+[.!?。！？]?/g) ?? [body];
-  let out = '';
-  for (const s of sentences) {
-    if ((out + s).length > 260) break;
-    out += s;
-  }
-  return (head + (out || body.slice(0, 260))).slice(0, 380).trim();
 }
 
 interface VisionJob {

@@ -3,6 +3,118 @@
     "name": "StudyNight",
     "tagline": "Le tue note, trasformate in un gioco."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Hai inviato una sfida a un amico.",
+      "name": "Sfidante"
+    },
+    "combo10": {
+      "desc": "Hai risposto correttamente a 10 domande consecutive.",
+      "name": "In Fiamme"
+    },
+    "comeback": {
+      "desc": "Sei tornato dopo una settimana di assenza.",
+      "name": "Bentornato"
+    },
+    "curious": {
+      "desc": "Hai posto 10 domande alle tue note.",
+      "name": "Mente Curiosa"
+    },
+    "earlyStart": {
+      "desc": "Hai completato una sessione presto al mattino.",
+      "name": "Alba"
+    },
+    "earned": "Nuova badge: {{name}}",
+    "explainer": {
+      "desc": "Hai dato 10 ottime spiegazioni.",
+      "name": "Spiegatore"
+    },
+    "firstBoss": {
+      "desc": "Hai vinto la tua prima battaglia contro il boss.",
+      "name": "Smascheratore di Tempeste"
+    },
+    "firstDeck": {
+      "desc": "Hai creato il tuo primo mazzo.",
+      "name": "Primo Mazzo"
+    },
+    "firstQuiz": {
+      "desc": "Hai risposto alla tua prima domanda.",
+      "name": "Prime Mosse"
+    },
+    "flashcards100": {
+      "desc": "Hai rivisto 100 flashcard.",
+      "name": "Mago delle Schede"
+    },
+    "level10": {
+      "desc": "Hai raggiunto il livello 10.",
+      "name": "Stella Nascente"
+    },
+    "marathon": {
+      "desc": "Hai studiato per un'ora in un giorno.",
+      "name": "Maratona"
+    },
+    "nightSession": {
+      "desc": "Hai completato una sessione tardi la notte.",
+      "name": "Lavoro Notturno"
+    },
+    "perfectExam": {
+      "desc": "Hai ottenuto il 100% in modalità esame.",
+      "name": "Esame Impeccabile"
+    },
+    "planner": {
+      "desc": "Hai aggiunto un esame al tuo planner.",
+      "name": "Planner"
+    },
+    "polyglot": {
+      "desc": "Hai fatto quiz in due o più lingue.",
+      "name": "Poliglotta"
+    },
+    "questions100": {
+      "desc": "Risposte 100 domande.",
+      "name": "Secolo"
+    },
+    "questions1000": {
+      "desc": "Risposte 1.000 domande.",
+      "name": "Scalatore di Montagne"
+    },
+    "streak100": {
+      "desc": "Studiate 100 giorni di fila.",
+      "name": "Cento Notti"
+    },
+    "streak30": {
+      "desc": "Hai studiato 30 giorni di fila.",
+      "name": "Un Mese"
+    },
+    "streak7": {
+      "desc": "Hai studiato 7 giorni di fila.",
+      "name": "Una Settimana"
+    },
+    "suddenDeath20": {
+      "desc": "Hai raggiunto 20 in modalità morte improvvisa.",
+      "name": "Nervi d'Acciaio"
+    }
+  },
+  "challenge": {
+    "accept": "Accetta la sfida",
+    "copied": "Link copiato!",
+    "copy": "Copia link",
+    "draw": "Pareggio!",
+    "forFun": "Punteggi nei link di sfida sono solo per divertimento.",
+    "friend": "Un amico",
+    "from": "{{name}} ti sfida!",
+    "intro_many": "Il tuo link include {{count}} domande di questo round, con il tuo punteggio. Le tue note e le loro fonti non vengono mai incluse.",
+    "intro_one": "Il tuo link include {{count}} domanda di questo round, con il tuo punteggio. Le tue note e le loro fonti non vengono mai incluse.",
+    "intro_other": "Il tuo link include {{count}} domande di questo round, con il tuo punteggio. Le tue note e le loro fonti non vengono mai incluse.",
+    "makeOwn": "Crea un quiz dai miei appunti",
+    "none": "Gioca una partita con domande a scelta multipla, vero/falso, completamento, abbinamento o ordinamento prima.",
+    "privacy": "Le domande viaggiano all'interno del link stesso — non vanno mai al nostro server.",
+    "share": "Condividi link",
+    "shareText": "{{name}} ti sfida su StudyNight! Riesci a battere il mio punteggio?",
+    "theirScore": "Punteggio loro: {{correct}}/{{total}}. Riesci a batterlo?",
+    "theyWin": "Quasi!",
+    "you": "Tu",
+    "youWin": "Hai vinto!"
+  },
   "common": {
     "back": "Indietro",
     "cancel": "Annulla",
@@ -13,21 +125,257 @@
     "done": "Fatto",
     "goHome": "Torna a casa",
     "loading": "Caricamento…",
+    "minutes_many": "{{count}} min",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
     "next": "Avanti",
     "retry": "Riprova",
     "save": "Salva",
+    "saved": "Salvato",
     "skip": "Salta",
+    "skipToContent": "Salta al contenuto",
     "undo": "Ripristina"
   },
+  "deck": {
+    "aiDisclaimer": "L'AI può sbagliare: controlla sempre con i tuoi appunti. Tocca la fonte di una domanda per vederne l'origine.",
+    "busy": "In attesa del servizio AI…",
+    "delete": "Elimina mazzo",
+    "deleteBody": "“{{title}}”, le sue domande e la cronologia verranno rimossi da questo dispositivo.",
+    "deleted": "“{{title}}” eliminato",
+    "deleteTitle": "Eliminare questo mazzo?",
+    "generating": "Creazione di altre domande…",
+    "masteryLabel": "Padronanza {{percent}}%",
+    "missing": "Mazzo non trovato",
+    "missingBody": "Questo mazzo non esiste più su questo dispositivo.",
+    "modes": "Modalità di gioco",
+    "pages_many": "{{count}} pagine",
+    "pages_one": "{{count}} pagina",
+    "pages_other": "{{count}} pagine",
+    "pastedText": "Testo incollato",
+    "percent": "{{value}}%",
+    "quizIn": "Quiz in {{language}}",
+    "regenerate": "Rigenera le domande di un argomento",
+    "regenerateButton": "Rigenera",
+    "regenerated": "Nuove domande pronte.",
+    "regenerateHint": "Sostituisce le domande di quell'argomento con nuove. La cronologia delle risposte viene mantenuta.",
+    "settings": "Impostazioni mazzo",
+    "slides_many": "{{count}} slide",
+    "slides_one": "{{count}} slide",
+    "slides_other": "{{count}} slide",
+    "sources": "Fonti",
+    "topicMap": "Mappa degli argomenti",
+    "topicQuestions_many": "{{count}} domande",
+    "topicQuestions_one": "{{count}} domanda",
+    "topicQuestions_other": "{{count}} domande",
+    "topicStatus_many": "Padronanza {{percent}}% · {{count}} domande",
+    "topicStatus_one": "Padronanza {{percent}}% · {{count}} domanda",
+    "topicStatus_other": "Padronanza {{percent}}% · {{count}} domande",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Da migliorare"
+  },
+  "decks": {
+    "due_many": "{{count}} in scadenza",
+    "due_one": "{{count}} in scadenza",
+    "due_other": "{{count}} in scadenza",
+    "emptyBody": "Carica le tue note o prova un mazzo di esempio per iniziare a giocare.",
+    "emptyTitle": "Nessun mazzo ancora",
+    "failed": "Qualcosa è andato storto",
+    "processing": "Preparazione…",
+    "questionCount_many": "{{count}} domande",
+    "questionCount_one": "{{count}} domanda",
+    "questionCount_other": "{{count}} domande",
+    "topicCount_many": "{{count}} argomenti",
+    "topicCount_one": "{{count}} argomento",
+    "topicCount_other": "{{count}} argomenti"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Riprova.",
+      "title": "Qualcosa non sembra corretto"
+    },
+    "badChallenge": {
+      "body": "Potrebbe essere stato troncato durante il copia. Chiedi al tuo amico di inviarlo di nuovo.",
+      "title": "Questo link di sfida non funziona"
+    },
     "boundary": {
       "body": "I tuoi mazzi e i progressi sono salvati in sicurezza su questo dispositivo. Torniamo a casa.",
       "title": "Ops, qualcosa è andata storta"
+    },
+    "CORRUPT": {
+      "body": "\"{{file}}\" sembra danneggiato. Prova a salvarlo o esportarlo di nuovo.",
+      "title": "Impossibile aprire questo file"
+    },
+    "EMPTY": {
+      "body": "Aggiungi prima un file, una foto o del testo.",
+      "title": "Niente da leggere"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "\"{{file}}\" supera i 25 MB. Prova a dividerlo o esportare un PDF più piccolo.",
+      "title": "File troppo grande"
+    },
+    "INTERRUPTED": {
+      "body": "L'app è stata chiusa mentre il tuo mazzo veniva creato. Elimina questo mazzo e aggiungi nuovamente i file.",
+      "title": "Caricamento interrotto"
+    },
+    "NO_TEXT": {
+      "body": "Sembra un documento scansionato. Scatta foto delle pagine invece, e StudyNight le leggerà.",
+      "title": "Nessun testo trovato"
+    },
+    "OFFLINE": {
+      "body": "Serve una connessione internet. Tutto ciò che hai già creato funziona ancora offline.",
+      "title": "Sei offline"
+    },
+    "PASSWORD": {
+      "body": "Rimuovi la password (o stampalo su un nuovo PDF) e caricalo di nuovo.",
+      "title": "Questo PDF è protetto da password"
+    },
+    "RATE_LIMITED": {
+      "body": "Tante persone stanno studiando ora — le tue prossime domande saranno pronte tra un attimo. Nel frattempo, ripassa quello che hai.",
+      "title": "Tante persone stanno studiando ora"
+    },
+    "storage": "Impossibile salvare su questo dispositivo. Libera spazio e riprova.",
+    "STORAGE_FULL": {
+      "body": "Elimina un mazzo o esporta un backup in Profilo per fare spazio, poi riprova.",
+      "title": "Il tuo dispositivo è pieno"
+    },
+    "TIMEOUT": {
+      "body": "Il servizio AI non ha risposto in tempo. Riprova.",
+      "title": "Ci è voluto troppo"
+    },
+    "TOO_LARGE": {
+      "body": "Prova un file più piccolo o meno pagine alla volta.",
+      "title": "Troppo grande per l'invio"
+    },
+    "TOO_LONG": {
+      "body": "Un mazzo può contenere fino a 200.000 caratteri di testo. Dividi in pochi mazzi.",
+      "title": "Documento troppo lungo"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Un mazzo può avere fino a {{limit}} pagine o diapositive. Dividi il materiale in pochi mazzi.",
+      "title": "Troppi pagine"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Un mazzo può avere fino a 30 foto. Crea un secondo mazzo per il resto.",
+      "title": "Troppi foto"
+    },
+    "UNKNOWN": {
+      "body": "Riprova.",
+      "title": "Qualcosa è andato storto"
+    },
+    "UNREADABLE": {
+      "body": "Prova una foto più chiara o un file diverso.",
+      "title": "Impossibile leggere"
+    },
+    "UNSUPPORTED": {
+      "body": "\"{{file}}\" non può essere letto. Usa PDF, PowerPoint (.pptx), Word (.docx), testo, Markdown o una foto.",
+      "title": "Tipo di file non supportato"
+    },
+    "UPSTREAM": {
+      "body": "Riprova tra un attimo.",
+      "title": "Il servizio AI ha avuto un problema"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Per argomento",
+    "duration": "Tempo",
+    "estimate": "È una stima basata sulle tue risposte e su quanto probabilmente ricorderai il mazzo. Non è una garanzia.",
+    "extended": "Tempo esteso attivo: hai il 50% in più.",
+    "intro": "Prova simulata con tempo limitato, senza suggerimenti e senza feedback fino alla fine. Poi ricevi un rapporto con un punteggio stimato.",
+    "mistakes": "Rivedi gli errori",
+    "questions": "Domande",
+    "reportTitle": "Punteggio previsto",
+    "start": "Inizia prova"
+  },
+  "explain": {
+    "check": "Controlla la risposta",
+    "checking": "Controllo in corso…",
+    "covered": "Coperti",
+    "great": "Ottima risposta!",
+    "label": "La tua risposta",
+    "missed": "Mancati",
+    "modelAnswer": "Risposta modello",
+    "notYet": "Non ancora",
+    "partly": "Parzialmente corretto",
+    "placeholder": "Spiegala con parole tue…",
+    "points": "Hai coperto {{hit}} su {{total}} punti chiave."
+  },
+  "home": {
+    "continue": "Continua",
+    "examIn_many": "{{title}} esame tra {{count}} giorni",
+    "examIn_one": "{{title}} esame tra {{count}} giorno",
+    "examIn_other": "{{title}} esame tra {{count}} giorni",
+    "examToday": "{{title}}: esame oggi. Buona fortuna!",
+    "freezes_many": "{{count}} congelamenti streak",
+    "freezes_one": "{{count}} congelamento streak",
+    "freezes_other": "{{count}} congelamenti streak",
+    "go": "Gioca",
+    "goalOf_many": "di {{count}} min",
+    "goalOf_one": "di {{count}} min",
+    "goalOf_other": "di {{count}} min",
+    "goalRing": "Obiettivo giornaliero {{percent}}% completato",
+    "greetingAfternoon": "Buon pomeriggio!",
+    "greetingAfternoonName": "Buon pomeriggio, {{name}}!",
+    "greetingEvening": "Buonasera!",
+    "greetingEveningName": "Buonasera, {{name}}!",
+    "greetingMorning": "Buongiorno!",
+    "greetingMorningName": "Buongiorno, {{name}}!",
+    "level": "Livello {{level}}",
+    "levelProgress": "Progresso al livello successivo, {{xp}} XP in totale",
+    "mood": {
+      "celebrating": "Obiettivo giornaliero raggiunto. Ottimo lavoro!",
+      "encouraging": "Aggiungi le prime note e giochiamo.",
+      "happy": "Pronto per una rapida partita?",
+      "sleepy": "La tua streak ti aspetta — qualche domanda la mantiene viva."
+    },
+    "newDeck": "Nuovo mazzo",
+    "openDeck": "Apri {{title}}",
+    "resume": "Hai una partita in corso.",
+    "review": "Rivedi",
+    "reviewDue_many": "{{count}} domande da rivedere",
+    "reviewDue_one": "{{count}} domanda da rivedere",
+    "reviewDue_other": "{{count}} domande da rivedere",
+    "reviewDueHint": "Rivedere ora aiuta a fissarlo.",
+    "statsLabel": "Oggi",
+    "streakDays_many": "giorni consecutivi",
+    "streakDays_one": "giorno consecutivo",
+    "streakDays_other": "giorni consecutivi",
+    "trySample": "Prova un mazzo di esempio",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Scegli la tua lingua",
     "menuLabel": "Lingua: {{language}}. Cambia lingua"
+  },
+  "legal": {
+    "privacyLink": "Privacy"
+  },
+  "modes": {
+    "ask": "Chiedi ai tuoi appunti",
+    "askHint": "Risposte solo dalle tue note",
+    "boss": "Sfida del boss",
+    "bossHint_many": "{{count}} argomenti pronti",
+    "bossHint_one": "{{count}} argomento pronto",
+    "bossHint_other": "{{count}} argomenti pronti",
+    "bossIntro": "Sconfiggi la nuvola di tempesta: domande più difficili, {{seconds}} secondi ciascuna e tre cuori. Nessun suggerimento!",
+    "bossLocked": "Si sblocca al {{percent}}% di padronanza",
+    "bossReady": "Sfida del boss sbloccata",
+    "challenge": "Sfida un amico",
+    "challengeHint": "Invia le tue domande",
+    "exam": "Modalità esame",
+    "examHint": "Simulazione d'esame a tempo",
+    "flashcards": "Flashcard",
+    "flashcardsHint": "Scorri per ripassare",
+    "practiseTopic": "Esercitati su questo argomento",
+    "quick": "Partita veloce",
+    "quickHint": "10 domande miste",
+    "review": "Ripasso in scadenza",
+    "sudden": "Morte improvvisa",
+    "suddenBest_many": "Record: {{count}} di fila",
+    "suddenBest_one": "Record: {{count}} di fila",
+    "suddenBest_other": "Record: {{count}} di fila",
+    "topic": "Esercitati su un argomento",
+    "topicHint": "Concentrati su un argomento"
   },
   "nav": {
     "decks": "Mazzi",
@@ -35,5 +383,215 @@
     "label": "Principale",
     "profile": "Profilo",
     "review": "Ripassa"
+  },
+  "newDeck": {
+    "chooseFiles": "Scegli file",
+    "create": "Crea il mio quiz",
+    "deckTitle": "Titolo del mazzo",
+    "dropTitle": "Aggiungi il tuo materiale di studio",
+    "examDate": "Data dell'esame (opzionale)",
+    "examDateHint": "Pianificheremo la revisione attorno a questa data.",
+    "formats": "PDF, PowerPoint, Word, testo o foto. Più file possono andare nello stesso mazzo.",
+    "lowerQuality": "la qualità potrebbe essere inferiore",
+    "notice": "Carica solo materiale di cui hai i diritti. Non caricare documenti con informazioni personali o sensibili su di te o altri.",
+    "pasteLabel": "Il tuo testo",
+    "pastePlaceholder": "Incolla qui le tue note…",
+    "pasteText": "Incolla il testo invece",
+    "quizLanguage": "Lingua del quiz",
+    "ready": "Il tuo quiz è pronto. Altre domande arriveranno presto!",
+    "remove": "Rimuovi {{name}}",
+    "sameAsNotes": "Stessa delle mie note",
+    "selected": "File selezionati",
+    "takePhoto": "Scatta una foto",
+    "title": "Nuovo mazzo",
+    "titlePlaceholder": "Es. Biologia settimana 3",
+    "untitled": "Le mie note"
+  },
+  "onboarding": {
+    "later": "Guarda pure",
+    "one": {
+      "body": "Aggiungi le tue slide, note o una foto del tuo quaderno. Un quiz creato dal tuo materiale è pronto in circa mezzo minuto.",
+      "title": "Le tue note, trasformate in un gioco"
+    },
+    "setup": {
+      "avatar": "Scegli un avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Obiettivo giornaliero",
+      "nickname": "Nickname (facoltativo)",
+      "nicknameHint": "Salvato solo su questo dispositivo.",
+      "title": "Rendi personale"
+    },
+    "three": {
+      "body": "StudyNight ricorda ciò che trovi difficile e lo riporta al momento giusto, fino all’esame.",
+      "title": "Impara davvero"
+    },
+    "trySample": "Prova un mazzo di esempio",
+    "two": {
+      "body": "Tocca la fonte per vedere l’esatto passaggio delle tue note. Le domande sono verificate contro le tue note prima di mostrarti.",
+      "title": "Ogni domanda mostra la sua fonte"
+    },
+    "uploadNotes": "Carica le mie note"
+  },
+  "play": {
+    "answerWas": "Risposta:",
+    "bossHit": "Colpo diretto!",
+    "check": "Verifica",
+    "combo_many": "Combo × {{count}}!",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Corretto!",
+    "correctAnswer": "Risposta corretta",
+    "correctOrder": "Ordine corretto",
+    "correctPairs": "Coppie corrette",
+    "definitions": "Significati",
+    "expected": "La risposta:",
+    "false": "Falso",
+    "figureAlt": "La figura dalle tue note a cui si riferisce questa domanda",
+    "fromNotes": "Dalle tue note",
+    "fromPage": "Dalle tue note · Pagina {{n}}",
+    "fromSlide": "Dalle tue note · Slide {{n}}",
+    "grade": {
+      "again": "Di nuovo",
+      "easy": "Facile",
+      "good": "Buono",
+      "hard": "Difficile"
+    },
+    "hearts_many": "{{count}} cuori rimasti",
+    "hearts_one": "{{count}} cuore rimasto",
+    "hearts_other": "{{count}} cuori rimasti",
+    "hint": "Suggerimento (mezzo XP)",
+    "howWell": "Quanto la conoscevi?",
+    "incorrect": "Quasi",
+    "incorrectAnnounce": "Quasi. La risposta è {{answer}}",
+    "matchHelp": "Tocca un termine, poi il significato corrispondente.",
+    "moveDown": "Sposta giù il passo {{n}}",
+    "moveUp": "Sposta su il passo {{n}}",
+    "noQuestions": "Ancora nessuna domanda",
+    "noQuestionsBody": "Le nuove domande sono ancora in scrittura. Riprova tra poco o controlla la connessione.",
+    "nothingDue": "Niente da rivedere ora",
+    "nothingDueBody": "Sei al passo. Torna più tardi o gioca una breve partita.",
+    "orderHelp": "Trascina i passaggi o usa le frecce per ordinarli.",
+    "pageN": "Pagina {{n}}",
+    "pairedWith": "Accoppiato con il termine {{n}}: {{text}}",
+    "preparing": "Preparo le tue domande…",
+    "progress": "Domanda {{n}} di {{total}}",
+    "quit": "Pausa o esci",
+    "quitBody": "Le tue risposte finora sono salvate.",
+    "quitConfirm": "Lascia",
+    "quitTitle": "Lascia questa partita?",
+    "reset": "Ripristina",
+    "secondsLeft_many": "{{count}} secondi rimasti",
+    "secondsLeft_one": "{{count}} secondo rimasto",
+    "secondsLeft_other": "{{count}} secondi rimasti",
+    "showAnswer": "Mostra risposta",
+    "slideN": "Slide {{n}}",
+    "sourceTitle": "Dalle tue note",
+    "swipeHelp": "Scorri a destra se la conosci, a sinistra per rivederla, su se è facile.",
+    "terms": "Termini",
+    "timeLeft": "Tempo rimanente: {{time}}",
+    "true": "Vero",
+    "typeAnswer": "Scrivi la tua risposta",
+    "typoAccepted": "Accettato — fai attenzione all’ortografia: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP questa partita",
+    "yourAnswer": "La tua risposta"
+  },
+  "processing": {
+    "background": "Puoi iniziare a giocare non appena le prime domande sono pronte. Il resto arriverà in background.",
+    "chooseBody_many": "{{count}} pagine richiedono lettura immagine, ma fino a {{max}} pagine possono essere lette per mazzo. Scegli da dove iniziare.",
+    "chooseBody_one": "{{count}} pagina richiede lettura immagine, ma fino a {{max}} pagine possono essere lette per mazzo. Scegli da dove iniziare.",
+    "chooseBody_other": "{{count}} pagine richiedono lettura immagine, ma fino a {{max}} pagine possono essere lette per mazzo. Scegli da dove iniziare.",
+    "choosePages": "Leggi pagine {{from}}–{{to}}",
+    "chooseTitle": "Scegli le pagine da leggere",
+    "handwriting": "La scrittura a mano viene letta al meglio delle possibilità.",
+    "questions": "Creazione delle prime domande su “{{topic}}”…",
+    "readingFile": "Lettura di {{name}}…",
+    "readingPage": "Lettura pagina {{page}} di {{total}}…",
+    "startPage": "Inizia dalla pagina",
+    "title": "Creazione del tuo quiz",
+    "topics": "Ricerca dei temi principali…",
+    "vision": "Lettura delle tue immagini ({{done}} di {{total}})…"
+  },
+  "report": {
+    "body": "Verrà rimossa subito dal tuo mazzo e non verrà più mostrata.",
+    "done": "Domanda rimossa",
+    "duplicate": "Duplicata",
+    "notInNotes": "Non nelle mie note",
+    "open": "Segnala questa domanda",
+    "title": "Segnala questa domanda",
+    "unclear": "Non chiara",
+    "wrong": "Risposta sbagliata"
+  },
+  "results": {
+    "accuracy": "Precisione",
+    "bestCombo": "Miglior combo",
+    "bossLost": "La tempesta è rimasta — riprova!",
+    "bossWon": "Tempesta superata!",
+    "done": "Fatto",
+    "goalMet": "Obiettivo giornaliero raggiunto! +20 XP bonus.",
+    "levelUp": "Livello salito! Hai raggiunto il livello {{level}}.",
+    "newBadges": "Nuove badge",
+    "newBest": "Nuovo record personale!",
+    "practiseThese": "Pratica questi",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Riepilogo round",
+    "suddenScore_many": "{{count}} di fila!",
+    "suddenScore_one": "{{count}} di fila!",
+    "suddenScore_other": "{{count}} di fila!",
+    "time": "Tempo",
+    "weakest": "I tuoi argomenti più difficili",
+    "xp": "XP guadagnati",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Creati per StudyNight, pronti da giocare subito — nessun upload necessario. Funzionano anche offline.",
+    "play_many": "Gioca ({{count}} domande)",
+    "play_one": "Gioca ({{count}} domanda)",
+    "play_other": "Gioca ({{count}} domande)",
+    "title": "Mazzi di esempio"
+  },
+  "share": {
+    "button": "Condividi risultato",
+    "copied": "Copiato!",
+    "copyText": "Copia testo",
+    "download": "Scarica immagine",
+    "includeDeck": "Mostra il titolo del mazzo",
+    "shareImage": "Condividi immagine",
+    "text": "Ho ottenuto {{correct}}/{{total}} su StudyNight — {{title}}! 🌙",
+    "textDeck": "Ho ottenuto {{correct}}/{{total}} su “{{deck}}” in StudyNight — {{title}}! 🌙",
+    "title": "Condividi il tuo risultato"
+  },
+  "smart": {
+    "body": "Trova i passaggi giusti anche se usi parole diverse o un'altra lingua. Scarica {{size}} MB una volta, poi funziona offline.",
+    "download": "Scarica ({{size}} MB)",
+    "downloading": "Ricerca intelligente: scaricamento {{percent}}…",
+    "failed": "La ricerca intelligente non può essere configurata. La ricerca per parole chiave funziona comunque; prova di nuovo in Impostazioni.",
+    "mobileData": "Sembra che tu sia in rete mobile. Potresti preferire attendere il Wi‑Fi.",
+    "notNow": "Non ora",
+    "title": "Ricerca intelligente"
+  },
+  "titles": {
+    "bossSlayer": "Cacciatore di Tempeste",
+    "braveExplorer": "Esploratore Coraggioso",
+    "comboMaster": "Maestro delle Combo",
+    "comebackKid": "Rinascita",
+    "deepThinker": "Pensatore Profondo",
+    "earlyRiser": "Alba Presto",
+    "freshStart": "Nuovo Inizio",
+    "hintFreeHero": "Eroe Senza Suggerimenti",
+    "marathoner": "Marathoner",
+    "neverGiveUp": "Mai Arrendersi",
+    "nightOwlMode": "Modalità Uccello Notturno",
+    "perfectionist": "Perfezionista",
+    "speedReader": "Lettore Veloce",
+    "steadyClimber": "Salita Costante",
+    "topicTamer": "Domatore di Argomenti"
+  },
+  "voice": {
+    "denied": "L'accesso al microfono è stato bloccato. Abilitalo nelle impostazioni del browser o digita la risposta.",
+    "record": "Rispondi a voce",
+    "recording": "Registrazione…",
+    "stop": "Interrompi registrazione ({{seconds}} s rimasti)",
+    "transcribing": "Conversione del parlato in testo…"
   }
 }

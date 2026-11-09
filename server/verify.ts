@@ -37,9 +37,23 @@ export function textSimilarity(a: string, b: string): number {
 
 export const DUPLICATE_TEXT_SIMILARITY = 0.8;
 
-export function isDuplicate(text: string, existing: string[]): boolean {
+export function isDuplicate(text: string, existing: string[], prompt?: string): boolean {
   const f = foldText(text);
-  return existing.some((e) => foldText(e) === f || textSimilarity(text, e) >= DUPLICATE_TEXT_SIMILARITY);
+  const p = prompt ? foldText(prompt) : '';
+  return existing.some((e) => {
+    const fe = foldText(e);
+    // Same question text (e.g. two flashcards with the same front) counts as a duplicate whatever the answer.
+    if (p && p.length >= 4 && (fe === p || fe.startsWith(`${p} `))) return true;
+    return fe === f || textSimilarity(text, e) >= DUPLICATE_TEXT_SIMILARITY;
+  });
+}
+
+const LATEX_HINT = /\\(rightarrow|leftarrow|frac|times|cdot|alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|sum|sqrt|leq|geq|neq|approx|hat|text|mathrm|infty)\b|[_^]\{/;
+
+/** Wraps a short answer that is clearly LaTeX but has no $…$ delimiters, so it renders as maths. */
+export function wrapLatex(s: unknown): unknown {
+  if (typeof s !== 'string' || s.includes('$') || s.includes('```') || !LATEX_HINT.test(s)) return s;
+  return `$${s.trim()}$`;
 }
 
 /** Normalises a raw model draft before schema validation (common harmless deviations). */
@@ -60,6 +74,14 @@ export function normaliseDraft(raw: unknown, topicId: string): unknown {
     if (typeof d.prompt === 'string') d.prompt = d.prompt.replace(/^\s*(front|question)\s*:\s*/i, '');
     if (typeof d.back === 'string') d.back = d.back.replace(/^\s*(back|answer)\s*:\s*/i, '');
   }
+  if (Array.isArray(d.options)) d.options = d.options.map(wrapLatex);
+  if (Array.isArray(d.steps)) d.steps = d.steps.map(wrapLatex);
+  if (Array.isArray(d.acceptedAnswers)) d.acceptedAnswers = d.acceptedAnswers.map(wrapLatex);
+  if (Array.isArray(d.pairs))
+    d.pairs = d.pairs.map((p: unknown) =>
+      p && typeof p === 'object' ? { ...(p as object), term: wrapLatex((p as { term?: unknown }).term), definition: wrapLatex((p as { definition?: unknown }).definition) } : p,
+    );
+  if (d.type === 'flashcard') d.back = wrapLatex(d.back);
   delete d.figureId; // set by the server only
   return d;
 }
@@ -118,7 +140,7 @@ export function checkDraft(
       break;
   }
 
-  if (isDuplicate(questionKeyText(q), ctx.existing)) return { ok: false, reason: 'duplicate' };
+  if (isDuplicate(questionKeyText(q), ctx.existing, q.prompt)) return { ok: false, reason: 'duplicate' };
   return { ok: true, question: q };
 }
 

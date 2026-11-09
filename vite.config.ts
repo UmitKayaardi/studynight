@@ -1,6 +1,7 @@
 import { defineConfig, loadEnv, type Plugin, type ViteDevServer } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
+import { VitePWA } from 'vite-plugin-pwa';
 import type { IncomingMessage, ServerResponse } from 'node:http';
 
 /**
@@ -64,7 +65,57 @@ export default defineConfig(({ mode }) => {
     if (k.startsWith('GROQ_') && process.env[k] === undefined) process.env[k] = v;
   }
   return {
-    plugins: [react(), tailwindcss(), devApi()],
+    plugins: [
+      react(),
+      tailwindcss(),
+      devApi(),
+      VitePWA({
+        registerType: 'prompt',
+        injectRegister: false,
+        includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
+        manifest: {
+          name: 'StudyNight',
+          short_name: 'StudyNight',
+          description: 'Your notes, turned into a game. Upload your study material and play a quiz built from it.',
+          lang: 'en',
+          start_url: '/',
+          scope: '/',
+          display: 'standalone',
+          orientation: 'portrait',
+          background_color: '#0b1026',
+          theme_color: '#0b1026',
+          categories: ['education', 'productivity'],
+          icons: [
+            { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+            { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+            { src: '/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          ],
+        },
+        workbox: {
+          // The app shell and every lazily loaded screen are precached for offline play. Large, rarely needed
+          // files (script font slices, the ONNX runtime) are cached on first use instead.
+          globPatterns: ['**/*.{js,css,html,svg,png,webmanifest}', 'assets/inter-latin-*.woff2', 'assets/nunito-latin-*.woff2'],
+          globIgnores: ['**/ort/**'],
+          maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
+          navigateFallback: '/index.html',
+          navigateFallbackDenylist: [/^\/api\//],
+          cleanupOutdatedCaches: true,
+          runtimeCaching: [
+            { urlPattern: ({ url }) => url.pathname.startsWith('/api/'), handler: 'NetworkOnly' },
+            {
+              urlPattern: ({ url }) => url.pathname.endsWith('.woff2'),
+              handler: 'CacheFirst',
+              options: { cacheName: 'sn-fonts', expiration: { maxEntries: 400, maxAgeSeconds: 60 * 60 * 24 * 365 } },
+            },
+            {
+              urlPattern: ({ url }) => url.pathname.startsWith('/ort/'),
+              handler: 'CacheFirst',
+              options: { cacheName: 'sn-ort', expiration: { maxEntries: 4 } },
+            },
+          ],
+        },
+      }),
+    ],
     worker: { format: 'es' },
     build: {
       target: 'es2022',

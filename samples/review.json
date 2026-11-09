@@ -1,0 +1,23 @@
+{
+  "fotosentez": [
+    { "prompt": "Hangi pigment kırmızı ve mavi ışığı en çok soğurur?", "set": { "options": ["klorofil", "karotenoid", "antosiyanin", "ksantofil"] } },
+    {
+      "prompt": "Fotosentezin genel denklemi aşağıdakilerden hangisidir?",
+      "set": {
+        "options": [
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6CO_2$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6H_2O$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6N_2$"
+        ]
+      }
+    },
+    { "prompt": "Işık bağımlı (light-dependent) reaksiyonlar kloroplastın hangi bölgesinde gerçekleşir?", "set": { "prompt": "Işığa bağımlı tepkimeler kloroplastın hangi bölgesinde gerçekleşir?" } },
+    { "prompt": "Aşağıdakilerden hangisi sıcaklık çok yükseldiğinde fotosentez hızının düşmesine neden olur?", "remove": true },
+    { "prompt": "Kalvin döngüsü hangi yapıda gerçekleşir?", "set": { "prompt": "Calvin döngüsü kloroplastın hangi bölümünde gerçekleşir?" } },
+    { "prompt": "Işık bağımlı reaksiyonlarda hangi enerji taşıyıcıları üretilir?", "set": { "prompt": "Işığa bağımlı tepkimelerde hangi enerji taşıyıcı moleküller üretilir?" } },
+    { "prompt": "Kalvin döngüsü doğrudan ışık enerjisi gerektirir.", "remove": true },
+    { "prompt": "Stoma", "remove": true },
+    { "prompt": "Su, ışık bağımlı reaksiyonlarda parçalanarak oksijen açığa çıkar.", "set": { "prompt": "Su, ışığa bağımlı tepkimelerde parçalanır ve oksijen açığa çıkar." } }
+  ]
+}

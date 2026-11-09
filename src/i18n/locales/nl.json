@@ -3,6 +3,117 @@
     "name": "StudyNight",
     "tagline": "Jouw notities, omgezet in een spel."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Een uitdaging gestuurd naar een vriend.",
+      "name": "Uitdager"
+    },
+    "combo10": {
+      "desc": "10 keer goed op rij.",
+      "name": "In vuur en vlam"
+    },
+    "comeback": {
+      "desc": "Teruggekomen na een week weg.",
+      "name": "Welkom terug"
+    },
+    "curious": {
+      "desc": "10 vragen gesteld aan je notities.",
+      "name": "Nieuwsgierig"
+    },
+    "earlyStart": {
+      "desc": "Een ronde afgerond in de vroege ochtend.",
+      "name": "Zonsopgang"
+    },
+    "earned": "Nieuwe badge: {{name}}",
+    "explainer": {
+      "desc": "10 goede uitleggen gegeven.",
+      "name": "Uitlegger"
+    },
+    "firstBoss": {
+      "desc": "Je eerste baasgevecht gewonnen.",
+      "name": "Stormbreker"
+    },
+    "firstDeck": {
+      "desc": "Je eerste stapel gemaakt.",
+      "name": "Eerste stapel"
+    },
+    "firstQuiz": {
+      "desc": "Je eerste vraag beantwoord.",
+      "name": "Eerste stappen"
+    },
+    "flashcards100": {
+      "desc": "100 kaartjes herhaald.",
+      "name": "Kaartjesas"
+    },
+    "level10": {
+      "desc": "Niveau 10 bereikt.",
+      "name": "Opkomend talent"
+    },
+    "marathon": {
+      "desc": "Een uur gestudeerd in één dag.",
+      "name": "Marathon"
+    },
+    "nightSession": {
+      "desc": "Een ronde afgerond in de late avond.",
+      "name": "Nachtwerk"
+    },
+    "perfectExam": {
+      "desc": "100% behaald in examenmodus.",
+      "name": "Vlekkeloos"
+    },
+    "planner": {
+      "desc": "Een examen toegevoegd aan je planner.",
+      "name": "Planner"
+    },
+    "polyglot": {
+      "desc": "Quizzes in twee of meer talen gedaan.",
+      "name": "Polyglot"
+    },
+    "questions100": {
+      "desc": "100 vragen beantwoord.",
+      "name": "Honderd"
+    },
+    "questions1000": {
+      "desc": "1.000 vragen beantwoord.",
+      "name": "Bergbeklimmer"
+    },
+    "streak100": {
+      "desc": "100 dagen op rij gestudeerd.",
+      "name": "Honderd nachten"
+    },
+    "streak30": {
+      "desc": "30 dagen achter elkaar gestudeerd.",
+      "name": "Een maand"
+    },
+    "streak7": {
+      "desc": "7 dagen achter elkaar gestudeerd.",
+      "name": "Een week"
+    },
+    "suddenDeath20": {
+      "desc": "20 bereikt in sudden death.",
+      "name": "Stalen zenuwen"
+    }
+  },
+  "challenge": {
+    "accept": "Accepteer de uitdaging",
+    "copied": "Link gekopieerd!",
+    "copy": "Link kopiëren",
+    "draw": "Gelijkspel!",
+    "forFun": "Scores in challenge links zijn alleen voor de lol.",
+    "friend": "Een vriend",
+    "from": "{{name}} daagt je uit!",
+    "intro_one": "Je link bevat {{count}} vraag uit deze ronde, met je score. Je notities en bronnen worden nooit meegenomen.",
+    "intro_other": "Je link bevat {{count}} vragen uit deze ronde, met je score. Je notities en bronnen worden nooit meegenomen.",
+    "makeOwn": "Maak een quiz van mijn eigen aantekeningen",
+    "none": "Speel eerst een ronde met meerkeuze, waar/niet waar, invul, matchen of rangschikken vragen.",
+    "privacy": "De vragen zitten in de link zelf — ze gaan nooit naar onze server.",
+    "share": "Link delen",
+    "shareText": "{{name}} daagt je uit op StudyNight! Kun jij mijn score verslaan?",
+    "theirScore": "Hun score: {{correct}}/{{total}}. Kun jij het overtreffen?",
+    "theyWin": "Zo dicht!",
+    "you": "Jij",
+    "youWin": "Je wint!"
+  },
   "common": {
     "back": "Terug",
     "cancel": "Annuleren",
@@ -13,21 +124,242 @@
     "done": "Klaar",
     "goHome": "Naar huis",
     "loading": "Laden…",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
     "next": "Volgende",
     "retry": "Opnieuw proberen",
     "save": "Opslaan",
+    "saved": "Opgeslagen",
     "skip": "Overslaan",
+    "skipToContent": "Overslaan",
     "undo": "Ongedaan maken"
   },
+  "deck": {
+    "aiDisclaimer": "AI kan fouten maken — controleer altijd met je aantekeningen. Tik op de bron van een vraag om te zien waar deze vandaan komt.",
+    "busy": "Wachten op de AI‑service…",
+    "delete": "Deck verwijderen",
+    "deleteBody": "“{{title}}”, de vragen en de geschiedenis worden van dit apparaat verwijderd.",
+    "deleted": "“{{title}}” verwijderd",
+    "deleteTitle": "Dit deck verwijderen?",
+    "generating": "Meer vragen aan het maken…",
+    "masteryLabel": "Beheersing {{percent}}%",
+    "missing": "Deck niet gevonden",
+    "missingBody": "Dit deck bestaat niet meer op dit apparaat.",
+    "modes": "Speelwijzen",
+    "pages_one": "{{count}} pagina",
+    "pages_other": "{{count}} pagina's",
+    "pastedText": "Platte tekst",
+    "percent": "{{value}}%",
+    "quizIn": "Quiz in {{language}}",
+    "regenerate": "Vragen voor een onderwerp opnieuw genereren",
+    "regenerateButton": "Opnieuw genereren",
+    "regenerated": "Nieuwe vragen zijn klaar.",
+    "regenerateHint": "Vervangt de vragen van dat onderwerp door nieuwe. Je antwoordgeschiedenis blijft behouden.",
+    "settings": "Deckinstellingen",
+    "slides_one": "{{count}} dia",
+    "slides_other": "{{count}} dia's",
+    "sources": "Bronnen",
+    "topicMap": "Onderwerpskaart",
+    "topicQuestions_one": "{{count}} vraag",
+    "topicQuestions_other": "{{count}} vragen",
+    "topicStatus_one": "Beheersing {{percent}}% · {{count}} vraag",
+    "topicStatus_other": "Beheersing {{percent}}% · {{count}} vragen",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Nog werk nodig"
+  },
+  "decks": {
+    "due_one": "{{count}} te doen",
+    "due_other": "{{count}} te doen",
+    "emptyBody": "Upload je notities of probeer een voorbeelddeck om te beginnen.",
+    "emptyTitle": "Nog geen decks",
+    "failed": "Er is iets misgegaan",
+    "processing": "Voorbereiden…",
+    "questionCount_one": "{{count}} vraag",
+    "questionCount_other": "{{count}} vragen",
+    "topicCount_one": "{{count}} onderwerp",
+    "topicCount_other": "{{count}} onderwerpen"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Probeer het opnieuw.",
+      "title": "Er zat iets niet goed"
+    },
+    "badChallenge": {
+      "body": "Het is mogelijk dat hij is afgebroken bij het kopiëren. Vraag je vriend om het opnieuw te sturen.",
+      "title": "Deze challenge link werkt niet"
+    },
     "boundary": {
       "body": "Je decks en voortgang zijn veilig opgeslagen op dit apparaat. Laten we terug naar huis gaan.",
       "title": "Oeps, er is iets misgegaan"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” lijkt beschadigd. Probeer het opnieuw op te slaan of te exporteren.",
+      "title": "Kon dit bestand niet openen"
+    },
+    "EMPTY": {
+      "body": "Voeg eerst een bestand, een foto of wat tekst toe.",
+      "title": "Niets te lezen"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” is groter dan 25 MB. Probeer het op te splitsen of een kleinere PDF te exporteren.",
+      "title": "Bestand te groot"
+    },
+    "INTERRUPTED": {
+      "body": "De app werd gesloten terwijl je stapel werd aangemaakt. Verwijder deze stapel en voeg je bestanden opnieuw toe.",
+      "title": "Upload onderbroken"
+    },
+    "NO_TEXT": {
+      "body": "Dit lijkt op een gescand document. Maak in plaats daarvan foto's van de pagina's, en StudyNight leest ze.",
+      "title": "Geen tekst gevonden"
+    },
+    "OFFLINE": {
+      "body": "Dit vereist een internetverbinding. Alles wat je al hebt gemaakt werkt nog steeds offline.",
+      "title": "Je bent offline"
+    },
+    "PASSWORD": {
+      "body": "Verwijder het wachtwoord (of print het naar een nieuwe PDF) en upload het opnieuw.",
+      "title": "Dit PDF is met een wachtwoord beveiligd"
+    },
+    "RATE_LIMITED": {
+      "body": "Veel mensen zijn nu aan het studeren — je volgende vragen zijn zo klaar. Bekijk ondertussen wat je al hebt.",
+      "title": "Veel mensen zijn nu aan het studeren"
+    },
+    "storage": "Kon niet opslaan op dit apparaat. Maak wat ruimte vrij en probeer het opnieuw.",
+    "STORAGE_FULL": {
+      "body": "Verwijder een stapel of exporteer een backup in Profiel om ruimte te maken, probeer daarna opnieuw.",
+      "title": "Je apparaat is vol"
+    },
+    "TIMEOUT": {
+      "body": "De AI-service reageerde niet op tijd. Probeer het opnieuw.",
+      "title": "Dat duurde te lang"
+    },
+    "TOO_LARGE": {
+      "body": "Probeer een kleiner bestand of minder pagina's tegelijk.",
+      "title": "Te groot om te versturen"
+    },
+    "TOO_LONG": {
+      "body": "Een deck kan maximaal 200.000 tekens tekst bevatten. Splits het in een paar decks.",
+      "title": "Document te lang"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Een deck kan maximaal {{limit}} pagina's of dia's bevatten. Splits je materiaal in een paar decks.",
+      "title": "Te veel pagina's"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Een deck kan maximaal 30 foto's bevatten. Maak een tweede deck voor de rest.",
+      "title": "Te veel foto's"
+    },
+    "UNKNOWN": {
+      "body": "Probeer het opnieuw.",
+      "title": "Er ging iets mis"
+    },
+    "UNREADABLE": {
+      "body": "Probeer een duidelijkere foto of een ander bestand.",
+      "title": "Kon dat niet lezen"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” kan niet worden gelezen. Gebruik PDF, PowerPoint (.pptx), Word (.docx), tekst, Markdown of een foto.",
+      "title": "Bestandstype niet ondersteund"
+    },
+    "UPSTREAM": {
+      "body": "Probeer het over een momentje nog eens.",
+      "title": "De AI-service had een probleem"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Per onderwerp",
+    "duration": "Tijd",
+    "estimate": "Dit is een schatting op basis van je antwoorden en hoe goed je je stapel waarschijnlijk onthoudt. Het is geen garantie.",
+    "extended": "Verlengde tijd is aan: je krijgt 50 % extra tijd.",
+    "intro": "Een getimede oefenexam zonder hints en zonder feedback tot het einde. Daarna krijg je een rapport met een geschatte score.",
+    "mistakes": "Bekijk je fouten",
+    "questions": "Vragen",
+    "reportTitle": "Voorspelde score",
+    "start": "Start examen"
+  },
+  "explain": {
+    "check": "Controleer mijn antwoord",
+    "checking": "Bezig met controleren…",
+    "covered": "Behandeld",
+    "great": "Geweldig antwoord!",
+    "label": "Jouw antwoord",
+    "missed": "Gemist",
+    "modelAnswer": "Modelantwoord",
+    "notYet": "Nog niet",
+    "partly": "Gedeeltelijk correct",
+    "placeholder": "Leg het in je eigen woorden…",
+    "points": "Je hebt {{hit}} van {{total}} kernpunten behandeld."
+  },
+  "home": {
+    "continue": "Doorgaan",
+    "examIn_one": "{{title}} examen over {{count}} dag",
+    "examIn_other": "{{title}} examen over {{count}} dagen",
+    "examToday": "{{title}}: examen vandaag. Veel succes!",
+    "freezes_one": "{{count}} streak-bevriezing",
+    "freezes_other": "{{count}} streak-bevriezingen",
+    "go": "Spelen",
+    "goalOf_one": "van {{count}} min",
+    "goalOf_other": "van {{count}} min",
+    "goalRing": "Dagdoel {{percent}}% voltooid",
+    "greetingAfternoon": "Goedemiddag!",
+    "greetingAfternoonName": "Goedemiddag, {{name}}!",
+    "greetingEvening": "Goedenavond!",
+    "greetingEveningName": "Goedenavond, {{name}}!",
+    "greetingMorning": "Goedemorgen!",
+    "greetingMorningName": "Goedemorgen, {{name}}!",
+    "level": "Level {{level}}",
+    "levelProgress": "Voortgang naar het volgende level, {{xp}} XP in totaal",
+    "mood": {
+      "celebrating": "Dagdoel behaald. Geweldig werk!",
+      "encouraging": "Voeg je eerste notities toe en laten we spelen.",
+      "happy": "Klaar voor een snelle ronde?",
+      "sleepy": "Je streak wacht — een paar vragen houden het levend."
+    },
+    "newDeck": "Nieuwe deck",
+    "openDeck": "Open {{title}}",
+    "resume": "Je hebt een ronde in uitvoering.",
+    "review": "Herzien",
+    "reviewDue_one": "{{count}} vraag te herzien",
+    "reviewDue_other": "{{count}} vragen te herzien",
+    "reviewDueHint": "Herzien nu helpt het vast te houden.",
+    "statsLabel": "Vandaag",
+    "streakDays_one": "dag streak",
+    "streakDays_other": "dag streak",
+    "trySample": "Probeer een voorbeelddeck",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Kies je taal",
     "menuLabel": "Taal: {{language}}. Taal wijzigen"
+  },
+  "legal": {
+    "privacyLink": "Privacy"
+  },
+  "modes": {
+    "ask": "Vraag je aantekeningen",
+    "askHint": "Alleen antwoorden uit je notities",
+    "boss": "Boss‑gevecht",
+    "bossHint_one": "{{count}} onderwerp klaar",
+    "bossHint_other": "{{count}} onderwerpen klaar",
+    "bossIntro": "Versla de stormwolk: moeilijkere vragen, {{seconds}} seconden per stuk en drie harten. Geen hints!",
+    "bossLocked": "Ontgrendelt bij {{percent}}% beheersing",
+    "bossReady": "Boss‑gevecht ontgrendeld",
+    "challenge": "Daag een vriend uit",
+    "challengeHint": "Stuur je vragen",
+    "exam": "Examenmodus",
+    "examHint": "Getimede oefenexamen",
+    "flashcards": "Flashcards",
+    "flashcardsHint": "Swipe om te herhalen",
+    "practiseTopic": "Oefen dit onderwerp",
+    "quick": "Snel spelen",
+    "quickHint": "10 gemengde vragen",
+    "review": "Herziening nodig",
+    "sudden": "Plotselinge dood",
+    "suddenBest_one": "Beste: {{count}} op rij",
+    "suddenBest_other": "Beste: {{count}} op rij",
+    "topic": "Oefen een onderwerp",
+    "topicHint": "Focus op één onderwerp"
   },
   "nav": {
     "decks": "Decks",
@@ -35,5 +367,208 @@
     "label": "Hoofd",
     "profile": "Profiel",
     "review": "Review"
+  },
+  "newDeck": {
+    "chooseFiles": "Bestanden kiezen",
+    "create": "Maak mijn quiz",
+    "deckTitle": "Decktitel",
+    "dropTitle": "Voeg je studiemateriaal toe",
+    "examDate": "Examendatum (optioneel)",
+    "examDateHint": "We plannen je herhaling eromheen.",
+    "formats": "PDF, PowerPoint, Word, tekst of foto's. Meerdere bestanden kunnen in één deck gaan.",
+    "lowerQuality": "kwaliteit kan lager zijn",
+    "notice": "Upload alleen materiaal waarvoor je het recht hebt. Upload geen documenten met persoonlijke of gevoelige informatie over jezelf of anderen.",
+    "pasteLabel": "Jouw tekst",
+    "pastePlaceholder": "Plak hier je notities…",
+    "pasteText": "In plaats daarvan tekst plakken",
+    "quizLanguage": "Quiztaal",
+    "ready": "Je quiz is klaar. Er komen meer vragen!",
+    "remove": "Verwijder {{name}}",
+    "sameAsNotes": "Zelfde als mijn notities",
+    "selected": "Geselecteerde bestanden",
+    "takePhoto": "Foto maken",
+    "title": "Nieuw deck",
+    "titlePlaceholder": "Bijvoorbeeld, Biologie week 3",
+    "untitled": "Mijn notities"
+  },
+  "onboarding": {
+    "later": "Even rondkijken",
+    "one": {
+      "body": "Voeg je slides, notities of een foto van je notitieboek toe. Een quiz gebaseerd op je eigen materiaal is klaar in ongeveer een half minuut.",
+      "title": "Jouw notities, omgezet in een spel"
+    },
+    "setup": {
+      "avatar": "Kies een avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Dagdoel",
+      "nickname": "Bijnaam (optioneel)",
+      "nicknameHint": "Alleen op dit apparaat opgeslagen.",
+      "title": "Maak het jouw eigen"
+    },
+    "three": {
+      "body": "StudyNight onthoudt wat je lastig vindt en brengt het op het juiste moment terug, tot aan je examen.",
+      "title": "Leer het goed"
+    },
+    "trySample": "Probeer een voorbeelddeck",
+    "two": {
+      "body": "Tik op de bron om het exacte fragment uit je notities te zien. De vragen worden vergeleken met je notities voordat je ze ziet.",
+      "title": "Elke vraag toont de bron"
+    },
+    "uploadNotes": "Mijn notities uploaden"
+  },
+  "play": {
+    "answerWas": "Antwoord:",
+    "bossHit": "Direct raak!",
+    "check": "Controleren",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Correct!",
+    "correctAnswer": "Correct antwoord",
+    "correctOrder": "Juiste volgorde",
+    "correctPairs": "Juiste paren",
+    "definitions": "Betekenissen",
+    "expected": "Het antwoord:",
+    "false": "Onwaar",
+    "figureAlt": "De afbeelding uit je aantekeningen waar deze vraag over gaat",
+    "fromNotes": "Uit je aantekeningen",
+    "fromPage": "Uit je aantekeningen · Pagina {{n}}",
+    "fromSlide": "Uit je aantekeningen · Dia {{n}}",
+    "grade": {
+      "again": "Opnieuw",
+      "easy": "Makkelijk",
+      "good": "Goed",
+      "hard": "Moeilijk"
+    },
+    "hearts_one": "{{count}} hart over",
+    "hearts_other": "{{count}} harten over",
+    "hint": "Hint (halve XP)",
+    "howWell": "Hoe goed kende je het?",
+    "incorrect": "Niet helemaal",
+    "incorrectAnnounce": "Niet helemaal. Het antwoord is {{answer}}",
+    "matchHelp": "Tik op een term, daarna op de bijbehorende betekenis.",
+    "moveDown": "Stap {{n}} omlaag",
+    "moveUp": "Stap {{n}} omhoog",
+    "noQuestions": "Nog geen vragen",
+    "noQuestionsBody": "Nieuwe vragen worden nog geschreven. Probeer het over een moment opnieuw, of controleer je verbinding.",
+    "nothingDue": "Nu niets te herhalen",
+    "nothingDueBody": "Je bent helemaal bij. Kom later terug of speel een snelle ronde.",
+    "orderHelp": "Sleep de stappen of gebruik de pijlen om ze in volgorde te zetten.",
+    "pageN": "Pagina {{n}}",
+    "pairedWith": "Geparreerd met term {{n}}: {{text}}",
+    "preparing": "Je vragen worden klaargemaakt…",
+    "progress": "Vraag {{n}} van {{total}}",
+    "quit": "Pauzeren of stoppen",
+    "quitBody": "Je antwoorden tot nu toe zijn opgeslagen.",
+    "quitConfirm": "Verlaten",
+    "quitTitle": "Deze ronde verlaten?",
+    "reset": "Reset",
+    "secondsLeft_one": "{{count}} seconde over",
+    "secondsLeft_other": "{{count}} seconden over",
+    "showAnswer": "Antwoord tonen",
+    "slideN": "Dia {{n}}",
+    "sourceTitle": "Uit je aantekeningen",
+    "swipeHelp": "Veeg rechts als je het wist, links om het opnieuw te zien, omhoog als het makkelijk was.",
+    "terms": "Termen",
+    "timeLeft": "Resterende tijd: {{time}}",
+    "true": "Waar",
+    "typeAnswer": "Typ je antwoord",
+    "typoAccepted": "Geaccepteerd — let op de spelling: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP deze ronde",
+    "yourAnswer": "Jouw antwoord"
+  },
+  "processing": {
+    "background": "Je kunt meteen beginnen met spelen zodra de eerste vragen klaar zijn. De rest komt in de achtergrond.",
+    "chooseBody_one": "{{count}} pagina vereist beeldherkenning, maar maximaal {{max}} pagina's kunnen per deck worden gelezen. Kies waar te beginnen.",
+    "chooseBody_other": "{{count}} pagina's vereisen beeldherkenning, maar maximaal {{max}} pagina's kunnen per deck worden gelezen. Kies waar te beginnen.",
+    "choosePages": "Lees pagina's {{from}}–{{to}}",
+    "chooseTitle": "Kies pagina's om te lezen",
+    "handwriting": "Handschrift wordt op best-effort basis gelezen.",
+    "questions": "Schrijft je eerste vragen over “{{topic}}”…",
+    "readingFile": "Leest {{name}}…",
+    "readingPage": "Leest pagina {{page}} van {{total}}…",
+    "startPage": "Begin bij pagina",
+    "title": "Je quiz wordt opgebouwd",
+    "topics": "Zoekt de hoofdonderwerpen…",
+    "vision": "Leest je afbeeldingen ({{done}} van {{total}})…"
+  },
+  "report": {
+    "body": "Het wordt meteen uit je set verwijderd en nooit meer getoond.",
+    "done": "Vraag verwijderd",
+    "duplicate": "Duplicaat",
+    "notInNotes": "Niet in mijn aantekeningen",
+    "open": "Rapporteer deze vraag",
+    "title": "Rapporteer deze vraag",
+    "unclear": "Onduidelijk",
+    "wrong": "Verkeerd antwoord"
+  },
+  "results": {
+    "accuracy": "Nauwkeurigheid",
+    "bestCombo": "Beste combo",
+    "bossLost": "De storm hield stand — probeer opnieuw!",
+    "bossWon": "Storm voorbij!",
+    "done": "Klaar",
+    "goalMet": "Dagelijkse doel bereikt! +20 XP bonus.",
+    "levelUp": "Level omhoog! Je bent level {{level}}.",
+    "newBadges": "Nieuwe badges",
+    "newBest": "Nieuw persoonlijk record!",
+    "practiseThese": "Oefen deze",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Rondsamenvatting",
+    "suddenScore_one": "{{count}} op rij!",
+    "suddenScore_other": "{{count}} op rij!",
+    "time": "Tijd",
+    "weakest": "Jouw lastigste onderwerpen",
+    "xp": "XP verdiend",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Geschreven voor StudyNight, klaar om meteen te spelen — geen upload nodig. Ze werken ook offline.",
+    "play_one": "Spelen ({{count}} vraag)",
+    "play_other": "Spelen ({{count}} vragen)",
+    "title": "Voorbeelddecks"
+  },
+  "share": {
+    "button": "Resultaat delen",
+    "copied": "Gekopieerd!",
+    "copyText": "Tekst kopiëren",
+    "download": "Afbeelding downloaden",
+    "includeDeck": "Toon dektitel",
+    "shareImage": "Afbeelding delen",
+    "text": "Ik haalde {{correct}}/{{total}} op StudyNight — {{title}}! 🌙",
+    "textDeck": "Ik haalde {{correct}}/{{total}} op “{{deck}}” in StudyNight — {{title}}! 🌙",
+    "title": "Deel je resultaat"
+  },
+  "smart": {
+    "body": "Vindt de juiste passages, zelfs als je andere woorden of een andere taal gebruikt. Downloadt ongeveer {{size}} MB één keer, dan werkt het offline.",
+    "download": "Downloaden ({{size}} MB)",
+    "downloading": "Slim zoeken: downloaden {{percent}}…",
+    "failed": "Slim zoeken kon niet worden ingesteld. Keyword zoeken werkt nog wel; je kunt het opnieuw proberen in Instellingen.",
+    "mobileData": "Het lijkt erop dat je mobiel data gebruikt. Je kunt beter wachten op Wi‑Fi.",
+    "notNow": "Niet nu",
+    "title": "Slim zoeken"
+  },
+  "titles": {
+    "bossSlayer": "Stormjager",
+    "braveExplorer": "Dappere ontdekkingsreiziger",
+    "comboMaster": "Combo meester",
+    "deepThinker": "Diepdenker",
+    "earlyRiser": "Vroeg opstaan",
+    "freshStart": "Nieuwe start",
+    "hintFreeHero": "Hintvrije held",
+    "marathoner": "Marathonloper",
+    "neverGiveUp": "Geef nooit op",
+    "nightOwlMode": "Nachtuil-modus",
+    "perfectionist": "Perfectionist",
+    "speedReader": "Snellezer",
+    "steadyClimber": "Stevige klimmer",
+    "topicTamer": "Onderwerp temmer"
+  },
+  "voice": {
+    "denied": "Microfoontoegang geweigerd. Sta het toe in je browserinstellingen, of typ je antwoord in.",
+    "record": "Antwoord met stem",
+    "recording": "Opnemen…",
+    "stop": "Stoppen met opnemen ({{seconds}} s resterend)",
+    "transcribing": "Spraak omzetten naar tekst…"
   }
 }

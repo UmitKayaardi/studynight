@@ -3,6 +3,117 @@
     "name": "StudyNight",
     "tagline": "Notlarınız, bir oyuna dönüştürüldü."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Bir arkadaşına meydan okuma gönderdin.",
+      "name": "Meydan Okuyan"
+    },
+    "combo10": {
+      "desc": "Ard arda 10 doğru cevap verdin.",
+      "name": "Ateş Gibi"
+    },
+    "comeback": {
+      "desc": "Bir hafta sonra geri döndün.",
+      "name": "Tekrar Hoşgeldin"
+    },
+    "curious": {
+      "desc": "Notlarından 10 soru sordun.",
+      "name": "Meraklı Zihin"
+    },
+    "earlyStart": {
+      "desc": "Sabah erken bir tur tamamladın.",
+      "name": "Şafak"
+    },
+    "earned": "Yeni rozet: {{name}}",
+    "explainer": {
+      "desc": "10 harika açıklama yaptın.",
+      "name": "Açıklayıcı"
+    },
+    "firstBoss": {
+      "desc": "İlk boss savaşını kazandınız.",
+      "name": "Fırtına Kırıcı"
+    },
+    "firstDeck": {
+      "desc": "İlk kart paketinizi oluşturdu.",
+      "name": "İlk Kart Paketi"
+    },
+    "firstQuiz": {
+      "desc": "İlk sorunuza cevap verdiniz.",
+      "name": "İlk Adım"
+    },
+    "flashcards100": {
+      "desc": "100 flashcard'ı gözden geçirdin.",
+      "name": "Kart Ustası"
+    },
+    "level10": {
+      "desc": "Seviye 10'a ulaştın.",
+      "name": "Yükselen Yıldız"
+    },
+    "marathon": {
+      "desc": "Bir günde bir saat çalıştın.",
+      "name": "Maraton"
+    },
+    "nightSession": {
+      "desc": "Gece geç bir tur tamamladın.",
+      "name": "Gece Yarısı Çalışması"
+    },
+    "perfectExam": {
+      "desc": "Sınav modunda %100 puan aldın.",
+      "name": "Kusursuz Sınav"
+    },
+    "planner": {
+      "desc": "Planlayıcına bir sınav ekledin.",
+      "name": "Planlayıcı"
+    },
+    "polyglot": {
+      "desc": "İki ya da daha fazla dilde test çözdün.",
+      "name": "Poliglot"
+    },
+    "questions100": {
+      "desc": "100 soruya cevap verdin.",
+      "name": "Yüzyıl"
+    },
+    "questions1000": {
+      "desc": "1.000 soruya cevap verdin.",
+      "name": "Dağcı"
+    },
+    "streak100": {
+      "desc": "100 gün aralıksız çalıştın.",
+      "name": "Yüz Gece"
+    },
+    "streak30": {
+      "desc": "30 gün üst üste çalıştınız.",
+      "name": "Bir Ay"
+    },
+    "streak7": {
+      "desc": "7 gün üst üste çalıştınız.",
+      "name": "Bir Hafta"
+    },
+    "suddenDeath20": {
+      "desc": "Ani ölümde 20 puana ulaştın.",
+      "name": "Çelik Sinirler"
+    }
+  },
+  "challenge": {
+    "accept": "Meydan okumayı kabul et",
+    "copied": "Bağlantı kopyalandı!",
+    "copy": "Bağlantıyı kopyala",
+    "draw": "Berabere!",
+    "forFun": "Zorluk bağlantılarındaki puanlar sadece eğlence amaçlıdır.",
+    "friend": "Bir arkadaş",
+    "from": "{{name}} seni meydan okuyor!",
+    "intro_one": "Bağlantın bu turdan {{count}} soru içeriyor, puanınla birlikte. Notların ve kaynakları asla eklenmez.",
+    "intro_other": "Bağlantın bu turdan {{count}} soru içeriyor, puanınla birlikte. Notların ve kaynakları asla eklenmez.",
+    "makeOwn": "Kendi notlarından bir test oluştur",
+    "none": "Çoktan seçmeli, doğru/yanlış, boşluk doldurma, eşleştirme veya sıralama sorularıyla bir tur oynayın.",
+    "privacy": "Sorular sadece bağlantının içinde taşınır — sunucumuza gitmez.",
+    "share": "Bağlantıyı paylaş",
+    "shareText": "{{name}} seni StudyNight'te meydan okuyor! Benim puanımı geçebilir misin?",
+    "theirScore": "Onların puanı: {{correct}}/{{total}}. Geçebilir misin?",
+    "theyWin": "Çok yakındasın!",
+    "you": "Sen",
+    "youWin": "Kazandın!"
+  },
   "common": {
     "back": "Geri",
     "cancel": "İptal",
@@ -13,21 +124,242 @@
     "done": "Tamam",
     "goHome": "Ana sayfaya dön",
     "loading": "Yükleniyor…",
+    "minutes_one": "{{count}} dk",
+    "minutes_other": "{{count}} dk",
     "next": "İleri",
     "retry": "Tekrar dene",
     "save": "Kaydet",
+    "saved": "Kaydedildi",
     "skip": "Atla",
+    "skipToContent": "İçeriğe geç",
     "undo": "Geri al"
   },
+  "deck": {
+    "aiDisclaimer": "AI hatalar yapabilir — notlarını kontrol et. Her sorunun kaynağına dokunarak nereden geldiğini gör.",
+    "busy": "AI hizmeti bekleniyor…",
+    "delete": "Kart destesini sil",
+    "deleteBody": "“{{title}}”, soruları ve geçmişi bu cihazdan kaldırılacak.",
+    "deleted": "“{{title}}” silindi",
+    "deleteTitle": "Bu kart destesini silmek istediğinize emin misiniz?",
+    "generating": "Daha fazla soru hazırlanıyor…",
+    "masteryLabel": "Uzmanlık {{percent}}%",
+    "missing": "Kart destesi bulunamadı",
+    "missingBody": "Bu kart destesi artık bu cihazda mevcut değil.",
+    "modes": "Oynanış şekilleri",
+    "pages_one": "{{count}} sayfa",
+    "pages_other": "{{count}} sayfa",
+    "pastedText": "Yapıştırılan metin",
+    "percent": "{{value}}%",
+    "quizIn": "Sınav {{language}}",
+    "regenerate": "Bir konunun sorularını yenile",
+    "regenerateButton": "Yenile",
+    "regenerated": "Yeni sorular hazır.",
+    "regenerateHint": "O konunun sorularını yeniler. Cevap geçmişin korunur.",
+    "settings": "Kart destesi ayarları",
+    "slides_one": "{{count}} slayt",
+    "slides_other": "{{count}} slayt",
+    "sources": "Kaynaklar",
+    "topicMap": "Konu haritası",
+    "topicQuestions_one": "{{count}} soru",
+    "topicQuestions_other": "{{count}} soru",
+    "topicStatus_one": "Uzmanlık {{percent}}% · {{count}} soru",
+    "topicStatus_other": "Uzmanlık {{percent}}% · {{count}} soru",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "İyileştirme gerekiyor"
+  },
+  "decks": {
+    "due_one": "{{count}} teslim",
+    "due_other": "{{count}} teslim",
+    "emptyBody": "Notlarını yükle ya da bir örnek desteyi dene, oynamaya başlayabilirsin.",
+    "emptyTitle": "Henüz desteler yok",
+    "failed": "Bir şeyler ters gitti",
+    "processing": "Hazırlanıyor…",
+    "questionCount_one": "{{count}} soru",
+    "questionCount_other": "{{count}} soru",
+    "topicCount_one": "{{count}} konu",
+    "topicCount_other": "{{count}} konu"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Lütfen tekrar deneyin.",
+      "title": "Bir şeyler yanlış göründü"
+    },
+    "badChallenge": {
+      "body": "Kopyalanırken kesilmiş olabilir. Arkadaşından tekrar göndermesini iste.",
+      "title": "Bu zorluk bağlantısı çalışmıyor"
+    },
     "boundary": {
       "body": "Desteleriniz ve ilerlemeniz bu cihazda güvenli bir şekilde kaydedildi. Hadi ana sayfaya dönelim.",
       "title": "Oops, bir şeyler ters gitti"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” hasarlı görünüyor. Tekrar kaydet veya dışa aktar.",
+      "title": "Bu dosya açılamadı"
+    },
+    "EMPTY": {
+      "body": "Önce bir dosya, fotoğraf veya metin ekle.",
+      "title": "Okunacak bir şey yok"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” 25 MB'yi aşıyor. Bölmek veya daha küçük bir PDF olarak dışa aktarmak deneyin.",
+      "title": "Dosya çok büyük"
+    },
+    "INTERRUPTED": {
+      "body": "Uygulama, desteniz oluşturulurken kapandı. Bu desteyi silin ve dosyalarınızı yeniden ekleyin.",
+      "title": "Yükleme kesildi"
+    },
+    "NO_TEXT": {
+      "body": "Bu bir taranmış belge gibi görünüyor. Sayfaların fotoğraflarını çek, StudyNight onları okuyacak.",
+      "title": "Metin bulunamadı"
+    },
+    "OFFLINE": {
+      "body": "İnternet bağlantısı gerekiyor. Daha önce yaptığın her şey hâlâ çevrimdışı çalışır.",
+      "title": "Çevrimdışı"
+    },
+    "PASSWORD": {
+      "body": "Parolayı kaldır (veya yeni bir PDF olarak yazdır) ve tekrar yükle.",
+      "title": "Bu PDF parola korumalı"
+    },
+    "RATE_LIMITED": {
+      "body": "Şu anda çok kişi çalışıyor — soruların kısa bir süre içinde hazır olacak. Bu arada, elindekileri gözden geçir.",
+      "title": "Şu anda çok kişi çalışıyor"
+    },
+    "storage": "Bu cihazda kaydedilemedi. Biraz yer aç ve tekrar dene.",
+    "STORAGE_FULL": {
+      "body": "Profil'de bir deste silin ya da yedek dışa aktarın, ardından tekrar deneyin.",
+      "title": "Cihazınız dolu"
+    },
+    "TIMEOUT": {
+      "body": "Yapay zeka hizmeti zamanında yanıt vermedi. Lütfen tekrar deneyin.",
+      "title": "Çok uzun sürdü"
+    },
+    "TOO_LARGE": {
+      "body": "Daha küçük bir dosya ya da daha az sayfa deneyin.",
+      "title": "Gönderilemeyecek kadar büyük"
+    },
+    "TOO_LONG": {
+      "body": "Bir set en fazla 200.000 karakter metin tutabilir. Birkaç sete böl.",
+      "title": "Belge çok uzun"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Bir set en fazla {{limit}} sayfa veya slayt içerebilir. Materyalinizi birkaç sete böl.",
+      "title": "Çok fazla sayfa"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Bir set en fazla 30 fotoğraf içerebilir. Kalanlar için ikinci bir set oluştur.",
+      "title": "Çok fazla fotoğraf"
+    },
+    "UNKNOWN": {
+      "body": "Lütfen tekrar deneyin.",
+      "title": "Bir şeyler ters gitti"
+    },
+    "UNREADABLE": {
+      "body": "Daha net bir fotoğraf ya da farklı bir dosya deneyin.",
+      "title": "Okunamadı"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” okunamıyor. PDF, PowerPoint (.pptx), Word (.docx), metin, Markdown veya fotoğraf kullan.",
+      "title": "Dosya türü desteklenmiyor"
+    },
+    "UPSTREAM": {
+      "body": "Lütfen bir süre sonra tekrar deneyin.",
+      "title": "Yapay zeka hizmetinde sorun var"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Konuya göre",
+    "duration": "Süre",
+    "estimate": "Bu, cevapların ve desteni ne kadar hatırlayabileceğin üzerine bir tahmindir. Garantili değildir.",
+    "extended": "Ek süre açık: %50 daha fazla zaman alırsın.",
+    "intro": "Zamanlı deneme sınavı, ipucu yok, geri bildirim sonuna kadar gelmez. Sonra tahmini puanla bir rapor alırsın.",
+    "mistakes": "Hatalarını gözden geçir",
+    "questions": "Sorular",
+    "reportTitle": "Tahmini puan",
+    "start": "Sınavı başlat"
+  },
+  "explain": {
+    "check": "Cevabımı kontrol et",
+    "checking": "Cevabın kontrol ediliyor…",
+    "covered": "Kapsanan",
+    "great": "Harika cevap!",
+    "label": "Cevabın",
+    "missed": "Kaçırılan",
+    "modelAnswer": "Örnek cevap",
+    "notYet": "Henüz değil",
+    "partly": "Yarısı doğru",
+    "placeholder": "Kendi cümlelerinle açıkla…",
+    "points": "{{total}} ana noktadan {{hit}} tanesini kapsadın."
+  },
+  "home": {
+    "continue": "Devam et",
+    "examIn_one": "{{title}} sınavı {{count}} günde",
+    "examIn_other": "{{title}} sınavı {{count}} günde",
+    "examToday": "{{title}}: bugün sınav. İyi şans!",
+    "freezes_one": "{{count}} seri dondurması",
+    "freezes_other": "{{count}} seri dondurması",
+    "go": "Oyna",
+    "goalOf_one": "{{count}} dk'lik",
+    "goalOf_other": "{{count}} dk'lik",
+    "goalRing": "Günlük hedef {{percent}}% tamamlandı",
+    "greetingAfternoon": "Tünaydın!",
+    "greetingAfternoonName": "Tünaydın, {{name}}!",
+    "greetingEvening": "İyi akşamlar!",
+    "greetingEveningName": "İyi akşamlar, {{name}}!",
+    "greetingMorning": "Günaydın!",
+    "greetingMorningName": "Günaydın, {{name}}!",
+    "level": "Seviye {{level}}",
+    "levelProgress": "Bir sonraki seviyeye ilerleme, toplam {{xp}} XP",
+    "mood": {
+      "celebrating": "Günlük hedef tamamlandı. Harika iş!",
+      "encouraging": "İlk notlarını ekle ve oynayalım.",
+      "happy": "Hızlı bir tur için hazır mısın?",
+      "sleepy": "Seri bekliyor — birkaç soru onu canlı tutar."
+    },
+    "newDeck": "Yeni desteler",
+    "openDeck": "{{title}}'yi aç",
+    "resume": "Devam eden bir turun var.",
+    "review": "Gözden geçir",
+    "reviewDue_one": "{{count}} soru gözden geçirme",
+    "reviewDue_other": "{{count}} soru gözden geçirme",
+    "reviewDueHint": "Şimdi gözden geçirmek, kalıcı olmasına yardımcı olur.",
+    "statsLabel": "Bugün",
+    "streakDays_one": "günlük seri",
+    "streakDays_other": "günlük seri",
+    "trySample": "Örnek bir desteyi dene",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Dilini seç",
     "menuLabel": "Dil: {{language}}. Dili değiştir"
+  },
+  "legal": {
+    "privacyLink": "Gizlilik"
+  },
+  "modes": {
+    "ask": "Notlarını sor",
+    "askHint": "Sadece notlarından cevaplar",
+    "boss": "Büyük düşman",
+    "bossHint_one": "{{count}} konu hazır",
+    "bossHint_other": "{{count}} konu hazır",
+    "bossIntro": "Fırtına bulutunu yener misin: zor sorular, her biri {{seconds}} saniye ve üç kalp. İpucu yok!",
+    "bossLocked": "%{{percent}} uzmanlıkta açılır",
+    "bossReady": "Büyük düşman açıldı",
+    "challenge": "Bir arkadaşını meydan oku",
+    "challengeHint": "Sorularını gönder",
+    "exam": "Sınav modu",
+    "examHint": "Zamanlı deneme sınavı",
+    "flashcards": "Kartlar",
+    "flashcardsHint": "Gözden geçirmek için kaydır",
+    "practiseTopic": "Bu konuyu pratik et",
+    "quick": "Hızlı oyun",
+    "quickHint": "10 karışık soru",
+    "review": "Önceki sorular",
+    "sudden": "Anlık ölüm",
+    "suddenBest_one": "En iyi: {{count}} ardışık",
+    "suddenBest_other": "En iyi: {{count}} ardışık",
+    "topic": "Bir konuyu pratik et",
+    "topicHint": "Bir konuya odaklan"
   },
   "nav": {
     "decks": "Kâğıtlar",
@@ -35,5 +367,209 @@
     "label": "Ana",
     "profile": "Profil",
     "review": "Gözden Geçir"
+  },
+  "newDeck": {
+    "chooseFiles": "Dosyaları seç",
+    "create": "Soru setimi oluştur",
+    "deckTitle": "Deste başlığı",
+    "dropTitle": "Çalışma materyalini ekle",
+    "examDate": "Sınav tarihi (isteğe bağlı)",
+    "examDateHint": "Revizyonunu ona göre planlayacağız.",
+    "formats": "PDF, PowerPoint, Word, metin ya da fotoğraf. Birden fazla dosya aynı desteye konulabilir.",
+    "lowerQuality": "kalite düşük olabilir",
+    "notice": "Yalnızca kullanma hakkına sahip olduğun materyalleri yükle. Kişisel ya da başkalarının hassas bilgilerini içeren belgeleri yükleme.",
+    "pasteLabel": "Metnin",
+    "pastePlaceholder": "Notlarını buraya yapıştır…",
+    "pasteText": "Bunun yerine metin yapıştır",
+    "quizLanguage": "Soru dili",
+    "ready": "Soruların hazır. Daha fazla soru yolda!",
+    "remove": "{{name}} dosyasını kaldır",
+    "sameAsNotes": "Notlarımla aynı",
+    "selected": "Seçilen dosyalar",
+    "takePhoto": "Fotoğraf çek",
+    "title": "Yeni deste",
+    "titlePlaceholder": "Örneğin, Biyoloji 3. hafta",
+    "untitled": "Notlarım"
+  },
+  "onboarding": {
+    "later": "Sadece göz at",
+    "one": {
+      "body": "Slaytlarını, notlarını veya defter fotoğrafını ekle. Kendi materyalinle oluşturulmuş bir test, yarım dakikada hazır.",
+      "title": "Notların, bir oyuna dönüştürülmesi"
+    },
+    "setup": {
+      "avatar": "Bir avatar seç",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Günlük hedef",
+      "nickname": "Takma ad (isteğe bağlı)",
+      "nicknameHint": "Sadece bu cihazda saklanır.",
+      "title": "Kişiselleştir"
+    },
+    "three": {
+      "body": "StudyNight, zorlandığın konuları hatırlar ve sınavına kadar doğru zamanda tekrar sunar.",
+      "title": "Kalıcı öğren"
+    },
+    "trySample": "Örnek seti dene",
+    "two": {
+      "body": "Kaynağa dokunarak notlarından tam pasajı gör. Sorular, sen görmeden önce notlarınla kontrol edilir.",
+      "title": "Her soru kaynağını gösterir"
+    },
+    "uploadNotes": "Notlarımı yükle"
+  },
+  "play": {
+    "answerWas": "Cevap:",
+    "bossHit": "Doğrudan isabet!",
+    "check": "Kontrol et",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Doğru!",
+    "correctAnswer": "Doğru cevap",
+    "correctOrder": "Doğru sıra",
+    "correctPairs": "Doğru eşleşmeler",
+    "definitions": "Anlamlar",
+    "expected": "Cevap:",
+    "false": "Yanlış",
+    "figureAlt": "Bu sorunun konu aldığı notlardaki şekil",
+    "fromNotes": "Notlarından",
+    "fromPage": "Notlarından · Sayfa {{n}}",
+    "fromSlide": "Notlarından · Slayt {{n}}",
+    "grade": {
+      "again": "Tekrar",
+      "easy": "Kolay",
+      "good": "İyi",
+      "hard": "Zor"
+    },
+    "hearts_one": "{{count}} kalp kaldı",
+    "hearts_other": "{{count}} kalp kaldı",
+    "hint": "İpucu (yarı XP)",
+    "howWell": "Ne kadar iyi biliyordun?",
+    "incorrect": "Tam değil",
+    "incorrectAnnounce": "Tam değil. Cevap: {{answer}}",
+    "matchHelp": "Bir terime dokun, ardından ona karşılık gelen anlamı seç.",
+    "moveDown": "{{n}}. adımı aşağı taşı",
+    "moveUp": "{{n}}. adımı yukarı taşı",
+    "noQuestions": "Henüz soru yok",
+    "noQuestionsBody": "Yeni sorular hâlâ yazılıyor. Biraz sonra tekrar dene ya da bağlantını kontrol et.",
+    "nothingDue": "Şu anda gözden geçirilecek bir şey yok",
+    "nothingDueBody": "Hepsini tamamladın. Daha sonra gel ya da hızlı bir tur oyna.",
+    "orderHelp": "Adımları sürükleyerek veya okları kullanarak sıraya diz.",
+    "pageN": "Sayfa {{n}}",
+    "pairedWith": "{{n}}. terimle eşleşti: {{text}}",
+    "preparing": "Sorular hazırlanıyor…",
+    "progress": "Soru {{n}} / {{total}}",
+    "quit": "Duraklat ya da çık",
+    "quitBody": "Şu ana kadar verdiğin cevaplar kaydedildi.",
+    "quitConfirm": "Çık",
+    "quitTitle": "Bu turdan çıkılsın mı?",
+    "reset": "Sıfırla",
+    "secondsLeft_one": "{{count}} saniye kaldı",
+    "secondsLeft_other": "{{count}} saniye kaldı",
+    "showAnswer": "Cevabı göster",
+    "slideN": "Slayt {{n}}",
+    "sourceTitle": "Notlarından",
+    "swipeHelp": "Biliyorsan sağa, tekrar görmek istiyorsan sola, kolaydıysa yukarı kaydır.",
+    "terms": "Terimler",
+    "timeLeft": "Kalan süre: {{time}}",
+    "true": "Doğru",
+    "typeAnswer": "Cevabını yaz",
+    "typoAccepted": "Kabul edildi — yazımına bak: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "Bu turda {{xp}} XP",
+    "yourAnswer": "Cevabın"
+  },
+  "processing": {
+    "background": "İlk sorular hazır olduğunda oynamaya başlayabilirsin. Geri kalanlar arka planda eklenmeye devam edecek.",
+    "chooseBody_one": "{{count}} sayfa görsel okuma gerektiriyor, ancak destede en fazla {{max}} sayfa okunabilir. Nereden başlayacağını seç.",
+    "chooseBody_other": "{{count}} sayfa görsel okuma gerektiriyor, ancak destede en fazla {{max}} sayfa okunabilir. Nereden başlayacağını seç.",
+    "choosePages": "Sayfaları oku {{from}}–{{to}}",
+    "chooseTitle": "Okunacak sayfaları seç",
+    "handwriting": "El yazısı en iyi şekilde okunmaya çalışılıyor.",
+    "questions": "İlk sorular “{{topic}}” hakkında yazılıyor…",
+    "readingFile": "{{name}} okunuyor…",
+    "readingPage": "{{page}} / {{total}} sayfa okunuyor…",
+    "startPage": "Sayfadan başla",
+    "title": "Soru setin hazırlanıyor",
+    "topics": "Ana konular bulunuyor…",
+    "vision": "Görsellerin okunması ({{done}} / {{total}})…"
+  },
+  "report": {
+    "body": "Hemen destenden kaldırılır ve bir daha gösterilmez.",
+    "done": "Soru kaldırıldı",
+    "duplicate": "Yinelenen",
+    "notInNotes": "Notlarımda yok",
+    "open": "Bu soruyu bildir",
+    "title": "Bu soruyu bildir",
+    "unclear": "Anlaşılmaz",
+    "wrong": "Yanlış cevap"
+  },
+  "results": {
+    "accuracy": "Doğruluk",
+    "bestCombo": "En iyi kombin",
+    "bossLost": "Fırtına devam etti — tekrar dene!",
+    "bossWon": "Fırtına temizlendi!",
+    "done": "Tamam",
+    "goalMet": "Günlük hedefe ulaştın! +20 XP bonus.",
+    "levelUp": "Seviye atladın! {{level}} seviyesine ulaştın.",
+    "newBadges": "Yeni rozetler",
+    "newBest": "Yeni kişisel rekor!",
+    "practiseThese": "Bu konuları çalış",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Tur özeti",
+    "suddenScore_one": "{{count}} ardışık!",
+    "suddenScore_other": "{{count}} ardışık!",
+    "time": "Zaman",
+    "weakest": "En zor konuların",
+    "xp": "Kazandığın XP",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "StudyNight için hazırlandı, hemen oynayabilirsin — yükleme gerekmez. Çevrim dışı da çalışır.",
+    "play_one": "Oyna ({{count}} soru)",
+    "play_other": "Oyna ({{count}} soru)",
+    "title": "Örnek desteler"
+  },
+  "share": {
+    "button": "Sonucu paylaş",
+    "copied": "Kopyalandı!",
+    "copyText": "Metni kopyala",
+    "download": "Görseli indir",
+    "includeDeck": "Destenin başlığını göster",
+    "shareImage": "Görseli paylaş",
+    "text": "StudyNight'de {{correct}}/{{total}} puan aldım — {{title}}! 🌙",
+    "textDeck": "StudyNight'de “{{deck}}” için {{correct}}/{{total}} puan aldım — {{title}}! 🌙",
+    "title": "Sonucunuzu paylaş"
+  },
+  "smart": {
+    "body": "Farklı kelimeler veya başka bir dil kullansa bile doğru pasajları bulur. {{size}} MB'lik dosyayı bir kez indir, sonra çevrimdışı çalışır.",
+    "download": "İndir ({{size}} MB)",
+    "downloading": "Akıllı arama: {{percent}} indiriliyor…",
+    "failed": "Akıllı arama kurulamadı. Anahtar kelime araması hâlâ çalışır; Ayarlar'da tekrar deneyebilirsin.",
+    "mobileData": "Görünüşe göre mobil veri kullanıyorsun. Wi‑Fi beklemek isteyebilirsin.",
+    "notNow": "Şimdi değil",
+    "title": "Akıllı arama"
+  },
+  "titles": {
+    "bossSlayer": "Fırtına Avcısı",
+    "braveExplorer": "Cesur Kaşif",
+    "comboMaster": "Kombin Ustası",
+    "comebackKid": "İkinci Şans Çocuğu",
+    "deepThinker": "Derin Düşünen",
+    "earlyRiser": "Erken Kalkan",
+    "freshStart": "Yeni Başlangıç",
+    "hintFreeHero": "İpucu Olmayan Kahraman",
+    "marathoner": "Maratoncu",
+    "neverGiveUp": "Asla Vazgeçme",
+    "nightOwlMode": "Gece Baykuzu Modu",
+    "perfectionist": "Mükemmelliyetçi",
+    "speedReader": "Hızlı Okuyucu",
+    "steadyClimber": "Sabit Yürüyen",
+    "topicTamer": "Konu Ustası"
+  },
+  "voice": {
+    "denied": "Mikrofon erişimi engellendi. Tarayıcı ayarlarından izin ver veya cevabını yazarak gir.",
+    "record": "Sesli cevapla",
+    "recording": "Kaydediliyor…",
+    "stop": "Kaydı durdur ({{seconds}} sn kaldı)",
+    "transcribing": "Ses metne dönüştürülüyor…"
   }
 }

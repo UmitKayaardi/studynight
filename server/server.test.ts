@@ -473,3 +473,30 @@ describe('normaliseDraft', () => {
     expect(d.back).toBe('Y');
   });
 });
+
+describe('JSON and LaTeX repair', () => {
+  it('repairs invalid escapes and swallowed LaTeX commands', async () => {
+    const { parseJsonObject, repairLatex, failedGeneration } = await import('./groq');
+    expect(parseJsonObject(String.raw`{"q":"Solve \( x \) and $\alpha$"}`)).toEqual({ q: String.raw`Solve \( x \) and $\alpha$` });
+    expect(parseJsonObject(String.raw`{"q":"$a \times b$ and $\frac{1}{2}$ and $x \neq y$"}`)).toEqual({ q: String.raw`$a \times b$ and $\frac{1}{2}$ and $x \neq y$` });
+    expect(repairLatex('Line one\nline two')).toBe('Line one\nline two');
+    expect(failedGeneration({ error: { error: { code: 'json_validate_failed', failed_generation: '{"a":1}' } } })).toBe('{"a":1}');
+    expect(failedGeneration(new Error('x'))).toBeNull();
+  });
+  it('recovers from a json_validate_failed error using the failed generation', async () => {
+    const err = Object.assign(new Error('400'), { status: 400, error: { error: { code: 'json_validate_failed', failed_generation: String.raw`{"ok":"$\beta$"}` } } });
+    setChatClient(fakeClient([err]));
+    expect(await chatJson({ model: 'm', system: 's', user: 'u', maxTokens: 10, timeoutMs: 5000 })).toEqual({ ok: String.raw`$\beta$` });
+  });
+});
+
+describe('draft repairs', () => {
+  it('wraps undelimited LaTeX options and treats identical prompts as duplicates', async () => {
+    const { normaliseDraft, isDuplicate, wrapLatex } = await import('./verify');
+    const d = normaliseDraft({ type: 'mcq', options: ['6CO_2 \rightarrow C_6H_{12}O_6', 'plain text', '$x$', 'a_{1}'] }, 't') as { options: string[] };
+    expect(d.options).toEqual(['$6CO_2 \rightarrow C_6H_{12}O_6$', 'plain text', '$x$', '$a_{1}$']);
+    expect(wrapLatex('Use \n in code')).toBe('Use \n in code');
+    expect(isDuplicate('Stoma Leaf pores that take in CO2', ['Stoma Small pores in leaves'], 'Stoma')).toBe(true);
+    expect(isDuplicate('Stomata open in daylight', ['Stoma Small pores'], 'Stomata open')).toBe(false);
+  });
+});

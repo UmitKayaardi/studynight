@@ -3,6 +3,32 @@
     "name": "StudyNight",
     "tagline": "Catatanmu, jadi permainan."
   },
+  "badges": {
+    "earned": "Lencana baru: {{name}}",
+    "firstBoss": {
+      "desc": "Menang pertempuran bos pertama.",
+      "name": "Pemecah Badai"
+    },
+    "firstDeck": {
+      "desc": "Membuat dek pertama.",
+      "name": "Dek Pertama"
+    },
+    "firstQuiz": {
+      "desc": "Menjawab pertanyaan pertama.",
+      "name": "Langkah Pertama"
+    },
+    "streak100": {
+      "name": "Seratus Malam"
+    },
+    "streak30": {
+      "desc": "Belajar 30 hari berturut-turut.",
+      "name": "Satu Bulan"
+    },
+    "streak7": {
+      "desc": "Belajar 7 hari berturut-turut.",
+      "name": "Satu Minggu"
+    }
+  },
   "common": {
     "back": "Back",
     "cancel": "Cancel",
@@ -13,11 +39,52 @@
     "done": "Done",
     "goHome": "Go home",
     "loading": "Loading…",
+    "minutes_other": "{{count}} min",
     "next": "Next",
     "retry": "Coba lagi",
     "save": "Save",
+    "saved": "Tersimpan",
     "skip": "Skip",
+    "skipToContent": "Lewati ke konten",
     "undo": "Undo"
+  },
+  "deck": {
+    "aiDisclaimer": "AI bisa salah — selalu cek dengan catatanmu. Ketuk sumber pada pertanyaan untuk lihat asalnya.",
+    "busy": "Menunggu layanan AI…",
+    "delete": "Hapus deck",
+    "deleteBody": "“{{title}}”, pertanyaannya dan riwayatnya akan dihapus dari perangkat ini.",
+    "deleted": "“{{title}}” dihapus",
+    "deleteTitle": "Hapus deck ini?",
+    "generating": "Membuat pertanyaan lagi…",
+    "masteryLabel": "Penguasaan {{percent}}%",
+    "missing": "Deck tidak ditemukan",
+    "missingBody": "Deck ini sudah tidak ada di perangkat ini.",
+    "modes": "Cara bermain",
+    "pages_other": "{{count}} halaman",
+    "pastedText": "Teks yang ditempel",
+    "percent": "{{value}}%",
+    "quizIn": "Kuis dalam {{language}}",
+    "regenerate": "Buat ulang pertanyaan untuk topik",
+    "regenerateButton": "Buat ulang",
+    "regenerated": "Pertanyaan baru siap.",
+    "regenerateHint": "Mengganti pertanyaan topik dengan yang baru. Riwayat jawaban tetap dipertahankan.",
+    "settings": "Pengaturan deck",
+    "slides_other": "{{count}} slide",
+    "sources": "Sumber",
+    "topicMap": "Peta topik",
+    "topicQuestions_other": "{{count}} pertanyaan",
+    "topicStatus_other": "Penguasaan {{percent}}% · {{count}} pertanyaan",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Perlu perbaikan"
+  },
+  "decks": {
+    "due_other": "{{count}} jatuh tempo",
+    "emptyBody": "Unggah catatanmu atau coba deck contoh untuk mulai bermain.",
+    "emptyTitle": "Belum ada deck",
+    "failed": "Terjadi kesalahan",
+    "processing": "Mempersiapkan…",
+    "questionCount_other": "{{count}} pertanyaan",
+    "topicCount_other": "{{count}} topik"
   },
   "errors": {
     "boundary": {
@@ -25,9 +92,90 @@
       "title": "Ups, terjadi kesalahan"
     }
   },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Per topik",
+    "duration": "Waktu",
+    "estimate": "Ini perkiraan berdasarkan jawabanmu dan seberapa baik kamu akan mengingat deck. Ini bukan jaminan.",
+    "extended": "Waktu tambahan aktif: kamu dapat 50% lebih lama.",
+    "intro": "Ujian mock berwaktu tanpa petunjuk dan umpan balik sampai akhir. Setelah itu kamu dapat laporan dengan skor perkiraan.",
+    "mistakes": "Tinjau kesalahanmu",
+    "questions": "Pertanyaan",
+    "reportTitle": "Skor diperkirakan",
+    "start": "Mulai ujian"
+  },
+  "explain": {
+    "check": "Periksa jawaban saya",
+    "checking": "Memeriksa jawaban…",
+    "covered": "Tercakup",
+    "great": "Jawaban hebat!",
+    "label": "Jawabanmu",
+    "missed": "Terlewat",
+    "modelAnswer": "Jawaban contoh",
+    "notYet": "Belum",
+    "partly": "Masih kurang",
+    "placeholder": "Jelaskan dengan kata-katamu…",
+    "points": "Kamu mencakup {{hit}} dari {{total}} poin penting."
+  },
+  "home": {
+    "continue": "Lanjutkan",
+    "examIn_other": "{{title}} ujian dalam {{count}} hari",
+    "examToday": "{{title}}: ujian hari ini. Semoga berhasil!",
+    "freezes_other": "{{count}} pembekuan streak",
+    "go": "Main",
+    "goalOf_other": "of {{count}} min",
+    "goalRing": "Target harian {{percent}}% selesai",
+    "greetingAfternoon": "Selamat sore!",
+    "greetingAfternoonName": "Selamat sore, {{name}}!",
+    "greetingEvening": "Selamat malam!",
+    "greetingEveningName": "Selamat malam, {{name}}!",
+    "greetingMorning": "Selamat pagi!",
+    "greetingMorningName": "Selamat pagi, {{name}}!",
+    "level": "Level {{level}}",
+    "levelProgress": "Kemajuan ke level berikutnya, {{xp}} XP total",
+    "mood": {
+      "celebrating": "Target harian tercapai. Kerja bagus!",
+      "encouraging": "Tambahkan catatan pertama dan ayo bermain.",
+      "happy": "Siap main cepat?",
+      "sleepy": "Streakmu menunggu—beberapa soal untuk tetap hidup."
+    },
+    "newDeck": "Deck baru",
+    "openDeck": "Buka {{title}}",
+    "resume": "Ada putaran yang sedang berlangsung.",
+    "review": "Review",
+    "reviewDue_other": "{{count}} pertanyaan untuk ditinjau",
+    "reviewDueHint": "Mereview sekarang membantu menempel.",
+    "statsLabel": "Hari ini",
+    "streakDays_other": "hari streak",
+    "trySample": "Coba deck contoh",
+    "xp": "{{xp}} XP"
+  },
   "language": {
     "choose": "Pilih bahasa Anda",
     "menuLabel": "Bahasa: {{language}}. Ubah bahasa"
+  },
+  "modes": {
+    "ask": "Tanya catatanmu",
+    "askHint": "Jawaban hanya dari catatanmu",
+    "boss": "Pertarungan bos",
+    "bossHint_other": "{{count}} topik siap",
+    "bossIntro": "Kalahkan awan badai: pertanyaan lebih sulit, {{seconds}} detik tiap satu dan tiga hati. Tanpa petunjuk!",
+    "bossLocked": "Terbuka pada penguasaan {{percent}}%",
+    "bossReady": "Pertarungan bos terbuka",
+    "challenge": "Tantang teman",
+    "challengeHint": "Kirim pertanyaanmu",
+    "exam": "Mode ujian",
+    "examHint": "Ujian tiruan berwaktu",
+    "flashcards": "Kartu flash",
+    "flashcardsHint": "Geser untuk mengulang",
+    "practiseTopic": "Latih topik ini",
+    "quick": "Main cepat",
+    "quickHint": "10 pertanyaan campuran",
+    "review": "Ulas yang jatuh tempo",
+    "sudden": "Kematian mendadak",
+    "suddenBest_other": "Terbaik: {{count}} beruntun",
+    "topic": "Latihan topik",
+    "topicHint": "Fokus pada satu topik"
   },
   "nav": {
     "decks": "Decks",
@@ -35,5 +183,183 @@
     "label": "Main",
     "profile": "Profile",
     "review": "Review"
+  },
+  "newDeck": {
+    "chooseFiles": "Pilih file",
+    "create": "Buat kuis saya",
+    "deckTitle": "Judul deck",
+    "dropTitle": "Tambahkan materi belajar",
+    "examDate": "Tanggal ujian (opsional)",
+    "examDateHint": "Kami akan merencanakan revisimu di sekitarnya.",
+    "formats": "PDF, PowerPoint, Word, teks atau foto. Beberapa file dapat masuk ke satu deck.",
+    "lowerQuality": "kualitas mungkin lebih rendah",
+    "notice": "Hanya unggah materi yang kamu punya hak untuk gunakan. Jangan unggah dokumen yang berisi informasi pribadi atau sensitif tentang diri sendiri atau orang lain.",
+    "pasteLabel": "Teksmu",
+    "pastePlaceholder": "Tempel catatanmu di sini…",
+    "pasteText": "Tempel teks sebagai gantinya",
+    "quizLanguage": "Bahasa kuis",
+    "ready": "Kuismu sudah siap. Pertanyaan lebih banyak akan datang!",
+    "remove": "Hapus {{name}}",
+    "sameAsNotes": "Sama dengan catatan saya",
+    "selected": "File terpilih",
+    "takePhoto": "Ambil foto",
+    "title": "Deck baru",
+    "titlePlaceholder": "Misalnya, Biologi minggu 3",
+    "untitled": "Catatan saya"
+  },
+  "onboarding": {
+    "later": "Lihat saja",
+    "one": {
+      "body": "Tambahkan slide, catatan atau foto buku catatanmu. Kuiz dari materi sendiri siap dalam setengah menit.",
+      "title": "Catatanmu, jadi permainan"
+    },
+    "setup": {
+      "avatar": "Pilih avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Target harian",
+      "nickname": "Nama panggilan (opsional)",
+      "nicknameHint": "Hanya disimpan di perangkat ini.",
+      "title": "Buat jadi milikmu"
+    },
+    "three": {
+      "body": "StudyNight ingat apa yang susah dan kembalikan tepat waktu, sampai ujian.",
+      "title": "Belajar sampai jitu"
+    },
+    "trySample": "Coba set contoh",
+    "two": {
+      "body": "Ketuk sumber untuk lihat kutipan tepat dari catatanmu. Soal dicek dengan catatan sebelum ditampilkan.",
+      "title": "Setiap soal tunjukkan sumbernya"
+    },
+    "uploadNotes": "Unggah catatan saya"
+  },
+  "play": {
+    "answerWas": "Jawaban:",
+    "bossHit": "Serangan tepat!",
+    "check": "Periksa",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Benar!",
+    "correctAnswer": "Jawaban benar",
+    "correctOrder": "Urutan benar",
+    "correctPairs": "Pasangan benar",
+    "definitions": "Makna",
+    "expected": "Jawaban:",
+    "false": "Salah",
+    "figureAlt": "Gambar dari catatanmu yang terkait dengan pertanyaan ini",
+    "fromNotes": "Dari catatanmu",
+    "fromPage": "Dari catatanmu · Halaman {{n}}",
+    "fromSlide": "Dari catatanmu · Slide {{n}}",
+    "grade": {
+      "again": "Ulang",
+      "easy": "Mudah",
+      "good": "Baik",
+      "hard": "Sulit"
+    },
+    "hearts_other": "{{count}} hati tersisa",
+    "hint": "Petunjuk (setengah XP)",
+    "howWell": "Seberapa baik kamu mengetahuinya?",
+    "incorrect": "Belum tepat",
+    "incorrectAnnounce": "Belum tepat. Jawabannya {{answer}}",
+    "matchHelp": "Ketuk istilah, lalu makna yang cocok.",
+    "moveDown": "Pindahkan langkah {{n}} ke bawah",
+    "moveUp": "Pindahkan langkah {{n}} ke atas",
+    "noQuestions": "Belum ada pertanyaan",
+    "noQuestionsBody": "Pertanyaan baru masih ditulis. Coba lagi sebentar, atau periksa koneksi.",
+    "nothingDue": "Tidak ada yang perlu ditinjau sekarang",
+    "nothingDueBody": "Kamu sudah semua terupdate. Kembali nanti atau mainkan putaran singkat.",
+    "orderHelp": "Seret langkah, atau gunakan panah, untuk mengurutkannya.",
+    "pageN": "Halaman {{n}}",
+    "pairedWith": "Berpasangan dengan istilah {{n}}: {{text}}",
+    "preparing": "Mempersiapkan pertanyaan…",
+    "progress": "Pertanyaan {{n}} dari {{total}}",
+    "quit": "Berhenti atau keluar",
+    "quitBody": "Jawabanmu sampai sekarang disimpan.",
+    "quitConfirm": "Tinggalkan",
+    "quitTitle": "Tinggalkan putaran ini?",
+    "reset": "Reset",
+    "secondsLeft_other": "{{count}} detik tersisa",
+    "showAnswer": "Tampilkan jawaban",
+    "slideN": "Slide {{n}}",
+    "sourceTitle": "Dari catatanmu",
+    "swipeHelp": "Geser kanan jika kamu tahu, kiri untuk melihat lagi, atas jika mudah.",
+    "terms": "Istilah",
+    "timeLeft": "Waktu tersisa: {{time}}",
+    "true": "Benar",
+    "typeAnswer": "Ketik jawabanmu",
+    "typoAccepted": "Diterima — perhatikan ejaan: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP putaran ini",
+    "yourAnswer": "Jawabanmu"
+  },
+  "processing": {
+    "background": "Kamu bisa mulai bermain segera setelah pertanyaan pertama siap. Sisanya akan terus datang di latar belakang.",
+    "chooseBody_other": "{{count}} halaman memerlukan pembacaan gambar, tapi hingga {{max}} halaman dapat dibaca per deck. Pilih di mana memulai.",
+    "choosePages": "Baca halaman {{from}}–{{to}}",
+    "chooseTitle": "Pilih halaman untuk dibaca",
+    "handwriting": "Tulis tangan dibaca dengan upaya terbaik.",
+    "questions": "Menulis pertanyaan pertama tentang “{{topic}}”…",
+    "readingFile": "Membaca {{name}}…",
+    "readingPage": "Membaca halaman {{page}} dari {{total}}…",
+    "startPage": "Mulai di halaman",
+    "title": "Membangun kuismu",
+    "topics": "Mencari topik utama…",
+    "vision": "Membaca gambarmu ({{done}} dari {{total}})…"
+  },
+  "report": {
+    "body": "Pertanyaan ini akan dihapus dari dekmu segera dan tidak akan muncul lagi.",
+    "done": "Pertanyaan dihapus",
+    "duplicate": "Duplikat",
+    "notInNotes": "Tidak ada di catatanku",
+    "open": "Laporkan pertanyaan ini",
+    "title": "Laporkan pertanyaan ini",
+    "unclear": "Tidak jelas",
+    "wrong": "Jawaban salah"
+  },
+  "results": {
+    "accuracy": "Akurasi",
+    "bestCombo": "Combo terbaik",
+    "bossLost": "Badai masih ada — coba lagi!",
+    "bossWon": "Badai bersih!",
+    "done": "Selesai",
+    "goalMet": "Target harian tercapai! +20 XP bonus.",
+    "levelUp": "Level naik! Kamu mencapai level {{level}}.",
+    "newBadges": "Lencana baru",
+    "newBest": "Rekor pribadi baru!",
+    "practiseThese": "Latih ini",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Ringkasan ronde",
+    "suddenScore_other": "{{count}} berturut-turut!",
+    "time": "Waktu",
+    "weakest": "Topik paling sulit",
+    "xp": "XP didapat",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Ditulis untuk StudyNight, siap dimainkan langsung — tidak perlu upload. Juga dapat offline.",
+    "play_other": "Main ({{count}} pertanyaan)",
+    "title": "Deck contoh"
+  },
+  "titles": {
+    "bossSlayer": "Pengejar Badai",
+    "braveExplorer": "Penjelajah Berani",
+    "comboMaster": "Master Combo",
+    "comebackKid": "Anak Kembali",
+    "deepThinker": "Pemikir Mendalam",
+    "earlyRiser": "Pagi Awal",
+    "freshStart": "Mulai Baru",
+    "hintFreeHero": "Pahlawan Tanpa Petunjuk",
+    "marathoner": "Marathoner",
+    "neverGiveUp": "Jangan Menyerah",
+    "nightOwlMode": "Mode Burung Hantu Malam",
+    "perfectionist": "Perfeksionis",
+    "speedReader": "Pembaca Cepat",
+    "steadyClimber": "Pendaki Stabil",
+    "topicTamer": "Pengendali Topik"
+  },
+  "voice": {
+    "denied": "Akses mikrofon diblokir. Izinkan di pengaturan browser, atau ketik jawabanmu.",
+    "record": "Jawab dengan suara",
+    "recording": "Merekam…",
+    "stop": "Hentikan rekaman ({{seconds}} d tersisa)",
+    "transcribing": "Mengubah suara menjadi teks…"
   }
 }

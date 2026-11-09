@@ -7,6 +7,7 @@ import { applyTheme, onSystemThemeChange, reducedMotion } from './lib/platform';
 import { ErrorBoundary, Toasts } from './components/layout/Shell';
 import { Spinner } from './components/ui/Controls';
 import Home from './screens/Home';
+import { UpdateToast } from './components/UpdateToast';
 
 const Onboarding = lazy(() => import('./screens/Onboarding'));
 const Decks = lazy(() => import('./screens/Decks'));
@@ -72,6 +73,7 @@ export function App() {
           </Switch>
         </Suspense>
         <Toasts />
+        {import.meta.env.PROD && <UpdateToast />}
       </ErrorBoundary>
     </MotionConfig>
   );

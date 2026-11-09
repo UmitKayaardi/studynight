@@ -46,39 +46,39 @@ from the first unchecked step. Commit after every step.
 - [x] 5.4 Sounds, haptics, reduced motion
 
 ## Phase 6 — Core flow
-- [ ] 6.1 Onboarding
-- [ ] 6.2 Home
-- [ ] 6.3 Create deck + processing pipeline
-- [ ] 6.4 Deck page + topic map + settings
-- [ ] 6.5 Play screen + all question kinds
-- [ ] 6.6 Feedback, source sheet, report/undo, hints
-- [ ] 6.7 Results
+- [x] 6.1 Onboarding
+- [x] 6.2 Home
+- [x] 6.3 Create deck + processing pipeline
+- [x] 6.4 Deck page + topic map + settings
+- [x] 6.5 Play screen + all question kinds
+- [x] 6.6 Feedback, source sheet, report/undo, hints
+- [x] 6.7 Results
 
 ## Phase 7 — Modes & engagement
-- [ ] 7.1 Quick play, topic practice, review due
-- [ ] 7.2 Boss battle
-- [ ] 7.3 Exam mode + report
-- [ ] 7.4 Sudden death, flashcards swipe
-- [ ] 7.5 XP/levels/streaks/badges wiring, session titles, share cards
+- [x] 7.1 Quick play, topic practice, review due
+- [x] 7.2 Boss battle
+- [x] 7.3 Exam mode + report
+- [x] 7.4 Sudden death, flashcards swipe
+- [x] 7.5 XP/levels/streaks/badges wiring, session titles, share cards
 
 ## Phase 8 — AI features
-- [ ] 8.1 Ask your notes
-- [ ] 8.2 Explain answers (typed + voice)
-- [ ] 8.3 Figure questions
-- [ ] 8.4 Challenge links
+- [x] 8.1 Ask your notes
+- [x] 8.2 Explain answers (typed + voice)
+- [x] 8.3 Figure questions
+- [x] 8.4 Challenge links
 
 ## Phase 9 — Profile & planner
-- [ ] 9.1 Profile, stats, streak calendar, badges
-- [ ] 9.2 Exam planner + .ics
-- [ ] 9.3 Settings, Smart search management, backup UI, delete-all UI
-- [ ] 9.4 Review tab + forecast
+- [x] 9.1 Profile, stats, streak calendar, badges
+- [x] 9.2 Exam planner + .ics
+- [x] 9.3 Settings, Smart search management, backup UI, delete-all UI
+- [x] 9.4 Review tab + forecast
 
 ## Phase 10 — Languages
 - [ ] 10.1 Translate all 21 languages
 - [ ] 10.2 Language sweep (Playwright) + runtime switch test, fix overflows
 
 ## Phase 11 — Legal, PWA, a11y, security, errors, samples
-- [ ] 11.1 Privacy, Terms, Licences, About pages + docs/LEGAL.md + THIRD_PARTY_NOTICES.md
+- [x] 11.1 Privacy, Terms, Licences, About pages + docs/LEGAL.md + THIRD_PARTY_NOTICES.md
 - [ ] 11.2 PWA (manifest, icons, offline, update toast), security headers (vercel.json)
 - [ ] 11.3 Error states audit + accessibility audit
 - [ ] 11.4 Sample decks written, generated, reviewed, shipped
@@ -98,6 +98,10 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: Phase 6 step 6.1 (onboarding) — first build the game services (deck pipeline, generation queue, answer recording) used by the screens.
+Next: RESUME HERE: (1) re-run 'node scripts/translate.mjs' until 'npm run check:i18n' passes (new keys: ask/review/profile/planner/settings/legal/privacy/terms/about/licences/pwa were added after the last translation run); (2) finish sample decks: if src/samples/ lacks solar-system, vaccines, machine-learning, personal-finance or ciclo-del-agua JSON, run 'node scripts/run-ts.mjs scripts/build-samples.ts <ids>', then review every question by hand, record edits in samples/review.json and run 'node scripts/apply-sample-review.mjs' (fotosentez already reviewed); (3) Phase 11.2: write vercel.json (CSP incl. huggingface.co + cdn-lfs/xet hosts for the model, SPA rewrite, security headers, functions maxDuration 60), verify PWA build; (4) browser-test boss/exam/sudden/flashcards/ask/planner/settings screens; (5) then Phases 10, 11.3, 12, 13, 14.
 
-Known issues: none yet.
+Known issues:
+- Locale files are mid-translation (CI i18n check fails until step (1) above is done). Do not push before it passes.
+- Phases 7-9 code is written and typechecks; only quick play was browser-tested end to end (pasted notes to playable deck in ~7 s with the live API). Other modes need a browser test.
+- PWA plugin + update toast added in vite.config.ts but production build not yet verified.
+- Sample builder: an earlier JSON-mode 400 was fixed (repair of failed_generation + LaTeX escapes); generator prompts were tightened afterwards, so decks built before that change need careful manual review.

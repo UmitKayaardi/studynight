@@ -3,6 +3,118 @@
     "name": "StudyNight",
     "tagline": "Suas anotações, transformadas em jogo."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Desafiou um amigo.",
+      "name": "Desafiador"
+    },
+    "combo10": {
+      "desc": "Acertou 10 seguidos.",
+      "name": "Em Fogo"
+    },
+    "comeback": {
+      "desc": "Voltou depois de uma semana afastado.",
+      "name": "Bem-Vindo de Volta"
+    },
+    "curious": {
+      "desc": "Perguntou 10 vezes às suas anotações.",
+      "name": "Mente Curiosa"
+    },
+    "earlyStart": {
+      "desc": "Terminou uma rodada cedo pela manhã.",
+      "name": "Nascer do Sol"
+    },
+    "earned": "Nova conquista: {{name}}",
+    "explainer": {
+      "desc": "Fez 10 ótimas explicações.",
+      "name": "Explicador"
+    },
+    "firstBoss": {
+      "desc": "Venceu sua primeira batalha de chefe.",
+      "name": "Quebrador de Tempestade"
+    },
+    "firstDeck": {
+      "desc": "Criou seu primeiro baralho.",
+      "name": "Primeiro Baralho"
+    },
+    "firstQuiz": {
+      "desc": "Respondeu sua primeira pergunta.",
+      "name": "Primeiros Passos"
+    },
+    "flashcards100": {
+      "desc": "Revisou 100 flashcards.",
+      "name": "Mestre de Cartões"
+    },
+    "level10": {
+      "desc": "Alcançou o nível 10.",
+      "name": "Estrela em Ascensão"
+    },
+    "marathon": {
+      "desc": "Estudou uma hora em um dia.",
+      "name": "Maratona"
+    },
+    "nightSession": {
+      "desc": "Terminou uma rodada tarde da noite.",
+      "name": "Óleo da Meia-Noite"
+    },
+    "perfectExam": {
+      "desc": "Pontuou 100% no modo exame.",
+      "name": "Prova Impecável"
+    },
+    "planner": {
+      "desc": "Adicionou uma prova ao seu planejador.",
+      "name": "Planejador"
+    },
+    "polyglot": {
+      "desc": "Fez quizzes em duas ou mais línguas.",
+      "name": "Poliglota"
+    },
+    "questions100": {
+      "desc": "Respondeu 100 perguntas.",
+      "name": "Século"
+    },
+    "questions1000": {
+      "desc": "Respondeu 1.000 perguntas.",
+      "name": "Escalador"
+    },
+    "streak100": {
+      "desc": "Estudou 100 dias seguidos.",
+      "name": "Cem Noites"
+    },
+    "streak30": {
+      "desc": "Estudou 30 dias seguidos.",
+      "name": "Um Mês"
+    },
+    "streak7": {
+      "desc": "Estudou 7 dias seguidos.",
+      "name": "Uma Semana"
+    },
+    "suddenDeath20": {
+      "desc": "Alcançou 20 no modo súbito.",
+      "name": "Nervos de Aço"
+    }
+  },
+  "challenge": {
+    "accept": "Aceitar o desafio",
+    "copied": "Link copiado!",
+    "copy": "Copiar link",
+    "draw": "Empate!",
+    "forFun": "Pontuações nos links de desafio são só por diversão.",
+    "friend": "Um amigo",
+    "from": "{{name}} te desafia!",
+    "intro_many": "Seu link inclui {{count}} perguntas desta rodada, com sua pontuação. Suas anotações e suas fontes nunca são incluídas.",
+    "intro_one": "Seu link inclui {{count}} pergunta desta rodada, com sua pontuação. Suas anotações e suas fontes nunca são incluídas.",
+    "intro_other": "Seu link inclui {{count}} perguntas desta rodada, com sua pontuação. Suas anotações e suas fontes nunca são incluídas.",
+    "makeOwn": "Criar um quiz com minhas próprias notas",
+    "none": "Jogue uma rodada com perguntas de múltipla escolha, verdadeiro/falso, preenchimento, correspondência ou ordenação primeiro.",
+    "privacy": "As perguntas viajam dentro do próprio link — elas nunca vão para o nosso servidor.",
+    "share": "Compartilhar link",
+    "shareText": "{{name}} te desafia no StudyNight! Consegue bater minha pontuação?",
+    "theirScore": "Pontuação deles: {{correct}}/{{total}}. Você consegue superar?",
+    "theyWin": "Quase lá!",
+    "you": "Você",
+    "youWin": "Você ganhou!"
+  },
   "common": {
     "back": "Voltar",
     "cancel": "Cancelar",
@@ -13,21 +125,257 @@
     "done": "Feito",
     "goHome": "Ir para casa",
     "loading": "Carregando…",
+    "minutes_many": "{{count}} min",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
     "next": "Próximo",
     "retry": "Tentar novamente",
     "save": "Salvar",
+    "saved": "Salvo",
     "skip": "Pular",
+    "skipToContent": "Pular para o conteúdo",
     "undo": "Desfazer"
   },
+  "deck": {
+    "aiDisclaimer": "A IA pode errar — sempre confira com suas anotações. Toque na fonte de qualquer pergunta para ver a origem.",
+    "busy": "Aguardando o serviço de IA…",
+    "delete": "Excluir baralho",
+    "deleteBody": "“{{title}}”, suas perguntas e histórico serão removidos deste dispositivo.",
+    "deleted": "“{{title}}” excluído",
+    "deleteTitle": "Excluir este baralho?",
+    "generating": "Criando mais perguntas…",
+    "masteryLabel": "Domínio {{percent}}%",
+    "missing": "Baralho não encontrado",
+    "missingBody": "Este baralho não existe mais neste dispositivo.",
+    "modes": "Modos de jogo",
+    "pages_many": "{{count}} páginas",
+    "pages_one": "{{count}} página",
+    "pages_other": "{{count}} páginas",
+    "pastedText": "Texto colado",
+    "percent": "{{value}}%",
+    "quizIn": "Quiz em {{language}}",
+    "regenerate": "Regenerar perguntas para um tópico",
+    "regenerateButton": "Regenerar",
+    "regenerated": "Novas perguntas prontas.",
+    "regenerateHint": "Substitui as perguntas desse tópico por novas. Seu histórico de respostas é mantido.",
+    "settings": "Configurações do baralho",
+    "slides_many": "{{count}} slides",
+    "slides_one": "{{count}} slide",
+    "slides_other": "{{count}} slides",
+    "sources": "Fontes",
+    "topicMap": "Mapa de tópicos",
+    "topicQuestions_many": "{{count}} perguntas",
+    "topicQuestions_one": "{{count}} pergunta",
+    "topicQuestions_other": "{{count}} perguntas",
+    "topicStatus_many": "Domínio {{percent}}% · {{count}} perguntas",
+    "topicStatus_one": "Domínio {{percent}}% · {{count}} pergunta",
+    "topicStatus_other": "Domínio {{percent}}% · {{count}} perguntas",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Precisa melhorar"
+  },
+  "decks": {
+    "due_many": "{{count}} pendentes",
+    "due_one": "{{count}} pendente",
+    "due_other": "{{count}} pendentes",
+    "emptyBody": "Carregue suas anotações ou experimente um baralho de exemplo para começar a jogar.",
+    "emptyTitle": "Nenhum baralho ainda",
+    "failed": "Algo deu errado",
+    "processing": "Preparando…",
+    "questionCount_many": "{{count}} perguntas",
+    "questionCount_one": "{{count}} pergunta",
+    "questionCount_other": "{{count}} perguntas",
+    "topicCount_many": "{{count}} tópicos",
+    "topicCount_one": "{{count}} tópico",
+    "topicCount_other": "{{count}} tópicos"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Tente novamente.",
+      "title": "Algo não parece certo"
+    },
+    "badChallenge": {
+      "body": "Ele pode ter sido cortado ao copiar. Peça ao seu amigo para enviá‑lo novamente.",
+      "title": "Este link de desafio não funciona"
+    },
     "boundary": {
       "body": "Seus baralhos e progresso estão salvos com segurança neste dispositivo. Vamos voltar para casa.",
       "title": "Ops, algo deu errado"
+    },
+    "CORRUPT": {
+      "body": "“{{file}}” parece estar corrompido. Tente salvar ou exportar novamente.",
+      "title": "Não foi possível abrir este arquivo"
+    },
+    "EMPTY": {
+      "body": "Adicione um arquivo, foto ou texto primeiro.",
+      "title": "Nada para ler"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” tem mais de 25 MB. Tente dividir ou exportar um PDF menor.",
+      "title": "Arquivo muito grande"
+    },
+    "INTERRUPTED": {
+      "body": "O app foi fechado enquanto seu deck estava sendo construído. Delete este deck e adicione seus arquivos novamente.",
+      "title": "Upload foi interrompido"
+    },
+    "NO_TEXT": {
+      "body": "Parece um documento escaneado. Fotografe as páginas e o StudyNight as lerá.",
+      "title": "Nenhum texto encontrado"
+    },
+    "OFFLINE": {
+      "body": "É necessário conexão à internet. Tudo que já foi criado continua funcionando offline.",
+      "title": "Você está offline"
+    },
+    "PASSWORD": {
+      "body": "Remova a senha (ou imprima em um novo PDF) e faça o upload novamente.",
+      "title": "Este PDF está protegido por senha"
+    },
+    "RATE_LIMITED": {
+      "body": "Muitas pessoas estão estudando agora — suas próximas perguntas estarão prontas em breve. Enquanto isso, revise o que você tem.",
+      "title": "Muitas pessoas estão estudando agora"
+    },
+    "storage": "Não foi possível salvar neste dispositivo. Libere espaço e tente novamente.",
+    "STORAGE_FULL": {
+      "body": "Delete um deck ou exporte um backup no Perfil para liberar espaço, depois tente novamente.",
+      "title": "Seu dispositivo está cheio"
+    },
+    "TIMEOUT": {
+      "body": "O serviço de IA não respondeu a tempo. Tente novamente.",
+      "title": "Isso demorou demais"
+    },
+    "TOO_LARGE": {
+      "body": "Tente um arquivo menor ou menos páginas de uma vez.",
+      "title": "Tamanho muito grande para enviar"
+    },
+    "TOO_LONG": {
+      "body": "Um deck pode conter até 200 000 caracteres de texto. Divida em alguns decks.",
+      "title": "Documento muito longo"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Um deck pode ter até {{limit}} páginas ou slides. Divida o material em alguns decks.",
+      "title": "Muitas páginas"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Um deck pode ter até 30 fotos. Crie um segundo deck para o restante.",
+      "title": "Muitas fotos"
+    },
+    "UNKNOWN": {
+      "body": "Tente novamente.",
+      "title": "Algo deu errado"
+    },
+    "UNREADABLE": {
+      "body": "Tente uma foto mais clara ou um arquivo diferente.",
+      "title": "Não consegui ler"
+    },
+    "UNSUPPORTED": {
+      "body": "“{{file}}” não pode ser lido. Use PDF, PowerPoint (.pptx), Word (.docx), texto, Markdown ou uma foto.",
+      "title": "Tipo de arquivo não suportado"
+    },
+    "UPSTREAM": {
+      "body": "Tente novamente em breve.",
+      "title": "O serviço de IA teve um problema"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Por tópico",
+    "duration": "Tempo",
+    "estimate": "É uma estimativa baseada nas suas respostas e na sua memória do deck. Não é uma garantia.",
+    "extended": "Tempo estendido ativado: você tem 50% a mais.",
+    "intro": "Simulado cronometrado, sem dicas nem feedback até o final. Depois, você recebe um relatório com a nota estimada.",
+    "mistakes": "Revise seus erros",
+    "questions": "Perguntas",
+    "reportTitle": "Nota prevista",
+    "start": "Iniciar prova"
+  },
+  "explain": {
+    "check": "Verificar minha resposta",
+    "checking": "Verificando sua resposta…",
+    "covered": "Cobertos",
+    "great": "Ótima resposta!",
+    "label": "Sua resposta",
+    "missed": "Perdidos",
+    "modelAnswer": "Resposta modelo",
+    "notYet": "Ainda não",
+    "partly": "Parcialmente certo",
+    "placeholder": "Explique com suas próprias palavras…",
+    "points": "Você cobriu {{hit}} de {{total}} pontos-chave."
+  },
+  "home": {
+    "continue": "Continuar",
+    "examIn_many": "Prova de {{title}} em {{count}} dias",
+    "examIn_one": "Prova de {{title}} em {{count}} dia",
+    "examIn_other": "Prova de {{title}} em {{count}} dias",
+    "examToday": "{{title}}: prova hoje. Boa sorte!",
+    "freezes_many": "{{count}} congelamentos de sequência",
+    "freezes_one": "{{count}} congelamento de sequência",
+    "freezes_other": "{{count}} congelamentos de sequência",
+    "go": "Jogar",
+    "goalOf_many": "de {{count}} min",
+    "goalOf_one": "de {{count}} min",
+    "goalOf_other": "de {{count}} min",
+    "goalRing": "Meta diária {{percent}}% concluída",
+    "greetingAfternoon": "Boa tarde!",
+    "greetingAfternoonName": "Boa tarde, {{name}}!",
+    "greetingEvening": "Boa noite!",
+    "greetingEveningName": "Boa noite, {{name}}!",
+    "greetingMorning": "Bom dia!",
+    "greetingMorningName": "Bom dia, {{name}}!",
+    "level": "Nível {{level}}",
+    "levelProgress": "Progresso para o próximo nível, {{xp}} XP no total",
+    "mood": {
+      "celebrating": "Meta diária concluída. Trabalho brilhante!",
+      "encouraging": "Adicione suas primeiras notas e vamos jogar.",
+      "happy": "Pronto para uma rodada rápida?",
+      "sleepy": "Sua sequência está esperando — algumas perguntas a mantêm viva."
+    },
+    "newDeck": "Novo baralho",
+    "openDeck": "Abrir {{title}}",
+    "resume": "Você tem uma rodada em andamento.",
+    "review": "Revisar",
+    "reviewDue_many": "{{count}} perguntas para revisar",
+    "reviewDue_one": "{{count}} pergunta para revisar",
+    "reviewDue_other": "{{count}} perguntas para revisar",
+    "reviewDueHint": "Revisar agora ajuda a fixar.",
+    "statsLabel": "Hoje",
+    "streakDays_many": "dias de sequência",
+    "streakDays_one": "dia de sequência",
+    "streakDays_other": "dias de sequência",
+    "trySample": "Experimente um baralho de exemplo",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Escolha seu idioma",
     "menuLabel": "Idioma: {{language}}. Mudar idioma"
+  },
+  "legal": {
+    "privacyLink": "Privacidade"
+  },
+  "modes": {
+    "ask": "Pergunte às suas notas",
+    "askHint": "Só das suas anotações",
+    "boss": "Batalha de chefe",
+    "bossHint_many": "{{count}} tópicos prontos",
+    "bossHint_one": "{{count}} tópico pronto",
+    "bossHint_other": "{{count}} tópicos prontos",
+    "bossIntro": "Derrote a nuvem de tempestade: perguntas mais difíceis, {{seconds}} segundos cada e três corações. Sem dicas!",
+    "bossLocked": "Desbloqueia em {{percent}}% de domínio",
+    "bossReady": "Batalha de chefe desbloqueada",
+    "challenge": "Desafie um amigo",
+    "challengeHint": "Envie suas perguntas",
+    "exam": "Modo exame",
+    "examHint": "Prova simulada cronometrada",
+    "flashcards": "Flashcards",
+    "flashcardsHint": "Deslize para revisar",
+    "practiseTopic": "Praticar este tópico",
+    "quick": "Jogo rápido",
+    "quickHint": "10 perguntas misturadas",
+    "review": "Revisar pendentes",
+    "sudden": "Morte súbita",
+    "suddenBest_many": "Melhor: {{count}} consecutivos",
+    "suddenBest_one": "Melhor: {{count}} consecutivo",
+    "suddenBest_other": "Melhor: {{count}} consecutivos",
+    "topic": "Praticar um tópico",
+    "topicHint": "Focar em um tópico"
   },
   "nav": {
     "decks": "Baralhos",
@@ -35,5 +383,215 @@
     "label": "Principal",
     "profile": "Perfil",
     "review": "Revisão"
+  },
+  "newDeck": {
+    "chooseFiles": "Escolher arquivos",
+    "create": "Criar meu quiz",
+    "deckTitle": "Título do baralho",
+    "dropTitle": "Adicione seu material de estudo",
+    "examDate": "Data do exame (opcional)",
+    "examDateHint": "Planejaremos sua revisão em torno disso.",
+    "formats": "PDF, PowerPoint, Word, texto ou fotos. Vários arquivos podem ficar em um baralho.",
+    "lowerQuality": "qualidade pode ser menor",
+    "notice": "Carregue apenas material que você tem direito de usar. Não carregue documentos com informações pessoais ou sensíveis sua ou de terceiros.",
+    "pasteLabel": "Seu texto",
+    "pastePlaceholder": "Cole suas anotações aqui…",
+    "pasteText": "Colar texto em vez disso",
+    "quizLanguage": "Idioma do quiz",
+    "ready": "Seu quiz está pronto. Mais perguntas estão a caminho!",
+    "remove": "Remover {{name}}",
+    "sameAsNotes": "Mesmo que minhas anotações",
+    "selected": "Arquivos selecionados",
+    "takePhoto": "Tirar foto",
+    "title": "Novo baralho",
+    "titlePlaceholder": "Por exemplo, Biologia semana 3",
+    "untitled": "Minhas anotações"
+  },
+  "onboarding": {
+    "later": "Só dar uma olhada",
+    "one": {
+      "body": "Adicione seus slides, anotações ou foto do caderno. Um quiz com seu material fica pronto em menos de um minuto.",
+      "title": "Suas anotações viram um jogo"
+    },
+    "setup": {
+      "avatar": "Escolha um avatar",
+      "avatarN": "Avatar {{n}}",
+      "goal": "Meta diária",
+      "nickname": "Apelido (opcional)",
+      "nicknameHint": "Só fica neste dispositivo.",
+      "title": "Deixe do seu jeito"
+    },
+    "three": {
+      "body": "StudyNight lembra o que você acha difícil e traz de volta na hora certa, até a hora da prova.",
+      "title": "Aprenda de verdade"
+    },
+    "trySample": "Experimentar baralho de exemplo",
+    "two": {
+      "body": "Toque na origem para ver o trecho exato das suas anotações. As questões são verificadas nas suas notas antes de aparecerem.",
+      "title": "Cada pergunta mostra sua origem"
+    },
+    "uploadNotes": "Enviar minhas anotações"
+  },
+  "play": {
+    "answerWas": "Resposta:",
+    "bossHit": "Golpe direto!",
+    "check": "Verificar",
+    "combo_many": "Combo × {{count}}!",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Correto!",
+    "correctAnswer": "Resposta correta",
+    "correctOrder": "Ordem correta",
+    "correctPairs": "Pares corretos",
+    "definitions": "Significados",
+    "expected": "A resposta:",
+    "false": "Falso",
+    "figureAlt": "A figura dos seus anotações que essa pergunta aborda",
+    "fromNotes": "Dos seus anotações",
+    "fromPage": "Dos seus anotações · Página {{n}}",
+    "fromSlide": "Dos seus anotações · Slide {{n}}",
+    "grade": {
+      "again": "De novo",
+      "easy": "Fácil",
+      "good": "Bom",
+      "hard": "Difícil"
+    },
+    "hearts_many": "{{count}} corações restantes",
+    "hearts_one": "{{count}} coração restante",
+    "hearts_other": "{{count}} corações restantes",
+    "hint": "Dica (metade do XP)",
+    "howWell": "Quão bem você sabia?",
+    "incorrect": "Não foi dessa vez",
+    "incorrectAnnounce": "Não foi dessa vez. A resposta é {{answer}}",
+    "matchHelp": "Toque em um termo e depois no significado correspondente.",
+    "moveDown": "Mover passo {{n}} para baixo",
+    "moveUp": "Mover passo {{n}} para cima",
+    "noQuestions": "Ainda não há perguntas",
+    "noQuestionsBody": "As novas perguntas ainda estão sendo criadas. Tente novamente em instantes ou verifique sua conexão.",
+    "nothingDue": "Nada para revisar agora",
+    "nothingDueBody": "Você está em dia. Volte mais tarde ou jogue uma rodada rápida.",
+    "orderHelp": "Arraste os passos ou use as setas para colocá‑los na ordem.",
+    "pageN": "Página {{n}}",
+    "pairedWith": "Pareado com termo {{n}}: {{text}}",
+    "preparing": "Preparando suas perguntas…",
+    "progress": "Pergunta {{n}} de {{total}}",
+    "quit": "Pausar ou sair",
+    "quitBody": "Suas respostas até agora foram salvas.",
+    "quitConfirm": "Sair",
+    "quitTitle": "Sair desta rodada?",
+    "reset": "Redefinir",
+    "secondsLeft_many": "{{count}} segundos restantes",
+    "secondsLeft_one": "{{count}} segundo restante",
+    "secondsLeft_other": "{{count}} segundos restantes",
+    "showAnswer": "Mostrar resposta",
+    "slideN": "Slide {{n}}",
+    "sourceTitle": "Dos seus anotações",
+    "swipeHelp": "Deslize para a direita se soubesse, para a esquerda para ver de novo, para cima se foi fácil.",
+    "terms": "Termos",
+    "timeLeft": "Tempo restante: {{time}}",
+    "true": "Verdadeiro",
+    "typeAnswer": "Digite sua resposta",
+    "typoAccepted": "Aceito — atenção à grafia: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP nesta rodada",
+    "yourAnswer": "Sua resposta"
+  },
+  "processing": {
+    "background": "Você pode começar a jogar assim que as primeiras perguntas estiverem prontas. O resto continua chegando em segundo plano.",
+    "chooseBody_many": "{{count}} páginas precisam de leitura de imagem, mas até {{max}} páginas podem ser lidas por baralho. Escolha onde começar.",
+    "chooseBody_one": "{{count}} página precisa de leitura de imagem, mas até {{max}} páginas podem ser lidas por baralho. Escolha onde começar.",
+    "chooseBody_other": "{{count}} páginas precisam de leitura de imagem, mas até {{max}} páginas podem ser lidas por baralho. Escolha onde começar.",
+    "choosePages": "Ler páginas {{from}}–{{to}}",
+    "chooseTitle": "Escolha as páginas a ler",
+    "handwriting": "A escrita é lida com base em melhor esforço.",
+    "questions": "Escrevendo suas primeiras perguntas sobre “{{topic}}”…",
+    "readingFile": "Lendo {{name}}…",
+    "readingPage": "Lendo página {{page}} de {{total}}…",
+    "startPage": "Começar na página",
+    "title": "Construindo seu quiz",
+    "topics": "Encontrando os principais tópicos…",
+    "vision": "Lendo suas imagens ({{done}} de {{total}})…"
+  },
+  "report": {
+    "body": "Ela será removida do seu baralho imediatamente e nunca mais mostrada.",
+    "done": "Pergunta removida",
+    "duplicate": "Duplicado",
+    "notInNotes": "Não está nas minhas anotações",
+    "open": "Denunciar esta pergunta",
+    "title": "Denunciar esta pergunta",
+    "unclear": "Não claro",
+    "wrong": "Resposta errada"
+  },
+  "results": {
+    "accuracy": "Precisão",
+    "bestCombo": "Melhor combo",
+    "bossLost": "A tempestade persistiu — tente novamente!",
+    "bossWon": "Tempestade limpa!",
+    "done": "Concluído",
+    "goalMet": "Meta diária alcançada! +20 XP de bônus.",
+    "levelUp": "Level up! Você chegou ao nível {{level}}.",
+    "newBadges": "Novas conquistas",
+    "newBest": "Novo recorde pessoal!",
+    "practiseThese": "Pratique estes",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Resumo da rodada",
+    "suddenScore_many": "{{count}} seguidos!",
+    "suddenScore_one": "{{count}} seguidos!",
+    "suddenScore_other": "{{count}} seguidos!",
+    "time": "Tempo",
+    "weakest": "Seus tópicos mais difíceis",
+    "xp": "XP ganho",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Criado para o StudyNight, pronto para jogar imediatamente — sem necessidade de upload. Funciona offline também.",
+    "play_many": "Jogar ({{count}} perguntas)",
+    "play_one": "Jogar ({{count}} pergunta)",
+    "play_other": "Jogar ({{count}} perguntas)",
+    "title": "Baralhos de exemplo"
+  },
+  "share": {
+    "button": "Compartilhar resultado",
+    "copied": "Copiado!",
+    "copyText": "Copiar texto",
+    "download": "Baixar imagem",
+    "includeDeck": "Mostrar título do baralho",
+    "shareImage": "Compartilhar imagem",
+    "text": "Eu marquei {{correct}}/{{total}} no StudyNight — {{title}}! 🌙",
+    "textDeck": "Eu marquei {{correct}}/{{total}} no “{{deck}}” no StudyNight — {{title}}! 🌙",
+    "title": "Compartilhe seu resultado"
+  },
+  "smart": {
+    "body": "Encontra os trechos certos mesmo usando palavras diferentes ou outro idioma. Baixa ~{{size}} MB uma vez e depois funciona offline.",
+    "download": "Baixar ({{size}} MB)",
+    "downloading": "Busca inteligente: baixando {{percent}}…",
+    "failed": "Não foi possível configurar a Busca inteligente. A busca por palavra‑chave ainda funciona; tente novamente nas Configurações.",
+    "mobileData": "Parece que você está usando dados móveis. Prefere esperar o Wi‑Fi?",
+    "notNow": "Agora não",
+    "title": "Busca inteligente"
+  },
+  "titles": {
+    "bossSlayer": "Caçador de Tempestades",
+    "braveExplorer": "Explorador Corajoso",
+    "comboMaster": "Mestre dos Combos",
+    "comebackKid": "Retorno Triunfal",
+    "deepThinker": "Pensador Profundo",
+    "earlyRiser": "Madrugador",
+    "freshStart": "Novo Começo",
+    "hintFreeHero": "Herói Sem Dicas",
+    "marathoner": "Maratonista",
+    "neverGiveUp": "Nunca Desista",
+    "nightOwlMode": "Modo Coruja Noturna",
+    "perfectionist": "Perfeccionista",
+    "speedReader": "Leitor Rápido",
+    "steadyClimber": "Escalador Persistente",
+    "topicTamer": "Domador de Tópicos"
+  },
+  "voice": {
+    "denied": "Acesso ao microfone foi bloqueado. Permita no seu navegador ou digite sua resposta.",
+    "record": "Responder por voz",
+    "recording": "Gravando…",
+    "stop": "Parar gravação ({{seconds}} s restantes)",
+    "transcribing": "Convertendo fala em texto…"
   }
 }

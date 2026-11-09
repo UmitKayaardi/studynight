@@ -112,6 +112,7 @@ export function mapError(e: unknown): ApiError {
     return new ApiError('RATE_LIMITED', ra ? Number(ra) || 10 : 10);
   }
   if (status === 413) return new ApiError('TOO_LARGE');
+  if (status === 400 && failedGeneration(e) !== null) return new ApiError('UPSTREAM');
   if (status === 400 || status === 422) return new ApiError('UNREADABLE');
   const name = err?.name ?? '';
   if (/Timeout|Abort/i.test(name)) return new ApiError('TIMEOUT');
@@ -125,26 +126,54 @@ export function backoffMs(attempt: number, base = 700, random = Math.random): nu
   return Math.round(random() * base * 2 ** attempt);
 }
 
-/** Extracts the first JSON object from a model reply (tolerates code fences or stray text). */
+/** Groq's JSON mode rejects invalid output with 400 "json_validate_failed" and returns the text it produced. */
+export function failedGeneration(e: unknown): string | null {
+  const body = (e as { error?: { error?: { code?: string; failed_generation?: unknown } } })?.error?.error;
+  return body?.code === 'json_validate_failed' && typeof body.failed_generation === 'string' ? body.failed_generation : null;
+}
+
+/** Doubles backslashes that do not start a valid JSON escape (e.g. LaTeX "\(" or "\alpha" written unescaped). */
+export function repairJsonEscapes(text: string): string {
+  return text.replace(/\\(?!["\\/bfnrtu])/g, '\\\\').replace(/\\u(?![0-9a-fA-F]{4})/g, '\\\\u');
+}
+
+/**
+ * A LaTeX command written with a single backslash can be silently swallowed by JSON escapes:
+ * "\times" becomes a TAB + "imes", "\frac" a form feed + "rac", "\neq" a newline + "eq". Inside $…$ these control
+ * characters never make sense, so they are turned back into the backslash command.
+ */
+export function repairLatex(s: string): string {
+  if (!s.includes('$')) return s;
+  const map: Record<string, string> = { '\t': '\\t', '\f': '\\f', '\b': '\\b', '\r': '\\r', '\n': '\\n' };
+  return s.replace(/\$\$[\s\S]*?\$\$|\$[^$]*\$/g, (m) => m.replace(/[\t\f\b\r\n](?=[a-zA-Z])/g, (c) => map[c] ?? c));
+}
+
+function deepRepair(v: unknown): unknown {
+  if (typeof v === 'string') return repairLatex(v);
+  if (Array.isArray(v)) return v.map(deepRepair);
+  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepRepair(x)]));
+  return v;
+}
+
+/** Extracts the first JSON object from a model reply (tolerates code fences, stray text and bad escapes). */
 export function parseJsonObject(text: string): unknown {
   const t = text
     .trim()
     .replace(/^```(?:json)?\s*/i, '')
     .replace(/```\s*$/, '');
-  try {
-    return JSON.parse(t);
-  } catch {
-    const start = t.indexOf('{');
-    const end = t.lastIndexOf('}');
-    if (start >= 0 && end > start) {
+  const start = t.indexOf('{');
+  const end = t.lastIndexOf('}');
+  const candidates = [t, start >= 0 && end > start ? t.slice(start, end + 1) : ''].filter(Boolean);
+  for (const c of candidates) {
+    for (const attempt of [c, repairJsonEscapes(c)]) {
       try {
-        return JSON.parse(t.slice(start, end + 1));
+        return deepRepair(JSON.parse(attempt));
       } catch {
-        /* fall through */
+        /* try the next form */
       }
     }
-    throw new ApiError('UPSTREAM');
   }
+  throw new ApiError('UPSTREAM');
 }
 
 /**
@@ -181,6 +210,16 @@ export async function chatJson(
         throw lastError;
       }
     } catch (e) {
+      // JSON mode rejected the output: the produced text is usually repairable, otherwise retry once.
+      const failed = failedGeneration(e);
+      if (failed !== null) {
+        try {
+          return parseJsonObject(failed);
+        } catch {
+          if (jsonRetries-- > 0) continue;
+          throw new ApiError('UPSTREAM');
+        }
+      }
       lastError = mapError(e);
       if (lastError.code === 'RATE_LIMITED') {
         // First retry goes straight to the fallback model; later ones wait with jittered back-off.

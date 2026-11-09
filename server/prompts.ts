@@ -81,6 +81,7 @@ Every question also has these fields:
 
 Formatting: write formulas in LaTeX between $…$ (or $$…$$ for display). Put code in Markdown code fences. For programming material you may ask what a code snippet outputs only if the output is stated in the notes.
 Every fact in a question, answer, option, explanation and hint must be stated in the sources. If the sources do not support enough good questions, return fewer.
+Use the terminology and spelling the sources use (in the output language). Do not add translations in brackets. A question must never contain its own answer. Every formula, including formulas used as options or answers, must be wrapped in $…$.
 Do not repeat or closely rephrase any question listed under EXISTING QUESTIONS.
 ${languageRule(language)}
 ${SAFETY}
@@ -119,7 +120,7 @@ Judge each question ONLY against the sources (not your own knowledge). For each 
 - "singleCorrectAnswer": exactly one answer is correct (for match/order: exactly one correct arrangement; for true/false and explain: true if the statement/question is unambiguous).
 - "answerCorrect": the stated correct answer is right according to the sources.
 - "distractorsClearlyWrong": for multiple choice, every wrong option is clearly wrong according to the sources; true for other types.
-- "clear": the question is clear, self-contained and grammatical.
+- "clear": the question is clear, self-contained and grammatical, does not give away its own answer, and is not a near-repeat of another question in the list.
 - "reason": a few words explaining any false value ("" if all true).
 Be strict: if in doubt, mark false.
 ${SAFETY}

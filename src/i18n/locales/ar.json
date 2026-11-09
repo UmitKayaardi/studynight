@@ -3,6 +3,121 @@
     "name": "StudyNight",
     "tagline": "ملاحظاتك تتحول إلى لعبة."
   },
+  "badges": {
+    "challenger": {
+      "desc": "أرسلت تحدياً لصديق.",
+      "name": "المتحدّي"
+    },
+    "combo10": {
+      "desc": "أجبت بشكل صحيح 10 مرات متتالية.",
+      "name": "في القمة"
+    },
+    "comeback": {
+      "desc": "عدت بعد أسبوع من الغياب.",
+      "name": "مرحباً بعودتك"
+    },
+    "curious": {
+      "desc": "طرح 10 أسئلة على ملاحظاتك.",
+      "name": "عقل فضولي"
+    },
+    "earlyStart": {
+      "desc": "أنهيت جولة في وقت مبكر من الصباح.",
+      "name": "شروق الشمس"
+    },
+    "earned": "شارة جديدة: {{name}}",
+    "explainer": {
+      "desc": "قدّمت 10 شروحات رائعة.",
+      "name": "المُفسّر"
+    },
+    "firstBoss": {
+      "desc": "فزت في أول معركة رئيسية لك.",
+      "name": "كاسر العواصف"
+    },
+    "firstDeck": {
+      "desc": "أنشأت مجموعتك الأولى.",
+      "name": "أول مجموعة"
+    },
+    "firstQuiz": {
+      "desc": "أجبت على سؤالك الأول.",
+      "name": "الخطوات الأولى"
+    },
+    "flashcards100": {
+      "desc": "راجع 100 بطاقة تعليمية.",
+      "name": "خبير البطاقات"
+    },
+    "level10": {
+      "desc": "وصلت إلى المستوى 10.",
+      "name": "نجمة صاعدة"
+    },
+    "marathon": {
+      "desc": "درست لمدة ساعة في يوم واحد.",
+      "name": "الماراثون"
+    },
+    "nightSession": {
+      "desc": "أنهيت جولة في وقت متأخر من الليل.",
+      "name": "سهر الليل"
+    },
+    "perfectExam": {
+      "desc": "حصلت على 100% في وضع الاختبار.",
+      "name": "امتحان بلا عيوب"
+    },
+    "planner": {
+      "desc": "أضفت اختباراً إلى مخططك.",
+      "name": "المُخطّط"
+    },
+    "polyglot": {
+      "desc": "أجبت على اختبارات بلغتين أو أكثر.",
+      "name": "متعدد اللغات"
+    },
+    "questions100": {
+      "desc": "أجبت عن 100 سؤال.",
+      "name": "المئة"
+    },
+    "questions1000": {
+      "desc": "أجبت عن 1,000 سؤال.",
+      "name": "متسلق الجبال"
+    },
+    "streak100": {
+      "desc": "درست 100 يوم متتالي.",
+      "name": "مئة ليلة"
+    },
+    "streak30": {
+      "desc": "درست 30 يوماً متتالية.",
+      "name": "شهر واحد"
+    },
+    "streak7": {
+      "desc": "درست 7 أيام متتالية.",
+      "name": "أسبوع واحد"
+    },
+    "suddenDeath20": {
+      "desc": "وصلت إلى 20 في وضع الموت المفاجئ.",
+      "name": "أعصاب فولاذية"
+    }
+  },
+  "challenge": {
+    "accept": "قبول التحدي",
+    "copied": "تم نسخ الرابط!",
+    "copy": "نسخ الرابط",
+    "draw": "تعادل!",
+    "forFun": "النتائج في روابط التحدي للمتعة فقط.",
+    "friend": "صديق",
+    "from": "{{name}} يحدّاك!",
+    "intro_few": "رابطك يحتوي على {{count}} أسئلة من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "intro_many": "رابطك يحتوي على {{count}} سؤالاً من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "intro_one": "رابطك يحتوي على {{count}} سؤال من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "intro_other": "رابطك يحتوي على {{count}} سؤال من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "intro_two": "رابطك يحتوي على {{count}} سؤالين من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "intro_zero": "رابطك لا يحتوي على أي أسئلة من هذه الجولة، مع نتيجتك. ملاحظاتك ومصادرها لا تُضمَّن أبداً.",
+    "makeOwn": "أنشئ اختبارًا من ملاحظاتي الخاصة",
+    "none": "ابدأ جولة مع أسئلة اختيار من متعدد، صح/خطأ، ملء الفراغ، مطابقة أو ترتيب أولاً.",
+    "privacy": "الأسئلة تنتقل داخل الرابط نفسه — لا تصل إلى خادمنا أبداً.",
+    "share": "مشاركة الرابط",
+    "shareText": "{{name}} يحدّاك على StudyNight! هل تستطيع التفوق على نتيجتي؟",
+    "theirScore": "نتيجته: {{correct}}/{{total}}. هل تستطيع التفوق؟",
+    "theyWin": "قريب جدًا!",
+    "you": "أنت",
+    "youWin": "أنت فزت!"
+  },
   "common": {
     "back": "رجوع",
     "cancel": "إلغاء",
@@ -13,21 +128,302 @@
     "done": "تم",
     "goHome": "العودة للصفحة الرئيسية",
     "loading": "جارٍ التحميل…",
+    "minutes_few": "{{count}} دقيقة",
+    "minutes_many": "{{count}} دقيقة",
+    "minutes_one": "{{count}} دقيقة",
+    "minutes_other": "{{count}} دقيقة",
+    "minutes_two": "{{count}} دقيقة",
+    "minutes_zero": "{{count}} دقيقة",
     "next": "التالي",
     "retry": "حاول مرة أخرى",
     "save": "حفظ",
+    "saved": "تم الحفظ",
     "skip": "تخطي",
+    "skipToContent": "تخطى المحتوى",
     "undo": "تراجع"
   },
+  "deck": {
+    "aiDisclaimer": "الذكاء الاصطناعي قد يخطئ — راجع دائماً ملاحظاتك. اضغط على المصدر في أي سؤال لرؤية أصله.",
+    "busy": "في انتظار خدمة الذكاء الاصطناعي…",
+    "delete": "احذف الصف",
+    "deleteBody": "\"{{title}}\"، أسئلته وتاريخه سيُحذفان من هذا الجهاز.",
+    "deleted": "\"{{title}}\" تم حذفه",
+    "deleteTitle": "حذف هذا الصف؟",
+    "generating": "يكتب أسئلة أكثر…",
+    "masteryLabel": "إتقان {{percent}}%",
+    "missing": "الصف غير موجود",
+    "missingBody": "هذا الصف لم يعد موجوداً على هذا الجهاز.",
+    "modes": "طرق اللعب",
+    "pages_few": "{{count}} صفحات",
+    "pages_many": "{{count}} صفحات",
+    "pages_one": "صفحة واحدة",
+    "pages_other": "{{count}} صفحات",
+    "pages_two": "{{count}} صفحات",
+    "pages_zero": "{{count}} صفحات",
+    "pastedText": "نص متم نسخ",
+    "percent": "{{value}}%",
+    "quizIn": "اختبار في {{language}}",
+    "regenerate": "أعد إنشاء أسئلة للموضوع",
+    "regenerateButton": "أعد الإنشاء",
+    "regenerated": "أسئلة جديدة جاهزة.",
+    "regenerateHint": "يستبدل أسئلة الموضوع بأسئلة جديدة. تاريخ إجاباتك محفوظ.",
+    "settings": "إعدادات الصف",
+    "slides_few": "{{count}} شرائح",
+    "slides_many": "{{count}} شرائح",
+    "slides_one": "شريحة واحدة",
+    "slides_other": "{{count}} شرائح",
+    "slides_two": "{{count}} شرائح",
+    "slides_zero": "{{count}} شرائح",
+    "sources": "المصادر",
+    "topicMap": "خريطة الموضوع",
+    "topicQuestions_few": "{{count}} أسئلة",
+    "topicQuestions_many": "{{count}} أسئلة",
+    "topicQuestions_one": "سؤال واحد",
+    "topicQuestions_other": "{{count}} أسئلة",
+    "topicQuestions_two": "{{count}} أسئلة",
+    "topicQuestions_zero": "{{count}} أسئلة",
+    "topicStatus_few": "إتقان {{percent}}% · {{count}} أسئلة",
+    "topicStatus_many": "إتقان {{percent}}% · {{count}} أسئلة",
+    "topicStatus_one": "إتقان {{percent}}% · سؤال واحد",
+    "topicStatus_other": "إتقان {{percent}}% · {{count}} أسئلة",
+    "topicStatus_two": "إتقان {{percent}}% · {{count}} أسئلة",
+    "topicStatus_zero": "إتقان {{percent}}% · {{count}} أسئلة",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "يحتاج للعمل"
+  },
+  "decks": {
+    "due_few": "{{count}} مستحقين",
+    "due_many": "{{count}} مستحق",
+    "due_one": "{{count}} مستحق",
+    "due_other": "{{count}} مستحق",
+    "due_two": "{{count}} مستحقان",
+    "due_zero": "لا مهام مستحقة",
+    "emptyBody": "حمّل ملاحظاتك أو جرّب مجموعة تجريبية لتبدأ اللعب.",
+    "emptyTitle": "لا توجد مجموعات بعد",
+    "failed": "حدث خطأ ما",
+    "processing": "جارٍ التحضير…",
+    "questionCount_few": "{{count}} أسئلة",
+    "questionCount_many": "{{count}} سؤالًا",
+    "questionCount_one": "{{count}} سؤال",
+    "questionCount_other": "{{count}} سؤال",
+    "questionCount_two": "{{count}} سؤالان",
+    "questionCount_zero": "لا أسئلة",
+    "topicCount_few": "{{count}} مواضيع",
+    "topicCount_many": "{{count}} موضوعًا",
+    "topicCount_one": "{{count}} موضوع",
+    "topicCount_other": "{{count}} موضوع",
+    "topicCount_two": "{{count}} موضوعان",
+    "topicCount_zero": "لا مواضيع"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "يرجى المحاولة مرة أخرى.",
+      "title": "هناك شيء غير صحيح"
+    },
+    "badChallenge": {
+      "body": "قد تم قطعه عند النسخ. اطلب من صديقك إعادة إرساله.",
+      "title": "رابط التحدي غير صالح"
+    },
     "boundary": {
       "body": "تم حفظ مجموعاتك وتقدمك بأمان على هذا الجهاز. لنعد للصفحة الرئيسية.",
       "title": "عفوًا، حدث خطأ"
+    },
+    "CORRUPT": {
+      "body": "يبدو أن “{{file}}” تالف. جرّب حفظه أو تصديره مرة أخرى.",
+      "title": "تعذر فتح هذا الملف"
+    },
+    "EMPTY": {
+      "body": "أضف ملفًا أو صورة أو نصًا أولاً.",
+      "title": "لا شيء للقراءة"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "“{{file}}” يزيد عن 25 ميغابايت. جرّب تقسيمه أو تصديره كـ PDF أصغر.",
+      "title": "الملف كبير جدًا"
+    },
+    "INTERRUPTED": {
+      "body": "تم إغلاق التطبيق أثناء بناء مجموعتك. احذف هذه المجموعة وأضف ملفاتك مرة أخرى.",
+      "title": "تم مقاطعة الرفع"
+    },
+    "NO_TEXT": {
+      "body": "يبدو أن هذا مستند مسح ضوئي. التقط صورًا للصفحات بدلاً من ذلك، وسيتعرف StudyNight عليها.",
+      "title": "لم يتم العثور على نص"
+    },
+    "OFFLINE": {
+      "body": "هذا يتطلب اتصالًا بالإنترنت. كل ما أنشأته بالفعل لا يزال يعمل دون اتصال.",
+      "title": "أنت غير متصل"
+    },
+    "PASSWORD": {
+      "body": "أزل كلمة المرور (أو اطبعها إلى PDF جديد) ثم ارفعها مرة أخرى.",
+      "title": "هذا PDF محمي بكلمة مرور"
+    },
+    "RATE_LIMITED": {
+      "body": "الكثير من الناس يدرسون الآن — أسئلتك القادمة جاهزة خلال لحظة. في meantime، راجع ما لديك.",
+      "title": "الكثير من الناس يدرسون الآن"
+    },
+    "storage": "تعذر الحفظ على هذا الجهاز. حرّر مساحة وجرب مرة أخرى.",
+    "STORAGE_FULL": {
+      "body": "احذف مجموعة أو صدّر نسخة احتياطية من الملف الشخصي لتوفير مساحة، ثم حاول مرة أخرى.",
+      "title": "جهازك ممتلئ"
+    },
+    "TIMEOUT": {
+      "body": "خدمة الذكاء الاصطناعي لم ترد في الوقت المحدد. يرجى المحاولة مرة أخرى.",
+      "title": "استغرق ذلك وقتًا طويلاً"
+    },
+    "TOO_LARGE": {
+      "body": "جرّب ملفًا أصغر أو عدد صفحات أقل في المرة الواحدة.",
+      "title": "الملف كبير جدًا للإرسال"
+    },
+    "TOO_LONG": {
+      "body": "يمكن للبطاقة أن تحتفظ حتى 200,000 حرف نص. قسمه إلى عدة بطاقات.",
+      "title": "المستند طويل جدًا"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "يمكن للبطاقة أن تحتوي على ما يصل إلى {{limit}} صفحة أو شريحة. قسم موادك إلى عدة بطاقات.",
+      "title": "الصفحات كثيرة جدًا"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "يمكن للبطاقة أن تحتوي على ما يصل إلى 30 صورة. أنشئ بطاقة ثانية لباقي الصور.",
+      "title": "الصور كثيرة جدًا"
+    },
+    "UNKNOWN": {
+      "body": "يرجى المحاولة مرة أخرى.",
+      "title": "حدث خطأ ما"
+    },
+    "UNREADABLE": {
+      "body": "جرّب صورة أو ملف أوضح.",
+      "title": "لم يتمكن من القراءة"
+    },
+    "UNSUPPORTED": {
+      "body": "لا يمكن قراءة “{{file}}”. استخدم PDF، PowerPoint (.pptx)، Word (.docx)، نص، Markdown أو صورة.",
+      "title": "نوع الملف غير مدعوم"
+    },
+    "UPSTREAM": {
+      "body": "يرجى المحاولة مرة أخرى بعد قليل.",
+      "title": "حدثت مشكلة في خدمة الذكاء الاصطناعي"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}٪",
+    "byTopic": "حسب الموضوع",
+    "duration": "الوقت",
+    "estimate": "هذا تقدير بناءً على إجاباتك ومدى احتمال تذكرك للبطاقة. ليس ضمانًا.",
+    "extended": "الوقت الإضافي مفعّل: ستحصل على 50٪ وقت إضافي.",
+    "intro": "امتحان تجريبي محدود الوقت بدون تلميحات ولا ملاحظات حتى النهاية. ثم ستحصل على تقرير بالنتيجة المتوقعة.",
+    "mistakes": "مراجعة الأخطاء",
+    "questions": "الأسئلة",
+    "reportTitle": "النتيجة المتوقعة",
+    "start": "ابدأ الامتحان"
+  },
+  "explain": {
+    "check": "تحقق من جوابي",
+    "checking": "جارٍ التحقق من إجابتك…",
+    "covered": "مغطى",
+    "great": "جواب رائع!",
+    "label": "جوابك",
+    "missed": "مفقود",
+    "modelAnswer": "الجواب النموذجي",
+    "notYet": "ليس بعد",
+    "partly": "جزئياً صحيح",
+    "placeholder": "اشرحه بكلماتك الخاصة…",
+    "points": "غطيت {{hit}} من {{total}} نقطة رئيسية."
+  },
+  "home": {
+    "continue": "استمر",
+    "examIn_few": "{{title}} امتحان بعد {{count}} أيام",
+    "examIn_many": "{{title}} امتحان بعد {{count}} يومًا",
+    "examIn_one": "{{title}} امتحان بعد {{count}} يوم",
+    "examIn_other": "{{title}} امتحان بعد {{count}} يوم",
+    "examIn_two": "{{title}} امتحان بعد {{count}} يومين",
+    "examIn_zero": "{{title}} امتحان بعد {{count}} يوم",
+    "examToday": "{{title}}: امتحان اليوم. حظاً موفقاً!",
+    "freezes_few": "{{count}} تجميد سلسلة",
+    "freezes_many": "{{count}} تجميد سلسلة",
+    "freezes_one": "{{count}} تجميد سلسلة",
+    "freezes_other": "{{count}} تجميد سلسلة",
+    "freezes_two": "{{count}} تجميد سلسلة",
+    "freezes_zero": "{{count}} تجميد سلسلة",
+    "go": "العب",
+    "goalOf_few": "من {{count}} دقيقة",
+    "goalOf_many": "من {{count}} دقيقة",
+    "goalOf_one": "من {{count}} دقيقة",
+    "goalOf_other": "من {{count}} دقيقة",
+    "goalOf_two": "من {{count}} دقيقة",
+    "goalOf_zero": "من {{count}} دقيقة",
+    "goalRing": "الهدف اليومي {{percent}}% مكتمل",
+    "greetingAfternoon": "مساء الخير!",
+    "greetingAfternoonName": "مساء الخير، {{name}}!",
+    "greetingEvening": "مساء الخير!",
+    "greetingEveningName": "مساء الخير، {{name}}!",
+    "greetingMorning": "صباح الخير!",
+    "greetingMorningName": "صباح الخير، {{name}}!",
+    "level": "المستوى {{level}}",
+    "levelProgress": "التقدم للمستوى التالي، {{xp}} XP إجمالي",
+    "mood": {
+      "celebrating": "الهدف اليومي مكتمل. عمل رائع!",
+      "encouraging": "أضف ملاحظاتك الأولى ولنلعب.",
+      "happy": "جاهز لجولة سريعة؟",
+      "sleepy": "سلسلتك في انتظارك — بعض الأسئلة تحافظ عليها حية."
+    },
+    "newDeck": "مجموعة جديدة",
+    "openDeck": "افتح {{title}}",
+    "resume": "لديك جولة قيد التقدم.",
+    "review": "راجع",
+    "reviewDue_few": "{{count}} أسئلة للمراجعة",
+    "reviewDue_many": "{{count}} سؤال للمراجعة",
+    "reviewDue_one": "{{count}} سؤال للمراجعة",
+    "reviewDue_other": "{{count}} سؤال للمراجعة",
+    "reviewDue_two": "{{count}} سؤال للمراجعة",
+    "reviewDue_zero": "{{count}} سؤال للمراجعة",
+    "reviewDueHint": "المراجعة الآن تساعد على التثبيت.",
+    "statsLabel": "اليوم",
+    "streakDays_few": "سلسلة {{count}} أيام",
+    "streakDays_many": "سلسلة {{count}} يومًا",
+    "streakDays_one": "سلسلة يوم",
+    "streakDays_other": "سلسلة {{count}} يوم",
+    "streakDays_two": "سلسلة يومين",
+    "streakDays_zero": "سلسلة أيام",
+    "trySample": "جرّب مجموعة تجريبية",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "اختر لغتك",
     "menuLabel": "اللغة: {{language}}. غير اللغة"
+  },
+  "legal": {
+    "privacyLink": "الخصوصية"
+  },
+  "modes": {
+    "ask": "اسأل ملاحظاتك",
+    "askHint": "الإجابات من ملاحظاتك فقط",
+    "boss": "معركة الزعيم",
+    "bossHint_few": "{{count}} مواضيع جاهزة",
+    "bossHint_many": "{{count}} مواضيع جاهزة",
+    "bossHint_one": "موضوع واحد جاهز",
+    "bossHint_other": "{{count}} مواضيع جاهزة",
+    "bossHint_two": "{{count}} مواضيع جاهزة",
+    "bossHint_zero": "{{count}} مواضيع جاهزة",
+    "bossIntro": "تغلب على سحابة العاصفة: أسئلة أصعب، {{seconds}} ثانية لكل سؤال وثلاث قلوب. لا توجد تلميحات!",
+    "bossLocked": "يفتح عند إتقان {{percent}}%",
+    "bossReady": "معركة الزعيم مفتوحة",
+    "challenge": "تحدّى صديق",
+    "challengeHint": "أرسل أسئلتك",
+    "exam": "وضع الامتحان",
+    "examHint": "امتحان تجريبي مع توقيت",
+    "flashcards": "البطاقات التعليمية",
+    "flashcardsHint": "اسحب للمراجعة",
+    "practiseTopic": "تدرب على هذا الموضوع",
+    "quick": "اللعب السريع",
+    "quickHint": "10 أسئلة مختلطة",
+    "review": "مراجعة مستحقة",
+    "sudden": "موت مفاجئ",
+    "suddenBest_few": "الأفضل: {{count}} متتالية",
+    "suddenBest_many": "الأفضل: {{count}} متتالية",
+    "suddenBest_one": "الأفضل: {{count}} متتالية",
+    "suddenBest_other": "الأفضل: {{count}} متتالية",
+    "suddenBest_two": "الأفضل: {{count}} متتالية",
+    "suddenBest_zero": "الأفضل: {{count}} متتالية",
+    "topic": "تدريب على موضوع",
+    "topicHint": "ركز على موضوع واحد"
   },
   "nav": {
     "decks": "المجموعات",
@@ -35,5 +431,233 @@
     "label": "الرئيسية",
     "profile": "الملف",
     "review": "المراجعة"
+  },
+  "newDeck": {
+    "chooseFiles": "اختر ملفات",
+    "create": "أنشئ اختباري",
+    "deckTitle": "عنوان المجموعة",
+    "dropTitle": "أضف مادة دراستك",
+    "examDate": "تاريخ الامتحان (اختياري)",
+    "examDateHint": "سنخطط لمراجعتك حوله.",
+    "formats": "PDF، PowerPoint، Word، نص أو صور. يمكن دمج عدة ملفات في مجموعة واحدة.",
+    "lowerQuality": "قد تكون الجودة أقل",
+    "notice": "حمّل فقط ما لك حق استخدامه. لا ترفع مستندات تحتوي على معلومات شخصية أو حساسة عنك أو عن الآخرين.",
+    "pasteLabel": "نصك",
+    "pastePlaceholder": "الصق ملاحظاتك هنا…",
+    "pasteText": "الصق النص بدلاً من ذلك",
+    "quizLanguage": "لغة الاختبار",
+    "ready": "اختبارك جاهز. المزيد من الأسئلة قادمة!",
+    "remove": "إزالة {{name}}",
+    "sameAsNotes": "نفس ملاحظاتي",
+    "selected": "الملفات المختارة",
+    "takePhoto": "التقط صورة",
+    "title": "مجموعة جديدة",
+    "titlePlaceholder": "مثال: الأحياء الأسبوع 3",
+    "untitled": "ملاحظاتي"
+  },
+  "onboarding": {
+    "later": "أستكشف فقط",
+    "one": {
+      "body": "أضف شرائحك أو ملاحظاتك أو صورة لدفترك. اختبار مبني من موادك جاهز في نصف دقيقة تقريباً.",
+      "title": "ملاحظاتك، تتحول إلى لعبة"
+    },
+    "setup": {
+      "avatar": "اختر صورة شخصية",
+      "avatarN": "صورة شخصية {{n}}",
+      "goal": "الهدف اليومي",
+      "nickname": "الاسم المستعار (اختياري)",
+      "nicknameHint": "يُخزن فقط على هذا الجهاز.",
+      "title": "اجعلها خاصة بك"
+    },
+    "three": {
+      "body": "تذكر StudyNight ما هو صعب عليك وتعيده في الوقت المناسب، حتى الامتحان.",
+      "title": "تعلّمها جيداً"
+    },
+    "trySample": "جرب مجموعة عينة",
+    "two": {
+      "body": "انقر المصدر لرؤية المقطع الدقيق من ملاحظاتك. يتم التحقق من الأسئلة مقابل ملاحظاتك قبل رؤيتها.",
+      "title": "كل سؤال يوضح مصدره"
+    },
+    "uploadNotes": "ارفع ملاحظاتي"
+  },
+  "play": {
+    "answerWas": "الجواب:",
+    "bossHit": "ضربة مباشرة!",
+    "check": "تحقق",
+    "combo_few": "مجموعة × {{count}}!",
+    "combo_many": "مجموعة × {{count}}!",
+    "combo_one": "مجموعة × {{count}}!",
+    "combo_other": "مجموعة × {{count}}!",
+    "combo_two": "مجموعة × {{count}}!",
+    "combo_zero": "لا مجموعة",
+    "correct": "صحيح!",
+    "correctAnswer": "الجواب الصحيح",
+    "correctOrder": "ترتيب صحيح",
+    "correctPairs": "أزواج صحيحة",
+    "definitions": "المعاني",
+    "expected": "الإجابة:",
+    "false": "خطأ",
+    "figureAlt": "الشكل من ملاحظاتك الذي تتعلق به هذا السؤال",
+    "fromNotes": "من ملاحظاتك",
+    "fromPage": "من ملاحظاتك · الصفحة {{n}}",
+    "fromSlide": "من ملاحظاتك · الشريحة {{n}}",
+    "grade": {
+      "again": "مرة أخرى",
+      "easy": "سهل",
+      "good": "جيد",
+      "hard": "صعب"
+    },
+    "hearts_few": "{{count}} قلوب متبقية",
+    "hearts_many": "{{count}} قلبًا متبقيًا",
+    "hearts_one": "قلب واحد متبقٍ",
+    "hearts_other": "{{count}} قلب متبقٍ",
+    "hearts_two": "قلبان متبقيان",
+    "hearts_zero": "لا قلوب متبقية",
+    "hint": "تلميح (نصف XP)",
+    "howWell": "ما مدى معرفتك لها؟",
+    "incorrect": "ليس تماماً",
+    "incorrectAnnounce": "ليس تماماً. الجواب هو {{answer}}",
+    "matchHelp": "اضغط على مصطلح، ثم المعنى المطابق له.",
+    "moveDown": "حرك الخطوة {{n}} لأسفل",
+    "moveUp": "حرك الخطوة {{n}} لأعلى",
+    "noQuestions": "لا توجد أسئلة بعد",
+    "noQuestionsBody": "ما زالت الأسئلة تُكتب. حاول مرة أخرى بعد قليل، أو تحقق من اتصالك.",
+    "nothingDue": "لا شيء للمراجعة الآن",
+    "nothingDueBody": "أنت مُحدّث بالكامل. عُد لاحقًا أو العب جولة سريعة.",
+    "orderHelp": "اسحب الخطوات أو استخدم الأسهم لترتيبها.",
+    "pageN": "الصفحة {{n}}",
+    "pairedWith": "متزاوج مع المصطلح {{n}}: {{text}}",
+    "preparing": "جارٍ تجهيز أسئلتك…",
+    "progress": "السؤال {{n}} من {{total}}",
+    "quit": "إيقاف أو خروج",
+    "quitBody": "تم حفظ إجاباتك حتى الآن.",
+    "quitConfirm": "ترك",
+    "quitTitle": "هل تريد ترك هذه الجولة؟",
+    "reset": "إعادة ضبط",
+    "secondsLeft_few": "{{count}} ثوانٍ متبقية",
+    "secondsLeft_many": "{{count}} ثانية متبقية",
+    "secondsLeft_one": "ثانية واحدة متبقية",
+    "secondsLeft_other": "{{count}} ثانية متبقية",
+    "secondsLeft_two": "ثانيتان متبقيتان",
+    "secondsLeft_zero": "لا ثوانٍ متبقية",
+    "showAnswer": "إظهار الإجابة",
+    "slideN": "الشريحة {{n}}",
+    "sourceTitle": "من ملاحظاتك",
+    "swipeHelp": "اسحب يميناً إذا كنت تعرفه، يساراً لرؤيته مجدداً، لأعلى إذا كان سهلًا.",
+    "terms": "المصطلحات",
+    "timeLeft": "الوقت المتبقي: {{time}}",
+    "true": "صحيح",
+    "typeAnswer": "اكتب إجابتك",
+    "typoAccepted": "مقبول — راقب الإملاء: “{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP هذه الجولة",
+    "yourAnswer": "جوابك"
+  },
+  "processing": {
+    "background": "يمكنك البدء باللعب بمجرد جاهزية أول الأسئلة. باقي الأسئلة ستستمر في التحضير في الخلفية.",
+    "chooseBody_few": "{{count}} صفحات تحتاج قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "chooseBody_many": "{{count}} صفحة تحتاج قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "chooseBody_one": "صفحة واحدة تحتاج قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "chooseBody_other": "{{count}} صفحة تحتاج قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "chooseBody_two": "صفحتان تحتاجان قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "chooseBody_zero": "لا صفحات تحتاج قراءة صور، لكن يمكنك قراءة حتى {{max}} صفحة لكل مجموعة. اختر من أين تبدأ.",
+    "choosePages": "قراءة الصفحات {{from}}–{{to}}",
+    "chooseTitle": "اختر الصفحات للقراءة",
+    "handwriting": "يتم قراءة الخط اليدوي بأفضل ما يمكن.",
+    "questions": "كتابة أسئلتك الأولى عن “{{topic}}”…",
+    "readingFile": "قراءة {{name}}…",
+    "readingPage": "قراءة الصفحة {{page}} من {{total}}…",
+    "startPage": "ابدأ من الصفحة",
+    "title": "نُنشئ اختبارك",
+    "topics": "اكتشاف المواضيع الرئيسية…",
+    "vision": "قراءة صورك ({{done}} من {{total}})…"
+  },
+  "report": {
+    "body": "سيتم إزالته من مجموعتك فوراً ولن يُعرض مرة أخرى.",
+    "done": "تم حذف السؤال",
+    "duplicate": "مكرر",
+    "notInNotes": "ليس في ملاحظاتي",
+    "open": "أبلغ عن هذا السؤال",
+    "title": "أبلغ عن هذا السؤال",
+    "unclear": "غير واضح",
+    "wrong": "جواب خاطئ"
+  },
+  "results": {
+    "accuracy": "الدقة",
+    "bestCombo": "أفضل مجموعة",
+    "bossLost": "العاصفة ما زالت مستمرة — حاول مرة أخرى!",
+    "bossWon": "انقشع العاصفة!",
+    "done": "تم",
+    "goalMet": "تم تحقيق الهدف اليومي! +20 XP مكافأة.",
+    "levelUp": "تم رفع المستوى! وصلت إلى المستوى {{level}}.",
+    "newBadges": "شارات جديدة",
+    "newBest": "إنجاز شخصي جديد!",
+    "practiseThese": "تدرب على هذه",
+    "score": "{{correct}}/{{total}}",
+    "stats": "ملخص الجولة",
+    "suddenScore_few": "{{count}} متتالية!",
+    "suddenScore_many": "{{count}} متتالية!",
+    "suddenScore_one": "{{count}} متتالية!",
+    "suddenScore_other": "{{count}} متتالية!",
+    "suddenScore_two": "{{count}} متتالية!",
+    "suddenScore_zero": "{{count}} متتالية!",
+    "time": "الوقت",
+    "weakest": "المواضيع الأصعب لك",
+    "xp": "XP المكتسبة",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "مكتوبة لـ StudyNight، جاهزة للعب فورًا — لا تحتاج للرفع. تعمل دون اتصال أيضًا.",
+    "play_few": "العب ({{count}} أسئلة)",
+    "play_many": "العب ({{count}} سؤالًا)",
+    "play_one": "العب ({{count}} سؤال)",
+    "play_other": "العب ({{count}} سؤال)",
+    "play_two": "العب ({{count}} سؤالان)",
+    "play_zero": "العب",
+    "title": "مجموعات تجريبية"
+  },
+  "share": {
+    "button": "مشاركة النتيجة",
+    "copied": "تم النسخ!",
+    "copyText": "نسخ النص",
+    "download": "تنزيل الصورة",
+    "includeDeck": "إظهار عنوان المجموعة",
+    "shareImage": "مشاركة الصورة",
+    "text": "حصلت على {{correct}}/{{total}} في StudyNight — {{title}}! 🌙",
+    "textDeck": "حصلت على {{correct}}/{{total}} في “{{deck}}” على StudyNight — {{title}}! 🌙",
+    "title": "شارك نتيجتك"
+  },
+  "smart": {
+    "body": "يجد الفقرات الصحيحة حتى لو استخدمت كلمات مختلفة أو لغة أخرى. يُحمّل بحجم {{size}} ميغابايت مرة واحدة، ثم يعمل دون اتصال.",
+    "download": "تحميل ({{size}} ميغابايت)",
+    "downloading": "البحث الذكي: جارٍ التحميل {{percent}}…",
+    "failed": "تعذر إعداد البحث الذكي. لا يزال البحث بالكلمات المفتاحية يعمل؛ يمكنك المحاولة مرة أخرى في الإعدادات.",
+    "mobileData": "يبدو أنك على بيانات الهاتف. قد تفضل الانتظار للواي فاي.",
+    "notNow": "ليس الآن",
+    "title": "البحث الذكي"
+  },
+  "titles": {
+    "bossSlayer": "مطارد العواصف",
+    "braveExplorer": "مستكشف شجاع",
+    "comboMaster": "سيد المجموعات",
+    "comebackKid": "العودة القوية",
+    "deepThinker": "مفكر عميق",
+    "earlyRiser": "مستيقظ مبكر",
+    "freshStart": "بداية جديدة",
+    "hintFreeHero": "بطل بدون تلميحات",
+    "marathoner": "ماراثوني",
+    "neverGiveUp": "لا تستسلم أبداً",
+    "nightOwlMode": "وضع بومة الليل",
+    "perfectionist": "مثالي",
+    "speedReader": "قارئ سريع",
+    "steadyClimber": "متسلق ثابت",
+    "topicTamer": "مروض المواضيع"
+  },
+  "voice": {
+    "denied": "تم حظر وصول الميكروفون. اسمح به في إعدادات المتصفح، أو اكتب إجابتك بدلاً من ذلك.",
+    "record": "الإجابة بالصوت",
+    "recording": "جارٍ التسجيل…",
+    "stop": "أوقف التسجيل ({{seconds}} ث بقايا)",
+    "transcribing": "تحويل الكلام إلى نص…"
   }
 }

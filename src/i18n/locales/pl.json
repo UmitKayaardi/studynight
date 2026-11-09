@@ -3,6 +3,119 @@
     "name": "StudyNight",
     "tagline": "Twoje notatki zamienione w grę."
   },
+  "badges": {
+    "challenger": {
+      "desc": "Wysłałeś wyzwanie do znajomego.",
+      "name": "Wyzwanie"
+    },
+    "combo10": {
+      "desc": "Zgadłeś 10 pytań z rzędu.",
+      "name": "Na ognisku"
+    },
+    "comeback": {
+      "desc": "Wróciłeś po tygodniu nieobecności.",
+      "name": "Witaj z powrotem"
+    },
+    "curious": {
+      "desc": "Zadałeś 10 pytań do swoich notatek.",
+      "name": "Ciekawy umysł"
+    },
+    "earlyStart": {
+      "desc": "Zakończyłeś rundę wcześnie rano.",
+      "name": "Wschód słońca"
+    },
+    "earned": "Nowa odznaka: {{name}}",
+    "explainer": {
+      "desc": "Zdałeś 10 świetnych wyjaśnień.",
+      "name": "Wyjaśniacz"
+    },
+    "firstBoss": {
+      "desc": "Wygrałeś pierwszą walkę z bossem.",
+      "name": "Łamacz Burz"
+    },
+    "firstDeck": {
+      "desc": "Utworzyłeś pierwszą talię.",
+      "name": "Pierwsza Talia"
+    },
+    "firstQuiz": {
+      "desc": "Odpowiedziałeś na pierwsze pytanie.",
+      "name": "Pierwsze Kroki"
+    },
+    "flashcards100": {
+      "desc": "Przejrzałeś 100 fiszek.",
+      "name": "Karta szachista"
+    },
+    "level10": {
+      "desc": "Osiągnąłeś poziom 10.",
+      "name": "Wschodząca gwiazda"
+    },
+    "marathon": {
+      "desc": "Uczyłeś się godzinę w jednym dniu.",
+      "name": "Maraton"
+    },
+    "nightSession": {
+      "desc": "Zakończyłeś rundę późno w nocy.",
+      "name": "Paliwo nocne"
+    },
+    "perfectExam": {
+      "desc": "Zdobyłeś 100 % w trybie egzaminu.",
+      "name": "Perfekcyjny egzamin"
+    },
+    "planner": {
+      "desc": "Dodano egzamin do planera.",
+      "name": "Planer"
+    },
+    "polyglot": {
+      "desc": "Rozwiązałeś quizy w dwóch lub więcej językach.",
+      "name": "Poliglot"
+    },
+    "questions100": {
+      "desc": "Odpowiedziałeś na 100 pytań.",
+      "name": "Sto"
+    },
+    "questions1000": {
+      "desc": "Odpowiedziałeś na 1 000 pytań.",
+      "name": "Wspinacz górski"
+    },
+    "streak100": {
+      "desc": "Uczyłeś się 100 dni z rzędu.",
+      "name": "Sto Nocy"
+    },
+    "streak30": {
+      "desc": "Uczyłeś się 30 dni pod rząd.",
+      "name": "Miesiąc"
+    },
+    "streak7": {
+      "desc": "Uczyłeś się 7 dni pod rząd.",
+      "name": "Tydzień"
+    },
+    "suddenDeath20": {
+      "desc": "Osiągnąłeś 20 w trybie sudden death.",
+      "name": "Nerwy z żelaza"
+    }
+  },
+  "challenge": {
+    "accept": "Przyjmij wyzwanie",
+    "copied": "Link skopiowany!",
+    "copy": "Skopiuj link",
+    "draw": "Remis!",
+    "forFun": "Wyniki w linkach wyzwań są tylko dla zabawy.",
+    "friend": "Znajomy",
+    "from": "{{name}} wyzywa Cię!",
+    "intro_few": "Twój link zawiera {{count}} pytania z tej rundy, wraz z wynikiem. Twoje notatki i ich źródła nigdy nie są włączane.",
+    "intro_many": "Twój link zawiera {{count}} pytania z tej rundy, wraz z wynikiem. Twoje notatki i ich źródła nigdy nie są włączane.",
+    "intro_one": "Twój link zawiera {{count}} pytanie z tej rundy, wraz z wynikiem. Twoje notatki i ich źródła nigdy nie są włączane.",
+    "intro_other": "Twój link zawiera {{count}} pytania z tej rundy, wraz z wynikiem. Twoje notatki i ich źródła nigdy nie są włączane.",
+    "makeOwn": "Stwórz quiz z własnych notatek",
+    "none": "Najpierw zagraj rundę z pytaniami wielokrotnego wyboru, prawda/fałsz, uzupełnianiem, dopasowywaniem lub kolejnością.",
+    "privacy": "Pytania są przesyłane w samym linku — nigdy nie trafiają na nasz serwer.",
+    "share": "Udostępnij link",
+    "shareText": "{{name}} wyzywa Cię w StudyNight! Czy pobijesz mój wynik?",
+    "theirScore": "Ich wynik: {{correct}}/{{total}}. Czy dasz radę go pobić?",
+    "theyWin": "Prawie!",
+    "you": "Ty",
+    "youWin": "Wygrałeś!"
+  },
   "common": {
     "back": "Wstecz",
     "cancel": "Anuluj",
@@ -13,21 +126,272 @@
     "done": "Gotowe",
     "goHome": "Idź do domu",
     "loading": "Ładowanie…",
+    "minutes_few": "{{count}} min",
+    "minutes_many": "{{count}} min",
+    "minutes_one": "{{count}} min",
+    "minutes_other": "{{count}} min",
     "next": "Dalej",
     "retry": "Spróbuj ponownie",
     "save": "Zapisz",
+    "saved": "Zapisane",
     "skip": "Pomiń",
+    "skipToContent": "Pomiń do treści",
     "undo": "Cofnij"
   },
+  "deck": {
+    "aiDisclaimer": "AI może popełniać błędy — zawsze sprawdzaj w notatkach. Dotknij źródła dowolnego pytania, aby zobaczyć, skąd pochodzi.",
+    "busy": "Oczekiwanie na usługę AI…",
+    "delete": "Usuń talię",
+    "deleteBody": "„{{title}}”, jej pytania i historia zostaną usunięte z tego urządzenia.",
+    "deleted": "„{{title}}” usunięto",
+    "deleteTitle": "Usunąć tę talię?",
+    "generating": "Tworzenie kolejnych pytań…",
+    "masteryLabel": "Opanowanie {{percent}}%",
+    "missing": "Nie znaleziono talii",
+    "missingBody": "Ta talia już nie istnieje na tym urządzeniu.",
+    "modes": "Tryby gry",
+    "pages_few": "{{count}} stron",
+    "pages_many": "{{count}} stron",
+    "pages_one": "{{count}} strona",
+    "pages_other": "{{count}} stron",
+    "pastedText": "Wklejony tekst",
+    "percent": "{{value}}%",
+    "quizIn": "Quiz w {{language}}",
+    "regenerate": "Wygeneruj pytania ponownie dla tematu",
+    "regenerateButton": "Wygeneruj ponownie",
+    "regenerated": "Nowe pytania gotowe.",
+    "regenerateHint": "Zastępuje pytania danego tematu nowymi. Historia odpowiedzi pozostaje.",
+    "settings": "Ustawienia talii",
+    "slides_few": "{{count}} slajdów",
+    "slides_many": "{{count}} slajdów",
+    "slides_one": "{{count}} slajd",
+    "slides_other": "{{count}} slajdów",
+    "sources": "Źródła",
+    "topicMap": "Mapa tematów",
+    "topicQuestions_few": "{{count}} pytania",
+    "topicQuestions_many": "{{count}} pytania",
+    "topicQuestions_one": "{{count}} pytanie",
+    "topicQuestions_other": "{{count}} pytania",
+    "topicStatus_few": "Opanowanie {{percent}}% · {{count}} pytania",
+    "topicStatus_many": "Opanowanie {{percent}}% · {{count}} pytania",
+    "topicStatus_one": "Opanowanie {{percent}}% · {{count}} pytanie",
+    "topicStatus_other": "Opanowanie {{percent}}% · {{count}} pytania",
+    "topicWithMastery": "{{title}} · {{percent}}%",
+    "weak": "Potrzebuje pracy"
+  },
+  "decks": {
+    "due_few": "{{count}} zaległe",
+    "due_many": "{{count}} zaległych",
+    "due_one": "{{count}} zaległa",
+    "due_other": "{{count}} zaległych",
+    "emptyBody": "Prześlij notatki lub wypróbuj przykładową talię, aby zacząć grać.",
+    "emptyTitle": "Brak talii",
+    "failed": "Coś poszło nie tak",
+    "processing": "Przygotowywanie…",
+    "questionCount_few": "{{count}} pytania",
+    "questionCount_many": "{{count}} pytań",
+    "questionCount_one": "{{count}} pytanie",
+    "questionCount_other": "{{count}} pytań",
+    "topicCount_few": "{{count}} tematy",
+    "topicCount_many": "{{count}} tematów",
+    "topicCount_one": "{{count}} temat",
+    "topicCount_other": "{{count}} tematów"
+  },
   "errors": {
+    "BAD_INPUT": {
+      "body": "Spróbuj ponownie.",
+      "title": "Coś wyglądało dziwnie"
+    },
+    "badChallenge": {
+      "body": "Możliwe, że został ucięty przy kopiowaniu. Poproś znajomego o ponowne wysłanie.",
+      "title": "Ten link wyzwania nie działa"
+    },
     "boundary": {
       "body": "Twoje talie i postępy są bezpiecznie zapisane na tym urządzeniu. Wróćmy do domu.",
       "title": "Ups, coś poszło nie tak"
+    },
+    "CORRUPT": {
+      "body": "„{{file}}” wydaje się uszkodzony. Spróbuj zapisać lub wyeksportować go ponownie.",
+      "title": "Nie udało się otworzyć pliku"
+    },
+    "EMPTY": {
+      "body": "Najpierw dodaj plik, zdjęcie lub tekst.",
+      "title": "Nic do odczytania"
+    },
+    "FILE_TOO_LARGE": {
+      "body": "„{{file}}” ma ponad 25 MB. Podziel go lub wyeksportuj mniejszy PDF.",
+      "title": "Plik jest za duży"
+    },
+    "INTERRUPTED": {
+      "body": "Aplikacja została zamknięta podczas tworzenia talii. Usuń tę talię i dodaj pliki ponownie.",
+      "title": "Przesyłka została przerwana"
+    },
+    "NO_TEXT": {
+      "body": "Wygląda na zeskanowany dokument. Zrób zdjęcia stron, a StudyNight je odczyta.",
+      "title": "Nie znaleziono tekstu"
+    },
+    "OFFLINE": {
+      "body": "To wymaga połączenia z internetem. Wszystko, co już stworzyłeś, działa offline.",
+      "title": "Jesteś offline"
+    },
+    "PASSWORD": {
+      "body": "Usuń hasło (lub wydrukuj do nowego PDF) i wgraj ponownie.",
+      "title": "Ten PDF jest zabezpieczony hasłem"
+    },
+    "RATE_LIMITED": {
+      "body": "Właśnie uczy się mnóstwo osób — kolejne pytania będą gotowe za chwilę. Tymczasem powtórz to, co już masz.",
+      "title": "Właśnie uczy się mnóstwo osób"
+    },
+    "storage": "Nie udało się zapisać na tym urządzeniu. Zwolnij miejsce i spróbuj ponownie.",
+    "STORAGE_FULL": {
+      "body": "Usuń talię lub wyeksportuj kopię zapasową w Profilu, aby zwolnić miejsce, a potem spróbuj ponownie.",
+      "title": "Urządzenie jest pełne"
+    },
+    "TIMEOUT": {
+      "body": "Usługa AI nie odpowiedziała na czas. Spróbuj ponownie.",
+      "title": "To trwało za długo"
+    },
+    "TOO_LARGE": {
+      "body": "Spróbuj mniejszego pliku lub mniejszej liczby stron naraz.",
+      "title": "Za duże do wysłania"
+    },
+    "TOO_LONG": {
+      "body": "Talia może pomieścić maksymalnie 200 000 znaków tekstu. Podziel go na kilka talii.",
+      "title": "Dokument jest za długi"
+    },
+    "TOO_MANY_PAGES": {
+      "body": "Talia może mieć maksymalnie {{limit}} stron lub slajdów. Podziel materiał na kilka talii.",
+      "title": "Za dużo stron"
+    },
+    "TOO_MANY_PHOTOS": {
+      "body": "Talia może mieć maksymalnie 30 zdjęć. Utwórz drugą talię dla reszty.",
+      "title": "Za dużo zdjęć"
+    },
+    "UNKNOWN": {
+      "body": "Spróbuj ponownie.",
+      "title": "Coś poszło nie tak"
+    },
+    "UNREADABLE": {
+      "body": "Spróbuj użyć wyraźniejszego zdjęcia lub innego pliku.",
+      "title": "Nie udało się odczytać"
+    },
+    "UNSUPPORTED": {
+      "body": "„{{file}}” nie może być odczytany. Użyj PDF, PowerPoint (.pptx), Word (.docx), tekstu, Markdown lub zdjęcia.",
+      "title": "Nieobsługiwany typ pliku"
+    },
+    "UPSTREAM": {
+      "body": "Spróbuj ponownie za chwilę.",
+      "title": "Problem z usługą AI"
     }
+  },
+  "exam": {
+    "band": "{{low}}–{{high}}%",
+    "byTopic": "Według tematu",
+    "duration": "Czas",
+    "estimate": "To szacunek oparty na twoich odpowiedziach i tym, jak dobrze prawdopodobnie zapamiętasz swoją talię. Nie jest to gwarancja.",
+    "extended": "Dodatkowy czas włączony: masz 50 % więcej czasu.",
+    "intro": "Czasowy test próbny bez podpowiedzi i bez informacji zwrotnej aż do końca. Na koniec dostaniesz raport z przewidywanym wynikiem.",
+    "mistakes": "Przejrzyj błędy",
+    "questions": "Pytania",
+    "reportTitle": "Przewidywany wynik",
+    "start": "Rozpocznij test"
+  },
+  "explain": {
+    "check": "Sprawdź moją odpowiedź",
+    "checking": "Sprawdzam odpowiedź…",
+    "covered": "Pokryte",
+    "great": "Świetna odpowiedź!",
+    "label": "Twoja odpowiedź",
+    "missed": "Niepokryte",
+    "modelAnswer": "Odpowiedź modelowa",
+    "notYet": "Jeszcze nie",
+    "partly": "Częściowo tak",
+    "placeholder": "Wyjaśnij własnymi słowami…",
+    "points": "Pokryłeś {{hit}} z {{total}} kluczowych punktów."
+  },
+  "home": {
+    "continue": "Kontynuuj",
+    "examIn_few": "Egzamin {{title}} za {{count}} dni",
+    "examIn_many": "Egzamin {{title}} za {{count}} dni",
+    "examIn_one": "Egzamin {{title}} za {{count}} dzień",
+    "examIn_other": "Egzamin {{title}} za {{count}} dni",
+    "examToday": "{{title}}: egzamin dziś. Powodzenia!",
+    "freezes_few": "{{count}} zamrożenia serii",
+    "freezes_many": "{{count}} zamrożenia serii",
+    "freezes_one": "{{count}} zamrożenie serii",
+    "freezes_other": "{{count}} zamrożenia serii",
+    "go": "Zagraj",
+    "goalOf_few": "z {{count}} min",
+    "goalOf_many": "z {{count}} min",
+    "goalOf_one": "z {{count}} min",
+    "goalOf_other": "z {{count}} min",
+    "goalRing": "Cel dzienny {{percent}}% ukończony",
+    "greetingAfternoon": "Dzień dobry!",
+    "greetingAfternoonName": "Dzień dobry, {{name}}!",
+    "greetingEvening": "Dobry wieczór!",
+    "greetingEveningName": "Dobry wieczór, {{name}}!",
+    "greetingMorning": "Dzień dobry!",
+    "greetingMorningName": "Dzień dobry, {{name}}!",
+    "level": "Poziom {{level}}",
+    "levelProgress": "Postęp do następnego poziomu, {{xp}} XP łącznie",
+    "mood": {
+      "celebrating": "Cel dzienny osiągnięty. Świetna robota!",
+      "encouraging": "Dodaj pierwsze notatki i zacznij grę.",
+      "happy": "Gotowy na szybką rundę?",
+      "sleepy": "Twoja seria czeka — kilka pytań utrzyma ją przy życiu."
+    },
+    "newDeck": "Nowa talia",
+    "openDeck": "Otwórz {{title}}",
+    "resume": "Masz w toku rundę.",
+    "review": "Przegląd",
+    "reviewDue_few": "{{count}} pytania do przeglądu",
+    "reviewDue_many": "{{count}} pytania do przeglądu",
+    "reviewDue_one": "{{count}} pytanie do przeglądu",
+    "reviewDue_other": "{{count}} pytania do przeglądu",
+    "reviewDueHint": "Przeglądanie teraz pomaga utrwalić.",
+    "statsLabel": "Dzisiaj",
+    "streakDays_few": "dzień serii",
+    "streakDays_many": "dzień serii",
+    "streakDays_one": "dzień serii",
+    "streakDays_other": "dzień serii",
+    "trySample": "Wypróbuj przykładową talię",
+    "xp": "{{xp}} XP"
   },
   "language": {
     "choose": "Wybierz język",
     "menuLabel": "Język: {{language}}. Zmień język"
+  },
+  "legal": {
+    "privacyLink": "Prywatność"
+  },
+  "modes": {
+    "ask": "Zadaj pytanie notatkom",
+    "askHint": "Odpowiedzi tylko z twoich notatek",
+    "boss": "Bitwa z bossem",
+    "bossHint_few": "{{count}} tematy gotowe",
+    "bossHint_many": "{{count}} tematy gotowe",
+    "bossHint_one": "{{count}} temat gotowy",
+    "bossHint_other": "{{count}} tematy gotowe",
+    "bossIntro": "Pokonaj chmurę burzy: trudniejsze pytania, {{seconds}} sekund na każde i trzy serca. Bez wskazówek!",
+    "bossLocked": "Odblokowane przy {{percent}}% opanowania",
+    "bossReady": "Bitwa z bossem odblokowana",
+    "challenge": "Rzuć wyzwanie przyjacielowi",
+    "challengeHint": "Wyślij swoje pytania",
+    "exam": "Tryb egzaminu",
+    "examHint": "Symulowany egzamin z czasem",
+    "flashcards": "Karty flash",
+    "flashcardsHint": "Przesuń, aby przeglądać",
+    "practiseTopic": "Ćwicz ten temat",
+    "quick": "Szybka gra",
+    "quickHint": "10 mieszanych pytań",
+    "review": "Przegląd do wykonania",
+    "sudden": "Nagła śmierć",
+    "suddenBest_few": "Najlepsze: {{count}} z rzędu",
+    "suddenBest_many": "Najlepsze: {{count}} z rzędu",
+    "suddenBest_one": "Najlepsze: {{count}} z rzędu",
+    "suddenBest_other": "Najlepsze: {{count}} z rzędu",
+    "topic": "Ćwicz temat",
+    "topicHint": "Skup się na jednym temacie"
   },
   "nav": {
     "decks": "Talie",
@@ -35,5 +399,221 @@
     "label": "Główne",
     "profile": "Profil",
     "review": "Powtórka"
+  },
+  "newDeck": {
+    "chooseFiles": "Wybierz pliki",
+    "create": "Stwórz mój quiz",
+    "deckTitle": "Tytuł talii",
+    "dropTitle": "Dodaj materiały do nauki",
+    "examDate": "Data egzaminu (opcjonalnie)",
+    "examDateHint": "Ułożymy plan powtórek wokół tej daty.",
+    "formats": "PDF, PowerPoint, Word, tekst lub zdjęcia. Kilka plików może trafić do jednej talii.",
+    "lowerQuality": "jakość może być niższa",
+    "notice": "Przesyłaj tylko materiały, do których masz prawo. Nie przesyłaj dokumentów zawierających dane osobowe lub wrażliwe informacje o sobie lub innych.",
+    "pasteLabel": "Twój tekst",
+    "pastePlaceholder": "Wklej notatki tutaj…",
+    "pasteText": "Wklej tekst",
+    "quizLanguage": "Język quizu",
+    "ready": "Twój quiz jest gotowy. Więcej pytań wkrótce!",
+    "remove": "Usuń {{name}}",
+    "sameAsNotes": "Taki sam jak notatki",
+    "selected": "Wybrane pliki",
+    "takePhoto": "Zrób zdjęcie",
+    "title": "Nowa talia",
+    "titlePlaceholder": "Np. Biologia tydzień 3",
+    "untitled": "Moje notatki"
+  },
+  "onboarding": {
+    "later": "Zobacz się później",
+    "one": {
+      "body": "Dodaj slajdy, notatki lub zdjęcie zeszytu. Quiz z Twojego materiału gotowy w około pół minuty.",
+      "title": "Twoje notatki w formie gry"
+    },
+    "setup": {
+      "avatar": "Wybierz awatar",
+      "avatarN": "Awatar {{n}}",
+      "goal": "Cel dzienny",
+      "nickname": "Pseudonim (opcjonalnie)",
+      "nicknameHint": "Zapisane tylko na tym urządzeniu.",
+      "title": "Spersonalizuj"
+    },
+    "three": {
+      "body": "StudyNight pamięta, co sprawia Ci trudność i wraca w odpowiednim momencie, aż do egzaminu.",
+      "title": "Ucz się na dobre"
+    },
+    "trySample": "Wypróbuj przykładowy zestaw",
+    "two": {
+      "body": "Dotknij źródła, aby zobaczyć dokładny fragment z notatek. Pytania są sprawdzane przed pokazaniem.",
+      "title": "Każde pytanie ma źródło"
+    },
+    "uploadNotes": "Prześlij notatki"
+  },
+  "play": {
+    "answerWas": "Odpowiedź:",
+    "bossHit": "Bezpośredni traf!",
+    "check": "Sprawdź",
+    "combo_few": "Combo × {{count}}!",
+    "combo_many": "Combo × {{count}}!",
+    "combo_one": "Combo × {{count}}!",
+    "combo_other": "Combo × {{count}}!",
+    "correct": "Poprawnie!",
+    "correctAnswer": "Poprawna odpowiedź",
+    "correctOrder": "Poprawna kolejność",
+    "correctPairs": "Poprawne pary",
+    "definitions": "Znaczenia",
+    "expected": "Odpowiedź:",
+    "false": "Fałsz",
+    "figureAlt": "Obrazek z Twoich notatek, o którym pyta to pytanie",
+    "fromNotes": "Z Twoich notatek",
+    "fromPage": "Z Twoich notatek · Strona {{n}}",
+    "fromSlide": "Z Twoich notatek · Slajd {{n}}",
+    "grade": {
+      "again": "Ponownie",
+      "easy": "Łatwe",
+      "good": "Dobre",
+      "hard": "Trudne"
+    },
+    "hearts_few": "{{count}} serca pozostało",
+    "hearts_many": "{{count}} serc pozostało",
+    "hearts_one": "{{count}} serce pozostało",
+    "hearts_other": "{{count}} serc pozostało",
+    "hint": "Podpowiedź (połowa XP)",
+    "howWell": "Jak dobrze to znasz?",
+    "incorrect": "Nie do końca",
+    "incorrectAnnounce": "Nie do końca. Odpowiedź to {{answer}}",
+    "matchHelp": "Dotknij terminu, a potem pasujące znaczenie.",
+    "moveDown": "Przesuń krok {{n}} w dół",
+    "moveUp": "Przesuń krok {{n}} w górę",
+    "noQuestions": "Brak pytań",
+    "noQuestionsBody": "Nowe pytania są jeszcze tworzone. Spróbuj za chwilę lub sprawdź połączenie.",
+    "nothingDue": "Nie ma nic do powtórki",
+    "nothingDueBody": "Wszystko nadrobione. Wróć później lub zagraj szybką rundę.",
+    "orderHelp": "Przeciągnij kroki lub użyj strzałek, aby je ułożyć w kolejności.",
+    "pageN": "Strona {{n}}",
+    "pairedWith": "Połączono z terminem {{n}}: {{text}}",
+    "preparing": "Przygotowuję pytania…",
+    "progress": "Pytanie {{n}} z {{total}}",
+    "quit": "Pauza lub wyjście",
+    "quitBody": "Twoje odpowiedzi zostały zapisane.",
+    "quitConfirm": "Opuść",
+    "quitTitle": "Opuścić tę rundę?",
+    "reset": "Resetuj",
+    "secondsLeft_few": "{{count}} sekundy pozostały",
+    "secondsLeft_many": "{{count}} sekund pozostało",
+    "secondsLeft_one": "{{count}} sekunda pozostała",
+    "secondsLeft_other": "{{count}} sekundy pozostało",
+    "showAnswer": "Pokaż odpowiedź",
+    "slideN": "Slajd {{n}}",
+    "sourceTitle": "Z Twoich notatek",
+    "swipeHelp": "Przesuń w prawo, jeśli wiedziałeś, w lewo, aby zobaczyć ponownie, w górę, jeśli było łatwe.",
+    "terms": "Terminy",
+    "timeLeft": "Pozostały czas: {{time}}",
+    "true": "Prawda",
+    "typeAnswer": "Wpisz odpowiedź",
+    "typoAccepted": "Zaakceptowano — sprawdź pisownię: „{{answer}}”",
+    "xpGain": "+{{xp}} XP",
+    "xpTotal": "{{xp}} XP w tej rundzie",
+    "yourAnswer": "Twoja odpowiedź"
+  },
+  "processing": {
+    "background": "Możesz zacząć grać, gdy pierwsze pytania będą gotowe. Reszta pojawi się w tle.",
+    "chooseBody_few": "{{count}} strony wymagają odczytu obrazu, ale maksymalnie {{max}} stron może być odczytane na talię. Wybierz, od czego zacząć.",
+    "chooseBody_many": "{{count}} stron wymaga odczytu obrazu, ale maksymalnie {{max}} stron może być odczytane na talię. Wybierz, od czego zacząć.",
+    "chooseBody_one": "{{count}} strona wymaga odczytu obrazu, ale maksymalnie {{max}} stron może być odczytane na talię. Wybierz, od czego zacząć.",
+    "chooseBody_other": "{{count}} stron wymaga odczytu obrazu, ale maksymalnie {{max}} stron może być odczytane na talię. Wybierz, od czego zacząć.",
+    "choosePages": "Odczytaj strony {{from}}–{{to}}",
+    "chooseTitle": "Wybierz strony do odczytu",
+    "handwriting": "Rozpoznawanie odręcznego tekstu odbywa się w miarę możliwości.",
+    "questions": "Tworzenie pierwszych pytań o „{{topic}}”…",
+    "readingFile": "Odczytuję {{name}}…",
+    "readingPage": "Odczytuję stronę {{page}} z {{total}}…",
+    "startPage": "Rozpocznij od strony",
+    "title": "Tworzenie quizu",
+    "topics": "Wyszukiwanie głównych tematów…",
+    "vision": "Odczytuję obrazy ({{done}} z {{total}})…"
+  },
+  "report": {
+    "body": "Zostanie ono natychmiast usunięte z Twojej talii i już nigdy nie będzie pokazywane.",
+    "done": "Pytanie usunięte",
+    "duplicate": "Duplikat",
+    "notInNotes": "Nie w moich notatkach",
+    "open": "Zgłoś to pytanie",
+    "title": "Zgłoś to pytanie",
+    "unclear": "Niejasne",
+    "wrong": "Niepoprawna odpowiedź"
+  },
+  "results": {
+    "accuracy": "Dokładność",
+    "bestCombo": "Najlepsze combo",
+    "bossLost": "Burza trwała — spróbuj ponownie!",
+    "bossWon": "Burza przeminęła!",
+    "done": "Gotowe",
+    "goalMet": "Osiągnięto dzienny cel! +20 XP bonus.",
+    "levelUp": "Awans! Osiągnąłeś poziom {{level}}.",
+    "newBadges": "Nowe odznaki",
+    "newBest": "Nowy rekord osobisty!",
+    "practiseThese": "Poćwicz te",
+    "score": "{{correct}}/{{total}}",
+    "stats": "Podsumowanie rundy",
+    "suddenScore_few": "{{count}} w serii!",
+    "suddenScore_many": "{{count}} w serii!",
+    "suddenScore_one": "{{count}} w serii!",
+    "suddenScore_other": "{{count}} w serii!",
+    "time": "Czas",
+    "weakest": "Twoje najtrudniejsze tematy",
+    "xp": "Zdobyte XP",
+    "xpValue": "{{xp}} XP"
+  },
+  "samples": {
+    "intro": "Stworzone dla StudyNight, gotowe do gry od razu — bez potrzeby przesyłania. Działają też offline.",
+    "play_few": "Graj ({{count}} pytania)",
+    "play_many": "Graj ({{count}} pytań)",
+    "play_one": "Graj ({{count}} pytanie)",
+    "play_other": "Graj ({{count}} pytań)",
+    "title": "Przykładowe talie"
+  },
+  "share": {
+    "button": "Udostępnij wynik",
+    "copied": "Skopiowano!",
+    "copyText": "Skopiuj tekst",
+    "download": "Pobierz obraz",
+    "includeDeck": "Pokaż tytuł talii",
+    "shareImage": "Udostępnij obraz",
+    "text": "Zasłużyłem {{correct}}/{{total}} w StudyNight — {{title}}! 🌙",
+    "textDeck": "Zasłużyłem {{correct}}/{{total}} w „{{deck}}” w StudyNight — {{title}}! 🌙",
+    "title": "Udostępnij swój wynik"
+  },
+  "smart": {
+    "body": "Znajduje odpowiednie fragmenty, nawet gdy używasz innych słów lub języka. Pobiera ok. {{size}} MB raz, potem działa offline.",
+    "download": "Pobierz ({{size}} MB)",
+    "downloading": "Inteligentne wyszukiwanie: pobieranie {{percent}}…",
+    "failed": "Nie udało się skonfigurować inteligentnego wyszukiwania. Wyszukiwanie po słowach kluczowych nadal działa; spróbuj ponownie w Ustawieniach.",
+    "mobileData": "Wygląda na to, że używasz danych mobilnych. Może poczekasz na Wi‑Fi?",
+    "notNow": "Nie teraz",
+    "title": "Inteligentne wyszukiwanie"
+  },
+  "titles": {
+    "bossSlayer": "Łowca Burz",
+    "braveExplorer": "Odważny Odkrywca",
+    "comboMaster": "Mistrz Kombinacji",
+    "comebackKid": "Powrót Młodego",
+    "deepThinker": "Głęboki Myśliciel",
+    "earlyRiser": "Wczesny Ptasiak",
+    "freshStart": "Nowy Start",
+    "hintFreeHero": "Bohater Bez Wskazówek",
+    "marathoner": "Maratończyk",
+    "neverGiveUp": "Nigdy się nie poddawaj",
+    "nightOwlMode": "Tryb Nocnej Sowy",
+    "perfectionist": "Perfekcjonista",
+    "speedReader": "Szybki Czytelnik",
+    "steadyClimber": "Stabilny Wspinacz",
+    "topicTamer": "Opanowujący Tematy"
+  },
+  "voice": {
+    "denied": "Dostęp do mikrofonu został zablokowany. Zezwól na niego w ustawieniach przeglądarki lub wpisz odpowiedź ręcznie.",
+    "record": "Odpowiedz głosem",
+    "recording": "Nagrywanie…",
+    "stop": "Zatrzymaj nagrywanie (pozostało {{seconds}} s)",
+    "transcribing": "Przekształcam mowę na tekst…"
   }
 }
