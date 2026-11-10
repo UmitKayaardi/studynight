@@ -98,10 +98,10 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: (1) sample decks vaccines/machine-learning/personal-finance/ciclo-del-agua: build (scripts/build-samples.ts) → hand review in samples/review.json → apply-sample-review; (2) benchmark stages generate, figure, judge, ask, explain, latency + manual review → docs/BENCHMARK.md; fill README BENCHMARK_TABLE and commit README; (3) dark/RTL/CJK screenshots + store screenshots + store description translations; (4) redeploy + smoke-live; (5) 13.6 full re-run; (6) FINAL_REPORT.md. Live: https://studynight-sable.vercel.app
+Next: (1) BLOCKED locally: api.groq.com answers 403 "Access denied. Please check your network settings." to this machine (the live Vercel deployment still reaches Groq). Re-test with: node -e fetch to /openai/v1/models. When reachable again: build sample decks machine-learning, personal-finance, ciclo-del-agua (node scripts/run-ts.mjs scripts/build-samples.ts <ids>) → hand review in samples/review.json → node scripts/apply-sample-review.mjs; (2) benchmark stages: npm run benchmark -- generate figure judge ask latency (ask is resumable), then manual review of benchmarks/results/raw/generated.json → benchmarks/results/manual-review.json, npm run benchmark -- summary, write docs/BENCHMARK.md, fill README BENCHMARK_TABLE and commit README; (3) node scripts/translate-store.mjs; (4) redeploy + node scripts/smoke-live.mjs; (5) 13.6 full re-run; (6) FINAL_REPORT.md.
 
 Known issues:
-- Locale files are mid-translation (CI i18n check fails until step (1) above is done). Do not push before it passes.
-- Phases 7-9 code is written and typechecks; only quick play was browser-tested end to end (pasted notes to playable deck in ~7 s with the live API). Other modes need a browser test.
-- PWA plugin + update toast added in vite.config.ts but production build not yet verified.
-- Sample builder: an earlier JSON-mode 400 was fixed (repair of failed_generation + LaTeX escapes); generator prompts were tightened afterwards, so decks built before that change need careful manual review.
+- Groq blocks this machine (403, network-level) since 2026-11-10 ~02:30 UTC; live site unaffected. Free daily token caps also limit build jobs.
+- Done and verified: CI green on main; 21-language sweep, a11y audit, E2E all pass; live smoke test 8/10 (the 2 failures were a cold-cache timing and the exhausted daily quota; sample deck plays in 3.5 s warm; PDF upload to playable deck in 5 s).
+- Shipped sample decks so far: solar-system (22), vaccines (20), fotosentez (10), all hand-reviewed.
+- README.md exists locally but is NOT committed yet (contains BENCHMARK_TABLE marker to fill).
