@@ -69,6 +69,15 @@ export function normaliseMaths(s: string): string {
   return out.replace(/\(([^()$\n]*\\[a-zA-Z]+[^()$\n]*)\)/g, (_, m: string) => `$${m.trim()}$`);
 }
 
+/**
+ * The app turns [n] markers in an Ask answer into buttons that open the source. Models sometimes list the citations
+ * but leave the markers out of the text; then the markers are added at the end so the sources stay reachable.
+ */
+export function withCitationMarkers(answer: string, citations: number[]): string {
+  if (!citations.length || /\[\d{1,2}\]/.test(answer)) return answer;
+  return `${answer} ${citations.map((n) => `[${n}]`).join('')}`;
+}
+
 /** Normalises a raw model draft before schema validation (common harmless deviations). */
 export function normaliseDraft(raw: unknown, topicId: string): unknown {
   if (!raw || typeof raw !== 'object') return raw;

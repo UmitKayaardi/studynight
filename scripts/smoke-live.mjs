@@ -181,14 +181,15 @@ await check('challenge link opens in a fresh browser', async () => {
   if (await page.getByRole('button', { name: 'True', exact: true }).count())
     await page.getByRole('button', { name: 'True', exact: true }).click();
   else await page.locator('main ul li button').first().click();
-  await page
-    .locator('#feedback-title')
-    .waitFor()
-    .catch(() => undefined);
-  await page.getByRole('button', { name: 'Pause or quit' }).click();
-  await page.getByRole('button', { name: 'Leave' }).click();
+  await page.locator('#feedback-title').waitFor();
+  // A wrong answer ends Sudden death on "Next"; after a right one the game goes on, so leave it from the pause menu.
+  await page.getByRole('button', { name: 'Next', exact: true }).click();
   await page.waitForTimeout(500);
-  if (!page.url().includes('/results')) throw new Error('no results page after leaving');
+  if (!page.url().includes('/results')) {
+    await page.getByRole('button', { name: 'Pause or quit' }).click();
+    await page.getByRole('button', { name: 'Leave' }).click();
+  }
+  await page.waitForURL('**/results', { timeout: 10_000 });
   await page.getByRole('button', { name: 'Challenge a friend' }).click();
   const link = await page.evaluate(() => {
     const el = document.querySelector('[role=dialog]');

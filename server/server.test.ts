@@ -529,4 +529,12 @@ describe('draft repairs', () => {
     expect(normaliseMaths('Already $b^2 - 4ac$ (see \\alpha)')).toBe('Already $b^2 - 4ac$ (see \\alpha)');
     expect(normaliseMaths('Plain (no maths) text [2]')).toBe('Plain (no maths) text [2]');
   });
+
+  it('adds citation markers to an Ask answer that lists citations but has no markers', async () => {
+    const { withCitationMarkers } = await import('./verify');
+    // Seen in the live smoke test: the source buttons had nothing to attach to.
+    expect(withCitationMarkers('Venus traps heat.', [1, 3])).toBe('Venus traps heat. [1][3]');
+    expect(withCitationMarkers('Venus traps heat [2].', [2])).toBe('Venus traps heat [2].');
+    expect(withCitationMarkers('No sources.', [])).toBe('No sources.');
+  });
 });

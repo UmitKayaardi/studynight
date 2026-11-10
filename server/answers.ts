@@ -13,7 +13,7 @@ import { getConfig } from './env.js';
 import { ApiError } from './errors.js';
 import { chatJson, repairLatex, transcribe as groqTranscribe } from './groq.js';
 import { askSystem, askUser, gradeSystem, gradeUser, READ_IMAGE_SYSTEM } from './prompts.js';
-import { normaliseMaths } from './verify.js';
+import { normaliseMaths, withCitationMarkers } from './verify.js';
 
 /** The grader only reports which key points are covered; the app computes the score. */
 export async function grade(req: GradeRequest): Promise<GradeResponse> {
@@ -62,7 +62,11 @@ export async function ask(req: AskRequest): Promise<AskResponse> {
     citations = [...answer.matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1])).filter((n) => valid.has(n));
   citations = [...new Set(citations)].sort((a, b) => a - b);
   const found = out.found === true && !!answer && citations.length > 0;
-  return { found, answer: answer || '', citations: found ? citations : [] };
+  return {
+    found,
+    answer: found ? withCitationMarkers(answer, citations) : answer || '',
+    citations: found ? citations : [],
+  };
 }
 
 export async function readImage(req: ReadImageRequest): Promise<ReadImageResponse> {
