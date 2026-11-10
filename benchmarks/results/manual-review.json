@@ -1,0 +1,44 @@
+{
+ "reviewer": "Hand review by the builder against the benchmark notes (benchmarks/notes), 2026-11-10",
+ "method": "Every accepted question from the generate stage (88) and the figure stage (14) was read next to its source notes. 'Answer key correct' means the marked answer is right according to the notes and no other option is also right. 'Flawless' also requires a correct, grounded explanation or correction and an answer that reads naturally in the blank. Near-duplicates are counted separately: they are kept by the app's duplicate filter because they are different question types about the same fact.",
+ "text": {
+  "sample": 88,
+  "answerKeyCorrect": 85,
+  "answerKeyCorrectRate": 96.6,
+  "flawless": 81,
+  "flawlessRate": 92.0,
+  "nearDuplicates": 5,
+  "issues": [
+   { "index": 7, "doc": "ar-hayat-al-nujum", "kind": "two correct options", "note": "Options include both the Arabic term for supernova and its transliteration." },
+   { "index": 68, "doc": "es-energias-renovables", "kind": "not decidable from the notes", "note": "The notes say batteries and pumped storage are used; they do not say whether storage is mainly on site, so 'false' is not supported." },
+   { "index": 80, "doc": "ja-hikari", "kind": "not grounded", "note": "The notes only say rainbows come from dispersion in water droplets; the correction about internal reflection is outside the notes." },
+   { "index": 83, "doc": "tr-depremler", "kind": "wrong correction text", "note": "The answer (false) is right, but the correction says all earthquake waves travel through solids, liquids and gases; the notes say S waves travel only through solids." },
+   { "index": 16, "doc": "en-marketing-slides", "kind": "answer repeats a word in the prompt", "note": "Blank answer 'low price' before the word 'price'." },
+   { "index": 34, "doc": "en-printing-press", "kind": "answer phrasing", "note": "Expected answer 'far faster'; a learner typing 'faster' may be marked wrong." },
+   { "index": 84, "doc": "tr-depremler", "kind": "answer repeats a suffix in the prompt", "note": "Answer 'açığa çıkmasıyla' before 'ile'." }
+  ],
+  "duplicates": [
+   "28 repeats 24 (Pangaea)",
+   "35 repeats 32 (incunabula)",
+   "69 repeats 66 (offshore wind)",
+   "75 repeats 73 (law of reflection)",
+   "76 repeats 74 (refraction)"
+  ],
+  "minorNotes": [
+   "40: weak distractors ('311 (as a string)' prints the same as the answer).",
+   "77: the correct option uses the term 'critical angle', which the notes describe but do not name."
+  ]
+ },
+ "figure": {
+  "sample": 14,
+  "answerKeyCorrect": 12,
+  "answerKeyCorrectRate": 85.7,
+  "flawless": 12,
+  "flawlessRate": 85.7,
+  "issues": [
+   { "index": 11, "kind": "two correct answers", "note": "The dashed line meets the price axis at £4, labelled P*; the key accepts only 'P*'." },
+   { "index": 13, "kind": "not grounded", "note": "The figure description does not say where the demand curve meets the quantity axis." }
+  ]
+ },
+ "combined": { "sample": 102, "answerKeyCorrect": 97, "answerKeyCorrectRate": 95.1 }
+}

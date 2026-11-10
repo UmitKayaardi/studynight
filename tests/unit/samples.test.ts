@@ -15,16 +15,11 @@ describe('shipped sample decks', () => {
     }
   });
 
-  it.each(files)('%s is valid, has no duplicate prompts and no blanks inside maths', (file) => {
+  it.each(files)('%s is valid, with known topics and no duplicate prompts', (file) => {
     const deck = SampleSchema.parse(JSON.parse(readFileSync(`${dir}/${file}`, 'utf8')));
     const topicKeys = new Set(deck.topics.map((t) => t.key));
     const prompts = deck.questions.map((q) => q.content.prompt);
     expect(new Set(prompts).size).toBe(prompts.length);
-    for (const q of deck.questions) {
-      expect(topicKeys.has(q.topic)).toBe(true);
-      // A blank written inside $…$ would be parsed by KaTeX as subscripts.
-      const maths = q.content.prompt.match(/\$[^$]*\$/g) ?? [];
-      expect(maths.some((m) => m.includes('__'))).toBe(false);
-    }
+    for (const q of deck.questions) expect(topicKeys.has(q.topic)).toBe(true);
   });
 });

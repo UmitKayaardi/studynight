@@ -1,0 +1,21 @@
+{
+ "documents": 10,
+ "drafted": 98,
+ "accepted": 88,
+ "passRate": 89.8,
+ "rejected": {
+  "schema": 7,
+  "evidence": 0,
+  "structure": 2,
+  "duplicate": 0,
+  "verifier": 1
+ },
+ "evidenceValidity": 100,
+ "duplicateRate": 0,
+ "byType": {
+  "mcq": 29,
+  "tf": 30,
+  "fill": 14,
+  "flashcard": 15
+ }
+}
