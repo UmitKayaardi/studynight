@@ -28,9 +28,10 @@ export async function mockApi(
           drafted: 0,
         });
       case 'grade': {
-        const body = route.request().postDataJSON() as { keyPoints: string[] };
+        const body = route.request().postDataJSON() as { keyPoints: string[]; answer: string };
+        const blank = /don.t know/i.test(body.answer);
         return json({
-          covered: body.keyPoints.map((_, i) => i < body.keyPoints.length - 1),
+          covered: body.keyPoints.map((_, i) => !blank && i < body.keyPoints.length - 1),
           feedback: body.keyPoints.map((_, i) =>
             i < body.keyPoints.length - 1 ? '' : 'Mention the last point too.',
           ),
@@ -170,7 +171,7 @@ export async function answer(page: Page, correct = true): Promise<string> {
       break;
     }
     case 'explain':
-      await page.getByPlaceholder('Explain it in your own words…').fill(q.modelAnswer ?? 'answer');
+      await page.getByPlaceholder('Explain it in your own words…').fill(correct ? (q.modelAnswer ?? 'answer') : "I don't know.");
       await page.getByRole('button', { name: 'Check my answer' }).click();
       break;
   }
