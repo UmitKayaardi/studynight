@@ -101,7 +101,7 @@ from the first unchecked step. Commit after every step.
 Next: (1) benchmark stages: npm run benchmark -- generate figure judge ask latency (ask is resumable), then manual review of benchmarks/results/raw/generated.json → benchmarks/results/manual-review.json, npm run benchmark -- summary, write docs/BENCHMARK.md, replace the README BENCHMARK_TABLE marker; (2) node scripts/translate-store.mjs; (3) redeploy + node scripts/smoke-live.mjs; (4) 13.6 full re-run; (5) FINAL_REPORT.md.
 
 Known issues:
-- Groq blocks this machine (403, network-level) since 2026-11-10 ~02:30 UTC; live site unaffected. Free daily token caps also limit build jobs.
+- The earlier Groq 403 was caused by a VPN on this machine; resolved on 2026-11-10 (VPN off). Free daily token caps still limit build jobs; jobs wait out long retry-after periods.
 - Done and verified: CI green on main; 21-language sweep, a11y audit, E2E all pass; live smoke test 8/10 (the 2 failures were a cold-cache timing and the exhausted daily quota; sample deck plays in 3.5 s warm; PDF upload to playable deck in 5 s).
-- Shipped sample decks so far: solar-system (22), vaccines (20), fotosentez (10), all hand-reviewed.
+- Shipped sample decks: solar-system (22), vaccines (20), machine-learning (35), personal-finance (26), fotosentez (10), ciclo-del-agua (11), all hand-reviewed (samples/review.json). Benchmark generate stage started 2026-11-10.
 - README.md is committed but still contains the BENCHMARK_TABLE marker; replace it with the benchmark numbers before the final release.
