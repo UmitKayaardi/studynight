@@ -236,7 +236,7 @@ async function generateStage() {
     for (const topic of topics.slice(0, 2)) {
       const topicChunks = topic.chunkIds.map((cid) => short.find((c) => c.id === cid)!);
       const existing: string[] = [];
-      for (let round = 0; round < 2; round++) {
+      for (let round = 0; round < 1; round++) {
         const res = await withRetry(() =>
           generateQuestions({
             language: doc.language === 'und' ? 'auto' : doc.language,
