@@ -82,28 +82,22 @@ interface Q {
 
 /** Looks up the current question in IndexedDB by its prompt text. */
 export async function currentQuestion(page: Page): Promise<Q | null> {
-  const prompt = (await page.getByTestId('prompt').innerText()).trim();
-  return page.evaluate(async (text) => {
+  // The prompt element carries the question id, so the lookup never depends on how maths or blanks render.
+  const id = await page.getByTestId('prompt').getAttribute('data-question-id');
+  if (!id) return null;
+  return page.evaluate(async (questionId) => {
     const open = indexedDB.open('studynight');
     const db: IDBDatabase = await new Promise((res, rej) => {
       open.onsuccess = () => res(open.result);
       open.onerror = () => rej(open.error);
     });
-    const all: Array<{ content: Q }> = await new Promise((res) => {
-      const req = db.transaction('questions').objectStore('questions').getAll();
+    const hit: { content: Q } | undefined = await new Promise((res) => {
+      const req = db.transaction('questions').objectStore('questions').get(questionId);
       req.onsuccess = () => res(req.result);
     });
     db.close();
-    const norm = (s: string) =>
-      s
-        .replace(/＿＿＿＿/g, '____')
-        .replace(/\s+/g, ' ')
-        .trim();
-    const hit =
-      all.find((q) => norm(q.content.prompt) === norm(text)) ??
-      all.find((q) => norm(text).startsWith(norm(q.content.prompt).slice(0, 40)));
     return hit ? hit.content : null;
-  }, prompt);
+  }, id);
 }
 
 /** Answers the visible question correctly (or wrongly when `correct` is false). */

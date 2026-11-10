@@ -275,7 +275,7 @@ export default function Play() {
               dir="auto"
             >
               <FigureImage figureId={item.content.figureId} />
-              <Prompt q={item.content} />
+              <Prompt q={item.content} id={item.id} />
             </div>
             {s.hintUsed && item.content.hint && (
               <p className="flex gap-2 rounded-2xl bg-star-soft p-3 text-sm">

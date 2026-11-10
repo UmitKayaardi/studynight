@@ -57,10 +57,10 @@ export function FigureImage({ figureId }: { figureId?: string }) {
   );
 }
 
-export function Prompt({ q }: { q: QuestionContent }) {
+export function Prompt({ q, id }: { q: QuestionContent; id?: string }) {
   const text = q.type === 'fill' ? q.prompt.replace('____', '＿＿＿＿') : q.prompt;
   return (
-    <h2 data-testid="prompt" className="font-display text-xl leading-snug font-bold sm:text-2xl">
+    <h2 data-testid="prompt" data-question-id={id} className="font-display text-xl leading-snug font-bold sm:text-2xl">
       <RichText as="span" text={text} />
     </h2>
   );
