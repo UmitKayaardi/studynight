@@ -1,0 +1,502 @@
+{
+ "id": "vaccines",
+ "title": "How Vaccines Work",
+ "language": "en",
+ "description": "The immune system, immune memory and how vaccines use it. General science, not medical advice.",
+ "source": "vaccines.md",
+ "chunks": [
+  {
+   "text": "How Vaccines Work\nThese notes explain the science behind vaccines: how the immune system recognises germs, how it remembers them, and how vaccines use that memory. They are general biology notes for learning, not medical advice. Questions about your own health or about a particular vaccine should always go to a qualified health professional.\n1. Pathogens and the body's defences\nA pathogen is a microorganism that can cause disease. The main types are bacteria, viruses, fungi and parasites. Bacteria are single-celled organisms that can reproduce on their own. Viruses are much smaller and cannot reproduce by themselves: they must enter a living cell and use its machinery to make copies of themselves.\nThe body's first line of defence consists of physical and chemical barriers. The skin blocks most pathogens from getting in. Mucus in the nose and airways traps particles, and tiny hairs called cilia sweep it away. Stomach acid destroys many microorganisms that are swallowed, and tears contain enzymes that can break down bacteria.\nIf a pathogen gets past these barriers, the immune system responds.",
+   "headingPath": [
+    "How Vaccines Work"
+   ],
+   "wordCount": 176
+  },
+  {
+   "text": "2. Innate immunity: the fast, general response\nThe innate immune system reacts within minutes to hours. It does not target one specific pathogen; instead it recognises general warning signs that something foreign has entered the body.\nWhite blood cells called phagocytes engulf and digest invaders. This process is called phagocytosis. Damaged tissues release chemical signals that cause inflammation: blood vessels widen, more blood flows to the area, and more immune cells arrive. This is why an infected cut can become red, warm and swollen. A raised body temperature, or fever, can also make conditions less favourable for some pathogens.\nThe innate response is quick, but it is the same every time. It does not improve with experience.\n3. Adaptive immunity: the specific, learning response\nThe adaptive immune system is slower to start, usually taking several days, but it targets one particular pathogen very precisely, and it remembers.\nEvery pathogen carries molecules on its surface that the immune system can recognise. These molecules are called antigens. Each antigen has a particular shape.\nTwo main kinds of white blood cells, called lymphocytes, drive the adaptive response:\n- B cells produce antibodies. An antibody is a Y-shaped protein whose tips fit one specific antigen, like a key fits a lock. Antibodies can stick to pathogens, which stops them entering cells and marks them for destruction by other immune cells. - T cells have several roles. Helper T cells coordinate the response by activating B cells and other immune cells. Cytotoxic, or killer, T cells find and destroy the body's own cells that have been infected by a virus, which stops the virus from multiplying inside them.\nWhen the body meets a new pathogen, only a few B cells and T cells happen to have receptors that match its antigens. Those cells are selected and then multiply rapidly to form a large army of identical cells.",
+   "headingPath": [
+    "How Vaccines Work",
+    "2. Innate immunity: the fast, general response"
+   ],
+   "wordCount": 310
+  },
+  {
+   "text": "When the body meets a new pathogen, only a few B cells and T cells happen to have receptors that match its antigens. Those cells are selected and then multiply rapidly to form a large army of identical cells. This is called clonal selection. Because this takes time, a person can feel ill during the first encounter with a pathogen before the adaptive response gets it under control.\n4. Immune memory\nAfter an infection has been cleared, most of the specialised cells die off. However, some remain as memory cells. Memory B cells and memory T cells can survive for years, and in some cases for a lifetime.\nIf the same pathogen enters the body again, the memory cells recognise it immediately. The second response, called the secondary response, is faster and stronger than the first, and it produces far more antibodies. Often the pathogen is destroyed before it can cause any symptoms. This protection is called immunity.\nThe difference between the first (primary) response and the secondary response is the key idea behind vaccination.",
+   "headingPath": [
+    "How Vaccines Work",
+    "3. Adaptive immunity: the specific, learning response"
+   ],
+   "wordCount": 175
+  },
+  {
+   "text": "5. What a vaccine does\nA vaccine trains the adaptive immune system to recognise a pathogen without the person having to catch the disease first. It does this by showing the immune system the pathogen's antigens in a safe form. The immune system responds by producing antibodies and, most importantly, memory cells. If the real pathogen arrives later, the body can mount a fast secondary response.\nThere are several ways to present antigens safely:\n- Inactivated vaccines contain pathogens that have been killed, so they cannot cause disease. - Live attenuated vaccines contain living pathogens that have been weakened so that they do not cause illness in healthy people. They often produce a strong, long-lasting response. - Subunit vaccines contain only selected parts of the pathogen, such as particular proteins, rather than the whole organism. - Toxoid vaccines are used when the illness is caused by a toxin that bacteria release. They contain an inactivated form of the toxin, so the body learns to neutralise it. - mRNA vaccines contain genetic instructions that tell the body's own cells to make a harmless piece of the pathogen's protein for a short time. The immune system then responds to that protein. The mRNA itself breaks down naturally within days.\nSome vaccines contain ingredients called adjuvants, which help to produce a stronger immune response to the antigen.",
+   "headingPath": [
+    "How Vaccines Work",
+    "5. What a vaccine does"
+   ],
+   "wordCount": 219
+  },
+  {
+   "text": "6. Doses and boosters\nFor some vaccines a single dose gives long-lasting protection. Others need more than one dose, given some weeks or months apart, to build up enough memory cells. Over time, protection from some vaccines gradually decreases, so a later dose, called a booster, is used to remind the immune system and strengthen the memory again.\nSome pathogens change their antigens over time. Influenza viruses, for example, change gradually from year to year. Memory cells may then no longer recognise the new version well, which is why some vaccines are updated regularly.\n7. Herd immunity\nWhen a large proportion of a population is immune to a disease, it becomes difficult for the pathogen to spread from person to person, because it keeps reaching people who are immune. This indirectly protects people who are not immune, for example those who are too young to be vaccinated. This effect is called herd immunity, or community immunity.\nThe proportion of the population that needs to be immune depends on how contagious the disease is. The more easily a disease spreads, the higher the proportion that is needed to stop it spreading.",
+   "headingPath": [
+    "How Vaccines Work",
+    "6. Doses and boosters"
+   ],
+   "wordCount": 190
+  },
+  {
+   "text": "8. Testing and monitoring\nBefore a vaccine is approved for use, it goes through laboratory research and then clinical trials in several phases, each involving more volunteers than the last. The trials check whether the vaccine produces an immune response, whether it prevents disease and whether it is safe. Regulators review the evidence before approval, and vaccines continue to be monitored for rare side effects after they are in use.\n9. Key points to remember\n- Antigens are molecules on a pathogen that the immune system recognises; antibodies are proteins that bind to specific antigens. - B cells make antibodies; helper T cells coordinate the response; killer T cells destroy infected cells. - Memory cells make the secondary response faster and stronger than the primary response. - Vaccines show the immune system antigens in a safe form so that memory cells form without the disease. - Herd immunity protects people who cannot be immunised when enough of the population is immune.",
+   "headingPath": [
+    "How Vaccines Work",
+    "8. Testing and monitoring"
+   ],
+   "wordCount": 156
+  }
+ ],
+ "topics": [
+  {
+   "key": "t1",
+   "title": "Immune System Basics",
+   "summary": "Overview of innate and adaptive immunity, including rapid general responses and clonal selection of specific B and T cells.",
+   "chunks": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "key": "t2",
+   "title": "Vaccine Mechanisms and Development",
+   "summary": "How vaccines train adaptive immunity, the role of doses/boosters, and the testing and monitoring process before approval.",
+   "chunks": [
+    3,
+    4,
+    5
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which statement best describes the innate immune response?",
+    "explanation": "The innate system acts quickly, recognizing general danger signals, unlike the slower adaptive response.",
+    "hint": "Think about speed and specificity.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "The innate immune system reacts within minutes to hours. It does not target one specific pathogen; instead it recognises general warning signs that something foreign has entered the body.",
+    "type": "mcq",
+    "options": [
+     "It reacts within minutes to hours and targets general warning signs.",
+     "It takes several days to develop and creates memory cells.",
+     "It involves production of antibodies by B cells.",
+     "It requires clonal selection of specific lymphocytes."
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What term describes the rapid multiplication of B and T cells that have receptors matching a pathogen's antigens?",
+    "explanation": "The selected cells proliferate to form a large army of identical cells, a process called clonal selection.",
+    "hint": "Look for the phrase that names the process of multiplying matching cells.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "When the body meets a new pathogen, only a few B cells and T cells happen to have receptors that match its antigens. Those cells are selected and then multiply rapidly to form a large army of identical cells. This is called clonal selection.",
+    "type": "mcq",
+    "options": [
+     "Phagocytosis",
+     "Clonal selection",
+     "Inflammation",
+     "Immunological tolerance"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Memory B cells are short‑lived and disappear within weeks after an infection.",
+    "explanation": "Memory cells persist long after the primary infection, providing lasting immunity.",
+    "hint": "Consider how long immunity can last after vaccination.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Memory B cells and memory T cells can survive for years, and in some cases for a lifetime.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Memory B cells can survive for years, and in some cases for a lifetime."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "A raised body temperature can make conditions less favourable for some pathogens.",
+    "explanation": "Fever creates an environment that can inhibit the growth of certain microbes.",
+    "hint": "Think about the purpose of fever during infection.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "A raised body temperature, or fever, can also make conditions less favourable for some pathogens.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What shape are antibodies?",
+    "explanation": "Antibodies are described as Y‑shaped proteins whose tips bind specific antigens.",
+    "hint": "Visualize the letter that resembles their structure.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "An antibody is a Y-shaped protein whose tips fit one specific antigen, like a key fits a lock.",
+    "type": "flashcard",
+    "back": "Y‑shaped protein"
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What is the primary function of phagocytes in the innate immune response?",
+    "explanation": "Phagocytes are white blood cells that perform phagocytosis, engulfing and digesting invaders.",
+    "hint": "Think of the process that literally means \"eating\" cells.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "White blood cells called phagocytes engulf and digest invaders. This process is called phagocytosis.",
+    "type": "mcq",
+    "options": [
+     "Engulf and digest invading microorganisms",
+     "Produce antibodies that bind specific antigens",
+     "Raise body temperature to create fever",
+     "Present antigens to B cells for activation"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which lymphocyte type coordinates the adaptive immune response by activating other immune cells?",
+    "explanation": "Helper T cells are described as coordinating the response by activating B cells and other immune cells.",
+    "hint": "They are a subset of T cells that 'help' other cells.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Helper T cells coordinate the response by activating B cells and other immune cells.",
+    "type": "mcq",
+    "options": [
+     "Helper T cells",
+     "B cells",
+     "Cytotoxic T cells",
+     "Phagocytes"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Match each immune component with its correct description.",
+    "explanation": "Each term is paired with the function described in the study notes.",
+    "hint": "Recall the first‑line barriers and the cells/proteins mentioned in the innate and adaptive sections.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0",
+     "c1"
+    ],
+    "evidenceQuote": "The skin blocks most pathogens from getting in.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Skin",
+      "definition": "Physical barrier that blocks most pathogens from entering the body"
+     },
+     {
+      "term": "Mucus",
+      "definition": "Traps particles in the nose and airways and is moved by cilia"
+     },
+     {
+      "term": "Phagocytes",
+      "definition": "Engulf and digest invading microorganisms"
+     },
+     {
+      "term": "Antibodies",
+      "definition": "Y‑shaped proteins whose tips fit one specific antigen"
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Put the steps of clonal selection in the correct order after a new pathogen is encountered.",
+    "explanation": "Clonal selection starts with selection of rare matching cells, followed by rapid proliferation to create many identical cells.",
+    "hint": "Think about what happens first when the pathogen arrives versus what happens after selection.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "When the body meets a new pathogen, only a few B cells and T cells happen to have receptors that match its antigens. Those cells are selected and then multiply rapidly to form a large army of identical cells. This is called clonal selection.",
+    "type": "order",
+    "steps": [
+     "The body meets a new pathogen",
+     "A few B and T cells with matching receptors are selected",
+     "Those selected cells multiply rapidly",
+     "A large army of identical cells is formed"
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Why is the secondary immune response faster and stronger than the primary response?",
+    "explanation": "The notes state that memory cells enable an immediate, faster, and stronger secondary response.",
+    "hint": "Focus on the role of memory cells that survive after the first infection.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "If the same pathogen enters the body again, the memory cells recognise it immediately. The second response, called the secondary response, is faster and stronger than the first, and it produces far more antibodies.",
+    "type": "explain",
+    "modelAnswer": "Memory B and T cells generated after the first infection persist for years. When the same pathogen re‑enters, these memory cells recognize it immediately and rapidly expand, producing many antibodies and cytotoxic cells, which clears the pathogen more quickly.",
+    "keyPoints": [
+     "Memory cells remain after the first infection",
+     "They recognise the pathogen immediately when it returns",
+     "The secondary response produces far more antibodies",
+     "The pathogen is often destroyed before it causes symptoms"
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "How does a fever contribute to the body's innate immune defense?",
+    "explanation": "The notes mention that a raised body temperature can make conditions less favourable for some pathogens.",
+    "hint": "Consider the effect of temperature on pathogen survival.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "A raised body temperature, or fever, can also make conditions less favourable for some pathogens.",
+    "type": "explain",
+    "modelAnswer": "Fever raises body temperature, creating an environment that is less favorable for many pathogens, which can slow their growth and give immune cells more time to act.",
+    "keyPoints": [
+     "A fever is a raised body temperature",
+     "It is part of the fast, general innate response",
+     "The higher temperature makes conditions less favourable for some pathogens"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Which vaccine type contains living pathogens that have been weakened so they do not cause illness in healthy people?",
+    "explanation": "Live attenuated vaccines use weakened live pathogens to stimulate immunity.",
+    "hint": "Think of a vaccine that still contains live organisms.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Live attenuated vaccines contain living pathogens that have been weakened so that they do not cause illness in healthy people.",
+    "type": "mcq",
+    "options": [
+     "Inactivated",
+     "Live attenuated",
+     "Subunit",
+     "Toxoid"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "A booster dose is given to maintain immunity that wanes over time.",
+    "explanation": "Boosters reinforce memory cells as protection decreases.",
+    "hint": "What is the purpose of a booster?",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "Over time, protection from some vaccines gradually decreases, so a later dose, called a booster, is used to remind the immune system and strengthen the memory again.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Vaccines show the immune system antigens in a safe form so that ____ cells form without the disease.",
+    "explanation": "The vaccine induces memory cells for rapid secondary response.",
+    "hint": "What type of cells remember the pathogen?",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "Vaccines show the immune system antigens in a safe form so that memory cells form without the disease.",
+    "type": "fill",
+    "answer": "memory",
+    "acceptedAnswers": [
+     "memory cells"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "What are adjuvants?",
+    "explanation": "Adjuvants boost the immune response.",
+    "hint": "They are added to some vaccines.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Some vaccines contain ingredients called adjuvants, which help to produce a stronger immune response to the antigen.",
+    "type": "flashcard",
+    "back": "Ingredients that help produce a stronger immune response to the antigen."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "The proportion of the population that needs to be immune to achieve herd immunity depends on:",
+    "explanation": "Higher contagiousness requires higher immunity.",
+    "hint": "Think of how easily a disease spreads.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "The proportion of the population that needs to be immune depends on how contagious the disease is.",
+    "type": "mcq",
+    "options": [
+     "The age distribution",
+     "The disease's contagiousness",
+     "The vaccine's cost",
+     "The number of doses"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Clinical trials for vaccines involve testing for safety, immune response, and disease prevention.",
+    "explanation": "Trials check immune response, prevention, and safety.",
+    "hint": "What do vaccine trials test?",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "The trials check whether the vaccine produces an immune response, whether it prevents disease and whether it is safe.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Which type of vaccine contains only selected parts of the pathogen, such as particular proteins?",
+    "explanation": "Subunit vaccines contain only selected parts of the pathogen, such as particular proteins, rather than the whole organism.",
+    "hint": "Think of vaccines that don't use the whole organism.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Subunit vaccines contain only selected parts of the pathogen, such as particular proteins, rather than the whole organism.",
+    "type": "mcq",
+    "options": [
+     "Inactivated",
+     "Live attenuated",
+     "Subunit",
+     "Toxoid"
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Match each vaccine type to its description",
+    "explanation": "Each vaccine type uses a different method to present antigens safely.",
+    "hint": "Recall how each vaccine type modifies the pathogen or its components.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Inactivated vaccines contain pathogens that have been killed, so they cannot cause disease. Live attenuated vaccines contain living pathogens that have been weakened so that they do not cause illness in healthy people.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Inactivated",
+      "definition": "Contain pathogens that have been killed, so they cannot cause disease."
+     },
+     {
+      "term": "Live attenuated",
+      "definition": "Contain living pathogens that have been weakened so that they do not cause illness in healthy people."
+     },
+     {
+      "term": "Subunit",
+      "definition": "Contain only selected parts of the pathogen, such as particular proteins, rather than the whole organism."
+     },
+     {
+      "term": "Toxoid",
+      "definition": "Contain an inactivated form of a toxin, so the body learns to neutralise it."
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Explain why booster doses are needed for some vaccines.",
+    "explanation": "Booster doses remind the immune system and strengthen memory cells as protection decreases.",
+    "hint": "Think about how long‑term protection can fade.",
+    "difficulty": 3,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "Over time, protection from some vaccines gradually decreases, so a later dose, called a booster, is used to remind the immune system and strengthen the memory again.",
+    "type": "explain",
+    "modelAnswer": "Booster doses restimulate the immune system to maintain high levels of memory cells, because immunity can wane over time and some pathogens change their antigens. A booster helps reinforce the immune memory and ensures continued protection.",
+    "keyPoints": [
+     "Protection from some vaccines gradually decreases over time",
+     "A booster reminds the immune system",
+     "It strengthens the immune memory again"
+    ]
+   }
+  }
+ ]
+}

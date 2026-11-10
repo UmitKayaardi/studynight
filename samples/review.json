@@ -22,5 +22,57 @@
         ]
       }
     }
+  ],
+  "vaccines": [
+    {
+      "prompt": "The first line of defence includes the skin and ____.",
+      "remove": true
+    },
+    {
+      "prompt": "What ingredient in vaccines helps produce a stronger immune response to the antigen?",
+      "remove": true
+    },
+    {
+      "prompt": "Put the steps of clonal selection in the correct order after a new pathogen is encountered.",
+      "set": {
+        "steps": [
+          "The body meets a new pathogen",
+          "A few B and T cells with matching receptors are selected",
+          "Those selected cells multiply rapidly",
+          "A large army of identical cells is formed"
+        ]
+      }
+    },
+    {
+      "prompt": "Why is the secondary immune response faster and stronger than the primary response?",
+      "set": {
+        "keyPoints": [
+          "Memory cells remain after the first infection",
+          "They recognise the pathogen immediately when it returns",
+          "The secondary response produces far more antibodies",
+          "The pathogen is often destroyed before it causes symptoms"
+        ]
+      }
+    },
+    {
+      "prompt": "How does a fever contribute to the body's innate immune defense?",
+      "set": {
+        "keyPoints": [
+          "A fever is a raised body temperature",
+          "It is part of the fast, general innate response",
+          "The higher temperature makes conditions less favourable for some pathogens"
+        ]
+      }
+    },
+    {
+      "prompt": "Explain why booster doses are needed for some vaccines.",
+      "set": {
+        "keyPoints": [
+          "Protection from some vaccines gradually decreases over time",
+          "A booster reminds the immune system",
+          "It strengthens the immune memory again"
+        ]
+      }
+    }
   ]
 }

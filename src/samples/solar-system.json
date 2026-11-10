@@ -1,419 +1,522 @@
 {
-  "id": "solar-system",
-  "title": "The Solar System",
-  "language": "en",
-  "description": "How the Solar System formed, the Sun, the eight planets and the smaller bodies around them.",
-  "source": "solar-system.md",
-  "chunks": [
-    {
-      "text": "The Solar System\nThese notes give an overview of the Solar System: how it formed, the Sun at its centre, the eight planets, and the smaller bodies that share our neighbourhood. They are written as revision notes for an introductory astronomy course.\n1. What the Solar System is\nThe Solar System is the Sun together with everything that is held in orbit around it by gravity. That includes eight planets, their moons, dwarf planets such as Pluto, millions of asteroids, comets and a great deal of dust and gas. The Sun is by far the biggest member: it contains about 99.8 per cent of all the mass in the Solar System. Everything else, including giant Jupiter, makes up the remaining tiny fraction.\nDistances in the Solar System are so large that kilometres become awkward. Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres. Mercury orbits at about 0.4 AU, while Neptune, the most distant planet, orbits at about 30 AU.",
-      "headingPath": ["The Solar System"],
-      "wordCount": 175
-    },
-    {
-      "text": "2. How it formed\nThe leading explanation for the origin of the Solar System is the nebular hypothesis. About 4.6 billion years ago, a cloud of gas and dust, called a nebula, began to collapse under its own gravity. A nearby disturbance, possibly the shock wave from an exploding star, may have triggered the collapse.\nAs the cloud shrank it began to spin faster, in the same way a figure skater spins faster when pulling in their arms. The spinning flattened the cloud into a disc. Most of the material fell to the centre, where it became hot and dense enough for nuclear fusion to begin: the Sun was born.\nIn the disc around the young Sun, small grains of dust stuck together to form larger and larger clumps. These building blocks are called planetesimals. Over millions of years, planetesimals collided and merged to form the planets. Close to the Sun it was too hot for ice to survive, so the inner planets formed mainly from rock and metal. Further out, beyond a boundary called the frost line, water and other substances could freeze into ice. More solid material was available there, which allowed the outer planets to grow large enough to capture huge amounts of hydrogen and helium gas.\nThis history explains why all the planets orbit the Sun in the same direction and in nearly the same flat plane.",
-      "headingPath": ["The Solar System", "2. How it formed"],
-      "wordCount": 232
-    },
-    {
-      "text": "3. The Sun\nThe Sun is a star, a giant ball of hot gas made mostly of hydrogen and helium. In its core, the temperature reaches about 15 million degrees Celsius. At these conditions hydrogen nuclei fuse together to form helium, releasing enormous amounts of energy. This process is called nuclear fusion, and it is the source of the sunlight that warms the Earth.\nEnergy produced in the core takes a very long time to reach the surface, because it is absorbed and re-emitted many times on the way out. The visible surface of the Sun is called the photosphere and has a temperature of about 5,500 degrees Celsius. Darker, cooler patches on the photosphere are called sunspots. The number of sunspots rises and falls in a cycle that lasts about 11 years.\nThe Sun also releases a constant stream of charged particles into space, known as the solar wind. When these particles reach the Earth, most are deflected by the planet's magnetic field, but some are channelled towards the poles, where they make the air glow and create the aurora.",
-      "headingPath": ["The Solar System", "3. The Sun"],
-      "wordCount": 182
-    },
-    {
-      "text": "4. The inner, rocky planets\nThe four planets closest to the Sun are Mercury, Venus, Earth and Mars. They are called terrestrial planets because they have solid, rocky surfaces like the Earth.\nMercury is the smallest planet and the closest to the Sun. It has almost no atmosphere to trap heat, so its daytime side becomes extremely hot while its night side becomes extremely cold. Its surface is covered in craters, a little like our Moon.\nVenus is similar in size to the Earth, but conditions there are very different. Its thick atmosphere is made mostly of carbon dioxide, which traps heat through a strong greenhouse effect. As a result, Venus is the hottest planet, even though Mercury is closer to the Sun. Venus also spins in the opposite direction to most planets, and very slowly: a day on Venus is longer than its year.\nEarth is the only planet known to support life. Liquid water covers about 70 per cent of its surface. Its atmosphere, rich in nitrogen and oxygen, protects life from harmful radiation and keeps temperatures fairly stable. Earth has one large natural satellite, the Moon.\nMars is known as the red planet because iron oxide, or rust, in its soil gives it a reddish colour. It has a thin atmosphere of carbon dioxide. Mars has the largest volcano in the Solar System, Olympus Mons, and a huge canyon system called Valles Marineris. Dried-up river channels suggest that liquid water once flowed on its surface. Mars has two small moons, Phobos and Deimos.",
-      "headingPath": ["The Solar System", "4. The inner, rocky planets"],
-      "wordCount": 256
-    },
-    {
-      "text": "5. The outer giants\nBeyond Mars lie four much larger planets. They are divided into two groups.\nJupiter and Saturn are gas giants, made mostly of hydrogen and helium. Jupiter is the largest planet; more than a thousand Earths could fit inside it. Its Great Red Spot is a storm larger than the Earth that has been observed for centuries. Saturn is famous for its bright rings, which are made of countless pieces of ice and rock, ranging from tiny grains to chunks as big as houses. Saturn is less dense than water.\nUranus and Neptune are often called ice giants. Besides hydrogen and helium, they contain large amounts of water, ammonia and methane in icy forms. Methane in their atmospheres absorbs red light, which gives both planets a blue colour. Uranus is unusual because it is tipped on its side, so it appears to roll around the Sun. Neptune has the fastest winds measured on any planet.\nAll four giant planets have ring systems, although only Saturn's are easy to see, and all four have many moons. Some of these moons are remarkable worlds in their own right. Jupiter's moon Europa is thought to hide an ocean of liquid water beneath its icy crust, and Saturn's largest moon, Titan, has a thick atmosphere and lakes of liquid methane.",
-      "headingPath": ["The Solar System", "5. The outer giants"],
-      "wordCount": 219
-    },
-    {
-      "text": "6. Smaller bodies\nDwarf planets orbit the Sun and are round, but unlike planets they have not cleared their orbital path of other objects. Pluto was classified as a planet until 2006, when it was reclassified as a dwarf planet. Ceres, the largest object in the asteroid belt, is also a dwarf planet.\nAsteroids are rocky or metallic objects, mostly found in the asteroid belt between Mars and Jupiter. Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.\nComets are made of ice, dust and rock. They spend most of their time far from the Sun. When a comet's orbit brings it closer to the Sun, the ice begins to turn into gas, forming a glowing cloud called the coma and often a long tail. A comet's tail always points away from the Sun, because it is pushed by the solar wind and by sunlight.\nFar beyond Neptune lies the Kuiper Belt, a region of icy bodies that includes Pluto. Even further out, the Oort Cloud is thought to be a vast, spherical shell of icy objects surrounding the whole Solar System. It is believed to be the source of comets that take thousands of years to complete one orbit.",
-      "headingPath": ["The Solar System", "6. Smaller bodies"],
-      "wordCount": 209
-    },
-    {
-      "text": "7. Orbits and gravity\nPlanets move around the Sun in paths called orbits, which are slightly stretched circles known as ellipses. The time a planet takes to complete one orbit is its orbital period, or year. Planets closer to the Sun move faster and have shorter years. Mercury completes an orbit in about 88 Earth days, while Neptune takes about 165 Earth years.\nThe force that keeps the planets in their orbits is gravity. The strength of the gravitational pull between two objects depends on their masses and on the distance between them: more massive objects pull more strongly, and the pull becomes weaker as the distance increases. Without the Sun's gravity, each planet would travel off into space in a straight line.",
-      "headingPath": ["The Solar System", "7. Orbits and gravity"],
-      "wordCount": 123
-    },
-    {
-      "text": "8. Key points to remember\n- The Sun contains about 99.8 per cent of the Solar System's mass. - The Solar System formed about 4.6 billion years ago from a collapsing cloud of gas and dust. - The inner planets are small and rocky; the outer planets are large and made mostly of gas and ice. - Venus is the hottest planet because of its thick carbon dioxide atmosphere. - Pluto has been classified as a dwarf planet since 2006. - Comet tails point away from the Sun.",
-      "headingPath": ["The Solar System", "8. Key points to remember"],
-      "wordCount": 84
-    }
-  ],
-  "topics": [
-    {
-      "key": "t1",
-      "title": "Solar System Overview and Formation",
-      "summary": "Introduces the Solar System, its nebular origin, the Sun's properties, and the inner rocky planets.",
-      "chunks": [0, 1, 2, 3]
-    },
-    {
-      "key": "t2",
-      "title": "Outer Planets, Small Bodies, and Orbital Facts",
-      "summary": "Covers the outer giant planets, dwarf planets and other small bodies, orbital mechanics, and key summary points.",
-      "chunks": [4, 5, 6, 7]
-    }
-  ],
-  "questions": [
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "What percentage of the Solar System’s total mass is contained in the Sun?",
-        "explanation": "The Sun contains about 99.8 % of all the mass in the Solar System.",
-        "hint": "Think of the Sun’s dominance in mass.",
-        "difficulty": 1,
-        "topicId": "t1",
-        "sourceChunkIds": ["c0"],
-        "evidenceQuote": "The Sun is by far the biggest member: it contains about 99.8 per cent of all the mass in the Solar System.",
-        "type": "mcq",
-        "options": ["99.8%", "50%", "10%", "5%"],
-        "answerIndex": 0
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "The inner planets are called terrestrial planets because they have solid, rocky surfaces.",
-        "explanation": "Terrestrial planets are defined by their solid, rocky surfaces.",
-        "hint": "What does the term ‘terrestrial’ refer to?",
-        "difficulty": 1,
-        "topicId": "t1",
-        "sourceChunkIds": ["c3"],
-        "evidenceQuote": "The four planets closest to the Sun are Mercury, Venus, Earth and Mars. They are called terrestrial planets because they have solid, rocky surfaces like the Earth.",
-        "type": "tf",
-        "answer": true
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "The average distance between the Earth and the Sun is roughly ____ kilometres.",
-        "explanation": "Astronomers use the astronomical unit (AU) to express this distance.",
-        "hint": "It’s the size of an AU.",
-        "difficulty": 1,
-        "topicId": "t1",
-        "sourceChunkIds": ["c0"],
-        "evidenceQuote": "Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres.",
-        "type": "fill",
-        "answer": "150 million",
-        "acceptedAnswers": []
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "What is the frost line?",
-        "explanation": "Beyond the frost line, ice provides extra solid material for planet formation.",
-        "hint": "Think of where ice can survive.",
-        "difficulty": 2,
-        "topicId": "t1",
-        "sourceChunkIds": ["c1"],
-        "evidenceQuote": "Further out, beyond a boundary called the frost line, water and other substances could freeze into ice.",
-        "type": "flashcard",
-        "back": "The boundary beyond which water and other volatiles can freeze into ice, allowing outer planets to accrete gas."
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "Which statement best describes Venus’s rotation?",
-        "explanation": "Venus spins in the opposite direction to most planets.",
-        "hint": "Consider the direction of its spin.",
-        "difficulty": 1,
-        "topicId": "t1",
-        "sourceChunkIds": ["c3"],
-        "evidenceQuote": "Venus also spins in the opposite direction to most planets, and very slowly: a day on Venus is longer than its year.",
-        "type": "mcq",
-        "options": [
-          "It rotates in the same direction as Earth",
-          "It rotates in the opposite direction to most planets",
-          "It rotates faster than Earth",
-          "It does not rotate"
-        ],
-        "answerIndex": 1
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "Mercury has a thick atmosphere that traps heat.",
-        "explanation": "Mercury’s thin atmosphere cannot retain heat.",
-        "hint": "Think of Mercury’s atmospheric thickness.",
-        "difficulty": 1,
-        "topicId": "t1",
-        "sourceChunkIds": ["c3"],
-        "evidenceQuote": "Mercury is the smallest planet and the closest to the Sun. It has almost no atmosphere to trap heat, so its daytime side becomes extremely hot while its night side becomes extremely cold.",
-        "type": "tf",
-        "answer": false,
-        "correction": "Mercury has almost no atmosphere to trap heat."
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "Describe how the solar wind leads to auroras on Earth.",
-        "explanation": "The notes explain that the solar wind is channeled toward the poles, making the air glow and creating auroras.",
-        "hint": "Think about the role of Earth’s magnetic field and atmospheric collisions.",
-        "difficulty": 2,
-        "topicId": "t1",
-        "sourceChunkIds": ["c2"],
-        "evidenceQuote": "The Sun also releases a constant stream of charged particles into space, known as the solar wind. When these particles reach the Earth, most are deflected by the planet's magnetic field, but some are channelled towards the poles, where they make the air glow and create the aurora.",
-        "type": "explain",
-        "modelAnswer": "The Sun continuously emits a stream of charged particles known as the solar wind. When these particles reach Earth, most are deflected by the planet’s magnetic field, but some are guided toward the magnetic poles where they collide with atmospheric gases, causing the gases to emit light and create auroras.",
-        "keyPoints": [
-          "The solar wind is a stream of charged particles from the Sun.",
-          "Earth's magnetic field deflects most of the particles.",
-          "Some particles are channelled towards the poles.",
-          "There they make the air glow, creating the aurora."
-        ]
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "Which planet possesses the largest volcano in the Solar System?",
-        "explanation": "Mars hosts Olympus Mons, the Solar System’s biggest volcano, as stated in the notes.",
-        "hint": "Think of the red planet’s famous landmarks.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c3"],
-        "evidenceQuote": "Mars has the largest volcano in the Solar System, Olympus Mons",
-        "type": "mcq",
-        "options": ["Earth", "Venus", "Mars", "Mercury"],
-        "answerIndex": 2
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "What process provides the Sun’s energy output?",
-        "explanation": "Hydrogen nuclei fuse into helium in the Sun’s core, releasing energy – the source of sunlight.",
-        "hint": "It involves turning hydrogen into helium under extreme heat.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c2"],
-        "evidenceQuote": "hydrogen nuclei fuse together to form helium, releasing enormous amounts of energy. This process is called nuclear fusion, and it is the source of the sunlight that warms the Earth.",
-        "type": "mcq",
-        "options": ["Nuclear fusion", "Gravitational contraction", "Chemical burning", "Radioactive decay"],
-        "answerIndex": 0
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "The nebular hypothesis proposes that the Solar System formed from a rotating cloud of gas and dust that began collapsing about 4.6 billion years ago.",
-        "explanation": "The notes describe the nebular hypothesis exactly this way.",
-        "hint": "Recall the age and cause of the collapse.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c1"],
-        "evidenceQuote": "The leading explanation for the origin of the Solar System is the nebular hypothesis. About 4.6 billion years ago, a cloud of gas and dust, called a nebula, began to collapse under its own gravity.",
-        "type": "tf",
-        "answer": true
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "According to the nebular hypothesis, the inner planets formed primarily from icy planetesimals.",
-        "explanation": "The notes state that close to the Sun ice could not survive, so inner planets are rocky.",
-        "hint": "Consider the temperature near the Sun during formation.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c1"],
-        "evidenceQuote": "Close to the Sun it was too hot for ice to survive, so the inner planets formed mainly from rock and metal.",
-        "type": "tf",
-        "answer": false,
-        "correction": "The inner planets formed mainly from rock and metal because it was too hot for ice to survive near the Sun."
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "The Sun's visible surface, called the ____, has a temperature of about 5,500 °C.",
-        "explanation": "The photosphere is defined as the Sun’s visible surface with that temperature.",
-        "hint": "It's the layer we see as the bright disc of the Sun.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c2"],
-        "evidenceQuote": "The visible surface of the Sun is called the photosphere and has a temperature of about 5,500 degrees Celsius.",
-        "type": "fill",
-        "answer": "photosphere",
-        "acceptedAnswers": ["the photosphere"]
-      }
-    },
-    {
-      "topic": "t1",
-      "content": {
-        "prompt": "What does one astronomical unit (AU) represent?",
-        "explanation": "An AU is defined as the Earth‑Sun average distance, roughly 150 million km.",
-        "hint": "It's the baseline distance used for planetary orbits.",
-        "difficulty": 3,
-        "topicId": "t1",
-        "sourceChunkIds": ["c0"],
-        "evidenceQuote": "Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres.",
-        "type": "flashcard",
-        "back": "The average distance between Earth and the Sun, about 150 million kilometres."
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "What is the key characteristic that separates a dwarf planet from a planet?",
-        "explanation": "Dwarf planets are round bodies that have not cleared their orbital neighborhoods, unlike planets.",
-        "hint": "Consider the definition involving the object's orbit.",
-        "difficulty": 1,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "Dwarf planets orbit the Sun and are round, but unlike planets they have not cleared their orbital path of other objects.",
-        "type": "mcq",
-        "options": [
-          "It has not cleared its orbital path of other objects.",
-          "It is smaller than Earth’s Moon.",
-          "It orbits beyond Neptune.",
-          "It is composed mainly of ice."
-        ],
-        "answerIndex": 0
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "A comet's tail points toward the Sun.",
-        "explanation": "Solar wind and sunlight push the tail outward, so it points away from the Sun.",
-        "hint": "Remember the direction of the solar wind.",
-        "difficulty": 1,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "A comet's tail always points away from the Sun, because it is pushed by the solar wind and by sunlight.",
-        "type": "tf",
-        "answer": false,
-        "correction": "A comet's tail always points away from the Sun."
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "The region beyond Neptune that contains icy bodies like Pluto is called the ____.",
-        "explanation": "The Kuiper Belt lies beyond Neptune and hosts icy objects such as Pluto.",
-        "hint": "It shares its name with a famous Dutch explorer.",
-        "difficulty": 1,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "Far beyond Neptune lies the Kuiper Belt, a region of icy bodies that includes Pluto.",
-        "type": "fill",
-        "answer": "Kuiper Belt",
-        "acceptedAnswers": ["the Kuiper Belt"]
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "Which outer planet has the fastest measured winds in the Solar System?",
-        "explanation": "The source notes that Neptune has the fastest winds measured on any planet.",
-        "hint": "Think of the planet mentioned for its extreme wind speeds.",
-        "difficulty": 1,
-        "topicId": "t2",
-        "sourceChunkIds": ["c4"],
-        "evidenceQuote": "Neptune has the fastest winds measured on any planet.",
-        "type": "mcq",
-        "options": ["Uranus", "Neptune", "Saturn", "Jupiter"],
-        "answerIndex": 1
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "Put the steps that occur when a comet approaches the Sun in the correct order.",
-        "explanation": "The notes explain that as a comet gets closer to the Sun, ice turns to gas, forming a coma, and the solar wind creates a tail pointing away from the Sun.",
-        "hint": "Think of the sequence: sublimation → coma → tail.",
-        "difficulty": 2,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "When a comet's orbit brings it closer to the Sun, the ice begins to turn into gas, forming a glowing cloud called the coma and often a long tail.",
-        "type": "order",
-        "steps": [
-          "Ice on the comet sublimates as it nears the Sun, turning into gas.",
-          "A glowing cloud called the coma forms around the nucleus.",
-          "Solar wind and sunlight push the gas and dust away, creating a tail that points away from the Sun."
-        ]
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "Explain how Jupiter's strong gravity influenced the formation of the asteroid belt.",
-        "explanation": "The source states that Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.",
-        "hint": "Consider the role of Jupiter’s gravity on nearby material.",
-        "difficulty": 2,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.",
-        "type": "explain",
-        "modelAnswer": "Jupiter's strong gravitational pull disturbed the material in the region between Mars and Jupiter, preventing the debris from coalescing into a single planet. Instead, the objects remained as separate rocky or metallic bodies, forming the asteroid belt.",
-        "keyPoints": [
-          "Jupiter has very strong gravity.",
-          "Its gravity affected the material between Mars and Jupiter.",
-          "This is thought to have prevented that material from forming a planet.",
-          "The region remains a belt of many separate asteroids."
-        ]
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "Describe how a planet's distance from the Sun affects its orbital period and orbital speed.",
-        "explanation": "The notes indicate that planets nearer the Sun move faster and have shorter years, while those farther away move slower and take longer to orbit.",
-        "hint": "Think about the relationship between distance, speed, and year length.",
-        "difficulty": 2,
-        "topicId": "t2",
-        "sourceChunkIds": ["c6"],
-        "evidenceQuote": "Planets closer to the Sun move faster and have shorter years.",
-        "type": "explain",
-        "modelAnswer": "Planets that are closer to the Sun travel faster in their orbits and complete a revolution in a shorter time, giving them shorter years. Conversely, planets farther from the Sun move more slowly and have longer orbital periods.",
-        "keyPoints": [
-          "Closer planets move faster.",
-          "Closer planets have shorter orbital periods.",
-          "Farther planets move slower.",
-          "Farther planets have longer orbital periods."
-        ]
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "The Oort Cloud is located between Mars and Jupiter.",
-        "explanation": "The Oort Cloud is described as a vast spherical shell surrounding the Solar System, far beyond Neptune.",
-        "hint": "Think about the outermost region of the Solar System.",
-        "difficulty": 1,
-        "topicId": "t2",
-        "sourceChunkIds": ["c5"],
-        "evidenceQuote": "Even further out, the Oort Cloud is thought to be a vast, spherical shell of icy objects surrounding the whole Solar System.",
-        "type": "tf",
-        "answer": false,
-        "correction": "The Oort Cloud is a distant spherical shell of icy objects far beyond Neptune."
-      }
-    },
-    {
-      "topic": "t2",
-      "content": {
-        "prompt": "Neptune takes about ____ Earth years to complete one orbit.",
-        "explanation": "The notes give Neptune's orbital period as about 165 Earth years.",
-        "hint": "It's a three‑digit number.",
-        "difficulty": 2,
-        "topicId": "t2",
-        "sourceChunkIds": ["c6"],
-        "evidenceQuote": "while Neptune takes about 165 Earth years.",
-        "type": "fill",
-        "answer": "165",
-        "acceptedAnswers": ["165 years"]
-      }
-    }
-  ]
+ "id": "solar-system",
+ "title": "The Solar System",
+ "language": "en",
+ "description": "How the Solar System formed, the Sun, the eight planets and the smaller bodies around them.",
+ "source": "solar-system.md",
+ "chunks": [
+  {
+   "text": "The Solar System\nThese notes give an overview of the Solar System: how it formed, the Sun at its centre, the eight planets, and the smaller bodies that share our neighbourhood. They are written as revision notes for an introductory astronomy course.\n1. What the Solar System is\nThe Solar System is the Sun together with everything that is held in orbit around it by gravity. That includes eight planets, their moons, dwarf planets such as Pluto, millions of asteroids, comets and a great deal of dust and gas. The Sun is by far the biggest member: it contains about 99.8 per cent of all the mass in the Solar System. Everything else, including giant Jupiter, makes up the remaining tiny fraction.\nDistances in the Solar System are so large that kilometres become awkward. Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres. Mercury orbits at about 0.4 AU, while Neptune, the most distant planet, orbits at about 30 AU.",
+   "headingPath": [
+    "The Solar System"
+   ],
+   "wordCount": 175
+  },
+  {
+   "text": "2. How it formed\nThe leading explanation for the origin of the Solar System is the nebular hypothesis. About 4.6 billion years ago, a cloud of gas and dust, called a nebula, began to collapse under its own gravity. A nearby disturbance, possibly the shock wave from an exploding star, may have triggered the collapse.\nAs the cloud shrank it began to spin faster, in the same way a figure skater spins faster when pulling in their arms. The spinning flattened the cloud into a disc. Most of the material fell to the centre, where it became hot and dense enough for nuclear fusion to begin: the Sun was born.\nIn the disc around the young Sun, small grains of dust stuck together to form larger and larger clumps. These building blocks are called planetesimals. Over millions of years, planetesimals collided and merged to form the planets. Close to the Sun it was too hot for ice to survive, so the inner planets formed mainly from rock and metal. Further out, beyond a boundary called the frost line, water and other substances could freeze into ice. More solid material was available there, which allowed the outer planets to grow large enough to capture huge amounts of hydrogen and helium gas.\nThis history explains why all the planets orbit the Sun in the same direction and in nearly the same flat plane.",
+   "headingPath": [
+    "The Solar System",
+    "2. How it formed"
+   ],
+   "wordCount": 232
+  },
+  {
+   "text": "3. The Sun\nThe Sun is a star, a giant ball of hot gas made mostly of hydrogen and helium. In its core, the temperature reaches about 15 million degrees Celsius. At these conditions hydrogen nuclei fuse together to form helium, releasing enormous amounts of energy. This process is called nuclear fusion, and it is the source of the sunlight that warms the Earth.\nEnergy produced in the core takes a very long time to reach the surface, because it is absorbed and re-emitted many times on the way out. The visible surface of the Sun is called the photosphere and has a temperature of about 5,500 degrees Celsius. Darker, cooler patches on the photosphere are called sunspots. The number of sunspots rises and falls in a cycle that lasts about 11 years.\nThe Sun also releases a constant stream of charged particles into space, known as the solar wind. When these particles reach the Earth, most are deflected by the planet's magnetic field, but some are channelled towards the poles, where they make the air glow and create the aurora.",
+   "headingPath": [
+    "The Solar System",
+    "3. The Sun"
+   ],
+   "wordCount": 182
+  },
+  {
+   "text": "4. The inner, rocky planets\nThe four planets closest to the Sun are Mercury, Venus, Earth and Mars. They are called terrestrial planets because they have solid, rocky surfaces like the Earth.\nMercury is the smallest planet and the closest to the Sun. It has almost no atmosphere to trap heat, so its daytime side becomes extremely hot while its night side becomes extremely cold. Its surface is covered in craters, a little like our Moon.\nVenus is similar in size to the Earth, but conditions there are very different. Its thick atmosphere is made mostly of carbon dioxide, which traps heat through a strong greenhouse effect. As a result, Venus is the hottest planet, even though Mercury is closer to the Sun. Venus also spins in the opposite direction to most planets, and very slowly: a day on Venus is longer than its year.\nEarth is the only planet known to support life. Liquid water covers about 70 per cent of its surface. Its atmosphere, rich in nitrogen and oxygen, protects life from harmful radiation and keeps temperatures fairly stable. Earth has one large natural satellite, the Moon.\nMars is known as the red planet because iron oxide, or rust, in its soil gives it a reddish colour. It has a thin atmosphere of carbon dioxide. Mars has the largest volcano in the Solar System, Olympus Mons, and a huge canyon system called Valles Marineris. Dried-up river channels suggest that liquid water once flowed on its surface. Mars has two small moons, Phobos and Deimos.",
+   "headingPath": [
+    "The Solar System",
+    "4. The inner, rocky planets"
+   ],
+   "wordCount": 256
+  },
+  {
+   "text": "5. The outer giants\nBeyond Mars lie four much larger planets. They are divided into two groups.\nJupiter and Saturn are gas giants, made mostly of hydrogen and helium. Jupiter is the largest planet; more than a thousand Earths could fit inside it. Its Great Red Spot is a storm larger than the Earth that has been observed for centuries. Saturn is famous for its bright rings, which are made of countless pieces of ice and rock, ranging from tiny grains to chunks as big as houses. Saturn is less dense than water.\nUranus and Neptune are often called ice giants. Besides hydrogen and helium, they contain large amounts of water, ammonia and methane in icy forms. Methane in their atmospheres absorbs red light, which gives both planets a blue colour. Uranus is unusual because it is tipped on its side, so it appears to roll around the Sun. Neptune has the fastest winds measured on any planet.\nAll four giant planets have ring systems, although only Saturn's are easy to see, and all four have many moons. Some of these moons are remarkable worlds in their own right. Jupiter's moon Europa is thought to hide an ocean of liquid water beneath its icy crust, and Saturn's largest moon, Titan, has a thick atmosphere and lakes of liquid methane.",
+   "headingPath": [
+    "The Solar System",
+    "5. The outer giants"
+   ],
+   "wordCount": 219
+  },
+  {
+   "text": "6. Smaller bodies\nDwarf planets orbit the Sun and are round, but unlike planets they have not cleared their orbital path of other objects. Pluto was classified as a planet until 2006, when it was reclassified as a dwarf planet. Ceres, the largest object in the asteroid belt, is also a dwarf planet.\nAsteroids are rocky or metallic objects, mostly found in the asteroid belt between Mars and Jupiter. Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.\nComets are made of ice, dust and rock. They spend most of their time far from the Sun. When a comet's orbit brings it closer to the Sun, the ice begins to turn into gas, forming a glowing cloud called the coma and often a long tail. A comet's tail always points away from the Sun, because it is pushed by the solar wind and by sunlight.\nFar beyond Neptune lies the Kuiper Belt, a region of icy bodies that includes Pluto. Even further out, the Oort Cloud is thought to be a vast, spherical shell of icy objects surrounding the whole Solar System. It is believed to be the source of comets that take thousands of years to complete one orbit.",
+   "headingPath": [
+    "The Solar System",
+    "6. Smaller bodies"
+   ],
+   "wordCount": 209
+  },
+  {
+   "text": "7. Orbits and gravity\nPlanets move around the Sun in paths called orbits, which are slightly stretched circles known as ellipses. The time a planet takes to complete one orbit is its orbital period, or year. Planets closer to the Sun move faster and have shorter years. Mercury completes an orbit in about 88 Earth days, while Neptune takes about 165 Earth years.\nThe force that keeps the planets in their orbits is gravity. The strength of the gravitational pull between two objects depends on their masses and on the distance between them: more massive objects pull more strongly, and the pull becomes weaker as the distance increases. Without the Sun's gravity, each planet would travel off into space in a straight line.",
+   "headingPath": [
+    "The Solar System",
+    "7. Orbits and gravity"
+   ],
+   "wordCount": 123
+  },
+  {
+   "text": "8. Key points to remember\n- The Sun contains about 99.8 per cent of the Solar System's mass. - The Solar System formed about 4.6 billion years ago from a collapsing cloud of gas and dust. - The inner planets are small and rocky; the outer planets are large and made mostly of gas and ice. - Venus is the hottest planet because of its thick carbon dioxide atmosphere. - Pluto has been classified as a dwarf planet since 2006. - Comet tails point away from the Sun.",
+   "headingPath": [
+    "The Solar System",
+    "8. Key points to remember"
+   ],
+   "wordCount": 84
+  }
+ ],
+ "topics": [
+  {
+   "key": "t1",
+   "title": "Solar System Overview and Formation",
+   "summary": "Introduces the Solar System, its nebular origin, the Sun's properties, and the inner rocky planets.",
+   "chunks": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "key": "t2",
+   "title": "Outer Planets, Small Bodies, and Orbital Facts",
+   "summary": "Covers the outer giant planets, dwarf planets and other small bodies, orbital mechanics, and key summary points.",
+   "chunks": [
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What percentage of the Solar System’s total mass is contained in the Sun?",
+    "explanation": "The Sun contains about 99.8 % of all the mass in the Solar System.",
+    "hint": "Think of the Sun’s dominance in mass.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "The Sun is by far the biggest member: it contains about 99.8 per cent of all the mass in the Solar System.",
+    "type": "mcq",
+    "options": [
+     "99.8%",
+     "50%",
+     "10%",
+     "5%"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "The inner planets are called terrestrial planets because they have solid, rocky surfaces.",
+    "explanation": "Terrestrial planets are defined by their solid, rocky surfaces.",
+    "hint": "What does the term ‘terrestrial’ refer to?",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "The four planets closest to the Sun are Mercury, Venus, Earth and Mars. They are called terrestrial planets because they have solid, rocky surfaces like the Earth.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "The average distance between the Earth and the Sun is roughly ____ kilometres.",
+    "explanation": "Astronomers use the astronomical unit (AU) to express this distance.",
+    "hint": "It’s the size of an AU.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres.",
+    "type": "fill",
+    "answer": "150 million",
+    "acceptedAnswers": []
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What is the frost line?",
+    "explanation": "Beyond the frost line, ice provides extra solid material for planet formation.",
+    "hint": "Think of where ice can survive.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Further out, beyond a boundary called the frost line, water and other substances could freeze into ice.",
+    "type": "flashcard",
+    "back": "The boundary beyond which water and other volatiles can freeze into ice, allowing outer planets to accrete gas."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which statement best describes Venus’s rotation?",
+    "explanation": "Venus spins in the opposite direction to most planets.",
+    "hint": "Consider the direction of its spin.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Venus also spins in the opposite direction to most planets, and very slowly: a day on Venus is longer than its year.",
+    "type": "mcq",
+    "options": [
+     "It rotates in the same direction as Earth",
+     "It rotates in the opposite direction to most planets",
+     "It rotates faster than Earth",
+     "It does not rotate"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Mercury has a thick atmosphere that traps heat.",
+    "explanation": "Mercury’s thin atmosphere cannot retain heat.",
+    "hint": "Think of Mercury’s atmospheric thickness.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Mercury is the smallest planet and the closest to the Sun. It has almost no atmosphere to trap heat, so its daytime side becomes extremely hot while its night side becomes extremely cold.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Mercury has almost no atmosphere to trap heat."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Describe how the solar wind leads to auroras on Earth.",
+    "explanation": "The notes explain that the solar wind is channeled toward the poles, making the air glow and creating auroras.",
+    "hint": "Think about the role of Earth’s magnetic field and atmospheric collisions.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "The Sun also releases a constant stream of charged particles into space, known as the solar wind. When these particles reach the Earth, most are deflected by the planet's magnetic field, but some are channelled towards the poles, where they make the air glow and create the aurora.",
+    "type": "explain",
+    "modelAnswer": "The Sun continuously emits a stream of charged particles known as the solar wind. When these particles reach Earth, most are deflected by the planet’s magnetic field, but some are guided toward the magnetic poles where they collide with atmospheric gases, causing the gases to emit light and create auroras.",
+    "keyPoints": [
+     "The solar wind is a stream of charged particles from the Sun.",
+     "Earth's magnetic field deflects most of the particles.",
+     "Some particles are channelled towards the poles.",
+     "There they make the air glow, creating the aurora."
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which planet possesses the largest volcano in the Solar System?",
+    "explanation": "Mars hosts Olympus Mons, the Solar System’s biggest volcano, as stated in the notes.",
+    "hint": "Think of the red planet’s famous landmarks.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Mars has the largest volcano in the Solar System, Olympus Mons",
+    "type": "mcq",
+    "options": [
+     "Earth",
+     "Venus",
+     "Mars",
+     "Mercury"
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What process provides the Sun’s energy output?",
+    "explanation": "Hydrogen nuclei fuse into helium in the Sun’s core, releasing energy – the source of sunlight.",
+    "hint": "It involves turning hydrogen into helium under extreme heat.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "hydrogen nuclei fuse together to form helium, releasing enormous amounts of energy. This process is called nuclear fusion, and it is the source of the sunlight that warms the Earth.",
+    "type": "mcq",
+    "options": [
+     "Nuclear fusion",
+     "Gravitational contraction",
+     "Chemical burning",
+     "Radioactive decay"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "The nebular hypothesis proposes that the Solar System formed from a rotating cloud of gas and dust that began collapsing about 4.6 billion years ago.",
+    "explanation": "The notes describe the nebular hypothesis exactly this way.",
+    "hint": "Recall the age and cause of the collapse.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "The leading explanation for the origin of the Solar System is the nebular hypothesis. About 4.6 billion years ago, a cloud of gas and dust, called a nebula, began to collapse under its own gravity.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "According to the nebular hypothesis, the inner planets formed primarily from icy planetesimals.",
+    "explanation": "The notes state that close to the Sun ice could not survive, so inner planets are rocky.",
+    "hint": "Consider the temperature near the Sun during formation.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Close to the Sun it was too hot for ice to survive, so the inner planets formed mainly from rock and metal.",
+    "type": "tf",
+    "answer": false,
+    "correction": "The inner planets formed mainly from rock and metal because it was too hot for ice to survive near the Sun."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "The Sun's visible surface, called the ____, has a temperature of about 5,500 °C.",
+    "explanation": "The photosphere is defined as the Sun’s visible surface with that temperature.",
+    "hint": "It's the layer we see as the bright disc of the Sun.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "The visible surface of the Sun is called the photosphere and has a temperature of about 5,500 degrees Celsius.",
+    "type": "fill",
+    "answer": "photosphere",
+    "acceptedAnswers": [
+     "the photosphere"
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What does one astronomical unit (AU) represent?",
+    "explanation": "An AU is defined as the Earth‑Sun average distance, roughly 150 million km.",
+    "hint": "It's the baseline distance used for planetary orbits.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Astronomers therefore use the astronomical unit (AU), which is the average distance between the Earth and the Sun, roughly 150 million kilometres.",
+    "type": "flashcard",
+    "back": "The average distance between Earth and the Sun, about 150 million kilometres."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "What is the key characteristic that separates a dwarf planet from a planet?",
+    "explanation": "Dwarf planets are round bodies that have not cleared their orbital neighborhoods, unlike planets.",
+    "hint": "Consider the definition involving the object's orbit.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "Dwarf planets orbit the Sun and are round, but unlike planets they have not cleared their orbital path of other objects.",
+    "type": "mcq",
+    "options": [
+     "It has not cleared its orbital path of other objects.",
+     "It is smaller than Earth’s Moon.",
+     "It orbits beyond Neptune.",
+     "It is composed mainly of ice."
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "A comet's tail points toward the Sun.",
+    "explanation": "Solar wind and sunlight push the tail outward, so it points away from the Sun.",
+    "hint": "Remember the direction of the solar wind.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A comet's tail always points away from the Sun, because it is pushed by the solar wind and by sunlight.",
+    "type": "tf",
+    "answer": false,
+    "correction": "A comet's tail always points away from the Sun."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "The region beyond Neptune that contains icy bodies like Pluto is called the ____.",
+    "explanation": "The Kuiper Belt lies beyond Neptune and hosts icy objects such as Pluto.",
+    "hint": "It shares its name with a famous Dutch explorer.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "Far beyond Neptune lies the Kuiper Belt, a region of icy bodies that includes Pluto.",
+    "type": "fill",
+    "answer": "Kuiper Belt",
+    "acceptedAnswers": [
+     "the Kuiper Belt"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Which outer planet has the fastest measured winds in the Solar System?",
+    "explanation": "The source notes that Neptune has the fastest winds measured on any planet.",
+    "hint": "Think of the planet mentioned for its extreme wind speeds.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "Neptune has the fastest winds measured on any planet.",
+    "type": "mcq",
+    "options": [
+     "Uranus",
+     "Neptune",
+     "Saturn",
+     "Jupiter"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Put the steps that occur when a comet approaches the Sun in the correct order.",
+    "explanation": "The notes explain that as a comet gets closer to the Sun, ice turns to gas, forming a coma, and the solar wind creates a tail pointing away from the Sun.",
+    "hint": "Think of the sequence: sublimation → coma → tail.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "When a comet's orbit brings it closer to the Sun, the ice begins to turn into gas, forming a glowing cloud called the coma and often a long tail.",
+    "type": "order",
+    "steps": [
+     "Ice on the comet sublimates as it nears the Sun, turning into gas.",
+     "A glowing cloud called the coma forms around the nucleus.",
+     "Solar wind and sunlight push the gas and dust away, creating a tail that points away from the Sun."
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Explain how Jupiter's strong gravity influenced the formation of the asteroid belt.",
+    "explanation": "The source states that Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.",
+    "hint": "Consider the role of Jupiter’s gravity on nearby material.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "Jupiter's strong gravity is thought to have prevented the material in this region from ever forming a planet.",
+    "type": "explain",
+    "modelAnswer": "Jupiter's strong gravitational pull disturbed the material in the region between Mars and Jupiter, preventing the debris from coalescing into a single planet. Instead, the objects remained as separate rocky or metallic bodies, forming the asteroid belt.",
+    "keyPoints": [
+     "Jupiter has very strong gravity.",
+     "Its gravity affected the material between Mars and Jupiter.",
+     "This is thought to have prevented that material from forming a planet.",
+     "The region remains a belt of many separate asteroids."
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Describe how a planet's distance from the Sun affects its orbital period and orbital speed.",
+    "explanation": "The notes indicate that planets nearer the Sun move faster and have shorter years, while those farther away move slower and take longer to orbit.",
+    "hint": "Think about the relationship between distance, speed, and year length.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "Planets closer to the Sun move faster and have shorter years.",
+    "type": "explain",
+    "modelAnswer": "Planets that are closer to the Sun travel faster in their orbits and complete a revolution in a shorter time, giving them shorter years. Conversely, planets farther from the Sun move more slowly and have longer orbital periods.",
+    "keyPoints": [
+     "Closer planets move faster.",
+     "Closer planets have shorter orbital periods.",
+     "Farther planets move slower.",
+     "Farther planets have longer orbital periods."
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "The Oort Cloud is located between Mars and Jupiter.",
+    "explanation": "The Oort Cloud is described as a vast spherical shell surrounding the Solar System, far beyond Neptune.",
+    "hint": "Think about the outermost region of the Solar System.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "Even further out, the Oort Cloud is thought to be a vast, spherical shell of icy objects surrounding the whole Solar System.",
+    "type": "tf",
+    "answer": false,
+    "correction": "The Oort Cloud is a distant spherical shell of icy objects far beyond Neptune."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Neptune takes about ____ Earth years to complete one orbit.",
+    "explanation": "The notes give Neptune's orbital period as about 165 Earth years.",
+    "hint": "It's a three‑digit number.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "while Neptune takes about 165 Earth years.",
+    "type": "fill",
+    "answer": "165",
+    "acceptedAnswers": [
+     "165 years"
+    ]
+   }
+  }
+ ]
 }
