@@ -1,0 +1,12 @@
+{
+ "judged": 88,
+ "grounded": 98.9,
+ "correct": 100,
+ "mcqJudged": 29,
+ "distractorsPlausible": 100,
+ "figure": {
+  "judged": 14,
+  "grounded": 100,
+  "correct": 100
+ }
+}
