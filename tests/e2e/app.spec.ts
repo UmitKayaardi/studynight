@@ -204,6 +204,8 @@ test('backup export, import and delete all data', async ({ page }) => {
   await page.locator('input[type=file]').setInputFiles(path!);
   await expect(page.getByText(/with 1 decks/)).toBeVisible();
   await page.getByRole('button', { name: 'Replace and import' }).click();
+  // The app reloads to Home once the import has been written.
+  await expect(page).toHaveURL(/\/$/, { timeout: 20_000 });
   await page.goto('/decks');
   await expect(page.getByText('The Solar System')).toBeVisible();
 });
