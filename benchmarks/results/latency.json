@@ -1,0 +1,14 @@
+{
+ "document": {
+  "words": 7120,
+  "approxPages": 14,
+  "chunks": 39,
+  "topics": 10
+ },
+ "msChunking": 44,
+ "msTopicMap": 1722,
+ "msFirstQuestions": 5910,
+ "firstQuestionsAccepted": 6,
+ "msToFirstPlayable": 7676,
+ "method": "Measured from a desktop over a home connection; includes the topic map and the first generation + verification round (the app becomes playable after this). Excludes file reading (PDF text extraction runs locally and takes about 1 s for 20 pages)."
+}

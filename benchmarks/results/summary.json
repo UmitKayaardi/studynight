@@ -1,0 +1,251 @@
+{
+ "generatedAt": "2026-11-10T22:54:01.546Z",
+ "models": {
+  "generator": "openai/gpt-oss-120b",
+  "verifierAndJudge": "qwen/qwen3.8-27b"
+ },
+ "retrieval": {
+  "corpus": {
+   "documents": 14,
+   "chunks": 50,
+   "queries": 60,
+   "crossLanguageQueries": 17
+  },
+  "all": {
+   "bm25": {
+    "recallAt5": 78.3,
+    "mrr": 0.714
+   },
+   "vector": {
+    "recallAt5": 86.7,
+    "mrr": 0.809
+   },
+   "hybrid": {
+    "recallAt5": 85,
+    "mrr": 0.799
+   }
+  },
+  "sameLanguage": {
+   "bm25": {
+    "recallAt5": 95.3,
+    "mrr": 0.868
+   },
+   "hybrid": {
+    "recallAt5": 97.7,
+    "mrr": 0.957
+   }
+  },
+  "crossLanguage": {
+   "bm25": {
+    "recallAt5": 35.3,
+    "mrr": 0.324
+   },
+   "vector": {
+    "recallAt5": 52.9,
+    "mrr": 0.439
+   },
+   "hybrid": {
+    "recallAt5": 52.9,
+    "mrr": 0.4
+   }
+  },
+  "hybridWeight": 0.5,
+  "weightSweep": {
+   "w1": {
+    "all": {
+     "recallAt5": 85,
+     "mrr": 0.78
+    },
+    "cross": {
+     "recallAt5": 52.9,
+     "mrr": 0.392
+    }
+   },
+   "w0.5": {
+    "all": {
+     "recallAt5": 85,
+     "mrr": 0.799
+    },
+    "cross": {
+     "recallAt5": 52.9,
+     "mrr": 0.4
+    }
+   },
+   "w0.25": {
+    "all": {
+     "recallAt5": 85,
+     "mrr": 0.799
+    },
+    "cross": {
+     "recallAt5": 52.9,
+     "mrr": 0.4
+    }
+   }
+  },
+  "embedding": {
+   "chunks": 50,
+   "ms": 6990,
+   "msPer100Chunks": 13980,
+   "device": "desktop CPU, Node.js, single thread (onnxruntime-node)"
+  }
+ },
+ "generate": {
+  "documents": 10,
+  "drafted": 98,
+  "accepted": 88,
+  "passRate": 89.8,
+  "rejected": {
+   "schema": 7,
+   "evidence": 0,
+   "structure": 2,
+   "duplicate": 0,
+   "verifier": 1
+  },
+  "evidenceValidity": 100,
+  "duplicateRate": 0,
+  "byType": {
+   "mcq": 29,
+   "tf": 30,
+   "fill": 14,
+   "flashcard": 15
+  }
+ },
+ "figure": {
+  "drafted": 15,
+  "accepted": 14,
+  "passRate": 93.3,
+  "figureLinked": 14
+ },
+ "judge": {
+  "judged": 88,
+  "grounded": 98.9,
+  "correct": 100,
+  "mcqJudged": 29,
+  "distractorsPlausible": 100,
+  "figure": {
+   "judged": 14,
+   "grounded": 100,
+   "correct": 100
+  }
+ },
+ "manual-review": {
+  "reviewer": "Hand review by the builder against the benchmark notes (benchmarks/notes), 2026-11-10",
+  "method": "Every accepted question from the generate stage (88) and the figure stage (14) was read next to its source notes. 'Answer key correct' means the marked answer is right according to the notes and no other option is also right. 'Flawless' also requires a correct, grounded explanation or correction and an answer that reads naturally in the blank. Near-duplicates are counted separately: they are kept by the app's duplicate filter because they are different question types about the same fact.",
+  "text": {
+   "sample": 88,
+   "answerKeyCorrect": 85,
+   "answerKeyCorrectRate": 96.6,
+   "flawless": 81,
+   "flawlessRate": 92,
+   "nearDuplicates": 5,
+   "issues": [
+    {
+     "index": 7,
+     "doc": "ar-hayat-al-nujum",
+     "kind": "two correct options",
+     "note": "Options include both the Arabic term for supernova and its transliteration."
+    },
+    {
+     "index": 68,
+     "doc": "es-energias-renovables",
+     "kind": "not decidable from the notes",
+     "note": "The notes say batteries and pumped storage are used; they do not say whether storage is mainly on site, so 'false' is not supported."
+    },
+    {
+     "index": 80,
+     "doc": "ja-hikari",
+     "kind": "not grounded",
+     "note": "The notes only say rainbows come from dispersion in water droplets; the correction about internal reflection is outside the notes."
+    },
+    {
+     "index": 83,
+     "doc": "tr-depremler",
+     "kind": "wrong correction text",
+     "note": "The answer (false) is right, but the correction says all earthquake waves travel through solids, liquids and gases; the notes say S waves travel only through solids."
+    },
+    {
+     "index": 16,
+     "doc": "en-marketing-slides",
+     "kind": "answer repeats a word in the prompt",
+     "note": "Blank answer 'low price' before the word 'price'."
+    },
+    {
+     "index": 34,
+     "doc": "en-printing-press",
+     "kind": "answer phrasing",
+     "note": "Expected answer 'far faster'; a learner typing 'faster' may be marked wrong."
+    },
+    {
+     "index": 84,
+     "doc": "tr-depremler",
+     "kind": "answer repeats a suffix in the prompt",
+     "note": "Answer 'açığa çıkmasıyla' before 'ile'."
+    }
+   ],
+   "duplicates": [
+    "28 repeats 24 (Pangaea)",
+    "35 repeats 32 (incunabula)",
+    "69 repeats 66 (offshore wind)",
+    "75 repeats 73 (law of reflection)",
+    "76 repeats 74 (refraction)"
+   ],
+   "minorNotes": [
+    "40: weak distractors ('311 (as a string)' prints the same as the answer).",
+    "77: the correct option uses the term 'critical angle', which the notes describe but do not name."
+   ]
+  },
+  "figure": {
+   "sample": 14,
+   "answerKeyCorrect": 12,
+   "answerKeyCorrectRate": 85.7,
+   "flawless": 12,
+   "flawlessRate": 85.7,
+   "issues": [
+    {
+     "index": 11,
+     "kind": "two correct answers",
+     "note": "The dashed line meets the price axis at £4, labelled P*; the key accepts only 'P*'."
+    },
+    {
+     "index": 13,
+     "kind": "not grounded",
+     "note": "The figure description does not say where the demand curve meets the quantity axis."
+    }
+   ]
+  },
+  "combined": {
+   "sample": 102,
+   "answerKeyCorrect": 97,
+   "answerKeyCorrectRate": 95.1
+  }
+ },
+ "ask": {
+  "errors": 0,
+  "answerable": 26,
+  "answeredWithCorrectCitation": 100,
+  "answered": 100,
+  "unanswerable": 10,
+  "correctlyRefused": 100,
+  "note": "Retrieval for this stage uses BM25 only (top 5 passages of the document), the app's fallback path."
+ },
+ "explain": {
+  "answers": 34,
+  "keyPointLabels": 102,
+  "keyPointAgreement": 98,
+  "levelAgreement": 100
+ },
+ "latency": {
+  "document": {
+   "words": 7120,
+   "approxPages": 14,
+   "chunks": 39,
+   "topics": 10
+  },
+  "msChunking": 44,
+  "msTopicMap": 1722,
+  "msFirstQuestions": 5910,
+  "firstQuestionsAccepted": 6,
+  "msToFirstPlayable": 7676,
+  "method": "Measured from a desktop over a home connection; includes the topic map and the first generation + verification round (the app becomes playable after this). Excludes file reading (PDF text extraction runs locally and takes about 1 s for 20 pages)."
+ }
+}

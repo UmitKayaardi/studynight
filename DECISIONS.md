@@ -46,5 +46,7 @@ One line per decision: what was decided, and why.
 
 ## Benchmark-driven
 
-- Hybrid retrieval uses weighted Reciprocal Rank Fusion with BM25 weight 0.5 and vector weight 1 (`HYBRID_BM25_WEIGHT`): on the benchmark corpus it raises hybrid MRR from 0.78 to 0.80 at equal recall; keyword search stays in the mix because it works before (or without) the Smart search download and for exact terms. Vector-only scored one query higher on recall@5 on this small corpus — reported in docs/BENCHMARK.md rather than hidden.
+- Hybrid retrieval uses weighted Reciprocal Rank Fusion with BM25 weight 0.5 and vector weight 1 (`HYBRID_BM25_WEIGHT`): on the benchmark corpus this weight gave the best rank quality at equal recall (docs/BENCHMARK.md §3); keyword search stays in the mix because it works before (or without) the Smart search download and for exact terms. Vector-only did slightly better on recall on this small corpus — reported in docs/BENCHMARK.md rather than hidden.
+- Figure questions stay on by default: their acceptance rate and hand-reviewed quality are close to the text questions (docs/BENCHMARK.md §2).
+- The LLM judge (Qwen) turned out more lenient than a hand review, so the benchmark reports the hand-review result as the quality measure, and every sample deck is reviewed by hand (docs/BENCHMARK.md §1).
 - Groq's free plan also caps tokens per day per model; build-time jobs (translations, sample decks, benchmark) therefore wait out long `retry-after` periods and are run in stages.

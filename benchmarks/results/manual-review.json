@@ -40,5 +40,5 @@
    { "index": 13, "kind": "not grounded", "note": "The figure description does not say where the demand curve meets the quantity axis." }
   ]
  },
- "combined": { "sample": 102, "answerKeyCorrect": 97, "answerKeyCorrectRate": 95.1 }
+ "combined": { "sample": 102, "answerKeyCorrect": 97, "answerKeyCorrectRate": 95.1, "flawless": 93, "flawlessRate": 91.2 }
 }

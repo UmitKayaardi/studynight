@@ -98,7 +98,15 @@ flowchart LR
 Measured on an original, multilingual benchmark (10 documents in 5 languages, 60 labelled retrieval questions,
 34 labelled free-text answers). Full method, numbers and caveats: **[docs/BENCHMARK.md](docs/BENCHMARK.md)**.
 
-BENCHMARK_TABLE
+| What | Result |
+| --- | --- |
+| Generated questions with a correct answer key (checked by hand) | **95%** (97 of 102) |
+| Drafts that pass the app's own checks (evidence quote, structure, second model) | 90% |
+| Search finds the right passage in the top 5 | 98% same language · 53% across languages |
+| Ask your notes: answered with a correct citation / refused when the notes don't cover it | 100% (26/26) · 100% (10/10) |
+| Grading of written answers agrees with hand labels | 98% of key points |
+| From a 14-page document to the first playable questions | 7.7 s |
+| Lighthouse mobile: performance / accessibility / best practices / SEO | 92 / 98 / 96 / 100 |
 
 *Synthetic dataset written for this project; labels made with AI assistance and reviewed by hand; small samples — see
 the caveats in the benchmark document.*
