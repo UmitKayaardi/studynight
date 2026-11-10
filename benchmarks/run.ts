@@ -390,8 +390,22 @@ async function judgeStage() {
 
 // ---- Ask your notes ------------------------------------------------------------------------------------------------
 
+interface AskRow {
+  doc: string;
+  q: string;
+  answerable: boolean;
+  found: boolean;
+  citedOk: boolean;
+  answer: string;
+  error?: boolean;
+}
+
 async function askStage() {
-  const rows = [];
+  // Resumable: rows already answered in an earlier (interrupted) run are kept; errors are retried.
+  const rawFile = `${RAW}/ask.json`;
+  const previous: AskRow[] = existsSync(rawFile) ? (JSON.parse(readFileSync(rawFile, 'utf8')) as AskRow[]) : [];
+  const done = new Map(previous.filter((r) => !r.error).map((r) => [r.q, r]));
+  const rows: AskRow[] = [];
   const items = [
     ...qa.retrieval
       .filter((r) => BENCH_DOCS.includes(r.doc))
@@ -400,14 +414,26 @@ async function askStage() {
     ...qa.unanswerable.map((u) => ({ ...u, snippet: '', answerable: false })),
   ];
   for (const item of items) {
+    const cached = done.get(item.q);
+    if (cached) {
+      rows.push(cached);
+      continue;
+    }
     const doc = loadDoc(item.doc);
     const index = buildBm25(doc.chunks.map((c) => ({ id: c.id, text: c.text })));
     let hits = searchBm25(index, item.q, 5);
     if (!hits.length) hits = doc.chunks.slice(0, 5).map((c) => ({ id: c.id, score: 0 }));
     const passages = hits.map((h, i) => ({ n: i + 1, text: doc.chunks.find((c) => c.id === h.id)!.text }));
-    const res = await withRetry(() =>
-      ask({ language: doc.language === 'und' ? 'auto' : doc.language, question: item.q, passages }),
-    );
+    let res: Awaited<ReturnType<typeof ask>>;
+    try {
+      res = await withRetry(() =>
+        ask({ language: doc.language === 'und' ? 'auto' : doc.language, question: item.q, passages }),
+      );
+    } catch {
+      rows.push({ doc: item.doc, q: item.q, answerable: item.answerable, found: false, citedOk: false, answer: '', error: true });
+      writeFileSync(rawFile, JSON.stringify(rows, null, 1));
+      continue;
+    }
     const citedOk =
       item.answerable &&
       res.citations.some((n) => foldText(passages[n - 1]?.text ?? '').includes(foldText(item.snippet)));
@@ -419,11 +445,14 @@ async function askStage() {
       citedOk,
       answer: res.answer,
     });
+    writeFileSync(rawFile, JSON.stringify(rows, null, 1));
   }
-  writeFileSync(`${RAW}/ask.json`, JSON.stringify(rows, null, 1));
-  const ans = rows.filter((r) => r.answerable);
-  const un = rows.filter((r) => !r.answerable);
+  writeFileSync(rawFile, JSON.stringify(rows, null, 1));
+  const errors = rows.filter((r) => r.error).length;
+  const ans = rows.filter((r) => r.answerable && !r.error);
+  const un = rows.filter((r) => !r.answerable && !r.error);
   save('ask', {
+    errors,
     answerable: ans.length,
     answeredWithCorrectCitation: pct(ans.filter((r) => r.found && r.citedOk).length, ans.length),
     answered: pct(ans.filter((r) => r.found).length, ans.length),
