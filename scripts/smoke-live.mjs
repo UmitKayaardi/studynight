@@ -123,7 +123,7 @@ await check('ask your notes (answer with citation, and refusal)', async () => {
   await page.getByLabel('Your question').fill('What is the capital of Peru?');
   await page.getByRole('button', { name: 'Send' }).click();
   await page
-    .getByText(/don't seem to cover|don’t seem to cover|notes don/)
+    .getByText('only answers from your own notes')
     .first()
     .waitFor({ timeout: 90_000 });
   await page.screenshot({ path: `${OUT}/ask.png` });
