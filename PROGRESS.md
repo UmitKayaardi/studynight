@@ -81,7 +81,7 @@ from the first unchecked step. Commit after every step.
 - [x] 11.1 Privacy, Terms, Licences, About pages + docs/LEGAL.md + THIRD_PARTY_NOTICES.md
 - [x] 11.2 PWA (manifest, icons, offline, update toast), security headers (vercel.json)
 - [x] 11.3 Error states audit + accessibility audit
-- [ ] 11.4 Sample decks written, generated, reviewed, shipped
+- [x] 11.4 Sample decks written, generated, reviewed, shipped
 
 ## Phase 12 — Benchmark
 - [x] 12.1 Dataset (notes + qa.json)
@@ -98,7 +98,7 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: (1) BLOCKED locally: api.groq.com answers 403 "Access denied. Please check your network settings." to this machine (the live Vercel deployment still reaches Groq). Re-test with: node -e fetch to /openai/v1/models. When reachable again: build sample decks machine-learning, personal-finance, ciclo-del-agua (node scripts/run-ts.mjs scripts/build-samples.ts <ids>) → hand review in samples/review.json → node scripts/apply-sample-review.mjs; (2) benchmark stages: npm run benchmark -- generate figure judge ask latency (ask is resumable), then manual review of benchmarks/results/raw/generated.json → benchmarks/results/manual-review.json, npm run benchmark -- summary, write docs/BENCHMARK.md, replace the README BENCHMARK_TABLE marker; (3) node scripts/translate-store.mjs; (4) redeploy + node scripts/smoke-live.mjs; (5) 13.6 full re-run; (6) FINAL_REPORT.md.
+Next: (1) benchmark stages: npm run benchmark -- generate figure judge ask latency (ask is resumable), then manual review of benchmarks/results/raw/generated.json → benchmarks/results/manual-review.json, npm run benchmark -- summary, write docs/BENCHMARK.md, replace the README BENCHMARK_TABLE marker; (2) node scripts/translate-store.mjs; (3) redeploy + node scripts/smoke-live.mjs; (4) 13.6 full re-run; (5) FINAL_REPORT.md.
 
 Known issues:
 - Groq blocks this machine (403, network-level) since 2026-11-10 ~02:30 UTC; live site unaffected. Free daily token caps also limit build jobs.
