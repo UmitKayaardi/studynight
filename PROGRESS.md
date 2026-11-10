@@ -93,12 +93,12 @@ from the first unchecked step. Commit after every step.
 - [x] 13.3 Screenshots
 - [x] 13.4 Docs (README, ARCHITECTURE, PLAY_STORE, CHANGELOG …)
 - [x] 13.5 Deploy to Vercel + smoke test + store assets
-- [ ] 13.6 Final full re-run
+- [x] 13.6 Final full re-run
 
 ## Phase 14 — Final report
-- [ ] 14.1 FINAL_REPORT.md
+- [x] 14.1 FINAL_REPORT.md
 
-Next: (1) 13.6 full re-run: npm run check, npm run build, npm run check:bundle, all E2E (npx playwright test), then confirm CI green on main; (2) FINAL_REPORT.md (git-ignored, simple English).
+Next: Nothing left in the plan. Owner actions are listed in FINAL_REPORT.md (local only): test on a phone, enable Groq Zero Data Retention, record docs/demo.gif, check git ls-files, make the repo public, optional Play Store and legal review.
 
 Known issues:
 - The earlier Groq 403 was caused by a VPN on this machine; resolved on 2026-11-10 (VPN off). Free daily token caps still limit build jobs; jobs wait out long retry-after periods.
