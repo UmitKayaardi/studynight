@@ -89,16 +89,16 @@ from the first unchecked step. Commit after every step.
 
 ## Phase 13 — E2E, performance, docs, deploy
 - [x] 13.1 Playwright E2E suite
-- [ ] 13.2 Performance budget
-- [ ] 13.3 Screenshots
-- [ ] 13.4 Docs (README, ARCHITECTURE, PLAY_STORE, CHANGELOG …)
-- [ ] 13.5 Deploy to Vercel + smoke test + store assets
+- [x] 13.2 Performance budget
+- [x] 13.3 Screenshots
+- [x] 13.4 Docs (README, ARCHITECTURE, PLAY_STORE, CHANGELOG …)
+- [x] 13.5 Deploy to Vercel + smoke test + store assets
 - [ ] 13.6 Final full re-run
 
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: (1) node scripts/translate-store.mjs (20 store description translations); (2) 13.2–13.5 checks: perf budget (npm run check:bundle), screenshots and docs are in place — confirm and tick; redeploy (vercel deploy --prod --yes) + node scripts/smoke-live.mjs; (3) 13.6 full re-run (npm run check, build, check:bundle, all E2E) + CI green; (4) FINAL_REPORT.md.
+Next: (1) 13.6 full re-run: npm run check, npm run build, npm run check:bundle, all E2E (npx playwright test), then confirm CI green on main; (2) FINAL_REPORT.md (git-ignored, simple English).
 
 Known issues:
 - The earlier Groq 403 was caused by a VPN on this machine; resolved on 2026-11-10 (VPN off). Free daily token caps still limit build jobs; jobs wait out long retry-after periods.
