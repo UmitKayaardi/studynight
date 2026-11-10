@@ -85,7 +85,7 @@ from the first unchecked step. Commit after every step.
 
 ## Phase 12 — Benchmark
 - [x] 12.1 Dataset (notes + qa.json)
-- [ ] 12.2 Runner + runs + docs/BENCHMARK.md
+- [x] 12.2 Runner + runs + docs/BENCHMARK.md
 
 ## Phase 13 — E2E, performance, docs, deploy
 - [x] 13.1 Playwright E2E suite
@@ -98,7 +98,7 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: (1) benchmark stages: npm run benchmark -- generate figure judge ask latency (ask is resumable), then manual review of benchmarks/results/raw/generated.json → benchmarks/results/manual-review.json, npm run benchmark -- summary, write docs/BENCHMARK.md, replace the README BENCHMARK_TABLE marker; (2) node scripts/translate-store.mjs; (3) redeploy + node scripts/smoke-live.mjs; (4) 13.6 full re-run; (5) FINAL_REPORT.md.
+Next: (1) node scripts/translate-store.mjs (20 store description translations); (2) 13.2–13.5 checks: perf budget (npm run check:bundle), screenshots and docs are in place — confirm and tick; redeploy (vercel deploy --prod --yes) + node scripts/smoke-live.mjs; (3) 13.6 full re-run (npm run check, build, check:bundle, all E2E) + CI green; (4) FINAL_REPORT.md.
 
 Known issues:
 - The earlier Groq 403 was caused by a VPN on this machine; resolved on 2026-11-10 (VPN off). Free daily token caps still limit build jobs; jobs wait out long retry-after periods.
