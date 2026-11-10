@@ -2,7 +2,7 @@
 import { expect, test, type Page } from '@playwright/test';
 import { answer, currentQuestion, mockApi, next, openSample } from '../e2e/helpers';
 
-const OUT = 'docs/screenshots';
+const OUT = process.env.SCREENSHOT_DIR ?? 'docs/screenshots';
 const DAY = 86_400_000;
 
 /** Seeds a lived-in profile: streak, badges, 12 weeks of activity and a well-practised first topic. */
