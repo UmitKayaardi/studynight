@@ -11,8 +11,9 @@ import type {
 } from '../shared/api.js';
 import { getConfig } from './env.js';
 import { ApiError } from './errors.js';
-import { chatJson, transcribe as groqTranscribe } from './groq.js';
+import { chatJson, repairLatex, transcribe as groqTranscribe } from './groq.js';
 import { askSystem, askUser, gradeSystem, gradeUser, READ_IMAGE_SYSTEM } from './prompts.js';
+import { normaliseMaths } from './verify.js';
 
 /** The grader only reports which key points are covered; the app computes the score. */
 export async function grade(req: GradeRequest): Promise<GradeResponse> {
@@ -54,7 +55,8 @@ export async function ask(req: AskRequest): Promise<AskResponse> {
     reasoningEffort: 'low',
   })) as { found?: unknown; answer?: unknown; citations?: unknown };
   const valid = new Set(req.passages.map((p) => p.n));
-  const answer = typeof out.answer === 'string' ? out.answer.trim().slice(0, 2500) : '';
+  const answer =
+    typeof out.answer === 'string' ? repairLatex(normaliseMaths(out.answer.trim().slice(0, 2500))) : '';
   let citations = (Array.isArray(out.citations) ? out.citations : []).map(Number).filter((n) => valid.has(n));
   if (!citations.length)
     citations = [...answer.matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1])).filter((n) => valid.has(n));

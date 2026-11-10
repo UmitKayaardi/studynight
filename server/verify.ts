@@ -57,6 +57,18 @@ export function wrapLatex(s: unknown): unknown {
   return `$${s.trim()}$`;
 }
 
+/**
+ * Puts the maths in free text (an Ask answer) between $…$, the only delimiters the app renders: converts \(…\) and
+ * \[…\], and, when the text has no $ at all, wraps a bracketed formula that contains a LaTeX command.
+ */
+export function normaliseMaths(s: string): string {
+  const out = s
+    .replace(/\\\[([\s\S]+?)\\\]/g, (_, m: string) => `$$${m.trim()}$$`)
+    .replace(/\\\(([\s\S]+?)\\\)/g, (_, m: string) => `$${m.trim()}$`);
+  if (out.includes('$')) return out;
+  return out.replace(/\(([^()$\n]*\\[a-zA-Z]+[^()$\n]*)\)/g, (_, m: string) => `$${m.trim()}$`);
+}
+
 /** Normalises a raw model draft before schema validation (common harmless deviations). */
 export function normaliseDraft(raw: unknown, topicId: string): unknown {
   if (!raw || typeof raw !== 'object') return raw;

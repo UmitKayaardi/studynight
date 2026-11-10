@@ -518,4 +518,15 @@ describe('draft repairs', () => {
     );
     expect(isDuplicate('Stomata open in daylight', ['Stoma Small pores'], 'Stomata open')).toBe(false);
   });
+
+  it('puts maths in Ask answers between $…$', async () => {
+    const { normaliseMaths } = await import('./verify');
+    // Seen in the benchmark: a formula in plain brackets with no delimiters.
+    expect(normaliseMaths('The vertex lies on the line (x = -\\frac{b}{2a}), the axis.')).toBe(
+      'The vertex lies on the line $x = -\\frac{b}{2a}$, the axis.',
+    );
+    expect(normaliseMaths('So \\(x^2\\) and \\[a+b\\] [1]')).toBe('So $x^2$ and $$a+b$$ [1]');
+    expect(normaliseMaths('Already $b^2 - 4ac$ (see \\alpha)')).toBe('Already $b^2 - 4ac$ (see \\alpha)');
+    expect(normaliseMaths('Plain (no maths) text [2]')).toBe('Plain (no maths) text [2]');
+  });
 });

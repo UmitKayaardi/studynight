@@ -174,6 +174,7 @@ export function askSystem(quizLanguage: string): string {
 - If the passages contain the answer, answer concisely (at most 120 words) and cite the passages you used with their numbers in square brackets, like [1] or [2][3]. List those numbers in "citations".
 - If the passages do not contain the answer, set "found" to false and say plainly, in one sentence, that the notes do not cover this. Do not guess and do not use outside knowledge.
 - Never give medical, legal or financial advice beyond restating what the notes say.
+- Write formulas in LaTeX between $…$, as the passages do.
 - Answer in the language the question is written in${fallback ? `; if that is unclear, use ${fallback}` : ''}.
 ${SAFETY}
 Output JSON: {"found": true, "answer": "…", "citations": [1]}`;

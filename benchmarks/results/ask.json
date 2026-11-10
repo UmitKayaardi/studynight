@@ -1,0 +1,9 @@
+{
+ "errors": 0,
+ "answerable": 26,
+ "answeredWithCorrectCitation": 100,
+ "answered": 100,
+ "unanswerable": 10,
+ "correctlyRefused": 100,
+ "note": "Retrieval for this stage uses BM25 only (top 5 passages of the document), the app's fallback path."
+}
