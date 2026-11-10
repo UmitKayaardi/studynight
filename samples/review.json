@@ -74,5 +74,194 @@
         ]
       }
     }
+  ],
+  "machine-learning": [
+    {
+      "prompt": "The loss function used in regression is called ____.",
+      "set": {
+        "prompt": "A common loss function for regression is the ____ (MSE).",
+        "explanation": "The notes give the mean squared error (MSE) as a common choice of loss for regression."
+      }
+    },
+    {
+      "prompt": "Explain why a machine learning program is said to \"learn\" when its performance on a task improves with experience.",
+      "set": {
+        "keyPoints": [
+          "A program learns when its performance at a task improves with experience",
+          "The model's parameters are adjusted using examples",
+          "It can then make predictions for new inputs"
+        ]
+      }
+    },
+    {
+      "prompt": "Explain why squaring the errors in the MSE loss penalizes large errors more than small errors.",
+      "set": {
+        "prompt": "Explain why squaring the errors in the MSE loss penalises large errors more than small errors.",
+        "keyPoints": [
+          "The error term is squared in the MSE formula",
+          "The square function grows faster than linearly",
+          "Large errors thus increase the loss more than small errors"
+        ]
+      }
+    },
+    {
+      "prompt": "Explain why a large gap between training performance and validation performance typically indicates overfitting.",
+      "set": {
+        "keyPoints": [
+          "Training performance is high while validation performance is low.",
+          "The model has memorised training noise instead of learning general patterns.",
+          "This is a typical sign of overfitting.",
+          "Remedies include regularisation, simpler models, or more data."
+        ]
+      }
+    },
+    {
+      "prompt": "Backpropagation computes gradients by only performing a forward pass through the network.",
+      "remove": true
+    },
+    {
+      "prompt": "What is the purpose of a test set in supervised learning?",
+      "remove": true
+    },
+    {
+      "prompt": "Put the following steps in the correct order for training a neural network",
+      "remove": true
+    },
+    {
+      "prompt": "Explain what overfitting is and why it is problematic.",
+      "set": {
+        "modelAnswer": "Overfitting happens when a model memorises the training examples, including their noise, instead of learning the general pattern. It then does very well on the training data but badly on new data, which is what matters in practice. A large gap between training and validation performance is a sign of it. It can be reduced with more training data, a simpler model, early stopping or regularisation.",
+        "keyPoints": [
+          "The model memorises training examples, including noise",
+          "It does very well on training data but badly on new data",
+          "A large gap between training and validation performance is a sign",
+          "Remedies: more data, a simpler model, early stopping, regularisation"
+        ]
+      }
+    },
+    {
+      "prompt": "Explain the difference between regression and classification tasks in supervised learning.",
+      "set": {
+        "modelAnswer": "Both are supervised learning tasks that learn from labelled examples. Regression predicts a number, such as a price, while classification predicts a category, such as whether an email is spam.",
+        "keyPoints": [
+          "Regression predicts a number",
+          "Classification predicts a category",
+          "Both are supervised learning with labelled examples"
+        ]
+      }
+    }
+  ],
+  "personal-finance": [
+    {
+      "prompt": "If your costs are higher than your income, the difference must be covered by ____.",
+      "set": {
+        "options": [
+          "Savings or borrowing",
+          "Fixed costs",
+          "Inflation",
+          "Gross income"
+        ],
+        "answerIndex": 0
+      }
+    },
+    {
+      "prompt": "Put the steps of creating a budget in the correct order",
+      "remove": true
+    },
+    {
+      "prompt": "Explain why it is important to have a budget when your costs exceed your income.",
+      "set": {
+        "prompt": "Explain what happens when your costs are higher than your income, and why a budget helps.",
+        "explanation": "The notes say the difference must be covered by savings or borrowing, which is not sustainable for long; a budget compares income with planned spending.",
+        "modelAnswer": "If costs are higher than income, the difference has to be covered by savings or by borrowing, and that cannot go on for long. A budget lists your net income and your expected costs, so it shows the gap in advance and lets you plan for it.",
+        "keyPoints": [
+          "The difference must be covered by savings or borrowing",
+          "This is not sustainable for long",
+          "A budget compares income with planned spending, so it shows the gap"
+        ]
+      }
+    },
+    {
+      "prompt": "What are the percentages used in the 50/30/20 rule?",
+      "remove": true
+    },
+    {
+      "prompt": "The formula for the future value of savings with annual compounding is $A = ____$.",
+      "set": {
+        "prompt": "In the formula $A = P(1 + r)^t$, the letter $t$ stands for the number of ____.",
+        "explanation": "In the formula, $P$ is the principal, $r$ the annual rate as a decimal, $t$ the number of years and $A$ the final amount.",
+        "hint": "Interest is added once a year.",
+        "evidenceQuote": "Here $P$ is the principal, $r$ is the annual interest rate written as a decimal, $t$ is the number of years, and $A$ is the final amount.",
+        "answer": "years",
+        "acceptedAnswers": [
+          "year"
+        ]
+      }
+    },
+    {
+      "prompt": "Which statement best describes the \"paying yourself first\" habit?",
+      "set": {
+        "options": [
+          "Saving whatever is left after all monthly expenses are paid.",
+          "Investing in high-risk shares before paying bills.",
+          "Moving a fixed amount into savings as soon as income arrives.",
+          "Borrowing money to cover unexpected costs."
+        ]
+      }
+    },
+    {
+      "prompt": "Match each term to its correct definition.",
+      "set": {
+        "prompt": "Match each saving and interest term to its definition."
+      }
+    },
+    {
+      "prompt": "Put the steps for calculating the future value of a savings amount with annual compounding in the correct order.",
+      "remove": true
+    },
+    {
+      "prompt": "Explain why inflation reduces the purchasing power of money over time.",
+      "set": {
+        "keyPoints": [
+          "Inflation is a general rise in prices over time",
+          "The same amount of money buys fewer goods and services",
+          "So its purchasing power falls"
+        ]
+      }
+    },
+    {
+      "prompt": "A common target for an emergency fund is to cover three to six months of essential expenses.",
+      "remove": true
+    },
+    {
+      "prompt": "The formula for compound interest is $A = P(1 + r)^{____}$.",
+      "remove": true
+    },
+    {
+      "prompt": "Which statement best describes the relationship between potential return and risk?",
+      "remove": true
+    },
+    {
+      "prompt": "What is the main purpose of diversification in an investment portfolio?",
+      "remove": true
+    },
+    {
+      "prompt": "Explain how inflation affects real return.",
+      "remove": true
+    }
+  ],
+  "ciclo-del-agua": [
+    {
+      "prompt": "¿Cómo se llama el proceso por el cual las plantas liberan vapor de agua a través de los pequeños poros de sus hojas?",
+      "remove": true
+    },
+    {
+      "prompt": "Condensación",
+      "remove": true
+    },
+    {
+      "prompt": "¿Qué sucede cuando el calor del Sol actúa sobre el agua de los océanos, lagos y ríos?",
+      "remove": true
+    }
   ]
 }

@@ -1,0 +1,895 @@
+{
+ "id": "machine-learning",
+ "title": "Intro to Machine Learning",
+ "language": "en",
+ "description": "Types of learning, linear regression, gradient descent, overfitting and evaluation — with formulas and code.",
+ "source": "machine-learning.md",
+ "chunks": [
+  {
+   "text": "Introduction to Machine Learning\nThese lecture notes introduce the main ideas of machine learning: what it is, the main types of learning, how a model is trained and evaluated, and some common pitfalls. A small amount of maths and code is included to make the ideas concrete.\n1. What machine learning is\nIn traditional programming, a person writes explicit rules that turn inputs into outputs. In machine learning, the computer is given examples and learns the rules from the data. A program is said to learn when its performance at a task improves with experience.\nA machine learning model is a function with adjustable values, called parameters. Training a model means finding parameter values that make the model's outputs match the examples as closely as possible. Once trained, the model can make predictions for new inputs it has never seen.\nThe inputs to a model are called features. For example, to predict the price of a house, features might include its floor area, the number of bedrooms and its location. The value the model tries to predict is called the label or target.",
+   "headingPath": [
+    "Introduction to Machine Learning"
+   ],
+   "wordCount": 183
+  },
+  {
+   "text": "2. Types of learning\nSupervised learning uses examples that come with the correct answer, or label. The model learns a mapping from features to labels. There are two main kinds of supervised task:\n- Regression predicts a number, such as a temperature or a price. - Classification predicts a category, such as whether an email is spam or not spam.\nUnsupervised learning uses data without labels. The goal is to discover structure in the data. A common example is clustering, which groups similar examples together, such as grouping customers with similar buying habits. Another example is dimensionality reduction, which compresses data with many features into fewer features while keeping as much information as possible.\nReinforcement learning is different again. An agent takes actions in an environment and receives rewards or penalties. Through trial and error, it learns a strategy, called a policy, that maximises its total reward over time. Reinforcement learning is used, for example, to train programs to play games.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "2. Types of learning"
+   ],
+   "wordCount": 159
+  },
+  {
+   "text": "3. A simple model: linear regression\nLinear regression is one of the simplest supervised models. With one feature $x$, it predicts the label as a straight line:\n$$\\hat{y} = w x + b$$\nHere $w$ is the weight, which controls the slope of the line, and $b$ is the bias, which shifts the line up or down. The hat on $\\hat{y}$ shows that it is a prediction rather than the true value.\nTo measure how wrong the model is, we use a loss function. A common choice for regression is the mean squared error (MSE), the average of the squared differences between predictions and true values:\n$$\\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (\\hat{y}_i - y_i)^2$$\nSquaring makes all errors positive and penalises large errors more than small ones. Training aims to find the values of $w$ and $b$ that make the loss as small as possible.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "3. A simple model: linear regression"
+   ],
+   "wordCount": 152
+  },
+  {
+   "text": "4. Gradient descent\nGradient descent is the standard method for minimising a loss function. The gradient tells us in which direction the loss increases fastest. By repeatedly taking small steps in the opposite direction, the parameters move towards values with lower loss.\nThe size of each step is controlled by the learning rate. If the learning rate is too small, training is very slow. If it is too large, the steps overshoot the minimum and the loss may never settle down.\nThe following Python code shows one step of gradient descent for linear regression with a single feature:\n```python def step(w, b, xs, ys, lr): n = len(xs) dw = sum(2 * (w * x + b - y) * x for x, y in zip(xs, ys)) / n db = sum(2 * (w * x + b - y) for x, y in zip(xs, ys)) / n return w - lr * dw, b - lr * db ```\nOne complete pass through the whole training set is called an epoch. Training usually runs for many epochs.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "4. Gradient descent"
+   ],
+   "wordCount": 165
+  },
+  {
+   "text": "5. Classification and logistic regression\nFor classification, a model often outputs a probability. Logistic regression passes a linear combination of the features through the sigmoid function, which squeezes any number into the range 0 to 1:\n$$\\sigma(z) = \\frac{1}{1 + e^{-z}}$$\nIf the predicted probability is above a chosen threshold, often 0.5, the example is assigned to the positive class.\n6. Splitting the data\nTo know whether a model will work on new data, we must test it on examples it did not see during training. Data is therefore usually split into three parts:\n- The training set is used to fit the model's parameters. - The validation set is used to compare models and to choose settings such as the learning rate. These settings, which are chosen rather than learned, are called hyperparameters. - The test set is used only once, at the end, to estimate how well the final model performs on unseen data.\nWhen data is scarce, cross-validation can be used: the data is split into several parts, and the model is trained and validated several times, each time holding out a different part.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "5. Classification and logistic regression"
+   ],
+   "wordCount": 187
+  },
+  {
+   "text": "7. Overfitting and underfitting\nA model that is too simple cannot capture the pattern in the data. It performs poorly on both the training data and new data. This is called underfitting.\nA model that is too complex can memorise the training examples, including their random noise, instead of learning the general pattern. It performs very well on the training data but badly on new data. This is called overfitting. A large gap between training performance and validation performance is a typical sign of overfitting.\nWays to reduce overfitting include collecting more training data, using a simpler model, stopping training early when validation performance stops improving, and regularisation, which adds a penalty to the loss for very large parameter values.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "7. Overfitting and underfitting"
+   ],
+   "wordCount": 120
+  },
+  {
+   "text": "8. Evaluating a classifier\nAccuracy is the share of predictions that are correct. However, accuracy can be misleading when the classes are unbalanced. If only 1 in 100 emails is spam, a model that always predicts \"not spam\" is 99 per cent accurate but useless.\nTwo more informative measures are:\n- Precision: of all the examples the model predicted as positive, the share that really were positive. - Recall: of all the truly positive examples, the share that the model found.\nThere is often a trade-off: raising the decision threshold usually increases precision but lowers recall. The F1 score combines the two into a single number.\n9. Neural networks in brief\nA neural network is made of layers of simple units called neurons. Each neuron computes a weighted sum of its inputs, adds a bias and applies a non-linear activation function. Stacking many layers allows the network to learn complex patterns. Networks with many layers are the basis of deep learning. The weights of a neural network are trained with gradient descent, using an algorithm called backpropagation to compute the gradients efficiently.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "8. Evaluating a classifier"
+   ],
+   "wordCount": 180
+  },
+  {
+   "text": "10. Key points to remember\n- Supervised learning uses labelled examples; unsupervised learning finds structure without labels; reinforcement learning learns from rewards. - Regression predicts numbers; classification predicts categories. - Gradient descent reduces the loss by stepping against the gradient; the learning rate sets the step size. - The test set must only be used at the end, to estimate performance on unseen data. - Overfitting means doing well on training data but badly on new data.",
+   "headingPath": [
+    "Introduction to Machine Learning",
+    "10. Key points to remember"
+   ],
+   "wordCount": 72
+  }
+ ],
+ "topics": [
+  {
+   "key": "t1",
+   "title": "Intro and Learning Types",
+   "summary": "Defines machine learning and explains supervised learning with labeled examples.",
+   "chunks": [
+    0,
+    1
+   ]
+  },
+  {
+   "key": "t2",
+   "title": "Linear Regression & Gradient Descent",
+   "summary": "Presents linear regression as a simple model and gradient descent for loss minimization.",
+   "chunks": [
+    2,
+    3
+   ]
+  },
+  {
+   "key": "t3",
+   "title": "Classification and Overfitting",
+   "summary": "Covers logistic regression for classification and the risks of underfitting and overfitting.",
+   "chunks": [
+    4,
+    5
+   ]
+  },
+  {
+   "key": "t4",
+   "title": "Evaluation and Key Takeaways",
+   "summary": "Discusses accuracy pitfalls, classifier evaluation, and summarizes core ML concepts.",
+   "chunks": [
+    6,
+    7
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which of the following best describes supervised learning?",
+    "explanation": "Supervised learning is defined as using labeled examples to learn the mapping from features to labels.",
+    "hint": "Think about whether the data includes the correct answers.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Supervised learning uses examples that come with the correct answer, or label. The model learns a mapping from features to labels.",
+    "type": "mcq",
+    "options": [
+     "Uses examples with correct labels to learn a mapping from features to labels.",
+     "Groups similar data points without using labels.",
+     "Learns a policy through trial and error to maximize reward.",
+     "Writes explicit rules to transform inputs into outputs."
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "In supervised learning, which task predicts a numeric value?",
+    "explanation": "Regression tasks predict numbers such as temperature or price, unlike classification which predicts categories.",
+    "hint": "Numeric predictions, not categories.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "- Regression predicts a number, such as a temperature or a price.",
+    "type": "mcq",
+    "options": [
+     "Classification",
+     "Regression",
+     "Clustering",
+     "Policy learning"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "A machine learning model's parameters are fixed before training.",
+    "explanation": "Parameters are described as adjustable values that are tuned during training.",
+    "hint": "Think about what training does to the model.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "A machine learning model is a function with adjustable values, called parameters.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Parameters are adjustable values that are learned during training."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "A common unsupervised learning technique that groups similar customers together is called ____.",
+    "explanation": "Clustering is the unsupervised method that groups similar examples, such as customers with similar buying habits.",
+    "hint": "Think of grouping similar items.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "A common example is clustering, which groups similar examples together, such as grouping customers with similar buying habits.",
+    "type": "fill",
+    "answer": "clustering",
+    "acceptedAnswers": []
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What does reinforcement learning aim to maximize?",
+    "explanation": "Reinforcement learning seeks a policy that maximises total reward through trial and error.",
+    "hint": "Consider what the agent receives for its actions.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Through trial and error, it learns a strategy, called a policy, that maximises its total reward over time.",
+    "type": "flashcard",
+    "back": "Total reward over time (by learning a policy)"
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which statement best captures the difference between traditional programming and machine learning?",
+    "explanation": "Traditional programming relies on explicit hand‑written rules, while machine learning derives rules from example data.",
+    "hint": "Think about who writes the rules in each approach.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "In traditional programming, a person writes explicit rules that turn inputs into outputs. In machine learning, the computer is given examples and learns the rules from the data.",
+    "type": "mcq",
+    "options": [
+     "Traditional programming uses data to adjust parameters, while machine learning uses fixed rules.",
+     "Traditional programming writes explicit rules mapping inputs to outputs, whereas machine learning learns rules from examples.",
+     "Traditional programming requires labeled data, machine learning does not.",
+     "Traditional programming predicts labels, machine learning predicts features."
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "In a supervised learning problem, what are the \"features\"?",
+    "explanation": "Features are the input variables fed to the model; the label is what the model predicts.",
+    "hint": "Features are what you give the model, not what it outputs.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "The inputs to a model are called features. For example, to predict the price of a house, features might include its floor area, the number of bedrooms and its location.",
+    "type": "mcq",
+    "options": [
+     "The values the model tries to predict.",
+     "Adjustable parameters of the model.",
+     "The inputs supplied to the model, such as floor area or number of bedrooms.",
+     "The performance metric used to evaluate the model."
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Explain why a machine learning program is said to \"learn\" when its performance on a task improves with experience.",
+    "explanation": "The notes define learning exactly as performance improvement with experience.",
+    "hint": "Recall the formal definition given for learning.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "A program is said to learn when its performance at a task improves with experience.",
+    "type": "explain",
+    "modelAnswer": "A program is considered to learn when, after being exposed to examples, it adjusts its parameters so that its predictions become more accurate. The improvement in performance shows that the model has extracted useful patterns from the data, which is the essence of learning.",
+    "keyPoints": [
+     "Learning is defined as performance improvement with experience",
+     "Exposure to examples allows parameter adjustment",
+     "Improved predictions indicate successful pattern extraction"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "In linear regression with one feature, what does the parameter $w$ control?",
+    "explanation": "$w$ is the weight that controls the slope of the line.",
+    "hint": "Consider what changes when you multiply the feature by $w$.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Here $w$ is the weight, which controls the slope of the line, and $b$ is the bias, which shifts the line up or down.",
+    "type": "mcq",
+    "options": [
+     "the slope of the line",
+     "the y‑intercept",
+     "the variance of the predictions",
+     "the learning rate"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Gradient descent moves the parameters in the direction of the gradient.",
+    "explanation": "Because the gradient points in the direction of greatest increase, so we step opposite to reduce loss.",
+    "hint": "Think about how to reduce the loss.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Gradient descent is the standard method for minimising a loss function. The gradient tells us in which direction the loss increases fastest.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Gradient descent moves the parameters in the opposite direction of the gradient."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Using a very large learning rate always speeds up convergence in gradient descent.",
+    "explanation": "If the learning rate is too large, the steps overshoot the minimum.",
+    "hint": "What happens if the steps are too big?",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "If the learning rate is too small, training is very slow. If it is too large, the steps overshoot the minimum and the loss may never settle down.",
+    "type": "tf",
+    "answer": false,
+    "correction": "A large learning rate can cause the steps to overshoot the minimum and prevent convergence."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "The loss function used in regression is called ____.",
+    "explanation": "The notes define the loss as the mean squared error.",
+    "hint": "It involves squaring the errors.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "The mean squared error (MSE), the average of the squared differences between predictions and true values: $$\\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (\\hat{y}_i - y_i)^2$$",
+    "type": "fill",
+    "answer": "mean squared error",
+    "acceptedAnswers": [
+     "MSE"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "What is the role of the bias term $b$ in linear regression?",
+    "explanation": "The bias term moves the line vertically.",
+    "hint": "Think of the intercept of a line.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Here $w$ is the weight, which controls the slope of the line, and $b$ is the bias, which shifts the line up or down.",
+    "type": "flashcard",
+    "back": "It shifts the line up or down, acting as the intercept."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "What does the mean squared error (MSE) compute in linear regression?",
+    "explanation": "MSE is defined as the average of the squared differences between predicted and actual values.",
+    "hint": "Look at the formula given for MSE.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "$$\\text{MSE} = \\frac{1}{n} \\sum_{i=1}^{n} (\\hat{y}_i - y_i)^2$$",
+    "type": "mcq",
+    "options": [
+     "The average of the squared differences between predictions and true values",
+     "The sum of absolute differences between predictions and true values",
+     "The average of absolute differences between predictions and true values",
+     "The maximum squared error among all samples"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Match each symbol to its meaning in the linear regression context.",
+    "explanation": "The notes define each symbol: $\\hat{y}$ is the prediction, $y$ the true label, $x$ the feature, $w$ the weight, $b$ the bias.",
+    "hint": "Refer to the model equation.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "With one feature $x$, it predicts the label as a straight line: $$\\hat{y} = w x + b$$",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "$\\hat{y}$",
+      "definition": "Predicted output"
+     },
+     {
+      "term": "$y$",
+      "definition": "True target value"
+     },
+     {
+      "term": "$x$",
+      "definition": "Input feature"
+     },
+     {
+      "term": "$w$",
+      "definition": "Weight (slope)"
+     },
+     {
+      "term": "$b$",
+      "definition": "Bias (intercept)"
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Put the steps of one gradient descent update for linear regression in the correct order.",
+    "explanation": "The code first computes predictions, then the two gradient sums (dw, db), and finally updates w and b using the learning rate.",
+    "hint": "Look at the Python function `step`.",
+    "difficulty": 3,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "dw = sum(2 * (w * x + b - y) * x for x, y in zip(xs, ys)) / n db = sum(2 * (w * x + b - y) for x, y in zip(xs, ys)) / n return w - lr * dw, b - lr * db",
+    "type": "order",
+    "steps": [
+     "Calculate predictions $\\hat{y}_i = w x_i + b$ for each training example",
+     "Compute the gradient for the weight: $dw = \\frac{2}{n}\\sum (w x_i + b - y_i) x_i$",
+     "Compute the gradient for the bias: $db = \\frac{2}{n}\\sum (w x_i + b - y_i)$",
+     "Update the parameters: $w \\leftarrow w - \\eta\\,dw$, $b \\leftarrow b - \\eta\\,db$"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Explain why squaring the errors in the MSE loss penalizes large errors more than small errors.",
+    "explanation": "The notes state that squaring makes all errors positive and penalises large errors more than small ones.",
+    "hint": "Consider the effect of the square operation on numbers of different sizes.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Squaring makes all errors positive and penalises large errors more than small ones.",
+    "type": "explain",
+    "modelAnswer": "Squaring amplifies larger differences because the square of a larger number grows faster than that of a smaller number (e.g., $3^2=9$ vs $1^2=1$). Therefore, errors with higher magnitude contribute disproportionately to the total loss, making the model prioritize reducing them.",
+    "keyPoints": [
+     "The error term is squared in the MSE formula",
+     "The square function grows faster than linearly",
+     "Large errors thus increase the loss more than small errors",
+     "This encourages the model to focus on reducing large errors"
+    ]
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Which function is used in logistic regression to map a linear combination of features to a probability between 0 and 1?",
+    "explanation": "Logistic regression applies the sigmoid function to the linear combination of features to produce a probability in the range 0 to 1.",
+    "hint": "It squeezes any real number into a bounded interval.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "passes a linear combination of the features through the sigmoid function, which squeezes any number into the range 0 to 1:",
+    "type": "mcq",
+    "options": [
+     "Sigmoid function",
+     "Tanh function",
+     "ReLU function",
+     "Softmax function"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "In a typical machine learning workflow, which dataset is used exclusively to estimate the final model's performance on unseen data?",
+    "explanation": "The test set is only used once at the end to evaluate how well the final model generalizes.",
+    "hint": "It is never used during model training or hyperparameter tuning.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "The test set is used only once, at the end, to estimate how well the final model performs on unseen data.",
+    "type": "mcq",
+    "options": [
+     "Training set",
+     "Validation set",
+     "Test set",
+     "Cross-validation folds"
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "A model that is too simple will perform well on both training and new data.",
+    "explanation": "Underfitting occurs when the model cannot capture the underlying pattern, leading to poor performance on all data.",
+    "hint": "It fails on the data it was trained on.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A model that is too simple cannot capture the pattern in the data. It performs poorly on both the training data and new data.",
+    "type": "tf",
+    "answer": false,
+    "correction": "A model that is too simple will perform poorly on both training and new data."
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Overfitting occurs when a model memorizes training examples, including random noise, leading to poor performance on new data.",
+    "explanation": "Overfitting is characterized by excellent training performance but poor generalization to unseen data.",
+    "hint": "It remembers noise rather than the true pattern.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A model that is too complex can memorise the training examples, including their random noise, instead of learning the general pattern. It performs very well on the training data but badly on new data.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "The threshold often used to decide the positive class in logistic regression is ____.",
+    "explanation": "A probability above 0.5 is typically classified as positive.",
+    "hint": "It is the midpoint of the probability interval.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "If the predicted probability is above a chosen threshold, often 0.5, the example is assigned to the positive class.",
+    "type": "fill",
+    "answer": "0.5",
+    "acceptedAnswers": [
+     "0.50"
+    ]
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "cross-validation",
+    "explanation": "Cross-validation estimates model performance by cycling through different train/validation splits.",
+    "hint": "It involves multiple rounds of training and validation.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4",
+     "c5"
+    ],
+    "evidenceQuote": "When data is scarce, cross-validation can be used: the data is split into several parts, and the model is trained and validated several times, each time holding out a different part.",
+    "type": "flashcard",
+    "back": "A technique that repeatedly splits data into training and validation sets, training and validating multiple times, each time holding out a different part, useful when data is scarce."
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "In the standard data split for machine learning, what is the primary role of the validation set?",
+    "explanation": "The validation set is used to compare models and to choose settings such as the learning rate, i.e., hyperparameters.",
+    "hint": "Think about where hyperparameters are selected.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "The validation set is used to compare models and to choose settings such as the learning rate.",
+    "type": "mcq",
+    "options": [
+     "Fit the model's parameters",
+     "Compare models and choose hyperparameters",
+     "Estimate final performance on unseen data",
+     "Store data for future predictions"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Which of the following strategies is least effective for reducing overfitting?",
+    "explanation": "Increasing model parameters makes the model more complex, which can lead to overfitting rather than reducing it.",
+    "hint": "Look for the option that makes the model more complex.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A model that is too complex can memorise the training examples, including their random noise, instead of learning the general pattern.",
+    "type": "mcq",
+    "options": [
+     "Collecting more training data",
+     "Using a simpler model",
+     "Adding regularisation",
+     "Increasing the number of model parameters"
+    ],
+    "answerIndex": 3
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Match each term with its correct definition.",
+    "explanation": "The notes define underfitting, overfitting, the validation set, and regularisation exactly as listed.",
+    "hint": "Recall the specific descriptions given for each concept.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A model that is too simple cannot capture the pattern in the data. It performs poorly on both the training data and new data. This is called underfitting.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Underfitting",
+      "definition": "Model too simple, performs poorly on both training and new data."
+     },
+     {
+      "term": "Overfitting",
+      "definition": "Model too complex, performs well on training but poorly on new data; large gap between training and validation performance."
+     },
+     {
+      "term": "Validation set",
+      "definition": "Subset of data used to compare models and select hyperparameters."
+     },
+     {
+      "term": "Regularisation",
+      "definition": "Adds a penalty to the loss for very large parameter values."
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Explain why a large gap between training performance and validation performance typically indicates overfitting.",
+    "explanation": "The notes state that a large gap between training and validation performance is a typical sign of overfitting.",
+    "hint": "Look for the phrase linking the performance gap to overfitting.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "A large gap between training performance and validation performance is a typical sign of overfitting.",
+    "type": "explain",
+    "modelAnswer": "A large gap shows that the model fits the training data very well but fails to generalize to unseen data, meaning it has memorised noise rather than learned the underlying pattern. This discrepancy is a hallmark of overfitting and suggests the need for regularisation, a simpler model, or more training data.",
+    "keyPoints": [
+     "Training performance is high while validation performance is low.",
+     "The model has memorised training noise instead of learning general patterns.",
+     "Such a discrepancy is identified as overfitting in the notes.",
+     "Remedies include regularisation, simpler models, or more data."
+    ]
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Why can accuracy be a misleading metric for a spam detection model when spam is rare?",
+    "explanation": "The example shows a model that always predicts 'not spam' gets 99% accuracy even though it never detects spam, illustrating the pitfall.",
+    "hint": "Consider what happens when the model never predicts the minority class.",
+    "difficulty": 1,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "If only 1 in 100 emails is spam, a model that always predicts \"not spam\" is 99 per cent accurate but useless.",
+    "type": "mcq",
+    "options": [
+     "Because a model that always predicts 'spam' would have high accuracy.",
+     "Because a model that always predicts 'not spam' can achieve high accuracy despite missing all spam.",
+     "Because accuracy automatically adjusts for class imbalance.",
+     "Because accuracy penalizes false positives more than false negatives."
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "What typically happens to precision and recall when the decision threshold of a classifier is increased?",
+    "explanation": "Increasing the threshold makes the classifier stricter, raising precision but lowering recall.",
+    "hint": "A higher threshold makes the model more selective about labeling positives.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "raising the decision threshold usually increases precision but lowers recall.",
+    "type": "mcq",
+    "options": [
+     "Both precision and recall increase.",
+     "Precision decreases while recall increases.",
+     "Precision increases while recall decreases.",
+     "Both precision and recall decrease."
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "The F1 score combines precision and recall into a single number.",
+    "explanation": "The notes state that the F1 score merges the two metrics into one value.",
+    "hint": "It is a summary metric for the two previously defined measures.",
+    "difficulty": 1,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "The F1 score combines the two into a single number.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Backpropagation computes gradients by only performing a forward pass through the network.",
+    "explanation": "Backpropagation is described as the algorithm that efficiently computes gradients, which involves a backward pass.",
+    "hint": "Think about the \"back\" in backpropagation.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "using an algorithm called backpropagation to compute the gradients efficiently.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Backpropagation computes gradients by propagating errors backward through the network after a forward pass."
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "The algorithm used to efficiently compute gradients in neural networks is ____.",
+    "explanation": "The source explicitly names backpropagation as the gradient‑computing algorithm.",
+    "hint": "It's a two‑part word ending with “propagation”.",
+    "difficulty": 1,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "using an algorithm called backpropagation to compute the gradients efficiently.",
+    "type": "fill",
+    "answer": "backpropagation",
+    "acceptedAnswers": []
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "What is the purpose of a test set in supervised learning?",
+    "explanation": "The notes state the test set must be used at the end to gauge how the model performs on data it has not seen.",
+    "hint": "It comes after training and validation.",
+    "difficulty": 1,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c7"
+    ],
+    "evidenceQuote": "The test set must only be used at the end, to estimate performance on unseen data.",
+    "type": "flashcard",
+    "back": "To estimate performance on unseen data; it should only be used after model training is complete."
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Which of the following best describes what a neuron in a neural network does during a forward pass?",
+    "explanation": "Each neuron computes a weighted sum, adds a bias, and applies a non-linear activation function.",
+    "hint": "Think of the basic neuron formula.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "Each neuron computes a weighted sum of its inputs, adds a bias and applies a non-linear activation function.",
+    "type": "mcq",
+    "options": [
+     "Computes a weighted sum of its inputs, adds a bias, and applies a non-linear activation function.",
+     "Computes a weighted sum of its inputs, adds a bias, and applies a linear activation function.",
+     "Computes a weighted sum, ignores bias, and applies a non-linear activation function.",
+     "Computes a weighted sum, applies a non-linear activation, then normalizes the output."
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "In gradient descent, what role does the learning rate play?",
+    "explanation": "The learning rate sets the step size for each gradient descent update.",
+    "hint": "It determines how far you move each time.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c7"
+    ],
+    "evidenceQuote": "The learning rate sets the step size.",
+    "type": "mcq",
+    "options": [
+     "Determines the number of iterations.",
+     "Sets the size of each step taken against the gradient.",
+     "Controls the magnitude of the initial weights.",
+     "Decides when to stop training."
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Put the following steps in the correct order for training a neural network",
+    "explanation": "Training involves a forward pass, backpropagation, weight update, and repetition.",
+    "hint": "Think of the cycle of learning.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c6"
+    ],
+    "evidenceQuote": "The weights of a neural network are trained with gradient descent, using an algorithm called backpropagation to compute the gradients efficiently.",
+    "type": "order",
+    "steps": [
+     "Compute forward pass",
+     "Compute gradients via backpropagation",
+     "Update weights with gradient descent",
+     "Repeat for many epochs"
+    ]
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Explain what overfitting is and why it is problematic.",
+    "explanation": "Overfitting is defined as doing well on training data but badly on new data.",
+    "hint": "Think of training vs test performance.",
+    "difficulty": 3,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c7"
+    ],
+    "evidenceQuote": "Overfitting means doing well on training data but badly on new data.",
+    "type": "explain",
+    "modelAnswer": "Overfitting occurs when a model captures noise in the training data, leading to excellent performance on training data but poor generalization to new data. It results in a model that is too complex relative to the amount of data, causing it to perform badly on unseen examples. This mismatch between training and test performance makes the model unreliable for real-world predictions.",
+    "keyPoints": [
+     "Model fits training data too closely",
+     "Poor generalization to unseen data",
+     "High training accuracy but low test accuracy",
+     "Often due to overly complex model or insufficient data"
+    ]
+   }
+  },
+  {
+   "topic": "t4",
+   "content": {
+    "prompt": "Explain the difference between regression and classification tasks in supervised learning.",
+    "explanation": "Regression and classification are distinguished by the type of output variable.",
+    "hint": "Think of the type of output variable.",
+    "difficulty": 2,
+    "topicId": "t4",
+    "sourceChunkIds": [
+     "c7"
+    ],
+    "evidenceQuote": "Regression predicts numbers; classification predicts categories.",
+    "type": "explain",
+    "modelAnswer": "Regression predicts continuous numeric values, whereas classification predicts discrete categories. Regression uses loss functions like mean squared error, while classification often uses cross‑entropy. Evaluation metrics differ: regression may use RMSE, while classification uses accuracy or F1 score.",
+    "keyPoints": [
+     "Regression predicts numbers",
+     "Classification predicts categories",
+     "Different loss functions",
+     "Different evaluation metrics"
+    ]
+   }
+  }
+ ]
+}

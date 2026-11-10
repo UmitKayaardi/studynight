@@ -15,11 +15,32 @@ const samples: Array<{ id: string; title: string; language: string; description:
     "questions": 20
   },
   {
+    "id": "machine-learning",
+    "title": "Intro to Machine Learning",
+    "language": "en",
+    "description": "Types of learning, linear regression, gradient descent, overfitting and evaluation — with formulas and code.",
+    "questions": 35
+  },
+  {
+    "id": "personal-finance",
+    "title": "Basics of Personal Finance",
+    "language": "en",
+    "description": "Budgeting, saving, interest, inflation, borrowing and risk. Concepts only, not financial advice.",
+    "questions": 26
+  },
+  {
     "id": "fotosentez",
     "title": "Fotosentez",
     "language": "tr",
     "description": "Bitkilerin ışık enerjisini kimyasal enerjiye nasıl dönüştürdüğü.",
     "questions": 10
+  },
+  {
+    "id": "ciclo-del-agua",
+    "title": "El ciclo del agua",
+    "language": "es",
+    "description": "Evaporación, condensación, precipitación y escorrentía.",
+    "questions": 11
   }
 ];
 export default samples;

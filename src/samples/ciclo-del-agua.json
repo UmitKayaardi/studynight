@@ -1,0 +1,270 @@
+{
+ "id": "ciclo-del-agua",
+ "title": "El ciclo del agua",
+ "language": "es",
+ "description": "Evaporación, condensación, precipitación y escorrentía.",
+ "source": "ciclo-del-agua.md",
+ "chunks": [
+  {
+   "text": "El ciclo del agua\nEstos apuntes resumen cómo se mueve el agua de forma continua entre los océanos, la atmósfera y la tierra.\nEvaporación y transpiración\nEl ciclo del agua no tiene un principio ni un final, pero se suele explicar a partir de los océanos. El calor del Sol calienta el agua de los océanos, los lagos y los ríos, y una parte se convierte en vapor de agua. Este proceso se llama evaporación. Las plantas también liberan vapor de agua a través de los pequeños poros de sus hojas; este proceso se llama transpiración.\nCondensación\nEl vapor de agua sube con el aire caliente. A medida que asciende, el aire se enfría, y el aire frío no puede contener tanto vapor. Por eso el vapor se condensa y forma gotas diminutas de agua líquida. Muchísimas de estas gotas juntas forman las nubes. La condensación también explica el rocío que aparece sobre la hierba en las mañanas frías.",
+   "headingPath": [
+    "El ciclo del agua"
+   ],
+   "wordCount": 159
+  },
+  {
+   "text": "Precipitación\nDentro de las nubes, las gotas chocan y se unen. Cuando son demasiado pesadas para mantenerse en el aire, caen al suelo en forma de precipitación. La precipitación puede ser lluvia, nieve, aguanieve o granizo, según la temperatura del aire. La nieve se forma cuando la temperatura está por debajo del punto de congelación.\nEscorrentía e infiltración\nEl agua que cae sobre la tierra puede seguir dos caminos. Una parte corre por la superficie: esto se llama escorrentía. La escorrentía llega a los arroyos y ríos, que la devuelven al mar. Otra parte se filtra en el suelo; esto se llama infiltración. El agua infiltrada forma el agua subterránea, que puede quedar almacenada en rocas llamadas acuíferos durante miles de años.",
+   "headingPath": [
+    "El ciclo del agua",
+    "Precipitación"
+   ],
+   "wordCount": 122
+  },
+  {
+   "text": "Por qué es importante\nEl ciclo del agua reparte el calor por el planeta y proporciona agua dulce para beber y para la agricultura. Algunas actividades humanas, como la deforestación, pueden cambiar la cantidad de agua que se evapora y la que se convierte en escorrentía.",
+   "headingPath": [
+    "El ciclo del agua",
+    "Por qué es importante"
+   ],
+   "wordCount": 46
+  }
+ ],
+ "topics": [
+  {
+   "key": "t1",
+   "title": "Etapas del ciclo del agua",
+   "summary": "Describe la evaporación, transpiración y precipitación que mueven el agua entre océanos, atmósfera y tierra.",
+   "chunks": [
+    0,
+    1
+   ]
+  },
+  {
+   "key": "t2",
+   "title": "Importancia del ciclo del agua",
+   "summary": "Explica cómo el ciclo distribuye calor global y provee agua dulce para consumo y agricultura.",
+   "chunks": [
+    0,
+    2
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "¿Cuál es el proceso por el cual las plantas liberan vapor de agua a la atmósfera?",
+    "explanation": "Las plantas liberan vapor a través de los poros de sus hojas y ese proceso se llama transpiración.",
+    "hint": "Mira el proceso que ocurre en los poros de las hojas.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Las plantas también liberan vapor de agua a través de los pequeños poros de sus hojas; este proceso se llama transpiración.",
+    "type": "mcq",
+    "options": [
+     "Evaporación",
+     "Transpiración",
+     "Condensación",
+     "Escorrentía"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "¿Qué tipo de precipitación se produce cuando la temperatura del aire está por debajo del punto de congelación?",
+    "explanation": "Según los apuntes, la nieve se forma cuando la temperatura está bajo el punto de congelación.",
+    "hint": "Piensa en la forma de agua sólida que cae cuando hace mucho frío.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "La nieve se forma cuando la temperatura está por debajo del punto de congelación.",
+    "type": "mcq",
+    "options": [
+     "Lluvia",
+     "Granizo",
+     "Nieve",
+     "Aguanieve"
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "El vapor de agua se condensa cuando el aire se calienta al ascender.",
+    "explanation": "Al subir, el aire se enfría y no puede retener tanto vapor, por lo que este se condensa.",
+    "hint": "Observa qué le ocurre al aire al subir.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "A medida que asciende, el aire se enfría, y el aire frío no puede contener tanto vapor. Por eso el vapor se condensa",
+    "type": "tf",
+    "answer": false,
+    "correction": "El vapor de agua se condensa cuando el aire se enfría al ascender."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "La escorrentía lleva el agua directamente al océano sin pasar por ríos.",
+    "explanation": "La escorrentía corre por la superficie hasta arroyos y ríos, que la retornan al mar.",
+    "hint": "Considera los cuerpos de agua intermedios.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "La escorrentía llega a los arroyos y ríos, que la devuelven al mar.",
+    "type": "tf",
+    "answer": false,
+    "correction": "La escorrentía llega a los arroyos y ríos, que la devuelven al mar."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "El proceso por el cual el agua que cae sobre la tierra se filtra en el suelo se llama ____.",
+    "explanation": "El texto indica que la filtración del agua en el suelo se denomina infiltración.",
+    "hint": "Empieza con 'in-'.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Otra parte se filtra en el suelo; esto se llama infiltración.",
+    "type": "fill",
+    "answer": "infiltración",
+    "acceptedAnswers": []
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "¿Cómo se llama el proceso en que el vapor de agua se transforma en gotas líquidas formando nubes?",
+    "explanation": "El vapor se condensa y forma diminutas gotas que, al juntarse, crean nubes.",
+    "hint": "Es el paso opuesto a la evaporación.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "el vapor se condensa y forma gotas diminutas de agua líquida. Muchísimas de estas gotas juntas forman las nubes.",
+    "type": "flashcard",
+    "back": "Condensación"
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "¿Cuál es el proceso mediante el cual el calor del Sol convierte el agua de océanos, lagos y ríos en vapor?",
+    "explanation": "El texto indica que el calor solar convierte el agua en vapor y denomina a ese proceso evaporación.",
+    "hint": "Piensa en el efecto del sol sobre el agua.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "El calor del Sol calienta el agua de los océanos, los lagos y los ríos, y una parte se convierte en vapor de agua. Este proceso se llama evaporación.",
+    "type": "mcq",
+    "options": [
+     "Evaporación",
+     "Transpiración",
+     "Condensación",
+     "Precipitación"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "¿Cómo se denomina el agua que se filtra en el suelo y puede permanecer almacenada en rocas durante miles de años?",
+    "explanation": "Según el material, el agua que se infiltra forma el agua subterránea almacenada en acuíferos.",
+    "hint": "No es la que corre por la superficie.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "El agua infiltrada forma el agua subterránea, que puede quedar almacenada en rocas llamadas acuíferos durante miles de años.",
+    "type": "mcq",
+    "options": [
+     "Escorrentía",
+     "Agua subterránea",
+     "Precipitación",
+     "Transpiración"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "¿Qué causa la evaporación del agua en los océanos, lagos y ríos?",
+    "explanation": "El calor del Sol calienta el agua, provocando su evaporación.",
+    "hint": "Piensa en la fuente de energía que calienta el agua.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "El calor del Sol calienta el agua de los océanos, los lagos y los ríos, y una parte se convierte en vapor de agua. Este proceso se llama evaporación.",
+    "type": "mcq",
+    "options": [
+     "La presión atmosférica",
+     "El calor del Sol",
+     "La gravedad",
+     "La humedad relativa"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "El ciclo del agua reparte el calor por el planeta y proporciona agua dulce para ____ y para la agricultura.",
+    "explanation": "El ciclo suministra agua dulce para beber.",
+    "hint": "Es la actividad humana que necesita agua para la vida.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "El ciclo del agua reparte el calor por el planeta y proporciona agua dulce para beber y para la agricultura.",
+    "type": "fill",
+    "answer": "beber",
+    "acceptedAnswers": []
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "¿Cómo puede afectar la deforestación al ciclo del agua?",
+    "explanation": "La deforestación altera la cantidad de agua que se evapora y escorre.",
+    "hint": "Considera el impacto de la vegetación en el agua.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Algunas actividades humanas, como la deforestación, pueden cambiar la cantidad de agua que se evapora y la que se convierte en escorrentía.",
+    "type": "mcq",
+    "options": [
+     "Aumenta la cantidad de agua que se evapora y reduce la escorrentía",
+     "Cambia la cantidad de agua que se evapora y la que se convierte en escorrentía",
+     "No tiene efecto sobre el ciclo del agua",
+     "Reduce el calor que llega a la superficie terrestre"
+    ],
+    "answerIndex": 1
+   }
+  }
+ ]
+}

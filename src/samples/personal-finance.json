@@ -1,0 +1,640 @@
+{
+ "id": "personal-finance",
+ "title": "Basics of Personal Finance",
+ "language": "en",
+ "description": "Budgeting, saving, interest, inflation, borrowing and risk. Concepts only, not financial advice.",
+ "source": "personal-finance.md",
+ "chunks": [
+  {
+   "text": "Basics of Personal Finance\nThese notes explain basic personal finance concepts: budgeting, saving, interest, borrowing, inflation and risk. They describe how these ideas work in general and are not financial advice. For decisions about your own money, consider speaking to a qualified, independent adviser.\n1. Income and spending\nIncome is money you receive, for example wages from a job. Gross income is the amount before deductions; net income, often called take-home pay, is what remains after tax and other deductions are taken off.\nSpending can be divided into fixed costs and variable costs. Fixed costs stay roughly the same each month, such as rent or a phone contract. Variable costs change from month to month, such as food, transport and entertainment. It is also useful to separate needs, which are essential, from wants, which are nice to have but not essential.",
+   "headingPath": [
+    "Basics of Personal Finance"
+   ],
+   "wordCount": 141
+  },
+  {
+   "text": "2. Budgeting\nA budget is a plan for how you will use your income over a period of time, usually a month. Making a budget starts with listing your net income and all your expected costs. If costs are higher than income, the difference must be covered by savings or borrowing, which is not sustainable for long.\nOne simple guideline is the 50/30/20 rule. It suggests dividing take-home pay so that about 50 per cent goes on needs, 30 per cent on wants, and 20 per cent on saving or paying off debt. It is a starting point rather than a strict rule, and the right proportions depend on each person's situation.\nTracking spending, even for a few weeks, often reveals small regular costs, such as unused subscriptions, that add up over time.",
+   "headingPath": [
+    "Basics of Personal Finance",
+    "2. Budgeting"
+   ],
+   "wordCount": 135
+  },
+  {
+   "text": "3. Saving and the emergency fund\nSaving means setting aside part of your income instead of spending it. An important first goal is an emergency fund: money kept in an easily accessible account to cover unexpected costs, such as a broken laptop or a sudden drop in income. A common suggestion is to build up enough to cover three to six months of essential expenses.\nPaying yourself first is a habit where a fixed amount is moved into savings as soon as income arrives, rather than saving whatever is left at the end of the month.\n4. Interest\nInterest is the price of money over time. When you save, a bank pays you interest. When you borrow, you pay interest to the lender. Interest is usually given as an annual percentage rate.\nWith simple interest, interest is calculated only on the original amount, called the principal. With compound interest, interest is also earned on interest that has already been added. Over long periods, compounding makes a large difference.\nThe value of savings with annual compounding can be calculated with the formula:\n$$A = P(1 + r)^t$$\nHere $P$ is the principal, $r$ is the annual interest rate written as a decimal, $t$ is the number of years, and $A$ is the final amount. For example, £1,000 saved at 5 per cent a year for 2 years grows to £1,000 × 1.05 × 1.05 = £1,102.50. With simple interest it would grow to only £1,100.\nA useful shortcut is the rule of 72: dividing 72 by the annual interest rate in per cent gives a rough estimate of how many years it takes for money to double. At 6 per cent, money doubles in about 12 years.",
+   "headingPath": [
+    "Basics of Personal Finance",
+    "3. Saving and the emergency fund"
+   ],
+   "wordCount": 290
+  },
+  {
+   "text": "5. Inflation\nInflation is the general rise in prices over time. When there is inflation, the same amount of money buys fewer goods and services than before; in other words, its purchasing power falls.\nThe real return on savings is roughly the interest rate minus the inflation rate. If savings earn 3 per cent while inflation is 4 per cent, the real return is about minus 1 per cent, and the money can buy slightly less each year even though the number in the account goes up.\n6. Borrowing and credit\nBorrowing lets people buy something now and pay for it later, but it usually costs money in interest and fees. The annual percentage rate (APR) includes both the interest and the compulsory fees, which makes it easier to compare the total cost of different loans.\nA credit card lets you borrow up to a limit. If the full balance is paid off each month, many cards charge no interest on purchases. If only part of the balance is paid, interest is charged on the rest, often at a high rate. Paying only the minimum amount each month can make a debt last for many years and cost much more than the original purchase.\nA credit score is a number that lenders use to estimate how likely a person is to repay borrowed money. It is influenced by things such as paying bills on time and how much of the available credit is being used.",
+   "headingPath": [
+    "Basics of Personal Finance",
+    "5. Inflation"
+   ],
+   "wordCount": 245
+  },
+  {
+   "text": "7. Risk, return and diversification\nDifferent places to keep money offer different combinations of risk and possible return. Cash in a savings account is low risk but usually offers a low return. Investments such as shares can offer higher returns over long periods, but their value can go down as well as up.\nIn general, investments with a higher potential return come with a higher risk. Diversification means spreading money across many different investments, so that a loss in one has a smaller effect on the total. The idea is often summed up as \"don't put all your eggs in one basket\".\nThe time horizon is how long money can stay invested. Money that will be needed soon is usually kept in lower-risk places, because there may not be time to recover from a fall in value.",
+   "headingPath": [
+    "Basics of Personal Finance",
+    "7. Risk, return and diversification"
+   ],
+   "wordCount": 137
+  },
+  {
+   "text": "8. Avoiding common traps\n- Offers that promise high returns with no risk are a warning sign of a scam. - Impulse purchases can be reduced by waiting a day or two before buying non-essential items. - Comparing the total cost of a loan, not just the monthly payment, avoids underestimating what borrowing costs.\n9. Key points to remember\n- Net income is income after tax and other deductions. - A budget compares income with planned spending; the 50/30/20 rule is a simple starting guideline. - An emergency fund covers unexpected costs; three to six months of essential expenses is a common target. - Compound interest earns interest on interest; $A = P(1 + r)^t$. - Inflation reduces purchasing power; the real return is roughly the interest rate minus inflation. - Higher potential returns usually come with higher risk; diversification spreads risk.",
+   "headingPath": [
+    "Basics of Personal Finance",
+    "8. Avoiding common traps"
+   ],
+   "wordCount": 135
+  }
+ ],
+ "topics": [
+  {
+   "key": "t1",
+   "title": "Personal Finance Foundations",
+   "summary": "Overview of budgeting, saving, and basic financial concepts.",
+   "chunks": [
+    0,
+    1
+   ]
+  },
+  {
+   "key": "t2",
+   "title": "Saving and Inflation Basics",
+   "summary": "Explanation of emergency funds and the impact of inflation on purchasing power.",
+   "chunks": [
+    2,
+    3
+   ]
+  },
+  {
+   "key": "t3",
+   "title": "Risk Management and Pitfalls",
+   "summary": "Discussion of risk-return trade‑offs, diversification, and common financial traps.",
+   "chunks": [
+    4,
+    5
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which of the following best describes net income?",
+    "explanation": "Net income is the amount remaining after tax and other deductions are taken off.",
+    "hint": "Think about what you actually take home.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "net income, often called take-home pay, is what remains after tax and other deductions are taken off.",
+    "type": "mcq",
+    "options": [
+     "The amount before deductions",
+     "The amount after tax and other deductions",
+     "The amount after taxes only",
+     "The amount after interest"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "The 50/30/20 rule allocates 50% to wants, 30% to needs, and 20% to savings.",
+    "explanation": "The guideline specifies 50% for needs, 30% for wants, and 20% for savings or debt.",
+    "hint": "Recall the order of needs and wants.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "One simple guideline is the 50/30/20 rule. It suggests dividing take-home pay so that about 50 per cent goes on needs, 30 per cent on wants, and 20 per cent on saving or paying off debt.",
+    "type": "tf",
+    "answer": false,
+    "correction": "The rule allocates 50% to needs, 30% to wants, and 20% to savings or debt repayment."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Fixed costs stay roughly the same each month, such as ____.",
+    "explanation": "Fixed costs like rent or a phone contract remain constant each month.",
+    "hint": "Think of a recurring monthly payment that doesn't change.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Fixed costs stay roughly the same each month, such as rent or a phone contract.",
+    "type": "fill",
+    "answer": "rent",
+    "acceptedAnswers": [
+     "phone contract"
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "What is the difference between gross income and net income?",
+    "explanation": "Gross income is before deductions, net income is after deductions.",
+    "hint": "Consider what you receive before and after taxes.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Gross income is the amount before deductions; net income, often called take-home pay, is what remains after tax and other deductions are taken off.",
+    "type": "flashcard",
+    "back": "Gross income is the amount before deductions; net income is the amount after deductions."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "If your costs are higher than your income, the difference must be covered by ____.",
+    "explanation": "When costs exceed income, the shortfall must be covered by savings or borrowing.",
+    "hint": "Think about what you can use to make up the gap.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "If costs are higher than income, the difference must be covered by savings or borrowing, which is not sustainable for long.",
+    "type": "mcq",
+    "options": [
+     "Savings or borrowing",
+     "Fixed costs",
+     "Inflation",
+     "Gross income"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Tracking spending for a few weeks often reveals large irregular costs that are easy to spot.",
+    "explanation": "Short-term tracking shows small recurring costs that accumulate.",
+    "hint": "Consider what kind of costs become apparent with a few weeks of tracking.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "Tracking spending, even for a few weeks, often reveals small regular costs, such as unused subscriptions, that add up over time.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Tracking spending for a few weeks often reveals small regular costs, such as unused subscriptions, that add up over time."
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which of the following is an example of a fixed cost?",
+    "explanation": "Rent is a typical fixed cost that remains roughly the same each month.",
+    "hint": "Think of a cost that doesn't change month to month.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Fixed costs stay roughly the same each month, such as rent or a phone contract.",
+    "type": "mcq",
+    "options": [
+     "rent",
+     "food",
+     "transport",
+     "entertainment"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Which of the following is an example of a variable cost?",
+    "explanation": "Food costs vary month to month.",
+    "hint": "Consider a cost that changes each month.",
+    "difficulty": 1,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Variable costs change from month to month, such as food, transport and entertainment.",
+    "type": "mcq",
+    "options": [
+     "phone contract",
+     "rent",
+     "food",
+     "savings"
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Match each term to its definition",
+    "explanation": "The definitions correspond to the terms as described in the notes.",
+    "hint": "Recall the descriptions of each term.",
+    "difficulty": 2,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c0"
+    ],
+    "evidenceQuote": "Gross income is the amount before deductions; net income, often called take-home pay, is what remains after tax and other deductions are taken off.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Net income",
+      "definition": "The amount after tax and other deductions."
+     },
+     {
+      "term": "Gross income",
+      "definition": "The amount before deductions."
+     },
+     {
+      "term": "Fixed costs",
+      "definition": "Costs that stay roughly the same each month."
+     },
+     {
+      "term": "Variable costs",
+      "definition": "Costs that change from month to month."
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t1",
+   "content": {
+    "prompt": "Explain what happens when your costs are higher than your income, and why a budget helps.",
+    "explanation": "The notes say the difference must be covered by savings or borrowing, which is not sustainable for long; a budget compares income with planned spending.",
+    "hint": "Think about what happens when expenses outstrip income.",
+    "difficulty": 3,
+    "topicId": "t1",
+    "sourceChunkIds": [
+     "c1"
+    ],
+    "evidenceQuote": "If costs are higher than income, the difference must be covered by savings or borrowing, which is not sustainable for long.",
+    "type": "explain",
+    "modelAnswer": "If costs are higher than income, the difference has to be covered by savings or by borrowing, and that cannot go on for long. A budget lists your net income and your expected costs, so it shows the gap in advance and lets you plan for it.",
+    "keyPoints": [
+     "The difference must be covered by savings or borrowing",
+     "This is not sustainable for long",
+     "A budget compares income with planned spending, so it shows the gap"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "How many months of essential expenses are commonly suggested for an emergency fund?",
+    "explanation": "The notes recommend covering three to six months of essential expenses as a first goal for an emergency fund.",
+    "hint": "Think of the typical range mentioned for a safety net.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "A common suggestion is to build up enough to cover three to six months of essential expenses.",
+    "type": "mcq",
+    "options": [
+     "Three to six months",
+     "One to two months",
+     "Six to twelve months",
+     "Twelve to eighteen months"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Using the rule of 72, approximately how many years will money take to double at a 6% annual interest rate?",
+    "explanation": "Dividing 72 by 6 gives about 12, which is the estimate given in the notes.",
+    "hint": "Apply the rule of 72: 72 ÷ interest%.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "At 6 per cent, money doubles in about 12 years.",
+    "type": "mcq",
+    "options": [
+     "12 years",
+     "9 years",
+     "15 years",
+     "6 years"
+    ],
+    "answerIndex": 0
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "If a savings account yields 5% interest and inflation is 2%, the real return is approximately 3%.",
+    "explanation": "Real return ≈ interest rate – inflation rate, so 5% − 2% = 3%.",
+    "hint": "Subtract inflation from the nominal interest rate.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "The real return on savings is roughly the interest rate minus the inflation rate.",
+    "type": "tf",
+    "answer": true
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Simple interest is calculated on both the principal and the accumulated interest.",
+    "explanation": "The notes define simple interest as being computed only on the original amount (principal).",
+    "hint": "Recall the definition of simple interest versus compound interest.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "With simple interest, interest is calculated only on the original amount, called the principal.",
+    "type": "tf",
+    "answer": false,
+    "correction": "Simple interest is calculated only on the principal, not on previously earned interest."
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "In the formula $A = P(1 + r)^t$, the letter $t$ stands for the number of ____.",
+    "explanation": "In the formula, $P$ is the principal, $r$ the annual rate as a decimal, $t$ the number of years and $A$ the final amount.",
+    "hint": "Interest is added once a year.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Here $P$ is the principal, $r$ is the annual interest rate written as a decimal, $t$ is the number of years, and $A$ is the final amount.",
+    "type": "fill",
+    "answer": "years",
+    "acceptedAnswers": [
+     "year"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "What term describes the general rise in prices over time that reduces purchasing power?",
+    "explanation": "The notes define inflation as the general rise in prices over time, which lowers purchasing power.",
+    "hint": "It's the economic phenomenon that makes money buy less later.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Inflation is the general rise in prices over time.",
+    "type": "flashcard",
+    "back": "Inflation"
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Which statement best describes the \"paying yourself first\" habit?",
+    "explanation": "The habit is defined as moving a fixed amount into savings as soon as income arrives.",
+    "hint": "Think about when the money is set aside.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "Paying yourself first is a habit where a fixed amount is moved into savings as soon as income arrives, rather than saving whatever is left at the end of the month.",
+    "type": "mcq",
+    "options": [
+     "Saving whatever is left after all monthly expenses are paid.",
+     "Investing in high-risk shares before paying bills.",
+     "Moving a fixed amount into savings as soon as income arrives.",
+     "Borrowing money to cover unexpected costs."
+    ],
+    "answerIndex": 2
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Using the rule of 72, approximately how many years will it take for money to double at an 8% annual interest rate?",
+    "explanation": "72 divided by 8 gives 9 years, the rule’s estimate for doubling.",
+    "hint": "Divide 72 by the interest rate.",
+    "difficulty": 1,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c2"
+    ],
+    "evidenceQuote": "A useful shortcut is the rule of 72: dividing 72 by the annual interest rate in per cent gives a rough estimate of how many years it takes for money to double.",
+    "type": "mcq",
+    "options": [
+     "6 years",
+     "9 years",
+     "12 years",
+     "15 years"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Match each saving and interest term to its definition.",
+    "explanation": "Each term is paired with the definition given in the notes.",
+    "hint": "Recall the specific descriptions for each concept.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3",
+     "c2"
+    ],
+    "evidenceQuote": "Inflation is the general rise in prices over time. When there is inflation, the same amount of money buys fewer goods and services than before; in other words, its purchasing power falls.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Emergency fund",
+      "definition": "Money set aside in an easily accessible account to cover unexpected costs."
+     },
+     {
+      "term": "Simple interest",
+      "definition": "Interest calculated only on the original principal amount."
+     },
+     {
+      "term": "Compound interest",
+      "definition": "Interest earned on both the principal and previously accumulated interest."
+     },
+     {
+      "term": "Inflation",
+      "definition": "General rise in prices over time that reduces purchasing power."
+     }
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "Explain why inflation reduces the purchasing power of money over time.",
+    "explanation": "The notes state that inflation causes the same amount of money to buy fewer goods, indicating reduced purchasing power.",
+    "hint": "Consider what happens to what you can buy when prices go up.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "Inflation is the general rise in prices over time. When there is inflation, the same amount of money buys fewer goods and services than before; in other words, its purchasing power falls.",
+    "type": "explain",
+    "modelAnswer": "Inflation is a general rise in prices, so as prices increase each unit of currency can buy fewer goods and services. Consequently, the real value or purchasing power of money falls as inflation persists.",
+    "keyPoints": [
+     "Inflation is a general rise in prices over time",
+     "The same amount of money buys fewer goods and services",
+     "So its purchasing power falls"
+    ]
+   }
+  },
+  {
+   "topic": "t2",
+   "content": {
+    "prompt": "If a savings account offers a 3% nominal interest rate and inflation is 5%, what is the approximate real return, and what does it imply for the saver’s purchasing power?",
+    "explanation": "The notes define real return as the interest rate minus the inflation rate, leading to a negative value in this case.",
+    "hint": "Subtract the inflation rate from the nominal interest rate.",
+    "difficulty": 2,
+    "topicId": "t2",
+    "sourceChunkIds": [
+     "c3"
+    ],
+    "evidenceQuote": "The real return on savings is roughly the interest rate minus the inflation rate.",
+    "type": "explain",
+    "modelAnswer": "The real return is roughly 3% − 5% = ‑2%. A negative real return means the saver’s purchasing power declines even though the nominal account balance grows.",
+    "keyPoints": [
+     "Real return ≈ interest − inflation",
+     "3% − 5% = ‑2%",
+     "Negative real return reduces purchasing power"
+    ]
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "What does diversification aim to achieve in an investment portfolio?",
+    "explanation": "Diversification spreads money across many investments so a loss in one has a smaller effect on the total.",
+    "hint": "Think about spreading money across many investments.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "Diversification means spreading money across many different investments, so that a loss in one has a smaller effect on the total.",
+    "type": "mcq",
+    "options": [
+     "Increase total return by focusing on a single high‑growth stock",
+     "Reduce the impact of any single investment loss on the overall portfolio",
+     "Ensure all assets are held in cash for safety",
+     "Match the time horizon of each investment to the investor’s age"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Which statement best describes the general relationship between potential return and risk?",
+    "explanation": "Higher potential returns are typically associated with higher risk.",
+    "hint": "Recall the risk‑return trade‑off principle.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "In general, investments with a higher potential return come with a higher risk.",
+    "type": "mcq",
+    "options": [
+     "Higher potential return always comes with lower risk",
+     "Higher potential return usually comes with higher risk",
+     "Potential return and risk are unrelated",
+     "Low‑risk investments always yield the highest returns"
+    ],
+    "answerIndex": 1
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Offers that promise high returns with no risk are typically safe investments.",
+    "explanation": "Such offers are identified as scam warnings in the notes.",
+    "hint": "Consider the warning sign mentioned for unrealistic promises.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c5"
+    ],
+    "evidenceQuote": "- Offers that promise high returns with no risk are a warning sign of a scam.",
+    "type": "tf",
+    "answer": false,
+    "correction": "They are a warning sign of a scam."
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "What term describes how long money can stay invested before it is needed?",
+    "explanation": "The notes define the time horizon as the length of time money can stay invested.",
+    "hint": "It refers to the investment duration.",
+    "difficulty": 1,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "The time horizon is how long money can stay invested.",
+    "type": "flashcard",
+    "back": "Time horizon"
+   }
+  },
+  {
+   "topic": "t3",
+   "content": {
+    "prompt": "Match each term to its correct definition.",
+    "explanation": "The definitions correspond to the characteristics described in the notes.",
+    "hint": "Think about the risk and return profile of each term.",
+    "difficulty": 2,
+    "topicId": "t3",
+    "sourceChunkIds": [
+     "c4"
+    ],
+    "evidenceQuote": "Cash in a savings account is low risk but usually offers a low return. Investments such as shares can offer higher returns over long periods, but their value can go down as well as up.",
+    "type": "match",
+    "pairs": [
+     {
+      "term": "Cash in a savings account",
+      "definition": "Low risk, low return"
+     },
+     {
+      "term": "Shares",
+      "definition": "High potential return but value can go down"
+     },
+     {
+      "term": "Time horizon",
+      "definition": "Length of time money can stay invested"
+     },
+     {
+      "term": "Diversification",
+      "definition": "Spreading money across many investments"
+     }
+    ]
+   }
+  }
+ ]
+}
