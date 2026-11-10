@@ -17,7 +17,11 @@ export default function Challenge() {
   const data = useMemo(() => parseChallenge(location.hash), []);
 
   return (
-    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-8">
+    <main
+      id="main"
+      tabIndex={-1}
+      className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-8"
+    >
       <header className="flex items-center gap-2">
         <Logo size={32} />
         {/* i18n-ignore: brand name */}
@@ -27,8 +31,12 @@ export default function Challenge() {
       {data ? (
         <section className="flex flex-1 flex-col items-center justify-center gap-4 text-center">
           <Avatar index={data.avatar} size={96} />
-          <h1 className="font-display text-3xl font-extrabold">{t('challenge.from', { name: data.nickname || t('challenge.friend') })}</h1>
-          <p className="text-lg">{t('challenge.theirScore', { correct: data.score, total: data.questions.length })}</p>
+          <h1 className="font-display text-3xl font-extrabold">
+            {t('challenge.from', { name: data.nickname || t('challenge.friend') })}
+          </h1>
+          <p className="text-lg">
+            {t('challenge.theirScore', { correct: data.score, total: data.questions.length })}
+          </p>
           <p className="text-sm text-muted">{t('challenge.forFun')}</p>
           <Button
             size="lg"

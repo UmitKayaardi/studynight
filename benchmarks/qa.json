@@ -1,64 +1,284 @@
 {
   "retrieval": [
-    { "doc": "en-plate-tectonics", "q": "What are the rigid pieces of the lithosphere called?", "snippet": "broken into large pieces called tectonic plates" },
-    { "doc": "en-plate-tectonics", "q": "What drives the slow currents in the mantle?", "snippet": "Heat from the Earth's interior drives slow currents in the mantle" },
-    { "doc": "en-plate-tectonics", "q": "What happens when an ocean plate meets a continental plate?", "snippet": "the denser ocean plate sinks beneath the other in a process called subduction" },
-    { "doc": "en-plate-tectonics", "q": "Which boundary type is the San Andreas Fault?", "snippet": "The San Andreas Fault in California is a transform boundary" },
-    { "doc": "en-plate-tectonics", "q": "Why did scientists reject Wegener's idea at first?", "snippet": "Wegener could not explain what force moved the continents" },
-    { "doc": "en-plate-tectonics", "q": "How do the Himalayas form?", "snippet": "the crust is pushed upwards to form high mountain ranges such as the Himalayas" },
-    { "doc": "en-printing-press", "q": "How were books produced before the printing press?", "snippet": "books were copied by hand, often by scribes working in monasteries" },
-    { "doc": "en-printing-press", "q": "Which machine did Gutenberg adapt for printing?", "snippet": "He adapted the screw press" },
-    { "doc": "en-printing-press", "q": "What are books printed before 1501 called?", "snippet": "Books printed before 1501 are called incunabula" },
-    { "doc": "en-printing-press", "q": "How did printing affect spelling?", "snippet": "Printing also helped to standardise spelling and grammar" },
-    { "doc": "en-printing-press", "q": "How many copies of Gutenberg's Bible were made?", "snippet": "Around 180 copies were made" },
-    { "doc": "en-printing-press", "q": "What role did printing play in the Reformation?", "snippet": "Martin Luther's writings were printed and distributed widely" },
-    { "doc": "en-python-lists", "q": "Which index does the first item of a Python list have?", "snippet": "Indexing starts at 0" },
-    { "doc": "en-python-lists", "q": "Which method adds an item to the end of a list?", "snippet": "The `append` method adds an item to the end of a list" },
-    { "doc": "en-python-lists", "q": "What does a while loop do?", "snippet": "A `while` loop repeats as long as a condition is true" },
-    { "doc": "en-python-lists", "q": "What is an infinite loop?", "snippet": "the loop runs forever; this is called an infinite loop" },
-    { "doc": "en-python-lists", "q": "How does Python show which lines belong to a loop?", "snippet": "Python uses indentation, not brackets" },
-    { "doc": "en-python-lists", "q": "How can I build a new list in one line?", "snippet": "A list comprehension builds a new list in a single line" },
-    { "doc": "en-quadratics", "q": "What is the discriminant of a quadratic?", "snippet": "is called the discriminant" },
-    { "doc": "en-quadratics", "q": "How many real roots are there if the discriminant is negative?", "snippet": "If the discriminant is negative, there are no real roots" },
-    { "doc": "en-quadratics", "q": "What shape is the graph of a quadratic?", "snippet": "a curve called a parabola" },
-    { "doc": "en-quadratics", "q": "How do you solve a quadratic by factorising?", "snippet": "If a product equals zero, at least one of the factors must be zero" },
-    { "doc": "en-quadratics", "q": "Where is the vertex of a parabola?", "snippet": "which is the axis of symmetry of the parabola" },
-    { "doc": "en-marketing-slides", "q": "What are the four Ps of marketing?", "snippet": "The marketing mix (the 4 Ps)" },
-    { "doc": "en-marketing-slides", "q": "What is penetration pricing?", "snippet": "Penetration pricing: start with a low price to win market share quickly" },
-    { "doc": "en-marketing-slides", "q": "What happens to sales in the maturity stage?", "snippet": "Maturity: sales level off, competition is strongest" },
-    { "doc": "en-marketing-slides", "q": "What does market segmentation mean?", "snippet": "Divide a market into groups of customers with similar needs" },
-    { "doc": "en-marketing-slides", "q": "What should a positioning statement include?", "snippet": "A positioning statement names the target customer, the need and the key benefit" },
-    { "doc": "en-supply-demand-figure", "q": "What does the law of demand say?", "snippet": "when the price of a good rises, the quantity demanded falls" },
-    { "doc": "en-supply-demand-figure", "q": "What is the equilibrium price in Figure 1?", "snippet": "the equilibrium price is £4 and the equilibrium quantity is 200 units" },
-    { "doc": "en-supply-demand-figure", "q": "What happens when the price is above equilibrium?", "snippet": "which creates a surplus" },
-    { "doc": "en-supply-demand-figure", "q": "What happens to the demand curve when incomes change?", "snippet": "shifts the whole demand curve" },
-    { "doc": "tr-depremler", "q": "Depremin yer altında başladığı noktaya ne denir?", "snippet": "Depremin yer altında başladığı noktaya odak denir" },
-    { "doc": "tr-depremler", "q": "En hızlı deprem dalgaları hangileridir?", "snippet": "P dalgaları en hızlı dalgalardır" },
-    { "doc": "tr-depremler", "q": "Büyüklük ile şiddet arasındaki fark nedir?", "snippet": "Şiddet ise depremin belirli bir yerdeki etkilerini" },
-    { "doc": "tr-depremler", "q": "Which earthquake waves can only travel through solids?", "snippet": "S dalgaları daha yavaştır ve yalnızca katı ortamlarda ilerleyebilir" },
-    { "doc": "tr-depremler", "q": "What should you do during an earthquake?", "snippet": "çök, kapan, tutun" },
-    { "doc": "es-energias-renovables", "q": "¿Qué convierte la luz del sol en electricidad?", "snippet": "Los paneles fotovoltaicos convierten directamente la luz del sol en electricidad" },
-    { "doc": "es-energias-renovables", "q": "¿Por qué los parques eólicos marinos producen más energía?", "snippet": "en el mar el viento es más fuerte y más constante" },
-    { "doc": "es-energias-renovables", "q": "¿Qué es una central de bombeo?", "snippet": "centrales de bombeo, que suben agua a un embalse" },
-    { "doc": "es-energias-renovables", "q": "What is a disadvantage of building a dam?", "snippet": "construir una presa inunda grandes zonas" },
-    { "doc": "es-energias-renovables", "q": "Why do fossil fuels contribute to climate change?", "snippet": "al quemarse liberan dióxido de carbono" },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "What are the rigid pieces of the lithosphere called?",
+      "snippet": "broken into large pieces called tectonic plates"
+    },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "What drives the slow currents in the mantle?",
+      "snippet": "Heat from the Earth's interior drives slow currents in the mantle"
+    },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "What happens when an ocean plate meets a continental plate?",
+      "snippet": "the denser ocean plate sinks beneath the other in a process called subduction"
+    },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "Which boundary type is the San Andreas Fault?",
+      "snippet": "The San Andreas Fault in California is a transform boundary"
+    },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "Why did scientists reject Wegener's idea at first?",
+      "snippet": "Wegener could not explain what force moved the continents"
+    },
+    {
+      "doc": "en-plate-tectonics",
+      "q": "How do the Himalayas form?",
+      "snippet": "the crust is pushed upwards to form high mountain ranges such as the Himalayas"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "How were books produced before the printing press?",
+      "snippet": "books were copied by hand, often by scribes working in monasteries"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "Which machine did Gutenberg adapt for printing?",
+      "snippet": "He adapted the screw press"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "What are books printed before 1501 called?",
+      "snippet": "Books printed before 1501 are called incunabula"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "How did printing affect spelling?",
+      "snippet": "Printing also helped to standardise spelling and grammar"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "How many copies of Gutenberg's Bible were made?",
+      "snippet": "Around 180 copies were made"
+    },
+    {
+      "doc": "en-printing-press",
+      "q": "What role did printing play in the Reformation?",
+      "snippet": "Martin Luther's writings were printed and distributed widely"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "Which index does the first item of a Python list have?",
+      "snippet": "Indexing starts at 0"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "Which method adds an item to the end of a list?",
+      "snippet": "The `append` method adds an item to the end of a list"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "What does a while loop do?",
+      "snippet": "A `while` loop repeats as long as a condition is true"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "What is an infinite loop?",
+      "snippet": "the loop runs forever; this is called an infinite loop"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "How does Python show which lines belong to a loop?",
+      "snippet": "Python uses indentation, not brackets"
+    },
+    {
+      "doc": "en-python-lists",
+      "q": "How can I build a new list in one line?",
+      "snippet": "A list comprehension builds a new list in a single line"
+    },
+    {
+      "doc": "en-quadratics",
+      "q": "What is the discriminant of a quadratic?",
+      "snippet": "is called the discriminant"
+    },
+    {
+      "doc": "en-quadratics",
+      "q": "How many real roots are there if the discriminant is negative?",
+      "snippet": "If the discriminant is negative, there are no real roots"
+    },
+    {
+      "doc": "en-quadratics",
+      "q": "What shape is the graph of a quadratic?",
+      "snippet": "a curve called a parabola"
+    },
+    {
+      "doc": "en-quadratics",
+      "q": "How do you solve a quadratic by factorising?",
+      "snippet": "If a product equals zero, at least one of the factors must be zero"
+    },
+    {
+      "doc": "en-quadratics",
+      "q": "Where is the vertex of a parabola?",
+      "snippet": "which is the axis of symmetry of the parabola"
+    },
+    {
+      "doc": "en-marketing-slides",
+      "q": "What are the four Ps of marketing?",
+      "snippet": "The marketing mix (the 4 Ps)"
+    },
+    {
+      "doc": "en-marketing-slides",
+      "q": "What is penetration pricing?",
+      "snippet": "Penetration pricing: start with a low price to win market share quickly"
+    },
+    {
+      "doc": "en-marketing-slides",
+      "q": "What happens to sales in the maturity stage?",
+      "snippet": "Maturity: sales level off, competition is strongest"
+    },
+    {
+      "doc": "en-marketing-slides",
+      "q": "What does market segmentation mean?",
+      "snippet": "Divide a market into groups of customers with similar needs"
+    },
+    {
+      "doc": "en-marketing-slides",
+      "q": "What should a positioning statement include?",
+      "snippet": "A positioning statement names the target customer, the need and the key benefit"
+    },
+    {
+      "doc": "en-supply-demand-figure",
+      "q": "What does the law of demand say?",
+      "snippet": "when the price of a good rises, the quantity demanded falls"
+    },
+    {
+      "doc": "en-supply-demand-figure",
+      "q": "What is the equilibrium price in Figure 1?",
+      "snippet": "the equilibrium price is £4 and the equilibrium quantity is 200 units"
+    },
+    {
+      "doc": "en-supply-demand-figure",
+      "q": "What happens when the price is above equilibrium?",
+      "snippet": "which creates a surplus"
+    },
+    {
+      "doc": "en-supply-demand-figure",
+      "q": "What happens to the demand curve when incomes change?",
+      "snippet": "shifts the whole demand curve"
+    },
+    {
+      "doc": "tr-depremler",
+      "q": "Depremin yer altında başladığı noktaya ne denir?",
+      "snippet": "Depremin yer altında başladığı noktaya odak denir"
+    },
+    {
+      "doc": "tr-depremler",
+      "q": "En hızlı deprem dalgaları hangileridir?",
+      "snippet": "P dalgaları en hızlı dalgalardır"
+    },
+    {
+      "doc": "tr-depremler",
+      "q": "Büyüklük ile şiddet arasındaki fark nedir?",
+      "snippet": "Şiddet ise depremin belirli bir yerdeki etkilerini"
+    },
+    {
+      "doc": "tr-depremler",
+      "q": "Which earthquake waves can only travel through solids?",
+      "snippet": "S dalgaları daha yavaştır ve yalnızca katı ortamlarda ilerleyebilir"
+    },
+    {
+      "doc": "tr-depremler",
+      "q": "What should you do during an earthquake?",
+      "snippet": "çök, kapan, tutun"
+    },
+    {
+      "doc": "es-energias-renovables",
+      "q": "¿Qué convierte la luz del sol en electricidad?",
+      "snippet": "Los paneles fotovoltaicos convierten directamente la luz del sol en electricidad"
+    },
+    {
+      "doc": "es-energias-renovables",
+      "q": "¿Por qué los parques eólicos marinos producen más energía?",
+      "snippet": "en el mar el viento es más fuerte y más constante"
+    },
+    {
+      "doc": "es-energias-renovables",
+      "q": "¿Qué es una central de bombeo?",
+      "snippet": "centrales de bombeo, que suben agua a un embalse"
+    },
+    {
+      "doc": "es-energias-renovables",
+      "q": "What is a disadvantage of building a dam?",
+      "snippet": "construir una presa inunda grandes zonas"
+    },
+    {
+      "doc": "es-energias-renovables",
+      "q": "Why do fossil fuels contribute to climate change?",
+      "snippet": "al quemarse liberan dióxido de carbono"
+    },
     { "doc": "ar-hayat-al-nujum", "q": "ما اسم السحب التي تولد فيها النجوم؟", "snippet": "تُسمّى السُّدُم" },
-    { "doc": "ar-hayat-al-nujum", "q": "ماذا يحدث للنجم المتوسط عندما ينفد الهيدروجين؟", "snippet": "فيصبح عملاقاً أحمر" },
-    { "doc": "ar-hayat-al-nujum", "q": "What is a supernova?", "snippet": "انفجار هائل يُسمّى المستعر الأعظم" },
-    { "doc": "ar-hayat-al-nujum", "q": "What balances gravity in a main-sequence star?", "snippet": "الضغط الناتج عن الاندماج النووي" },
-    { "doc": "ar-hayat-al-nujum", "q": "Where do elements heavier than helium come from?", "snippet": "تتكوّن داخل النجوم عناصر أثقل من الهيليوم" },
+    {
+      "doc": "ar-hayat-al-nujum",
+      "q": "ماذا يحدث للنجم المتوسط عندما ينفد الهيدروجين؟",
+      "snippet": "فيصبح عملاقاً أحمر"
+    },
+    {
+      "doc": "ar-hayat-al-nujum",
+      "q": "What is a supernova?",
+      "snippet": "انفجار هائل يُسمّى المستعر الأعظم"
+    },
+    {
+      "doc": "ar-hayat-al-nujum",
+      "q": "What balances gravity in a main-sequence star?",
+      "snippet": "الضغط الناتج عن الاندماج النووي"
+    },
+    {
+      "doc": "ar-hayat-al-nujum",
+      "q": "Where do elements heavier than helium come from?",
+      "snippet": "تتكوّن داخل النجوم عناصر أثقل من الهيليوم"
+    },
     { "doc": "ja-hikari", "q": "反射の法則とは何ですか？", "snippet": "入射角と反射角は常に等しい" },
-    { "doc": "ja-hikari", "q": "プールの底が浅く見えるのはなぜですか？", "snippet": "プールの底が実際より浅く見えるのは、光の屈折によるものである" },
-    { "doc": "ja-hikari", "q": "What do optical fibres use to carry light?", "snippet": "光ファイバーは、全反射を利用して光を遠くまで伝えている" },
-    { "doc": "ja-hikari", "q": "How does a rainbow form?", "snippet": "空気中の水滴によって光が分散して起こる現象" },
-    { "doc": "ja-hikari", "q": "How fast does light travel in a vacuum?", "snippet": "およそ秒速30万キロメートル" },
-    { "doc": "solar-system", "q": "Why is Venus the hottest planet?", "snippet": "which traps heat through a strong greenhouse effect" },
-    { "doc": "solar-system", "q": "¿Hacia dónde apunta la cola de un cometa?", "snippet": "A comet's tail always points away from the Sun" },
+    {
+      "doc": "ja-hikari",
+      "q": "プールの底が浅く見えるのはなぜですか？",
+      "snippet": "プールの底が実際より浅く見えるのは、光の屈折によるものである"
+    },
+    {
+      "doc": "ja-hikari",
+      "q": "What do optical fibres use to carry light?",
+      "snippet": "光ファイバーは、全反射を利用して光を遠くまで伝えている"
+    },
+    {
+      "doc": "ja-hikari",
+      "q": "How does a rainbow form?",
+      "snippet": "空気中の水滴によって光が分散して起こる現象"
+    },
+    {
+      "doc": "ja-hikari",
+      "q": "How fast does light travel in a vacuum?",
+      "snippet": "およそ秒速30万キロメートル"
+    },
+    {
+      "doc": "solar-system",
+      "q": "Why is Venus the hottest planet?",
+      "snippet": "which traps heat through a strong greenhouse effect"
+    },
+    {
+      "doc": "solar-system",
+      "q": "¿Hacia dónde apunta la cola de un cometa?",
+      "snippet": "A comet's tail always points away from the Sun"
+    },
     { "doc": "vaccines", "q": "What do B cells produce?", "snippet": "**B cells** produce antibodies" },
-    { "doc": "vaccines", "q": "Aşı bağışıklık sistemine ne öğretir?", "snippet": "A vaccine trains the adaptive immune system to recognise a pathogen" },
+    {
+      "doc": "vaccines",
+      "q": "Aşı bağışıklık sistemine ne öğretir?",
+      "snippet": "A vaccine trains the adaptive immune system to recognise a pathogen"
+    },
     { "doc": "machine-learning", "q": "What is overfitting?", "snippet": "This is called **overfitting**" },
-    { "doc": "machine-learning", "q": "機械学習の勾配降下法とは何ですか？", "snippet": "Gradient descent is the standard method for minimising a loss function" },
-    { "doc": "personal-finance", "q": "What is an emergency fund?", "snippet": "money kept in an easily accessible account to cover unexpected costs" },
+    {
+      "doc": "machine-learning",
+      "q": "機械学習の勾配降下法とは何ですか？",
+      "snippet": "Gradient descent is the standard method for minimising a loss function"
+    },
+    {
+      "doc": "personal-finance",
+      "q": "What is an emergency fund?",
+      "snippet": "money kept in an easily accessible account to cover unexpected costs"
+    },
     { "doc": "personal-finance", "q": "ما هي قاعدة 72؟", "snippet": "the **rule of 72**" }
   ],
   "unanswerable": [

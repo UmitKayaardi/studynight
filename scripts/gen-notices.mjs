@@ -8,14 +8,18 @@ const VERIFIED = { duck: 'BSD-2-Clause' };
 const root = JSON.parse(readFileSync('package.json', 'utf8')).dependencies;
 
 const data = JSON.parse(
-  execSync('npx license-checker-rseidelsohn --production --json --excludePrivatePackages', { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }),
+  execSync('npx license-checker-rseidelsohn --production --json --excludePrivatePackages', {
+    encoding: 'utf8',
+    maxBuffer: 64 * 1024 * 1024,
+  }),
 );
 const packages = Object.entries(data)
   .filter(([pkg]) => !EXCLUDED_PREFIXES.some((p) => pkg.startsWith(p)))
   .map(([pkg, info]) => {
     const name = pkg.slice(0, pkg.lastIndexOf('@'));
     const version = pkg.slice(pkg.lastIndexOf('@') + 1);
-    const licence = VERIFIED[name] ?? (Array.isArray(info.licenses) ? info.licenses.join(' AND ') : String(info.licenses));
+    const licence =
+      VERIFIED[name] ?? (Array.isArray(info.licenses) ? info.licenses.join(' AND ') : String(info.licenses));
     return { name, version, licence, url: info.repository ?? '', direct: name in root };
   })
   .sort((a, b) => Number(b.direct) - Number(a.direct) || a.name.localeCompare(b.name));

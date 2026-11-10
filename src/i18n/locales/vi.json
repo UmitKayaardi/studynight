@@ -1,7 +1,28 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi. Bảo lưu mọi quyền.",
+    "credits": "Được xây dựng bằng phần mềm mã nguồn mở. AI bởi Groq; tìm kiếm Thông minh tùy chọn chạy trên thiết bị của bạn.",
+    "mascot": "Gặp gỡ Lumi, vầng trăng lưỡi liềm bầu trời đêm luôn đồng hành cùng bạn khi học.",
+    "principle": "AI chỉ sắp xếp ghi chú của bạn theo chủ đề, soạn câu hỏi từ đoạn văn của bạn, kiểm tra lại chúng với ghi chú và đánh dấu các ý chính mà giải thích bao phủ. Điểm số, XP, chuỗi ngày, lịch ôn tập, độ khó và kế hoạch thi được tính toán bằng mã nguồn đã kiểm thử trên thiết bị của bạn. Không câu hỏi nào đến tay bạn nếu không vượt qua bước kiểm tra với ghi chú.",
+    "principleTitle": "AI viết câu hỏi. Mã nguồn quyết định mọi thứ còn lại.",
+    "version": "Phiên bản {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "Ghi chú của bạn, biến thành trò chơi."
+  },
+  "ask": {
+    "disclaimer": "Câu trả lời chỉ từ ghi chú của bạn. Câu hỏi của bạn không được lưu.",
+    "intro": "Hỏi bất cứ điều gì về bộ thẻ này. Câu trả lời chỉ từ ghi chú của bạn, kèm nguồn có số thứ tự để bạn mở.",
+    "label": "Câu hỏi của bạn",
+    "notCovered": "Ghi chú của bạn dường như không bao gồm điều này.",
+    "notCoveredHint": "StudyNight chỉ trả lời từ ghi chú của bạn, nên sẽ không đoán mò.",
+    "offline": "Hỏi ghi chú cần kết nối internet. Mọi thứ khác trong bộ thẻ này hoạt động ngoại tuyến.",
+    "openSource": "Mở nguồn {{n}}",
+    "placeholder": "Hỏi về ghi chú của bạn…",
+    "send": "Gửi",
+    "thinking": "Đang xem qua ghi chú của bạn…",
+    "title": "Hỏi ghi chú của bạn"
   },
   "badges": {
     "challenger": {
@@ -280,7 +301,8 @@
     "notYet": "Chưa đúng",
     "partly": "Một phần đúng",
     "placeholder": "Giải thích bằng lời của bạn…",
-    "points": "Bạn đã bao quát {{hit}} trong tổng số {{total}} điểm chính."
+    "points": "Bạn đã bao quát {{hit}} trong tổng số {{total}} điểm chính.",
+    "skip": "Bỏ qua"
   },
   "home": {
     "continue": "Tiếp tục",
@@ -305,7 +327,6 @@
       "sleepy": "Chuỗi ngày của bạn đang chờ—một vài câu hỏi giữ nó hoạt động."
     },
     "newDeck": "Bộ bài mới",
-    "openDeck": "Mở {{title}}",
     "resume": "Bạn đang có một vòng đang tiến hành.",
     "review": "Xem lại",
     "reviewDue_other": "{{count}} câu hỏi cần xem lại",
@@ -320,7 +341,18 @@
     "menuLabel": "Ngôn ngữ: {{language}}. Thay đổi ngôn ngữ"
   },
   "legal": {
-    "privacyLink": "Quyền riêng tư"
+    "about": "Về StudyNight",
+    "licences": "Giấy phép",
+    "privacy": "Quyền riêng tư",
+    "privacyLink": "Quyền riêng tư",
+    "terms": "Điều khoản sử dụng",
+    "updated": "Cập nhật lần cuối {{date}}"
+  },
+  "licences": {
+    "fonts": "Phông chữ: các dòng Inter, Nunito và Noto Sans (Giấy phép Phông chữ Mở SIL 1.1). Biểu tượng: Lucide (ISC).",
+    "intro": "StudyNight được xây dựng bằng phần mềm mã nguồn mở. Mỗi thành phần bên dưới được sử dụng theo giấy phép được hiển thị.",
+    "model": "Mô hình tìm kiếm Thông minh",
+    "original": "Nhân vật, logo, avatar, huy hiệu và âm thanh được tạo riêng cho StudyNight."
   },
   "modes": {
     "ask": "Hỏi ghi chú của bạn",
@@ -400,6 +432,29 @@
     },
     "uploadNotes": "Tải lên ghi chú của tôi"
   },
+  "planner": {
+    "add": "Thêm kỳ thi",
+    "addToCalendar": "Thêm vào lịch",
+    "date": "Ngày thi",
+    "dayPlan_other": "{{practice}} bài tập + ôn {{count}} câu",
+    "daysLeft_other": "Còn {{count}} ngày",
+    "deck": "Bộ thẻ",
+    "empty": "Chưa có kỳ thi nào. Thêm một kỳ để nhận kế hoạch hàng ngày.",
+    "examName": "Tên kỳ thi",
+    "icsMock": "Thi thử: {{title}}",
+    "icsOpen": "Mở StudyNight để bắt đầu.",
+    "icsSummary_other": "Học: {{title}} ({{count}} câu hỏi)",
+    "intro": "Thêm kỳ thi của bạn, StudyNight sẽ lập kế hoạch hàng ngày: ưu tiên chủ đề yếu, ôn tập rải đều và thi thử vào ngày cuối.",
+    "mockDay_other": "Thi thử + ôn {{count}} câu",
+    "more_other": "…và {{count}} ngày nữa",
+    "needDeck": "Tạo bộ thẻ trước, sau đó lập kế hoạch thi cho bộ đó.",
+    "past": "Kỳ thi này đã kết thúc. Làm tốt lắm!",
+    "remove": "Xóa {{title}}",
+    "startToday": "Bắt đầu buổi học hôm nay",
+    "time": "Thời gian học",
+    "title": "Lịch thi",
+    "today": "Thi hôm nay: ôn nhanh chủ đề yếu rồi nghỉ ngơi. Chúc may mắn!"
+  },
   "play": {
     "answerWas": "Đáp án:",
     "bossHit": "Đúng trúng!",
@@ -436,7 +491,7 @@
     "nothingDueBody": "Bạn đã bắt kịp. Quay lại sau hoặc chơi nhanh một vòng.",
     "orderHelp": "Kéo các bước, hoặc dùng mũi tên, để sắp xếp đúng thứ tự.",
     "pageN": "Trang {{n}}",
-    "pairedWith": "Đã kết nối với thuật ngữ {{n}}: {{text}}",
+    "pairedWith": ", ghép với từ {{n}}",
     "preparing": "Đang chuẩn bị câu hỏi…",
     "progress": "Câu {{n}} trên {{total}}",
     "quit": "Tạm dừng hoặc thoát",
@@ -458,6 +513,48 @@
     "xpTotal": "{{xp}} XP vòng này",
     "yourAnswer": "Câu trả lời của bạn"
   },
+  "privacy": {
+    "s1": {
+      "h": "Tóm tắt ngắn gọn",
+      "p": "Không tài khoản, không quảng cáo, không theo dõi, không phân tích và không cookie. Bộ thẻ, câu hỏi, tiến độ và hồ sơ của bạn chỉ được lưu trên thiết bị này."
+    },
+    "s10": {
+      "h": "Thay đổi và liên hệ",
+      "p": "Nếu chính sách này thay đổi, chúng tôi sẽ cập nhật trang này và ngày ở trên. Bạn có thể đặt câu hỏi qua thông tin liên hệ trên trang cửa hàng hoặc trang dự án của ứng dụng."
+    },
+    "s2": {
+      "h": "Những gì được lưu trên thiết bị của bạn",
+      "p": "Các tệp bạn thêm sẽ được đọc trong trình duyệt; chính các tệp đó không bao giờ được tải lên. Bộ thẻ, câu hỏi, câu trả lời, chuỗi ngày, biệt danh và avatar của bạn được giữ trong bộ nhớ trình duyệt trên thiết bị này. Câu trả lời nhập tay không được giữ lại sau khi vòng kết thúc."
+    },
+    "s3": {
+      "h": "Những gì được gửi khi bạn dùng tính năng AI",
+      "p": "Để tạo câu hỏi, kiểm tra lời giải thích, trả lời câu hỏi về ghi chú, đọc ảnh và chuyển giọng nói thành văn bản, StudyNight gửi các đoạn văn bản ngắn từ ghi chú của bạn (không bao giờ là cả tệp), ảnh hoặc hình trang đã thu nhỏ, và bản ghi âm thanh ngắn qua máy chủ của chúng tôi đến Groq, nhà cung cấp AI. Máy chủ của chúng tôi chỉ xử lý trong bộ nhớ và không lưu trữ hoặc ghi nhật ký nội dung; nhật ký chỉ chứa mã lỗi và thời gian."
+    },
+    "s4": {
+      "h": "Groq, nhà cung cấp AI của chúng tôi",
+      "p": "Chúng tôi đã kiểm tra tài liệu dữ liệu và Thỏa thuận Dịch vụ của Groq vào ngày 9 tháng 11 năm 2026. Họ cho biết Groq không giữ các yêu cầu suy luận theo mặc định, nhưng có thể ghi nhật ký đầu vào và đầu ra tạm thời, tối đa 30 ngày, để sửa lỗi hoặc điều tra nghi ngờ lạm dụng, trừ khi Zero Data Retention được bật cho tài khoản. Groq không được phép sử dụng đầu vào hoặc đầu ra để huấn luyện mô hình. Groq lưu trữ dữ liệu tại Hoa Kỳ. Xem console.groq.com/docs/your-data."
+    },
+    "s5": {
+      "h": "Tìm kiếm thông minh",
+      "p": "Nếu bạn bật Tìm kiếm thông minh, một mô hình ngôn ngữ sẽ được tải xuống một lần từ Hugging Face (huggingface.co), nơi nhìn thấy địa chỉ IP của bạn như bất kỳ trang web nào bạn truy cập. Sau đó, nó chạy hoàn toàn trên thiết bị của bạn; việc tìm kiếm ghi chú của bạn không bao giờ gửi chúng đi đâu."
+    },
+    "s6": {
+      "h": "Lưu trữ",
+      "p": "Ứng dụng được lưu trữ bởi Vercel, đơn vị xử lý dữ liệu kỹ thuật như địa chỉ IP của bạn để cung cấp trang web và bảo vệ nó khỏi lạm dụng."
+    },
+    "s7": {
+      "h": "Vui lòng không tải lên thông tin cá nhân",
+      "p": "Đừng tải lên các tài liệu chứa thông tin cá nhân hoặc nhạy cảm về bản thân hoặc người khác. AI được chỉ thị không bao giờ lặp lại dữ liệu cá nhân tìm thấy trong tài liệu, nhưng biện pháp bảo vệ tốt nhất là không tải lên."
+    },
+    "s8": {
+      "h": "Lựa chọn của bạn",
+      "p": "Bạn có thể xuất tất cả dữ liệu của mình (Hồ sơ → Cài đặt → Xuất bản sao lưu), xóa một bộ thẻ cùng với mọi thứ được tạo từ nó, hoặc xóa tất cả dữ liệu của bạn một lần. Vì không có gì về bạn được lưu trên máy chủ của chúng tôi, nên không có gì khác để chúng tôi gửi hoặc xóa."
+    },
+    "s9": {
+      "h": "Trẻ em",
+      "p": "StudyNight không thu thập bất kỳ điều gì về bạn. Nó dành cho độ tuổi 13 trở lên."
+    }
+  },
   "processing": {
     "background": "Bạn có thể bắt đầu chơi ngay khi câu hỏi đầu tiên sẵn sàng. Các câu hỏi còn lại sẽ được tải nền.",
     "chooseBody_other": "{{count}} trang cần đọc ảnh, nhưng tối đa {{max}} trang có thể đọc mỗi bộ. Chọn nơi bắt đầu.",
@@ -471,6 +568,41 @@
     "title": "Đang tạo câu hỏi",
     "topics": "Tìm chủ đề chính…",
     "vision": "Đọc ảnh của bạn ({{done}} trên {{total}})…"
+  },
+  "profile": {
+    "accuracy": "Độ chính xác",
+    "accuracyOverTime": "Độ chính xác theo tuần",
+    "activity": "Hoạt động",
+    "answered": "Đã trả lời",
+    "avatar": "Ảnh đại diện của bạn",
+    "badgeEarned": "{{name}}, đã đạt",
+    "badgeLocked": "{{name}}, chưa đạt",
+    "badges": "Huy hiệu ({{count}}/{{total}})",
+    "best": "Chuỗi tốt nhất",
+    "calendar": "12 tuần qua",
+    "current": "Chuỗi hiện tại",
+    "dayDetail_other": "{{date}}: {{count}} câu hỏi, {{time}}",
+    "earnedOn": "Đạt vào {{date}}",
+    "freezeHint": "Bạn nhận được một lượt đóng băng chuỗi mỗi 7 ngày liên tục (tối đa 2). Nếu bỏ lỡ một ngày, một lượt sẽ được dùng tự động.",
+    "freezes": "Đóng băng chuỗi",
+    "frozenDay": "{{date}}: Đã dùng lượt đóng băng chuỗi",
+    "less": "Ít",
+    "memberSince": "Học từ {{date}}",
+    "more": "Nhiều",
+    "nextLevel": "Còn {{xp}} XP để lên cấp tiếp theo",
+    "noName": "Người học ban đêm",
+    "notYet": "Chưa đạt — tiếp tục nhé!",
+    "stats": "Thống kê của bạn",
+    "streaks": "Chuỗi ngày liên tục",
+    "strongest": "Chủ đề mạnh nhất",
+    "studyTime": "Thời gian học",
+    "weakest": "Chủ đề cần luyện thêm",
+    "weekDetail_other": "Tuần {{week}}: {{percent}} trong {{count}} câu trả lời"
+  },
+  "pwa": {
+    "offline": "Bạn đang ngoại tuyến. Mọi thứ bạn đã tạo vẫn hoạt động bình thường.",
+    "refresh": "Làm mới",
+    "update": "Một phiên bản mới của StudyNight đã sẵn sàng."
   },
   "report": {
     "body": "Câu hỏi sẽ được gỡ bỏ ngay lập tức và không hiển thị nữa.",
@@ -489,6 +621,7 @@
     "bossWon": "Bão đã qua!",
     "done": "Xong",
     "goalMet": "Đạt mục tiêu ngày! +20 XP thưởng.",
+    "keepPractising": "Tiếp tục luyện tập chủ đề này",
     "levelUp": "Cấp độ lên! Bạn đã đạt cấp {{level}}.",
     "newBadges": "Huy hiệu mới",
     "newBest": "Kỷ lục cá nhân mới!",
@@ -501,10 +634,64 @@
     "xp": "XP đã nhận",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "Theo bộ thẻ",
+    "caughtUp": "Đã hoàn tất. Tuyệt vời!",
+    "due_other": "{{count}} câu hỏi đến hạn",
+    "dueHint": "Ôn tập ngắn ngay bây giờ giúp ghi nhớ lâu hơn.",
+    "forecast": "Sắp tới trong tuần này",
+    "forecastDetail_other": "{{day}}: {{count}} lượt ôn tập",
+    "how": "Lịch ôn tập được lên bằng thuật toán lặp lại ngắt quãng (FSRS) để mỗi câu hỏi xuất hiện ngay trước khi bạn quên. Mục tiêu là nhớ lại {{n}}%.",
+    "questions": "Câu hỏi",
+    "start": "Bắt đầu ôn tập",
+    "today": "Hôm nay"
+  },
   "samples": {
     "intro": "Được viết cho StudyNight, sẵn sàng chơi ngay — không cần tải lên. Cũng hoạt động offline.",
     "play_other": "Chơi ({{count}} câu hỏi)",
     "title": "Bộ mẫu"
+  },
+  "settings": {
+    "app": "Ứng dụng",
+    "backupHint": "Mọi thứ chỉ được lưu trên thiết bị này. Để chuyển sang điện thoại mới, hãy xuất bản sao lưu ở đây và nhập vào điện thoại mới.",
+    "badBackup": "Tệp đó không phải là bản sao lưu StudyNight hợp lệ.",
+    "data": "Dữ liệu của bạn",
+    "deleteAll": "Xóa tất cả dữ liệu của tôi",
+    "deleteBody": "Tất cả bộ thẻ, câu hỏi, tiến độ, huy hiệu và cài đặt sẽ bị xóa vĩnh viễn khỏi thiết bị này. Thao tác này không thể hoàn tác. Hãy xuất bản sao lưu trước nếu bạn muốn giữ lại.",
+    "deleteConfirm": "Xóa tất cả",
+    "deleteTitle": "Xóa tất cả?",
+    "export": "Xuất bản sao lưu",
+    "exported": "Đã lưu bản sao lưu.",
+    "extendedTime": "Kéo dài thời gian",
+    "extendedTimeHint": "Thêm 50% thời gian ở chế độ giới hạn.",
+    "figures": "Câu hỏi hình ảnh",
+    "figuresHint": "Câu hỏi về sơ đồ và biểu đồ trong ảnh hoặc trang quét.",
+    "haptics": "Rung",
+    "hapticsHint": "Trên điện thoại hỗ trợ.",
+    "import": "Nhập bản sao lưu",
+    "importConfirm": "Thay thế và nhập",
+    "importPreview_other": "Bản sao lưu từ {{date}} với {{decks}} bộ thẻ và {{count}} câu hỏi.",
+    "importTitle": "Nhập bản sao lưu này?",
+    "importWarning": "Mọi thứ hiện có trên thiết bị này sẽ bị thay thế.",
+    "language": "Ngôn ngữ",
+    "mascotColour": "Màu nhân vật",
+    "mascotN": "Màu {{n}}",
+    "motion": "Chuyển động",
+    "motionFull": "Đầy đủ",
+    "motionReduce": "Giảm",
+    "quizLanguage": "Ngôn ngữ mặc định",
+    "quizzes": "Bài kiểm tra",
+    "smartOn": "Đã tải xuống và sẵn sàng trên thiết bị này.",
+    "smartRemove": "Xóa Tìm kiếm thông minh",
+    "smartRemoved": "Đã xóa Tìm kiếm thông minh khỏi thiết bị này.",
+    "sound": "Hiệu ứng âm thanh",
+    "storage": "Đang dùng {{used}} trên thiết bị này.",
+    "theme": "Giao diện",
+    "themeDark": "Tối",
+    "themeLight": "Sáng",
+    "themeSystem": "Theo hệ thống",
+    "title": "Cài đặt",
+    "you": "Bạn"
   },
   "share": {
     "button": "Chia sẻ kết quả",
@@ -525,6 +712,44 @@
     "mobileData": "Bạn dường như đang dùng dữ liệu di động. Bạn có thể chờ Wi‑Fi hơn không?",
     "notNow": "Không bây giờ",
     "title": "Tìm kiếm thông minh"
+  },
+  "terms": {
+    "s1": {
+      "h": "Dành cho việc học của bạn",
+      "p": "StudyNight giúp bạn học tài liệu của chính mình. Hãy dùng nó cho mục đích học tập cá nhân."
+    },
+    "s2": {
+      "h": "Tệp bạn tải lên",
+      "p": "Chỉ tải lên tài liệu mà bạn có quyền sử dụng. Bạn chịu trách nhiệm về những gì mình tải lên. Không tải lên các tài liệu chứa thông tin cá nhân hoặc nhạy cảm về bạn hoặc người khác."
+    },
+    "s3": {
+      "h": "AI có thể sai",
+      "p": "Câu hỏi, câu trả lời, giải thích và điểm số được tạo bởi AI và kiểm tra tự động, nhưng vẫn có thể sai. Hãy luôn đối chiếu với ghi chú của bạn và dựa vào giáo viên cùng tài liệu chính thức để xác nhận thông tin chính xác."
+    },
+    "s4": {
+      "h": "Không phải lời khuyên chuyên môn",
+      "p": "StudyNight không cung cấp lời khuyên về y tế, pháp lý hay tài chính. Tính năng “Hỏi ghi chú” chỉ nhắc lại những gì có trong tài liệu của bạn."
+    },
+    "s5": {
+      "h": "Sử dụng công bằng",
+      "p": "Dịch vụ AI miễn phí và được chia sẻ cho tất cả người dùng StudyNight, nên có giới hạn. Vui lòng không tự động hóa yêu cầu hoặc cố gắng vượt qua các giới hạn này. Chúng tôi có thể làm chậm hoặc chặn các yêu cầu có dấu hiệu lạm dụng."
+    },
+    "s6": {
+      "h": "Chia sẻ",
+      "p": "Liên kết thách thức và thẻ chia sẻ không bao giờ chứa ghi chú của bạn, chỉ gồm câu hỏi, câu trả lời, giải thích ngắn và điểm số. Bạn quyết định chia sẻ với ai."
+    },
+    "s7": {
+      "h": "Không có bảo đảm",
+      "p": "StudyNight được cung cấp miễn phí và “theo hiện trạng”. Ứng dụng có thể thay đổi hoặc ngừng hoạt động, và trong phạm vi pháp luật cho phép, chúng tôi không chịu trách nhiệm cho các tổn thất phát sinh từ việc sử dụng. Hãy xuất bản sao lưu những gì bạn muốn giữ lại."
+    },
+    "s8": {
+      "h": "Quyền sở hữu",
+      "p": "StudyNight © 2026 Umit Kayaardi, bảo lưu mọi quyền. Các thành phần mã nguồn mở được sử dụng theo giấy phép riêng của chúng (xem Giấy phép). Ghi chú của bạn vẫn thuộc về bạn."
+    },
+    "s9": {
+      "h": "Thay đổi",
+      "p": "Chúng tôi có thể cập nhật các điều khoản này; ngày ở trên cho biết phiên bản mới nhất. Tiếp tục sử dụng StudyNight đồng nghĩa với việc bạn chấp nhận các điều khoản đã cập nhật."
+    }
   },
   "titles": {
     "bossSlayer": "Thợ săn bão",

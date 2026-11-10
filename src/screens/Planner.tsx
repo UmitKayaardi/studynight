@@ -43,16 +43,37 @@ export default function Planner() {
           </li>
         ))}
       </ul>
-      <Button className="mt-4" block size="lg" icon={<Plus className="size-5" aria-hidden />} onClick={() => setAdding(true)} disabled={!decks?.length}>
+      <Button
+        className="mt-4"
+        block
+        size="lg"
+        icon={<Plus className="size-5" aria-hidden />}
+        onClick={() => setAdding(true)}
+        disabled={!decks?.length}
+      >
         {t('planner.add')}
       </Button>
       {!decks?.length && <p className="mt-2 text-sm text-muted">{t('planner.needDeck')}</p>}
-      {decks && <AddExam open={adding} onClose={() => setAdding(false)} decks={decks.map((d) => ({ id: d.id, title: d.title }))} />}
+      {decks && (
+        <AddExam
+          open={adding}
+          onClose={() => setAdding(false)}
+          decks={decks.map((d) => ({ id: d.id, title: d.title }))}
+        />
+      )}
     </SubScreen>
   );
 }
 
-function AddExam({ open, onClose, decks }: { open: boolean; onClose: () => void; decks: Array<{ id: string; title: string }> }) {
+function AddExam({
+  open,
+  onClose,
+  decks,
+}: {
+  open: boolean;
+  onClose: () => void;
+  decks: Array<{ id: string; title: string }>;
+}) {
   const { t } = useTranslation();
   const toast = useApp((s) => s.toast);
   const [deckId, setDeckId] = useState(decks[0]?.id ?? '');
@@ -64,17 +85,44 @@ function AddExam({ open, onClose, decks }: { open: boolean; onClose: () => void;
     await upsertExam({ deckId, title: title.trim() || deck.title, date });
     await updateDeck(deckId, { examDate: date });
     const badges = await bumpStat('examsPlanned');
-    if (badges.length) toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
+    if (badges.length)
+      toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
     setTitle('');
     setDate('');
     onClose();
   };
   return (
-    <Sheet open={open} onClose={onClose} title={t('planner.add')} footer={<Button block disabled={!date || !deckId} onClick={() => void save()}>{t('common.save')}</Button>}>
+    <Sheet
+      open={open}
+      onClose={onClose}
+      title={t('planner.add')}
+      footer={
+        <Button block disabled={!date || !deckId} onClick={() => void save()}>
+          {t('common.save')}
+        </Button>
+      }
+    >
       <div className="flex flex-col gap-4 pb-2">
-        <SelectField label={t('planner.deck')} value={deckId} onChange={(e) => setDeckId(e.target.value)} options={decks.map((d) => ({ value: d.id, label: d.title }))} />
-        <TextField label={t('planner.examName')} value={title} maxLength={120} placeholder={decks.find((d) => d.id === deckId)?.title} onChange={(e) => setTitle(e.target.value)} />
-        <TextField label={t('planner.date')} type="date" min={dayKey(Date.now())} value={date} onChange={(e) => setDate(e.target.value)} />
+        <SelectField
+          label={t('planner.deck')}
+          value={deckId}
+          onChange={(e) => setDeckId(e.target.value)}
+          options={decks.map((d) => ({ value: d.id, label: d.title }))}
+        />
+        <TextField
+          label={t('planner.examName')}
+          value={title}
+          maxLength={120}
+          placeholder={decks.find((d) => d.id === deckId)?.title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <TextField
+          label={t('planner.date')}
+          type="date"
+          min={dayKey(Date.now())}
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
       </div>
     </Sheet>
   );
@@ -91,7 +139,12 @@ function ExamCard({ exam, today }: { exam: ExamRecord; today: string }) {
     const plan = buildPlan({
       today,
       examDate: exam.date,
-      topics: stats.topics.map((x) => ({ id: x.topic.id, title: x.topic.title, mastery: x.mastery, questionCount: x.questions })),
+      topics: stats.topics.map((x) => ({
+        id: x.topic.id,
+        title: x.topic.title,
+        mastery: x.mastery,
+        questionCount: x.questions,
+      })),
       dueReviews: stats.due,
     });
     return { stats, plan };
@@ -108,8 +161,12 @@ function ExamCard({ exam, today }: { exam: ExamRecord; today: string }) {
       time,
       minutes: 30,
       describe: (d) => ({
-        summary: d.mockExam ? t('planner.icsMock', { title: exam.title }) : t('planner.icsSummary', { title: exam.title, count: d.practice + d.reviews }),
-        description: [d.focusTopicIds.map(topicTitle).filter(Boolean).join(', '), t('planner.icsOpen')].filter(Boolean).join('\n'),
+        summary: d.mockExam
+          ? t('planner.icsMock', { title: exam.title })
+          : t('planner.icsSummary', { title: exam.title, count: d.practice + d.reviews }),
+        description: [d.focusTopicIds.map(topicTitle).filter(Boolean).join(', '), t('planner.icsOpen')]
+          .filter(Boolean)
+          .join('\n'),
       }),
     });
     downloadFile(`studynight-${exam.date}.ics`, ics, 'text/calendar');
@@ -125,7 +182,10 @@ function ExamCard({ exam, today }: { exam: ExamRecord; today: string }) {
             {formatDate(exam.date, { weekday: 'long', day: 'numeric', month: 'long' })} · {stats.deck.title}
           </p>
         </div>
-        <IconButton label={t('planner.remove', { title: exam.title })} onClick={() => void deleteExam(exam.id)}>
+        <IconButton
+          label={t('planner.remove', { title: exam.title })}
+          onClick={() => void deleteExam(exam.id)}
+        >
           <Trash2 className="size-5" aria-hidden />
         </IconButton>
       </div>
@@ -134,7 +194,11 @@ function ExamCard({ exam, today }: { exam: ExamRecord; today: string }) {
         <Button
           onClick={() => {
             const focus = todayPlan.focusTopicIds[0];
-            void start(focus ? { mode: 'topic', deckId: exam.deckId, topicId: focus } : { mode: 'quick', deckId: exam.deckId });
+            void start(
+              focus
+                ? { mode: 'topic', deckId: exam.deckId, topicId: focus }
+                : { mode: 'quick', deckId: exam.deckId },
+            );
             navigate('/play');
           }}
         >
@@ -144,9 +208,19 @@ function ExamCard({ exam, today }: { exam: ExamRecord; today: string }) {
       {plan.status === 'upcoming' && (
         <div className="flex items-end gap-2">
           <div className="w-32">
-            <TextField label={t('planner.time')} type="time" value={time} onChange={(e) => setTime(e.target.value || '18:00')} />
+            <TextField
+              label={t('planner.time')}
+              type="time"
+              value={time}
+              onChange={(e) => setTime(e.target.value || '18:00')}
+            />
           </div>
-          <Button variant="secondary" className="flex-1" icon={<CalendarPlus className="size-5" aria-hidden />} onClick={exportIcs}>
+          <Button
+            variant="secondary"
+            className="flex-1"
+            icon={<CalendarPlus className="size-5" aria-hidden />}
+            onClick={exportIcs}
+          >
             {t('planner.addToCalendar')}
           </Button>
         </div>
@@ -165,17 +239,25 @@ function PlanSummary({ plan, topicTitle }: { plan: Plan; topicTitle: (id: string
       <ol className="flex flex-col gap-1 text-sm">
         {plan.days.slice(0, 7).map((d) => (
           <li key={d.date} className="flex gap-2 rounded-xl bg-surface-2 px-3 py-2">
-            <span className="w-20 shrink-0 font-semibold">{formatDate(d.date, { weekday: 'short', day: 'numeric' })}</span>
+            <span className="w-20 shrink-0 font-semibold">
+              {formatDate(d.date, { weekday: 'short', day: 'numeric' })}
+            </span>
             <span className="min-w-0 flex-1">
               {d.mockExam
                 ? t('planner.mockDay', { count: d.reviews })
                 : t('planner.dayPlan', { practice: formatNumber(d.practice), count: d.reviews })}
-              {d.focusTopicIds.length > 0 && <span className="block truncate text-muted">{d.focusTopicIds.map(topicTitle).filter(Boolean).join(', ')}</span>}
+              {d.focusTopicIds.length > 0 && (
+                <span className="block truncate text-muted">
+                  {d.focusTopicIds.map(topicTitle).filter(Boolean).join(', ')}
+                </span>
+              )}
             </span>
           </li>
         ))}
       </ol>
-      {plan.days.length > 7 && <p className="text-xs text-muted">{t('planner.more', { count: plan.days.length - 7 })}</p>}
+      {plan.days.length > 7 && (
+        <p className="text-xs text-muted">{t('planner.more', { count: plan.days.length - 7 })}</p>
+      )}
     </div>
   );
 }

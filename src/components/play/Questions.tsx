@@ -48,7 +48,13 @@ export function FigureImage({ figureId }: { figureId?: string }) {
     return () => URL.revokeObjectURL(u);
   }, [image]);
   if (!figureId || !url) return null;
-  return <img src={url} alt={t('play.figureAlt')} className="mb-3 max-h-64 w-full rounded-2xl border border-border bg-white object-contain" />;
+  return (
+    <img
+      src={url}
+      alt={t('play.figureAlt')}
+      className="mb-3 max-h-64 w-full rounded-2xl border border-border bg-white object-contain"
+    />
+  );
 }
 
 export function Prompt({ q }: { q: QuestionContent }) {
@@ -69,7 +75,15 @@ export function McqView({ item, answer, onSubmit, hideResult }: QuestionProps) {
       {item.order.map((orig, pos) => {
         const isCorrect = orig === q.answerIndex;
         const show = answer && !hideResult;
-        const state = show ? (isCorrect ? 'good' : chosen === orig ? 'bad' : 'idle') : chosen === orig ? 'chosen' : 'idle';
+        const state = show
+          ? isCorrect
+            ? 'good'
+            : chosen === orig
+              ? 'bad'
+              : 'idle'
+          : chosen === orig
+            ? 'chosen'
+            : 'idle';
         return (
           <li key={orig}>
             <button
@@ -77,10 +91,19 @@ export function McqView({ item, answer, onSubmit, hideResult }: QuestionProps) {
               disabled={!!answer}
               onClick={() => onSubmit({ type: 'mcq', choice: orig })}
               className={`flex min-h-14 w-full items-center gap-3 rounded-2xl border-2 px-4 py-3 text-start text-lg transition active:scale-[0.99] ${
-                state === 'good' ? 'border-good bg-good-soft' : state === 'bad' ? 'border-bad bg-bad-soft' : state === 'chosen' ? 'border-accent bg-accent-soft' : 'border-border bg-surface hover:border-accent'
+                state === 'good'
+                  ? 'border-good bg-good-soft'
+                  : state === 'bad'
+                    ? 'border-bad bg-bad-soft'
+                    : state === 'chosen'
+                      ? 'border-accent bg-accent-soft'
+                      : 'border-border bg-surface hover:border-accent'
               }`}
             >
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-2 font-display text-sm font-extrabold" aria-hidden>
+              <span
+                className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-2 font-display text-sm font-extrabold"
+                aria-hidden
+              >
                 {LETTERS[pos]}
               </span>
               <RichText as="span" text={q.options[orig]!} className="min-w-0 flex-1" />
@@ -102,7 +125,15 @@ export function TfView({ answer, onSubmit, item, hideResult }: QuestionProps) {
     <div className="grid grid-cols-2 gap-3">
       {[true, false].map((v) => {
         const show = answer && !hideResult;
-        const state = show ? (v === q.answer ? 'good' : chosen === v ? 'bad' : 'idle') : chosen === v ? 'chosen' : 'idle';
+        const state = show
+          ? v === q.answer
+            ? 'good'
+            : chosen === v
+              ? 'bad'
+              : 'idle'
+          : chosen === v
+            ? 'chosen'
+            : 'idle';
         return (
           <button
             key={String(v)}
@@ -110,7 +141,13 @@ export function TfView({ answer, onSubmit, item, hideResult }: QuestionProps) {
             disabled={!!answer}
             onClick={() => onSubmit({ type: 'tf', value: v })}
             className={`flex min-h-20 items-center justify-center gap-2 rounded-2xl border-2 font-display text-xl font-extrabold transition active:scale-[0.98] ${
-              state === 'good' ? 'border-good bg-good-soft' : state === 'bad' ? 'border-bad bg-bad-soft' : state === 'chosen' ? 'border-accent bg-accent-soft' : 'border-border bg-surface hover:border-accent'
+              state === 'good'
+                ? 'border-good bg-good-soft'
+                : state === 'bad'
+                  ? 'border-bad bg-bad-soft'
+                  : state === 'chosen'
+                    ? 'border-accent bg-accent-soft'
+                    : 'border-border bg-surface hover:border-accent'
             }`}
           >
             {v ? t('play.true') : t('play.false')}
@@ -161,7 +198,9 @@ export function FillView({ answer, onSubmit, hideResult, item }: QuestionProps) 
           {t('play.expected')} <strong>{q.answer}</strong>
         </p>
       )}
-      {show && answer.evaluation.typoAccepted && <p className="text-sm text-muted">{t('play.typoAccepted', { answer: q.answer })}</p>}
+      {show && answer.evaluation.typoAccepted && (
+        <p className="text-sm text-muted">{t('play.typoAccepted', { answer: q.answer })}</p>
+      )}
       {!answer && (
         <Button type="submit" size="lg" block disabled={!text.trim()}>
           {t('play.check')}
@@ -182,7 +221,13 @@ export function GradeButtons({ onGrade, disabled }: { onGrade: (g: SelfGrade) =>
   return (
     <div className="grid grid-cols-4 gap-2" role="group" aria-label={t('play.howWell')}>
       {grades.map(({ g, cls }) => (
-        <button key={g} type="button" disabled={disabled} onClick={() => onGrade(g)} className={`min-h-14 rounded-2xl border-2 bg-surface px-1 font-display text-sm font-extrabold ${cls}`}>
+        <button
+          key={g}
+          type="button"
+          disabled={disabled}
+          onClick={() => onGrade(g)}
+          className={`min-h-14 rounded-2xl border-2 bg-surface px-1 font-display text-sm font-extrabold ${cls}`}
+        >
           {t(`play.grade.${g}`)}
         </button>
       ))}
@@ -208,7 +253,11 @@ export function FlashcardView({ item, answer, onSubmit }: QuestionProps) {
         aria-expanded={flipped}
         className="flex min-h-40 flex-col items-center justify-center gap-2 rounded-[var(--radius-card)] border-2 border-dashed border-accent bg-accent-soft p-5 text-center"
       >
-        {flipped ? <RichText text={q.back} className="text-lg" /> : <span className="font-display font-extrabold">{t('play.showAnswer')}</span>}
+        {flipped ? (
+          <RichText text={q.back} className="text-lg" />
+        ) : (
+          <span className="font-display font-extrabold">{t('play.showAnswer')}</span>
+        )}
       </button>
       {flipped && !answer && <GradeButtons onGrade={(g) => onSubmit({ type: 'flashcard', grade: g })} />}
     </div>
@@ -260,12 +309,18 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
                   className={`flex min-h-14 w-full items-center gap-2 rounded-2xl border-2 p-2 text-start text-sm ${activeTerm === i ? 'border-accent bg-accent-soft' : 'border-border bg-surface'}`}
                 >
                   {colour && (
-                    <span className="flex size-6 shrink-0 items-center justify-center rounded-full font-display text-xs font-extrabold text-[#141a3a]" style={{ background: colour }} aria-hidden>
+                    <span
+                      className="flex size-6 shrink-0 items-center justify-center rounded-full font-display text-xs font-extrabold text-[#141a3a]"
+                      style={{ background: colour }}
+                      aria-hidden
+                    >
                       {i + 1}
                     </span>
                   )}
                   <RichText as="span" text={p.term} className="min-w-0 flex-1 font-semibold" />
-                  {ok !== null && <Mark ok={ok} label={ok ? t('play.correctAnswer') : t('play.yourAnswer')} />}
+                  {ok !== null && (
+                    <Mark ok={ok} label={ok ? t('play.correctAnswer') : t('play.yourAnswer')} />
+                  )}
                 </button>
               </li>
             );
@@ -285,7 +340,11 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
                   style={colour ? { borderColor: colour } : undefined}
                 >
                   {colour && (
-                    <span className="flex size-6 shrink-0 items-center justify-center rounded-full font-display text-xs font-extrabold text-[#141a3a]" style={{ background: colour }} aria-hidden>
+                    <span
+                      className="flex size-6 shrink-0 items-center justify-center rounded-full font-display text-xs font-extrabold text-[#141a3a]"
+                      style={{ background: colour }}
+                      aria-hidden
+                    >
                       {owner + 1}
                     </span>
                   )}
@@ -311,10 +370,18 @@ export function MatchView({ item, answer, onSubmit, hideResult }: QuestionProps)
       )}
       {!answer && (
         <div className="flex gap-2">
-          <Button variant="ghost" icon={<RotateCcw className="size-4" aria-hidden />} onClick={() => setPairs(q.pairs.map(() => null))}>
+          <Button
+            variant="ghost"
+            icon={<RotateCcw className="size-4" aria-hidden />}
+            onClick={() => setPairs(q.pairs.map(() => null))}
+          >
             {t('play.reset')}
           </Button>
-          <Button block disabled={pairs.some((x) => x === null)} onClick={() => onSubmit({ type: 'match', pairs: pairs as number[] })}>
+          <Button
+            block
+            disabled={pairs.some((x) => x === null)}
+            onClick={() => onSubmit({ type: 'match', pairs: pairs as number[] })}
+          >
             {t('play.check')}
           </Button>
         </div>
@@ -342,19 +409,36 @@ export function OrderView({ item, answer, onSubmit, hideResult }: QuestionProps)
   const row = (s: number, pos: number) => {
     const ok = done && !hideResult ? s === pos : null;
     return (
-      <div className={`flex min-h-14 items-center gap-2 rounded-2xl border-2 bg-surface p-2 ${ok === null ? 'border-border' : ok ? 'border-good' : 'border-bad'}`}>
+      <div
+        className={`flex min-h-14 items-center gap-2 rounded-2xl border-2 bg-surface p-2 ${ok === null ? 'border-border' : ok ? 'border-good' : 'border-bad'}`}
+      >
         {!answer && <GripVertical className="size-5 shrink-0 cursor-grab text-muted" aria-hidden />}
-        <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-surface-2 font-display text-sm font-extrabold" aria-hidden>
+        <span
+          className="flex size-7 shrink-0 items-center justify-center rounded-full bg-surface-2 font-display text-sm font-extrabold"
+          aria-hidden
+        >
           {pos + 1}
         </span>
         <RichText as="span" text={q.steps[s]!} className="min-w-0 flex-1 text-sm font-semibold" />
         {ok !== null && <Mark ok={ok} label={ok ? t('play.correctAnswer') : t('play.yourAnswer')} />}
         {!answer && (
           <span className="flex shrink-0 flex-col">
-            <button type="button" className="flex size-11 items-center justify-center rounded-xl hover:bg-surface-2 disabled:opacity-30" disabled={pos === 0} onClick={() => move(pos, -1)} aria-label={t('play.moveUp', { n: pos + 1 })}>
+            <button
+              type="button"
+              className="flex size-11 items-center justify-center rounded-xl hover:bg-surface-2 disabled:opacity-30"
+              disabled={pos === 0}
+              onClick={() => move(pos, -1)}
+              aria-label={t('play.moveUp', { n: pos + 1 })}
+            >
               <ArrowUp className="size-4" aria-hidden />
             </button>
-            <button type="button" className="flex size-11 items-center justify-center rounded-xl hover:bg-surface-2 disabled:opacity-30" disabled={pos === order.length - 1} onClick={() => move(pos, 1)} aria-label={t('play.moveDown', { n: pos + 1 })}>
+            <button
+              type="button"
+              className="flex size-11 items-center justify-center rounded-xl hover:bg-surface-2 disabled:opacity-30"
+              disabled={pos === order.length - 1}
+              onClick={() => move(pos, 1)}
+              aria-label={t('play.moveDown', { n: pos + 1 })}
+            >
               <ArrowDown className="size-4" aria-hidden />
             </button>
           </span>

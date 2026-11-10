@@ -35,7 +35,17 @@ function DataTable({ caption, data, valueLabel }: { caption: string; data: Datum
   );
 }
 
-export function BarChart({ data, caption, valueLabel, height = 140 }: { data: Datum[]; caption: string; valueLabel: string; height?: number }) {
+export function BarChart({
+  data,
+  caption,
+  valueLabel,
+  height = 140,
+}: {
+  data: Datum[];
+  caption: string;
+  valueLabel: string;
+  height?: number;
+}) {
   const [hover, setHover] = useState<number | null>(null);
   const max = Math.max(1, ...data.map((d) => d.value));
   return (
@@ -50,8 +60,17 @@ export function BarChart({ data, caption, valueLabel, height = 140 }: { data: Da
               onPointerEnter={() => setHover(i)}
               onPointerLeave={() => setHover(null)}
             >
-              <span className="mb-1 text-xs font-bold text-muted">{d.value ? formatNumber(d.value) : ''}</span>
-              <div className="w-full max-w-9 rounded-t-[4px]" style={{ height: h, background: 'var(--sn-chart)', opacity: hover === null || hover === i ? 1 : 0.55 }} />
+              <span className="mb-1 text-xs font-bold text-muted">
+                {d.value ? formatNumber(d.value) : ''}
+              </span>
+              <div
+                className="w-full max-w-9 rounded-t-[4px]"
+                style={{
+                  height: h,
+                  background: 'var(--sn-chart)',
+                  opacity: hover === null || hover === i ? 1 : 0.55,
+                }}
+              />
               {hover === i && (
                 <span className="absolute bottom-full z-10 mb-1 whitespace-nowrap rounded-lg bg-text px-2 py-1 text-xs font-semibold text-bg shadow-card">
                   {d.detail ?? `${d.label}: ${formatNumber(d.value)}`}
@@ -74,7 +93,17 @@ export function BarChart({ data, caption, valueLabel, height = 140 }: { data: Da
 }
 
 /** Line chart for a 0–1 measure (e.g. accuracy per week). */
-export function LineChart({ data, caption, valueLabel, height = 140 }: { data: Datum[]; caption: string; valueLabel: string; height?: number }) {
+export function LineChart({
+  data,
+  caption,
+  valueLabel,
+  height = 140,
+}: {
+  data: Datum[];
+  caption: string;
+  valueLabel: string;
+  height?: number;
+}) {
   const [hover, setHover] = useState<number | null>(null);
   const w = 320;
   const pad = 10;
@@ -87,14 +116,38 @@ export function LineChart({ data, caption, valueLabel, height = 140 }: { data: D
         {[0, 0.5, 1].map((g) => (
           <line key={g} x1={pad} x2={w - pad} y1={y(g)} y2={y(g)} stroke="var(--sn-border)" strokeWidth="1" />
         ))}
-        <path d={path} fill="none" stroke="var(--sn-chart)" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+        <path
+          d={path}
+          fill="none"
+          stroke="var(--sn-chart)"
+          strokeWidth="2"
+          strokeLinejoin="round"
+          strokeLinecap="round"
+        />
         {data.map((d, i) => (
           <g key={d.label} onPointerEnter={() => setHover(i)} onPointerLeave={() => setHover(null)}>
             <circle cx={x(i)} cy={y(d.value)} r="14" fill="transparent" />
-            <circle cx={x(i)} cy={y(d.value)} r="4.5" fill="var(--sn-chart)" stroke="var(--sn-surface)" strokeWidth="2" />
+            <circle
+              cx={x(i)}
+              cy={y(d.value)}
+              r="4.5"
+              fill="var(--sn-chart)"
+              stroke="var(--sn-surface)"
+              strokeWidth="2"
+            />
           </g>
         ))}
-        {hover !== null && <line x1={x(hover)} x2={x(hover)} y1={pad} y2={height - pad} stroke="var(--sn-text-muted)" strokeWidth="1" strokeDasharray="3 3" />}
+        {hover !== null && (
+          <line
+            x1={x(hover)}
+            x2={x(hover)}
+            y1={pad}
+            y2={height - pad}
+            stroke="var(--sn-text-muted)"
+            strokeWidth="1"
+            strokeDasharray="3 3"
+          />
+        )}
       </svg>
       {hover !== null && (
         <span
@@ -130,7 +183,15 @@ export function Heatmap({
   const weeks = Math.ceil(cells.length / 7);
   return (
     <figure className="relative">
-      <div className="grid gap-[3px]" style={{ gridTemplateColumns: `repeat(${weeks}, minmax(0, 1fr))`, gridAutoFlow: 'column', gridTemplateRows: 'repeat(7, minmax(0, 1fr))' }} aria-hidden>
+      <div
+        className="grid gap-[3px]"
+        style={{
+          gridTemplateColumns: `repeat(${weeks}, minmax(0, 1fr))`,
+          gridAutoFlow: 'column',
+          gridTemplateRows: 'repeat(7, minmax(0, 1fr))',
+        }}
+        aria-hidden
+      >
         {cells.map((c, i) => (
           <div
             key={c.key}
@@ -157,7 +218,13 @@ export function Heatmap({
         ))}
         <span>{legend.more}</span>
       </div>
-      <DataTable caption={caption} data={cells.filter((c) => !c.empty && c.level > 0).map((c) => ({ label: c.key, value: c.level, detail: c.detail }))} valueLabel={valueLabel} />
+      <DataTable
+        caption={caption}
+        data={cells
+          .filter((c) => !c.empty && c.level > 0)
+          .map((c) => ({ label: c.key, value: c.level, detail: c.detail }))}
+        valueLabel={valueLabel}
+      />
     </figure>
   );
 }

@@ -48,7 +48,8 @@ export function isDuplicate(text: string, existing: string[], prompt?: string): 
   });
 }
 
-const LATEX_HINT = /\\(rightarrow|leftarrow|frac|times|cdot|alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|sum|sqrt|leq|geq|neq|approx|hat|text|mathrm|infty)\b|[_^]\{/;
+const LATEX_HINT =
+  /\\(rightarrow|leftarrow|frac|times|cdot|alpha|beta|gamma|delta|theta|lambda|mu|pi|sigma|sum|sqrt|leq|geq|neq|approx|hat|text|mathrm|infty)\b|[_^]\{/;
 
 /** Wraps a short answer that is clearly LaTeX but has no $…$ delimiters, so it renders as maths. */
 export function wrapLatex(s: unknown): unknown {
@@ -79,7 +80,13 @@ export function normaliseDraft(raw: unknown, topicId: string): unknown {
   if (Array.isArray(d.acceptedAnswers)) d.acceptedAnswers = d.acceptedAnswers.map(wrapLatex);
   if (Array.isArray(d.pairs))
     d.pairs = d.pairs.map((p: unknown) =>
-      p && typeof p === 'object' ? { ...(p as object), term: wrapLatex((p as { term?: unknown }).term), definition: wrapLatex((p as { definition?: unknown }).definition) } : p,
+      p && typeof p === 'object'
+        ? {
+            ...(p as object),
+            term: wrapLatex((p as { term?: unknown }).term),
+            definition: wrapLatex((p as { definition?: unknown }).definition),
+          }
+        : p,
     );
   if (d.type === 'flashcard') d.back = wrapLatex(d.back);
   delete d.figureId; // set by the server only

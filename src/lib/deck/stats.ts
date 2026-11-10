@@ -57,8 +57,16 @@ export async function deckStats(deckId: string, now = Date.now()): Promise<DeckS
       };
     });
   const totalQ = topicStats.reduce((s, t) => s + t.questions, 0);
-  const mastery = totalQ ? Math.round(topicStats.reduce((s, t) => s + t.mastery * t.questions, 0) / totalQ) : 0;
-  return { deck, questions: totalQ, due: topicStats.reduce((s, t) => s + t.due, 0), mastery, topics: topicStats };
+  const mastery = totalQ
+    ? Math.round(topicStats.reduce((s, t) => s + t.mastery * t.questions, 0) / totalQ)
+    : 0;
+  return {
+    deck,
+    questions: totalQ,
+    due: topicStats.reduce((s, t) => s + t.due, 0),
+    mastery,
+    topics: topicStats,
+  };
 }
 
 export async function allDeckStats(now = Date.now()): Promise<DeckStat[]> {
@@ -70,7 +78,9 @@ export async function allDeckStats(now = Date.now()): Promise<DeckStat[]> {
 }
 
 export async function dueCount(deckId?: string, now = Date.now()): Promise<number> {
-  const cards = deckId ? await db.cardStates.where('deckId').equals(deckId).toArray() : await db.cardStates.toArray();
+  const cards = deckId
+    ? await db.cardStates.where('deckId').equals(deckId).toArray()
+    : await db.cardStates.toArray();
   const reported = new Set((await db.questions.filter((q) => !!q.reported).primaryKeys()) as string[]);
   return cards.filter((c) => isDue(c, now) && !reported.has(c.questionId)).length;
 }

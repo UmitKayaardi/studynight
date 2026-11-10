@@ -36,7 +36,9 @@ export function SmartSearchCard({ deckId }: { deckId: string }) {
   }, [deck, deckId, mayRun]);
 
   if (!deck || downloaded === null) return null;
-  const asking = (setting === 'ask' && !downloaded) || (setting === 'on' && !downloaded && metered && smart.status === 'idle');
+  const asking =
+    (setting === 'ask' && !downloaded) ||
+    (setting === 'on' && !downloaded && metered && smart.status === 'idle');
   if (asking) {
     return (
       <Card className="my-2 flex flex-col gap-2">
@@ -66,7 +68,9 @@ export function SmartSearchCard({ deckId }: { deckId: string }) {
   if (smart.status === 'downloading' && smart.total > 0) {
     return (
       <Card className="my-2 flex flex-col gap-2" aria-live="polite">
-        <p className="text-sm font-semibold">{t('smart.downloading', { percent: formatPercent(smart.loaded / smart.total) })}</p>
+        <p className="text-sm font-semibold">
+          {t('smart.downloading', { percent: formatPercent(smart.loaded / smart.total) })}
+        </p>
         <ProgressBar value={smart.loaded / smart.total} label={t('smart.title')} />
       </Card>
     );

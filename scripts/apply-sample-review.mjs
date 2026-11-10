@@ -5,8 +5,17 @@
 // Usage: node scripts/apply-sample-review.mjs
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 
-const ORDER = ['solar-system', 'vaccines', 'machine-learning', 'personal-finance', 'fotosentez', 'ciclo-del-agua'];
-const review = existsSync('samples/review.json') ? JSON.parse(readFileSync('samples/review.json', 'utf8')) : {};
+const ORDER = [
+  'solar-system',
+  'vaccines',
+  'machine-learning',
+  'personal-finance',
+  'fotosentez',
+  'ciclo-del-agua',
+];
+const review = existsSync('samples/review.json')
+  ? JSON.parse(readFileSync('samples/review.json', 'utf8'))
+  : {};
 const ids = readdirSync('samples/generated')
   .filter((f) => f.endsWith('.json'))
   .map((f) => f.replace(/\.json$/, ''))
@@ -33,7 +42,13 @@ for (const id of ids) {
     }
   }
   writeFileSync(`src/samples/${id}.json`, JSON.stringify(deck, null, 1) + '\n');
-  index.push({ id, title: deck.title, language: deck.language, description: deck.description, questions: deck.questions.length });
+  index.push({
+    id,
+    title: deck.title,
+    language: deck.language,
+    description: deck.description,
+    questions: deck.questions.length,
+  });
   console.log(`${id}: ${removed} removed, ${patched} corrected, ${deck.questions.length} questions shipped`);
 }
 

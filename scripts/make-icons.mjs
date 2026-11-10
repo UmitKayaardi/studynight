@@ -20,7 +20,11 @@ for (const j of jobs) {
     : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="${j.size}" height="${j.size}">${inner}</svg>`;
   await page.setViewportSize({ width: j.size, height: j.size });
   await page.setContent(`<html><body style="margin:0;background:transparent">${art}</body></html>`);
-  await page.screenshot({ path: j.file, omitBackground: !j.maskable, clip: { x: 0, y: 0, width: j.size, height: j.size } });
+  await page.screenshot({
+    path: j.file,
+    omitBackground: !j.maskable,
+    clip: { x: 0, y: 0, width: j.size, height: j.size },
+  });
   console.log('icon', j.file);
 }
 await browser.close();

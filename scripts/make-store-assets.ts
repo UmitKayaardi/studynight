@@ -31,7 +31,17 @@ export default async function main() {
   .pill { display: inline-block; margin-top: 26px; padding: 10px 22px; border-radius: 999px; background: #2ee6c5; color: #04201b; font-family: 'Nunito Variable', sans-serif; font-weight: 800; font-size: 24px; }
   .star { position: absolute; width: 6px; height: 6px; border-radius: 50%; background: #ffc94d; opacity: .8; }
 </style></head><body>
-${[[120, 60], [460, 420], [560, 80], [930, 450], [700, 30], [300, 470], [990, 120]].map(([x, y]) => `<span class="star" style="left:${x}px;top:${y}px"></span>`).join('')}
+${[
+  [120, 60],
+  [460, 420],
+  [560, 80],
+  [930, 450],
+  [700, 30],
+  [300, 470],
+  [990, 120],
+]
+  .map(([x, y]) => `<span class="star" style="left:${x}px;top:${y}px"></span>`)
+  .join('')}
 <div class="wrap"><div class="text"><div class="brand">${logo}<h1>StudyNight</h1></div><p>Your notes, turned into a game.</p><span class="pill">Free · Private · 21 languages</span></div>${mascot}</div>
 </body></html>`;
   const file = resolve('store/.feature.html');

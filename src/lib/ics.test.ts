@@ -24,7 +24,10 @@ describe('ics', () => {
         { date: '2026-05-03', practice: 0, reviews: 0, focusTopicIds: [], mockExam: false },
         { date: '2026-05-04', practice: 0, reviews: 3, focusTopicIds: [], mockExam: true },
       ],
-      describe: (d) => ({ summary: `Study: Biology (${d.practice} questions)`, description: 'Open StudyNight' }),
+      describe: (d) => ({
+        summary: `Study: Biology (${d.practice} questions)`,
+        description: 'Open StudyNight',
+      }),
     });
     expect(ics.match(/BEGIN:VEVENT/g)).toHaveLength(2);
     expect(ics).toContain('DTSTART:20260502T183000');

@@ -18,12 +18,52 @@ import { questionKeyText, type QuestionContent } from '../shared/question';
 import type { SampleDeck } from '../src/lib/samples';
 
 export const SAMPLES = [
-  { id: 'solar-system', file: 'solar-system.md', title: 'The Solar System', language: 'en', description: 'How the Solar System formed, the Sun, the eight planets and the smaller bodies around them.' },
-  { id: 'vaccines', file: 'vaccines.md', title: 'How Vaccines Work', language: 'en', description: 'The immune system, immune memory and how vaccines use it. General science, not medical advice.' },
-  { id: 'machine-learning', file: 'machine-learning.md', title: 'Intro to Machine Learning', language: 'en', description: 'Types of learning, linear regression, gradient descent, overfitting and evaluation — with formulas and code.' },
-  { id: 'personal-finance', file: 'personal-finance.md', title: 'Basics of Personal Finance', language: 'en', description: 'Budgeting, saving, interest, inflation, borrowing and risk. Concepts only, not financial advice.' },
-  { id: 'fotosentez', file: 'fotosentez.md', title: 'Fotosentez', language: 'tr', description: 'Bitkilerin ışık enerjisini kimyasal enerjiye nasıl dönüştürdüğü.' },
-  { id: 'ciclo-del-agua', file: 'ciclo-del-agua.md', title: 'El ciclo del agua', language: 'es', description: 'Evaporación, condensación, precipitación y escorrentía.' },
+  {
+    id: 'solar-system',
+    file: 'solar-system.md',
+    title: 'The Solar System',
+    language: 'en',
+    description:
+      'How the Solar System formed, the Sun, the eight planets and the smaller bodies around them.',
+  },
+  {
+    id: 'vaccines',
+    file: 'vaccines.md',
+    title: 'How Vaccines Work',
+    language: 'en',
+    description:
+      'The immune system, immune memory and how vaccines use it. General science, not medical advice.',
+  },
+  {
+    id: 'machine-learning',
+    file: 'machine-learning.md',
+    title: 'Intro to Machine Learning',
+    language: 'en',
+    description:
+      'Types of learning, linear regression, gradient descent, overfitting and evaluation — with formulas and code.',
+  },
+  {
+    id: 'personal-finance',
+    file: 'personal-finance.md',
+    title: 'Basics of Personal Finance',
+    language: 'en',
+    description:
+      'Budgeting, saving, interest, inflation, borrowing and risk. Concepts only, not financial advice.',
+  },
+  {
+    id: 'fotosentez',
+    file: 'fotosentez.md',
+    title: 'Fotosentez',
+    language: 'tr',
+    description: 'Bitkilerin ışık enerjisini kimyasal enerjiye nasıl dönüştürdüğü.',
+  },
+  {
+    id: 'ciclo-del-agua',
+    file: 'ciclo-del-agua.md',
+    title: 'El ciclo del agua',
+    language: 'es',
+    description: 'Evaporación, condensación, precipitación y escorrentía.',
+  },
 ];
 
 const PER_TOPIC = 9;
@@ -34,7 +74,12 @@ async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
     try {
       return await fn();
     } catch (e) {
-      if (attempt >= 12 || !(e instanceof ApiError) || !['RATE_LIMITED', 'TIMEOUT', 'UPSTREAM'].includes(e.code)) throw e;
+      if (
+        attempt >= 12 ||
+        !(e instanceof ApiError) ||
+        !['RATE_LIMITED', 'TIMEOUT', 'UPSTREAM'].includes(e.code)
+      )
+        throw e;
       // Daily token caps answer with a long retry-after: wait it out (up to 15 minutes) instead of failing.
       const wait = e.retryAfter ? Math.min(900, e.retryAfter + 5) * 1000 : 15_000 + attempt * 10_000;
       console.log(`  waiting ${Math.round(wait / 1000)} s (${e.code})`);
@@ -53,7 +98,12 @@ export default async function main(args: string[]) {
     const ids = chunks.map((c) => `c${c.index}`);
     const topics = (
       await withRetry(() =>
-        buildTopics({ stage: 'map', language: s.language, final: true, chunks: chunks.map((c, i) => ({ id: ids[i]!, summary: chunkSummary(c) })) }),
+        buildTopics({
+          stage: 'map',
+          language: s.language,
+          final: true,
+          chunks: chunks.map((c, i) => ({ id: ids[i]!, summary: chunkSummary(c) })),
+        }),
       )
     ).topics;
     console.log(`${s.id}: ${chunks.length} chunks, ${topics.length} topics`);
@@ -85,11 +135,18 @@ export default async function main(args: string[]) {
       description: s.description,
       source: s.file,
       chunks: chunks.map((c) => ({ text: c.text, headingPath: c.headingPath, wordCount: c.wordCount })),
-      topics: topics.map((t) => ({ key: t.id, title: t.title, summary: t.summary, chunks: t.chunkIds.map((id) => Number(id.slice(1))) })),
+      topics: topics.map((t) => ({
+        key: t.id,
+        title: t.title,
+        summary: t.summary,
+        chunks: t.chunkIds.map((id) => Number(id.slice(1))),
+      })),
       questions,
     };
     writeFileSync(`samples/generated/${s.id}.json`, JSON.stringify(deck, null, 1) + '\n');
     console.log(`${s.id}: ${questions.length} questions written`);
   }
-  console.log("Now review the questions, record edits in samples/review.json and run node scripts/apply-sample-review.mjs");
+  console.log(
+    'Now review the questions, record edits in samples/review.json and run node scripts/apply-sample-review.mjs',
+  );
 }

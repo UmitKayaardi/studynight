@@ -47,9 +47,20 @@ export function highlightEvidence(text: string, quote: string): Array<{ text: st
   return sentences.map((s, i) => ({ text: s, mark: i === best }));
 }
 
-export function SourceSheet({ open, onClose, content }: { open: boolean; onClose: () => void; content: QuestionContent }) {
+export function SourceSheet({
+  open,
+  onClose,
+  content,
+}: {
+  open: boolean;
+  onClose: () => void;
+  content: QuestionContent;
+}) {
   const { t } = useTranslation();
-  const chunks = useLiveQuery(() => db.chunks.bulkGet(content.sourceChunkIds), [content.sourceChunkIds.join(',')]);
+  const chunks = useLiveQuery(
+    () => db.chunks.bulkGet(content.sourceChunkIds),
+    [content.sourceChunkIds.join(',')],
+  );
   const sources = useLiveQuery(() => db.sources.toArray(), []);
   return (
     <Sheet open={open} onClose={onClose} title={t('play.sourceTitle')}>
@@ -61,7 +72,15 @@ export function SourceSheet({ open, onClose, content }: { open: boolean; onClose
           return (
             <article key={c!.id} className="rounded-2xl bg-surface-2 p-3">
               <p className="mb-2 text-xs font-bold text-muted">
-                {[src?.name || t('deck.pastedText'), ref?.slide ? t('play.slideN', { n: ref.slide }) : ref?.page ? t('play.pageN', { n: ref.page }) : null, c!.headingPath.join(' › ')]
+                {[
+                  src?.name || t('deck.pastedText'),
+                  ref?.slide
+                    ? t('play.slideN', { n: ref.slide })
+                    : ref?.page
+                      ? t('play.pageN', { n: ref.page })
+                      : null,
+                  c!.headingPath.join(' › '),
+                ]
                   .filter(Boolean)
                   .join(' · ')}
               </p>
@@ -93,7 +112,11 @@ export function SourceChip({ content, onOpen }: { content: QuestionContent; onOp
   const label = useSourceLabel(content.sourceChunkIds);
   if (!label) return null;
   return (
-    <button type="button" onClick={onOpen} className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-accent-soft px-3 text-sm font-bold">
+    <button
+      type="button"
+      onClick={onOpen}
+      className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-accent-soft px-3 text-sm font-bold"
+    >
       <BookOpen className="size-4" aria-hidden />
       {label}
     </button>
@@ -102,7 +125,15 @@ export function SourceChip({ content, onOpen }: { content: QuestionContent; onOp
 
 const REASONS: ReportReason[] = ['wrong', 'notInNotes', 'unclear', 'duplicate'];
 
-export function ReportSheet({ open, onClose, onReport }: { open: boolean; onClose: () => void; onReport: (r: ReportReason) => void }) {
+export function ReportSheet({
+  open,
+  onClose,
+  onReport,
+}: {
+  open: boolean;
+  onClose: () => void;
+  onReport: (r: ReportReason) => void;
+}) {
   const { t } = useTranslation();
   return (
     <Sheet open={open} onClose={onClose} title={t('report.title')}>
@@ -110,7 +141,12 @@ export function ReportSheet({ open, onClose, onReport }: { open: boolean; onClos
       <ul className="flex flex-col gap-2 pb-2">
         {REASONS.map((r) => (
           <li key={r}>
-            <Button block variant="secondary" icon={<Flag className="size-4" aria-hidden />} onClick={() => onReport(r)}>
+            <Button
+              block
+              variant="secondary"
+              icon={<Flag className="size-4" aria-hidden />}
+              onClick={() => onReport(r)}
+            >
               {t(`report.${r}`)}
             </Button>
           </li>
@@ -121,7 +157,15 @@ export function ReportSheet({ open, onClose, onReport }: { open: boolean; onClos
 }
 
 /** Explain in your own words: typed or spoken; the grader marks key points, code computes the score. */
-export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer?: AnswerLog; onSubmit: (input: AnswerInput, extra: AnswerLog['explain']) => void }) {
+export function ExplainView({
+  item,
+  answer,
+  onSubmit,
+}: {
+  item: PlayItem;
+  answer?: AnswerLog;
+  onSubmit: (input: AnswerInput, extra: AnswerLog['explain']) => void;
+}) {
   const { t } = useTranslation();
   const q = item.content as Extract<QuestionContent, { type: 'explain' }>;
   const [text, setText] = useState('');
@@ -136,7 +180,9 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
     setBusy(true);
     setError(null);
     try {
-      const chunks = (await db.chunks.bulkGet(q.sourceChunkIds.slice(0, 3))).filter(Boolean).map((c) => c!.text.slice(0, 4000));
+      const chunks = (await db.chunks.bulkGet(q.sourceChunkIds.slice(0, 3)))
+        .filter(Boolean)
+        .map((c) => c!.text.slice(0, 4000));
       const res = await api.grade({
         language: item.quizLanguage && item.quizLanguage !== 'und' ? item.quizLanguage : 'auto',
         question: q.prompt,
@@ -157,19 +203,32 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
     const level = explainLevel(answer.score);
     return (
       <div className="flex flex-col gap-3">
-        <Card className={level === 'great' ? 'border-good' : level === 'partly' ? 'border-star' : 'border-bad'}>
+        <Card
+          className={level === 'great' ? 'border-good' : level === 'partly' ? 'border-star' : 'border-bad'}
+        >
           <p className="sr-only">{t(`explain.${level}`)}</p>
-          <p className="text-sm text-muted">{t('explain.points', { hit: answer.input.covered.filter(Boolean).length, total: q.keyPoints.length })}</p>
+          <p className="text-sm text-muted">
+            {t('explain.points', {
+              hit: answer.input.covered.filter(Boolean).length,
+              total: q.keyPoints.length,
+            })}
+          </p>
         </Card>
         <ul className="flex flex-col gap-2">
           {q.keyPoints.map((k, i) => {
             const ok = answer.input.type === 'explain' && answer.input.covered[i];
             return (
               <li key={i} className="flex gap-2 rounded-2xl bg-surface-2 p-3 text-sm">
-                {ok ? <Check className="size-5 shrink-0 text-good" aria-label={t('explain.covered')} /> : <X className="size-5 shrink-0 text-bad" aria-label={t('explain.missed')} />}
+                {ok ? (
+                  <Check className="size-5 shrink-0 text-good" aria-label={t('explain.covered')} />
+                ) : (
+                  <X className="size-5 shrink-0 text-bad" aria-label={t('explain.missed')} />
+                )}
                 <span>
                   <RichText as="span" text={k} className="font-semibold" />
-                  {!ok && answer.explain?.feedback[i] && <span className="block text-muted">{answer.explain.feedback[i]}</span>}
+                  {!ok && answer.explain?.feedback[i] && (
+                    <span className="block text-muted">{answer.explain.feedback[i]}</span>
+                  )}
                 </span>
               </li>
             );
@@ -196,7 +255,11 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
         placeholder={t('explain.placeholder')}
         className="min-h-36 rounded-2xl border-2 border-border bg-surface p-3 text-base focus:border-accent focus:outline-none"
       />
-      <VoiceInput deckId={item.deckId} language={item.quizLanguage} onText={(spoken) => setText((prev) => (prev ? `${prev} ${spoken}` : spoken))} />
+      <VoiceInput
+        deckId={item.deckId}
+        language={item.quizLanguage}
+        onText={(spoken) => setText((prev) => (prev ? `${prev} ${spoken}` : spoken))}
+      />
       {error && (
         <div className="flex flex-col gap-2 rounded-2xl bg-bad-soft p-3 text-sm" role="alert">
           <p>{t(`errors.${error}.body`)}</p>
@@ -212,28 +275,64 @@ export function ExplainView({ item, answer, onSubmit }: { item: PlayItem; answer
   );
 }
 
-export function FeedbackPanel({ item, answer, children, onNext, onSource }: { item: PlayItem; answer: AnswerLog; children?: ReactNode; onNext: () => void; onSource: () => void }) {
+export function FeedbackPanel({
+  item,
+  answer,
+  children,
+  onNext,
+  onSource,
+}: {
+  item: PlayItem;
+  answer: AnswerLog;
+  children?: ReactNode;
+  onNext: () => void;
+  onSource: () => void;
+}) {
   const { t } = useTranslation();
   const q = item.content;
   const correct = answer.correct;
-  const showAnswer = !correct && q.type !== 'match' && q.type !== 'order' && q.type !== 'explain' && q.type !== 'flashcard';
+  const showAnswer =
+    !correct && q.type !== 'match' && q.type !== 'order' && q.type !== 'explain' && q.type !== 'flashcard';
   // Explanations have three levels; everything else is right or wrong. Icon + text, never colour alone.
-  const tone = q.type === 'explain' ? { great: 'good', partly: 'star', notYet: 'bad' }[explainLevel(answer.score)] : correct ? 'good' : 'bad';
-  const panel = tone === 'good' ? 'border-good bg-good-soft' : tone === 'star' ? 'border-star bg-star-soft' : 'border-bad bg-bad-soft';
+  const tone =
+    q.type === 'explain'
+      ? { great: 'good', partly: 'star', notYet: 'bad' }[explainLevel(answer.score)]
+      : correct
+        ? 'good'
+        : 'bad';
+  const panel =
+    tone === 'good'
+      ? 'border-good bg-good-soft'
+      : tone === 'star'
+        ? 'border-star bg-star-soft'
+        : 'border-bad bg-bad-soft';
   const heading = tone === 'good' ? 'text-good' : tone === 'star' ? 'text-star-text' : 'text-bad';
   const Icon = tone === 'good' ? Check : tone === 'star' ? CircleDot : X;
   return (
-    <section className={`mt-4 flex flex-col gap-3 rounded-[var(--radius-card)] border-2 p-4 ${panel}`} aria-labelledby="feedback-title">
-      <h2 id="feedback-title" className={`flex items-center gap-2 font-display text-xl font-extrabold ${heading}`}>
+    <section
+      className={`mt-4 flex flex-col gap-3 rounded-[var(--radius-card)] border-2 p-4 ${panel}`}
+      aria-labelledby="feedback-title"
+    >
+      <h2
+        id="feedback-title"
+        className={`flex items-center gap-2 font-display text-xl font-extrabold ${heading}`}
+      >
         <Icon className="size-6" aria-hidden />
-        {q.type === 'explain' ? t(`explain.${explainLevel(answer.score)}`) : correct ? t('play.correct') : t('play.incorrect')}
+        {q.type === 'explain'
+          ? t(`explain.${explainLevel(answer.score)}`)
+          : correct
+            ? t('play.correct')
+            : t('play.incorrect')}
       </h2>
       {showAnswer && (
         <p className="text-sm">
-          {t('play.answerWas')} <strong>{answerText(q, { true: t('play.true'), false: t('play.false') })}</strong>
+          {t('play.answerWas')}{' '}
+          <strong>{answerText(q, { true: t('play.true'), false: t('play.false') })}</strong>
         </p>
       )}
-      {q.type === 'tf' && !q.answer && q.correction && correct && <RichText text={q.correction} className="text-sm font-semibold" />}
+      {q.type === 'tf' && !q.answer && q.correction && correct && (
+        <RichText text={q.correction} className="text-sm font-semibold" />
+      )}
       {q.type !== 'explain' && <RichText text={q.explanation} className="text-sm" />}
       {children}
       <div className="flex flex-wrap items-center gap-2">

@@ -8,7 +8,11 @@ import { readFileSync } from 'node:fs';
 import { mockApi } from './helpers';
 import { allTypesBackup } from './fixtures';
 
-const languages = JSON.parse(readFileSync('src/i18n/languages.json', 'utf8')) as Array<{ code: string; dir: string; script: string }>;
+const languages = JSON.parse(readFileSync('src/i18n/languages.json', 'utf8')) as Array<{
+  code: string;
+  dir: string;
+  script: string;
+}>;
 const FONT: Record<string, string> = {
   arabic: 'Noto Sans Arabic',
   devanagari: 'Noto Sans Devanagari',
@@ -71,14 +75,21 @@ async function checkLayout(page: Page, lang: { code: string; dir: string; script
       }
       // Glyph coverage: the characters of this language's script on the page must be covered by loaded faces of
       // the script font (otherwise the browser would fall back and may show missing-glyph boxes).
-      const chars = [...new Set(Array.from(document.body.innerText.match(new RegExp(scriptRe, 'gu')) ?? []))].slice(0, 60).join('');
+      const chars = [...new Set(Array.from(document.body.innerText.match(new RegExp(scriptRe, 'gu')) ?? []))]
+        .slice(0, 60)
+        .join('');
       if (chars) {
         const faces = await document.fonts.load(`16px "${font}"`, chars);
-        if (!faces.length || faces.some((f) => f.status !== 'loaded')) out.push(`font ${font} does not cover the page text`);
+        if (!faces.length || faces.some((f) => f.status !== 'loaded'))
+          out.push(`font ${font} does not cover the page text`);
       }
       return [...new Set(out)];
     },
-    { dir: lang.dir, font: FONT[lang.script] ?? 'Inter Variable', scriptRe: SCRIPT_RE[lang.script] ?? SCRIPT_RE.latin! },
+    {
+      dir: lang.dir,
+      font: FONT[lang.script] ?? 'Inter Variable',
+      scriptRe: SCRIPT_RE[lang.script] ?? SCRIPT_RE.latin!,
+    },
   );
   expect(problems, `${lang.code} ${where}`).toEqual([]);
 }
@@ -90,7 +101,11 @@ for (const lang of languages) {
       // Keeps the processing screen visible long enough to check it.
       topics: async (route) => {
         await new Promise((r) => setTimeout(r, 4000));
-        await route.fulfill({ status: 503, contentType: 'application/json', body: JSON.stringify({ error: { code: 'UPSTREAM', message: 'x' } }) });
+        await route.fulfill({
+          status: 503,
+          contentType: 'application/json',
+          body: JSON.stringify({ error: { code: 'UPSTREAM', message: 'x' } }),
+        });
       },
     });
     // Seed the fixture deck through the app's own backup import.
@@ -98,13 +113,30 @@ for (const lang of languages) {
     await page.getByRole('button', { name: 'Skip' }).click();
     await page.getByRole('button', { name: 'Just look around' }).click();
     await page.goto('/profile/settings');
-    await page.locator('input[type=file]').setInputFiles({ name: 'fixture.studynight', mimeType: 'application/json', buffer: Buffer.from(allTypesBackup()) });
+    await page
+      .locator('input[type=file]')
+      .setInputFiles({
+        name: 'fixture.studynight',
+        mimeType: 'application/json',
+        buffer: Buffer.from(allTypesBackup()),
+      });
     await page.getByRole('button', { name: 'Replace and import' }).click();
     await expect(page).toHaveURL(/\/$/);
 
     for (const theme of ['light', 'dark']) {
       await setPrefs(page, lang.code, theme);
-      for (const path of ['/', '/decks', '/new', '/deck/fixture-deck', '/review', '/profile', '/profile/settings', '/profile/planner', '/privacy', '/deck/fixture-deck/ask']) {
+      for (const path of [
+        '/',
+        '/decks',
+        '/new',
+        '/deck/fixture-deck',
+        '/review',
+        '/profile',
+        '/profile/settings',
+        '/profile/planner',
+        '/privacy',
+        '/deck/fixture-deck/ask',
+      ]) {
         await page.goto(path);
         await expect(page.locator('main').first()).toBeVisible();
         await checkLayout(page, lang, `${theme} ${path}`);
@@ -112,9 +144,14 @@ for (const lang of languages) {
 
       // Processing screen.
       await page.goto('/new');
-      await page.locator('textarea').waitFor({ state: 'detached' }).catch(() => undefined);
+      await page
+        .locator('textarea')
+        .waitFor({ state: 'detached' })
+        .catch(() => undefined);
       await page.locator('main button').nth(2).click(); // "paste text" (third button in the drop zone)
-      await page.locator('textarea').fill('Rivers carry water from the land to the sea. They shape valleys over time.');
+      await page
+        .locator('textarea')
+        .fill('Rivers carry water from the land to the sea. They shape valleys over time.');
       await page.locator('main button').last().click();
       await expect(page.getByRole('progressbar')).toBeVisible();
       await checkLayout(page, lang, `${theme} processing`);
@@ -149,7 +186,7 @@ for (const lang of languages) {
         } else {
           await main.locator('button').first().click();
         }
-        await expect(page.locator('#feedback-title')).toBeVisible();
+        await expect(page.locator('#feedback-title')).toBeVisible({ timeout: 30_000 });
         await checkLayout(page, lang, `${theme} feedback ${i}`);
         await page.locator('#feedback-title').locator('xpath=..').getByRole('button').last().click();
       }

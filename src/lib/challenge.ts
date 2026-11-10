@@ -12,10 +12,30 @@ export const MAX_CHALLENGE_QUESTIONS = 10;
 
 const s = (max: number) => z.string().min(1).max(max);
 const CQ = z.discriminatedUnion('t', [
-  z.object({ t: z.literal('mcq'), p: s(300), o: z.array(s(160)).length(4), a: z.number().int().min(0).max(3), e: z.string().max(200) }),
-  z.object({ t: z.literal('tf'), p: s(300), a: z.boolean(), c: z.string().max(300).optional(), e: z.string().max(200) }),
+  z.object({
+    t: z.literal('mcq'),
+    p: s(300),
+    o: z.array(s(160)).length(4),
+    a: z.number().int().min(0).max(3),
+    e: z.string().max(200),
+  }),
+  z.object({
+    t: z.literal('tf'),
+    p: s(300),
+    a: z.boolean(),
+    c: z.string().max(300).optional(),
+    e: z.string().max(200),
+  }),
   z.object({ t: z.literal('fill'), p: s(300), a: s(120), x: z.array(s(120)).max(4), e: z.string().max(200) }),
-  z.object({ t: z.literal('match'), p: s(200), m: z.array(z.tuple([s(120), s(160)])).min(4).max(5), e: z.string().max(200) }),
+  z.object({
+    t: z.literal('match'),
+    p: s(200),
+    m: z
+      .array(z.tuple([s(120), s(160)]))
+      .min(4)
+      .max(5),
+    e: z.string().max(200),
+  }),
   z.object({ t: z.literal('order'), p: s(200), s: z.array(s(160)).min(3).max(6), e: z.string().max(200) }),
 ]);
 type CQ = z.infer<typeof CQ>;
@@ -44,21 +64,45 @@ function toCompact(q: QuestionContent): CQ | null {
       if (q.options.some((o) => o.length > 160) || q.prompt.length > 300) return null;
       return { t: 'mcq', p: q.prompt, o: q.options, a: q.answerIndex, e };
     case 'tf':
-      return q.prompt.length > 300 ? null : { t: 'tf', p: q.prompt, a: q.answer, ...(q.correction ? { c: cut(q.correction, 300) } : {}), e };
+      return q.prompt.length > 300
+        ? null
+        : { t: 'tf', p: q.prompt, a: q.answer, ...(q.correction ? { c: cut(q.correction, 300) } : {}), e };
     case 'fill':
-      return q.prompt.length > 300 || q.answer.length > 120 ? null : { t: 'fill', p: q.prompt, a: q.answer, x: q.acceptedAnswers.filter((x) => x.length <= 120).slice(0, 4), e };
+      return q.prompt.length > 300 || q.answer.length > 120
+        ? null
+        : {
+            t: 'fill',
+            p: q.prompt,
+            a: q.answer,
+            x: q.acceptedAnswers.filter((x) => x.length <= 120).slice(0, 4),
+            e,
+          };
     case 'match':
       if (q.pairs.some((p) => p.term.length > 120 || p.definition.length > 160)) return null;
-      return { t: 'match', p: cut(q.prompt, 200), m: q.pairs.map((p) => [p.term, p.definition] as [string, string]), e };
+      return {
+        t: 'match',
+        p: cut(q.prompt, 200),
+        m: q.pairs.map((p) => [p.term, p.definition] as [string, string]),
+        e,
+      };
     case 'order':
-      return q.steps.some((x) => x.length > 160) ? null : { t: 'order', p: cut(q.prompt, 200), s: q.steps, e };
+      return q.steps.some((x) => x.length > 160)
+        ? null
+        : { t: 'order', p: cut(q.prompt, 200), s: q.steps, e };
     default:
       return null; // flashcards and explain questions are not competitive
   }
 }
 
 function fromCompact(c: CQ): QuestionContent {
-  const base = { explanation: c.e || '—', hint: '', difficulty: 2 as const, topicId: 'challenge', sourceChunkIds: [] as string[], evidenceQuote: '' };
+  const base = {
+    explanation: c.e || '—',
+    hint: '',
+    difficulty: 2 as const,
+    topicId: 'challenge',
+    sourceChunkIds: [] as string[],
+    evidenceQuote: '',
+  };
   switch (c.t) {
     case 'mcq':
       return { ...base, type: 'mcq', prompt: c.p, options: c.o, answerIndex: c.a };
@@ -67,7 +111,12 @@ function fromCompact(c: CQ): QuestionContent {
     case 'fill':
       return { ...base, type: 'fill', prompt: c.p, answer: c.a, acceptedAnswers: c.x };
     case 'match':
-      return { ...base, type: 'match', prompt: c.p, pairs: c.m.map(([term, definition]) => ({ term, definition })) };
+      return {
+        ...base,
+        type: 'match',
+        prompt: c.p,
+        pairs: c.m.map(([term, definition]) => ({ term, definition })),
+      };
     case 'order':
       return { ...base, type: 'order', prompt: c.p, steps: c.s };
   }
@@ -107,7 +156,12 @@ export function parseChallenge(hash: string): ChallengeData | null {
     const r = PayloadSchema.safeParse(JSON.parse(json));
     if (!r.success) return null;
     const p = r.data;
-    return { nickname: p.n, avatar: p.av, score: Math.min(p.sc, p.q.length), questions: p.q.map(fromCompact) };
+    return {
+      nickname: p.n,
+      avatar: p.av,
+      score: Math.min(p.sc, p.q.length),
+      questions: p.q.map(fromCompact),
+    };
   } catch {
     return null;
   }

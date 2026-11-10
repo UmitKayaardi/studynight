@@ -129,7 +129,9 @@ export function backoffMs(attempt: number, base = 700, random = Math.random): nu
 /** Groq's JSON mode rejects invalid output with 400 "json_validate_failed" and returns the text it produced. */
 export function failedGeneration(e: unknown): string | null {
   const body = (e as { error?: { error?: { code?: string; failed_generation?: unknown } } })?.error?.error;
-  return body?.code === 'json_validate_failed' && typeof body.failed_generation === 'string' ? body.failed_generation : null;
+  return body?.code === 'json_validate_failed' && typeof body.failed_generation === 'string'
+    ? body.failed_generation
+    : null;
 }
 
 /** Doubles backslashes that do not start a valid JSON escape (e.g. LaTeX "\(" or "\alpha" written unescaped). */
@@ -145,13 +147,16 @@ export function repairJsonEscapes(text: string): string {
 export function repairLatex(s: string): string {
   if (!s.includes('$')) return s;
   const map: Record<string, string> = { '\t': '\\t', '\f': '\\f', '\b': '\\b', '\r': '\\r', '\n': '\\n' };
-  return s.replace(/\$\$[\s\S]*?\$\$|\$[^$]*\$/g, (m) => m.replace(/[\t\f\b\r\n](?=[a-zA-Z])/g, (c) => map[c] ?? c));
+  return s.replace(/\$\$[\s\S]*?\$\$|\$[^$]*\$/g, (m) =>
+    m.replace(/[\t\f\b\r\n](?=[a-zA-Z])/g, (c) => map[c] ?? c),
+  );
 }
 
 function deepRepair(v: unknown): unknown {
   if (typeof v === 'string') return repairLatex(v);
   if (Array.isArray(v)) return v.map(deepRepair);
-  if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepRepair(x)]));
+  if (v && typeof v === 'object')
+    return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepRepair(x)]));
   return v;
 }
 

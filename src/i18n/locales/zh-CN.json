@@ -1,7 +1,28 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi。保留所有权利。",
+    "credits": "使用开源软件构建。AI 由 Groq 提供；可选的智能搜索在你的设备上运行。",
+    "mascot": "认识 Lumi——夜空中的新月，在你学习时陪伴你。",
+    "principle": "AI 只会把你的笔记整理成主题，从你的段落起草问题，双重检查并标记解释覆盖的关键点。分数、XP、连击、复习计划、难度和考试安排均由设备上经过验证的代码计算。除非通过笔记检查，否则不会向你推送问题。",
+    "principleTitle": "AI 出题，代码决定其余。",
+    "version": "版本 {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "把笔记变成游戏"
+  },
+  "ask": {
+    "disclaimer": "答案仅来自你的笔记。你的问题不会被保存。",
+    "intro": "关于这套卡片，你可以问任何问题。答案仅来自你的笔记，并附带可点击查看的编号来源。",
+    "label": "你的问题",
+    "notCovered": "你的笔记似乎没有提到这一点。",
+    "notCoveredHint": "StudyNight 仅根据你的笔记作答，不会猜测。",
+    "offline": "“询问笔记”需要网络连接。此卡片的其他功能可离线使用。",
+    "openSource": "查看来源 {{n}}",
+    "placeholder": "问问你的笔记…",
+    "send": "发送",
+    "thinking": "正在翻阅你的笔记…",
+    "title": "询问笔记"
   },
   "badges": {
     "challenger": {
@@ -280,7 +301,8 @@
     "notYet": "还不对",
     "partly": "部分正确",
     "placeholder": "用自己的话解释一下……",
-    "points": "你覆盖了 {{hit}} 个关键点（共 {{total}} 个）。"
+    "points": "你覆盖了 {{hit}} 个关键点（共 {{total}} 个）。",
+    "skip": "暂时跳过"
   },
   "home": {
     "continue": "继续",
@@ -305,7 +327,6 @@
       "sleepy": "你的连胜在等着——答几题就能保持。"
     },
     "newDeck": "新建卡组",
-    "openDeck": "打开 {{title}}",
     "resume": "你有一局正在进行。",
     "review": "复习",
     "reviewDue_other": "还有 {{count}} 题待复习",
@@ -320,7 +341,18 @@
     "menuLabel": "语言：{{language}}。切换语言"
   },
   "legal": {
-    "privacyLink": "隐私"
+    "about": "关于 StudyNight",
+    "licences": "许可证",
+    "privacy": "隐私政策",
+    "privacyLink": "隐私",
+    "terms": "服务条款",
+    "updated": "最后更新于 {{date}}"
+  },
+  "licences": {
+    "fonts": "字体：Inter、Nunito 与 Noto Sans 系列（SIL 开源字体许可证 1.1）。图标：Lucide（ISC）。",
+    "intro": "StudyNight 使用开源软件构建。以下每个组件均遵循所示许可证。",
+    "model": "智能搜索模型",
+    "original": "吉祥物、徽标、头像、徽章和音效均为 StudyNight 专属制作。"
   },
   "modes": {
     "ask": "询问你的笔记",
@@ -400,6 +432,29 @@
     },
     "uploadNotes": "上传我的笔记"
   },
+  "planner": {
+    "add": "添加考试",
+    "addToCalendar": "添加到日历",
+    "date": "考试日期",
+    "dayPlan_other": "{{practice}} 练习 + {{count}} 复习",
+    "daysLeft_other": "还有 {{count}} 天",
+    "deck": "卡组",
+    "empty": "暂无考试。添加一个以获取每日计划。",
+    "examName": "考试名称",
+    "icsMock": "模拟考：{{title}}",
+    "icsOpen": "打开 StudyNight 开始。",
+    "icsSummary_other": "学习：{{title}} ({{count}} 题)",
+    "intro": "添加你的考试，StudyNight 会为你规划每天的学习：优先攻克弱项，分散复习，最后一天进行模拟考。",
+    "mockDay_other": "模拟考 + {{count}} 复习",
+    "more_other": "…还有 {{count}} 天",
+    "needDeck": "请先创建卡组，再为其规划考试。",
+    "past": "该考试已结束。恭喜完成！",
+    "remove": "移除 {{title}}",
+    "startToday": "开始今日学习",
+    "time": "学习时长",
+    "title": "考试计划",
+    "today": "今天考试：快速复习弱项，然后休息。祝好运！"
+  },
   "play": {
     "answerWas": "答案：",
     "bossHit": "正中靶心！",
@@ -436,7 +491,7 @@
     "nothingDueBody": "你已复习完毕。稍后再来，或玩一局快速练习。",
     "orderHelp": "拖动步骤或使用箭头调整顺序。",
     "pageN": "第 {{n}} 页",
-    "pairedWith": "与术语 {{n}} 配对：{{text}}",
+    "pairedWith": "，与第 {{n}} 个词配对",
     "preparing": "正在准备题目…",
     "progress": "第 {{n}} 题，共 {{total}} 题",
     "quit": "暂停或退出",
@@ -458,6 +513,48 @@
     "xpTotal": "本轮获得 {{xp}} XP",
     "yourAnswer": "你的答案"
   },
+  "privacy": {
+    "s1": {
+      "h": "简而言之",
+      "p": "无账号、无广告、无追踪、无分析、无 Cookie。你的牌组、题目、进度和个人资料仅存储在此设备上。"
+    },
+    "s10": {
+      "h": "变更与联系",
+      "p": "如果政策有变，我们会更新此页和上方日期。如有疑问，请通过应用商店页面或项目页的联系方式联系我们。"
+    },
+    "s2": {
+      "h": "保留在设备上的内容",
+      "p": "你添加的文件在浏览器内读取，文件本身绝不会上传。你的牌组、题目、答案、连续记录、昵称和头像存储在此设备的浏览器存储中。输入的答案在回合结束后不会保留。"
+    },
+    "s3": {
+      "h": "使用 AI 功能时发送的内容",
+      "p": "为了生成题目、检查解释、回答关于你笔记的问题、读取照片并将语音转为文字，StudyNight 会通过我们的服务器向 AI 提供商 Groq 发送你笔记的简短文本摘录（绝不发送完整文件）、调整大小的照片或页面图像，以及简短的语音录音。我们的服务器仅在内存中处理这些数据，不存储或记录其内容；日志仅包含错误代码和时间戳。"
+    },
+    "s4": {
+      "h": "Groq，我们的 AI 提供商",
+      "p": "我们于 2026 年 11 月 9 日查阅了 Groq 的数据文档和服务协议。他们表示，Groq 默认不保留推理请求，但为了修复错误或调查疑似滥用行为，可能会临时记录输入和输出，最长 30 天，除非账户开启了零数据保留功能。Groq 不允许使用输入或输出来训练模型。Groq 将数据存储在美国。请参阅 console.groq.com/docs/your-data。"
+    },
+    "s5": {
+      "h": "智能搜索",
+      "p": "如果你开启智能搜索，语言模型将从 Hugging Face (huggingface.co) 下载一次，它会像访问任何网站一样看到你的 IP 地址。之后它完全在你的设备上运行；搜索笔记时绝不会将笔记发送到任何地方。"
+    },
+    "s6": {
+      "h": "托管",
+      "p": "该应用由 Vercel 托管，Vercel 会处理你的 IP 地址等技术数据，以提供网站并防止滥用。"
+    },
+    "s7": {
+      "h": "请勿上传个人信息",
+      "p": "请勿上传包含你自己或他人个人敏感信息的文档。虽然 AI 被指示绝不重复文档中发现的个人数据，但最好的保护是不上传它们。"
+    },
+    "s8": {
+      "h": "你的选择",
+      "p": "你可以导出所有数据（个人资料 → 设置 → 导出备份），删除某个牌组及其生成的所有内容，或一次性删除所有数据。由于我们的服务器上未存储任何关于你的信息，因此没有其他内容可供我们发送或删除。"
+    },
+    "s9": {
+      "h": "儿童",
+      "p": "StudyNight 不收集任何关于你身份的信息。它面向 13 岁及以上用户。"
+    }
+  },
   "processing": {
     "background": "首题就绪后即可开始。其余题目将在后台继续生成。",
     "chooseBody_other": "有 {{count}} 页需要图片识别，但每个卡组最多支持 {{max}} 页。请选择起始位置。",
@@ -471,6 +568,41 @@
     "title": "正在构建测验",
     "topics": "正在查找主要主题…",
     "vision": "正在识别图片 ({{done}}/{{total}})…"
+  },
+  "profile": {
+    "accuracy": "正确率",
+    "accuracyOverTime": "每周正确率",
+    "activity": "活跃度",
+    "answered": "已回答",
+    "avatar": "你的头像",
+    "badgeEarned": "{{name}}，已获得",
+    "badgeLocked": "{{name}}，尚未获得",
+    "badges": "徽章 ({{count}}/{{total}})",
+    "best": "最佳连续",
+    "calendar": "最近 12 周",
+    "current": "当前连续",
+    "dayDetail_other": "{{date}}：{{count}} 个问题，{{time}}",
+    "earnedOn": "获得于 {{date}}",
+    "freezeHint": "每连续学习 7 天可获得 1 次连续保护（最多 2 次）。如果某天中断，将自动使用 1 次。",
+    "freezes": "连续保护",
+    "frozenDay": "{{date}}：已使用连续保护",
+    "less": "较少",
+    "memberSince": "自 {{date}} 开始学习",
+    "more": "较多",
+    "nextLevel": "距离下一级还差 {{xp}} XP",
+    "noName": "夜学人",
+    "notYet": "尚未获得——继续加油！",
+    "stats": "你的数据",
+    "streaks": "连续打卡",
+    "strongest": "擅长主题",
+    "studyTime": "学习时长",
+    "weakest": "待加强主题",
+    "weekDetail_other": "{{week}} 周：{{count}} 题中答对 {{percent}}"
+  },
+  "pwa": {
+    "offline": "你已离线。已创建的内容仍可使用。",
+    "refresh": "刷新",
+    "update": "StudyNight 有新版本可用。"
   },
   "report": {
     "body": "该题将立即从你的卡组中移除，且不再显示。",
@@ -489,6 +621,7 @@
     "bossWon": "风暴已清除！",
     "done": "完成",
     "goalMet": "达成今日目标！+20 XP 奖励。",
+    "keepPractising": "继续练习这个主题",
     "levelUp": "升级啦！你已达到 {{level}} 级。",
     "newBadges": "新徽章",
     "newBest": "刷新个人纪录！",
@@ -501,10 +634,64 @@
     "xp": "获得 XP",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "按卡片组",
+    "caughtUp": "全部复习完啦，真棒！",
+    "due_other": "{{count}} 个问题待复习",
+    "dueHint": "现在花点时间复习，记忆会更持久。",
+    "forecast": "本周安排",
+    "forecastDetail_other": "{{day}}：{{count}} 次复习",
+    "how": "复习通过间隔重复算法（FSRS）安排，确保每个问题都在你即将忘记时出现。目标回忆率为 {{n}}%。",
+    "questions": "问题",
+    "start": "开始复习",
+    "today": "今天"
+  },
   "samples": {
     "intro": "专为 StudyNight 编写，即开即玩，无需上传。支持离线使用。",
     "play_other": "开始 ({{count}} 题)",
     "title": "示例卡组"
+  },
+  "settings": {
+    "app": "应用",
+    "backupHint": "所有内容仅存储在此设备上。若要换手机，请在此导出备份，并在新手机上导入。",
+    "badBackup": "该文件不是有效的 StudyNight 备份。",
+    "data": "你的数据",
+    "deleteAll": "删除我的所有数据",
+    "deleteBody": "所有牌组、题目、进度、徽章和设置将从此设备永久删除。此操作无法撤销。如需保留，请先导出备份。",
+    "deleteConfirm": "删除所有内容",
+    "deleteTitle": "删除所有内容？",
+    "export": "导出备份",
+    "exported": "备份已保存。",
+    "extendedTime": "延长时限",
+    "extendedTimeHint": "限时模式下增加 50% 时间。",
+    "figures": "图表题目",
+    "figuresHint": "关于照片和扫描页中图表的题目。",
+    "haptics": "震动",
+    "hapticsHint": "适用于支持该功能的手机。",
+    "import": "导入备份",
+    "importConfirm": "替换并导入",
+    "importPreview_other": "来自 {{date}} 的备份，包含 {{decks}} 个牌组和 {{count}} 道题目。",
+    "importTitle": "导入此备份？",
+    "importWarning": "此设备上的现有内容将被替换。",
+    "language": "语言",
+    "mascotColour": "吉祥物颜色",
+    "mascotN": "颜色 {{n}}",
+    "motion": "动效",
+    "motionFull": "完整",
+    "motionReduce": "减弱",
+    "quizLanguage": "默认测验语言",
+    "quizzes": "测验",
+    "smartOn": "已下载并在此设备上就绪。",
+    "smartRemove": "移除智能搜索",
+    "smartRemoved": "智能搜索已从该设备移除。",
+    "sound": "音效",
+    "storage": "此设备已使用 {{used}}。",
+    "theme": "主题",
+    "themeDark": "深色",
+    "themeLight": "浅色",
+    "themeSystem": "跟随系统",
+    "title": "设置",
+    "you": "你"
   },
   "share": {
     "button": "分享成绩",
@@ -525,6 +712,44 @@
     "mobileData": "检测到您正在使用移动数据。建议等待 Wi-Fi 连接。",
     "notNow": "暂不",
     "title": "智能搜索"
+  },
+  "terms": {
+    "s1": {
+      "h": "用于个人学习",
+      "p": "StudyNight帮助你学习自己的资料，适用于个人学习。"
+    },
+    "s2": {
+      "h": "你的上传内容",
+      "p": "仅上传你有使用权的资料。你需对上传内容负责。请勿上传包含本人或他人个人或敏感信息的文档。"
+    },
+    "s3": {
+      "h": "AI 可能出错",
+      "p": "问题、答案、解释和评分由 AI 生成并自动检查，但仍可能出错。请务必对照笔记核实，并以老师和官方教材为准。"
+    },
+    "s4": {
+      "h": "不提供专业建议",
+      "p": "StudyNight不提供医疗、法律或财务建议。“Ask your notes”仅复述你自己的资料内容。"
+    },
+    "s5": {
+      "h": "合理使用",
+      "p": "AI 服务免费且供所有 StudyNight 用户共享，因而有使用限制。请勿自动化请求或规避这些限制。我们可能会减慢或阻止看似滥用的请求。"
+    },
+    "s6": {
+      "h": "分享",
+      "p": "挑战链接和分享卡仅包含问题、答案、简短解释和分数，不会包含你的笔记。你可以自行决定分享对象。"
+    },
+    "s7": {
+      "h": "不作保证",
+      "p": "StudyNight免费提供，按现状使用。它可能会更改或停止服务，法律允许范围内我们不对使用导致的损失负责。请导出你想保留的内容备份。"
+    },
+    "s8": {
+      "h": "所有权",
+      "p": "StudyNight © 2026 Umit Kayaardi，保留所有权利。开源组件遵循各自许可证（见许可证）。你的笔记仍归你所有。"
+    },
+    "s9": {
+      "h": "变更",
+      "p": "我们可能会更新本条款；上方日期显示最新版本。继续使用 StudyNight 即表示你接受更新后的条款。"
+    }
   },
   "titles": {
     "bossSlayer": "风暴追逐者",

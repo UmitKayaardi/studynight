@@ -99,7 +99,13 @@ export default function DeckScreen() {
         </Ring>
         <div className="min-w-0 flex-1">
           <p className="font-semibold">{`${t('decks.topicCount', { count: topics.length })} · ${t('decks.questionCount', { count: questions })}`}</p>
-          <p className="text-sm text-muted">{t('deck.quizIn', { language: languageDisplayName(deck.quizLanguage === 'auto' ? deck.notesLanguage : deck.quizLanguage) })}</p>
+          <p className="text-sm text-muted">
+            {t('deck.quizIn', {
+              language: languageDisplayName(
+                deck.quizLanguage === 'auto' ? deck.notesLanguage : deck.quizLanguage,
+              ),
+            })}
+          </p>
           {(generating || waiting) && (
             <p className="mt-1 inline-flex items-center gap-1.5 text-sm text-accent" aria-live="polite">
               <RefreshCw className="size-4 animate-spin" aria-hidden />
@@ -108,25 +114,68 @@ export default function DeckScreen() {
           )}
         </div>
       </section>
-      {waiting && <p className="mb-2 rounded-2xl bg-star-soft p-3 text-sm">{t('errors.RATE_LIMITED.body')}</p>}
+      {waiting && (
+        <p className="mb-2 rounded-2xl bg-star-soft p-3 text-sm">{t('errors.RATE_LIMITED.body')}</p>
+      )}
 
       <SmartSearchCard deckId={deck.id} />
 
       <section aria-label={t('deck.modes')} className="mt-2 grid grid-cols-2 gap-2">
-        <ModeButton icon={<Zap />} label={t('modes.quick')} hint={t('modes.quickHint')} onClick={() => play({ mode: 'quick', deckId: deck.id })} primary />
-        <ModeButton icon={<RefreshCw />} label={t('modes.review')} hint={t('decks.due', { count: due })} onClick={() => play({ mode: 'review', deckId: deck.id })} disabled={!due} />
-        <ModeButton icon={<Brain />} label={t('modes.topic')} hint={t('modes.topicHint')} onClick={() => setSheet('topic')} />
+        <ModeButton
+          icon={<Zap />}
+          label={t('modes.quick')}
+          hint={t('modes.quickHint')}
+          onClick={() => play({ mode: 'quick', deckId: deck.id })}
+          primary
+        />
+        <ModeButton
+          icon={<RefreshCw />}
+          label={t('modes.review')}
+          hint={t('decks.due', { count: due })}
+          onClick={() => play({ mode: 'review', deckId: deck.id })}
+          disabled={!due}
+        />
+        <ModeButton
+          icon={<Brain />}
+          label={t('modes.topic')}
+          hint={t('modes.topicHint')}
+          onClick={() => setSheet('topic')}
+        />
         <ModeButton
           icon={<Swords />}
           label={t('modes.boss')}
-          hint={bossTopics.length ? t('modes.bossHint', { count: bossTopics.length }) : t('modes.bossLocked', { percent: BOSS_UNLOCK })}
+          hint={
+            bossTopics.length
+              ? t('modes.bossHint', { count: bossTopics.length })
+              : t('modes.bossLocked', { percent: BOSS_UNLOCK })
+          }
           onClick={() => setSheet('boss')}
           disabled={!bossTopics.length}
         />
-        <ModeButton icon={<GraduationCap />} label={t('modes.exam')} hint={t('modes.examHint')} onClick={() => setSheet('exam')} />
-        <ModeButton icon={<Skull />} label={t('modes.sudden')} hint={t('modes.suddenBest', { count: deck.bestSuddenDeath })} onClick={() => play({ mode: 'sudden', deckId: deck.id })} />
-        <ModeButton icon={<Layers />} label={t('modes.flashcards')} hint={t('modes.flashcardsHint')} onClick={() => play({ mode: 'flashcards', deckId: deck.id })} />
-        <ModeButton icon={<MessageCircleQuestion />} label={t('modes.ask')} hint={t('modes.askHint')} onClick={() => navigate(`/deck/${deck.id}/ask`)} />
+        <ModeButton
+          icon={<GraduationCap />}
+          label={t('modes.exam')}
+          hint={t('modes.examHint')}
+          onClick={() => setSheet('exam')}
+        />
+        <ModeButton
+          icon={<Skull />}
+          label={t('modes.sudden')}
+          hint={t('modes.suddenBest', { count: deck.bestSuddenDeath })}
+          onClick={() => play({ mode: 'sudden', deckId: deck.id })}
+        />
+        <ModeButton
+          icon={<Layers />}
+          label={t('modes.flashcards')}
+          hint={t('modes.flashcardsHint')}
+          onClick={() => play({ mode: 'flashcards', deckId: deck.id })}
+        />
+        <ModeButton
+          icon={<MessageCircleQuestion />}
+          label={t('modes.ask')}
+          hint={t('modes.askHint')}
+          onClick={() => navigate(`/deck/${deck.id}/ask`)}
+        />
         <ModeButton
           icon={<Send />}
           label={t('modes.challenge')}
@@ -155,15 +204,24 @@ export default function DeckScreen() {
               }}
               className={`flex w-full items-center gap-3 rounded-[var(--radius-card)] border bg-surface p-3 text-start shadow-card transition hover:border-accent ${ts.weak ? 'border-bad' : 'border-border'}`}
             >
-              <Ring value={ts.mastery / 100} size={48} label={t('deck.masteryLabel', { percent: ts.mastery })} color={ts.weak ? 'var(--sn-bad)' : undefined}>
+              <Ring
+                value={ts.mastery / 100}
+                size={48}
+                label={t('deck.masteryLabel', { percent: ts.mastery })}
+                color={ts.weak ? 'var(--sn-bad)' : undefined}
+              >
                 {formatNumber(ts.mastery)}
               </Ring>
               <span className="min-w-0 flex-1">
                 <span className="block font-display font-extrabold leading-snug">{ts.topic.title}</span>
-                <span className="block text-xs text-muted">{t('deck.topicQuestions', { count: ts.questions })}</span>
+                <span className="block text-xs text-muted">
+                  {t('deck.topicQuestions', { count: ts.questions })}
+                </span>
               </span>
               {ts.weak && <Chip tone="bad">{t('deck.weak')}</Chip>}
-              {ts.bossUnlocked && <Swords className="size-5 text-star-text" aria-label={t('modes.bossReady')} />}
+              {ts.bossUnlocked && (
+                <Swords className="size-5 text-star-text" aria-label={t('modes.bossReady')} />
+              )}
             </button>
           </li>
         ))}
@@ -175,7 +233,11 @@ export default function DeckScreen() {
           <li key={s.id} className="flex items-center gap-2 text-sm">
             <FileText className="size-4 shrink-0 text-muted" aria-hidden />
             <span className="min-w-0 flex-1 truncate">{s.name || t('deck.pastedText')}</span>
-            {s.units > 1 && <span className="text-muted">{t(s.kind === 'pptx' ? 'deck.slides' : 'deck.pages', { count: s.units })}</span>}
+            {s.units > 1 && (
+              <span className="text-muted">
+                {t(s.kind === 'pptx' ? 'deck.slides' : 'deck.pages', { count: s.units })}
+              </span>
+            )}
           </li>
         ))}
       </ul>
@@ -196,20 +258,44 @@ export default function DeckScreen() {
         <ul className="flex flex-col gap-2 pb-2">
           {bossTopics.map((ts) => (
             <li key={ts.topic.id}>
-              <Button block variant="secondary" icon={<Swords className="size-5" aria-hidden />} onClick={() => play({ mode: 'boss', deckId: deck.id, topicId: ts.topic.id })}>
+              <Button
+                block
+                variant="secondary"
+                icon={<Swords className="size-5" aria-hidden />}
+                onClick={() => play({ mode: 'boss', deckId: deck.id, topicId: ts.topic.id })}
+              >
                 {ts.topic.title}
               </Button>
             </li>
           ))}
         </ul>
       </Sheet>
-      <ExamSheet open={sheet === 'exam'} onClose={() => setSheet(null)} extended={extendedTime} onStart={(count, minutes) => play({ mode: 'exam', deckId: deck.id, count, minutes })} />
+      <ExamSheet
+        open={sheet === 'exam'}
+        onClose={() => setSheet(null)}
+        extended={extendedTime}
+        onStart={(count, minutes) => play({ mode: 'exam', deckId: deck.id, count, minutes })}
+      />
       <DeckSettings open={sheet === 'settings'} onClose={() => setSheet(null)} stats={stats} />
     </SubScreen>
   );
 }
 
-function ModeButton({ icon, label, hint, onClick, disabled, primary }: { icon: React.ReactNode; label: string; hint: string; onClick: () => void; disabled?: boolean; primary?: boolean }) {
+function ModeButton({
+  icon,
+  label,
+  hint,
+  onClick,
+  disabled,
+  primary,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  hint: string;
+  onClick: () => void;
+  disabled?: boolean;
+  primary?: boolean;
+}) {
   return (
     <button
       type="button"
@@ -245,12 +331,19 @@ function TopicSheet({
       {chosen ? (
         <div className="flex flex-col gap-3 pb-2">
           {chosen.topic.summary && <p className="text-muted">{chosen.topic.summary}</p>}
-          <p className="text-sm">{t('deck.topicStatus', { percent: chosen.mastery, count: chosen.questions })}</p>
+          <p className="text-sm">
+            {t('deck.topicStatus', { percent: chosen.mastery, count: chosen.questions })}
+          </p>
           <Button block onClick={() => onPractise(chosen.topic.id)}>
             {t('modes.practiseTopic')}
           </Button>
           {chosen.bossUnlocked && (
-            <Button block variant="star" icon={<Swords className="size-5" aria-hidden />} onClick={() => onBoss(chosen.topic.id)}>
+            <Button
+              block
+              variant="star"
+              icon={<Swords className="size-5" aria-hidden />}
+              onClick={() => onBoss(chosen.topic.id)}
+            >
               {t('modes.boss')}
             </Button>
           )}
@@ -270,12 +363,31 @@ function TopicSheet({
   );
 }
 
-function ExamSheet({ open, onClose, onStart, extended }: { open: boolean; onClose: () => void; onStart: (count: number, minutes: number) => void; extended: boolean }) {
+function ExamSheet({
+  open,
+  onClose,
+  onStart,
+  extended,
+}: {
+  open: boolean;
+  onClose: () => void;
+  onStart: (count: number, minutes: number) => void;
+  extended: boolean;
+}) {
   const { t } = useTranslation();
   const [count, setCount] = useState(20);
   const [minutes, setMinutes] = useState(30);
   return (
-    <Sheet open={open} onClose={onClose} title={t('modes.exam')} footer={<Button block onClick={() => onStart(count, extended ? Math.round(minutes * 1.5) : minutes)}>{t('exam.start')}</Button>}>
+    <Sheet
+      open={open}
+      onClose={onClose}
+      title={t('modes.exam')}
+      footer={
+        <Button block onClick={() => onStart(count, extended ? Math.round(minutes * 1.5) : minutes)}>
+          {t('exam.start')}
+        </Button>
+      }
+    >
       <div className="flex flex-col gap-4 pb-2">
         <p className="text-muted">{t('exam.intro')}</p>
         <div>
@@ -292,7 +404,15 @@ function ExamSheet({ open, onClose, onStart, extended }: { open: boolean; onClos
         </div>
         <div>
           <p className="mb-2 font-semibold">{t('exam.duration')}</p>
-          <Segmented label={t('exam.duration')} value={minutes} onChange={setMinutes} options={[10, 15, 30, 45, 60].map((n) => ({ value: n, label: t('common.minutes', { count: n }) }))} />
+          <Segmented
+            label={t('exam.duration')}
+            value={minutes}
+            onChange={setMinutes}
+            options={[10, 15, 30, 45, 60].map((n) => ({
+              value: n,
+              label: t('common.minutes', { count: n }),
+            }))}
+          />
           {extended && <p className="mt-2 text-sm text-muted">{t('exam.extended')}</p>}
         </div>
       </div>
@@ -322,14 +442,26 @@ function DeleteDeckButton({ deckId, title }: { deckId: string; title: string }) 
           const snap = await deleteDeck(deckId);
           setConfirm(false);
           navigate('/decks');
-          if (snap) toast({ message: t('deck.deleted', { title }), action: { label: t('common.undo'), run: () => void restoreDeck(snap) } });
+          if (snap)
+            toast({
+              message: t('deck.deleted', { title }),
+              action: { label: t('common.undo'), run: () => void restoreDeck(snap) },
+            });
         }}
       />
     </>
   );
 }
 
-function DeckSettings({ open, onClose, stats }: { open: boolean; onClose: () => void; stats: NonNullable<Awaited<ReturnType<typeof deckStats>>> }) {
+function DeckSettings({
+  open,
+  onClose,
+  stats,
+}: {
+  open: boolean;
+  onClose: () => void;
+  stats: NonNullable<Awaited<ReturnType<typeof deckStats>>>;
+}) {
   const { t } = useTranslation();
   const toast = useApp((s) => s.toast);
   const { deck, topics } = stats;
@@ -340,7 +472,11 @@ function DeckSettings({ open, onClose, stats }: { open: boolean; onClose: () => 
   const [busy, setBusy] = useState(false);
 
   const save = async () => {
-    await updateDeck(deck.id, { title: title.trim() || deck.title, quizLanguage: lang, examDate: exam || null });
+    await updateDeck(deck.id, {
+      title: title.trim() || deck.title,
+      quizLanguage: lang,
+      examDate: exam || null,
+    });
     if (exam) {
       const existing = await db.exams.where('deckId').equals(deck.id).first();
       await upsertExam({ id: existing?.id, deckId: deck.id, title: title.trim() || deck.title, date: exam });
@@ -352,7 +488,11 @@ function DeckSettings({ open, onClose, stats }: { open: boolean; onClose: () => 
   const regenerate = async () => {
     setBusy(true);
     try {
-      const ids = (await db.questions.where('topicId').equals(regen).filter((q) => !q.reported).primaryKeys()) as string[];
+      const ids = (await db.questions
+        .where('topicId')
+        .equals(regen)
+        .filter((q) => !q.reported)
+        .primaryKeys()) as string[];
       await db.transaction('rw', db.questions, db.cardStates, async () => {
         await db.questions.bulkDelete(ids);
         await db.cardStates.bulkDelete(ids);
@@ -368,18 +508,49 @@ function DeckSettings({ open, onClose, stats }: { open: boolean; onClose: () => 
   };
 
   return (
-    <Sheet open={open} onClose={onClose} title={t('deck.settings')} footer={<Button block onClick={() => void save()}>{t('common.save')}</Button>}>
+    <Sheet
+      open={open}
+      onClose={onClose}
+      title={t('deck.settings')}
+      footer={
+        <Button block onClick={() => void save()}>
+          {t('common.save')}
+        </Button>
+      }
+    >
       <div className="flex flex-col gap-4 pb-2">
-        <TextField label={t('newDeck.deckTitle')} value={title} maxLength={120} onChange={(e) => setTitle(e.target.value)} />
+        <TextField
+          label={t('newDeck.deckTitle')}
+          value={title}
+          maxLength={120}
+          onChange={(e) => setTitle(e.target.value)}
+        />
         <SelectField
           label={t('newDeck.quizLanguage')}
           value={lang}
           onChange={(e) => setLang(e.target.value)}
-          options={[{ value: 'auto', label: t('newDeck.sameAsNotes') }, ...LANGUAGES.map((l) => ({ value: l.code, label: l.name })), ...(LANGUAGES.some((l) => l.code === lang) || lang === 'auto' ? [] : [{ value: lang, label: languageDisplayName(lang) }])]}
+          options={[
+            { value: 'auto', label: t('newDeck.sameAsNotes') },
+            ...LANGUAGES.map((l) => ({ value: l.code, label: l.name })),
+            ...(LANGUAGES.some((l) => l.code === lang) || lang === 'auto'
+              ? []
+              : [{ value: lang, label: languageDisplayName(lang) }]),
+          ]}
         />
-        <TextField label={t('newDeck.examDate')} type="date" min={dayKey(Date.now())} value={exam} onChange={(e) => setExam(e.target.value)} />
+        <TextField
+          label={t('newDeck.examDate')}
+          type="date"
+          min={dayKey(Date.now())}
+          value={exam}
+          onChange={(e) => setExam(e.target.value)}
+        />
         <div className="flex flex-col gap-2 rounded-2xl bg-surface-2 p-3">
-          <SelectField label={t('deck.regenerate')} value={regen} onChange={(e) => setRegen(e.target.value)} options={topics.map((x) => ({ value: x.topic.id, label: x.topic.title }))} />
+          <SelectField
+            label={t('deck.regenerate')}
+            value={regen}
+            onChange={(e) => setRegen(e.target.value)}
+            options={topics.map((x) => ({ value: x.topic.id, label: x.topic.title }))}
+          />
           <p className="text-xs text-muted">{t('deck.regenerateHint')}</p>
           <Button variant="secondary" busy={busy} onClick={() => void regenerate()}>
             {t('deck.regenerateButton')}

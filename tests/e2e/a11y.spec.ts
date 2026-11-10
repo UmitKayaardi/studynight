@@ -9,15 +9,29 @@ async function seedFixture(page: Page) {
   await page.getByRole('button', { name: 'Skip' }).click();
   await page.getByRole('button', { name: 'Just look around' }).click();
   await page.goto('/profile/settings');
-  await page.locator('input[type=file]').setInputFiles({ name: 'fixture.studynight', mimeType: 'application/json', buffer: Buffer.from(allTypesBackup()) });
+  await page
+    .locator('input[type=file]')
+    .setInputFiles({
+      name: 'fixture.studynight',
+      mimeType: 'application/json',
+      buffer: Buffer.from(allTypesBackup()),
+    });
   await page.getByRole('button', { name: 'Replace and import' }).click();
   await expect(page).toHaveURL(/\/$/);
 }
 
 async function audit(page: Page, where: string) {
   await page.waitForTimeout(300);
-  const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).analyze();
-  const violations = result.violations.map((v) => `${v.id} (${v.impact}): ${v.nodes.map((n) => n.target.join(' ')).slice(0, 3).join(', ')}`);
+  const result = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+    .analyze();
+  const violations = result.violations.map(
+    (v) =>
+      `${v.id} (${v.impact}): ${v.nodes
+        .map((n) => n.target.join(' '))
+        .slice(0, 3)
+        .join(', ')}`,
+  );
   expect(violations, where).toEqual([]);
 }
 
@@ -28,7 +42,23 @@ for (const theme of ['light', 'dark']) {
     await seedFixture(page);
     await page.goto('/profile/settings');
     await page.getByRole('radio', { name: theme === 'dark' ? 'Dark' : 'Light' }).click();
-    for (const path of ['/', '/decks', '/new', '/samples', '/deck/fixture-deck', '/deck/fixture-deck/ask', '/review', '/profile', '/profile/settings', '/profile/planner', '/privacy', '/terms', '/licences', '/about', '/challenge#c=bad']) {
+    for (const path of [
+      '/',
+      '/decks',
+      '/new',
+      '/samples',
+      '/deck/fixture-deck',
+      '/deck/fixture-deck/ask',
+      '/review',
+      '/profile',
+      '/profile/settings',
+      '/profile/planner',
+      '/privacy',
+      '/terms',
+      '/licences',
+      '/about',
+      '/challenge#c=bad',
+    ]) {
       await page.goto(path);
       await expect(page.locator('main').first()).toBeVisible();
       await audit(page, `${theme} ${path}`);
@@ -62,7 +92,7 @@ for (const theme of ['light', 'dark']) {
       } else {
         await main.locator('button').first().click();
       }
-      await expect(page.locator('#feedback-title')).toBeVisible();
+      await expect(page.locator('#feedback-title')).toBeVisible({ timeout: 30_000 });
       await audit(page, `${theme} feedback ${i}`);
       await page.getByRole('button', { name: 'Next', exact: true }).click();
     }

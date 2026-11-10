@@ -17,7 +17,9 @@ async function playThrough(page: Page, opts: { wrongAt?: number; max?: number; f
     await expect(page.getByTestId('prompt')).toBeVisible();
     types.add(await answer(page, opts.wrongAt !== i));
     if (opts.feedback !== false) {
-      await expect(page.getByRole('heading', { name: /Correct!|Not quite|Great answer!|Partly there|Not yet/ })).toBeVisible();
+      await expect(
+        page.getByRole('heading', { name: /Correct!|Not quite|Great answer!|Partly there|Not yet/ }),
+      ).toBeVisible();
       await next(page);
     }
     await page.waitForTimeout(150);
@@ -40,7 +42,9 @@ test('onboarding: intro cards, profile setup and sample deck', async ({ page }) 
   await expect(page.getByRole('heading', { name: /Ada/ })).toBeVisible();
 });
 
-test('quick play on a sample deck: every answer saved, source sheet, report with undo, results', async ({ page }) => {
+test('quick play on a sample deck: every answer saved, source sheet, report with undo, results', async ({
+  page,
+}) => {
   await skipOnboarding(page);
   await openSample(page);
   await expect(page.getByText(/AI can make mistakes/)).toBeVisible();
@@ -53,7 +57,10 @@ test('quick play on a sample deck: every answer saved, source sheet, report with
   await page.getByRole('button', { name: 'Undo' }).click();
   // First answer: open the source sheet.
   await answer(page, true);
-  await page.getByRole('button', { name: /From your notes/ }).first().click();
+  await page
+    .getByRole('button', { name: /From your notes/ })
+    .first()
+    .click();
   await expect(page.getByRole('dialog', { name: 'From your notes' })).toBeVisible();
   await expect(page.locator('mark').first()).toBeVisible();
   await page.keyboard.press('Escape');
@@ -162,7 +169,8 @@ test('challenge link round trip in a fresh browser', async ({ page, browser, con
         await defs.nth(k).click();
       }
       await fp.getByRole('button', { name: 'Check' }).click();
-    } else if (await fp.getByText('put them in order').count()) await fp.getByRole('button', { name: 'Check' }).click();
+    } else if (await fp.getByText('put them in order').count())
+      await fp.getByRole('button', { name: 'Check' }).click();
     else await fp.locator('main ul li button').first().click();
     await fp.getByRole('button', { name: 'Next', exact: true }).click();
   }
@@ -234,7 +242,10 @@ test('language switch to Arabic (RTL) and Japanese keeps state', async ({ page }
   await page.getByRole('button', { name: 'العربية' }).click();
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
   await expect(page.locator('html')).toHaveAttribute('lang', 'ar');
-  await page.getByRole('button', { name: /English|العربية/ }).first().click();
+  await page
+    .getByRole('button', { name: /English|العربية/ })
+    .first()
+    .click();
   await page.getByRole('button', { name: '日本語' }).click();
   await expect(page.locator('html')).toHaveAttribute('dir', 'ltr');
   await expect(page.locator('html')).toHaveAttribute('lang', 'ja');
@@ -257,7 +268,17 @@ test('upload flow with pasted text builds a deck (mocked AI)', async ({ page }) 
       const body = route.request().postDataJSON() as { chunks: Array<{ id: string }> };
       return route.fulfill({
         contentType: 'application/json',
-        body: JSON.stringify({ topics: [{ id: 't1', title: 'Volcanoes', summary: 'How volcanoes form.', chunkIds: body.chunks.map((c) => c.id) }], detectedLanguage: 'en' }),
+        body: JSON.stringify({
+          topics: [
+            {
+              id: 't1',
+              title: 'Volcanoes',
+              summary: 'How volcanoes form.',
+              chunkIds: body.chunks.map((c) => c.id),
+            },
+          ],
+          detectedLanguage: 'en',
+        }),
       });
     },
     questions: (route) => {
@@ -278,7 +299,12 @@ test('upload flow with pasted text builds a deck (mocked AI)', async ({ page }) 
       return route.fulfill({
         contentType: 'application/json',
         body: JSON.stringify({
-          questions: [q('Magma that reaches the surface is called lava.', true), q('Magma that reaches the surface is called ash.', false), q('Lava is magma that has reached the surface.', true), q('Ash is the name for magma at the surface.', false)],
+          questions: [
+            q('Magma that reaches the surface is called lava.', true),
+            q('Magma that reaches the surface is called ash.', false),
+            q('Lava is magma that has reached the surface.', true),
+            q('Ash is the name for magma at the surface.', false),
+          ],
           rejected: { schema: 0, evidence: 0, structure: 0, duplicate: 0, verifier: 0 },
           drafted: 4,
         }),
@@ -288,7 +314,11 @@ test('upload flow with pasted text builds a deck (mocked AI)', async ({ page }) 
   await skipOnboarding(page);
   await page.goto('/new');
   await page.getByRole('button', { name: 'Paste text instead' }).click();
-  await page.getByLabel('Your text').fill('# Volcanoes\n\nVolcanoes form where molten rock rises through cracks in the crust. When magma reaches the surface it is called lava. Shield volcanoes have gentle slopes.');
+  await page
+    .getByLabel('Your text')
+    .fill(
+      '# Volcanoes\n\nVolcanoes form where molten rock rises through cracks in the crust. When magma reaches the surface it is called lava. Shield volcanoes have gentle slopes.',
+    );
   await page.getByLabel('Deck title').fill('Volcanoes');
   await page.getByRole('button', { name: 'Create my quiz' }).click();
   await expect(page).toHaveURL(/\/deck\//, { timeout: 30_000 });
@@ -299,18 +329,30 @@ test('upload flow with pasted text builds a deck (mocked AI)', async ({ page }) 
 
 test('error states: unsupported file and AI busy', async ({ page }) => {
   await mockApi(page, {
-    topics: (route) => route.fulfill({ status: 429, headers: { 'retry-after': '1' }, contentType: 'application/json', body: JSON.stringify({ error: { code: 'RATE_LIMITED', message: 'busy' } }) }),
+    topics: (route) =>
+      route.fulfill({
+        status: 429,
+        headers: { 'retry-after': '1' },
+        contentType: 'application/json',
+        body: JSON.stringify({ error: { code: 'RATE_LIMITED', message: 'busy' } }),
+      }),
   });
   await skipOnboarding(page);
   await page.goto('/new');
-  await page.getByTestId('file-input').setInputFiles({ name: 'tool.exe', mimeType: 'application/octet-stream', buffer: Buffer.from('MZ') });
+  await page
+    .getByTestId('file-input')
+    .setInputFiles({ name: 'tool.exe', mimeType: 'application/octet-stream', buffer: Buffer.from('MZ') });
   await page.getByRole('button', { name: 'Create my quiz' }).click();
   await expect(page.getByRole('alert')).toContainText('File type not supported');
   await page.getByRole('button', { name: 'Remove tool.exe' }).click();
   await page.getByRole('button', { name: 'Paste text instead' }).click();
-  await page.getByLabel('Your text').fill('Some notes about rivers. Rivers carry water to the sea and shape valleys over time.');
+  await page
+    .getByLabel('Your text')
+    .fill('Some notes about rivers. Rivers carry water to the sea and shape valleys over time.');
   await page.getByRole('button', { name: 'Create my quiz' }).click();
-  await expect(page.getByRole('alert')).toContainText('Lots of people are studying right now', { timeout: 60_000 });
+  await expect(page.getByRole('alert')).toContainText('Lots of people are studying right now', {
+    timeout: 60_000,
+  });
 });
 
 test('legal pages are reachable', async ({ page }) => {

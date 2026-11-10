@@ -14,7 +14,12 @@ interface SmartState {
   set: (p: Partial<Omit<SmartState, 'set'>>) => void;
 }
 
-export const useSmartSearch = create<SmartState>((set) => ({ status: 'idle', loaded: 0, total: 0, set: (p) => set(p) }));
+export const useSmartSearch = create<SmartState>((set) => ({
+  status: 'idle',
+  loaded: 0,
+  total: 0,
+  set: (p) => set(p),
+}));
 
 let loading: Promise<void> | null = null;
 
@@ -51,17 +56,25 @@ export async function embedDeck(deckId: string): Promise<void> {
     const missing = chunks.filter((c) => !c.vector);
     for (let i = 0; i < missing.length; i += 8) {
       const batch = missing.slice(i, i + 8);
-      const vectors = await embedClient.embed(batch.map((c) => c.text), 'passage');
+      const vectors = await embedClient.embed(
+        batch.map((c) => c.text),
+        'passage',
+      );
       await db.transaction('rw', db.chunks, async () => {
-        for (let k = 0; k < batch.length; k++) if (vectors[k]) await db.chunks.update(batch[k]!.id, { vector: vectors[k] });
+        for (let k = 0; k < batch.length; k++)
+          if (vectors[k]) await db.chunks.update(batch[k]!.id, { vector: vectors[k] });
       });
     }
     const questions = (await db.questions.where('deckId').equals(deckId).toArray()).filter((q) => !q.vector);
     for (let i = 0; i < questions.length; i += 16) {
       const batch = questions.slice(i, i + 16);
-      const vectors = await embedClient.embed(batch.map((q) => questionKeyText(q.content)), 'query');
+      const vectors = await embedClient.embed(
+        batch.map((q) => questionKeyText(q.content)),
+        'query',
+      );
       await db.transaction('rw', db.questions, async () => {
-        for (let k = 0; k < batch.length; k++) if (vectors[k]) await db.questions.update(batch[k]!.id, { vector: vectors[k] });
+        for (let k = 0; k < batch.length; k++)
+          if (vectors[k]) await db.questions.update(batch[k]!.id, { vector: vectors[k] });
       });
     }
     await updateDeck(deckId, { embedState: 'done' });
@@ -78,5 +91,9 @@ export async function embedDeck(deckId: string): Promise<void> {
 export async function ensureIndex(deckId: string, force = false): Promise<void> {
   if (!embedClient.ready || (!force && embedClient.hasIndex(deckId))) return;
   const chunks = (await db.chunks.where('deckId').equals(deckId).toArray()).filter((c) => c.vector);
-  if (chunks.length) await embedClient.setIndex(deckId, chunks.map((c) => ({ id: c.id, vector: c.vector! })));
+  if (chunks.length)
+    await embedClient.setIndex(
+      deckId,
+      chunks.map((c) => ({ id: c.id, vector: c.vector! })),
+    );
 }

@@ -26,7 +26,11 @@ export function foldLine(line: string): string {
   return out.join('\r\n ');
 }
 
-const stamp = (d: Date) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+const stamp = (d: Date) =>
+  d
+    .toISOString()
+    .replace(/[-:]/g, '')
+    .replace(/\.\d{3}/, '');
 
 export interface IcsOptions {
   examTitle: string;
@@ -42,13 +46,20 @@ export interface IcsOptions {
 export function buildIcs(o: IcsOptions): string {
   const [hh, mm] = o.time.split(':').map(Number) as [number, number];
   const now = o.now ?? new Date();
-  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//StudyNight//Exam planner//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//StudyNight//Exam planner//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+  ];
   for (const day of o.days) {
     if (!day.practice && !day.reviews && !day.mockExam) continue;
     const date = day.date.replace(/-/g, '');
     const startMin = hh * 60 + mm;
     const endMin = startMin + o.minutes;
-    const fmt = (m: number) => `${String(Math.floor(m / 60) % 24).padStart(2, '0')}${String(m % 60).padStart(2, '0')}00`;
+    const fmt = (m: number) =>
+      `${String(Math.floor(m / 60) % 24).padStart(2, '0')}${String(m % 60).padStart(2, '0')}00`;
     const { summary, description } = o.describe(day);
     lines.push(
       'BEGIN:VEVENT',

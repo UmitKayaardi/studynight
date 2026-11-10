@@ -44,7 +44,10 @@ export function App() {
   return (
     <MotionConfig reducedMotion={reduce ? 'always' : 'never'}>
       <ErrorBoundary>
-        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:start-2 focus:top-2 focus:z-[70] focus:rounded-xl focus:bg-surface focus:p-3">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:start-2 focus:top-2 focus:z-[70] focus:rounded-xl focus:bg-surface focus:p-3"
+        >
           {/* skip link label is set from translations below */}
           <SkipLabel />
         </a>

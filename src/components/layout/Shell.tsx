@@ -26,7 +26,7 @@ export function LanguageMenu({ compact = false }: { compact?: boolean }) {
       >
         <Globe className="size-5" aria-hidden />
         {!compact && (
-          <span lang={current.code} className="max-w-[7rem] truncate">
+          <span lang={current.code} className="max-w-[6.5rem] text-start text-xs leading-tight">
             {current.name}
           </span>
         )}
@@ -107,7 +107,11 @@ export function TabScreen({
   return (
     <div className="min-h-dvh pb-24">
       <header className="mx-auto flex max-w-lg items-center gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2">
-        <Link href="/" className="flex min-h-11 items-center gap-2" aria-label={`StudyNight – ${t('nav.home')}`}>
+        <Link
+          href="/"
+          className="flex min-h-11 items-center gap-2"
+          aria-label={`StudyNight – ${t('nav.home')}`}
+        >
           <Logo size={34} />
           {!title && (
             // i18n-ignore: brand name
@@ -215,7 +219,11 @@ export function Toasts() {
 function ErrorFallback({ onReset }: { onReset: () => void }) {
   const { t } = useTranslation();
   return (
-    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+    <main
+      id="main"
+      tabIndex={-1}
+      className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center"
+    >
       <Mascot mood="surprised" size={140} />
       <h1 className="font-display text-2xl font-extrabold">{t('errors.boundary.title')}</h1>
       <p className="text-muted">{t('errors.boundary.body')}</p>

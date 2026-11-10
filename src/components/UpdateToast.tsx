@@ -13,7 +13,11 @@ export function UpdateToast() {
   } = useRegisterSW({ immediate: true });
   useEffect(() => {
     if (needRefresh) {
-      toast({ message: t('pwa.update'), duration: 60_000, action: { label: t('pwa.refresh'), run: () => void updateServiceWorker(true) } });
+      toast({
+        message: t('pwa.update'),
+        duration: 60_000,
+        action: { label: t('pwa.refresh'), run: () => void updateServiceWorker(true) },
+      });
     }
   }, [needRefresh, t, toast, updateServiceWorker]);
   return null;

@@ -63,10 +63,20 @@ export default function SettingsScreen() {
       <div className="flex flex-col gap-4 py-3">
         <Card className="flex flex-col gap-3">
           <h2 className="font-display font-extrabold">{t('settings.you')}</h2>
-          <TextField label={t('onboarding.setup.nickname')} value={nickname} maxLength={24} onChange={(e) => setNickname(e.target.value)} onBlur={() => void saveProfile({ nickname: nickname.trim() })} />
+          <TextField
+            label={t('onboarding.setup.nickname')}
+            value={nickname}
+            maxLength={24}
+            onChange={(e) => setNickname(e.target.value)}
+            onBlur={() => void saveProfile({ nickname: nickname.trim() })}
+          />
           <fieldset>
             <legend className="mb-2 font-semibold">{t('onboarding.setup.avatar')}</legend>
-            <div className="grid grid-cols-8 gap-1" role="radiogroup" aria-label={t('onboarding.setup.avatar')}>
+            <div
+              className="grid grid-cols-8 gap-1"
+              role="radiogroup"
+              aria-label={t('onboarding.setup.avatar')}
+            >
               {Array.from({ length: AVATAR_COUNT }, (_, i) => (
                 <button
                   key={i}
@@ -130,8 +140,17 @@ export default function SettingsScreen() {
               ]}
             />
           </div>
-          <Toggle checked={settings.sound} onChange={(v) => void update('sound', v)} label={t('settings.sound')} />
-          <Toggle checked={settings.haptics} onChange={(v) => void update('haptics', v)} label={t('settings.haptics')} description={t('settings.hapticsHint')} />
+          <Toggle
+            checked={settings.sound}
+            onChange={(v) => void update('sound', v)}
+            label={t('settings.sound')}
+          />
+          <Toggle
+            checked={settings.haptics}
+            onChange={(v) => void update('haptics', v)}
+            label={t('settings.haptics')}
+            description={t('settings.hapticsHint')}
+          />
           <div>
             <p className="mb-2 font-semibold">{t('settings.motion')}</p>
             <Segmented
@@ -145,7 +164,12 @@ export default function SettingsScreen() {
               ]}
             />
           </div>
-          <Toggle checked={settings.extendedTime} onChange={(v) => void update('extendedTime', v)} label={t('settings.extendedTime')} description={t('settings.extendedTimeHint')} />
+          <Toggle
+            checked={settings.extendedTime}
+            onChange={(v) => void update('extendedTime', v)}
+            label={t('settings.extendedTime')}
+            description={t('settings.extendedTimeHint')}
+          />
         </Card>
 
         <Card className="flex flex-col gap-3">
@@ -154,16 +178,32 @@ export default function SettingsScreen() {
             label={t('settings.quizLanguage')}
             value={settings.quizLanguageDefault}
             onChange={(e) => void update('quizLanguageDefault', e.target.value)}
-            options={[{ value: 'auto', label: t('newDeck.sameAsNotes') }, ...LANGUAGES.map((l) => ({ value: l.code, label: l.name }))]}
+            options={[
+              { value: 'auto', label: t('newDeck.sameAsNotes') },
+              ...LANGUAGES.map((l) => ({ value: l.code, label: l.name })),
+            ]}
           />
-          <Toggle checked={settings.figureQuestions} onChange={(v) => void update('figureQuestions', v)} label={t('settings.figures')} description={t('settings.figuresHint')} />
+          <Toggle
+            checked={settings.figureQuestions}
+            onChange={(v) => void update('figureQuestions', v)}
+            label={t('settings.figures')}
+            description={t('settings.figuresHint')}
+          />
           <div className="flex flex-col gap-2 rounded-2xl bg-surface-2 p-3">
             <p className="flex items-center gap-2 font-semibold">
               <Search className="size-5 text-accent" aria-hidden />
               {t('smart.title')}
             </p>
-            <p className="text-sm text-muted">{downloaded ? t('settings.smartOn') : t('smart.body', { size: formatNumber(EMBED_DOWNLOAD_MB) })}</p>
-            {smart.status === 'downloading' && smart.total > 0 && <p className="text-sm">{t('smart.downloading', { percent: formatPercent(smart.loaded / smart.total) })}</p>}
+            <p className="text-sm text-muted">
+              {downloaded
+                ? t('settings.smartOn')
+                : t('smart.body', { size: formatNumber(EMBED_DOWNLOAD_MB) })}
+            </p>
+            {smart.status === 'downloading' && smart.total > 0 && (
+              <p className="text-sm">
+                {t('smart.downloading', { percent: formatPercent(smart.loaded / smart.total) })}
+              </p>
+            )}
             {downloaded ? (
               <Button
                 variant="secondary"
@@ -196,14 +236,33 @@ export default function SettingsScreen() {
           <h2 className="font-display font-extrabold">{t('settings.data')}</h2>
           <p className="text-sm text-muted">{t('settings.backupHint')}</p>
           {usage && <p className="text-sm">{t('settings.storage', { used: formatBytes(usage.usage) })}</p>}
-          <Button variant="secondary" busy={busy} icon={<Download className="size-5" aria-hidden />} onClick={() => void exportData()}>
+          <Button
+            variant="secondary"
+            busy={busy}
+            icon={<Download className="size-5" aria-hidden />}
+            onClick={() => void exportData()}
+          >
             {t('settings.export')}
           </Button>
-          <Button variant="secondary" icon={<Upload className="size-5" aria-hidden />} onClick={() => fileInput.current?.click()}>
+          <Button
+            variant="secondary"
+            icon={<Upload className="size-5" aria-hidden />}
+            onClick={() => fileInput.current?.click()}
+          >
             {t('settings.import')}
           </Button>
-          <input ref={fileInput} type="file" accept=".studynight,application/json" className="hidden" onChange={(e) => e.target.files?.[0] && void chooseImport(e.target.files[0])} />
-          <Button variant="danger" icon={<Trash2 className="size-5" aria-hidden />} onClick={() => setConfirmDelete(true)}>
+          <input
+            ref={fileInput}
+            type="file"
+            accept=".studynight,application/json"
+            className="hidden"
+            onChange={(e) => e.target.files?.[0] && void chooseImport(e.target.files[0])}
+          />
+          <Button
+            variant="danger"
+            icon={<Trash2 className="size-5" aria-hidden />}
+            onClick={() => setConfirmDelete(true)}
+          >
             {t('settings.deleteAll')}
           </Button>
         </Card>
@@ -215,7 +274,17 @@ export default function SettingsScreen() {
         body={
           pending && (
             <div className="flex flex-col gap-2">
-              <p>{t('settings.importPreview', { date: formatDate(pending.preview.exportedAt, { day: 'numeric', month: 'long', year: 'numeric' }), decks: pending.preview.decks, count: pending.preview.questions })}</p>
+              <p>
+                {t('settings.importPreview', {
+                  date: formatDate(pending.preview.exportedAt, {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                  }),
+                  decks: pending.preview.decks,
+                  count: pending.preview.questions,
+                })}
+              </p>
               <p className="font-semibold text-bad">{t('settings.importWarning')}</p>
             </div>
           )

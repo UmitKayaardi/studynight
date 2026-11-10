@@ -1,230 +1,182 @@
 {
- "id": "fotosentez",
- "title": "Fotosentez",
- "language": "tr",
- "description": "Bitkilerin ışık enerjisini kimyasal enerjiye nasıl dönüştürdüğü.",
- "source": "fotosentez.md",
- "chunks": [
-  {
-   "text": "Fotosentez\nBu notlar, bitkilerin ışık enerjisini kullanarak kendi besinlerini nasıl ürettiğini özetlemektedir.\nFotosentez nedir?\nFotosentez, yeşil bitkilerin, alglerin ve bazı bakterilerin ışık enerjisini kimyasal enerjiye dönüştürdüğü süreçtir. Bu süreçte karbondioksit ve su kullanılarak glikoz üretilir ve oksijen açığa çıkar. Fotosentezin genel denklemi şöyle yazılabilir:\n$$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$$\nBitkiler karbondioksiti yapraklarındaki küçük gözeneklerden, yani stomalardan alır. Su ise kökler tarafından topraktan emilir ve gövde aracılığıyla yapraklara taşınır.\nKloroplast ve klorofil\nFotosentez, bitki hücrelerindeki kloroplast adı verilen organellerde gerçekleşir. Kloroplastların içinde klorofil adlı yeşil bir pigment bulunur. Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır. Bitkilerin yeşil görünmesinin nedeni budur.\nIşığa bağımlı tepkimeler\nFotosentez iki ana aşamadan oluşur. Birinci aşama ışığa bağımlı tepkimelerdir ve kloroplastın tilakoit zarlarında gerçekleşir. Bu aşamada ışık enerjisi kullanılarak su molekülleri parçalanır. Suyun parçalanması sonucunda oksijen açığa çıkar. Ayrıca bir sonraki aşamada kullanılacak olan enerji taşıyıcı moleküller, ATP ve NADPH, üretilir.",
-   "headingPath": [
-    "Fotosentez"
-   ],
-   "wordCount": 158
-  },
-  {
-   "text": "Calvin döngüsü\nİkinci aşama Calvin döngüsüdür ve kloroplastın stroma adı verilen sıvı kısmında gerçekleşir. Bu aşamada doğrudan ışık gerekmez. Birinci aşamada üretilen ATP ve NADPH kullanılarak havadaki karbondioksit organik moleküllere bağlanır. Bu olaya karbon fiksasyonu denir. Sonuçta glikoz gibi şekerler oluşur.\nFotosentezi etkileyen etmenler\nFotosentez hızını etkileyen başlıca etmenler ışık şiddeti, karbondioksit miktarı ve sıcaklıktır. Işık şiddeti arttıkça fotosentez hızı belirli bir noktaya kadar artar. Sıcaklık çok yükselirse, tepkimeleri yöneten enzimler bozulabilir ve fotosentez hızı düşer.\nFotosentezin önemi\nFotosentez, yeryüzündeki yaşamın temelidir. Besin zincirlerinin başlangıcındaki üreticiler fotosentez yaparak enerji depolar. Ayrıca atmosferdeki oksijenin büyük bölümü fotosentez sonucunda oluşur. Fotosentez, havadaki karbondioksiti azaltarak karbon döngüsünde de önemli bir rol oynar.",
-   "headingPath": [
-    "Fotosentez",
-    "Calvin döngüsü"
-   ],
-   "wordCount": 109
-  }
- ],
- "topics": [
-  {
-   "key": "t1",
-   "title": "Fotosentez ve Calvin döngüsü",
-   "summary": "Bitkilerin ışık enerjisiyle besin üretimi ve Calvin döngüsüyle CO₂'nin organik moleküllere dönüşümü açıklanır.",
-   "chunks": [
-    0,
-    1
-   ]
-  }
- ],
- "questions": [
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Hangi pigment kırmızı ve mavi ışığı en çok soğurur?",
-    "explanation": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur.",
-    "hint": "Bu pigment bitkilerin yeşil görünmesinin sebebidir.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır.",
-    "type": "mcq",
-    "options": [
-     "klorofil",
-     "karotenoid",
-     "antosiyanin",
-     "ksantofil"
-    ],
-    "answerIndex": 0
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Fotosentezin genel denklemi aşağıdakilerden hangisidir?",
-    "explanation": "Genel denklem bu şekildedir.",
-    "hint": "Suyun ve karbondioksitin birleştirilmesiyle glikoz oluşur.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2",
-    "type": "mcq",
-    "options": [
-     "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$",
-     "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6CO_2$",
-     "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6H_2O$",
-     "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6N_2$"
-    ],
-    "answerIndex": 0
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Calvin döngüsü ışık gerektirir.",
-    "explanation": "Calvin döngüsü ışık gerektirmez.",
-    "hint": "İkinci aşama ışık bağımlı değildir.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c1"
-    ],
-    "evidenceQuote": "Bu aşamada doğrudan ışık gerekmez.",
-    "type": "tf",
-    "answer": false,
-    "correction": "Calvin döngüsü doğrudan ışık gerektirmez."
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Bitkilerin yeşil görünmesinin nedeni ____ pigmentidir.",
-    "explanation": "Klorofil yeşil ışığı yansıtır.",
-    "hint": "Bu pigment ışığı emerek enerji üretir.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır.",
-    "type": "fill",
-    "answer": "klorofil",
-    "acceptedAnswers": []
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Işığa bağımlı tepkimeler kloroplastın hangi bölgesinde gerçekleşir?",
-    "explanation": "Kaynakta ışığa bağımlı tepkimelerin kloroplastın tilakoit zarlarında gerçekleştiği belirtilmiştir.",
-    "hint": "Kloroplast içinde ışık yakalanan ince zarlar.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Birinci aşama ışığa bağımlı tepkimelerdir ve kloroplastın tilakoit zarlarında gerçekleşir.",
-    "type": "mcq",
-    "options": [
-     "Tilakoit zarları",
-     "Stroma",
-     "Sitoplazma",
-     "Mitokondri"
-    ],
-    "answerIndex": 0
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Calvin döngüsü kloroplastın hangi bölümünde gerçekleşir?",
-    "explanation": "Kalvin döngüsü kloroplastın stroma adı verilen sıvı kısmında gerçekleşir.",
-    "hint": "Kloroplast içinde sıvı bir bölge vardır.",
-    "difficulty": 3,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c1"
-    ],
-    "evidenceQuote": "İkinci aşama Calvin döngüsüdür ve kloroplastın stroma adı verilen sıvı kısmında gerçekleşir.",
-    "type": "mcq",
-    "options": [
-     "Kloroplast stroma",
-     "Tilakoit zarları",
-     "Mitokondri",
-     "Sitoplazma"
-    ],
-    "answerIndex": 0
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Işığa bağımlı tepkimelerde hangi enerji taşıyıcı moleküller üretilir?",
-    "explanation": "Işık bağımlı reaksiyonlarda enerji taşıyıcı moleküller ATP ve NADPH üretilir.",
-    "hint": "Bu moleküller Calvin döngüsünde kullanılır.",
-    "difficulty": 2,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Ayrıca bir sonraki aşamada kullanılacak olan enerji taşıyıcı moleküller, ATP ve NADPH, üretilir.",
-    "type": "mcq",
-    "options": [
-     "O₂ ve H₂O",
-     "ATP ve NADPH",
-     "CO₂ ve H₂O",
-     "O₂ ve ATP"
-    ],
-    "answerIndex": 1
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Su, ışığa bağımlı tepkimelerde parçalanır ve oksijen açığa çıkar.",
-    "explanation": "Su, ışık bağımlı reaksiyonlarda parçalanır ve oksijen açığa çıkar.",
-    "hint": "Su parçalanmasıyla oksijen oluşur.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Bu aşamada ışık enerjisi kullanılarak su molekülleri parçalanır. Suyun parçalanması sonucunda oksijen açığa çıkar.",
-    "type": "tf",
-    "answer": true
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Kalvin döngüsünde CO₂'nin organik moleküllere bağlanma olayı ____ olarak adlandırılır.",
-    "explanation": "CO₂'nin organik moleküllere bağlanma olayı karbon fiksasyonu olarak adlandırılır.",
-    "hint": "Bu terim, CO₂'nin organik bileşiklere eklenmesini ifade eder.",
-    "difficulty": 2,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c1"
-    ],
-    "evidenceQuote": "Birinci aşamada üretilen ATP ve NADPH kullanılarak havadaki karbondioksit organik moleküllere bağlanır. Bu olaya karbon fiksasyonu denir.",
-    "type": "fill",
-    "answer": "karbon fiksasyonu",
-    "acceptedAnswers": []
-   }
-  },
-  {
-   "topic": "t1",
-   "content": {
-    "prompt": "Stoma",
-    "explanation": "Stoma, yaprakların gözenekleri aracılığıyla CO₂ alımını sağlar.",
-    "hint": "Su köklerden gelir, CO₂ ise bu gözeneklerden alınır.",
-    "difficulty": 1,
-    "topicId": "t1",
-    "sourceChunkIds": [
-     "c0"
-    ],
-    "evidenceQuote": "Bitkiler karbondioksiti yapraklarındaki küçük gözeneklerden, yani stomalardan alır.",
-    "type": "flashcard",
-    "back": "Yaprakların küçük gözenekleri, karbondioksit alımını sağlar."
-   }
-  }
- ]
+  "id": "fotosentez",
+  "title": "Fotosentez",
+  "language": "tr",
+  "description": "Bitkilerin ışık enerjisini kimyasal enerjiye nasıl dönüştürdüğü.",
+  "source": "fotosentez.md",
+  "chunks": [
+    {
+      "text": "Fotosentez\nBu notlar, bitkilerin ışık enerjisini kullanarak kendi besinlerini nasıl ürettiğini özetlemektedir.\nFotosentez nedir?\nFotosentez, yeşil bitkilerin, alglerin ve bazı bakterilerin ışık enerjisini kimyasal enerjiye dönüştürdüğü süreçtir. Bu süreçte karbondioksit ve su kullanılarak glikoz üretilir ve oksijen açığa çıkar. Fotosentezin genel denklemi şöyle yazılabilir:\n$$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$$\nBitkiler karbondioksiti yapraklarındaki küçük gözeneklerden, yani stomalardan alır. Su ise kökler tarafından topraktan emilir ve gövde aracılığıyla yapraklara taşınır.\nKloroplast ve klorofil\nFotosentez, bitki hücrelerindeki kloroplast adı verilen organellerde gerçekleşir. Kloroplastların içinde klorofil adlı yeşil bir pigment bulunur. Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır. Bitkilerin yeşil görünmesinin nedeni budur.\nIşığa bağımlı tepkimeler\nFotosentez iki ana aşamadan oluşur. Birinci aşama ışığa bağımlı tepkimelerdir ve kloroplastın tilakoit zarlarında gerçekleşir. Bu aşamada ışık enerjisi kullanılarak su molekülleri parçalanır. Suyun parçalanması sonucunda oksijen açığa çıkar. Ayrıca bir sonraki aşamada kullanılacak olan enerji taşıyıcı moleküller, ATP ve NADPH, üretilir.",
+      "headingPath": ["Fotosentez"],
+      "wordCount": 158
+    },
+    {
+      "text": "Calvin döngüsü\nİkinci aşama Calvin döngüsüdür ve kloroplastın stroma adı verilen sıvı kısmında gerçekleşir. Bu aşamada doğrudan ışık gerekmez. Birinci aşamada üretilen ATP ve NADPH kullanılarak havadaki karbondioksit organik moleküllere bağlanır. Bu olaya karbon fiksasyonu denir. Sonuçta glikoz gibi şekerler oluşur.\nFotosentezi etkileyen etmenler\nFotosentez hızını etkileyen başlıca etmenler ışık şiddeti, karbondioksit miktarı ve sıcaklıktır. Işık şiddeti arttıkça fotosentez hızı belirli bir noktaya kadar artar. Sıcaklık çok yükselirse, tepkimeleri yöneten enzimler bozulabilir ve fotosentez hızı düşer.\nFotosentezin önemi\nFotosentez, yeryüzündeki yaşamın temelidir. Besin zincirlerinin başlangıcındaki üreticiler fotosentez yaparak enerji depolar. Ayrıca atmosferdeki oksijenin büyük bölümü fotosentez sonucunda oluşur. Fotosentez, havadaki karbondioksiti azaltarak karbon döngüsünde de önemli bir rol oynar.",
+      "headingPath": ["Fotosentez", "Calvin döngüsü"],
+      "wordCount": 109
+    }
+  ],
+  "topics": [
+    {
+      "key": "t1",
+      "title": "Fotosentez ve Calvin döngüsü",
+      "summary": "Bitkilerin ışık enerjisiyle besin üretimi ve Calvin döngüsüyle CO₂'nin organik moleküllere dönüşümü açıklanır.",
+      "chunks": [0, 1]
+    }
+  ],
+  "questions": [
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Hangi pigment kırmızı ve mavi ışığı en çok soğurur?",
+        "explanation": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur.",
+        "hint": "Bu pigment bitkilerin yeşil görünmesinin sebebidir.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır.",
+        "type": "mcq",
+        "options": ["klorofil", "karotenoid", "antosiyanin", "ksantofil"],
+        "answerIndex": 0
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Fotosentezin genel denklemi aşağıdakilerden hangisidir?",
+        "explanation": "Genel denklem bu şekildedir.",
+        "hint": "Suyun ve karbondioksitin birleştirilmesiyle glikoz oluşur.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2",
+        "type": "mcq",
+        "options": [
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6O_2$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6CO_2$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6H_2O$",
+          "$6CO_2 + 6H_2O \\rightarrow C_6H_{12}O_6 + 6N_2$"
+        ],
+        "answerIndex": 0
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Calvin döngüsü ışık gerektirir.",
+        "explanation": "Calvin döngüsü ışık gerektirmez.",
+        "hint": "İkinci aşama ışık bağımlı değildir.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c1"],
+        "evidenceQuote": "Bu aşamada doğrudan ışık gerekmez.",
+        "type": "tf",
+        "answer": false,
+        "correction": "Calvin döngüsü doğrudan ışık gerektirmez."
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Bitkilerin yeşil görünmesinin nedeni ____ pigmentidir.",
+        "explanation": "Klorofil yeşil ışığı yansıtır.",
+        "hint": "Bu pigment ışığı emerek enerji üretir.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Klorofil, ışığın en çok kırmızı ve mavi dalga boylarını soğurur, yeşil ışığı ise yansıtır.",
+        "type": "fill",
+        "answer": "klorofil",
+        "acceptedAnswers": []
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Işığa bağımlı tepkimeler kloroplastın hangi bölgesinde gerçekleşir?",
+        "explanation": "Kaynakta ışığa bağımlı tepkimelerin kloroplastın tilakoit zarlarında gerçekleştiği belirtilmiştir.",
+        "hint": "Kloroplast içinde ışık yakalanan ince zarlar.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Birinci aşama ışığa bağımlı tepkimelerdir ve kloroplastın tilakoit zarlarında gerçekleşir.",
+        "type": "mcq",
+        "options": ["Tilakoit zarları", "Stroma", "Sitoplazma", "Mitokondri"],
+        "answerIndex": 0
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Calvin döngüsü kloroplastın hangi bölümünde gerçekleşir?",
+        "explanation": "Kalvin döngüsü kloroplastın stroma adı verilen sıvı kısmında gerçekleşir.",
+        "hint": "Kloroplast içinde sıvı bir bölge vardır.",
+        "difficulty": 3,
+        "topicId": "t1",
+        "sourceChunkIds": ["c1"],
+        "evidenceQuote": "İkinci aşama Calvin döngüsüdür ve kloroplastın stroma adı verilen sıvı kısmında gerçekleşir.",
+        "type": "mcq",
+        "options": ["Kloroplast stroma", "Tilakoit zarları", "Mitokondri", "Sitoplazma"],
+        "answerIndex": 0
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Işığa bağımlı tepkimelerde hangi enerji taşıyıcı moleküller üretilir?",
+        "explanation": "Işık bağımlı reaksiyonlarda enerji taşıyıcı moleküller ATP ve NADPH üretilir.",
+        "hint": "Bu moleküller Calvin döngüsünde kullanılır.",
+        "difficulty": 2,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Ayrıca bir sonraki aşamada kullanılacak olan enerji taşıyıcı moleküller, ATP ve NADPH, üretilir.",
+        "type": "mcq",
+        "options": ["O₂ ve H₂O", "ATP ve NADPH", "CO₂ ve H₂O", "O₂ ve ATP"],
+        "answerIndex": 1
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Su, ışığa bağımlı tepkimelerde parçalanır ve oksijen açığa çıkar.",
+        "explanation": "Su, ışık bağımlı reaksiyonlarda parçalanır ve oksijen açığa çıkar.",
+        "hint": "Su parçalanmasıyla oksijen oluşur.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Bu aşamada ışık enerjisi kullanılarak su molekülleri parçalanır. Suyun parçalanması sonucunda oksijen açığa çıkar.",
+        "type": "tf",
+        "answer": true
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Kalvin döngüsünde CO₂'nin organik moleküllere bağlanma olayı ____ olarak adlandırılır.",
+        "explanation": "CO₂'nin organik moleküllere bağlanma olayı karbon fiksasyonu olarak adlandırılır.",
+        "hint": "Bu terim, CO₂'nin organik bileşiklere eklenmesini ifade eder.",
+        "difficulty": 2,
+        "topicId": "t1",
+        "sourceChunkIds": ["c1"],
+        "evidenceQuote": "Birinci aşamada üretilen ATP ve NADPH kullanılarak havadaki karbondioksit organik moleküllere bağlanır. Bu olaya karbon fiksasyonu denir.",
+        "type": "fill",
+        "answer": "karbon fiksasyonu",
+        "acceptedAnswers": []
+      }
+    },
+    {
+      "topic": "t1",
+      "content": {
+        "prompt": "Stoma",
+        "explanation": "Stoma, yaprakların gözenekleri aracılığıyla CO₂ alımını sağlar.",
+        "hint": "Su köklerden gelir, CO₂ ise bu gözeneklerden alınır.",
+        "difficulty": 1,
+        "topicId": "t1",
+        "sourceChunkIds": ["c0"],
+        "evidenceQuote": "Bitkiler karbondioksiti yapraklarındaki küçük gözeneklerden, yani stomalardan alır.",
+        "type": "flashcard",
+        "back": "Yaprakların küçük gözenekleri, karbondioksit alımını sağlar."
+      }
+    }
+  ]
 }

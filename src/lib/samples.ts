@@ -18,8 +18,17 @@ export const SampleSchema = z.object({
   language: z.string(),
   description: z.string(),
   source: z.string(),
-  chunks: z.array(z.object({ text: z.string(), headingPath: z.array(z.string()), page: z.number().int().optional(), wordCount: z.number().int() })),
-  topics: z.array(z.object({ key: z.string(), title: z.string(), summary: z.string(), chunks: z.array(z.number().int()) })),
+  chunks: z.array(
+    z.object({
+      text: z.string(),
+      headingPath: z.array(z.string()),
+      page: z.number().int().optional(),
+      wordCount: z.number().int(),
+    }),
+  ),
+  topics: z.array(
+    z.object({ key: z.string(), title: z.string(), summary: z.string(), chunks: z.array(z.number().int()) }),
+  ),
   questions: z.array(z.object({ topic: z.string(), content: QuestionContentSchema })),
 });
 export type SampleDeck = z.infer<typeof SampleSchema>;
@@ -34,7 +43,9 @@ export interface SampleInfo {
 }
 
 const modules = import.meta.glob<{ default: unknown }>('../samples/*.json');
-const meta = import.meta.glob<{ default: Array<Omit<SampleInfo, 'load'>> }>('../samples/index.ts', { eager: true });
+const meta = import.meta.glob<{ default: Array<Omit<SampleInfo, 'load'>> }>('../samples/index.ts', {
+  eager: true,
+});
 
 export function listSamples(): SampleInfo[] {
   const index = Object.values(meta)[0]?.default ?? [];
@@ -51,10 +62,24 @@ export async function openSample(info: SampleInfo): Promise<string> {
   const existing = await db.decks.filter((d) => d.sampleId === info.id).first();
   if (existing) return existing.id;
   const s = await info.load();
-  const deck = await createDeck({ title: s.title, quizLanguage: s.language, examDate: null, sampleId: s.id, notesLanguage: s.language });
+  const deck = await createDeck({
+    title: s.title,
+    quizLanguage: s.language,
+    examDate: null,
+    sampleId: s.id,
+    notesLanguage: s.language,
+  });
   const sourceId = newId();
   await db.transaction('rw', [db.sources, db.chunks, db.topics, db.questions], async () => {
-    await db.sources.add({ id: sourceId, deckId: deck.id, name: s.source, kind: 'markdown', units: 1, bytes: 0, addedAt: Date.now() });
+    await db.sources.add({
+      id: sourceId,
+      deckId: deck.id,
+      name: s.source,
+      kind: 'markdown',
+      units: 1,
+      bytes: 0,
+      addedAt: Date.now(),
+    });
     await db.chunks.bulkAdd(
       s.chunks.map((c, i) => ({
         id: chunkKey(deck.id, i),

@@ -1,7 +1,28 @@
 {
+  "about": {
+    "copyright": "© 2026 Umit Kayaardi. Semua hak dilindungi.",
+    "credits": "Dibangun dengan perangkat lunak open-source. AI oleh Groq; pencarian cerdas opsional berjalan di perangkatmu.",
+    "mascot": "Kenali Lumi, sabit langit malam yang menemanimu saat belajar.",
+    "principle": "AI hanya mengorganisir catatanmu menjadi topik, membuat draf pertanyaan dari paragraf milikmu, memeriksa ulang terhadap catatanmu, dan menandai poin kunci mana yang tercakup dalam penjelasan. Skor, XP, streak, penjadwalan ulasan, tingkat kesulitan, dan rencana ujian dihitung oleh kode yang teruji di perangkatmu. Tidak ada pertanyaan yang sampai ke kamu kecuali lolos pemeriksaan terhadap catatanmu.",
+    "principleTitle": "AI menulis pertanyaan. Kode menentukan sisanya.",
+    "version": "Versi {{version}}"
+  },
   "app": {
     "name": "StudyNight",
     "tagline": "Catatanmu, jadi permainan."
+  },
+  "ask": {
+    "disclaimer": "Jawaban hanya dari catatanmu. Pertanyaanmu tidak disimpan.",
+    "intro": "Tanya apa saja tentang dek ini. Jawaban hanya dari catatanmu, dengan sumber bernomor yang dapat dibuka.",
+    "label": "Pertanyaanmu",
+    "notCovered": "Catatanmu tampaknya tidak mencakup ini.",
+    "notCoveredHint": "StudyNight hanya menjawab dari catatanmu, jadi tidak menebak.",
+    "offline": "Tanya catatanmu membutuhkan koneksi internet. Semua yang lain di dek ini dapat offline.",
+    "openSource": "Sumber terbuka {{n}}",
+    "placeholder": "Tanya tentang catatanmu…",
+    "send": "Kirim",
+    "thinking": "Mencari di catatanmu…",
+    "title": "Tanya catatanmu"
   },
   "badges": {
     "challenger": {
@@ -280,7 +301,8 @@
     "notYet": "Belum",
     "partly": "Masih kurang",
     "placeholder": "Jelaskan dengan kata-katamu…",
-    "points": "Kamu mencakup {{hit}} dari {{total}} poin penting."
+    "points": "Kamu mencakup {{hit}} dari {{total}} poin penting.",
+    "skip": "Lewati dulu"
   },
   "home": {
     "continue": "Lanjutkan",
@@ -305,7 +327,6 @@
       "sleepy": "Streakmu menunggu—beberapa soal untuk tetap hidup."
     },
     "newDeck": "Deck baru",
-    "openDeck": "Buka {{title}}",
     "resume": "Ada putaran yang sedang berlangsung.",
     "review": "Review",
     "reviewDue_other": "{{count}} pertanyaan untuk ditinjau",
@@ -320,7 +341,18 @@
     "menuLabel": "Bahasa: {{language}}. Ubah bahasa"
   },
   "legal": {
-    "privacyLink": "Privasi"
+    "about": "Tentang StudyNight",
+    "licences": "Lisensi",
+    "privacy": "Privasi",
+    "privacyLink": "Privasi",
+    "terms": "Ketentuan penggunaan",
+    "updated": "Terakhir diperbarui {{date}}"
+  },
+  "licences": {
+    "fonts": "Font: keluarga Inter, Nunito, dan Noto Sans (SIL Open Font License 1.1). Ikon: Lucide (ISC).",
+    "intro": "StudyNight dibangun dengan perangkat lunak open-source. Setiap komponen di bawah digunakan di bawah lisensi yang ditampilkan.",
+    "model": "Model pencarian cerdas",
+    "original": "Maskot, logo, avatar, lencana, dan suara dibuat khusus untuk StudyNight."
   },
   "modes": {
     "ask": "Tanya catatanmu",
@@ -400,6 +432,29 @@
     },
     "uploadNotes": "Unggah catatan saya"
   },
+  "planner": {
+    "add": "Tambahkan ujian",
+    "addToCalendar": "Tambahkan ke kalender",
+    "date": "Tanggal ujian",
+    "dayPlan_other": "{{practice}} latihan + {{count}} review",
+    "daysLeft_other": "Sisa {{count}} hari",
+    "deck": "Deck",
+    "empty": "Belum ada ujian. Tambahkan untuk mendapatkan rencana harian.",
+    "examName": "Nama ujian",
+    "icsMock": "Ujian simulasi: {{title}}",
+    "icsOpen": "Buka StudyNight untuk memulai.",
+    "icsSummary_other": "Belajar: {{title}} ({{count}} soal)",
+    "intro": "Tambahkan ujianmu, dan StudyNight akan menyusun rencana harian: topik lemah dulu, review tersebar, dan ujian simulasi di hari terakhir.",
+    "mockDay_other": "Ujian simulasi + {{count}} review",
+    "more_other": "…dan {{count}} hari lagi",
+    "needDeck": "Buat deck dulu, lalu rencanakan ujiannya.",
+    "past": "Ujian ini sudah lewat. Kerja keras!",
+    "remove": "Hapus {{title}}",
+    "startToday": "Mulai sesi hari ini",
+    "time": "Waktu belajar",
+    "title": "Perencana ujian",
+    "today": "Ujian hari ini: review cepat topik terlemah, lalu istirahat. Semoga berhasil!"
+  },
   "play": {
     "answerWas": "Jawaban:",
     "bossHit": "Serangan tepat!",
@@ -436,7 +491,7 @@
     "nothingDueBody": "Kamu sudah semua terupdate. Kembali nanti atau mainkan putaran singkat.",
     "orderHelp": "Seret langkah, atau gunakan panah, untuk mengurutkannya.",
     "pageN": "Halaman {{n}}",
-    "pairedWith": "Berpasangan dengan istilah {{n}}: {{text}}",
+    "pairedWith": ", dipasangkan dengan istilah {{n}}",
     "preparing": "Mempersiapkan pertanyaan…",
     "progress": "Pertanyaan {{n}} dari {{total}}",
     "quit": "Berhenti atau keluar",
@@ -458,6 +513,48 @@
     "xpTotal": "{{xp}} XP putaran ini",
     "yourAnswer": "Jawabanmu"
   },
+  "privacy": {
+    "s1": {
+      "h": "Versi singkat",
+      "p": "Tanpa akun, iklan, pelacakan, analitik, atau cookie. Dek, soal, progres, dan profil kamu hanya tersimpan di perangkat ini."
+    },
+    "s10": {
+      "h": "Perubahan dan kontak",
+      "p": "Jika kebijakan ini berubah, kami akan memperbarui halaman ini dan tanggal di atas. Silakan kirim pertanyaan melalui detail kontak di halaman toko aplikasi atau halaman proyek."
+    },
+    "s2": {
+      "h": "Yang tersimpan di perangkatmu",
+      "p": "File yang kamu tambahkan dibaca di dalam browser; file aslinya tidak pernah diunggah. Dek, soal, jawaban, streak, nama panggilan, dan avatar disimpan di penyimpanan browser perangkat ini. Jawaban yang diketik tidak disimpan setelah ronde berakhir."
+    },
+    "s3": {
+      "h": "Yang dikirim saat memakai fitur AI",
+      "p": "Untuk membuat soal, memeriksa penjelasan, menjawab soal tentang catatanmu, membaca foto, dan mengubah suara menjadi teks, StudyNight mengirim potongan teks pendek dari catatanmu (bukan file utuh), foto atau gambar halaman yang dikecilkan, dan rekaman suara pendek melalui server kami ke Groq, penyedia AI. Server kami hanya memprosesnya di memori dan tidak menyimpan atau mencatat isinya; log hanya berisi kode error dan waktu."
+    },
+    "s4": {
+      "h": "Groq, penyedia AI kami",
+      "p": "Kami memeriksa dokumentasi data dan Perjanjian Layanan Groq pada 9 November 2026. Mereka menyatakan Groq tidak menyimpan permintaan inferensi secara default, tetapi mungkin mencatat input dan output sementara hingga 30 hari untuk memperbaiki error atau menyelidiki penyalahgunaan, kecuali Zero Data Retention diaktifkan untuk akun tersebut. Groq tidak diizinkan menggunakan input atau output untuk melatih model. Groq menyimpan data di Amerika Serikat. Lihat console.groq.com/docs/your-data."
+    },
+    "s5": {
+      "h": "Pencarian pintar",
+      "p": "Jika kamu mengaktifkan pencarian pintar, model bahasa diunduh sekali dari Hugging Face (huggingface.co), yang melihat alamat IP-mu seperti situs web lain yang kamu kunjungi. Setelah itu, semuanya berjalan di perangkatmu; mencari catatanmu tidak pernah mengirimnya ke mana pun."
+    },
+    "s6": {
+      "h": "Hosting",
+      "p": "Aplikasi ini dihosting oleh Vercel, yang memproses data teknis seperti alamat IP-mu untuk menyajikan situs web dan melindunginya dari penyalahgunaan."
+    },
+    "s7": {
+      "h": "Jangan unggah informasi pribadi",
+      "p": "Jangan unggah dokumen yang berisi informasi pribadi atau sensitif tentang dirimu atau orang lain. AI diinstruksikan untuk tidak pernah mengulang data pribadi yang ditemukan di dokumen, tetapi perlindungan terbaik adalah tidak mengunggahnya."
+    },
+    "s8": {
+      "h": "Pilihanmu",
+      "p": "Kamu bisa mengekspor semua data (Profil → Pengaturan → Ekspor cadangan), menghapus dek beserta semua yang dibuat darinya, atau menghapus semua data sekaligus. Karena tidak ada data tentangmu yang tersimpan di server kami, tidak ada hal lain yang perlu kami kirim atau hapus."
+    },
+    "s9": {
+      "h": "Anak-anak",
+      "p": "StudyNight tidak mengumpulkan apa pun tentang siapa dirimu. Aplikasi ini ditujukan untuk usia 13 tahun ke atas."
+    }
+  },
   "processing": {
     "background": "Kamu bisa mulai bermain segera setelah pertanyaan pertama siap. Sisanya akan terus datang di latar belakang.",
     "chooseBody_other": "{{count}} halaman memerlukan pembacaan gambar, tapi hingga {{max}} halaman dapat dibaca per deck. Pilih di mana memulai.",
@@ -471,6 +568,41 @@
     "title": "Membangun kuismu",
     "topics": "Mencari topik utama…",
     "vision": "Membaca gambarmu ({{done}} dari {{total}})…"
+  },
+  "profile": {
+    "accuracy": "Akurasi",
+    "accuracyOverTime": "Akurasi per minggu",
+    "activity": "Aktivitas",
+    "answered": "Terjawab",
+    "avatar": "Avatarmu",
+    "badgeEarned": "{{name}}, sudah didapat",
+    "badgeLocked": "{{name}}, belum didapat",
+    "badges": "Lencana ({{count}}/{{total}})",
+    "best": "Streak terbaik",
+    "calendar": "12 minggu terakhir",
+    "current": "Streak saat ini",
+    "dayDetail_other": "{{date}}: {{count}} pertanyaan, {{time}}",
+    "earnedOn": "Didapat pada {{date}}",
+    "freezeHint": "Kamu mendapatkan pembekuan streak setiap 7 hari berturut‑turut (maks 2). Jika melewatkan hari, satu otomatis dipakai.",
+    "freezes": "Pembekuan streak",
+    "frozenDay": "{{date}}: pembekuan streak dipakai",
+    "less": "Sedikit",
+    "memberSince": "Belajar sejak {{date}}",
+    "more": "Lebih",
+    "nextLevel": "{{xp}} XP ke level berikutnya",
+    "noName": "Pembelajar malam",
+    "notYet": "Belum didapat — terus semangat!",
+    "stats": "Statistikmu",
+    "streaks": "Streak",
+    "strongest": "Topik terkuat",
+    "studyTime": "Waktu belajar",
+    "weakest": "Topik yang perlu diperbaiki",
+    "weekDetail_other": "Minggu {{week}}: {{percent}} dari {{count}} jawaban"
+  },
+  "pwa": {
+    "offline": "Kamu offline. Semua yang sudah kamu buat tetap berfungsi.",
+    "refresh": "Muat ulang",
+    "update": "Versi baru StudyNight siap."
   },
   "report": {
     "body": "Pertanyaan ini akan dihapus dari dekmu segera dan tidak akan muncul lagi.",
@@ -489,6 +621,7 @@
     "bossWon": "Badai bersih!",
     "done": "Selesai",
     "goalMet": "Target harian tercapai! +20 XP bonus.",
+    "keepPractising": "Lanjut berlatih topik ini",
     "levelUp": "Level naik! Kamu mencapai level {{level}}.",
     "newBadges": "Lencana baru",
     "newBest": "Rekor pribadi baru!",
@@ -501,10 +634,64 @@
     "xp": "XP didapat",
     "xpValue": "{{xp}} XP"
   },
+  "review": {
+    "byDeck": "Menurut dek",
+    "caughtUp": "Semua selesai. Bagus!",
+    "due_other": "{{count}} pertanyaan jatuh tempo",
+    "dueHint": "Ulasan singkat sekarang membuatnya bertahan lebih lama.",
+    "forecast": "Minggu ini akan datang",
+    "forecastDetail_other": "{{day}}: {{count}} ulasan",
+    "how": "Ulasan dijadwalkan dengan algoritma spaced-repetition (FSRS) sehingga tiap pertanyaan muncul tepat sebelum kamu lupa. Targetkan recall {{n}}%.",
+    "questions": "Pertanyaan",
+    "start": "Mulai ulasan",
+    "today": "Hari ini"
+  },
   "samples": {
     "intro": "Ditulis untuk StudyNight, siap dimainkan langsung — tidak perlu upload. Juga dapat offline.",
     "play_other": "Main ({{count}} pertanyaan)",
     "title": "Deck contoh"
+  },
+  "settings": {
+    "app": "Aplikasi",
+    "backupHint": "Semua data hanya tersimpan di perangkat ini. Untuk pindah ke ponsel baru, ekspor cadangan di sini lalu impor di ponsel baru.",
+    "badBackup": "File itu bukan cadangan StudyNight yang valid.",
+    "data": "Data kamu",
+    "deleteAll": "Hapus semua data saya",
+    "deleteBody": "Semua dek, soal, progres, lencana, dan pengaturan akan dihapus permanen dari perangkat ini. Tindakan ini tidak bisa dibatalkan. Ekspor cadangan dulu jika ingin menyimpannya.",
+    "deleteConfirm": "Hapus semuanya",
+    "deleteTitle": "Hapus semuanya?",
+    "export": "Ekspor cadangan",
+    "exported": "Cadangan tersimpan.",
+    "extendedTime": "Waktu tambahan",
+    "extendedTimeHint": "Waktu 50% lebih lama di mode berbatas waktu.",
+    "figures": "Soal gambar",
+    "figuresHint": "Soal tentang diagram dan grafik di foto serta halaman yang dipindai.",
+    "haptics": "Getaran",
+    "hapticsHint": "Di ponsel yang mendukungnya.",
+    "import": "Impor cadangan",
+    "importConfirm": "Ganti dan impor",
+    "importPreview_other": "Cadangan dari {{date}} dengan {{decks}} dek dan {{count}} soal.",
+    "importTitle": "Impor cadangan ini?",
+    "importWarning": "Semua data saat ini di perangkat ini akan diganti.",
+    "language": "Bahasa",
+    "mascotColour": "Warna maskot",
+    "mascotN": "Warna {{n}}",
+    "motion": "Animasi",
+    "motionFull": "Penuh",
+    "motionReduce": "Sedikit",
+    "quizLanguage": "Bahasa kuis default",
+    "quizzes": "Kuis",
+    "smartOn": "Unduh dan siap di perangkat ini.",
+    "smartRemove": "Hapus pencarian pintar",
+    "smartRemoved": "Pencarian pintar dihapus dari perangkat ini.",
+    "sound": "Efek suara",
+    "storage": "Menggunakan {{used}} di perangkat ini.",
+    "theme": "Tema",
+    "themeDark": "Gelap",
+    "themeLight": "Terang",
+    "themeSystem": "Sistem",
+    "title": "Pengaturan",
+    "you": "Kamu"
   },
   "share": {
     "button": "Bagikan hasil",
@@ -525,6 +712,44 @@
     "mobileData": "Kamu tampaknya menggunakan data seluler. Mungkin lebih baik menunggu Wi‑Fi.",
     "notNow": "Tidak sekarang",
     "title": "Pencarian cerdas"
+  },
+  "terms": {
+    "s1": {
+      "h": "Untuk belajar pribadimu",
+      "p": "StudyNight membantumu belajar materi milikmu sendiri. Gunakan untuk pembelajaran pribadi."
+    },
+    "s2": {
+      "h": "Unggahanmu",
+      "p": "Hanya unggah materi yang berhak kamu gunakan. Kamu bertanggung jawab atas apa yang diunggah. Jangan unggah dokumen yang berisi informasi pribadi atau sensitif tentang dirimu atau orang lain."
+    },
+    "s3": {
+      "h": "AI bisa salah",
+      "p": "Pertanyaan, jawaban, penjelasan, dan nilai dibuat oleh AI dan diperiksa secara otomatis, tapi tetap bisa salah. Selalu cek dengan catatanmu, dan andalkan guru serta materi resmi untuk hal yang benar."
+    },
+    "s4": {
+      "h": "Bukan saran profesional",
+      "p": "StudyNight tidak memberikan saran medis, hukum, atau keuangan. “Tanya catatanmu” hanya mengulang apa yang ada di materi milikmu sendiri."
+    },
+    "s5": {
+      "h": "Penggunaan wajar",
+      "p": "Layanan AI gratis dan dibagikan oleh semua pengguna StudyNight, jadi ada batasannya. Jangan otomatiskan permintaan atau mencoba melewati batas tersebut. Kami mungkin memperlambat atau memblokir permintaan yang terlihat menyalahgunakan."
+    },
+    "s6": {
+      "h": "Berbagi",
+      "p": "Tautan tantangan dan kartu berbagi tidak pernah berisi catatanmu, hanya pertanyaan, jawaban, penjelasan singkat, dan skor. Kamu yang menentukan dengan siapa membagikannya."
+    },
+    "s7": {
+      "h": "Tanpa jaminan",
+      "p": "StudyNight disediakan gratis dan “sebagaimana adanya”. Aplikasi ini bisa berubah atau berhenti berfungsi, dan sejauh yang diizinkan hukum, kami tidak bertanggung jawab atas kerugian dari penggunaannya. Ekspor cadangan untuk apa pun yang ingin kamu simpan."
+    },
+    "s8": {
+      "h": "Kepemilikan",
+      "p": "StudyNight adalah © 2026 Umit Kayaardi, semua hak dilindungi. Komponen open-source digunakan di bawah lisensi masing-masing (lihat Lisensi). Catatanmu tetap milikmu."
+    },
+    "s9": {
+      "h": "Perubahan",
+      "p": "Kami mungkin memperbarui syarat ini; tanggal di atas menunjukkan versi terbaru. Melanjutkan penggunaan StudyNight berarti kamu menerima syarat yang diperbarui."
+    }
   },
   "titles": {
     "bossSlayer": "Pengejar Badai",

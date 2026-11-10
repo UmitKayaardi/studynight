@@ -36,7 +36,11 @@ export function Privacy() {
   const back = useBack();
   return (
     <SubScreen title={t('legal.privacy')} onBack={back}>
-      <p className="pt-2 text-sm text-muted">{t('legal.updated', { date: formatDate(LEGAL_UPDATED, { day: 'numeric', month: 'long', year: 'numeric' }) })}</p>
+      <p className="pt-2 text-sm text-muted">
+        {t('legal.updated', {
+          date: formatDate(LEGAL_UPDATED, { day: 'numeric', month: 'long', year: 'numeric' }),
+        })}
+      </p>
       <Sections prefix="privacy" count={10} />
     </SubScreen>
   );
@@ -47,7 +51,11 @@ export function Terms() {
   const back = useBack();
   return (
     <SubScreen title={t('legal.terms')} onBack={back}>
-      <p className="pt-2 text-sm text-muted">{t('legal.updated', { date: formatDate(LEGAL_UPDATED, { day: 'numeric', month: 'long', year: 'numeric' }) })}</p>
+      <p className="pt-2 text-sm text-muted">
+        {t('legal.updated', {
+          date: formatDate(LEGAL_UPDATED, { day: 'numeric', month: 'long', year: 'numeric' }),
+        })}
+      </p>
       <Sections prefix="terms" count={9} />
     </SubScreen>
   );
@@ -93,7 +101,10 @@ export function Licences() {
         <p className="text-sm text-muted">{t('licences.fonts')}</p>
         <p className="text-sm text-muted">{t('licences.original')}</p>
       </Card>
-      <ul className="flex flex-col divide-y divide-border rounded-[var(--radius-card)] border border-border bg-surface text-sm" dir="ltr">
+      <ul
+        className="flex flex-col divide-y divide-border rounded-[var(--radius-card)] border border-border bg-surface text-sm"
+        dir="ltr"
+      >
         {licences.packages.map((p) => (
           <li key={p.name} className="flex justify-between gap-2 px-3 py-2">
             <span className="min-w-0 truncate">

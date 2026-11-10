@@ -28,12 +28,21 @@ export default function Onboarding() {
   const [goal, setGoal] = useState<DailyGoal>(profile?.dailyGoalMinutes ?? 10);
 
   const finish = async (to: string) => {
-    await saveProfile({ nickname: nickname.trim().slice(0, 24), avatar, dailyGoalMinutes: goal, onboarded: true });
+    await saveProfile({
+      nickname: nickname.trim().slice(0, 24),
+      avatar,
+      dailyGoalMinutes: goal,
+      onboarded: true,
+    });
     navigate(to);
   };
 
   return (
-    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+    <main
+      id="main"
+      tabIndex={-1}
+      className="mx-auto flex min-h-dvh max-w-md flex-col px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))]"
+    >
       <header className="flex items-center gap-2">
         <Logo size={32} />
         {/* i18n-ignore: brand name */}
@@ -52,11 +61,18 @@ export default function Onboarding() {
             aria-live="polite"
           >
             <Mascot mood={INTRO[step]!.mood} size={180} />
-            <h1 className="font-display text-3xl font-extrabold leading-tight">{t(`onboarding.${INTRO[step]!.key}.title`)}</h1>
+            <h1 className="font-display text-3xl font-extrabold leading-tight">
+              {t(`onboarding.${INTRO[step]!.key}.title`)}
+            </h1>
             <p className="max-w-sm text-lg text-muted">{t(`onboarding.${INTRO[step]!.key}.body`)}</p>
           </motion.section>
         ) : (
-          <motion.section key="setup" initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} className="flex flex-1 flex-col gap-5 py-6">
+          <motion.section
+            key="setup"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex flex-1 flex-col gap-5 py-6"
+          >
             <h1 className="font-display text-2xl font-extrabold">{t('onboarding.setup.title')}</h1>
             <TextField
               label={t('onboarding.setup.nickname')}
@@ -68,7 +84,11 @@ export default function Onboarding() {
             />
             <fieldset>
               <legend className="mb-2 font-semibold">{t('onboarding.setup.avatar')}</legend>
-              <div className="grid grid-cols-4 gap-2 sm:grid-cols-8" role="radiogroup" aria-label={t('onboarding.setup.avatar')}>
+              <div
+                className="grid grid-cols-4 gap-2 sm:grid-cols-8"
+                role="radiogroup"
+                aria-label={t('onboarding.setup.avatar')}
+              >
                 {Array.from({ length: AVATAR_COUNT }, (_, i) => (
                   <button
                     key={i}
@@ -104,10 +124,18 @@ export default function Onboarding() {
           <>
             <div className="mb-1 flex justify-center gap-2" aria-hidden>
               {INTRO.map((_, i) => (
-                <span key={i} className={`h-2 rounded-full transition-all ${i === step ? 'w-6 bg-accent' : 'w-2 bg-surface-2'}`} />
+                <span
+                  key={i}
+                  className={`h-2 rounded-full transition-all ${i === step ? 'w-6 bg-accent' : 'w-2 bg-surface-2'}`}
+                />
               ))}
             </div>
-            <Button size="lg" block onClick={() => setStep(step + 1)} icon={<ArrowRight className="size-5 rtl:-scale-x-100" aria-hidden />}>
+            <Button
+              size="lg"
+              block
+              onClick={() => setStep(step + 1)}
+              icon={<ArrowRight className="size-5 rtl:-scale-x-100" aria-hidden />}
+            >
               {t('common.next')}
             </Button>
             <Button variant="ghost" block onClick={() => setStep(INTRO.length)}>
@@ -116,13 +144,29 @@ export default function Onboarding() {
           </>
         ) : (
           <>
-            <Button size="lg" block icon={<Upload className="size-5" aria-hidden />} onClick={() => void finish('/new')}>
+            <Button
+              size="lg"
+              block
+              icon={<Upload className="size-5" aria-hidden />}
+              onClick={() => void finish('/new')}
+            >
               {t('onboarding.uploadNotes')}
             </Button>
-            <Button size="lg" variant="secondary" block icon={<Sparkles className="size-5" aria-hidden />} onClick={() => void finish('/samples')}>
+            <Button
+              size="lg"
+              variant="secondary"
+              block
+              icon={<Sparkles className="size-5" aria-hidden />}
+              onClick={() => void finish('/samples')}
+            >
               {t('onboarding.trySample')}
             </Button>
-            <Button variant="ghost" block icon={<BookOpenCheck className="size-5" aria-hidden />} onClick={() => void finish('/')}>
+            <Button
+              variant="ghost"
+              block
+              icon={<BookOpenCheck className="size-5" aria-hidden />}
+              onClick={() => void finish('/')}
+            >
               {t('onboarding.later')}
             </Button>
           </>

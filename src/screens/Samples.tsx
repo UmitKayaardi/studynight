@@ -44,7 +44,12 @@ export default function Samples() {
               <p lang={s.language} className="text-sm text-muted">
                 {s.description}
               </p>
-              <Button block busy={busy === s.id} icon={<Play className="size-5" aria-hidden />} onClick={() => void open(s.id)}>
+              <Button
+                block
+                busy={busy === s.id}
+                icon={<Play className="size-5" aria-hidden />}
+                onClick={() => void open(s.id)}
+              >
                 {t('samples.play', { count: s.questions })}
               </Button>
             </Card>

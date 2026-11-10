@@ -22,7 +22,13 @@ import { play as sound } from '../lib/sound';
 async function confetti() {
   if (reducedMotion()) return;
   const { default: fire } = await import('canvas-confetti');
-  void fire({ particleCount: 120, spread: 75, origin: { y: 0.65 }, colors: ['#2ee6c5', '#ffc94d', '#c3b2ff', '#ff9fc1'], disableForReducedMotion: true });
+  void fire({
+    particleCount: 120,
+    spread: 75,
+    origin: { y: 0.65 },
+    colors: ['#2ee6c5', '#ffc94d', '#c3b2ff', '#ff9fc1'],
+    disableForReducedMotion: true,
+  });
 }
 
 export default function Results() {
@@ -41,7 +47,10 @@ export default function Results() {
   const accuracy = counted.length ? correct / counted.length : 0;
   const result = s.result;
 
-  const topics = useLiveQuery(() => (deckId ? db.topics.where('deckId').equals(deckId).toArray() : []), [deckId]);
+  const topics = useLiveQuery(
+    () => (deckId ? db.topics.where('deckId').equals(deckId).toArray() : []),
+    [deckId],
+  );
   const weakest = useMemo(() => {
     const by = new Map<string, { right: number; total: number }>();
     for (const a of counted) {
@@ -54,7 +63,11 @@ export default function Results() {
       .filter(([, e]) => e.right < e.total)
       .sort((a, b) => a[1].right / a[1].total - b[1].right / b[1].total)
       .slice(0, 3)
-      .map(([id, e]) => ({ id, title: topics?.find((x) => x.id === id)?.title ?? '', accuracy: e.right / e.total }))
+      .map(([id, e]) => ({
+        id,
+        title: topics?.find((x) => x.id === id)?.title ?? '',
+        accuracy: e.right / e.total,
+      }))
       .filter((x) => x.title);
   }, [counted, topics]);
 
@@ -62,7 +75,9 @@ export default function Results() {
     if (config?.mode !== 'exam' || !deckId) return null;
     const cards = await db.cardStates.where('deckId').equals(deckId).toArray();
     const now = Date.now();
-    const meanR = cards.length ? cards.reduce((acc, c) => acc + retrievability(c, now), 0) / cards.length : accuracy;
+    const meanR = cards.length
+      ? cards.reduce((acc, c) => acc + retrievability(c, now), 0) / cards.length
+      : accuracy;
     return predictedBand(accuracy, meanR, counted.length);
   }, [config?.mode, deckId, accuracy, counted.length]);
 
@@ -78,7 +93,8 @@ export default function Results() {
       sound(config.mode === 'boss' ? 'victory' : 'levelUp');
       haptic('celebrate');
     }
-    if (result && result.levelAfter > result.levelBefore) toast({ message: t('results.levelUp', { level: result.levelAfter }), tone: 'success' });
+    if (result && result.levelAfter > result.levelBefore)
+      toast({ message: t('results.levelUp', { level: result.levelAfter }), tone: 'success' });
     if (sessionStorage.getItem('sn-challenge-intent') && counted.length) {
       sessionStorage.removeItem('sn-challenge-intent');
       setChallenge(true);
@@ -94,14 +110,28 @@ export default function Results() {
   const back = deckId ? `/deck/${deckId}` : '/';
 
   return (
-    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10">
+    <main
+      id="main"
+      tabIndex={-1}
+      className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10"
+    >
       <section className="flex flex-col items-center gap-2 text-center" aria-live="polite">
         <Mascot mood={mood} theme={profile?.mascotTheme ?? 0} size={120} />
-        {config.mode === 'boss' && <h1 className="font-display text-3xl font-extrabold">{bossWon ? t('results.bossWon') : t('results.bossLost')}</h1>}
-        {config.mode === 'sudden' && (
-          <h1 className="font-display text-3xl font-extrabold">{t('results.suddenScore', { count: correct })}</h1>
+        {config.mode === 'boss' && (
+          <h1 className="font-display text-3xl font-extrabold">
+            {bossWon ? t('results.bossWon') : t('results.bossLost')}
+          </h1>
         )}
-        {config.mode !== 'boss' && config.mode !== 'sudden' && <h1 className="font-display text-3xl font-extrabold">{t('results.score', { correct, total: counted.length })}</h1>}
+        {config.mode === 'sudden' && (
+          <h1 className="font-display text-3xl font-extrabold">
+            {t('results.suddenScore', { count: correct })}
+          </h1>
+        )}
+        {config.mode !== 'boss' && config.mode !== 'sudden' && (
+          <h1 className="font-display text-3xl font-extrabold">
+            {t('results.score', { correct, total: counted.length })}
+          </h1>
+        )}
         {result && (
           <Chip tone="star" className="text-sm">
             <Trophy className="size-4" aria-hidden />
@@ -113,12 +143,18 @@ export default function Results() {
 
       <section className="grid grid-cols-2 gap-2" aria-label={t('results.stats')}>
         <Stat icon={<Target />} label={t('results.accuracy')} value={formatPercent(accuracy)} />
-        <Stat icon={<Zap />} label={t('results.xp')} value={t('results.xpValue', { xp: formatNumber(s.xp + (result?.bonusXp ?? 0)) })} />
+        <Stat
+          icon={<Zap />}
+          label={t('results.xp')}
+          value={t('results.xpValue', { xp: formatNumber(s.xp + (result?.bonusXp ?? 0)) })}
+        />
         <Stat icon={<Flame />} label={t('results.bestCombo')} value={formatNumber(s.bestCombo)} />
         <Stat icon={<Clock />} label={t('results.time')} value={formatDuration(Date.now() - s.startedAt)} />
       </section>
 
-      {result?.goalJustMet && <Card className="border-good bg-good-soft text-center font-semibold">{t('results.goalMet')}</Card>}
+      {result?.goalJustMet && (
+        <Card className="border-good bg-good-soft text-center font-semibold">{t('results.goalMet')}</Card>
+      )}
       {!!result?.newBadges.length && (
         <Card className="flex flex-col gap-2">
           <p className="font-display font-extrabold">{t('results.newBadges')}</p>
@@ -149,7 +185,13 @@ export default function Results() {
           <ul className="flex flex-col gap-2">
             {weakest.map((w) => (
               <li key={w.id} className="flex items-center gap-2">
-                <Ring value={w.accuracy} size={36} stroke={4} label={formatPercent(w.accuracy)} color="var(--sn-bad)" />
+                <Ring
+                  value={w.accuracy}
+                  size={36}
+                  stroke={4}
+                  label={formatPercent(w.accuracy)}
+                  color="var(--sn-bad)"
+                />
                 <span className="flex-1 text-sm font-semibold">{w.title}</span>
               </li>
             ))}
@@ -179,14 +221,28 @@ export default function Results() {
             {t('results.keepPractising')}
           </Button>
         )}
-        <Button size="lg" block variant={config.mode === 'topic' ? 'secondary' : 'primary'} onClick={() => navigate(back)}>
+        <Button
+          size="lg"
+          block
+          variant={config.mode === 'topic' ? 'secondary' : 'primary'}
+          onClick={() => navigate(back)}
+        >
           {t('results.done')}
         </Button>
         <div className="grid grid-cols-2 gap-2">
-          <Button variant="secondary" icon={<Share2 className="size-5" aria-hidden />} onClick={() => setShare(true)}>
+          <Button
+            variant="secondary"
+            icon={<Share2 className="size-5" aria-hidden />}
+            onClick={() => setShare(true)}
+          >
             {t('share.button')}
           </Button>
-          <Button variant="secondary" icon={<Send className="size-5" aria-hidden />} onClick={() => setChallenge(true)} disabled={!counted.length}>
+          <Button
+            variant="secondary"
+            icon={<Send className="size-5" aria-hidden />}
+            onClick={() => setChallenge(true)}
+            disabled={!counted.length}
+          >
             {t('modes.challenge')}
           </Button>
         </div>
@@ -194,7 +250,14 @@ export default function Results() {
       <ShareSheet
         open={share}
         onClose={() => setShare(false)}
-        data={{ correct, total: counted.length, accuracy, xp: s.xp + (result?.bonusXp ?? 0), title: result ? t(`titles.${result.title}`) : '', deckId }}
+        data={{
+          correct,
+          total: counted.length,
+          accuracy,
+          xp: s.xp + (result?.bonusXp ?? 0),
+          title: result ? t(`titles.${result.title}`) : '',
+          deckId,
+        }}
       />
       <ChallengeSheet open={challenge} onClose={() => setChallenge(false)} />
     </main>
@@ -218,8 +281,13 @@ function Stat({ icon, label, value }: { icon: React.ReactNode; label: string; va
 function ExamBreakdown() {
   const { t } = useTranslation();
   const s = usePlay();
-  const topics = useLiveQuery(() => db.topics.bulkGet([...new Set(s.items.map((i) => i.topicId))]), [s.items.length]);
-  const mistakes = s.items.filter((i) => s.answers.some((a) => a.itemId === i.id && !a.correct && !a.reported));
+  const topics = useLiveQuery(
+    () => db.topics.bulkGet([...new Set(s.items.map((i) => i.topicId))]),
+    [s.items.length],
+  );
+  const mistakes = s.items.filter((i) =>
+    s.answers.some((a) => a.itemId === i.id && !a.correct && !a.reported),
+  );
   return (
     <>
       <Card className="flex flex-col gap-2">
@@ -231,7 +299,9 @@ function ExamBreakdown() {
             return (
               <li key={tp!.id} className="flex justify-between gap-2">
                 <span>{tp!.title}</span>
-                <span className="font-bold">{t('results.score', { correct: right, total: items.length })}</span>
+                <span className="font-bold">
+                  {t('results.score', { correct: right, total: items.length })}
+                </span>
               </li>
             );
           })}
@@ -244,7 +314,8 @@ function ExamBreakdown() {
             <div key={m.id} className="border-t border-border pt-2 text-sm">
               <RichText text={m.content.prompt} className="font-semibold" />
               <p className="mt-1">
-                {t('play.answerWas')} <strong>{answerText(m.content, { true: t('play.true'), false: t('play.false') })}</strong>
+                {t('play.answerWas')}{' '}
+                <strong>{answerText(m.content, { true: t('play.true'), false: t('play.false') })}</strong>
               </p>
               <RichText text={m.content.explanation} className="mt-1 text-muted" />
             </div>
@@ -272,22 +343,40 @@ function ChallengeResult() {
     }
   }, [mine, theirs]);
   return (
-    <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10 text-center">
-      <h1 className="font-display text-3xl font-extrabold">{mine > theirs ? t('challenge.youWin') : mine === theirs ? t('challenge.draw') : t('challenge.theyWin')}</h1>
+    <main
+      id="main"
+      tabIndex={-1}
+      className="mx-auto flex min-h-dvh max-w-lg flex-col gap-4 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-10 text-center"
+    >
+      <h1 className="font-display text-3xl font-extrabold">
+        {mine > theirs
+          ? t('challenge.youWin')
+          : mine === theirs
+            ? t('challenge.draw')
+            : t('challenge.theyWin')}
+      </h1>
       <div className="grid grid-cols-2 gap-3">
         <Card className="flex flex-col items-center gap-2">
           <Avatar index={profile?.avatar ?? 0} size={56} />
           <p className="font-semibold">{profile?.nickname || t('challenge.you')}</p>
-          <p className="font-display text-3xl font-extrabold">{t('results.score', { correct: mine, total })}</p>
+          <p className="font-display text-3xl font-extrabold">
+            {t('results.score', { correct: mine, total })}
+          </p>
         </Card>
         <Card className="flex flex-col items-center gap-2">
           <Avatar index={config.challenge.avatar} size={56} />
           <p className="font-semibold">{config.challenge.nickname || t('challenge.friend')}</p>
-          <p className="font-display text-3xl font-extrabold">{t('results.score', { correct: theirs, total })}</p>
+          <p className="font-display text-3xl font-extrabold">
+            {t('results.score', { correct: theirs, total })}
+          </p>
         </Card>
       </div>
       <p className="text-sm text-muted">{t('challenge.forFun')}</p>
-      <Button size="lg" icon={<Award className="size-5" aria-hidden />} onClick={() => navigate(profile?.onboarded ? '/new' : '/welcome')}>
+      <Button
+        size="lg"
+        icon={<Award className="size-5" aria-hidden />}
+        onClick={() => navigate(profile?.onboarded ? '/new' : '/welcome')}
+      >
         {t('challenge.makeOwn')}
       </Button>
       <Button variant="ghost" onClick={() => navigate('/')}>

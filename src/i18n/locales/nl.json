@@ -339,7 +339,6 @@
       "sleepy": "Je streak wacht — een paar vragen houden het levend."
     },
     "newDeck": "Nieuwe deck",
-    "openDeck": "Open {{title}}",
     "resume": "Je hebt een ronde in uitvoering.",
     "review": "Herzien",
     "reviewDue_one": "{{count}} vraag te herzien",
@@ -515,7 +514,7 @@
     "nothingDueBody": "Je bent helemaal bij. Kom later terug of speel een snelle ronde.",
     "orderHelp": "Sleep de stappen of gebruik de pijlen om ze in volgorde te zetten.",
     "pageN": "Pagina {{n}}",
-    "pairedWith": "Geparreerd met term {{n}}: {{text}}",
+    "pairedWith": ", gekoppeld met term {{n}}",
     "preparing": "Je vragen worden klaargemaakt…",
     "progress": "Vraag {{n}} van {{total}}",
     "quit": "Pauzeren of stoppen",
@@ -649,6 +648,7 @@
     "bossWon": "Storm voorbij!",
     "done": "Klaar",
     "goalMet": "Dagelijkse doel bereikt! +20 XP bonus.",
+    "keepPractising": "Blijf oefenen met dit onderwerp",
     "levelUp": "Level omhoog! Je bent level {{level}}.",
     "newBadges": "Nieuwe badges",
     "newBest": "Nieuw persoonlijk record!",
@@ -797,7 +797,8 @@
     "perfectionist": "Perfectionist",
     "speedReader": "Snellezer",
     "steadyClimber": "Stevige klimmer",
-    "topicTamer": "Onderwerp temmer"
+    "topicTamer": "Onderwerp temmer",
+    "comebackKid": "Comebackkampioen"
   },
   "voice": {
     "denied": "Microfoontoegang geweigerd. Sta het toe in je browserinstellingen, of typ je antwoord in.",

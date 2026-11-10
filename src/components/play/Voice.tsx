@@ -13,11 +13,23 @@ export const MAX_RECORDING_MS = 90_000;
 const PREFERRED = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus', 'audio/mp4'];
 
 function supported(): boolean {
-  return typeof window !== 'undefined' && typeof MediaRecorder !== 'undefined' && !!navigator.mediaDevices?.getUserMedia;
+  return (
+    typeof window !== 'undefined' &&
+    typeof MediaRecorder !== 'undefined' &&
+    !!navigator.mediaDevices?.getUserMedia
+  );
 }
 
 /** Spoken answers: recorded locally (≤ 90 s), transcribed by Whisper with the deck's topic titles as a vocabulary hint. */
-export function VoiceInput({ deckId, language, onText }: { deckId: string; language: string; onText: (text: string) => void }) {
+export function VoiceInput({
+  deckId,
+  language,
+  onText,
+}: {
+  deckId: string;
+  language: string;
+  onText: (text: string) => void;
+}) {
   const { t } = useTranslation();
   const [state, setState] = useState<'idle' | 'recording' | 'transcribing'>('idle');
   const [elapsed, setElapsed] = useState(0);
@@ -56,7 +68,9 @@ export function VoiceInput({ deckId, language, onText }: { deckId: string; langu
       stream.getTracks().forEach((tr) => tr.stop());
       const durationMs = Math.min(MAX_RECORDING_MS, Date.now() - began);
       const base = (rec.mimeType || mimeType || 'audio/webm').split(';')[0]!;
-      const mime = (AUDIO_MIME as readonly string[]).includes(base) ? (base as (typeof AUDIO_MIME)[number]) : 'audio/webm';
+      const mime = (AUDIO_MIME as readonly string[]).includes(base)
+        ? (base as (typeof AUDIO_MIME)[number])
+        : 'audio/webm';
       const blob = new Blob(parts, { type: mime });
       if (blob.size < 500) {
         setState('idle');
@@ -65,7 +79,10 @@ export function VoiceInput({ deckId, language, onText }: { deckId: string; langu
       setState('transcribing');
       try {
         const topics = deckId ? await db.topics.where('deckId').equals(deckId).toArray() : [];
-        const prompt = topics.map((x) => x.title).join(', ').slice(0, 600);
+        const prompt = topics
+          .map((x) => x.title)
+          .join(', ')
+          .slice(0, 600);
         const res = await api.transcribe({
           audio: await blobToBase64(blob),
           mime,
@@ -98,7 +115,13 @@ export function VoiceInput({ deckId, language, onText }: { deckId: string; langu
           {t('voice.stop', { seconds: formatNumber(Math.ceil((MAX_RECORDING_MS - elapsed) / 1000)) })}
         </Button>
       ) : (
-        <Button variant="secondary" block busy={state === 'transcribing'} icon={<Mic className="size-5" aria-hidden />} onClick={() => void start()}>
+        <Button
+          variant="secondary"
+          block
+          busy={state === 'transcribing'}
+          icon={<Mic className="size-5" aria-hidden />}
+          onClick={() => void start()}
+        >
           {state === 'transcribing' ? t('voice.transcribing') : t('voice.record')}
         </Button>
       )}

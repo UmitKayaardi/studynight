@@ -8,7 +8,13 @@ import { activeQuestions, getProfile, reportQuestion, undoReport } from '../db/r
 import type { CardRecord, GameMode, QuestionRecord, ReportReason } from '../db/types';
 import type { QuestionContent } from '../../shared/question';
 import { evaluate, type AnswerInput, type Evaluation } from '../lib/game/check';
-import { daysAway as daysAwayOf, finishSession, recordAnswer, revokeXp, type SessionFinishResult } from '../lib/game/record';
+import {
+  daysAway as daysAwayOf,
+  finishSession,
+  recordAnswer,
+  revokeXp,
+  type SessionFinishResult,
+} from '../lib/game/record';
 import { ensureTopicQuestions } from '../lib/deck/generate';
 import { selectQuestions } from '../lib/learning/select';
 import { shuffle } from '../lib/learning/random';
@@ -96,7 +102,8 @@ interface PlayState {
 const isMultiStep = (q: QuestionContent) => q.type === 'match' || q.type === 'order';
 
 function displayOrder(q: QuestionContent): number[] {
-  const n = q.type === 'mcq' ? 4 : q.type === 'match' ? q.pairs.length : q.type === 'order' ? q.steps.length : 0;
+  const n =
+    q.type === 'mcq' ? 4 : q.type === 'match' ? q.pairs.length : q.type === 'order' ? q.steps.length : 0;
   if (!n) return [];
   const identity = Array.from({ length: n }, (_, i) => i);
   for (let tries = 0; tries < 5; tries++) {
@@ -114,34 +121,69 @@ async function deckLanguage(deckId: string): Promise<string> {
 }
 
 function toItem(q: QuestionRecord, quizLanguage: string): PlayItem {
-  return { id: q.id, deckId: q.deckId, topicId: q.topicId, content: q.content, quizLanguage, order: displayOrder(q.content) };
+  return {
+    id: q.id,
+    deckId: q.deckId,
+    topicId: q.topicId,
+    content: q.content,
+    quizLanguage,
+    order: displayOrder(q.content),
+  };
 }
 
 /** Builds the question list for a session; may generate a few more questions first when the pool is small. */
 async function loadItems(config: Exclude<SessionConfig, { mode: 'challenge' }>): Promise<PlayItem[]> {
   const now = Date.now();
   if (config.mode === 'review') {
-    const cards: CardRecord[] = config.deckId ? await db.cardStates.where('deckId').equals(config.deckId).toArray() : await db.cardStates.toArray();
-    const due = cards.filter((c) => isDue(c, now)).sort((a, b) => a.due - b.due).slice(0, 20);
-    const qs = (await db.questions.bulkGet(due.map((c) => c.questionId))).filter((q): q is QuestionRecord => !!q && !q.reported);
+    const cards: CardRecord[] = config.deckId
+      ? await db.cardStates.where('deckId').equals(config.deckId).toArray()
+      : await db.cardStates.toArray();
+    const due = cards
+      .filter((c) => isDue(c, now))
+      .sort((a, b) => a.due - b.due)
+      .slice(0, 20);
+    const qs = (await db.questions.bulkGet(due.map((c) => c.questionId))).filter(
+      (q): q is QuestionRecord => !!q && !q.reported,
+    );
     const langs = new Map<string, string>();
     for (const q of qs) if (!langs.has(q.deckId)) langs.set(q.deckId, await deckLanguage(q.deckId));
     return qs.map((q) => toItem(q, langs.get(q.deckId)!));
   }
 
   const deckId = config.deckId;
-  const topicId = config.mode === 'topic' || config.mode === 'boss' ? config.topicId : config.mode === 'flashcards' ? config.topicId : undefined;
-  const want = config.mode === 'exam' ? config.count : config.mode === 'boss' ? BOSS_QUESTIONS : config.mode === 'sudden' ? 30 : config.mode === 'flashcards' ? 20 : 10;
+  const topicId =
+    config.mode === 'topic' || config.mode === 'boss'
+      ? config.topicId
+      : config.mode === 'flashcards'
+        ? config.topicId
+        : undefined;
+  const want =
+    config.mode === 'exam'
+      ? config.count
+      : config.mode === 'boss'
+        ? BOSS_QUESTIONS
+        : config.mode === 'sudden'
+          ? 30
+          : config.mode === 'flashcards'
+            ? 20
+            : 10;
 
   let pool = await activeQuestions(deckId, topicId);
   if (pool.length < Math.min(want, 4)) {
     // Almost nothing to play yet: one quick top-up (capped at 20 s); otherwise play now and let the
     // background generator keep filling the deck.
-    const topics = topicId ? [topicId] : (await db.topics.where('deckId').equals(deckId).toArray()).sort((a, b) => a.order - b.order).map((t) => t.id);
+    const topics = topicId
+      ? [topicId]
+      : (await db.topics.where('deckId').equals(deckId).toArray())
+          .sort((a, b) => a.order - b.order)
+          .map((t) => t.id);
     const smallest = topics[0];
     if (smallest) {
       try {
-        await Promise.race([ensureTopicQuestions(smallest, 4, { retries: 1 }), new Promise((r) => setTimeout(r, 20_000))]);
+        await Promise.race([
+          ensureTopicQuestions(smallest, 4, { retries: 1 }),
+          new Promise((r) => setTimeout(r, 20_000)),
+        ]);
       } catch {
         /* offline or busy: continue with the existing pool */
       }
@@ -150,10 +192,18 @@ async function loadItems(config: Exclude<SessionConfig, { mode: 'challenge' }>):
   }
   if (config.mode === 'flashcards') pool = pool.filter((q) => !isMultiStep(q.content));
   // Explanations need the AI to grade them: leave them out of sessions started offline.
-  if (typeof navigator !== 'undefined' && navigator.onLine === false) pool = pool.filter((q) => q.content.type !== 'explain');
-  const cards = new Map((await db.cardStates.where('deckId').equals(deckId).toArray()).map((c) => [c.questionId, c]));
+  if (typeof navigator !== 'undefined' && navigator.onLine === false)
+    pool = pool.filter((q) => q.content.type !== 'explain');
+  const cards = new Map(
+    (await db.cardStates.where('deckId').equals(deckId).toArray()).map((c) => [c.questionId, c]),
+  );
   const topics = new Map((await db.topics.where('deckId').equals(deckId).toArray()).map((t) => [t.id, t]));
-  const candidates = pool.map((q) => ({ ...q, type: q.content.type, difficulty: q.content.difficulty, card: cards.get(q.id) }));
+  const candidates = pool.map((q) => ({
+    ...q,
+    type: q.content.type,
+    difficulty: q.content.difficulty,
+    card: cards.get(q.id),
+  }));
   let picked;
   if (config.mode === 'sudden') picked = shuffle(candidates).slice(0, want);
   else
@@ -249,7 +299,14 @@ export const usePlay = create<PlayState>((set, get) => ({
     let xp: number;
     const mode: GameMode = s.config.mode;
     if (mode === 'challenge') {
-      xp = xpForAnswer({ type: item.content.type, difficulty: item.content.difficulty, correct: evaluation.correct, score: evaluation.score, usedHint: s.hintUsed, combo });
+      xp = xpForAnswer({
+        type: item.content.type,
+        difficulty: item.content.difficulty,
+        correct: evaluation.correct,
+        score: evaluation.score,
+        usedHint: s.hintUsed,
+        combo,
+      });
     } else {
       const r = await recordAnswer({
         questionId: item.id,
@@ -303,13 +360,20 @@ export const usePlay = create<PlayState>((set, get) => ({
     get().touch();
     const last = s.answers.at(-1);
     const mode = s.config?.mode;
-    const bossOver = mode === 'boss' && (s.hearts <= 0 || s.answers.filter((a) => a.correct).length >= s.items.length);
+    const bossOver =
+      mode === 'boss' && (s.hearts <= 0 || s.answers.filter((a) => a.correct).length >= s.items.length);
     const suddenOver = mode === 'sudden' && last && !last.correct && !last.reported;
     if (s.index + 1 >= s.items.length || bossOver || suddenOver) {
       await get().finish();
       return;
     }
-    set({ index: s.index + 1, phase: 'question', hintUsed: false, questionStartedAt: Date.now(), comboMilestone: false });
+    set({
+      index: s.index + 1,
+      phase: 'question',
+      hintUsed: false,
+      questionStartedAt: Date.now(),
+      comboMilestone: false,
+    });
   },
 
   async report(reason) {
@@ -328,7 +392,14 @@ export const usePlay = create<PlayState>((set, get) => ({
       set({ items, answers, xp: s.xp - revoked });
       await get().finish();
     } else {
-      set({ items, answers, xp: s.xp - revoked, phase: 'question', hintUsed: false, questionStartedAt: Date.now() });
+      set({
+        items,
+        answers,
+        xp: s.xp - revoked,
+        phase: 'question',
+        hintUsed: false,
+        questionStartedAt: Date.now(),
+      });
     }
     return {
       undo: async () => {
@@ -352,7 +423,12 @@ export const usePlay = create<PlayState>((set, get) => ({
       deckId,
       mode,
       startedAt: s.startedAt,
-      answers: counted.map((a) => ({ correct: a.correct, durationMs: a.durationMs, usedHint: a.usedHint, topicId: a.topicId })),
+      answers: counted.map((a) => ({
+        correct: a.correct,
+        durationMs: a.durationMs,
+        usedHint: a.usedHint,
+        topicId: a.topicId,
+      })),
       xp: s.xp,
       bestCombo: s.bestCombo,
       activeMs: s.activeMs,

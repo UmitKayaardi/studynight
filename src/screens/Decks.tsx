@@ -17,7 +17,12 @@ export default function Decks() {
   return (
     <TabScreen title={t('nav.decks')}>
       <div className="flex flex-col gap-3 pt-2">
-        <Button size="lg" block icon={<Plus className="size-6" aria-hidden />} onClick={() => navigate('/new')}>
+        <Button
+          size="lg"
+          block
+          icon={<Plus className="size-6" aria-hidden />}
+          onClick={() => navigate('/new')}
+        >
           {t('home.newDeck')}
         </Button>
         {decks && decks.length === 0 && (
@@ -37,7 +42,11 @@ export default function Decks() {
                   ) : deck.status === 'error' ? (
                     <AlertTriangle className="size-12 text-bad" aria-hidden />
                   ) : (
-                    <Ring value={mastery / 100} label={t('deck.masteryLabel', { percent: mastery })} size={52}>
+                    <Ring
+                      value={mastery / 100}
+                      label={t('deck.masteryLabel', { percent: mastery })}
+                      size={52}
+                    >
                       {formatNumber(mastery)}
                     </Ring>
                   )}
@@ -57,7 +66,12 @@ export default function Decks() {
             </li>
           ))}
         </ul>
-        <Button variant="secondary" block icon={<Sparkles className="size-5" aria-hidden />} onClick={() => navigate('/samples')}>
+        <Button
+          variant="secondary"
+          block
+          icon={<Sparkles className="size-5" aria-hidden />}
+          onClick={() => navigate('/samples')}
+        >
           {t('home.trySample')}
         </Button>
       </div>

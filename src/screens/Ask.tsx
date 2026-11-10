@@ -72,11 +72,30 @@ export default function Ask() {
         setMessages((m) => [...m, { role: 'assistant', text: t('ask.notCovered'), found: false }]);
         return;
       }
-      const language = deck.quizLanguage === 'auto' ? (deck.notesLanguage === 'und' ? 'auto' : deck.notesLanguage) : deck.quizLanguage;
-      const res = await api.ask({ language, question, passages: passages.map((p, i) => ({ n: i + 1, text: p.text.slice(0, 4000) })) });
-      setMessages((m) => [...m, { role: 'assistant', text: res.answer || t('ask.notCovered'), found: res.found, passages, citations: res.citations }]);
+      const language =
+        deck.quizLanguage === 'auto'
+          ? deck.notesLanguage === 'und'
+            ? 'auto'
+            : deck.notesLanguage
+          : deck.quizLanguage;
+      const res = await api.ask({
+        language,
+        question,
+        passages: passages.map((p, i) => ({ n: i + 1, text: p.text.slice(0, 4000) })),
+      });
+      setMessages((m) => [
+        ...m,
+        {
+          role: 'assistant',
+          text: res.answer || t('ask.notCovered'),
+          found: res.found,
+          passages,
+          citations: res.citations,
+        },
+      ]);
       const badges = await bumpStat('questionsAsked');
-      if (badges.length) toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
+      if (badges.length)
+        toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
     } catch (e) {
       setMessages((m) => [...m, { role: 'assistant', text: '', error: errorKey(e) }]);
     } finally {
@@ -98,15 +117,24 @@ export default function Ask() {
           {messages.map((m, i) => (
             <li key={i} className={m.role === 'user' ? 'flex justify-end' : 'flex justify-start'}>
               {m.role === 'user' ? (
-                <p className="max-w-[85%] rounded-3xl rounded-ee-md bg-accent px-4 py-2 text-on-accent" dir="auto">
+                <p
+                  className="max-w-[85%] rounded-3xl rounded-ee-md bg-accent px-4 py-2 text-on-accent"
+                  dir="auto"
+                >
                   {m.text}
                 </p>
               ) : m.error ? (
-                <p className="max-w-[85%] rounded-3xl rounded-es-md bg-bad-soft px-4 py-2 text-sm" role="alert">
+                <p
+                  className="max-w-[85%] rounded-3xl rounded-es-md bg-bad-soft px-4 py-2 text-sm"
+                  role="alert"
+                >
                   {m.error === 'OFFLINE' ? t('ask.offline') : t(`errors.${m.error}.body`)}
                 </p>
               ) : (
-                <div className="max-w-[90%] rounded-3xl rounded-es-md bg-surface px-4 py-3 shadow-card" dir="auto">
+                <div
+                  className="max-w-[90%] rounded-3xl rounded-es-md bg-surface px-4 py-3 shadow-card"
+                  dir="auto"
+                >
                   <p className="whitespace-pre-line">
                     {splitCitations(m.text).map((part, k) =>
                       typeof part === 'number' && m.passages?.[part - 1] ? (
@@ -157,7 +185,12 @@ export default function Ask() {
             className="min-h-12 flex-1 rounded-full border border-border bg-surface px-4 focus:border-accent focus:outline-none"
             dir="auto"
           />
-          <IconButton label={t('ask.send')} type="submit" disabled={!input.trim() || busy} className="bg-accent text-on-accent disabled:opacity-50">
+          <IconButton
+            label={t('ask.send')}
+            type="submit"
+            disabled={!input.trim() || busy}
+            className="bg-accent text-on-accent disabled:opacity-50"
+          >
             <SendHorizontal className="size-5 rtl:-scale-x-100" aria-hidden />
           </IconButton>
         </div>
@@ -166,7 +199,9 @@ export default function Ask() {
       <Sheet open={!!open} onClose={() => setOpen(null)} title={t('play.sourceTitle')}>
         {open && (
           <div className="pb-3">
-            {open.headingPath.length > 0 && <p className="mb-2 text-xs font-bold text-muted">{open.headingPath.join(' › ')}</p>}
+            {open.headingPath.length > 0 && (
+              <p className="mb-2 text-xs font-bold text-muted">{open.headingPath.join(' › ')}</p>
+            )}
             <p className="whitespace-pre-line text-sm leading-relaxed">{open.text}</p>
           </div>
         )}

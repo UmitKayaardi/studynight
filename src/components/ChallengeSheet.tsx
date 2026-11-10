@@ -19,13 +19,18 @@ export function ChallengeSheet({ open, onClose }: { open: boolean; onClose: () =
       .map((item) => ({ item, a: s.answers.find((x) => x.itemId === item.id && !x.reported) }))
       .filter((r) => r.a)
       .map((r) => ({ content: r.item.content, correct: r.a!.correct }));
-    return createChallengeLink(location.origin, { nickname: profile?.nickname ?? '', avatar: profile?.avatar ?? 0, results });
+    return createChallengeLink(location.origin, {
+      nickname: profile?.nickname ?? '',
+      avatar: profile?.avatar ?? 0,
+      results,
+    });
   }, [s.items, s.answers, profile]);
 
   const text = t('challenge.shareText', { name: profile?.nickname || t('challenge.friend') });
   const sent = async () => {
     const badges = await bumpStat('challengesSent');
-    if (badges.length) toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
+    if (badges.length)
+      toast({ message: t('badges.earned', { name: t(`badges.${badges[0]}.name`) }), tone: 'success' });
   };
 
   return (

@@ -10,7 +10,18 @@ import { StormBoss } from '../components/art/Art';
 import { Button, IconButton } from '../components/ui/Button';
 import { ProgressBar } from '../components/ui/Controls';
 import { ConfirmSheet } from '../components/ui/Sheet';
-import { FigureImage, FillView, FlashcardView, GradeButtons, MatchView, McqView, OrderView, Prompt, TfView, timeoutInput } from '../components/play/Questions';
+import {
+  FigureImage,
+  FillView,
+  FlashcardView,
+  GradeButtons,
+  MatchView,
+  McqView,
+  OrderView,
+  Prompt,
+  TfView,
+  timeoutInput,
+} from '../components/play/Questions';
 import { ExplainView, FeedbackPanel, ReportSheet, SourceSheet } from '../components/play/Feedback';
 import { RichText } from '../components/RichText';
 import type { AnswerInput } from '../lib/game/check';
@@ -58,7 +69,8 @@ export default function Play() {
 
   // Boss battle: a timer per question (extended-time option gives 50 % more).
   useEffect(() => {
-    if (mode === 'boss' && s.phase === 'question') setQuestionDeadline(Date.now() + BOSS_SECONDS * (extendedTime ? 1.5 : 1) * 1000);
+    if (mode === 'boss' && s.phase === 'question')
+      setQuestionDeadline(Date.now() + BOSS_SECONDS * (extendedTime ? 1.5 : 1) * 1000);
     else setQuestionDeadline(null);
   }, [mode, s.phase, s.index, extendedTime]);
   const questionLeft = useCountdown(questionDeadline);
@@ -69,7 +81,13 @@ export default function Play() {
     if (!log || mode === 'exam' || mode === 'flashcards') return;
     sound(log.correct ? (mode === 'boss' ? 'bossHit' : 'correct') : 'wrong');
     haptic(log.correct ? 'correct' : 'wrong');
-    setAnnounce(log.correct ? t('play.correct') : t('play.incorrectAnnounce', { answer: answerText(item!.content, { true: t('play.true'), false: t('play.false') }) }));
+    setAnnounce(
+      log.correct
+        ? t('play.correct')
+        : t('play.incorrectAnnounce', {
+            answer: answerText(item!.content, { true: t('play.true'), false: t('play.false') }),
+          }),
+    );
     const st = usePlay.getState();
     if (st.comboMilestone) {
       sound('combo');
@@ -78,7 +96,8 @@ export default function Play() {
   };
 
   useEffect(() => {
-    if (questionLeft === 0 && item && s.phase === 'question' && !answer) void submit(timeoutInput(item.content));
+    if (questionLeft === 0 && item && s.phase === 'question' && !answer)
+      void submit(timeoutInput(item.content));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [questionLeft]);
   useEffect(() => {
@@ -89,7 +108,11 @@ export default function Play() {
   if (!s.config) return null;
   if (s.phase === 'loading') {
     return (
-      <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+      <main
+        id="main"
+        tabIndex={-1}
+        className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center"
+      >
         <Mascot mood="thinking" size={130} />
         <p className="text-lg" aria-live="polite">
           {t('play.preparing')}
@@ -99,19 +122,40 @@ export default function Play() {
   }
   if (s.phase === 'empty') {
     return (
-      <main id="main" tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center">
+      <main
+        id="main"
+        tabIndex={-1}
+        className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 p-6 text-center"
+      >
         <Mascot mood="sleepy" size={130} />
-        <h1 className="font-display text-2xl font-extrabold">{mode === 'review' ? t('play.nothingDue') : t('play.noQuestions')}</h1>
-        <p className="text-muted">{mode === 'review' ? t('play.nothingDueBody') : t('play.noQuestionsBody')}</p>
-        <Button onClick={() => navigate(s.config && 'deckId' in s.config && s.config.deckId ? `/deck/${s.config.deckId}` : '/')}>{t('common.back')}</Button>
+        <h1 className="font-display text-2xl font-extrabold">
+          {mode === 'review' ? t('play.nothingDue') : t('play.noQuestions')}
+        </h1>
+        <p className="text-muted">
+          {mode === 'review' ? t('play.nothingDueBody') : t('play.noQuestionsBody')}
+        </p>
+        <Button
+          onClick={() =>
+            navigate(s.config && 'deckId' in s.config && s.config.deckId ? `/deck/${s.config.deckId}` : '/')
+          }
+        >
+          {t('common.back')}
+        </Button>
       </main>
     );
   }
   if (!item) return null;
 
   const correctSoFar = s.answers.filter((a) => a.correct && !a.reported).length;
-  const progress = mode === 'boss' ? correctSoFar / s.items.length : (s.index + (answer ? 1 : 0)) / s.items.length;
-  const canHint = mode !== 'exam' && mode !== 'boss' && mode !== 'challenge' && s.phase === 'question' && !s.hintUsed && !!item.content.hint;
+  const progress =
+    mode === 'boss' ? correctSoFar / s.items.length : (s.index + (answer ? 1 : 0)) / s.items.length;
+  const canHint =
+    mode !== 'exam' &&
+    mode !== 'boss' &&
+    mode !== 'challenge' &&
+    s.phase === 'question' &&
+    !s.hintUsed &&
+    !!item.content.hint;
   const leave = () => {
     const deckId = s.config && 'deckId' in s.config ? s.config.deckId : undefined;
     if (s.answers.length) void s.finish();
@@ -143,21 +187,39 @@ export default function Play() {
           <X className="size-6" aria-hidden />
         </IconButton>
         <div className="flex-1">
-          <ProgressBar value={progress} label={t('play.progress', { n: s.index + 1, total: s.items.length })} />
+          <ProgressBar
+            value={progress}
+            label={t('play.progress', { n: s.index + 1, total: s.items.length })}
+          />
         </div>
         {mode === 'boss' ? (
-          <span className="flex items-center gap-0.5" aria-label={t('play.hearts', { count: s.hearts })} role="img">
+          <span
+            className="flex items-center gap-0.5"
+            aria-label={t('play.hearts', { count: s.hearts })}
+            role="img"
+          >
             {Array.from({ length: BOSS_HEARTS }, (_, i) => (
-              <Heart key={i} className={`size-5 ${i < s.hearts ? 'fill-bad text-bad' : 'text-muted'}`} aria-hidden />
+              <Heart
+                key={i}
+                className={`size-5 ${i < s.hearts ? 'fill-bad text-bad' : 'text-muted'}`}
+                aria-hidden
+              />
             ))}
           </span>
         ) : mode === 'exam' && examLeft !== null ? (
-          <span className="inline-flex items-center gap-1 font-display font-extrabold tabular-nums" role="timer" aria-label={t('play.timeLeft', { time: formatClock(examLeft) })}>
+          <span
+            className="inline-flex items-center gap-1 font-display font-extrabold tabular-nums"
+            role="timer"
+            aria-label={t('play.timeLeft', { time: formatClock(examLeft) })}
+          >
             <Timer className="size-5" aria-hidden />
             {formatClock(examLeft)}
           </span>
         ) : (
-          <span className="inline-flex items-center gap-1 font-display font-extrabold" aria-label={t('play.xpTotal', { xp: s.xp })}>
+          <span
+            className="inline-flex items-center gap-1 font-display font-extrabold"
+            aria-label={t('play.xpTotal', { xp: s.xp })}
+          >
             <Zap className="size-5 fill-star text-star-text" aria-hidden />
             {formatNumber(s.xp)}
           </span>
@@ -166,9 +228,17 @@ export default function Play() {
 
       {mode === 'boss' && (
         <div className="flex items-center justify-center gap-3">
-          <StormBoss hit={!!answer?.correct && !reducedMotion()} defeated={correctSoFar >= s.items.length} size={110} />
+          <StormBoss
+            hit={!!answer?.correct && !reducedMotion()}
+            defeated={correctSoFar >= s.items.length}
+            size={110}
+          />
           {questionLeft !== null && (
-            <span className={`font-display text-2xl font-extrabold tabular-nums ${questionLeft < 8000 ? 'text-bad' : ''}`} role="timer" aria-label={t('play.secondsLeft', { count: Math.ceil(questionLeft / 1000) })}>
+            <span
+              className={`font-display text-2xl font-extrabold tabular-nums ${questionLeft < 8000 ? 'text-bad' : ''}`}
+              role="timer"
+              aria-label={t('play.secondsLeft', { count: Math.ceil(questionLeft / 1000) })}
+            >
               {formatNumber(Math.ceil(questionLeft / 1000))}
             </span>
           )}
@@ -191,10 +261,19 @@ export default function Play() {
 
       <main id="main" tabIndex={-1} className="flex flex-1 flex-col gap-4 py-2">
         {mode === 'flashcards' ? (
-          <SwipeCard key={item.id} item={item} onGrade={(g) => void submit({ type: 'flashcard', grade: g })} />
+          <SwipeCard
+            key={item.id}
+            item={item}
+            onGrade={(g) => void submit({ type: 'flashcard', grade: g })}
+          />
         ) : (
           <>
-            <div lang={item.quizLanguage !== 'auto' && item.quizLanguage !== 'und' ? item.quizLanguage : undefined} dir="auto">
+            <div
+              lang={
+                item.quizLanguage !== 'auto' && item.quizLanguage !== 'und' ? item.quizLanguage : undefined
+              }
+              dir="auto"
+            >
               <FigureImage figureId={item.content.figureId} />
               <Prompt q={item.content} />
             </div>
@@ -204,20 +283,40 @@ export default function Play() {
                 <RichText as="span" text={item.content.hint} />
               </p>
             )}
-            <div lang={item.quizLanguage !== 'auto' && item.quizLanguage !== 'und' ? item.quizLanguage : undefined}>
-              <QuestionBody item={item} answer={answer} hideResult={mode === 'exam'} onSubmit={(i, x) => void submit(i, x)} />
+            <div
+              lang={
+                item.quizLanguage !== 'auto' && item.quizLanguage !== 'und' ? item.quizLanguage : undefined
+              }
+            >
+              <QuestionBody
+                item={item}
+                answer={answer}
+                hideResult={mode === 'exam'}
+                onSubmit={(i, x) => void submit(i, x)}
+              />
             </div>
             {answer && s.phase === 'feedback' && (
               <>
                 <AnimatePresence>
                   {s.lastXp > 0 && (
-                    <motion.p initial={{ y: 10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="self-center font-display text-lg font-extrabold text-star-text">
+                    <motion.p
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      className="self-center font-display text-lg font-extrabold text-star-text"
+                    >
                       {t('play.xpGain', { xp: s.lastXp })}
                     </motion.p>
                   )}
                 </AnimatePresence>
-                {mode === 'boss' && answer.correct && <p className="text-center font-display font-extrabold text-accent">{t('play.bossHit')}</p>}
-                <FeedbackPanel item={item} answer={answer} onNext={() => void s.next()} onSource={() => setSheet('source')} />
+                {mode === 'boss' && answer.correct && (
+                  <p className="text-center font-display font-extrabold text-accent">{t('play.bossHit')}</p>
+                )}
+                <FeedbackPanel
+                  item={item}
+                  answer={answer}
+                  onNext={() => void s.next()}
+                  onSource={() => setSheet('source')}
+                />
               </>
             )}
           </>
@@ -226,7 +325,12 @@ export default function Play() {
 
       <footer className="flex items-center justify-between gap-2">
         {canHint ? (
-          <Button variant="ghost" size="sm" icon={<Lightbulb className="size-5" aria-hidden />} onClick={s.useHint}>
+          <Button
+            variant="ghost"
+            size="sm"
+            icon={<Lightbulb className="size-5" aria-hidden />}
+            onClick={s.useHint}
+          >
             {t('play.hint')}
           </Button>
         ) : (
@@ -246,7 +350,11 @@ export default function Play() {
         onReport={async (reason) => {
           setSheet(null);
           const r = await s.report(reason);
-          if (r) toast({ message: t('report.done'), action: { label: t('common.undo'), run: () => void r.undo() } });
+          if (r)
+            toast({
+              message: t('report.done'),
+              action: { label: t('common.undo'), run: () => void r.undo() },
+            });
         }}
       />
       <ConfirmSheet
@@ -271,7 +379,17 @@ function formatClock(ms: number): string {
   return `${formatNumber(m)}:${formatNumber(sec, { minimumIntegerDigits: 2 })}`;
 }
 
-function QuestionBody({ item, answer, onSubmit, hideResult }: { item: PlayItem; answer?: ReturnType<typeof usePlay.getState>['answers'][number]; onSubmit: (i: AnswerInput, extra?: { text: string; feedback: string[] }) => void; hideResult: boolean }) {
+function QuestionBody({
+  item,
+  answer,
+  onSubmit,
+  hideResult,
+}: {
+  item: PlayItem;
+  answer?: ReturnType<typeof usePlay.getState>['answers'][number];
+  onSubmit: (i: AnswerInput, extra?: { text: string; feedback: string[] }) => void;
+  hideResult: boolean;
+}) {
   const props = { item, answer, onSubmit: (i: AnswerInput) => onSubmit(i), hideResult };
   switch (item.content.type) {
     case 'mcq':

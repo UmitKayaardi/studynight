@@ -74,7 +74,9 @@ async function callModel(system, user) {
     // Round-robin among models that are available now; otherwise wait for the first one to free up.
     const now = Date.now();
     const free = MODELS.filter((m) => readyAt.get(m) <= now);
-    const model = free.length ? free[modelTurn++ % free.length] : [...readyAt].sort((a, b) => a[1] - b[1])[0][0];
+    const model = free.length
+      ? free[modelTurn++ % free.length]
+      : [...readyAt].sort((a, b) => a[1] - b[1])[0][0];
     const waitMs = readyAt.get(model) - now;
     if (waitMs > 0) await sleep(Math.min(900_000, waitMs));
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
