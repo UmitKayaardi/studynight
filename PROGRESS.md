@@ -74,13 +74,13 @@ from the first unchecked step. Commit after every step.
 - [x] 9.4 Review tab + forecast
 
 ## Phase 10 — Languages
-- [ ] 10.1 Translate all 21 languages
-- [ ] 10.2 Language sweep (Playwright) + runtime switch test, fix overflows
+- [x] 10.1 Translate all 21 languages
+- [x] 10.2 Language sweep (Playwright) + runtime switch test, fix overflows
 
 ## Phase 11 — Legal, PWA, a11y, security, errors, samples
 - [x] 11.1 Privacy, Terms, Licences, About pages + docs/LEGAL.md + THIRD_PARTY_NOTICES.md
 - [x] 11.2 PWA (manifest, icons, offline, update toast), security headers (vercel.json)
-- [ ] 11.3 Error states audit + accessibility audit
+- [x] 11.3 Error states audit + accessibility audit
 - [ ] 11.4 Sample decks written, generated, reviewed, shipped
 
 ## Phase 12 — Benchmark
@@ -98,7 +98,7 @@ from the first unchecked step. Commit after every step.
 ## Phase 14 — Final report
 - [ ] 14.1 FINAL_REPORT.md
 
-Next: When Groq quota allows: (1) finish translations (scripts/translate.mjs, then check:i18n + full i18n sweep), (2) sample decks vaccines/machine-learning/personal-finance/ciclo-del-agua → review in samples/review.json → apply-sample-review, (3) benchmark stages generate, figure, judge, ask, explain, latency, then manual review + summary + docs/BENCHMARK.md, (4) store description translations + store screenshots, (5) README, (6) redeploy + smoke-live, (7) Phase 13.6 full re-run, (8) FINAL_REPORT.md. Live: https://studynight-sable.vercel.app
+Next: (1) sample decks vaccines/machine-learning/personal-finance/ciclo-del-agua: build (scripts/build-samples.ts) → hand review in samples/review.json → apply-sample-review; (2) benchmark stages generate, figure, judge, ask, explain, latency + manual review → docs/BENCHMARK.md; fill README BENCHMARK_TABLE and commit README; (3) dark/RTL/CJK screenshots + store screenshots + store description translations; (4) redeploy + smoke-live; (5) 13.6 full re-run; (6) FINAL_REPORT.md. Live: https://studynight-sable.vercel.app
 
 Known issues:
 - Locale files are mid-translation (CI i18n check fails until step (1) above is done). Do not push before it passes.
