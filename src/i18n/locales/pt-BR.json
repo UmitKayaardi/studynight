@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Todos os direitos reservados.",
     "credits": "Construído com software open-source. IA por Groq; busca inteligente opcional roda em seu dispositivo.",
     "mascot": "Conheça a Lumi, a lua crescente que te acompanha enquanto estuda.",
-    "principle": "A IA apenas organiza suas notas em tópicos, cria rascunhos de perguntas a partir de seus próprios trechos, verifica-as contra suas notas e marca quais pontos-chave a explicação cobre. Pontuações, XP, streaks, agendamento de revisão, dificuldade e planos de exame são calculados por código testado em seu dispositivo. Nenhuma pergunta chega a você a menos que passe a verificação contra suas notas.",
+    "principle": "A IA apenas organiza suas anotações por tópicos, cria rascunhos de perguntas com base nos seus textos, confere se batem com suas anotações e marca quais pontos-chave a explicação cobre. Notas, XP, sequências, agendamento de revisão, dificuldade e planos de prova são calculados por código testado no seu dispositivo. Toda pergunta é verificada contra suas anotações antes de chegar até você — por código e por um segundo modelo — o que pega a maioria dos erros, mas não todos.",
     "principleTitle": "A IA escreve as perguntas. O código decide tudo mais.",
     "version": "Versão {{version}}"
   },
@@ -576,7 +576,7 @@
     },
     "s3": {
       "h": "O que é enviado ao usar recursos de IA",
-      "p": "Para gerar perguntas, checar explicações, responder perguntas sobre suas notas, ler fotos e transformar fala em texto, o StudyNight envia trechos curtos de texto das suas notas (nunca arquivos completos), fotos ou imagens de página redimensionadas e gravações curtas de voz através do nosso servidor para a Groq, provedora de IA. Nosso servidor os processa apenas em memória e não armazena ou registra seu conteúdo; seus logs contêm apenas códigos de erro e tempos."
+      "p": "Para gerar perguntas, verificar explicações, tirar dúvidas sobre suas anotações, analisar fotos e transcrever áudio, o StudyNight envia trechos curtos de texto (nunca arquivos inteiros), fotos redimensionadas ou imagens de página e gravações de voz curtas do seu dispositivo para o Groq, o provedor de IA. Nosso código não armazena nem registra conteúdo: processa apenas em memória, e os logs contêm somente códigos de erro e tempos de resposta."
     },
     "s4": {
       "h": "Groq, nossa provedora de IA",

@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Zastrzeżono wszystkie prawa.",
     "credits": "Stworzone z oprogramowaniem open-source. AI od Groq; opcjonalna inteligentna wyszukiwarka działa na Twoim urządzeniu.",
     "mascot": "Poznaj Lumi, sierp księżyca, który towarzyszy Ci podczas nauki.",
-    "principle": "AI tylko organizuje Twoje notatki w tematy, szkicuje pytania z Twoich własnych fragmentów, dwukrotnie je sprawdza z notatkami i oznacza, które kluczowe punkty obejmuje wyjaśnienie. Wyniki, XP, serie, harmonogram powtórek, trudność i plany egzaminacyjne są obliczane przez przetestowany kod na Twoim urządzeniu. Żadne pytanie nie dotrze do Ciebie, jeśli nie przejdzie weryfikacji z notatkami.",
+    "principle": "AI tylko organizuje Twoje notatki w tematy, tworzy pytania z Twoich własnych fragmentów, sprawdza je z notatkami i oznacza, które kluczowe punkty obejmuje wyjaśnienie. Wyniki, XP, serie, harmonogram powtórzeń, trudność i plany egzaminacyjne są obliczane przez przetestowany kod na Twoim urządzeniu. Każde pytanie jest sprawdzane z Twoimi notatkami, zanim do Ciebie dotrze — przez kod i drugi model — co wychwytuje większość błędów, ale nie wszystkie.",
     "principleTitle": "AI pisze pytania. Kod decyduje o wszystkim innym.",
     "version": "Wersja {{version}}"
   },
@@ -600,7 +600,7 @@
     },
     "s3": {
       "h": "Co jest wysyłane przy użyciu funkcji AI",
-      "p": "Aby tworzyć pytania, sprawdzać wyjaśnienia, odpowiadać na pytania o notatki, czytać zdjęcia i zamieniać mowę na tekst, StudyNight wysyła krótkie fragmenty tekstu z Twoich notatek (nigdy całych plików), zmniejszone zdjęcia lub obrazy stron oraz krótkie nagrania głosowe przez nasz serwer do Groq, dostawcy AI. Nasz serwer przetwarza je tylko w pamięci i nie przechowuje ani nie loguje ich treści; logi zawierają tylko kody błędów i czasy."
+      "p": "Aby tworzyć pytania, sprawdzać wyjaśnienia, odpowiadać na pytania o notatki, czytać zdjęcia i zamieniać mowę na tekst, StudyNight wysyła krótkie fragmenty tekstu z Twoich notatek (nigdy całych plików), zmniejszone zdjęcia lub obrazy stron oraz krótkie nagrania głosowe przez nasz serwer do Groq, dostawcy AI. Nasz kod nie przechowuje ani nie loguje treści: przetwarza je tylko w pamięci, a jego logi zawierają wyłącznie kody błędów i czasy."
     },
     "s4": {
       "h": "Groq, nasz dostawca AI",

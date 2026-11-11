@@ -50,11 +50,14 @@ test('quick play on a sample deck: every answer saved, source sheet, report with
   await expect(page.getByText(/AI can make mistakes/)).toBeVisible();
   await startMode(page, /Quick play/);
   await expect(page.getByTestId('prompt')).toBeVisible();
-  // Report the first question, then undo.
+  // Report the first question, then undo: the same question comes back.
+  const firstId = await page.getByTestId('prompt').getAttribute('data-question-id');
   await page.getByRole('button', { name: 'Report this question' }).click();
   await page.getByRole('button', { name: 'Unclear' }).click();
   await expect(page.getByText('Question removed')).toBeVisible();
   await page.getByRole('button', { name: 'Undo' }).click();
+  // Undo saves first and then restores the question, so wait for it before answering.
+  await expect(page.getByTestId('prompt')).toHaveAttribute('data-question-id', firstId!);
   // First answer: open the source sheet.
   await answer(page, true);
   await page

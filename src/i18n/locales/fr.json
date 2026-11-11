@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Tous droits réservés.",
     "credits": "Construit avec des logiciels open‑source. IA par Groq ; la recherche intelligente optionnelle fonctionne sur ton appareil.",
     "mascot": "Voici Lumi, le croissant du ciel nocturne qui te tient compagnie pendant que tu étudies.",
-    "principle": "L’IA organise uniquement tes notes en thèmes, rédige des questions à partir de tes propres passages, les vérifie avec tes notes et indique quels points clés une explication couvre. Scores, XP, séries, planification des révisions, difficulté et programmes d’examen sont calculés par du code testé sur ton appareil. Aucune question ne t’arrive sans avoir passé la vérification avec tes notes.",
+    "principle": "L'IA ne fait qu'organiser tes notes par thèmes, rédiger des questions à partir de tes propres passages, les vérifier contre tes notes et indiser quels points clés une explication couvre. Les scores, l'XP, les séries, la planification des révisions, la difficulté et les plans d'examen sont calculés par du code testé sur ton appareil. Chaque question est vérifiée contre tes propres notes avant de t'être présentée — par le code et par un second modèle — ce qui détecte la plupart des erreurs, mais pas toutes.",
     "principleTitle": "L’IA rédige les questions. Le code décide de tout le reste.",
     "version": "Version {{version}}"
   },
@@ -576,7 +576,7 @@
     },
     "s3": {
       "h": "Ce qui est envoyé quand tu utilises les fonctions IA",
-      "p": "Pour créer des questions, vérifier des explications, répondre à des questions sur tes notes, lire des photos et transformer la parole en texte, StudyNight envoie des extraits de texte courts de tes notes (jamais de fichiers entiers), des photos ou images de pages redimensionnées, et de courtes enregistrements vocaux via notre serveur à Groq, le fournisseur d’IA. Notre serveur les traite uniquement en mémoire et ne stocke ni ne journalise leur contenu ; ses logs ne contiennent que des codes d’erreur et des temps."
+      "p": "Pour générer des questions, vérifier les explications, répondre à des questions sur tes notes, lire des photos et transcrire la voix, StudyNight envoie de courts extraits de texte (jamais de fichiers entiers), des photos redimensionnées et de courts enregistrements vocaux via notre serveur à Groq, notre fournisseur d'IA. Notre code ne stocke ni ne journalise le moindre contenu : il ne le traite qu'en mémoire, et ses journaux ne contiennent que des codes d'erreur et des horodatages."
     },
     "s4": {
       "h": "Groq, notre fournisseur d’IA",

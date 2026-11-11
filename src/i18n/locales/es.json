@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Todos los derechos reservados.",
     "credits": "Creado con software de código abierto. IA por Groq; la búsqueda inteligente opcional se ejecuta en tu dispositivo.",
     "mascot": "Conoce a Lumi, el creciente del cielo nocturno que te acompaña mientras estudias.",
-    "principle": "La IA solo organiza tus notas en temas, redacta preguntas a partir de tus propios fragmentos, las verifica con tus notas y marca qué puntos clave cubre una explicación. Puntuaciones, XP, rachas, programación de repaso, dificultad y planes de examen los calcula código probado en tu dispositivo. Ninguna pregunta llega a ti sin pasar la verificación con tus notas.",
+    "principle": "La IA solo organiza tus notas por temas, redacta preguntas a partir de tus propios pasajes, las verifica contra tus notas y marca qué puntos clave cubre cada explicación. Las puntuaciones, XP, rachas, programación de repaso, dificultad y planes de examen se calculan con código probado en tu dispositivo. Cada pregunta se verifica contra tus propias notas antes de llegar a ti —por código y por un segundo modelo—, lo que detecta la mayoría de los errores, aunque no todos.",
     "principleTitle": "La IA escribe las preguntas. El código decide todo lo demás.",
     "version": "Versión {{version}}"
   },
@@ -576,7 +576,7 @@
     },
     "s3": {
       "h": "Lo que se envía al usar funciones de IA",
-      "p": "Para crear preguntas, comprobar explicaciones, responder preguntas sobre tus notas, leer fotos y convertir voz a texto, StudyNight envía fragmentos de texto cortos de tus notas (nunca archivos completos), fotos o imágenes de páginas redimensionadas y grabaciones de voz cortas a través de nuestro servidor a Groq, el proveedor de IA. Nuestro servidor las maneja solo en memoria y no almacena ni registra su contenido; sus registros contienen solo códigos de error y tiempos."
+      "p": "Para crear preguntas, revisar explicaciones, responder sobre tus notas, leer fotos y transcribir voz, StudyNight envía a Groq (proveedor de IA) fragmentos cortos de tus notas (nunca archivos completos), fotos o imágenes de página redimensionadas y grabaciones de voz breves a través de nuestro servidor. Nuestro código no almacena ni registra contenido: solo lo procesa en memoria, y sus registros contienen únicamente códigos de error y tiempos."
     },
     "s4": {
       "h": "Groq, nuestro proveedor de IA",

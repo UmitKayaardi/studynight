@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Bảo lưu mọi quyền.",
     "credits": "Được xây dựng bằng phần mềm mã nguồn mở. AI bởi Groq; tìm kiếm Thông minh tùy chọn chạy trên thiết bị của bạn.",
     "mascot": "Gặp gỡ Lumi, vầng trăng lưỡi liềm bầu trời đêm luôn đồng hành cùng bạn khi học.",
-    "principle": "AI chỉ sắp xếp ghi chú của bạn theo chủ đề, soạn câu hỏi từ đoạn văn của bạn, kiểm tra lại chúng với ghi chú và đánh dấu các ý chính mà giải thích bao phủ. Điểm số, XP, chuỗi ngày, lịch ôn tập, độ khó và kế hoạch thi được tính toán bằng mã nguồn đã kiểm thử trên thiết bị của bạn. Không câu hỏi nào đến tay bạn nếu không vượt qua bước kiểm tra với ghi chú.",
+    "principle": "AI chỉ sắp xếp ghi chú của bạn theo chủ đề, phác thảo câu hỏi từ chính đoạn văn của bạn, kiểm tra lại với ghi chú và đánh dấu các ý chính mà lời giải bao phủ. Điểm, XP, chuỗi ngày, lịch ôn tập, độ khó và kế hoạch thi được tính toán bằng mã đã kiểm tra trên thiết bị của bạn. Mọi câu hỏi đều được kiểm tra với ghi chú của bạn trước khi đến tay bạn — bằng mã và bằng một mô hình thứ hai — giúp bắt được hầu hết nhưng không phải tất cả các lỗi.",
     "principleTitle": "AI viết câu hỏi. Mã nguồn quyết định mọi thứ còn lại.",
     "version": "Phiên bản {{version}}"
   },
@@ -528,7 +528,7 @@
     },
     "s3": {
       "h": "Những gì được gửi khi bạn dùng tính năng AI",
-      "p": "Để tạo câu hỏi, kiểm tra lời giải thích, trả lời câu hỏi về ghi chú, đọc ảnh và chuyển giọng nói thành văn bản, StudyNight gửi các đoạn văn bản ngắn từ ghi chú của bạn (không bao giờ là cả tệp), ảnh hoặc hình trang đã thu nhỏ, và bản ghi âm thanh ngắn qua máy chủ của chúng tôi đến Groq, nhà cung cấp AI. Máy chủ của chúng tôi chỉ xử lý trong bộ nhớ và không lưu trữ hoặc ghi nhật ký nội dung; nhật ký chỉ chứa mã lỗi và thời gian."
+      "p": "Để tạo câu hỏi, kiểm tra lời giải, trả lời về ghi chú, đọc ảnh và chuyển giọng nói thành chữ, StudyNight gửi các đoạn văn bản ngắn từ ghi chú của bạn (không bao giờ gửi toàn bộ tệp), ảnh đã thu nhỏ hoặc ảnh trang, và bản ghi âm ngắn qua máy chủ của chúng tôi đến Groq, nhà cung cấp AI. Mã của chúng tôi không lưu trữ hay ghi nhật ký nội dung: chỉ xử lý trong bộ nhớ, và nhật ký của riêng nó chỉ chứa mã lỗi và thời gian."
     },
     "s4": {
       "h": "Groq, nhà cung cấp AI của chúng tôi",

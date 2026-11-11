@@ -719,7 +719,7 @@
     },
     "s3": {
       "h": "What is sent when you use AI features",
-      "p": "To build questions, check explanations, answer questions about your notes, read photos and turn speech into text, StudyNight sends short text excerpts from your notes (never whole files), resized photos or page images, and short voice recordings through our server to Groq, the AI provider. Our server handles them in memory only and does not store or log their content; its logs contain only error codes and timings."
+      "p": "To build questions, check explanations, answer questions about your notes, read photos and turn speech into text, StudyNight sends short text excerpts from your notes (never whole files), resized photos or page images, and short voice recordings through our server to Groq, the AI provider. Our code stores and logs no content: it handles them in memory only, and its own logs contain only error codes and timings."
     },
     "s4": {
       "h": "Groq, our AI provider",
@@ -791,7 +791,7 @@
   "about": {
     "version": "Version {{version}}",
     "principleTitle": "AI writes the questions. Code decides everything else.",
-    "principle": "The AI only organises your notes into topics, drafts questions from your own passages, double-checks them against your notes and marks which key points an explanation covers. Scores, XP, streaks, review scheduling, difficulty and exam plans are worked out by tested code on your device. No question reaches you unless it passes the check against your notes.",
+    "principle": "The AI only organises your notes into topics, drafts questions from your own passages, double-checks them against your notes and marks which key points an explanation covers. Scores, XP, streaks, review scheduling, difficulty and exam plans are worked out by tested code on your device. Every question is checked against your own notes before it reaches you — by code and by a second model — which catches most mistakes but not all of them.",
     "mascot": "Meet Lumi, the night-sky crescent who keeps you company while you study.",
     "credits": "Built with open-source software. AI by Groq; optional Smart search runs on your device.",
     "copyright": "© 2026 Umit Kayaardi. All rights reserved."

@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Alle Rechte vorbehalten.",
     "credits": "Erstellt mit Open‑Source‑Software. KI von Groq; optionale Smart‑Suche läuft auf deinem Gerät.",
     "mascot": "Triff Lumi, die Nachthimmels‑Mondsichel, die dir beim Lernen Gesellschaft leistet.",
-    "principle": "Die KI ordnet deine Notizen nur Themen zu, erstellt Fragen aus deinen eigenen Texten, prüft sie an deinen Notizen und markiert, welche Schlüsselpunkte eine Erklärung abdeckt. Punkte, XP, Serien, Wiederholungsplanung, Schwierigkeitsgrad und Prüfungspläne werden von getesteten Code auf deinem Gerät berechnet. Keine Frage wird dir gezeigt, bevor sie die Prüfung an deinen Notizen bestanden hat.",
+    "principle": "Die KI ordnet deine Notizen nur in Themen ein, entwirft Fragen aus deinen eigenen Texten, prüft sie gegen deine Notizen ab und markiert, welche Kernpunkte eine Erklärung abdeckt. Punkte, XP, Serien, Wiederholungspläne, Schwierigkeitsgrad und Prüfungspläne werden von geprüftem Code auf deinem Gerät berechnet. Jede Frage wird vor der Anzeige gegen deine Notizen geprüft – durch Code und ein zweites Modell –, was die meisten, aber nicht alle Fehler erkennt.",
     "principleTitle": "KI schreibt die Fragen. Code entscheidet alles andere.",
     "version": "Version {{version}}"
   },
@@ -552,7 +552,7 @@
     },
     "s3": {
       "h": "Was gesendet wird, wenn du KI-Funktionen nutzt",
-      "p": "Um Fragen zu erstellen, Erklärungen zu prüfen, Fragen zu deinen Notizen zu beantworten, Fotos zu lesen und Sprache in Text umzuwandeln, sendet StudyNight kurze Textausschnitte aus deinen Notizen (nie ganze Dateien), vergrößerte Fotos oder Seitenbilder und kurze Sprachaufnahmen über unseren Server an Groq, den KI-Anbieter. Unser Server verarbeitet sie nur im Speicher und speichert oder protokolliert deren Inhalt nicht; seine Protokolle enthalten nur Fehlermeldungen und Zeitangaben."
+      "p": "Um Fragen zu erstellen, Erklärungen zu prüfen, Fragen zu deinen Notizen zu beantworten, Fotos zu lesen und Sprache in Text umzuwandeln, sendet StudyNight kurze Textauszüge aus deinen Notizen (nie ganze Dateien), verkleinerte Fotos oder Seitenbilder sowie kurze Sprachaufnahmen über unseren Server an Groq, unseren KI-Anbieter. Unser Code speichert und protokolliert keine Inhalte: Er verarbeitet sie nur im Speicher, und seine eigenen Logs enthalten nur Fehlercodes und Zeitstempel."
     },
     "s4": {
       "h": "Groq, unser KI-Anbieter",

@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Semua hak dilindungi.",
     "credits": "Dibangun dengan perangkat lunak open-source. AI oleh Groq; pencarian cerdas opsional berjalan di perangkatmu.",
     "mascot": "Kenali Lumi, sabit langit malam yang menemanimu saat belajar.",
-    "principle": "AI hanya mengorganisir catatanmu menjadi topik, membuat draf pertanyaan dari paragraf milikmu, memeriksa ulang terhadap catatanmu, dan menandai poin kunci mana yang tercakup dalam penjelasan. Skor, XP, streak, penjadwalan ulasan, tingkat kesulitan, dan rencana ujian dihitung oleh kode yang teruji di perangkatmu. Tidak ada pertanyaan yang sampai ke kamu kecuali lolos pemeriksaan terhadap catatanmu.",
+    "principle": "AI hanya mengorganisasi catatanmu menjadi topik, membuat draf soal dari paragraf milikmu, memeriksa ulang terhadap catatanmu, dan menandai poin penting yang tercakup dalam penjelasan. Skor, XP, streak, penjadwalan review, tingkat kesulitan, dan rencana ujian dihitung oleh kode teruji di perangkatmu. Setiap soal diperiksa terhadap catatanmu sendiri sebelum sampai ke kamu — oleh kode dan model kedua — yang menangkap sebagian besar kesalahan, tapi tidak semuanya.",
     "principleTitle": "AI menulis pertanyaan. Kode menentukan sisanya.",
     "version": "Versi {{version}}"
   },
@@ -528,7 +528,7 @@
     },
     "s3": {
       "h": "Yang dikirim saat memakai fitur AI",
-      "p": "Untuk membuat soal, memeriksa penjelasan, menjawab soal tentang catatanmu, membaca foto, dan mengubah suara menjadi teks, StudyNight mengirim potongan teks pendek dari catatanmu (bukan file utuh), foto atau gambar halaman yang dikecilkan, dan rekaman suara pendek melalui server kami ke Groq, penyedia AI. Server kami hanya memprosesnya di memori dan tidak menyimpan atau mencatat isinya; log hanya berisi kode error dan waktu."
+      "p": "Untuk membuat soal, memeriksa penjelasan, menjawab pertanyaan tentang catatanmu, membaca foto, dan mengubah suara menjadi teks, StudyNight mengirim potongan teks pendek dari catatanmu (bukan file utuh), foto atau gambar halaman yang dikecilkan, dan rekaman suara singkat melalui server kami ke Groq, penyedia AI. Kode kami tidak menyimpan atau mencatat konten: semuanya hanya diproses di memori, dan log kami hanya berisi kode error dan waktu."
     },
     "s4": {
       "h": "Groq, penyedia AI kami",

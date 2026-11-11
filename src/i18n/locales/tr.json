@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Tüm hakları saklıdır.",
     "credits": "Açık kaynaklı yazılımlarla geliştirildi. Yapay zeka Groq tarafından sağlanıyor; isteğe bağlı Akıllı arama cihazında çalışır.",
     "mascot": "Ders çalışırken sana eşlik eden gece göğü hilali Lumi ile tanış.",
-    "principle": "Yapay zeka yalnızca notlarını konulara ayırır, kendi pasajlarından soru taslakları oluşturur, onları notlarına göre kontrol eder ve açıklamaların hangi ana noktaları kapsadığını işaretler. Puanlar, XP, seri, tekrar zamanlaması, zorluk ve sınav planları cihazındaki test edilmiş kodla hesaplanır. Notlarına göre kontrolü geçmeyen hiçbir soru sana ulaşmaz.",
+    "principle": "Yapay zeka, notlarını konulara ayırır, kendi pasajlarından soru taslakları oluşturur, bunları notlarınla karşılaştırarak kontrol eder ve açıklamaların hangi ana noktaları kapsadığını işaretler. Puanlar, XP, seri, tekrar zamanlaması, zorluk ve sınav planları cihazındaki test edilmiş kodla hesaplanır. Her soru sana ulaşmadan önce kendi notlarınla kontrol edilir — hem kodla hem de ikinci bir modelle — bu çoğu hatayı yakalar ama hepsini değil.",
     "principleTitle": "Yapay zeka soruları yazar. Kod her şeyi belirler.",
     "version": "Sürüm {{version}}"
   },
@@ -552,7 +552,7 @@
     },
     "s3": {
       "h": "Yapay zeka özelliklerini kullanırken gönderilenler",
-      "p": "Sorular oluşturmak, açıklamaları kontrol etmek, notlarınla ilgili soruları yanıtlamak, fotoğrafları okumak ve konuşmayı metne dönüştürmek için StudyNight, notlarından kısa metin alıntılarını (asla tüm dosyaları değil), yeniden boyutlandırılmış fotoğrafları veya sayfa görüntülerini ve kısa ses kayıtlarını yapay zeka sağlayıcımız Groq'a sunucumuz üzerinden gönderir. Sunucumuz bunları yalnızca bellekte işler ve içeriğini saklamaz veya günlüğe kaydetmez; günlükleri yalnızca hata kodları ve zamanlamaları içerir."
+      "p": "Sorular oluşturmak, açıklamaları kontrol etmek, notlarınla ilgili soruları yanıtlamak, fotoğrafları okumak ve konuşmayı metne dönüştürmek için StudyNight, notlarından kısa metin parçalarını (asla tüm dosyaları değil), yeniden boyutlandırılmış fotoğrafları veya sayfa görüntülerini ve kısa ses kayıtlarını yapay zeka sağlayıcımız Groq'a sunucumuz üzerinden gönderir. Kodumuz hiçbir içeriği saklamaz veya günlüğe kaydetmez; bunları yalnızca bellekte işler ve kendi günlüklerinde yalnızca hata kodları ve zamanlamalar bulunur."
     },
     "s4": {
       "h": "Groq, yapay zeka sağlayıcımız",

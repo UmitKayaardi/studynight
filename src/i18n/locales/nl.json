@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Alle rechten voorbehouden.",
     "credits": "Gebouwd met open-source software. AI door Groq; optionele Slimme zoekfunctie draait op je apparaat.",
     "mascot": "Maak kennis met Lumi, de maanhemelk die je gezelschap houdt tijdens het studeren.",
-    "principle": "De AI organiseert je notities alleen in onderwerpen, schetst vragen uit je eigen passages, controleert ze dubbel tegen je notities en markeert welke kernpunten een uitleg dekt. Scores, XP, reeksen, herhalingsschema's, moeilijkheidsgraden en examenplannen worden berekend door geteste code op je apparaat. Geen enkele vraag komt bij je tenzij hij de controle tegen je notities doorstaat.",
+    "principle": "De AI organiseert je notities alleen in onderwerpen, schetst vragen uit je eigen passages, controleert ze dubbel tegen je notities en markeert welke kernpunten een uitleg dekt. Scores, XP, reeksen, herhalingsplanning, moeilijkheidsgraad en examenplannen worden berekend door geteste code op je apparaat. Elke vraag wordt gecontroleerd tegen je eigen notities voordat hij bij je komt — door code en een tweede model — wat de meeste fouten vangt, maar niet allemaal.",
     "principleTitle": "AI schrijft de vragen. Code beslist over de rest.",
     "version": "Versie {{version}}"
   },
@@ -552,7 +552,7 @@
     },
     "s3": {
       "h": "Wat wordt verzonden bij AI‑functies",
-      "p": "Om vragen te maken, uitleg te controleren, vragen over je aantekeningen te beantwoorden, foto's te lezen en spraak om te zetten in tekst, stuurt StudyNight korte tekstfragmenten van je aantekeningen (nooit hele bestanden), verkleinde foto's of paginabeelden, en korte spraakopnames via onze server naar Groq, de AI‑provider. Onze server verwerkt ze alleen in het geheugen en slaat of logt de inhoud niet op; de logs bevatten alleen foutcodes en tijdsmetingen."
+      "p": "Om vragen te maken, uitleg te controleren, antwoorden te geven op vragen over je notities, foto's te lezen en spraak om te zetten in tekst, stuurt StudyNight korte tekstfragmenten uit je notities (nooit hele bestanden), geschaalde foto's of pagina-afbeeldingen en korte spraakopnames via onze server naar Groq, de AI-aanbieder. Onze code slaat en logt geen inhoud: het verwerkt deze alleen in het geheugen, en de eigen logs bevatten alleen foutcodes en tijdstippen."
     },
     "s4": {
       "h": "Groq, onze AI‑provider",
@@ -787,6 +787,7 @@
     "bossSlayer": "Stormjager",
     "braveExplorer": "Dappere ontdekkingsreiziger",
     "comboMaster": "Combo meester",
+    "comebackKid": "Comebackkampioen",
     "deepThinker": "Diepdenker",
     "earlyRiser": "Vroeg opstaan",
     "freshStart": "Nieuwe start",
@@ -797,8 +798,7 @@
     "perfectionist": "Perfectionist",
     "speedReader": "Snellezer",
     "steadyClimber": "Stevige klimmer",
-    "topicTamer": "Onderwerp temmer",
-    "comebackKid": "Comebackkampioen"
+    "topicTamer": "Onderwerp temmer"
   },
   "voice": {
     "denied": "Microfoontoegang geweigerd. Sta het toe in je browserinstellingen, of typ je antwoord in.",

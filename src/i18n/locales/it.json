@@ -3,7 +3,7 @@
     "copyright": "© 2026 Umit Kayaardi. Tutti i diritti riservati.",
     "credits": "Creato con software open source. AI di Groq; la ricerca Smart opzionale funziona sul tuo dispositivo.",
     "mascot": "Incontra Lumi, la falce di luna notturna che ti fa compagnia mentre studi.",
-    "principle": "L'AI organizza solo i tuoi appunti in argomenti, bozza domande dai tuoi passaggi, le ricontrolla rispetto ai tuoi appunti e segnala quali punti chiave una spiegazione copre. Punteggi, XP, serie, pianificazione delle revisioni, difficoltà e piani d'esame sono calcolati da codice testato sul tuo dispositivo. Nessuna domanda ti viene mostrata se non supera il controllo rispetto ai tuoi appunti.",
+    "principle": "L'AI organizza solo i tuoi appunti in argomenti, bozza domande dai tuoi passaggi, le ricontrolla rispetto ai tuoi appunti e indica quali punti chiave copre una spiegazione. Punteggi, XP, serie di giorni, pianificazione delle revisioni, difficoltà e piani d'esame sono calcolati da codice testato sul tuo dispositivo. Ogni domanda viene verificata rispetto ai tuoi appunti prima di arrivare a te — da codice e da un secondo modello — il che cattura la maggior parte degli errori, ma non tutti.",
     "principleTitle": "L'AI scrive le domande. Il codice decide tutto il resto.",
     "version": "Versione {{version}}"
   },
@@ -576,7 +576,7 @@
     },
     "s3": {
       "h": "Cosa viene inviato quando usi le funzioni AI",
-      "p": "Per creare domande, verificare le spiegazioni, rispondere a domande sui tuoi appunti, leggere foto e convertire la voce in testo, StudyNight invia brevi estratti di testo dai tuoi appunti (mai file interi), foto ridimensionate o immagini di pagine e brevi registrazioni vocali tramite il nostro server a Groq, il provider AI. Il nostro server li gestisce solo in memoria e non ne conserva né registra il contenuto; i suoi log contengono solo codici di errore e tempi di esecuzione."
+      "p": "Per creare domande, verificare le spiegazioni, rispondere a domande sui tuoi appunti, leggere foto e convertire la voce in testo, StudyNight invia brevi estratti di testo dai tuoi appunti (mai file interi), foto ridimensionate o immagini di pagine e brevi registrazioni vocali al nostro server, che le trasmette a Groq, il provider di AI. Il nostro codice non memorizza né registra alcun contenuto: li gestisce solo in memoria e i suoi log contengono solo codici di errore e tempi di esecuzione."
     },
     "s4": {
       "h": "Groq, il nostro provider AI",
