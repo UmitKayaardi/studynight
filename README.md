@@ -45,7 +45,8 @@ tricky until the exam.
 The language model only (a) structures your document into topics, (b) drafts questions from retrieved passages,
 (c) checks drafts against the source, and (d) judges which key points a free-text answer covers. Scoring, XP, streaks,
 spaced-repetition scheduling, difficulty, exam plans and all statistics are deterministic, tested TypeScript running on
-your device. **No question reaches you unless it passes verification against your own notes.**
+your device. **Every question is checked against your own notes before it reaches you** — by code and by a second
+model — which catches most mistakes but not all of them (see [Limitations](#limitations)).
 
 ## Features
 
@@ -64,8 +65,9 @@ your device. **No question reaches you unless it passes verification against you
 - **Smart search** — a multilingual embedding model runs on your device (notes in one language, questions in another);
   keyword search works instantly without it.
 - **21 interface languages** — including right-to-left Arabic, Persian and Urdu — and quizzes in almost any language.
-- **Private and offline** — no account, analytics or cookies; everything stays on your device with backup, import and
-  delete; installable, and everything you have made plays offline.
+- **Private by design, works offline** — no account, analytics or cookies; your decks and progress stay on your device,
+  with backup, import and delete. AI features send short excerpts of your notes (never whole files) to Groq — see
+  [Privacy](#privacy). Installable, and everything you have made plays offline.
 
 ## How it works
 
@@ -100,16 +102,17 @@ Measured on an original, multilingual benchmark (10 documents in 5 languages, 60
 
 | What | Result |
 | --- | --- |
-| Generated questions with a correct answer key (checked by hand) | **95%** (97 of 102) |
+| Generated questions with a correct answer key (reviewed by the AI assistant, see below) | **95%** (97 of 102) |
 | Drafts that pass the app's own checks (evidence quote, structure, second model) | 90% |
 | Search finds the right passage in the top 5 | 98% same language · 53% across languages |
 | Ask your notes: answered with a correct citation / refused when the notes don't cover it | 100% (26/26) · 100% (10/10) |
-| Grading of written answers agrees with hand labels | 98% of key points |
+| Grading of written answers agrees with reference labels | 98% of key points |
 | From a 14-page document to the first playable questions | 7.7 s |
 | Lighthouse mobile: performance / accessibility / best practices / SEO | 92 / 98 / 96 / 100 |
 
-*Synthetic dataset written for this project; labels made with AI assistance and reviewed by hand; small samples — see
-the caveats in the benchmark document.*
+*Synthetic dataset written for this project. The labels, the review of generated questions and the sample-deck reviews
+were done by the AI coding assistant that built the project (Claude Code), with at most a spot check by the author —
+not by an independent human reviewer. Small samples — see the caveats in the benchmark document.*
 
 ## Privacy
 
@@ -117,7 +120,7 @@ the caveats in the benchmark document.*
 - Decks, questions, progress and profile live only in your browser (IndexedDB). Export a backup to move to a new phone;
   delete everything in one tap.
 - When you use an AI feature, short text excerpts (never whole files), resized images or short voice clips go through
-  stateless serverless functions to [Groq](https://groq.com). Our server stores and logs no content. Groq's data terms,
+  stateless serverless functions to [Groq](https://groq.com). Our code stores and logs no content. Groq's data terms,
   checked on 9 November 2026, are summarised on the in-app Privacy page and in [docs/LEGAL.md](docs/LEGAL.md).
 - Challenge links and share cards never contain your notes.
 
@@ -139,6 +142,9 @@ store release.*
 | Platform | PWA (vite-plugin-pwa), ready for Google Play as a Trusted Web Activity ([guide](docs/PLAY_STORE.md)) |
 
 ## Run it locally (Windows, macOS or Linux)
+
+*Review only: the code is published so that it can be read and evaluated, for example by running it locally. No
+licence is granted to copy, modify or redistribute it — see [Licence](#licence).*
 
 You need Node.js 20 or newer and a free [Groq API key](https://console.groq.com/keys).
 
@@ -204,6 +210,9 @@ Model names can be changed with the `GROQ_*_MODEL` variables (see `.env.example`
 - **A free, shared AI key has limits.** Groq's free plan limits tokens per minute and per day for each model, shared by
   everyone using a deployment. When it is busy, StudyNight waits and retries calmly and you can keep playing what you
   already have, but creating many decks at once will be slow.
+- The `/api` endpoints have only a best-effort flood guard: 120 requests per 10 minutes per IP address and endpoint,
+  kept in memory on each server instance (tested on the live site). There is no daily cap per user beyond Groq's own
+  free-tier limits.
 - AI can make mistakes. Every question is checked against your notes, and you can see its source and report it, but
   checks are not a guarantee.
 - Handwriting recognition is best effort, and figure questions are only as good as the image description.

@@ -1,5 +1,5 @@
 {
- "reviewer": "Hand review by the builder against the benchmark notes (benchmarks/notes), 2026-11-10",
+ "reviewer": "Review by the AI coding assistant that built the project (Claude Code) against the benchmark notes (benchmarks/notes), 2026-11-10; at most a spot check by the author; not an independent human review",
  "method": "Every accepted question from the generate stage (88) and the figure stage (14) was read next to its source notes. 'Answer key correct' means the marked answer is right according to the notes and no other option is also right. 'Flawless' also requires a correct, grounded explanation or correction and an answer that reads naturally in the blank. Near-duplicates are counted separately: they are kept by the app's duplicate filter because they are different question types about the same fact.",
  "text": {
   "sample": 88,

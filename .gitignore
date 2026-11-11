@@ -1,7 +1,9 @@
-# Owner-only files — never commit
+# Local-only files — never commit
 STUDYNIGHT_PLAN.md
 FINAL_REPORT.md
+PROGRESS.md
 test-notes/
+.claude/
 .env
 .env.*
 !.env.example

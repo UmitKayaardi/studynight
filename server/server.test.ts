@@ -58,6 +58,25 @@ describe('guard', () => {
     );
     expect(clientIp(new Request('http://x'))).toBe('unknown');
   });
+  it('an endpoint answers 429 with Retry-After once one client passes the limit, before any AI call', async () => {
+    const { GUARD_LIMIT } = await import('./guard');
+    const client = fakeClient([]);
+    setChatClient(client);
+    const post = (ip: string) =>
+      topicsPost(
+        new Request('http://x/api/topics', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', 'x-forwarded-for': ip },
+          body: '{}',
+        }),
+      );
+    for (let i = 0; i < GUARD_LIMIT; i++) expect((await post('203.0.113.7')).status).toBe(400);
+    const blocked = await post('203.0.113.7');
+    expect(blocked.status).toBe(429);
+    expect(Number(blocked.headers.get('retry-after'))).toBeGreaterThan(0);
+    expect((await post('203.0.113.8')).status).toBe(400); // another client is unaffected
+    expect(client.calls).toHaveLength(0);
+  });
 });
 
 describe('groq helpers', () => {

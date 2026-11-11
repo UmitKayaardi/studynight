@@ -18,7 +18,7 @@ One line per decision: what was decided, and why.
 
 ## Groq data terms (checked 2026-11-09)
 
-- Source: console.groq.com/docs/your-data and the Services Agreement (last modified 22 June 2026). Groq does not retain inference data by default, but may log inputs/outputs for up to 30 days for reliability and abuse investigation unless Zero Data Retention is enabled in the organisation's Data Controls; Groq may not use inputs/outputs to train models (Services Agreement §4.2); data is stored in the United States. The Privacy page states this and recommends the operator enable ZDR (owner action in FINAL_REPORT).
+- Source: console.groq.com/docs/your-data and the Services Agreement (last modified 22 June 2026). Groq does not retain inference data by default, but may log inputs/outputs for up to 30 days for reliability and abuse investigation unless Zero Data Retention is enabled in the organisation's Data Controls; Groq may not use inputs/outputs to train models (Services Agreement §4.2); data is stored in the United States. The Privacy page states this and recommends that whoever runs a deployment enables ZDR.
 
 ## Tooling
 
@@ -29,7 +29,7 @@ One line per decision: what was decided, and why.
 - `/api` handlers use Web-standard `Request`/`Response`; a small Vite plugin serves them during `npm run dev`, so one command runs the whole app locally on Windows.
 - Shared server/client code lives in `shared/` and uses `.js` import suffixes so the functions run as native ES modules on Vercel.
 - ONNX Runtime WebAssembly files are self-hosted under `/ort/` (copied from `node_modules` by `scripts/copy-ort.mjs` before dev/build) instead of transformers.js's default jsDelivr CDN — keeps the CSP strict and lets the files be cached for offline use. Single-threaded WASM (no cross-origin isolation needed).
-- Verified in Chromium (2026-11-09): model load incl. download ~34 s on a fast connection; English↔Spanish paraphrase cosine 0.90 vs unrelated 0.80 (e5 similarities are compressed into a high range, so absolute thresholds must be calibrated — see BENCHMARK.md); ~20 s per 100 long chunks single-threaded on a desktop CPU, so embedding runs in the background after the first questions are playable.
+- Verified in Chromium (2026-11-09): model load incl. download ~34 s on a fast connection; English↔Spanish paraphrase cosine 0.90 vs unrelated 0.80 (e5 similarities are compressed into a high range, so absolute thresholds must be calibrated; retrieval therefore uses ranks, not thresholds); ~20 s per 100 long chunks single-threaded on a desktop CPU, so embedding runs in the background after the first questions are playable.
 
 ## Ingestion
 
@@ -39,14 +39,14 @@ One line per decision: what was decided, and why.
 
 ## Data
 
-- Two tables beyond the plan's list: `images` (page renders/photos for figure questions and the source sheet) and `days` (daily activity rollups for the streak calendar, daily goal and stats). `days` arrives in schema v2 with a real upgrade that backfills it from the review log, which also exercises the migration path in tests.
+- Two tables beyond the core schema: `images` (page renders/photos for figure questions and the source sheet) and `days` (daily activity rollups for the streak calendar, daily goal and stats). `days` arrives in schema v2 with a real upgrade that backfills it from the review log, which also exercises the migration path in tests.
 - Importing a backup replaces all local data (after a preview and confirmation) rather than merging — merging decks, FSRS states and streaks from two devices has no single correct answer, and "move to a new phone" is the stated purpose.
 - Deleting a deck keeps an in-memory snapshot for the undo toast; once the toast closes, the data is gone.
-- UI translations are machine-assisted with the project's own Groq generator model via `scripts/translate.mjs` (keeps all 21 locales complete at every checkpoint so CI stays green); the script validates variables and plural categories, rejects strings returned untranslated, and re-translates any string whose English source changes. Translations are reviewed in Phase 10.
+- UI translations are machine-assisted with the project's own Groq generator model via `scripts/translate.mjs` (keeps all 21 locales complete at every checkpoint so CI stays green); the script validates variables and plural categories, rejects strings returned untranslated, and re-translates any string whose English source changes. A Playwright sweep checks every language for missing strings and layout problems; the translations have not been reviewed by native speakers.
 
 ## Benchmark-driven
 
 - Hybrid retrieval uses weighted Reciprocal Rank Fusion with BM25 weight 0.5 and vector weight 1 (`HYBRID_BM25_WEIGHT`): on the benchmark corpus this weight gave the best rank quality at equal recall (docs/BENCHMARK.md §3); keyword search stays in the mix because it works before (or without) the Smart search download and for exact terms. Vector-only did slightly better on recall on this small corpus — reported in docs/BENCHMARK.md rather than hidden.
-- Figure questions stay on by default: their acceptance rate and hand-reviewed quality are close to the text questions (docs/BENCHMARK.md §2).
-- The LLM judge (Qwen) turned out more lenient than a hand review, so the benchmark reports the hand-review result as the quality measure, and every sample deck is reviewed by hand (docs/BENCHMARK.md §1).
+- Figure questions stay on by default: their acceptance rate and reviewed quality are close to the text questions (docs/BENCHMARK.md §2).
+- The LLM judge (Qwen) turned out more lenient than a question-by-question review, so the benchmark reports that review as the quality measure and every sample deck is reviewed before shipping (docs/BENCHMARK.md §1). These reviews and the benchmark labels were done by the AI coding assistant that built the project, with at most a spot check by the author; the benchmark document says so.
 - Groq's free plan also caps tokens per day per model; build-time jobs (translations, sample decks, benchmark) therefore wait out long `retry-after` periods and are run in stages.

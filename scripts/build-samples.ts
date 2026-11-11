@@ -1,7 +1,7 @@
 /**
  * Builds the sample decks: runs the real pipeline (chunker → topic map → generation → deterministic checks →
  * verifier) over the original notes in samples/notes/, then writes src/samples/<id>.json. The output is
- * reviewed by hand before shipping: generated decks go to samples/generated/, and scripts/apply-sample-review.mjs
+ * reviewed question by question before shipping: generated decks go to samples/generated/, and scripts/apply-sample-review.mjs
  * applies the review (samples/review.json) and writes the shipped decks to src/samples/.
  * Usage: node scripts/run-ts.mjs scripts/build-samples.ts [sampleId ...]
  */

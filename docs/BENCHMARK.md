@@ -9,8 +9,8 @@ All numbers come from `benchmarks/run.ts` and are stored in `benchmarks/results/
 
 | Role | Model (Groq free tier) |
 | --- | --- |
-| Question writer, Ask, grading | `openai/gpt-oss-120b` (fallback `openai/gpt-oss-20b`) |
-| Question verifier, and the benchmark's judge | `qwen/qwen3.8-27b`, temperature 0 |
+| Question writer, Ask | `openai/gpt-oss-120b` (fallback `openai/gpt-oss-20b`) |
+| Question verifier, grading of written answers, and the benchmark's judge | `qwen/qwen3.8-27b`, temperature 0 |
 | Search embeddings (in the browser) | `Xenova/multilingual-e5-small` (8-bit) |
 
 ## The dataset
@@ -26,36 +26,40 @@ All numbers come from `benchmarks/run.ts` and are stored in `benchmarks/results/
 - **34 labelled free-text answers** (`benchmarks/explain.json`) to explain-questions, with 102 "covered / not covered"
   labels on their key points.
 
-The questions and labels were drafted with AI assistance and then checked and corrected by hand. This is a small,
-synthetic dataset: treat the numbers as a sanity check of the pipeline, not as a precise measurement.
+**Who labelled and reviewed.** The documents, questions and labels, the review of the generated questions in section 1
+and the reviews of the sample decks were all done by the AI coding assistant that built this project (Claude Code,
+an Anthropic model), with at most a spot check by the author. No independent human reviewer was involved. The
+assistant is a different model from the ones the app uses (gpt-oss and Qwen), but it is still an AI, and it also
+wrote the code under test. Below, "assistant review" means this review. This is a small, synthetic dataset: treat the
+numbers as a sanity check of the pipeline, not as a precise or independent measurement.
 
 ## Results at a glance
 
 | What | Result |
 | --- | --- |
-| Generated questions with a correct answer key (hand review) | **95%** (97 of 102) |
-| Generated questions with no flaw at all (hand review) | **91%** (93 of 102) |
+| Generated questions with a correct answer key (assistant review) | **95%** (97 of 102) |
+| Generated questions with no flaw at all (assistant review) | **91%** (93 of 102) |
 | Drafts that pass the app's own checks | 90% (88 of 98); figure questions 93% (14 of 15) |
 | Evidence quote really found in the notes | 100% of accepted questions |
 | Search finds the right passage in the top 5 (recall@5) | 85% overall; 98% same language; 53% across languages |
 | Ask: answerable questions answered with a correct citation | 100% (26 of 26) |
 | Ask: unanswerable questions refused | 100% (10 of 10) |
-| Grading of free-text answers agrees with the hand labels | 98% of key points; 100% of overall levels |
+| Grading of free-text answers agrees with the reference labels | 98% of key points; 100% of overall levels |
 | From a 14-page document to the first playable questions | 7.7 s (one run) |
 | Lighthouse, mobile (performance / accessibility / best practices / SEO) | 92 / 98 / 96 / 100 |
 
 ## 1. Question quality
 
 **Method.** For each benchmark document the app's own pipeline builds the topic map, then generates one round of
-questions for up to two topics (`generate` stage). Every accepted question was then read next to its notes by hand
-(`benchmarks/results/manual-review.json`), and separately judged by the Qwen model, which comes from a different model
+questions for up to two topics (`generate` stage). Every accepted question was then read next to its notes by the
+AI assistant (`benchmarks/results/manual-review.json`), and separately judged by the Qwen model, which comes from a different model
 family from the question writer (`judge` stage).
 
 **Pipeline checks.** 98 questions were drafted and 88 accepted (90%). Rejections: 7 failed the schema, 2 failed a
 structure check, 1 was rejected by the verifier, 0 were duplicates, and 0 had an evidence quote that could not be found
 in the notes. Of the accepted questions, 100% had an evidence quote that matches the notes (fuzzy match ≥ 0.9).
 
-**Hand review (88 text questions + 14 figure questions).**
+**Assistant review (88 text questions + 14 figure questions).**
 
 - 85 of 88 text questions (96.6%) had a correct answer key, and 81 (92.0%) had no flaw at all.
 - 12 of 14 figure questions (85.7%) were correct and flawless.
@@ -71,21 +75,21 @@ in the notes. Of the accepted questions, 100% had an evidence quote that matches
   compares questions of similar wording.
 
 **LLM judge.** The Qwen judge marked 100% of the questions correct and 98.9% grounded (it flagged only the term
-"critical angle", which the notes describe but do not name). It was clearly more lenient than the hand review: it
-missed all five answer-key problems listed above. The same pattern appeared while reviewing the sample decks, where
-the verifier accepted a step-ordering question with two steps the wrong way round. This is why the app also lets
-learners report a question with one tap, and why the shipped sample decks were all reviewed by hand
-(`samples/review.json`).
+"critical angle", which the notes describe but do not name). It was clearly more lenient than the assistant review:
+it missed all five answer-key problems listed above. The same pattern appeared while reviewing the sample decks,
+where the verifier accepted a step-ordering question with two steps the wrong way round. This is why the app also
+lets learners report a question with one tap, and why the shipped sample decks were all reviewed question by question
+before shipping (`samples/review.json`).
 
 **Caveat.** This run used one generation round per topic, which asks for multiple-choice, true/false, fill-in and
 flashcard questions only. Match, order and explain questions (made in later rounds) were reviewed in the six sample
-decks instead: of the 140 questions generated for them, 16 were removed and 18 corrected by hand before shipping
+decks instead: of the 140 questions generated for them, the assistant removed 16 and corrected 18 before shipping
 (124 shipped; the Turkish deck's corrections were made before the review file existed and are not counted).
 
 ## 2. Figure questions
 
 The `figure` stage generates questions from the described figure in the supply-and-demand notes. 14 of 15 drafts were
-accepted (93%) and all 14 were linked to the figure. The hand review found 12 of 14 correct and flawless.
+accepted (93%) and all 14 were linked to the figure. The assistant review found 12 of 14 correct and flawless.
 
 **Decision:** figure questions stay **on** by default (Settings can turn them off). They are a small share of each deck
 (at most one round in three, and only when the pages have a figure), their quality is close to the text questions, and
@@ -130,10 +134,10 @@ fallback path, without Smart search).
 
 ## 5. Grading of explain answers
 
-**Method.** 34 written answers to 15 explain-questions, from complete to plainly wrong, were labelled by hand, key point by key point (102 labels). The `explain` stage sends each answer to the grading
-endpoint.
+**Method.** 34 written answers to 15 explain-questions, from complete to plainly wrong, were written and labelled by
+the AI assistant, key point by key point (102 labels). The `explain` stage sends each answer to the grading endpoint.
 
-- The grader agreed with the hand label on 98% of key points.
+- The grader agreed with the reference label on 98% of key points.
 - The overall level shown to the learner ("Great", "Partly there", "Not yet") agreed in 100% of answers.
 
 ## 6. Speed
@@ -156,11 +160,14 @@ skip-link target on the onboarding screen, was fixed afterwards), best practices
 
 ## Limitations
 
-- **Small and synthetic.** 10 documents, 102 generated questions, 60 search questions and 34 graded answers. One
-  person reviewed and labelled them. Differences of a few per cent are within noise.
+- **Small and synthetic.** 10 documents, 102 generated questions, 60 search questions and 34 graded answers.
+  Differences of a few per cent are within noise.
+- **Not independently reviewed.** The labels and reviews come from the same AI assistant that built the app, with at
+  most a spot check by the author. An AI reviewer can share blind spots with the models it checks; an independent
+  human review could find more problems.
 - **Single runs.** The models are not deterministic (except the judge at temperature 0); results vary between runs.
 - **Free-tier models change.** Groq may update or retire models; numbers apply to the models listed above.
-- **The judge is lenient.** Use the hand-review numbers, not the judge's, as the measure of question quality.
+- **The judge is lenient.** Use the assistant-review numbers, not the judge's, as the measure of question quality.
 
 ## How to reproduce
 
@@ -179,5 +186,6 @@ npm run benchmark -- summary
 ```
 
 The `retrieval` stage runs offline after downloading the embedding model once. The other stages call Groq and wait
-politely when the free tier's rate limits are reached; the `ask` stage can be resumed if it is interrupted. The hand
-review (`benchmarks/results/manual-review.json`) has to be redone by a person after a new `generate` run.
+politely when the free tier's rate limits are reached; the `ask` stage can be resumed if it is interrupted. The review
+of generated questions (`benchmarks/results/manual-review.json`) is not automated and has to be redone after a new
+`generate` run, ideally by an independent human reviewer.

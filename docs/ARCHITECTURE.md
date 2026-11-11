@@ -4,8 +4,8 @@
 > The language model only (a) structures documents into topics, (b) drafts questions from retrieved passages,
 > (c) checks drafts against the source, and (d) judges which key points a free-text answer covers. Scoring, XP,
 > streaks, spaced-repetition scheduling, difficulty, exam plans and every statistic are deterministic, tested
-> TypeScript running on the learner's device. No question reaches the learner unless it passes verification
-> against their own notes.
+> TypeScript running on the learner's device. Every question is verified against the learner's own notes before it
+> is stored; verification catches most mistakes but is not a guarantee (see docs/BENCHMARK.md).
 
 ## Overview
 

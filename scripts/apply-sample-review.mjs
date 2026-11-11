@@ -1,4 +1,4 @@
-// Applies the hand review of the sample decks to the pristine generated decks and writes the shipped decks.
+// Applies the review of the sample decks (samples/review.json) to the pristine generated decks and writes the shipped decks.
 //   samples/generated/<id>.json  — output of scripts/build-samples.ts (never edited by hand)
 //   samples/review.json          — review decisions: { "<id>": [{ "prompt": "...", "remove": true } | { "prompt": "...", "set": {...} }] }
 //   src/samples/<id>.json        — shipped decks (generated from the two above; idempotent)
